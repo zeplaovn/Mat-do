@@ -5,6 +5,7 @@
 const ROOT = 'assets/';
 const BG = id => `${ROOT}background/${id}.webp`;
 const IMG = file => `${ROOT}items/${file}`;
+const PORTRAIT = file => `${ROOT}portraits/${file}`;
 const SAVE_KEY = 'loi-nguyen-rung-thieng-v1';
 const SAVE_SALT = 'lnrt·vân-hòa·2026';
 const $ = id => document.getElementById(id);
@@ -12,6 +13,11 @@ const H = (action,label,x,y,w=12,h=15) => ({action,label,x,y,w,h});
 const HA = (...a) => ({...H(...a),req:'awakened'});
 const HL = (...a) => ({...H(...a),req:'lamAwake'});
 
+const PORTRAITS = {
+  'Đông':'01_Dong_portrait.webp','Nam':'02_Nam_portrait.webp','Tuyết':'03_Tuyet_portrait.webp',
+  'Ánh':'04_Anh_portrait.webp','Nguyệt':'05_Nguyet_portrait.webp',
+  'Mơ':'06_Mo_portrait.webp','Ông Bá Lâm':'07_Ba_Lam_portrait.webp','Bà Mận':'08_Ba_Man_portrait.webp'
+};
 const ITEMS = {
   camera:{name:'Máy ảnh của Ánh',description:'Chiếc máy ảnh cũ của Ánh. Nó hay chụp được những thứ mắt thường không thấy.',image:'01_May_Quay_128x128.webp'},
   flashlight:{name:'Đèn pin của Nam',description:'Đèn pin của Nam. Chạm vào để bật/tắt, hoặc nhấn phím F.',image:'02_Den_Pin_128x128.webp'},
@@ -301,8 +307,10 @@ function say(who,text){dlgQueue=[];showLine(who,text);setNextLabel()}
 function talk(lines){const l=(lines||[]).filter(Boolean);if(!l.length)return;say(l[0][0],l[0][1]);dlgQueue=l.slice(1);setNextLabel()}
 function setNextLabel(){const b=$('dialogue-next');if(b)b.innerHTML=dlgQueue.length?'TIẾP <span>›</span>':'ĐÓNG <span>✕</span>'}
 function nextLine(){if(window.finishTyping&&window.finishTyping())return;if(dlgQueue.length){const [w,t]=dlgQueue.shift();showLine(w,t);setNextLabel()}else clearDialogue()}
-function showLine(who,text){const narr=who==='Người kể chuyện';
- $('dialogue-symbol').hidden=!narr;$('dialogue-speaker').textContent=who;$('dialogue-text').textContent=text;
+function showLine(who,text){const pf=PORTRAITS[who],isPerson=!!pf;
+ $('dialogue-portrait-wrap').hidden=!isPerson;$('dialogue').classList.toggle('has-portrait',isPerson);$('dialogue-symbol').hidden=isPerson;
+ if(isPerson){$('dialogue-portrait').src=PORTRAIT(pf);$('dialogue-portrait').alt='Chân dung '+who}
+$('dialogue-speaker').textContent=who;$('dialogue-text').textContent=text;
  $('chatter').classList.remove('on');
  $('dialogue').hidden=false;dialogueOpen=true;setDialogueMode(true)}
 function clearDialogue(){dlgQueue=[];$('dialogue').hidden=true;dialogueOpen=false;setDialogueMode(false)}
