@@ -5,6 +5,7 @@
 const ROOT = 'assets/';
 const BG = id => `${ROOT}background/${id}.webp`;
 const IMG = file => `${ROOT}items/${file}`;
+const PORTRAIT = file => `${ROOT}portraits/${file}`;
 const SAVE_KEY = 'loi-nguyen-rung-thieng-v1';
 const SAVE_SALT = 'lnrt·vân-hòa·2026';
 const $ = id => document.getElementById(id);
@@ -12,6 +13,11 @@ const H = (action,label,x,y,w=12,h=15) => ({action,label,x,y,w,h});
 const HA = (...a) => ({...H(...a),req:'awakened'});
 const HL = (...a) => ({...H(...a),req:'lamAwake'});
 
+const PORTRAITS = {
+  'Đông':'01_Dong_portrait.webp','Nam':'02_Nam_portrait.webp','Tuyết':'03_Tuyet_portrait.webp',
+  'Ánh':'04_Anh_portrait.webp','Nguyệt':'05_Nguyet_portrait.webp',
+  'Mơ':'06_Mo_portrait.webp','Ông Bá Lâm':'07_Ba_Lam_portrait.webp','Bà Mận':'08_Ba_Man_portrait.webp'
+};
 const ITEMS = {
   camera:{name:'Máy ảnh của Ánh',description:'Chiếc máy ảnh cũ của Ánh. Nó hay chụp được những thứ mắt thường không thấy.',image:'01_May_Quay_128x128.webp'},
   flashlight:{name:'Đèn pin của Nam',description:'Đèn pin của Nam. Chạm vào để bật/tắt, hoặc nhấn phím F.',image:'02_Den_Pin_128x128.webp'},
@@ -239,7 +245,7 @@ let dialogueOpen=false;let modalType=null;let toastTimer=null;
 /* ================= ÂM THANH =================
    Quy tắc: mỗi âm thanh chỉ phát ở nơi nó thật sự có thể vang lên trong cảnh đó. */
 const SOUND={door:'creaking-door.mp3',slam:'door-slam.mp3',knock:'knock-on-the-door.mp3',steps:'tieng_buoc_chan.mp3',page:'pageturn.mp3',camera:'Chup_anh.mp3',lighter:'lighter.mp3',switch:'light-switch.mp3',
- market:'tieng_on_ao_o_cho.mp3',water:'nuoc_chay.mp3',frogs:'community-frogs.mp3',frogsNight:'frogs-croaking-at-night.mp3',gecko:'than_lan_keu_3s.mp3',crickets:'tieng_de_keu.mp3'};
+ market:'tieng_on_ao_o_cho.mp3',water:'nuoc_chay.mp3',frogs:'community-frogs.mp3',frogsNight:'frogs-croaking-at-night.mp3',gecko:'than_lan_keu_3s.mp3',crickets:'tieng_de_keu.mp3',musicbox:'music_box.mp3'};
 const SLAM_LEAD=3.3;                         /* door-slam.mp3: cú đập nằm ở ~4,0 s; bắt đầu phát từ 3,3 s để nó vang ngay sau tiếng kẽo kẹt */
 /* Tương tác = nhân vật bước tới chỗ đó: dùng tieng_buoc_chan.mp3 (3 bước khi đi sang cảnh khác, 2 bước khi xem/nhặt đồ). */
 const PAPER_ITEMS=['petition','testimony'];  /* chỉ vật bằng giấy mới có tiếng lật giấy khi nhặt */
@@ -250,14 +256,17 @@ const AMBIENCE={
  BG03:{water:.5,frogs:.35},                /* ruộng có mương: nước chảy + ếch */
  BG04:{water:.6,frogsNight:.9,crickets:.5},  /* cầu gỗ lúc chiều muộn: ếch + dế */
  BG05:{frogsNight:.6,crickets:.55},         /* ven rừng ban đêm */
- BG06:{crickets:.4}                         /* rừng tre: dế thưa dần; sang BG07 tắt hẳn (Nam: dế im phăng phắc) */
+ BG06:{crickets:.4},                        /* rừng tre: dế thưa dần; sang BG07 tắt hẳn (Nam: dế im phăng phắc) */
+ BG21:{musicbox:.5},                        /* bên kia gương: hộp nhạc đang phát sáng, giai điệu ru (Für Elise) */
+ BG22:{musicbox:.32}                        /* đáy giếng: nhạc vọng xuống nhỏ hơn; tắt sau khi gọi tên Mơ */
 };
 function playSound(name,volume=.25,from=0,dur=0){if(!state.sound)return;const file=SOUND[name];if(!file)return;try{const a=new Audio(ROOT+'sound/'+file);a.volume=Math.min(1,volume*2.2);const start=()=>{try{if(from)a.currentTime=from}catch(_){}a.play().catch(()=>{});if(dur)setTimeout(()=>{const v=a.volume,t=setInterval(()=>{a.volume=Math.max(0,a.volume-v/6);if(a.volume<=.001){clearInterval(t);a.pause()}},40)},dur*1000)};(from&&a.readyState<1)?a.addEventListener('loadedmetadata',start,{once:true}):start()}catch(_){}}
 /* Âm thanh nền theo cảnh: nhiều lớp phát cùng lúc, lớp nào không còn thuộc cảnh mới thì tắt dần */
 const ambient={};
 function fadeTo(e,to,ms,done){clearInterval(e.fade);const a=e.a,from=a.volume,steps=Math.max(1,Math.round(ms/50));let i=0;e.fade=setInterval(()=>{i++;a.volume=Math.max(0,Math.min(1,from+(to-from)*i/steps));if(i>=steps){clearInterval(e.fade);if(done)done()}},50)}
 function setAmbience(){
- const want=(state.sound&&$('title-screen').hidden)?(AMBIENCE[state.scene]||{}):{};
+ let want=(state.sound&&$('title-screen').hidden)?(AMBIENCE[state.scene]||{}):{};
+ if(state.flags.sixthDone&&want.musicbox){want={...want};delete want.musicbox}
  for(const name of Object.keys(ambient)){if(!(name in want)){const e=ambient[name];delete ambient[name];fadeTo(e,0,900,()=>e.a.pause())}}
  for(const [name,vol] of Object.entries(want)){
   const e=ambient[name];
@@ -301,8 +310,10 @@ function say(who,text){dlgQueue=[];showLine(who,text);setNextLabel()}
 function talk(lines){const l=(lines||[]).filter(Boolean);if(!l.length)return;say(l[0][0],l[0][1]);dlgQueue=l.slice(1);setNextLabel()}
 function setNextLabel(){const b=$('dialogue-next');if(b)b.innerHTML=dlgQueue.length?'TIẾP <span>›</span>':'ĐÓNG <span>✕</span>'}
 function nextLine(){if(window.finishTyping&&window.finishTyping())return;if(dlgQueue.length){const [w,t]=dlgQueue.shift();showLine(w,t);setNextLabel()}else clearDialogue()}
-function showLine(who,text){const narr=who==='Người kể chuyện';
- $('dialogue-symbol').hidden=!narr;$('dialogue-speaker').textContent=who;$('dialogue-text').textContent=text;
+function showLine(who,text){const pf=PORTRAITS[who],isPerson=!!pf;
+ $('dialogue-portrait-wrap').hidden=!isPerson;$('dialogue').classList.toggle('has-portrait',isPerson);$('dialogue-symbol').hidden=isPerson;
+ if(isPerson){$('dialogue-portrait').src=PORTRAIT(pf);$('dialogue-portrait').alt='Chân dung '+who}
+$('dialogue-speaker').textContent=who;$('dialogue-text').textContent=text;
  $('chatter').classList.remove('on');
  $('dialogue').hidden=false;dialogueOpen=true;setDialogueMode(true)}
 function clearDialogue(){dlgQueue=[];$('dialogue').hidden=true;dialogueOpen=false;setDialogueMode(false)}

@@ -482,3 +482,13 @@ html[data-fx=low] .dock-selected{backdrop-filter:none}
 .chatter b{display:block;margin-bottom:4px;font:700 10px/1 var(--sans);font-style:normal;letter-spacing:.16em;text-transform:uppercase;color:#c9a27f}
 html[data-fx=low] .chatter{backdrop-filter:none}
 @media(max-width:700px){.chatter{top:calc(max(14px,var(--safe-t)) + 70px)}}
+
+/* ---------- Chân dung nhân vật: không khung (ảnh nền trong suốt, đứng sát phía trên khung chat) ---------- */
+.dlg-top{display:flex;align-items:flex-end;justify-content:flex-start;pointer-events:none}
+.dlg-portrait-wrap{margin-left:clamp(14px,2vw,34px);margin-bottom:-6px;line-height:0;pointer-events:none}
+.dlg-portrait{
+  display:block;width:clamp(120px,30vh,270px);height:clamp(120px,30vh,270px);object-fit:contain;
+  user-select:none;filter:drop-shadow(0 10px 18px rgba(0,0,0,.75)) saturate(.78) contrast(1.05);
+}
+@media(max-height:520px){.dlg-portrait{width:clamp(84px,26vh,120px);height:clamp(84px,26vh,120px)}}
+@media(max-width:700px){.dlg-portrait-wrap{margin-left:10px}.dlg-portrait{width:clamp(96px,22vh,150px);height:clamp(96px,22vh,150px)}}
