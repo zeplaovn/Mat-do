@@ -245,7 +245,7 @@ let dialogueOpen=false;let modalType=null;let toastTimer=null;
 /* ================= ÂM THANH =================
    Quy tắc: mỗi âm thanh chỉ phát ở nơi nó thật sự có thể vang lên trong cảnh đó. */
 const SOUND={door:'creaking-door.mp3',slam:'door-slam.mp3',knock:'knock-on-the-door.mp3',steps:'tieng_buoc_chan.mp3',page:'pageturn.mp3',camera:'Chup_anh.mp3',lighter:'lighter.mp3',switch:'light-switch.mp3',
- market:'tieng_on_ao_o_cho.mp3',water:'nuoc_chay.mp3',frogs:'community-frogs.mp3',frogsNight:'frogs-croaking-at-night.mp3',gecko:'than_lan_keu_3s.mp3',crickets:'tieng_de_keu.mp3'};
+ market:'tieng_on_ao_o_cho.mp3',water:'nuoc_chay.mp3',frogs:'community-frogs.mp3',frogsNight:'frogs-croaking-at-night.mp3',gecko:'than_lan_keu_3s.mp3',crickets:'tieng_de_keu.mp3',musicbox:'music_box.mp3'};
 const SLAM_LEAD=3.3;                         /* door-slam.mp3: cú đập nằm ở ~4,0 s; bắt đầu phát từ 3,3 s để nó vang ngay sau tiếng kẽo kẹt */
 /* Tương tác = nhân vật bước tới chỗ đó: dùng tieng_buoc_chan.mp3 (3 bước khi đi sang cảnh khác, 2 bước khi xem/nhặt đồ). */
 const PAPER_ITEMS=['petition','testimony'];  /* chỉ vật bằng giấy mới có tiếng lật giấy khi nhặt */
@@ -256,14 +256,17 @@ const AMBIENCE={
  BG03:{water:.5,frogs:.35},                /* ruộng có mương: nước chảy + ếch */
  BG04:{water:.6,frogsNight:.9,crickets:.5},  /* cầu gỗ lúc chiều muộn: ếch + dế */
  BG05:{frogsNight:.6,crickets:.55},         /* ven rừng ban đêm */
- BG06:{crickets:.4}                         /* rừng tre: dế thưa dần; sang BG07 tắt hẳn (Nam: dế im phăng phắc) */
+ BG06:{crickets:.4},                        /* rừng tre: dế thưa dần; sang BG07 tắt hẳn (Nam: dế im phăng phắc) */
+ BG21:{musicbox:.5},                        /* bên kia gương: hộp nhạc đang phát sáng, giai điệu ru (Für Elise) */
+ BG22:{musicbox:.32}                        /* đáy giếng: nhạc vọng xuống nhỏ hơn; tắt sau khi gọi tên Mơ */
 };
 function playSound(name,volume=.25,from=0,dur=0){if(!state.sound)return;const file=SOUND[name];if(!file)return;try{const a=new Audio(ROOT+'sound/'+file);a.volume=Math.min(1,volume*2.2);const start=()=>{try{if(from)a.currentTime=from}catch(_){}a.play().catch(()=>{});if(dur)setTimeout(()=>{const v=a.volume,t=setInterval(()=>{a.volume=Math.max(0,a.volume-v/6);if(a.volume<=.001){clearInterval(t);a.pause()}},40)},dur*1000)};(from&&a.readyState<1)?a.addEventListener('loadedmetadata',start,{once:true}):start()}catch(_){}}
 /* Âm thanh nền theo cảnh: nhiều lớp phát cùng lúc, lớp nào không còn thuộc cảnh mới thì tắt dần */
 const ambient={};
 function fadeTo(e,to,ms,done){clearInterval(e.fade);const a=e.a,from=a.volume,steps=Math.max(1,Math.round(ms/50));let i=0;e.fade=setInterval(()=>{i++;a.volume=Math.max(0,Math.min(1,from+(to-from)*i/steps));if(i>=steps){clearInterval(e.fade);if(done)done()}},50)}
 function setAmbience(){
- const want=(state.sound&&$('title-screen').hidden)?(AMBIENCE[state.scene]||{}):{};
+ let want=(state.sound&&$('title-screen').hidden)?(AMBIENCE[state.scene]||{}):{};
+ if(state.flags.sixthDone&&want.musicbox){want={...want};delete want.musicbox}
  for(const name of Object.keys(ambient)){if(!(name in want)){const e=ambient[name];delete ambient[name];fadeTo(e,0,900,()=>e.a.pause())}}
  for(const [name,vol] of Object.entries(want)){
   const e=ambient[name];
