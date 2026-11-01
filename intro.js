@@ -13,10 +13,9 @@ const coarse = matchMedia('(pointer: coarse)').matches;
 /* ===================================================================
    1) LOADING
    =================================================================== */
-const PORTRAITS = ['01_Dong', '02_Nam', '03_Tuyet', '04_Anh', '05_Nguyet', '06_Mo', '07_Ba_Lam', '08_Ba_Man'].map(n => `${R}portraits/${n}_portrait.webp`);
 const ITEMS = ['01_Bat_Lua_Chua_Bat', '02_Bat_Lua_Da_Bat', '02_Den_Pin', '03_Nen_Chua_Thap', '03_So_Tay', '04_Chia_Khoa', '04_Nen_Da_Thap', '05_Bat_Huong', '05_Nhang_Chua_Dot', '06_Nhang_Da_Dot', '07_Bat_Huong_Da_Cam_Nhang', '01_May_Quay']
   .map(n => `${R}items/${n}_128x128.webp`).concat(encodeURI(`${R}items/Antique Brass Flip-Top Lighter.webp`));
-const IMAGES = [`${R}title_bg.webp`, BG(1), BG(2), BG(3), BG(4), BG(5), BG(7), BG(8), ...PORTRAITS, ...ITEMS];
+const IMAGES = [`${R}title_bg.webp`, BG(1), BG(2), BG(3), BG(4), BG(5), BG(7), BG(8), ...ITEMS];
 // Âm thanh chỉ "làm nóng" bộ nhớ đệm trên máy tính (điện thoại thường không cho nạp trước khi chưa chạm).
 const SOUNDS = coarse ? [] : ['community-frogs.mp3', 'tieng_on_ao_o_cho.mp3', 'knock-on-the-door.mp3', 'creaking-door.mp3', 'door-slam.mp3'].map(SND);
 

@@ -23,13 +23,11 @@ GitHub Pages hoặc Netlify, chỉ cần giữ nguyên các tệp/thư mục.
 ------------------
 - Click/chạm hình thoi mờ trong cảnh để quan sát, lấy đồ, đi tiếp.
 - Click/chạm vào đồ trong túi để chọn hoặc sử dụng.
-- Nhật ký ghi lại manh mối, sơ đồ cho biết 20 cảnh.
-- Phím H: gợi ý; M: sơ đồ; F: bật/tắt đèn pin; J: nhật ký.
+- Nhật ký ghi lại manh mối.
+- Phím H: gợi ý; F: bật/tắt đèn pin; J: nhật ký; V: đổi chế độ máy ảnh.
 - Phím Esc: đóng cửa sổ hoặc hội thoại.
 - Góc trên phải: biểu tượng cuốn sổ = Nhật ký, biểu tượng 3 gạch = Menu.
-- Menu: nhiệm vụ hiện tại, cách chơi, gợi ý, sơ đồ, quay lại cảnh trước, bật/tắt âm thanh,
-  ẩn/hiện dấu tương tác, mức hiệu ứng hình ảnh (Tự động → Cao → Vừa → Thấp), toàn màn hình,
-  bắt đầu lại, về màn hình chính. Lựa chọn hiệu ứng được ghi nhớ.
+- Menu: nhiệm vụ hiện tại, cách chơi, gợi ý, bật/tắt âm thanh, bắt đầu lại, về màn hình chính.
 - Enter/Space: tiếp lời thoại. Nhật ký: mũi tên trái/phải hoặc nhấp mép trang để lật.
 - Intro: Space/chạm = chuyển câu nhanh; Esc hoặc nút "Bỏ qua" = vào game ngay.
 - Tiến trình được lưu trong localStorage của trình duyệt khi được phép.
@@ -200,3 +198,24 @@ Nút Gợi ý (H) vẫn có nhưng chỉ nhắc hướng đi, không đọc đá
   NIGHT VISION (xanh lá) · INFRARED (đen trắng) · THERMAL (bản đồ nhiệt) · CAMCORDER (băng VHS).
   Khung ngắm có REC, đồng hồ chạy, pin, giờ trong game, nhiễu hạt, vạch quét và dải nhiễu. Chụp gương phòng trẻ có chớp sáng.
   Mã: camera.css + khối "MÁY ẢNH" trong game.js. Mức hiệu ứng Thấp tự tắt hoạt ảnh của khung ngắm.
+
+14. CẬP NHẬT THÁNG 11/2026: DỌN TÍNH NĂNG · BẢO MẬT · HỘI THOẠI · ÂM THANH
+---------------------------------------------------------------------------
+Đã bỏ (không cần thiết): sơ đồ hành trình (phím M), nút "Quay lại cảnh trước", nút ẩn/hiện dấu tương tác,
+  nút đổi mức hiệu ứng và nút toàn màn hình trong Menu (mức hiệu ứng vẫn tự chọn theo máy, perf.js),
+  khung chân dung nhân vật và thẻ vật phẩm hiện bên khung chat (assets/portraits không còn được nạp; có thể xóa thư mục).
+Điểm tương tác: căn lại 20 điểm cho khớp vật thể trong ảnh (bà bán nước, cổng làng, ván cầu, bát hương, dải vải đỏ,
+  cột mốc đá, nôi, trâm, sổ sách, dép, đồ dùng năm người... xem mảng HOT trong lịch sử commit).
+Hội thoại: viết lại toàn bộ 24 cảnh và các câu khi tương tác; mỗi người một giọng (Đông điềm tĩnh, Nam tếu táo che sợ,
+  Tuyết dịu dàng, Ánh hăng hái, Nguyệt trầm lặng), có ngập ngừng, sợ hãi, an ủi nhau. Không lộ đáp án câu đố.
+Hội thoại nền: người trong làng nói chuyện với nhau ở BG01–BG05 (bảng OVERHEARD trong game.js), hiện chữ nhỏ ở góc trái,
+  mỗi 20–36 giây một đoạn, không chặn thao tác, tự ẩn khi có hội thoại/bảng mở.
+Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
+  chặn chọn chữ, copy, cắt, dán (kể cả vào ô nhập mã), kéo thả, chuột phải, Ctrl+C/X/V/A/S/U/P, F12, Ctrl+Shift+I/J/C.
+  Bản lưu có chữ ký: sửa tay localStorage sẽ làm bản lưu bị bỏ qua. Dữ liệu đọc lên được kiểm tra kiểu và danh sách hợp lệ.
+  LƯU Ý: game chạy hoàn toàn trên máy người chơi nên đây chỉ là lớp cản trở người dùng thông thường; không thể ngăn
+  người có kỹ năng (xem nguồn, công cụ lập trình, chụp màn hình). Bản lưu cũ (trước bản cập nhật) sẽ không đọc được, nút
+  "Tiếp tục" chỉ hiện khi có bản lưu mới. Muốn bảo vệ thật sự cần máy chủ.
+Âm thanh: tiếng thạch sùng (than_lan_keu_3s.mp3, cắt 3,0 s từ tệp gốc) chỉ phát 1 lần mỗi 2 phút trong nhà biệt thự,
+  đúng 3 giây rồi tắt (lần đầu sau ~20 s). Thêm tiếng dế (tieng_de_keu.mp3, 61 s lặp) ở BG04, BG05, BG06; BG07 trở đi
+  im lặng như lời thoại của Nam. Tệp than_lan_keu.mp3 gốc vẫn còn trong assets/sound nhưng không còn được dùng.

@@ -124,7 +124,7 @@ stage.addEventListener('pointermove', e => {
     if (lvl() === 'high') img.style.transform = `scale(1.05) translate(${((mx - .5) * -10).toFixed(1)}px,${((my - .5) * -6).toFixed(1)}px)`;
   });
 });
-Perf.onChange(l => { if (l !== 'high') img.style.transform = ''; kick(); updateFxBtn(); });
+Perf.onChange(l => { if (l !== 'high') img.style.transform = ''; kick(); });
 
 /* ---------- Hội thoại gõ từng chữ ---------- */
 const dt = $('dialogue-text'); let lastSet = '', ti = 0;
@@ -167,16 +167,6 @@ function rerLoop() {
   rt = setTimeout(rerLoop, burst ? 70 + Math.random() * 110 : 130 + Math.random() * 220);
 }
 rerLoop();
-
-/* ---------- Nút chọn chất lượng hiệu ứng ---------- */
-const fxBtn = $('btn-fx');
-const NAMES = { high: 'Cao', medium: 'Vừa', low: 'Thấp' };
-function updateFxBtn() {
-  if (!fxBtn) return;
-  const txt = 'Hiệu ứng hình ảnh: ' + (Perf.pref === 'auto' ? 'Tự động (đang dùng mức ' + NAMES[Perf.level] + ')' : NAMES[Perf.level]);
-  fxBtn.title = txt; fxBtn.setAttribute('aria-label', txt + '. Nhấn để đổi.');
-}
-if (fxBtn) { fxBtn.onclick = () => Perf.cycle(); updateFxBtn(); }
 
 window.HorrorFX = { scare, audioOn };
 })();

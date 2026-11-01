@@ -2,6 +2,8 @@
 <html lang="vi" class="is-loading is-busy">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#080b10">
   <meta name="description" content="Lời Nguyền Rừng Thiêng — game phiêu lưu kinh dị point-and-click trong biệt thự Vân Hòa.">
@@ -12,8 +14,9 @@
   <link rel="stylesheet" href="ui.css">
   <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="camera.css">
+  <link rel="stylesheet" href="guard.css">
+  <script src="guard.js"></script>
   <script src="perf.js"></script>
-  <script>/* Phòng hờ: nếu script lỗi, vẫn không để kẹt ở màn loading */setTimeout(function(){var r=document.documentElement;if(r.classList.contains('is-loading')){r.classList.remove('is-loading','is-busy');var l=document.getElementById('loader');if(l)l.hidden=true}},20000)</script>
   <script src="game.js" defer></script>
   <script src="horror.js" defer></script>
   <script src="intro.js" defer></script>
@@ -62,14 +65,11 @@
     </div>
 
     <div id="item-pop" class="pop-stack" role="status" aria-live="polite"></div>
+    <div id="chatter" class="chatter" aria-hidden="true"></div>
 
     <!-- Hội thoại / dẫn truyện: chân dung nằm trên khung chat, bên trái -->
     <div id="dialogue" class="dlg" hidden>
       <div class="dlg-inner">
-        <div class="dlg-top">
-          <div class="dlg-portrait-wrap" id="dialogue-portrait-wrap" hidden><img class="dlg-portrait" id="dialogue-portrait" src="" alt="" draggable="false"></div>
-          <div id="dialogue-props" class="dlg-props" aria-label="Vật phẩm được nhắc đến"></div>
-        </div>
         <div class="dlg-box">
           <div class="dlg-name"><span id="dialogue-symbol" class="dlg-symbol">◈</span><strong id="dialogue-speaker">Người kể chuyện</strong></div>
           <p id="dialogue-text" class="dlg-text"></p>
@@ -85,8 +85,8 @@
     </div>
   </div>
 
-  <!-- Giữ lại để horror.js (âm lượng, mức hiệu ứng) hoạt động; điều khiển thật nằm trong Menu -->
-  <div hidden aria-hidden="true"><button id="btn-audio" type="button" aria-pressed="true">♪</button><button id="btn-fx" type="button"></button></div>
+  <!-- Giữ lại để horror.js (đọc trạng thái âm thanh) hoạt động; điều khiển thật nằm trong Menu -->
+  <div hidden aria-hidden="true"><button id="btn-audio" type="button" aria-pressed="true">♪</button></div>
 </div>
 
 <div id="title-screen" class="title-screen" role="dialog" aria-modal="true" aria-label="Màn hình mở đầu">

@@ -60,6 +60,9 @@ function watch(ms = 20000) {
   requestAnimationFrame(tick);
 }
 
+/* Phòng hờ: nếu script lỗi vẫn không để kẹt ở màn loading (trước đây là script inline; chuyển ra đây để CSP không cần cho phép inline) */
+setTimeout(() => { const r = document.documentElement; if (r.classList.contains('is-loading')) { r.classList.remove('is-loading', 'is-busy'); const l = document.getElementById('loader'); if (l) l.hidden = true; } }, 20000);
+
 window.Perf = {
   RM,
   get level() { return level; },
