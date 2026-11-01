@@ -1,0 +1,182 @@
+/* HORROR — lớp VFX kinh dị (không còn âm thanh sinh bằng code), độc lập với game.js (chỉ quan sát DOM).
+   Bản gộp: giữ đầy đủ hiệu ứng gốc của "Mắt đỏ" (vignette bám con trỏ, scanline,
+   grain blend, nhịp máu, chớp đèn, logo rè SVG) + hệ thống 3 mức của bản origin.
+   Phần lớn hiệu ứng chạy bằng CSS (transform/opacity); canvas chỉ còn lớp bụi nhỏ;
+   nhiễu hạt sinh một lần thành ảnh 64px rồi dịch chuyển bằng CSS. */
+(() => {
+'use strict';
+const $ = id => document.getElementById(id);
+const root = document.documentElement;
+const stage = $('scene-stage'), img = $('scene-image'), hot = $('hotspots'), title = $('title-screen');
+const RM = Perf.RM;
+const lvl = () => Perf.level;
+const busy = () => root.classList.contains('is-busy');            // đang loading / intro
+const running = () => title.hidden && !busy();                   // đang chơi thật
+const audioOn = () => $('btn-audio').getAttribute('aria-pressed') !== 'false';
+let dread = .15, lastScare = 0, bt = 0;
+const sceneNo = () => parseInt(($('scene-index').textContent.match(/BG(\d+)/) || [0, 1])[1], 10);
+
+/* ---------- Lớp hiệu ứng (thứ tự = thứ tự chồng) ---------- */
+const mk = (tag, cls) => { const e = document.createElement(tag); e.className = 'fx ' + cls; e.setAttribute('aria-hidden', 'true'); stage.insertBefore(e, hot); return e; };
+mk('div', 'fx-fog');
+const dust = mk('canvas', 'fx-dust');
+const grain = mk('div', 'fx-grain');
+mk('div', 'fx-blood');
+mk('div', 'fx-vignette');
+mk('div', 'fx-scan');
+const shadow = mk('div', 'fx-shadow'), glitchL = mk('div', 'fx-glitch'), flash = mk('div', 'fx-flash');
+
+/* Hạt nhiễu: sinh MỘT lần thành ảnh nhỏ, sau đó chỉ dịch chuyển bằng CSS (không vẽ lại mỗi khung). */
+(() => {
+  const c = document.createElement('canvas'); c.width = c.height = 64;
+  const x = c.getContext('2d'), d = x.createImageData(64, 64), p = new Uint32Array(d.data.buffer);
+  for (let i = 0; i < p.length; i++) { const v = Math.random() * 255 | 0, a = (Math.random() * 38) | 0; p[i] = (a << 24) | (v << 16) | (v << 8) | v; }
+  x.putImageData(d, 0, 0);
+  grain.style.setProperty('--grain', `url(${c.toDataURL()})`);
+})();
+
+/* ---------- Bụi lơ lửng (canvas độ phân giải thấp, chỉ mức vừa/cao) ---------- */
+const dctx = dust.getContext('2d');
+const COUNT = { medium: 22, high: 46 }, FPS = { medium: 15, high: 30 };
+let DW = 2, DH = 2, raf = 0, last = 0;
+const motes = Array.from({ length: 46 }, () => ({ x: Math.random(), y: Math.random(), r: .5 + Math.random() * .9, vx: (Math.random() - .5) * .00012, vy: -.00004 - Math.random() * .0001, a: .15 + Math.random() * .5, p: Math.random() * 6 }));
+const resize = () => { DW = dust.width = Math.max(2, stage.clientWidth / 3 | 0); DH = dust.height = Math.max(2, stage.clientHeight / 3 | 0); };
+new ResizeObserver(resize).observe(stage); resize();
+const wantDust = () => lvl() !== 'low' && !document.hidden && running();
+function frame(t) {
+  raf = 0;
+  if (!wantDust()) return;
+  raf = requestAnimationFrame(frame);
+  if (t - last < 1000 / FPS[lvl()]) return;
+  const dt = Math.min(100, t - last); last = t;
+  dctx.clearRect(0, 0, DW, DH);
+  const n = COUNT[lvl()], red = dread > .7;
+  dctx.fillStyle = red ? 'rgb(200,50,40)' : 'rgb(210,200,185)';
+  for (let i = 0; i < n; i++) {
+    const m = motes[i];
+    m.x += m.vx * dt + Math.sin(t / 1800 + m.p) * .0002; m.y += m.vy * dt;
+    if (m.y < -.02) { m.y = 1.02; m.x = Math.random(); }
+    dctx.globalAlpha = m.a * (red ? .8 : .6);
+    dctx.fillRect(m.x * DW - m.r, m.y * DH - m.r, m.r * 2, m.r * 2);
+  }
+}
+const kick = () => { if (!raf && wantDust()) raf = requestAnimationFrame(frame); else if (!wantDust()) dctx.clearRect(0, 0, DW, DH); };
+document.addEventListener('visibilitychange', kick);
+new MutationObserver(kick).observe(title, { attributes: true, attributeFilter: ['hidden'] });
+new MutationObserver(kick).observe(root, { attributes: true, attributeFilter: ['class'] });
+
+/* ---------- Âm thanh: CHỈ dùng tệp trong assets/sound (không còn âm thanh tạo bằng code/WebAudio) ---------- */
+function playAsset(file, vol, from) {
+  if (!audioOn()) return;
+  try {
+    const a = new Audio('assets/sound/' + file); a.volume = Math.min(1, vol);
+    const go = () => { try { if (from) a.currentTime = from; } catch (_) {} a.play().catch(() => {}); };
+    a.readyState >= 1 ? go() : a.addEventListener('loadedmetadata', go, { once: true });
+  } catch (_) {}
+}
+
+/* ---------- Nhịp tim: máu ở rìa đập theo nhịp (lớp .beat như bản Mắt đỏ) + tiếng thình thịch ---------- */
+function beatLoop() {
+  clearTimeout(bt);
+  if (running() && !document.hidden) {
+    if (!RM) { stage.classList.remove('beat'); void stage.offsetWidth; stage.classList.add('beat'); }
+  }
+  bt = setTimeout(beatLoop, 1600 - dread * 950);
+}
+beatLoop();
+
+/* ---------- Jump scare / glitch / chớp đèn ---------- */
+const pulse = (el, cls, ms) => { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); setTimeout(() => el.classList.remove(cls), ms); };
+function scare(big) {
+  if (RM) return;
+  if (!big && Date.now() - lastScare < 9000) return;
+  lastScare = Date.now();
+  shadow.style.left = Math.random() < .5 ? '5%' : '72%';
+  pulse(shadow, 'show', 750); pulse(flash, 'on', 560); pulse(stage, 'shake', 520);
+  playAsset('door-slam.mp3', .8, 3.7);   // cú đập cửa thay cho tiếng "sting" tạo bằng code
+}
+function onScene() {
+  const n = sceneNo(); dread = Math.min(1, .1 + (n - 1) * .0475);
+  stage.style.setProperty('--dread', dread.toFixed(2));
+  stage.classList.toggle('dread-high', dread > .8);
+  if (!RM) { pulse(stage, 'fadein', 1100); pulse(stage, 'glitching', 450); }
+}
+new MutationObserver(onScene).observe($('scene-index'), { childList: true, characterData: true, subtree: true });
+onScene();
+setInterval(() => {
+  if (!running() || document.hidden || !$('modal-backdrop').hidden) return;
+  const n = sceneNo();
+  if (n >= 6 && !RM && Math.random() < .2 + dread * .25) pulse(stage, 'flick', 460);   // chớp đèn
+  if (n >= 9 && Math.random() < dread * .07) scare(false);
+}, 4000);
+
+/* ---------- Đèn pin mềm bám con trỏ + parallax nhẹ (gộp theo khung hình) ---------- */
+let pend = 0, px = 0, py = 0;
+stage.addEventListener('pointermove', e => {
+  if (RM) return;
+  px = e.clientX; py = e.clientY;
+  if (!pend) pend = requestAnimationFrame(() => {
+    pend = 0;
+    const b = stage.getBoundingClientRect();
+    const mx = (px - b.left) / b.width, my = (py - b.top) / b.height;
+    stage.style.setProperty('--fx-x', (mx * 100).toFixed(1) + '%');
+    stage.style.setProperty('--fx-y', (my * 100).toFixed(1) + '%');
+    if (lvl() === 'high') img.style.transform = `scale(1.05) translate(${((mx - .5) * -10).toFixed(1)}px,${((my - .5) * -6).toFixed(1)}px)`;
+  });
+});
+Perf.onChange(l => { if (l !== 'high') img.style.transform = ''; kick(); updateFxBtn(); });
+
+/* ---------- Hội thoại gõ từng chữ ---------- */
+const dt = $('dialogue-text'); let lastSet = '', ti = 0;
+const setT = t => { lastSet = t; dt.textContent = t; };
+let typing = false, curFull = '';
+const finishNow = () => { if (!typing) return false; clearInterval(ti); typing = false; setT(curFull); return true; };
+window.finishTyping = finishNow;
+new MutationObserver(() => {
+  const full = dt.textContent; if (!full || full === lastSet) return;
+  clearInterval(ti); let i = 0; setT(''); typing = true; curFull = full;
+  ti = setInterval(() => { i += 1; setT(full.slice(0, i)); if (i >= full.length) { clearInterval(ti); typing = false; } }, 24);
+  dt.onclick = () => { finishNow(); };
+}).observe(dt, { childList: true, characterData: true, subtree: true });
+
+/* ---------- Kết thúc xấu = scare lớn ---------- */
+new MutationObserver(() => { const e = document.querySelector('#modal-body .ending-number'); if (e && /BAD/.test(e.textContent)) scare(true); })
+  .observe($('modal-body'), { childList: true });
+
+/* ---------- Màn hình tiêu đề: sương, máu nhỏ giọt, cảnh báo ---------- */
+const tf = document.createElement('div'); tf.className = 'title-fog'; tf.setAttribute('aria-hidden', 'true'); title.insertBefore(tf, title.querySelector('.title-content'));
+for (let i = 0; i < 10; i++) { const d = document.createElement('i'); d.className = 'drip'; d.setAttribute('aria-hidden', 'true');
+  d.style.left = (4 + Math.random() * 92) + '%'; d.style.setProperty('--len', (70 + Math.random() * 190) + 'px'); d.style.animationDelay = (-Math.random() * 9) + 's'; d.style.animationDuration = (7 + Math.random() * 6) + 's'; title.appendChild(d); }
+const warn = document.createElement('p'); warn.className = 'title-warn'; warn.textContent = '⚠ Có yếu tố kinh dị · Nên đeo tai nghe, chơi trong phòng tối';
+$('btn-new-game').parentElement.before(warn);
+
+/* ---------- Logo rè rè: méo sóng SVG (chỉ mức cao) + tiếng nhiễu điện (mọi mức) ---------- */
+document.body.insertAdjacentHTML('beforeend', '<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="fx-rer" x="-5%" y="-15%" width="110%" height="130%"><feTurbulence id="fx-turb" type="fractalNoise" baseFrequency="0.002 0.3" numOctaves="1" seed="1"/><feDisplacementMap id="fx-disp" in="SourceGraphic" scale="0"/></filter></svg>');
+const turb = $('fx-turb'), disp = $('fx-disp');
+let rt = 0;
+function rerLoop() {
+  clearTimeout(rt);
+  // Chỉ chạy khi màn hình tiêu đề đang hiện rõ — trong lúc chơi/loading/intro thì ngủ.
+  if (RM || title.hidden || busy() || document.hidden) { rt = setTimeout(rerLoop, 700); return; }
+  const burst = Math.random() < .25;
+  if (lvl() === 'high') {
+    disp.setAttribute('scale', burst ? String(8 + Math.random() * 20 | 0) : (Math.random() < .5 ? '2' : '0'));
+    turb.setAttribute('baseFrequency', '0.00' + (1 + Math.random() * 4 | 0) + ' ' + (.2 + Math.random() * .7).toFixed(2));
+    turb.setAttribute('seed', String(Math.random() * 99 | 0));
+  }
+  rt = setTimeout(rerLoop, burst ? 70 + Math.random() * 110 : 130 + Math.random() * 220);
+}
+rerLoop();
+
+/* ---------- Nút chọn chất lượng hiệu ứng ---------- */
+const fxBtn = $('btn-fx');
+const NAMES = { high: 'Cao', medium: 'Vừa', low: 'Thấp' };
+function updateFxBtn() {
+  if (!fxBtn) return;
+  const txt = 'Hiệu ứng hình ảnh: ' + (Perf.pref === 'auto' ? 'Tự động (đang dùng mức ' + NAMES[Perf.level] + ')' : NAMES[Perf.level]);
+  fxBtn.title = txt; fxBtn.setAttribute('aria-label', txt + '. Nhấn để đổi.');
+}
+if (fxBtn) { fxBtn.onclick = () => Perf.cycle(); updateFxBtn(); }
+
+window.HorrorFX = { scare, audioOn };
+})();

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="vi" class="is-loading is-busy">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080b10">
+  <meta name="description" content="Lời Nguyền Rừng Thiêng — game phiêu lưu kinh dị point-and-click trong biệt thự Vân Hòa.">
+  <title>Lời Nguyền Rừng Thiêng — Bí mật biệt thự Vân Hòa</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="horror.css">
+  <link rel="stylesheet" href="intro.css">
+  <link rel="stylesheet" href="ui.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="camera.css">
+  <script src="perf.js"></script>
+  <script>/* Phòng hờ: nếu script lỗi, vẫn không để kẹt ở màn loading */setTimeout(function(){var r=document.documentElement;if(r.classList.contains('is-loading')){r.classList.remove('is-loading','is-busy');var l=document.getElementById('loader');if(l)l.hidden=true}},20000)</script>
+  <script src="game.js" defer></script>
+  <script src="horror.js" defer></script>
+  <script src="intro.js" defer></script>
+</head>
+<body>
+<div id="loader" class="loader" role="status" aria-live="polite" aria-label="Đang tải trò chơi">
+  <div class="loader-inner">
+    <p class="loader-name">LỜI NGUYỀN RỪNG THIÊNG</p>
+    <div id="loader-bar" class="incense" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="incense-stick"></div><div id="incense-ash" class="incense-ash"></div>
+      <div id="ember" class="ember"><i class="smoke"></i><i class="smoke"></i><i class="smoke"></i></div>
+    </div>
+    <div class="loader-status"><span id="loader-status-text">Đang thắp nén hương…</span><span id="loader-pct" class="loader-pct">0%</span></div>
+    <p id="loader-tip" class="loader-tip"></p>
+  </div>
+</div>
+<div class="app-shell" id="app-shell">
+  <div id="scene-backdrop" class="scene-backdrop" aria-hidden="true"></div>
+
+  <!-- Màn chơi: khung 16:9 lớn nhất vừa với màn hình, căn giữa -->
+  <main class="game-column" aria-label="Màn chơi">
+    <div id="scene-stage" class="scene-stage" tabindex="0" aria-label="Bối cảnh game">
+      <img id="scene-image" class="scene-image" src="assets/background/BG01.webp" alt="Bối cảnh game" draggable="false">
+      <div class="scene-atmosphere" aria-hidden="true"></div>
+      <div class="torch-shade" id="torch-shade" aria-hidden="true"></div>
+      <div id="hotspots" class="hotspot-layer" aria-label="Các điểm tương tác"></div>
+    </div>
+  </main>
+
+  <!-- Lớp giao diện phủ toàn màn hình -->
+  <div class="hud" id="hud">
+    <div class="hud-place" aria-live="polite">
+      <span class="hud-place-meta"><span id="chapter-label">MỞ ĐẦU</span><i>·</i><span id="clock-label">07:30</span></span>
+      <strong id="scene-title">Cổng làng Đồng Chay</strong>
+    </div>
+    <span id="scene-index" hidden>BG01 / 24</span>
+
+    <div class="hud-actions">
+      <button id="btn-journal" class="hud-btn" type="button" aria-label="Mở nhật ký (J)" title="Nhật ký (J)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.2c2.6-.9 5.3-.8 8 .9 2.7-1.7 5.4-1.8 8-.9v13.1c-2.6-.9-5.3-.8-8 .9-2.7-1.7-5.4-1.8-8-.9z"/><path d="M12 6.1v13.1"/></svg>
+        <i class="hud-dot" aria-hidden="true"></i>
+      </button>
+      <button id="btn-menu" class="hud-btn" type="button" aria-label="Menu" title="Menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 7h15M4.5 12h15M4.5 17h15"/></svg>
+      </button>
+    </div>
+
+    <div id="item-pop" class="pop-stack" role="status" aria-live="polite"></div>
+
+    <!-- Hội thoại / dẫn truyện: chân dung nằm trên khung chat, bên trái -->
+    <div id="dialogue" class="dlg" hidden>
+      <div class="dlg-inner">
+        <div class="dlg-top">
+          <div class="dlg-portrait-wrap" id="dialogue-portrait-wrap" hidden><img class="dlg-portrait" id="dialogue-portrait" src="" alt="" draggable="false"></div>
+          <div id="dialogue-props" class="dlg-props" aria-label="Vật phẩm được nhắc đến"></div>
+        </div>
+        <div class="dlg-box">
+          <div class="dlg-name"><span id="dialogue-symbol" class="dlg-symbol">◈</span><strong id="dialogue-speaker">Người kể chuyện</strong></div>
+          <p id="dialogue-text" class="dlg-text"></p>
+          <button id="dialogue-next" class="dlg-next" type="button" aria-label="Tiếp tục lời thoại">TIẾP <span>›</span></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thanh vật phẩm (ẩn khi đang có hội thoại) -->
+    <div id="item-dock" class="dock" aria-label="Vật phẩm">
+      <div id="selected-item" class="dock-selected" hidden></div>
+      <div id="inventory-grid" class="dock-slots"></div>
+    </div>
+  </div>
+
+  <!-- Giữ lại để horror.js (âm lượng, mức hiệu ứng) hoạt động; điều khiển thật nằm trong Menu -->
+  <div hidden aria-hidden="true"><button id="btn-audio" type="button" aria-pressed="true">♪</button><button id="btn-fx" type="button"></button></div>
+</div>
+
+<div id="title-screen" class="title-screen" role="dialog" aria-modal="true" aria-label="Màn hình mở đầu">
+  <div class="title-bg" aria-hidden="true"></div><div class="title-content">
+    <div class="eyebrow-line"><span>TRUYỆN KINH DỊ DÂN GIAN VIỆT NAM</span></div>
+    <div class="title-sigil">◈</div>
+    <h1>LỜI NGUYỀN<br><em>RỪNG THIÊNG</em></h1>
+    <p class="title-subtitle">BÍ MẬT BIỆT THỰ VÂN HÒA</p>
+    <p class="title-description">Năm sinh viên. Một biệt thự bị lãng quên. Năm cái tên chưa từng được trả lại.<br>Đừng trả lời khi bóng tối gọi tên bạn.</p>
+    <div class="title-buttons"><button class="primary-btn" id="btn-new-game" type="button">BẮT ĐẦU ĐIỀU TRA <span>→</span></button><button class="secondary-btn" id="btn-continue" type="button" hidden>TIẾP TỤC LẦN CHƠI</button></div>
+    <div class="title-footer">POINT & CLICK <span>◆</span> KHÁM PHÁ · GIẢI ĐỐ · 3 KẾT THÚC <span>◆</span> CHƠI TRÊN TRÌNH DUYỆT</div>
+  </div>
+</div>
+
+<div id="intro" class="intro" hidden tabindex="-1" role="dialog" aria-modal="true" aria-label="Mở đầu câu chuyện">
+  <div class="intro-bg" aria-hidden="true"><img id="intro-img-a" alt="" draggable="false"><img id="intro-img-b" alt="" draggable="false"></div>
+  <div class="intro-shade" aria-hidden="true"></div>
+  <div id="intro-text" class="intro-text" aria-live="polite"><p id="intro-line" class="intro-line"></p><p id="intro-sub" class="intro-sub" hidden></p></div>
+  <div id="intro-card" class="intro-card" aria-hidden="true"><h2>LỜI NGUYỀN<em>RỪNG THIÊNG</em></h2></div>
+  <button id="intro-skip" class="intro-skip" type="button">Bỏ qua ›</button>
+  <div class="intro-hint">Chạm hoặc nhấn Space để chuyển nhanh · Esc để bỏ qua</div>
+</div>
+
+<div id="modal-backdrop" class="modal-backdrop" hidden>
+  <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-head"><span class="label-caps" id="modal-kicker">HỒ SƠ ĐIỀU TRA</span><button class="modal-x" id="modal-close" type="button" aria-label="Đóng">×</button></div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

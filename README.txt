@@ -1,0 +1,202 @@
+LỜI NGUYỀN RỪNG THIÊNG — BÍ MẬT BIỆT THỰ VÂN HÒA
+BẢN GAME WEB POINT-AND-CLICK CÓ THỂ CHƠI (2026)
+====================================================
+
+1. CÁCH CHƠI NGAY
+----------------
+- Giải nén toàn bộ tệp ZIP.
+- Mở thư mục Loi_Nguyen_Rung_Thieng_Web_Game.
+- Nhấp đúp index.html để chơi bằng Chrome, Edge hoặc Firefox.
+- Giữ nguyên cấu trúc thư mục assets/ bên cạnh index.html.
+- Không cần cài Node.js hay tải thêm thư viện từ Internet.
+
+Nếu trình duyệt hạn chế phát âm thanh hoặc lưu tiến trình khi mở
+bằng đường dẫn file://, hãy chạy máy chủ web nội bộ:
+  + Mở Terminal/Command Prompt trong thư mục trò chơi.
+  + Chạy: python -m http.server 8000
+  + Truy cập: http://localhost:8000
+
+Game cũng có thể được đưa lên một dịch vụ host website tĩnh như
+GitHub Pages hoặc Netlify, chỉ cần giữ nguyên các tệp/thư mục.
+
+2. CÁCH ĐIỀU KHIỂN
+------------------
+- Click/chạm hình thoi mờ trong cảnh để quan sát, lấy đồ, đi tiếp.
+- Click/chạm vào đồ trong túi để chọn hoặc sử dụng.
+- Nhật ký ghi lại manh mối, sơ đồ cho biết 20 cảnh.
+- Phím H: gợi ý; M: sơ đồ; F: bật/tắt đèn pin; J: nhật ký.
+- Phím Esc: đóng cửa sổ hoặc hội thoại.
+- Góc trên phải: biểu tượng cuốn sổ = Nhật ký, biểu tượng 3 gạch = Menu.
+- Menu: nhiệm vụ hiện tại, cách chơi, gợi ý, sơ đồ, quay lại cảnh trước, bật/tắt âm thanh,
+  ẩn/hiện dấu tương tác, mức hiệu ứng hình ảnh (Tự động → Cao → Vừa → Thấp), toàn màn hình,
+  bắt đầu lại, về màn hình chính. Lựa chọn hiệu ứng được ghi nhớ.
+- Enter/Space: tiếp lời thoại. Nhật ký: mũi tên trái/phải hoặc nhấp mép trang để lật.
+- Intro: Space/chạm = chuyển câu nhanh; Esc hoặc nút "Bỏ qua" = vào game ngay.
+- Tiến trình được lưu trong localStorage của trình duyệt khi được phép.
+
+3. NỘI DUNG ĐÃ CÓ
+-----------------
+- 20 khung cảnh BG01–BG20, mỗi BG 1280 x 720 px, WebP.
+- Đường đi từ làng Đồng Chay, rừng tre, biệt thự Vân Hòa
+  tới tầng hầm và căn phòng kín.
+- Chân dung năm sinh viên Đông, Nam, Tuyết, Ánh, Nguyệt.
+- Điểm click, các cuộc hội thoại, âm thanh bối cảnh/SFX.
+- Túi đồ, nhật ký, tự động lưu, nút gợi ý, sơ đồ.
+- 5 di vật cần tìm ở BG09, BG13, BG16, BG17 và BG20.
+- Câu đố chìa khóa cổng, mật mã 4 số, bức tường năm dấu tay,
+  nghi lễ năm bát hương.
+- 3 kết thúc: Oán hồn chưa tan / Sự thật bị chôn vùi /
+  Trả lại tên người chết.
+- Giao diện tương thích chuột, bàn phím và màn hình cảm ứng.
+
+4. GỢI Ý NGẮN (CÓ THỂ CHỨA SPOILER)
+----------------------------------
+- Kiểm tra bát hương ở miếu BG05 trước khi vào rừng.
+- Chìa khóa cổng ở cột mốc rừng sâu BG07.
+- Mã hộp sắt là thời điểm đồng hồ đứng im trong BG11.
+- Thanh sắt phá tường lấy ở gian bếp BG13.
+- Dùng máy ảnh lên gương phòng trẻ BG16.
+- Tìm 5 di vật, sau đó trở về phòng thờ BG12.
+- Để mở kết thúc tốt nhất, lưu đủ 3 nhóm chứng cứ:
+  sổ cứu trợ, bản thú tội và hộp tài liệu dưới hầm.
+
+4b. MÀN LOADING, INTRO VÀ HIỆU NĂNG (BẢN NÂNG CẤP)
+---------------------------------------------------
+- Loading: nén hương cháy dần theo tiến độ nạp ảnh/âm thanh thật. Tối thiểu ~2,4 giây,
+  tối đa 15 giây (tệp lỗi không làm treo game). Sau khi vào game, các cảnh còn lại
+  được nạp ngầm từng ảnh một để chuyển cảnh không bị khựng.
+- Intro: ~25 giây, 6 câu + tiêu đề, có tiếng cửa kẽo kẹt, tiếng gõ cửa, giật hình.
+  Chỉ phát khi bấm "BẮT ĐẦU ĐIỀU TRA"; "TIẾP TỤC" và "Chơi lại" trong game bỏ qua intro.
+- Hiệu ứng có 3 mức, tự chọn theo số nhân CPU, RAM, màn hình cảm ứng; nếu vào game
+  mà FPS thấp thì tự hạ một bậc (chỉ khi để Tự động):
+    Cao  : sương 2 lớp, bụi 46 hạt, nhiễu hạt blend, vạch quét, vignette bám con trỏ,
+           parallax, méo sóng SVG ở logo.
+    Vừa  : sương 1 lớp, bụi 22 hạt (15 FPS), nhiễu chậm, vignette bám con trỏ, vạch quét,
+           logo rè CSS + bộ lọc SVG tĩnh.
+    Thấp : không canvas, sương tĩnh trôi chậm, nhiễu rất chậm, vignette tĩnh,
+           không parallax, logo không lọc SVG.
+  Ở mọi mức vẫn giữ: tối rìa tăng theo mức sợ hãi, nhịp tim, chớp tắt đèn,
+  bóng đen mắt đỏ, thì thầm, drone âm thanh, đèn pin và các cú giật mình.
+- Đã gộp đầy đủ lớp VFX của bản "Mắt đỏ": đèn pin/vignette bám con trỏ, vạch quét,
+  nhiễu hạt blend overlay, mạch máu đập theo nhịp, chớp đèn, logo rè SVG + tia sáng.
+- Cần chỉnh thủ công: mở perf.js (hàm guess) để đổi ngưỡng nhận máy yếu.
+
+5. CẤU TRÚC THƯ MỤC
+------------------
+index.html                 — trang game, khởi chạy ở đây
+style.css                  — giao diện responsive
+horror.css / horror.js     — hiệu ứng kinh dị (đã tối ưu theo 3 mức)
+perf.js                    — chọn mức hiệu ứng, tự hạ mức khi giật
+intro.css / intro.js       — màn loading và intro
+ui.css                     — nút bo tròn, thẻ kính, cửa sổ, màn hình tiêu đề
+layout.css                 — BỐ CỤC MỚI: màn chơi fullscreen, HUD, hội thoại, thanh vật phẩm, nhật ký
+assets/title_bg.webp       — nền màn hình tiêu đề (đã khử màu sẵn để bỏ filter lúc chạy)
+ game.js                   — toàn bộ logic điều khiển/gameplay
+assets/background/         — BG01.webp đến BG20.webp
+assets/portraits/          — chân dung 5 nhân vật
+assets/items/              — hình vật phẩm và đạo cụ
+assets/sound/              — hiệu ứng âm thanh do người dùng cung cấp
+README.txt                 — hướng dẫn này
+THONG_TIN_TAI_NGUYEN.txt   — lưu ý về tư liệu và quyền sử dụng
+
+6. LƯU Ý
+---------
+Đây là bản game web đơn người chơi có nội dung trọn tuyến và có thể
+chơi thử từ đầu tới kết thúc. Chưa có hệ thống backend, tài khoản,
+phân cảnh nhân vật hoạt hình, thu âm thoại nhân vật hay cơ chế chiến đấu.
+Tọa độ điểm click có thể tiếp tục tinh chỉnh dựa trên thiết kế gameplay.
+
+Truyện, biệt thự và sự kiện năm 1988 hoàn toàn hư cấu. Tài nguyên
+hình ảnh, chân dung, đạo cụ và âm thanh được lấy từ gói tư liệu người
+dùng cung cấp trong cuộc trò chuyện.
+
+KIỂM TRA CHẤT LƯỢNG
+------------------
+Đã xác nhận đủ 20 ảnh BG 1280×720, 13 ảnh vật phẩm, 5 chân dung.
+Đã thử hành trình chính, giải mật mã 0317, bức tường năm dấu tay,
+nghi lễ năm di vật, và kết thúc "Trả lại tên người chết".
+
+7. NÂNG CẤP KINH DỊ (horror.css + horror.js)
+--------------------------------------------
+- Nhiễu hạt phim, sương, bụi/đom đóm đỏ, vignette bám theo con trỏ, mạch máu viền màn hình.
+- Độ sợ (dread) tăng dần theo cảnh: ảnh nền ngả xám, tối dần, nhịp tim nhanh dần.
+- Glitch khi chuyển cảnh, chớp đèn, bóng ma mắt đỏ xuất hiện ngẫu nhiên từ BG09 trở đi.
+- Âm thanh tạo bằng WebAudio: drone, nhịp tim, thì thầm, tiếng sting (tắt cùng nút ♪).
+- Hội thoại gõ từng chữ (nhấp vào chữ để hiện ngay). Tôn trọng chế độ giảm chuyển động của hệ điều hành.
+
+8. CHƯƠNG 7 · CÁI TÊN THỨ SÁU (MỚI)
+-----------------------------------
+- Sau nghi lễ năm di vật, tiếng khóc trẻ con vọng từ phòng trẻ; cổng biệt thự không cho rời đi.
+- Thu 3 manh mối: chuông đồng (giếng BG09), giấy khai sinh (ngăn kéo BG17), mảnh vải thêu (nôi BG16).
+- Chọn chuông, lắc bên nôi để sang BG21 (bên kia gương) rồi BG22 (đáy giếng cạn): 3 cảnh mới, 2 vật phẩm mới.
+- Câu đố gọi tên bé gái. Kết thúc thật cần cả chứng cứ lẫn việc trả lại cái tên thứ sáu.
+
+9. CHƯƠNG 8 · BÓNG ÔNG LÂM (MỚI)
+--------------------------------
+- Sau khi gọi tên Mơ, ánh đỏ chặn cửa chính ở đại sảnh (BG23, thay BG11 cho tới khi xong).
+- Lên gác mái BG24 qua nắp trần hành lang BG15, lấy lời khai bà Mận.
+- Đối chất 3 vòng với bóng ông Bá Lâm bằng đúng chứng cứ; trả lời sai thì phải làm lại.
+- Có chân dung cho Mơ, ông Bá Lâm, bà Mận. Logo rè rè (SVG méo sóng + nhiễu tĩnh + tiếng điện). Chữ giao diện được phóng to.
+
+10. GIAO DIỆN MỚI · NÚT BO TRÒN (ui.css + ui.js)
+-----------------------------------------------
+- Toàn bộ nút đã bo tròn: nút biểu tượng thành hình tròn, nút hành động/hộp thoại
+  thành viên thuốc, nút chọn trong cửa sổ bo góc mềm; ô vật phẩm và chân dung cũng bo góc.
+- Thanh trên là capsule kính; màn chơi dùng khung cảnh bo tròn, nhãn/chú thích dạng chip,
+  hộp thoại kính có viền đỏ, thanh hành động dạng dock và bảng bên chia thành các thẻ.
+- Màn nhỏ: tiêu đề thương hiệu xuống hai dòng, hộp thoại nằm dưới khung ảnh và tự canh
+  khoảng cách theo độ dài lời thoại (ui.js) để không đè lên thanh hành động.
+- ui.css nạp sau intro.css nên không sửa style.css gốc; hiệu ứng hình ảnh và 3 mức
+  hiệu năng vẫn hoạt động như cũ. Mức Thấp tự tắt backdrop-filter để nhẹ máy.
+
+11. BỐ CỤC MỚI · MÀN CHƠI FULLSCREEN (layout.css + index.html + game.js)
+-----------------------------------------------------------------------
+- Màn chơi chiếm toàn bộ cửa sổ. Khung cảnh luôn là khung 16:9 lớn nhất vừa màn hình (để điểm
+  click khớp ảnh); phần viền thừa được lấp bằng chính ảnh cảnh đã làm mờ. Đã bỏ thanh trên, thanh
+  tên cảnh, thanh hành động, bảng nhiệm vụ, bảng nhóm, ô nhật ký và ghi chú chân trang.
+- Góc trên trái: chip nhỏ (chương · giờ · tên địa điểm). Góc trên phải: Nhật ký + Menu.
+- Thanh vật phẩm nằm ở đáy màn hình. Khi có dẫn truyện/hội thoại thanh này tự ẩn, hết thoại hiện lại.
+- Hội thoại: khung chat ở đáy, chân dung nhân vật nằm TRÊN khung chat, phía trái.
+- Vật phẩm được nhắc trong lời thoại (máy ảnh, đèn pin, nhang, chìa khóa, chuông...) tự hiện
+  thành thẻ ở phía phải, trên khung chat. Danh sách từ khóa: ITEM_WORDS trong game.js.
+- Nhặt được vật phẩm/di vật: thẻ thông báo "ĐÃ NHẬN ĐƯỢC" nổi ở giữa phía trên màn hình.
+- Nhật ký là một cuốn sổ: bìa da tự mở, ghi chép theo thứ tự thời gian, lật trang có hiệu ứng,
+  ruy băng đánh dấu, mở sẵn ở trang mới nhất. Điện thoại dọc hiển thị 1 trang. Chấm đỏ trên biểu tượng
+  nhật ký báo có ghi chép mới.
+- ui.js đã bỏ (chỉ phục vụ bố cục cũ). style.css/ui.css/horror.css giữ nguyên; layout.css nạp cuối
+  nên ghi đè. Một số luật CSS cũ (.topbar, .sidebar, .action-strip...) không còn được dùng.
+
+12. CẬP NHẬT ÂM THANH · VẬT PHẨM · HỘI THOẠI
+---------------------------------------------
+Âm thanh (game.js: SOUND, AMBIENCE, WOOD_FLOOR, VILLA_ROOMS · intro.js: slam):
+- Intro, cảnh cuối: creaking-door → (≈1,5 s sau) door-slam → knock-on-the-door. door-slam.mp3 có ~4 s dạo đầu im lặng
+  nên được phát từ giây 3,3 (hằng SLAM_FROM / SLAM_LEAD) để cú đập rơi ngay sau tiếng kẽo kẹt. Bấm "Bỏ qua" sẽ dừng các tiếng này.
+- Âm thanh nền theo từng cảnh (nhiều lớp, tắt/bật dần khi đổi cảnh; bảng AMBIENCE trong game.js):
+    BG01 cổng làng      tieng_on_ao_o_cho (đông người)
+    BG02 ngõ làng       tieng_on_ao_o_cho (nhỏ, xa dần)
+    BG03 ruộng, mương   nuoc_chay + community-frogs
+    BG04 cầu gỗ         nuoc_chay + frogs-croaking-at-night
+    BG05 ven rừng       frogs-croaking-at-night (nhỏ)
+    BG06–BG10 rừng/sân/hiên   không có tệp nền (chỉ drone WebAudio của horror.js)
+    BG11–BG17, BG23, BG24     than_lan_keu (thằn lằn, CHỈ ở trong nhà biệt thự)
+    BG18–BG22 hầm/giếng/bên kia gương   im lặng
+- Tiếng bước chân trên gỗ chỉ phát ở BG14, BG15, BG24 (các phòng còn lại lát gạch/đá nên không phát).
+- Tiếng cửa kẽo kẹt chỉ phát khi đi qua cửa chính (BG10 ↔ BG11) và mở cổng; cổng sầm lại bằng door-slam.
+- Tiếng lật giấy chỉ khi nhặt đồ bằng giấy; hộp sắt mở = tiếng "tách"; ảnh gia đình không còn tiếng màn trập.
+Vật phẩm dùng xong thì bị xóa (state.used, hàm consume() trong game.js):
+- Chìa khóa (mở cổng), thanh sắt (phá tường), chuông đồng (lắc nôi), hộp nhạc (gọi tên Mơ), lời khai bà Mận (đối chất xong),
+  nhang + bật lửa + năm di vật (nghi lễ; đặt sai thứ tự thì di vật quay lại túi). Đã dùng thì không nhặt lại được.
+- Máy ảnh, đèn pin, sổ tay là dụng cụ dùng nhiều lần nên giữ lại.
+Hội thoại và văn bản giao diện không còn nói thẳng lời giải: vị trí đồ vật, mật mã 0317, thứ tự nghi lễ, cách dùng vật phẩm.
+Nút Gợi ý (H) vẫn có nhưng chỉ nhắc hướng đi, không đọc đáp án. Thứ tự các nút trong câu đố nghi lễ cũng đã xáo trộn.
+
+13. ÂM THANH CHỈ TỪ ASSET · BƯỚC CHÂN · BỘ LỌC MÁY ẢNH
+------------------------------------------------------
+- Đã gỡ toàn bộ âm thanh sinh bằng code (WebAudio: drone, nhịp tim, thì thầm, sting, tiếng điện ở logo). Mọi âm thanh đều là tệp trong assets/sound.
+  Cú giật mình (scare) dùng cú đập của door-slam.mp3. Nhịp tim chỉ còn hiệu ứng hình (viền máu đập).
+- Tương tác = bước chân (tieng_buoc_chan.mp3): bấm điểm đi sang cảnh khác -> 3 bước; bấm xem/nhặt đồ -> 2 bước.
+  Đã bỏ tiếng gõ cửa dùng làm phản hồi câu đố (dấu tay, sai mã, sai thứ tự). Tiếng gõ chỉ còn là sự kiện truyện ở BG18/BG19.
+- Máy ảnh: chọn "Máy ảnh" trong túi đồ để bật khung ngắm. Phím V (hoặc nút "Đổi chế độ") chuyển 4 chế độ:
+  NIGHT VISION (xanh lá) · INFRARED (đen trắng) · THERMAL (bản đồ nhiệt) · CAMCORDER (băng VHS).
+  Khung ngắm có REC, đồng hồ chạy, pin, giờ trong game, nhiễu hạt, vạch quét và dải nhiễu. Chụp gương phòng trẻ có chớp sáng.
+  Mã: camera.css + khối "MÁY ẢNH" trong game.js. Mức hiệu ứng Thấp tự tắt hoạt ảnh của khung ngắm.

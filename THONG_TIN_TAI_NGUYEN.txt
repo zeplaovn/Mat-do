@@ -1,0 +1,15 @@
+THÔNG TIN TÀI NGUYÊN
+===================
+
+- Bối cảnh game phỏng theo "Lời Nguyền Rừng Thiêng" và "Art Bible V3"
+  người dùng cung cấp trong cuộc trò chuyện.
+- Thư mục assets/background/, assets/portraits/, assets/items/ và
+  assets/sound/ được tổng hợp từ gói "Mắt đỏ.tar.gz" của người dùng.
+- Tên tác giả/giấy phép của các tệp âm thanh riêng lẻ chưa được kiểm
+  chứng. Trước khi phát hành công khai hoặc thương mại, cần kiểm tra
+  quyền sử dụng của từng tệp âm thanh, chân dung và hình ảnh.
+- Mã HTML/CSS/JavaScript của bản web game được tạo mới trong phiên này.
+- Địa danh Đồng Chay, Yên Bài và Ba Vì là địa danh thực; biệt thự Vân
+  Hòa và vụ án trong game hoàn toàn hư cấu.
+- Âm thanh bổ sung: door-slam.mp3, nuoc_chay.mp3, frogs-croaking-at-night.mp3, tieng_on_ao_o_cho.mp3 (người dùng cung cấp);
+  cũng cần kiểm tra quyền sử dụng như các tệp âm thanh khác.

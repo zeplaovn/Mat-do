@@ -1,0 +1,85 @@
+/* MÁY ẢNH / MÁY QUAY — bộ lọc khi cầm máy (chọn "Máy ảnh" trong túi đồ).
+   4 chế độ, phím V hoặc nút trên khung hình để đổi: NIGHT VISION · INFRARED · THERMAL · CAMCORDER.
+   Bộ lọc áp lên ảnh cảnh (.scene-image) và phần viền mờ phía sau (.scene-backdrop); khung ngắm nằm trong .cam-hud. */
+
+/* ---------- Bộ lọc màu lên ảnh cảnh (độ đặc hiệu cao hơn horror.css) ---------- */
+.scene-stage.cam-on[data-cam=night] .scene-image{filter:grayscale(1) sepia(1) hue-rotate(66deg) saturate(4.5) brightness(2.35) contrast(1.25)}
+.scene-stage.cam-on[data-cam=ir] .scene-image{filter:grayscale(1) brightness(3.4) contrast(1.35)}
+.scene-stage.cam-on[data-cam=thermal] .scene-image{filter:brightness(2.2) contrast(1.25) url(#cam-thermal)}
+.scene-stage.cam-on[data-cam=vhs] .scene-image{filter:saturate(.75) sepia(.3) contrast(1.1) brightness(2.8) blur(.4px)}
+html.cam-on[data-cam=night] .scene-backdrop{filter:grayscale(1) sepia(1) hue-rotate(66deg) saturate(4) brightness(.9)}
+html.cam-on[data-cam=ir] .scene-backdrop{filter:grayscale(1) brightness(.7)}
+html.cam-on[data-cam=thermal] .scene-backdrop{filter:grayscale(1) sepia(1) hue-rotate(-30deg) saturate(3) brightness(.6)}
+html.cam-on[data-cam=vhs] .scene-backdrop{filter:saturate(.6) sepia(.3) brightness(.6)}
+.scene-stage.cam-on .torch-shade{opacity:0}                  /* ống kính tự soi sáng, bỏ vòng đèn pin tối */
+.scene-stage.cam-on .fx-fog,.scene-stage.cam-on .fx-blood{opacity:.35}
+
+/* ---------- Khung ngắm ---------- */
+.cam-hud{position:absolute;inset:0;z-index:4;display:none;pointer-events:none;overflow:hidden;
+  --cam-c:#8dff98;color:var(--cam-c);font:600 clamp(10px,1.35vw,15px)/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.12em;
+  text-shadow:0 0 6px currentColor,0 1px 2px #000}
+.scene-stage.cam-on .cam-hud{display:block}
+.scene-stage[data-cam=ir] .cam-hud{--cam-c:#f4f4f4}
+.scene-stage[data-cam=thermal] .cam-hud{--cam-c:#ffd36b}
+.scene-stage[data-cam=vhs] .cam-hud{--cam-c:#fff}
+.cam-hud>*{position:absolute}
+
+.cam-tint{inset:0;background:rgba(30,255,70,.16);mix-blend-mode:screen}
+.scene-stage:not([data-cam=night]) .cam-tint{display:none}
+.cam-noise{inset:-128px;background:var(--cam-noise) 0 0/128px 128px;image-rendering:pixelated;mix-blend-mode:overlay;opacity:.4;animation:camNoise .35s steps(1,end) infinite}
+.scene-stage[data-cam=night] .cam-noise{opacity:.75}
+.scene-stage[data-cam=vhs] .cam-noise{opacity:.55;animation-duration:.2s}
+.cam-scan{inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,0) 0 2px,rgba(0,0,0,.28) 2px 3px);opacity:.7}
+.scene-stage[data-cam=thermal] .cam-scan{opacity:.25}
+.cam-vig{inset:0;background:radial-gradient(ellipse 78% 82% at 50% 50%,transparent 38%,rgba(0,12,0,.78) 100%)}
+.scene-stage[data-cam=ir] .cam-vig{background:radial-gradient(ellipse 80% 85% at 50% 50%,transparent 45%,rgba(0,0,0,.6) 100%)}
+.scene-stage[data-cam=thermal] .cam-vig{background:radial-gradient(ellipse 85% 90% at 50% 50%,transparent 50%,rgba(10,0,30,.55) 100%)}
+.scene-stage[data-cam=vhs] .cam-vig{background:radial-gradient(ellipse 85% 90% at 50% 50%,transparent 45%,rgba(0,0,0,.7) 100%)}
+/* dải nhiễu chạy dọc khung (tracking của băng / nhiễu cảm biến) */
+.cam-band{left:0;right:0;height:14%;top:-14%;opacity:0;background:linear-gradient(180deg,transparent,rgba(255,255,255,.14) 45%,rgba(255,255,255,.28) 50%,transparent);mix-blend-mode:screen}
+.scene-stage[data-cam=vhs] .cam-band,.scene-stage[data-cam=night] .cam-band{opacity:1;animation:camBand 5.5s linear infinite}
+.scene-stage[data-cam=vhs] .cam-band{animation-duration:3.2s;height:9%}
+
+/* góc ngắm + tâm ngắm */
+.cam-c{width:5%;aspect-ratio:1;border:0 solid var(--cam-c);filter:drop-shadow(0 0 4px var(--cam-c))}
+.cam-c.tl{left:3%;top:5%;border-left-width:3px;border-top-width:3px}
+.cam-c.tr{right:3%;top:5%;border-right-width:3px;border-top-width:3px}
+.cam-c.bl{left:3%;bottom:5%;border-left-width:3px;border-bottom-width:3px}
+.cam-c.br{right:3%;bottom:5%;border-right-width:3px;border-bottom-width:3px}
+.cam-cross{left:50%;top:50%;width:6%;aspect-ratio:1;transform:translate(-50%,-50%);opacity:.7;
+  background:linear-gradient(var(--cam-c),var(--cam-c)) 50% 0/2px 28% no-repeat,linear-gradient(var(--cam-c),var(--cam-c)) 50% 100%/2px 28% no-repeat,
+    linear-gradient(var(--cam-c),var(--cam-c)) 0 50%/28% 2px no-repeat,linear-gradient(var(--cam-c),var(--cam-c)) 100% 50%/28% 2px no-repeat;
+  animation:camFocus 3.4s ease-in-out infinite}
+
+/* thông tin ở 4 góc */
+.cam-tl-info{left:6%;top:21%;display:flex;gap:1.2em;align-items:center}
+.cam-rec{color:#ff5148;text-shadow:0 0 8px #f00;animation:camRec 1.1s steps(1,end) infinite}
+.cam-tr-info{right:6%;top:8%;display:flex;gap:1em;align-items:center}
+.cam-batt{display:inline-flex;gap:2px;padding:2px;border:2px solid var(--cam-c);position:relative}
+.cam-batt:after{content:"";position:absolute;right:-5px;top:25%;width:3px;height:50%;background:var(--cam-c)}
+.cam-batt i{width:.55em;height:.9em;background:var(--cam-c)}
+.cam-batt i:last-child{animation:camRec 2.2s steps(1,end) infinite}
+.cam-bl-info{left:6%;bottom:8%;display:flex;flex-direction:column;gap:.35em;opacity:.9}
+.cam-br-info{right:6%;bottom:8%;text-align:right;opacity:.9}
+.cam-temp{display:none}
+.scene-stage[data-cam=thermal] .cam-temp{display:inline}
+
+/* nút đổi chế độ (bấm được) */
+.cam-mode-btn{pointer-events:auto;right:6%;bottom:17%;padding:.55em 1em;border:1px solid var(--cam-c);border-radius:999px;background:rgba(0,0,0,.55);
+  color:var(--cam-c);font:inherit;letter-spacing:.14em;text-shadow:none;cursor:pointer;backdrop-filter:blur(4px)}
+.cam-mode-btn:hover{background:rgba(0,0,0,.8);box-shadow:0 0 14px var(--cam-c)}
+
+/* chớp đèn khi chụp (gương phòng trẻ) */
+.cam-flash{inset:0;background:#fff;opacity:0}
+.cam-flash.on{animation:camFlash .7s ease-out}
+
+@keyframes camNoise{0%{transform:translate(0,0)}25%{transform:translate(-31px,17px)}50%{transform:translate(22px,-40px)}75%{transform:translate(-12px,-9px)}100%{transform:translate(40px,28px)}}
+@keyframes camBand{from{top:-14%}to{top:112%}}
+@keyframes camRec{50%{opacity:.15}}
+@keyframes camFocus{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(.82)}}
+@keyframes camFlash{0%{opacity:.95}100%{opacity:0}}
+
+html[data-fx=low] .cam-noise,html[data-fx=low] .cam-band,html[data-fx=low] .cam-cross{animation:none}
+html[data-fx=low] .cam-scan{display:none}
+@media (prefers-reduced-motion:reduce){.cam-noise,.cam-band,.cam-cross,.cam-rec,.cam-batt i{animation:none!important}.cam-flash.on{animation:none}}
+@media (max-width:700px){.cam-mode-btn{bottom:24%;right:4%}.cam-bl-info{display:none}}
