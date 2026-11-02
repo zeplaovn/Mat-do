@@ -76,3 +76,13 @@ html[data-fx=low] .title-warn:before,html[data-fx=low] .title-warn:after{animati
 .lock-wheel.tick{animation:lockTick .16s ease-out}
 @keyframes lockTick{0%{transform:translateY(-35%);opacity:.3}100%{transform:none;opacity:1}}
 .lock-wheels.is-open .lock-wheel{color:#9fe3a0;text-shadow:0 0 10px rgba(120,255,140,.8)}
+
+/* Chớp sét màn hình chính */
+.title-bolt{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;
+  background:radial-gradient(60% 70% at var(--bx,50%) 0%,rgba(220,230,255,.95),rgba(150,170,230,.25) 45%,transparent 75%),linear-gradient(rgba(190,205,255,.18),rgba(190,205,255,.05))}
+.title-bolt.on{opacity:var(--peak,.3);transition:opacity .03s}
+.title-bolt:not(.on){transition:opacity .35s ease-out}
+.title-screen.lit .title-bg{filter:brightness(1.7) contrast(1.15) saturate(.7)}
+.title-screen.lit .title-logo img{filter:drop-shadow(0 0 22px rgba(190,205,255,.6)) brightness(1.25)}
+@media(prefers-reduced-motion:reduce){.title-bolt{display:none}}
+html[data-fx=low] .title-bolt{display:none}
