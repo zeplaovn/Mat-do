@@ -237,3 +237,6 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 - Chuỗi: két sắt BG27 (mã 1981) → chìa kho ở ghế bập bênh BG30 → mở kho BG25 → sổ BG26 → hầm BG32;
   5 tên: giếng BG09, bếp BG13, tranh BG28, sổ BG26, vạch phấn BG32 → lấy nhang BG31 → khấn tên ở BG29 → cổng mở.
 - Logo thay tiêu đề + loading (assets/logo.webp, brand.css); trailer.mp3 là nhạc nền màn hình chính và đoạn mở đầu "Bắt đầu điều tra".
+
+17. TRAILER WEB
+- Mở trailer.html (cùng thư mục, dùng chung assets) để xem trailer giới thiệu ~65 giây: cảnh nền, chân dung, chữ chạy, nhạc trailer.mp3. Có nút tắt tiếng, bỏ qua, xem lại và nút CHƠI NGAY. Màn hình chính của game có nút "XEM TRAILER".
