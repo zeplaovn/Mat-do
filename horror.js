@@ -172,6 +172,25 @@ function warnFlicker() {
 }
 warnFlicker();
 
+/* Chớp sét trên màn hình chính: 1-2 nhát ngắn, cách nhau 5-12 giây, độ sáng vừa phải (an toàn hơn cho người nhạy sáng). */
+const bolt = document.createElement('div'); bolt.className = 'title-bolt'; bolt.setAttribute('aria-hidden', 'true');
+title.insertBefore(bolt, title.querySelector('.title-content'));
+let boltT = 0;
+function boltStrike() {
+  clearTimeout(boltT);
+  if (RM || title.hidden || busy() || document.hidden) { boltT = setTimeout(boltStrike, 1200); return; }
+  bolt.style.setProperty('--bx', (15 + Math.random() * 70).toFixed(0) + '%');
+  const double = Math.random() < .6;
+  const hit = (peak, dur, next) => {
+    bolt.style.setProperty('--peak', peak);
+    bolt.classList.add('on'); title.classList.add('lit');
+    setTimeout(() => { bolt.classList.remove('on'); title.classList.remove('lit'); if (next) setTimeout(next, 260); }, dur);
+  };
+  hit(double ? .22 : .32, 90, double ? () => hit(.38, 140) : null);
+  boltT = setTimeout(boltStrike, 5500 + Math.random() * 6500);
+}
+boltT = setTimeout(boltStrike, 2500);
+
 /* ---------- Logo rè rè: méo sóng SVG (chỉ mức cao) + tiếng nhiễu điện (mọi mức) ---------- */
 document.body.insertAdjacentHTML('beforeend', '<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="fx-rer" x="-5%" y="-15%" width="110%" height="130%"><feTurbulence id="fx-turb" type="fractalNoise" baseFrequency="0.002 0.3" numOctaves="1" seed="1"/><feDisplacementMap id="fx-disp" in="SourceGraphic" scale="0"/></filter></svg>');
 const turb = $('fx-turb'), disp = $('fx-disp');
