@@ -96,3 +96,8 @@ html[data-fx=low] .title-bolt{display:none}
 .asm-strip{text-align:left;padding:.9em 1em;background:linear-gradient(#cdbd96,#b6a37a);color:#2a1d12;border:1px solid #6a553a;font:600 15px/1.45 Georgia,serif;clip-path:polygon(0 8%,3% 0,9% 6%,15% 0,22% 5%,30% 0,40% 6%,52% 0,64% 5%,78% 0,90% 6%,100% 0,100% 92%,96% 100%,88% 94%,76% 100%,62% 95%,48% 100%,34% 94%,20% 100%,8% 95%,0 100%)}
 .asm-strip.sel{outline:2px solid #d85a55;filter:brightness(1.12)}
 .hint-block{margin-top:14px;padding-top:12px;border-top:1px solid #3a3030}.hint-btn{min-height:34px;padding:6px 12px}
+
+/* Câu đố nhịp thở */
+.breath-bar{position:relative;height:34px;margin:1rem 0 .6rem;background:#0a0807;border:1px solid #4d3a2c;border-radius:3px;overflow:hidden}
+.breath-zone{position:absolute;top:0;bottom:0;background:linear-gradient(90deg,rgba(150,200,150,.15),rgba(150,230,160,.55),rgba(150,200,150,.15));transition:left .3s,width .3s}
+.breath-needle{position:absolute;top:0;bottom:0;width:4px;margin-left:-2px;background:#e8d9b4;box-shadow:0 0 10px rgba(255,220,150,.9)}

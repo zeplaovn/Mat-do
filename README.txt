@@ -246,3 +246,11 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
   Mảnh 1: chỉnh kim đồng hồ quả lắc (BG11) về 11:45 để mở ngăn kín. Mảnh 3: sổ cứu trợ trên bàn ông Lâm (BG17).
   Đủ ba mảnh thì bấm vào sổ ở BG17 để ghép (sắp ba mảnh đúng thứ tự) → nhận di vật "Mảnh đơn tố cáo".
 - Mỗi câu đố có nút GỢI Ý 3 bậc (hintBlock). Hộp sắt BG17 vẫn dùng mã 0317, két phòng ngủ mã 1988.
+
+19. CHƯƠNG MỚI: BÁT CƠM NÓNG · ĐÊM 17/3 · RỪNG THIÊNG (BG34–BG44)
+- Sau khi bóng ông Lâm tan (lamDone): bát cơm nóng ở phòng thờ BG12 → soi dấu chân bằng đèn pin ở bếp BG13 → gác nhỏ cô Lụa BG43
+  (sắp ba trang nhật ký theo thứ tự thời gian) → "Đêm 17/3/1988" chơi vai bé Mơ 7 tuổi (BG34→35→37→36→38→39):
+  chọn có đánh thức bà Mận hay không, giữ nhịp thở lấy chìa của cha, mở gian giam, ngã xuống giếng, sắp lại ba việc em đã làm.
+- Xong thì về giếng bị bịt BG42, rồi mới tới Chương 9 (năm cái tên). Đêm trại BG44 (hiên BG10) có ba đoạn hội thoại: Tuyết, Nam với Đông, Nguyệt.
+- Sau khi gọi đủ năm tên: ra cổng sẽ vào rừng thiêng BG40 → dải vải đỏ → nhà bà ngoại BG41 → bàn thờ đá để chọn "Công khai" hoặc "Tha thứ" (kết thúc 4).
+- Kịch bản gốc: KICH_BAN_CHUONG_MOI.md.
