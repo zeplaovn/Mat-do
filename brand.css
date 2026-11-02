@@ -86,3 +86,13 @@ html[data-fx=low] .title-warn:before,html[data-fx=low] .title-warn:after{animati
 .title-screen.lit .title-logo img{filter:drop-shadow(0 0 22px rgba(190,205,255,.6)) brightness(1.25)}
 @media(prefers-reduced-motion:reduce){.title-bolt{display:none}}
 html[data-fx=low] .title-bolt{display:none}
+
+/* Câu đố mảnh đơn */
+.cipher-line{font:700 clamp(18px,4.2vw,30px)/1.4 Georgia,serif;letter-spacing:.14em;text-align:center;color:#d8c39a;background:#0a0807;border:1px solid #4d3a2c;padding:.8em .6em;margin:.4rem 0 .8rem;word-break:break-word}
+.cipher-ctl{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:.5rem 0;color:#c9bca5}
+.cipher-ctl b{min-width:2ch;text-align:center;font:700 22px Georgia,serif;color:#e8d9b4}
+.clock-wrap{display:flex;justify-content:center;margin:.3rem 0}.mini-clock{width:min(170px,24vh)}
+.asm-strips{display:flex;flex-direction:column;gap:8px;margin:.6rem 0}
+.asm-strip{text-align:left;padding:.9em 1em;background:linear-gradient(#cdbd96,#b6a37a);color:#2a1d12;border:1px solid #6a553a;font:600 15px/1.45 Georgia,serif;clip-path:polygon(0 8%,3% 0,9% 6%,15% 0,22% 5%,30% 0,40% 6%,52% 0,64% 5%,78% 0,90% 6%,100% 0,100% 92%,96% 100%,88% 94%,76% 100%,62% 95%,48% 100%,34% 94%,20% 100%,8% 95%,0 100%)}
+.asm-strip.sel{outline:2px solid #d85a55;filter:brightness(1.12)}
+.hint-block{margin-top:14px;padding-top:12px;border-top:1px solid #3a3030}.hint-btn{min-height:34px;padding:6px 12px}

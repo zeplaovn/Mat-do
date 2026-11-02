@@ -240,3 +240,9 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 
 17. TRAILER WEB
 - Mở trailer.html (cùng thư mục, dùng chung assets) để xem trailer giới thiệu ~65 giây: cảnh nền, chân dung, chữ chạy, nhạc trailer.mp3. Có nút tắt tiếng, bỏ qua, xem lại và nút CHƠI NGAY. Màn hình chính của game có nút "XEM TRAILER".
+
+18. CHUỖI CÂU ĐỐ MẢNH ĐƠN (MỚI)
+- Lá đơn tố cáo bị xé làm ba. Mảnh 2: giải mã dòng chữ sau khung ảnh (BG11, mật mã Caesar dịch 7). Dòng chữ chỉ giờ 11:45.
+  Mảnh 1: chỉnh kim đồng hồ quả lắc (BG11) về 11:45 để mở ngăn kín. Mảnh 3: sổ cứu trợ trên bàn ông Lâm (BG17).
+  Đủ ba mảnh thì bấm vào sổ ở BG17 để ghép (sắp ba mảnh đúng thứ tự) → nhận di vật "Mảnh đơn tố cáo".
+- Mỗi câu đố có nút GỢI Ý 3 bậc (hintBlock). Hộp sắt BG17 vẫn dùng mã 0317, két phòng ngủ mã 1988.
