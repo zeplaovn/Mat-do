@@ -26,17 +26,17 @@ const ITEMS = {
   lighter:{name:'Bật lửa cũ',description:'Chiếc bật lửa mạ đồng, còn gas.',image:'01_Bat_Lua_Chua_Bat_128x128.webp'},
   incense:{name:'Nhang chưa đốt',description:'Nhang nhặt ở miếu cây đa, chưa đốt.',image:'05_Nhang_Chua_Dot_128x128.webp'},
   key:{name:'Chìa khóa sắt rỉ',description:'Chìa khóa sắt rỉ tìm thấy ở cột mốc đá.',image:'04_Chia_Khoa_128x128.webp'},
-  crowbar:{name:'Thanh sắt cạy gạch',description:'Thanh sắt cong nhặt trong gian bếp.',emoji:'🛠'},
-  scarf:{name:'Khăn vải cũ',description:'Di vật 1/5. Nhặt được ở chiếc giếng trong sân.',emoji:'🧣',relic:true},
-  spoon:{name:'Muôi cơm rỉ',description:'Di vật 2/5. Dấu vết một người làm công trong gian bếp.',emoji:'🥄',relic:true},
-  comb:{name:'Trâm gỗ gãy',description:'Di vật 3/5. Tìm thấy gần chiếc nôi trẻ.',emoji:'🪮',relic:true},
-  petition:{name:'Mảnh đơn tố cáo',description:'Di vật 4/5. Mảnh giấy giấu trong sổ của ông Bá Lâm.',emoji:'📜',relic:true},
-  sandals:{name:'Đôi dép vải cũ',description:'Di vật 5/5. Vật dụng bị bỏ lại trong căn hầm kín.',emoji:'🩴',relic:true},
-  bell:{name:'Chuông đồng nhỏ',description:'Chuông đồng nhỏ buộc dây đỏ, vớt từ xô giếng.',emoji:'🔔'},
-  musicbox:{name:'Hộp nhạc gãy',description:'Hộp nhạc cũ của một bé gái. Giai điệu vẫn còn ngân.',emoji:'🎵'},
-  storekey:{name:'Chìa khóa kho lương',description:'Chiếc chìa đồng nhỏ giấu dưới đệm ghế bập bênh ở ban công phòng ông Bá Lâm.',emoji:'🗝'},
-  incense5:{name:'Năm nén nhang mới',description:'Năm nén nhang lấy từ bàn đá trong miếu cây đa. Bà Mận để dành cho năm người chưa có tên.',emoji:'🕯'},
-  testimony:{name:'Lời khai của bà Mận',description:'Tờ giấy bà Mận viết trước khi mất, giấu trong hòm gạo trên gác mái.',emoji:'📝'}
+  crowbar:{name:'Thanh sắt cạy gạch',image:'06_Thanh_Sat_128x128.webp',description:'Thanh sắt cong nhặt trong gian bếp.',emoji:'🛠'},
+  scarf:{name:'Khăn vải cũ',image:'07_Khan_Vai_128x128.webp',description:'Di vật 1/5. Nhặt được ở chiếc giếng trong sân.',emoji:'🧣',relic:true},
+  spoon:{name:'Muôi cơm rỉ',image:'08_Muoi_Com_128x128.webp',description:'Di vật 2/5. Dấu vết một người làm công trong gian bếp.',emoji:'🥄',relic:true},
+  comb:{name:'Trâm gỗ gãy',image:'09_Tram_Go_128x128.webp',description:'Di vật 3/5. Tìm thấy gần chiếc nôi trẻ.',emoji:'🪮',relic:true},
+  petition:{name:'Mảnh đơn tố cáo',image:'10_Manh_Don_128x128.webp',description:'Di vật 4/5. Mảnh giấy giấu trong sổ của ông Bá Lâm.',emoji:'📜',relic:true},
+  sandals:{name:'Đôi dép vải cũ',image:'11_Dep_Vai_128x128.webp',description:'Di vật 5/5. Vật dụng bị bỏ lại trong căn hầm kín.',emoji:'🩴',relic:true},
+  bell:{name:'Chuông đồng nhỏ',image:'12_Chuong_Dong_128x128.webp',description:'Chuông đồng nhỏ buộc dây đỏ, vớt từ xô giếng.',emoji:'🔔'},
+  musicbox:{name:'Hộp nhạc gãy',image:'13_Hop_Nhac_128x128.webp',description:'Hộp nhạc cũ của một bé gái. Giai điệu vẫn còn ngân.',emoji:'🎵'},
+  storekey:{name:'Chìa khóa kho lương',image:'14_Chia_Kho_128x128.webp',description:'Chiếc chìa đồng nhỏ giấu dưới đệm ghế bập bênh ở ban công phòng ông Bá Lâm.',emoji:'🗝'},
+  incense5:{name:'Năm nén nhang mới',image:'15_Nam_Nen_Nhang_128x128.webp',description:'Năm nén nhang lấy từ bàn đá trong miếu cây đa. Bà Mận để dành cho năm người chưa có tên.',emoji:'🕯'},
+  testimony:{name:'Lời khai của bà Mận',image:'16_Loi_Khai_128x128.webp',description:'Tờ giấy bà Mận viết trước khi mất, giấu trong hòm gạo trên gác mái.',emoji:'📝'}
 };
 const USE_ON={camera:['mirror'],bell:['cradle'],musicbox:['shirt'],crowbar:['sealedWall'],key:['gate'],storekey:['storeDoor'],incense5:['graves']};
 const RELIC_ORDER = ['scarf','spoon','comb','petition','sandals'];
