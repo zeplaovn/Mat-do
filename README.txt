@@ -219,3 +219,14 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 Âm thanh: tiếng thạch sùng (than_lan_keu_3s.mp3, cắt 3,0 s từ tệp gốc) chỉ phát 1 lần mỗi 2 phút trong nhà biệt thự,
   đúng 3 giây rồi tắt (lần đầu sau ~20 s). Thêm tiếng dế (tieng_de_keu.mp3, 61 s lặp) ở BG04, BG05, BG06; BG07 trở đi
   im lặng như lời thoại của Nam. Tệp than_lan_keu.mp3 gốc vẫn còn trong assets/sound nhưng không còn được dùng.
+
+15. CHƯƠNG 9 · NĂM CÁI TÊN (MỚI)
+--------------------------------
+- Sau khi bóng ông Bá Lâm tan, cổng sắt vẫn khóa: Mơ nói năm người bị nhốt chưa có tên (game.js: QNAMES, questOn, nameClueAt, showNames).
+- Quay lại năm nơi từng có di vật, chạm đúng điểm cũ để đọc tên và câu chuyện của từng người:
+    giếng đá BG09 (Lê Văn Hải) · muôi cơm BG13 (Trần Thị Sen) · chiếc nôi BG16 (Phạm Thị Lụa)
+    sổ sách BG17 (Nguyễn Văn Tâm) · đôi dép trong hầm BG20 (Đỗ Văn Khoa). Mỗi tên được ghi vào nhật ký.
+- Đủ năm tên: chạm bàn thờ BG12, ghép từng di vật với đúng người (sai thì bát hương không bắt lửa, không mất gì).
+- Xong thì cổng mở. Kết thúc thật nay cần cả năm cái tên; nhãn chương, nhiệm vụ và gợi ý tự đổi trong lúc làm chương này.
+- Chương này dùng lại ảnh nền và điểm tương tác sẵn có (chưa có ảnh nền mới). Muốn thêm cảnh mới: thêm ảnh BG25.webp... vào assets/background
+  rồi khai báo trong SCENES.
