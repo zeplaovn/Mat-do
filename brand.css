@@ -62,3 +62,17 @@ html[data-fx=low] .title-warn:before,html[data-fx=low] .title-warn:after{animati
 .title-content .title-subtitle{margin:0}
 .title-content .title-footer{margin-top:clamp(18px,4vh,46px)}
 .title-warn{margin:clamp(4px,1vh,10px) auto clamp(14px,3vh,26px);padding:clamp(9px,1.6vh,14px) 20px}
+
+/* ===== Xem ảnh / khóa số bấm để nhảy số ===== */
+.prop-view{display:flex;justify-content:center;margin:.4rem 0 .6rem}
+.prop-view img{max-width:100%;max-height:52vh;border-radius:4px;box-shadow:0 10px 36px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.06);filter:contrast(1.04) brightness(.95)}
+.lock-wrap{position:relative;width:min(250px,44vh);margin:.4rem auto .7rem;filter:drop-shadow(0 12px 22px rgba(0,0,0,.75))}
+.lock-wrap img{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
+.lock-plate{position:absolute;left:30%;width:40%;top:75.5%;height:8%;display:flex;align-items:center;justify-content:center;text-align:center;font:600 clamp(5px,1.1vh,8px)/1.15 Georgia,serif;letter-spacing:.06em;color:#2a1f12;background:radial-gradient(ellipse at 50% 40%,#7d6446,#6a5238);border-radius:2px;text-shadow:0 1px 0 rgba(255,255,255,.18)}
+.lock-wheels{position:absolute;inset:0;pointer-events:none}
+.lock-wheel{position:absolute;top:60.4%;height:11.4%;width:12.8%;pointer-events:auto;cursor:pointer;border:0;border-radius:3px;background:linear-gradient(#17120d,#2a2218 55%,#120e0a);color:#e8d9b4;font:700 clamp(14px,3.4vh,26px)/1 Georgia,serif;text-shadow:0 0 8px rgba(255,190,90,.55);box-shadow:inset 0 3px 7px rgba(0,0,0,.9),inset 0 -2px 4px rgba(255,255,255,.06);transition:filter .15s}
+.lock-wheel:nth-child(1){left:22.1%}.lock-wheel:nth-child(2){left:36.6%}.lock-wheel:nth-child(3){left:51%}.lock-wheel:nth-child(4){left:65.4%}
+.lock-wheel:hover,.lock-wheel:focus-visible{filter:brightness(1.35);outline:1px solid rgba(255,190,90,.7)}
+.lock-wheel.tick{animation:lockTick .16s ease-out}
+@keyframes lockTick{0%{transform:translateY(-35%);opacity:.3}100%{transform:none;opacity:1}}
+.lock-wheels.is-open .lock-wheel{color:#9fe3a0;text-shadow:0 0 10px rgba(120,255,140,.8)}
