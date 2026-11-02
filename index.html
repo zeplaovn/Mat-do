@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="camera.css">
   <link rel="stylesheet" href="guard.css">
+  <link rel="stylesheet" href="brand.css">
+  <link rel="preload" as="image" href="assets/logo.webp">
   <script src="guard.js"></script>
   <script src="perf.js"></script>
   <script src="game.js" defer></script>
@@ -24,7 +26,7 @@
 <body>
 <div id="loader" class="loader" role="status" aria-live="polite" aria-label="Đang tải trò chơi">
   <div class="loader-inner">
-    <p class="loader-name">LỜI NGUYỀN RỪNG THIÊNG</p>
+    <img class="loader-logo" src="assets/logo.webp" alt="Lời Nguyền Rừng Thiêng" draggable="false">
     <div id="loader-bar" class="incense" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
       <div class="incense-stick"></div><div id="incense-ash" class="incense-ash"></div>
       <div id="ember" class="ember"><i class="smoke"></i><i class="smoke"></i><i class="smoke"></i></div>
@@ -96,7 +98,7 @@
   <div class="title-bg" aria-hidden="true"></div><div class="title-content">
     <div class="eyebrow-line"><span>TRUYỆN KINH DỊ DÂN GIAN VIỆT NAM</span></div>
     <div class="title-sigil">◈</div>
-    <h1>LỜI NGUYỀN<br><em>RỪNG THIÊNG</em></h1>
+    <h1 class="title-logo"><img src="assets/logo.webp" alt="Lời Nguyền Rừng Thiêng" draggable="false"></h1>
     <p class="title-subtitle">BÍ MẬT BIỆT THỰ VÂN HÒA</p>
     <p class="title-description">Năm sinh viên. Một biệt thự bị lãng quên. Năm cái tên chưa từng được trả lại.<br>Đừng trả lời khi bóng tối gọi tên bạn.</p>
     <div class="title-buttons"><button class="primary-btn" id="btn-new-game" type="button">BẮT ĐẦU ĐIỀU TRA <span>→</span></button><button class="secondary-btn" id="btn-continue" type="button" hidden>TIẾP TỤC LẦN CHƠI</button></div>
@@ -108,7 +110,7 @@
   <div class="intro-bg" aria-hidden="true"><img id="intro-img-a" alt="" draggable="false"><img id="intro-img-b" alt="" draggable="false"></div>
   <div class="intro-shade" aria-hidden="true"></div>
   <div id="intro-text" class="intro-text" aria-live="polite"><p id="intro-line" class="intro-line"></p><p id="intro-sub" class="intro-sub" hidden></p></div>
-  <div id="intro-card" class="intro-card" aria-hidden="true"><h2>LỜI NGUYỀN<em>RỪNG THIÊNG</em></h2></div>
+  <div id="intro-card" class="intro-card" aria-hidden="true"><img class="intro-logo" src="assets/logo.webp" alt="Lời Nguyền Rừng Thiêng" draggable="false"></div>
   <button id="intro-skip" class="intro-skip" type="button">Bỏ qua ›</button>
   <div class="intro-hint">Chạm hoặc nhấn Space để chuyển nhanh · Esc để bỏ qua</div>
 </div>
