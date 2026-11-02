@@ -1,0 +1,64 @@
+/* BRAND — logo làm tiêu đề, màn loading, thẻ cuối intro, khung cảnh báo nhấp nháy, nút nhạc nền. Nạp sau cùng nên ghi đè. */
+
+/* ---------- Logo ---------- */
+.title-logo{margin:6px auto 4px;line-height:0;animation:none}
+.title-logo img{display:block;width:auto;max-width:min(86vw,560px);max-height:31vh;height:auto;margin:0 auto;user-select:none;pointer-events:none;
+  filter:drop-shadow(0 0 26px rgba(190,20,20,.55)) drop-shadow(0 6px 18px #000);animation:logoBreath 5.2s ease-in-out infinite}
+.title-content h1.title-logo{font-size:0;filter:url(#fx-rer)}
+html[data-fx=low] .title-content h1.title-logo{filter:none}
+.title-content h1.title-logo:before,.title-content h1.title-logo:after{display:none}
+@keyframes logoBreath{0%,100%{opacity:.94;transform:scale(1)}8%{opacity:.62}9%{opacity:1}50%{opacity:1;transform:scale(1.012)}71%{opacity:.8}72%{opacity:1}}
+.loader-logo{display:block;width:min(360px,72vw);height:auto;margin:0 auto 4px;user-select:none;pointer-events:none;
+  filter:drop-shadow(0 0 22px rgba(190,20,20,.5));animation:logoBreath 4.4s ease-in-out infinite}
+.intro-card{padding:0 6vw}
+.intro-logo{display:block;width:min(86vw,820px);height:auto;margin:0 auto;user-select:none;pointer-events:none;
+  filter:drop-shadow(0 0 34px rgba(210,24,24,.7))}
+.intro-card.show .intro-logo{animation:cardshake .5s steps(1,end) 1}
+
+/* ---------- Cảnh báo kinh dị: nổi bật, chập chờn ---------- */
+.title-warn{position:relative;display:flex;align-items:center;gap:14px;max-width:min(92vw,640px);margin:10px auto 26px;padding:14px 20px;
+  text-align:left;text-transform:none;letter-spacing:.03em;font:500 clamp(13px,1.3vw,16px)/1.5 var(--sans,system-ui,sans-serif);color:#ffe2da;
+  border:1px solid rgba(255,70,60,.7);border-radius:14px;overflow:hidden;
+  background:linear-gradient(180deg,rgba(60,4,6,.78),rgba(22,2,4,.82));
+  box-shadow:0 0 0 1px rgba(0,0,0,.6) inset,0 0 26px rgba(220,30,30,.38),0 0 70px rgba(150,10,10,.28);
+  animation:warnBlink 6.1s linear infinite}
+.title-warn:before{content:"";position:absolute;inset:-60% -20%;pointer-events:none;
+  background:radial-gradient(40% 70% at 50% 50%,rgba(255,60,50,.34),transparent 70%);animation:warnLight 3.7s ease-in-out infinite}
+.title-warn:after{content:"";position:absolute;top:0;bottom:0;width:38%;left:-45%;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,200,190,.22),transparent);animation:warnSweep 5.3s ease-in-out infinite}
+.title-warn>*{position:relative;z-index:1}
+.warn-ico{flex:none;font-size:clamp(26px,3vw,36px);line-height:1;color:#ff4a3c;text-shadow:0 0 14px #ff2a1c,0 0 34px #b01010;animation:warnIco 1.3s steps(1,end) infinite}
+.warn-text{text-shadow:0 0 10px rgba(255,40,30,.55);animation:warnText 4.3s linear infinite}
+.warn-text b{display:block;margin-bottom:2px;font:800 clamp(14px,1.5vw,18px)/1.2 var(--sans,system-ui,sans-serif);letter-spacing:.28em;color:#ff5a4a;text-shadow:0 0 12px #ff1a0a}
+.title-warn.burst{border-color:#ff9a8c;box-shadow:0 0 0 1px rgba(0,0,0,.6) inset,0 0 40px rgba(255,70,50,.75),0 0 110px rgba(220,20,20,.5);filter:brightness(1.35)}
+/* Sáng-tối chập chờn: vài lần mờ đột ngột rồi sáng lại, xen giữa là quãng sáng ổn định */
+@keyframes warnBlink{0%,44%{opacity:1}45%{opacity:.38}46%{opacity:1}47%{opacity:.55}48.5%{opacity:1}72%{opacity:1}73%{opacity:.25}74.5%{opacity:1}88%{opacity:1}89%{opacity:.6}90%{opacity:1}100%{opacity:1}}
+@keyframes warnText{0%,30%{opacity:1}31%{opacity:.55}32%{opacity:1}64%{opacity:1}65%{opacity:.7}66.5%{opacity:1}100%{opacity:1}}
+@keyframes warnIco{0%,70%{opacity:1}71%,85%{opacity:.18}86%,100%{opacity:1}}
+@keyframes warnLight{0%,100%{opacity:.25;transform:translateX(-8%)}50%{opacity:.9;transform:translateX(8%)}}
+@keyframes warnSweep{0%,55%{left:-45%}100%{left:115%}}
+/* Quầng đỏ toàn màn hình nháy rất nhẹ theo từng loạt chớp */
+.title-flare{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .09s;
+  background:radial-gradient(70% 55% at 50% 62%,rgba(255,50,40,.2),transparent 75%)}
+.title-flare.on{opacity:1}
+html[data-fx=low] .title-warn:before,html[data-fx=low] .title-warn:after{animation:none}
+@media(prefers-reduced-motion:reduce){
+  .title-warn,.title-warn:before,.title-warn:after,.warn-ico,.warn-text,.title-logo img,.loader-logo{animation:none!important}
+  .title-flare{display:none}}
+@media(max-width:520px){.title-warn{padding:12px 14px;gap:10px;margin-bottom:20px}.warn-text b{letter-spacing:.2em}}
+
+/* ---------- Nút bật/tắt nhạc nền màn hình chính ---------- */
+.music-btn{position:absolute;top:max(14px,env(safe-area-inset-top));right:max(16px,env(safe-area-inset-right));z-index:3;
+  display:grid;place-items:center;width:46px;height:46px;padding:0;border:1px solid rgba(214,84,72,.45);border-radius:50%;
+  background:rgba(10,6,8,.6);color:#f0d9cd;font-size:20px;line-height:1;backdrop-filter:blur(8px);cursor:pointer;transition:border-color .2s,background .2s}
+.music-btn:hover,.music-btn:focus-visible{border-color:#ff6a58;background:rgba(80,12,14,.7)}
+.music-btn.off{color:#8a7a74}
+.music-btn.off:after{content:"";position:absolute;width:26px;height:2px;background:#e0584a;transform:rotate(-45deg);border-radius:2px}
+
+/* Giữ vừa một màn hình: thu gọn khoảng cách màn hình chính để logo + cảnh báo + nút đều thấy được */
+.title-content{padding-top:max(14px,2.4vh);padding-bottom:max(14px,2.4vh)}
+.title-content .title-sigil{font-size:clamp(34px,6vh,60px);margin-top:clamp(2px,1vh,12px)}
+.title-content .title-description{margin:clamp(12px,3vh,30px) 0 clamp(8px,2vh,18px);font-size:clamp(14px,2.3vh,17px)}
+.title-content .title-subtitle{margin:0}
+.title-content .title-footer{margin-top:clamp(18px,4vh,46px)}
+.title-warn{margin:clamp(4px,1vh,10px) auto clamp(14px,3vh,26px);padding:clamp(9px,1.6vh,14px) 20px}

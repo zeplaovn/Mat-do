@@ -16,14 +16,14 @@ const coarse = matchMedia('(pointer: coarse)').matches;
 const ITEMS = ['01_Bat_Lua_Chua_Bat', '02_Bat_Lua_Da_Bat', '02_Den_Pin', '03_Nen_Chua_Thap', '03_So_Tay', '04_Chia_Khoa', '04_Nen_Da_Thap', '05_Bat_Huong', '05_Nhang_Chua_Dot', '06_Nhang_Da_Dot', '07_Bat_Huong_Da_Cam_Nhang', '01_May_Quay']
   .map(n => `${R}items/${n}_128x128.webp`).concat(encodeURI(`${R}items/Antique Brass Flip-Top Lighter.webp`));
 const PORTRAITS = ['01_Dong', '02_Nam', '03_Tuyet', '04_Anh', '05_Nguyet', '06_Mo', '07_Ba_Lam', '08_Ba_Man'].map(n => `${R}portraits/${n}_portrait.webp`);
-const IMAGES = [`${R}title_bg.webp`, BG(1), BG(2), BG(3), BG(4), BG(5), BG(7), BG(8), ...PORTRAITS, ...ITEMS];
+const IMAGES = [`${R}logo.webp`, `${R}title_bg.webp`, BG(1), BG(2), BG(3), BG(4), BG(5), BG(7), BG(8), ...PORTRAITS, ...ITEMS];
 // Âm thanh chỉ "làm nóng" bộ nhớ đệm trên máy tính (điện thoại thường không cho nạp trước khi chưa chạm).
 const SOUNDS = coarse ? [] : ['community-frogs.mp3', 'tieng_on_ao_o_cho.mp3', 'knock-on-the-door.mp3', 'creaking-door.mp3', 'door-slam.mp3'].map(SND);
 
 const TIPS = [
   'Đừng trả lời khi bóng tối gọi tên bạn.',
   'Đeo tai nghe. Có những thứ chỉ nghe được khi xung quanh im lặng.',
-  'Phím F bật tắt đèn pin · V đổi chế độ máy ảnh · J nhật ký · M sơ đồ · H gợi ý.',
+  'Phím F bật tắt đèn pin · V đổi chế độ máy ảnh · J nhật ký · H gợi ý.',
   'Ghi chép mọi thứ. Có những cái tên chỉ xuất hiện một lần.'
 ];
 const MIN_MS = 2400, MAX_MS = 15000;
@@ -82,16 +82,66 @@ function finish() {
     Perf.watch();                                    // bắt đầu theo dõi FPS để tự hạ mức hiệu ứng nếu máy yếu
     setTimeout(() => loader.remove(), 1000);
     idlePreload();
+    musicStart();
   }, 450);
 }
 
 /* Nạp dần các cảnh còn lại lúc rảnh để lúc chơi không bị khựng khi chuyển cảnh (từng ảnh một, không tranh băng thông). */
 function idlePreload() {
-  const rest = []; for (let n = 1; n <= 24; n++) { const s = BG(n); if (!IMAGES.includes(s)) rest.push(s); }
+  const rest = []; for (let n = 1; n <= 33; n++) { const s = BG(n); if (!IMAGES.includes(s)) rest.push(s); }
   const idle = window.requestIdleCallback || (fn => setTimeout(fn, 200));
   const next = () => { const s = rest.shift(); if (!s) return; const i = new Image(); kept.push(i); i.onload = i.onerror = () => idle(next); i.src = s; };
   idle(next);
 }
+
+/* ===================================================================
+   1b) NHẠC NỀN: trailer.mp3 — màn hình chính + phần intro sau khi bấm "Bắt đầu điều tra", tắt dần khi vào game.
+   Trình duyệt chặn tự phát âm thanh, nên nhạc bắt đầu ở cú chạm/phím đầu tiên trên màn hình chính.
+   Tệp khá to (≈ 3–6 lần các âm khác trong game) nên phát ở âm lượng thấp. =================================================================== */
+const MUSIC_FILE = 'trailer.mp3', MUSIC_VOL = .26, MUSIC_DUCK = .1, MUSIC_KEY = 'lnrt-music';
+const title = $('title-screen');
+let music = null, musicFadeT = 0, musicWanted = false;
+const musicEnabled = () => { try { return localStorage.getItem(MUSIC_KEY) !== '0'; } catch (_) { return true; } };
+function musicEl() {
+  if (!music) { music = new Audio(SND(MUSIC_FILE)); music.loop = true; music.preload = 'auto'; music.volume = 0; }
+  return music;
+}
+function musicFade(to, ms, done) {
+  clearInterval(musicFadeT);
+  const a = musicEl(), from = a.volume, steps = Math.max(1, Math.round(ms / 50)); let i = 0;
+  musicFadeT = setInterval(() => {
+    i++; a.volume = Math.max(0, Math.min(1, from + (to - from) * i / steps));
+    if (i >= steps) { clearInterval(musicFadeT); if (done) done(); }
+  }, 50);
+}
+function musicStart() {
+  musicWanted = true;
+  if (!musicEnabled()) return;
+  const a = musicEl();
+  if (!a.paused && a.volume >= MUSIC_VOL * .9) return;
+  const p = a.play();
+  const ok = () => musicFade(MUSIC_VOL, 1800);
+  if (p && p.then) p.then(ok).catch(() => { const go = () => { removeEventListener('pointerdown', go, true); removeEventListener('keydown', go, true); if (musicWanted && !title.hidden || playing) musicStart(); }; addEventListener('pointerdown', go, true); addEventListener('keydown', go, true); });
+  else ok();
+}
+function musicStop(ms = 1400) {
+  musicWanted = false;
+  if (!music || music.paused) return;
+  musicFade(0, ms, () => { try { music.pause(); music.currentTime = 0; } catch (_) {} });
+}
+function musicDuck() { if (music && !music.paused) musicFade(MUSIC_DUCK, 900); }
+/* Nút bật/tắt nhạc ở góc màn hình chính (nhớ lựa chọn) */
+const mbtn = document.createElement('button');
+mbtn.type = 'button'; mbtn.className = 'music-btn'; mbtn.textContent = '♪'; mbtn.title = 'Bật/tắt nhạc nền'; mbtn.setAttribute('aria-label', 'Bật hoặc tắt nhạc nền');
+const mbtnSync = () => { mbtn.classList.toggle('off', !musicEnabled()); mbtn.setAttribute('aria-pressed', musicEnabled() ? 'true' : 'false'); };
+mbtn.addEventListener('click', e => {
+  e.stopPropagation();
+  const on = !musicEnabled(); try { localStorage.setItem(MUSIC_KEY, on ? '1' : '0'); } catch (_) {}
+  mbtnSync(); if (on) musicStart(); else { const w = musicWanted; musicStop(500); musicWanted = w; }
+});
+mbtnSync(); title.appendChild(mbtn);
+/* Vào lại màn hình chính (Menu → Về màn hình chính) thì nhạc phát lại; vào game (Tiếp tục) thì tắt dần. */
+new MutationObserver(() => { if (!title.hidden) musicStart(); else if (!playing) musicStop(1200); }).observe(title, { attributes: true, attributeFilter: ['hidden'] });
 
 /* ===================================================================
    2) INTRO
@@ -163,7 +213,7 @@ function next() {
     lineEl.textContent = b.line; subEl.textContent = b.sub || ''; subEl.hidden = !b.sub;
     textEl.classList.add('show');
     if (b.flick && !Perf.RM) textEl.classList.add('flick');
-    if (b.creak) creak();
+    if (b.creak) { creak(); musicDuck(); }
   }, idx ? 520 : 200);
   if (b.slamAt) later(slam, b.slamAt);
   if (b.knockAt) later(knock, b.knockAt);
@@ -190,6 +240,7 @@ function finishIntro() {
   intro.removeEventListener('click', onClick);
   root.classList.remove('is-busy');                  // hiệu ứng nền chạy lại ngay khi game hiện ra bên dưới
   if (onDone) onDone();
+  musicStop(1600);
   intro.classList.add('out');
   setTimeout(() => {
     intro.hidden = true; intro.classList.remove('out'); root.classList.remove('is-intro');
