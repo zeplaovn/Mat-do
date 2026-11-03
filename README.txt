@@ -262,3 +262,9 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 - Ký hiệu riêng (BG26): nắp hầm có năm vòng ký hiệu (cây bút, cái cân, nốt nhạc, ngọn lửa, con sóng). Nhập đúng thứ tự đứng ký đơn.
 - Tài liệu: chạm vào giấy tờ trong túi đồ để đọc toàn văn, có nút "Gợi ý cách mở". Nhật ký cũng có gợi ý cho từng ghi chép.
 - Mưa và sương mù (weather.js, weather.css): cường độ theo từng cảnh; số hạt mưa và số lớp sương giảm theo mức hiệu năng; tắt khi bật giảm chuyển động.
+
+21. ÂM THANH MỚI (rain, nature_forest, ambient_house, crow, pick, intro)
+- rain.mp3: cảnh mưa BG38, BG39 (nhẹ ở BG25). nature_forest.mp3: ven rừng BG05–06, rừng thiêng BG40, vườn mộ BG29, nhà bà ngoại BG41 (BG07 vẫn im phăng phắc).
+- ambient_house.mp3: nền chung trong biệt thự (BG11–17, BG23–24, BG27–28, BG43 và ký ức BG34–35).
+- crow.mp3: quạ kêu thưa (45–100 giây một tiếng) ở các cảnh ngoài trời. pick.mp3: tiếng nhặt đồ (giấy tờ vẫn dùng tiếng lật giấy).
+- intro.mp3: nhạc nền đoạn intro; trailer.mp3 chỉ còn ở màn hình chính. Các tệp dài đã nén mono 80 kbps (tổng thêm ~9 MB).

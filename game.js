@@ -405,7 +405,7 @@ let dialogueOpen=false;let modalType=null;let toastTimer=null;
 /* ================= ÂM THANH =================
    Quy tắc: mỗi âm thanh chỉ phát ở nơi nó thật sự có thể vang lên trong cảnh đó. */
 const SOUND={door:'creaking-door.mp3',slam:'door-slam.mp3',knock:'knock-on-the-door.mp3',steps:'tieng_buoc_chan.mp3',page:'pageturn.mp3',camera:'Chup_anh.mp3',lighter:'lighter.mp3',switch:'light-switch.mp3',
- market:'tieng_on_ao_o_cho.mp3',water:'nuoc_chay.mp3',frogs:'community-frogs.mp3',frogsNight:'frogs-croaking-at-night.mp3',gecko:'than_lan_keu_3s.mp3',crickets:'tieng_de_keu.mp3',musicbox:'music_box.mp3'};
+ market:'tieng_on_ao_o_cho.mp3',water:'nuoc_chay.mp3',frogs:'community-frogs.mp3',frogsNight:'frogs-croaking-at-night.mp3',gecko:'than_lan_keu_3s.mp3',crickets:'tieng_de_keu.mp3',musicbox:'music_box.mp3',rain:'rain.mp3',forest:'nature_forest.mp3',house:'ambient_house.mp3',crow:'crow.mp3',pick:'pick.mp3'};
 const SLAM_LEAD=3.3;                         /* door-slam.mp3: cú đập nằm ở ~4,0 s; bắt đầu phát từ 3,3 s để nó vang ngay sau tiếng kẽo kẹt */
 /* Tương tác = nhân vật bước tới chỗ đó: dùng tieng_buoc_chan.mp3 (3 bước khi đi sang cảnh khác, 2 bước khi xem/nhặt đồ). */
 const PAPER_ITEMS=['petition','testimony','fragA','fragB','fragC','legendDoc','backDoc'];  /* chỉ vật bằng giấy mới có tiếng lật giấy khi nhặt */
@@ -415,9 +415,10 @@ const AMBIENCE={
  BG02:{market:.12},                        /* ngõ làng, tiếng ồn xa dần */
  BG03:{water:.5,frogs:.35},                /* ruộng có mương: nước chảy + ếch */
  BG04:{water:.6,frogsNight:.9,crickets:.5},  /* cầu gỗ lúc chiều muộn: ếch + dế */
- BG05:{frogsNight:.6,crickets:.55},         /* ven rừng ban đêm */
- BG06:{crickets:.4},                        /* rừng tre: dế thưa dần; sang BG07 tắt hẳn (Nam: dế im phăng phắc) */
- BG38:{water:.35},BG39:{water:.3},BG40:{crickets:.12},BG42:{crickets:.35},BG44:{crickets:.55,frogsNight:.3},
+ BG05:{frogsNight:.6,crickets:.55,forest:.2},         /* ven rừng ban đêm */
+ BG06:{crickets:.4,forest:.3},                        /* rừng tre: dế thưa dần; sang BG07 tắt hẳn (Nam: dế im phăng phắc) */
+ BG25:{rain:.1,crickets:.2},BG29:{forest:.3,crickets:.2},BG38:{rain:.26},BG39:{rain:.24},BG40:{forest:.65,crickets:.1},BG41:{forest:.25},BG42:{crickets:.35,forest:.15},BG44:{crickets:.55,frogsNight:.3,forest:.2},
+ BG11:{house:.4},BG12:{house:.4},BG13:{house:.4},BG14:{house:.4},BG15:{house:.4},BG16:{house:.4},BG17:{house:.4},BG23:{house:.4},BG24:{house:.4},BG27:{house:.4},BG28:{house:.4},BG43:{house:.35},BG34:{house:.25},BG35:{house:.25},
  BG21:{musicbox:.5},                        /* bên kia gương: hộp nhạc đang phát sáng, giai điệu ru (Für Elise) */
  BG22:{musicbox:.32}                        /* đáy giếng: nhạc vọng xuống nhỏ hơn; tắt sau khi gọi tên Mơ */
 };
@@ -441,6 +442,10 @@ const GECKO_EVERY=120,GECKO_FIRST=100,GECKO_MS=3000,GECKO_VOL=.3;
 let geckoClock=GECKO_FIRST,geckoA=null,geckoStopT=0;
 function stopGecko(){clearTimeout(geckoStopT);if(geckoA){try{geckoA.pause()}catch(_){}geckoA=null}}
 function geckoBurst(){stopGecko();try{const a=new Audio(ROOT+'sound/'+SOUND.gecko);a.volume=GECKO_VOL;geckoA=a;a.play().catch(()=>{if(geckoA===a)geckoA=null});geckoStopT=setTimeout(()=>{if(geckoA===a){a.pause();geckoA=null}},GECKO_MS)}catch(_){}}
+/* Tiếng quạ: chỉ ở ngoài trời/rừng, thưa thớt (45–100 giây một tiếng), không có trong nhà hay ký ức 1988 */
+const CROW_SCENES=['BG01','BG02','BG05','BG06','BG08','BG09','BG10','BG25','BG29','BG40','BG41'];
+let crowClock=40+Math.random()*30;
+function crowTick(){if(document.hidden||!state.sound||!$('title-screen').hidden||!CROW_SCENES.includes(state.scene)||modalType)return;if(--crowClock<=0){crowClock=45+Math.random()*55;playSound('crow',.18)}}
 function geckoTick(){if(document.hidden||!state.sound||!$('title-screen').hidden||!VILLA_ROOMS.includes(state.scene))return;if(++geckoClock>=GECKO_EVERY){geckoClock=0;geckoBurst()}}
 /* Lưu tiến trình có chữ ký: sửa tay localStorage (đổi cảnh, thêm vật phẩm, nhảy qua câu đố) sẽ bị phát hiện và bản lưu bị bỏ qua.
    Đây là lớp chặn sửa đơn giản, không phải mã hóa: game chạy hoàn toàn trên máy người chơi. */
@@ -459,7 +464,7 @@ function load(){try{const raw=localStorage.getItem(SAVE_KEY);if(!raw)return null
 function has(id){return state.items.includes(id)}
 function clue(id){if(!Array.isArray(state.flags.clues))state.flags.clues=[];if(!state.flags.clues.includes(id)){state.flags.clues.push(id);save();return true}return false}
 function note(id,title,body){if(!state.notes.some(n=>n.id===id)){state.notes.push({id,title,body});const b=$('btn-journal');if(b)b.classList.add('has-new')}save()}
-function gain(id){if(!ITEMS[id]||has(id)||state.used.includes(id))return false;state.items.push(id);if(ITEMS[id].relic&&!state.relics.includes(id))state.relics.push(id);if(PAPER_ITEMS.includes(id))playSound('page',.22);itemPop(id);save();renderSidebar();return true}
+function gain(id){if(!ITEMS[id]||has(id)||state.used.includes(id))return false;state.items.push(id);if(ITEMS[id].relic&&!state.relics.includes(id))state.relics.push(id);if(PAPER_ITEMS.includes(id))playSound('page',.22);else playSound('pick',.5);itemPop(id);save();renderSidebar();return true}
 /* Vật phẩm dùng xong thì bị xóa khỏi túi đồ và không nhặt lại được (state.used). quiet=true: không hiện thông báo. */
 function consume(id,quiet){if(!state.used.includes(id))state.used.push(id);const had=has(id);state.items=state.items.filter(x=>x!==id);if(state.selectedItem===id)state.selectedItem=null;if(had&&!quiet&&ITEMS[id])toast('Đã dùng hết: '+ITEMS[id].name);renderSidebar();save()}
 function evidence(id){if(!state.evidence.includes(id))state.evidence.push(id);save();}
@@ -1008,6 +1013,6 @@ function mount(){$('btn-new-game').onclick=newGame;$('btn-continue').onclick=con
  let torchRaf=0,torchEv=null;$('scene-stage').addEventListener('pointermove',e=>{torchEv=e;if(torchRaf)return;torchRaf=requestAnimationFrame(()=>{torchRaf=0;if(!$('scene-stage').classList.contains('torch-on'))return;const box=$('scene-stage').getBoundingClientRect();const x=Math.max(0,Math.min(100,(torchEv.clientX-box.left)/box.width*100));const y=Math.max(0,Math.min(100,(torchEv.clientY-box.top)/box.height*100));$('scene-stage').style.setProperty('--torch-x',x.toFixed(1)+'%');$('scene-stage').style.setProperty('--torch-y',y.toFixed(1)+'%')})});
  $('scene-stage').addEventListener('click',e=>{if(e.target===$('scene-stage')||e.target===$('hotspots')){if(!dialogueOpen)toast(SCENES[state.scene].look)}});
  document.addEventListener('keydown',e=>{if($('title-screen').hidden===false)return;if(e.key==='Escape'){if(modalType&&modalType!=='ending')hideModal();else clearDialogue();return}if(modalType==='journal'){if(e.key==='ArrowRight')bookTurn(1);else if(e.key==='ArrowLeft')bookTurn(-1);return}if(modalType||['INPUT','TEXTAREA'].includes(document.activeElement.tagName))return;if(dialogueOpen&&(e.key==='Enter'||e.key===' ')){e.preventDefault();nextLine();return}const k=e.key.toLowerCase();if(k==='h')showHint();if(k==='f'&&has('flashlight'))selectItem('flashlight');if(k==='v')cycleCam();if(k==='j')showJournal()});
- updateContinue();render();setInterval(geckoTick,1000);}
+ updateContinue();render();setInterval(()=>{geckoTick();crowTick()},1000);}
 mount();
 })();
