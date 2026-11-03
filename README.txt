@@ -276,3 +276,9 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 - Hồi tưởng Mơ (BG34–39) viết lại: bát nhỏ để riêng (bát thứ sáu) → nghe lén ông Lâm và thầy Tịnh → tiếng kêu cứu sau cửa hầm, cha buông tay khỏi then cửa → chọn đúng ấn đồng trên thành giếng (cờ fbSeal) → trượt ngã 03:17 (chỉ có âm thanh).
 - Còn lại theo kịch bản mới (chưa làm): Sim, thầy Tịnh, ông Hựu, ông Đạt, Huyền Lâm Thánh Quân, BG45–47, năm hồi tưởng sinh viên, bốn kết thúc BAD/NORMAL/GOOD/TRUE (hiện vẫn là true/normal/forgive).
 - Âm nền ambient giảm 10% bằng hệ số AMB_GAIN trong game.js.
+
+23. CHƯƠNG MỞ ĐẦU ĐỒNG CHAY (ảnh mới BG45–47)
+- BG45 sân chùa làng: vào từ cổng làng BG01 (lối bên phải). Ông Hựu xem quẻ ("Năm người. Năm nhà.", "Đừng đáp tiếng gọi từ giếng"), cờ huuDone, ghi vào nhật ký.
+- BG46 bàn lễ trước miếu: vào từ BG05. Sáu chỗ bày lễ, ngọn đèn thứ ba tự cháy (cờ lamp6); bài vị đọc được "Huyền Lâm Thánh Quân" để đối chiếu về sau.
+- BG47 (nền tế rừng cũ 2026) và BG47b (bản 1986, cùng góc máy): đã có ảnh và được nạp sẵn, chưa nối vào cốt truyện vì chưa có tuyến Sim/Đạt.
+- assets/props: Closeup01_Coins, Closeup02_Papers (hai bản sớ), Closeup03_SquareSeal (ấn đồng) chờ gắn vào câu đố sớ giả/sớ thật.
