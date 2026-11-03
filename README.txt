@@ -218,7 +218,7 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
   "Tiếp tục" chỉ hiện khi có bản lưu mới. Muốn bảo vệ thật sự cần máy chủ.
 Âm thanh: tiếng thạch sùng (than_lan_keu_3s.mp3, cắt 3,0 s từ tệp gốc) chỉ phát 1 lần mỗi 2 phút trong nhà biệt thự,
   đúng 3 giây rồi tắt (lần đầu sau ~20 s). Thêm tiếng dế (tieng_de_keu.mp3, 61 s lặp) ở BG04, BG05, BG06; BG07 trở đi
-  im lặng như lời thoại của Nam. Tệp than_lan_keu.mp3 gốc vẫn còn trong assets/sound nhưng không còn được dùng.
+  im lặng như lời thoại của Nam. Tệp than_lan_keu.mp3 gốc đã được xóa khỏi assets (vẫn lấy lại được từ lịch sử git).
 
 15. CHƯƠNG 9 · NĂM CÁI TÊN (MỚI)
 --------------------------------
