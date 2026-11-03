@@ -1,0 +1,13 @@
+/* Sương mù và mưa theo cảnh (weather.js) */
+.wx-fog{overflow:hidden;opacity:0;transition:opacity 1.6s ease}.wx-fog.on{opacity:var(--wx,.4)}
+.wx-layer{position:absolute;top:-5%;bottom:-5%;left:-100%;right:-100%;background-image:var(--wx-tile);background-repeat:repeat;will-change:transform;mix-blend-mode:screen}
+.wx-a{background-size:520px 520px;opacity:.9;animation:wxdrift 70s linear infinite}
+.wx-b{background-size:380px 380px;opacity:.7;animation:wxdrift 48s linear infinite reverse;top:5%}
+.wx-c{background-size:700px 700px;opacity:.55;animation:wxdrift 95s linear infinite}
+@keyframes wxdrift{from{transform:translateX(0)}to{transform:translateX(520px)}}
+.wx-rain{width:100%;height:100%;opacity:0;transition:opacity 1s ease;image-rendering:auto}.wx-rain.on{opacity:1}
+.wx-bolt{opacity:0;background:linear-gradient(rgba(200,215,255,.5),rgba(200,215,255,.12));pointer-events:none;transition:opacity .04s}.wx-bolt.on{opacity:.38}
+html[data-rain="1"] .scene-image{filter:brightness(.92) contrast(1.05)}
+html[data-fx=low] .wx-b,html[data-fx=low] .wx-c{display:none}
+html[data-fx=low] .wx-a{animation-duration:140s}
+@media(prefers-reduced-motion:reduce){.wx-layer{animation:none!important}.wx-bolt{display:none}}

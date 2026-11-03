@@ -254,3 +254,11 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 - Xong thì về giếng bị bịt BG42, rồi mới tới Chương 9 (năm cái tên). Đêm trại BG44 (hiên BG10) có ba đoạn hội thoại: Tuyết, Nam với Đông, Nguyệt.
 - Sau khi gọi đủ năm tên: ra cổng sẽ vào rừng thiêng BG40 → dải vải đỏ → nhà bà ngoại BG41 → bàn thờ đá để chọn "Công khai" hoặc "Tha thứ" (kết thúc 4).
 - Kịch bản gốc: KICH_BAN_CHUONG_MOI.md.
+
+20. CÂU ĐỐ MỚI: GHÉP HÌNH · KÝ HIỆU RIÊNG · SẮP ĐỒ · TÀI LIỆU · MƯA VÀ SƯƠNG
+- Ghép hình (BG43): mảnh ảnh giấu dưới gối, 12 mảnh, bấm hai mảnh để đổi chỗ, giữ nút "Xem ảnh mẫu" để so. Ghép xong có "Mặt sau tấm ảnh": thứ tự đứng ký đơn.
+- Sắp đồ (BG28): ngăn kéo giá sách có bốn hõm. Nhặt búp bê (BG43), hạc giấy, xe gỗ, viên phấn (BG28), đọc bài đồng dao trên bảng đen,
+  đặt đúng thứ tự → nhận "Bảng ký hiệu của năm người".
+- Ký hiệu riêng (BG26): nắp hầm có năm vòng ký hiệu (cây bút, cái cân, nốt nhạc, ngọn lửa, con sóng). Nhập đúng thứ tự đứng ký đơn.
+- Tài liệu: chạm vào giấy tờ trong túi đồ để đọc toàn văn, có nút "Gợi ý cách mở". Nhật ký cũng có gợi ý cho từng ghi chép.
+- Mưa và sương mù (weather.js, weather.css): cường độ theo từng cảnh; số hạt mưa và số lớp sương giảm theo mức hiệu năng; tắt khi bật giảm chuyển động.
