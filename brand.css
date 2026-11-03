@@ -86,3 +86,33 @@ html[data-fx=low] .title-warn:before,html[data-fx=low] .title-warn:after{animati
 .title-screen.lit .title-logo img{filter:drop-shadow(0 0 22px rgba(190,205,255,.6)) brightness(1.25)}
 @media(prefers-reduced-motion:reduce){.title-bolt{display:none}}
 html[data-fx=low] .title-bolt{display:none}
+
+/* Câu đố mảnh đơn */
+.cipher-line{font:700 clamp(18px,4.2vw,30px)/1.4 Georgia,serif;letter-spacing:.14em;text-align:center;color:#d8c39a;background:#0a0807;border:1px solid #4d3a2c;padding:.8em .6em;margin:.4rem 0 .8rem;word-break:break-word}
+.cipher-ctl{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:.5rem 0;color:#c9bca5}
+.cipher-ctl b{min-width:2ch;text-align:center;font:700 22px Georgia,serif;color:#e8d9b4}
+.clock-wrap{display:flex;justify-content:center;margin:.3rem 0}.mini-clock{width:min(170px,24vh)}
+.asm-strips{display:flex;flex-direction:column;gap:8px;margin:.6rem 0}
+.asm-strip{text-align:left;padding:.9em 1em;background:linear-gradient(#cdbd96,#b6a37a);color:#2a1d12;border:1px solid #6a553a;font:600 15px/1.45 Georgia,serif;clip-path:polygon(0 8%,3% 0,9% 6%,15% 0,22% 5%,30% 0,40% 6%,52% 0,64% 5%,78% 0,90% 6%,100% 0,100% 92%,96% 100%,88% 94%,76% 100%,62% 95%,48% 100%,34% 94%,20% 100%,8% 95%,0 100%)}
+.asm-strip.sel{outline:2px solid #d85a55;filter:brightness(1.12)}
+.hint-block{margin-top:14px;padding-top:12px;border-top:1px solid #3a3030}.hint-btn{min-height:34px;padding:6px 12px}
+
+/* Câu đố nhịp thở */
+.breath-bar{position:relative;height:34px;margin:1rem 0 .6rem;background:#0a0807;border:1px solid #4d3a2c;border-radius:3px;overflow:hidden}
+.breath-zone{position:absolute;top:0;bottom:0;background:linear-gradient(90deg,rgba(150,200,150,.15),rgba(150,230,160,.55),rgba(150,200,150,.15));transition:left .3s,width .3s}
+.breath-needle{position:absolute;top:0;bottom:0;width:4px;margin-left:-2px;background:#e8d9b4;box-shadow:0 0 10px rgba(255,220,150,.9)}
+
+/* Tài liệu, ký hiệu, sắp đồ, ghép hình */
+.doc-paper{background:linear-gradient(#cdbd96,#b8a67c);color:#2a1d12;padding:1em 1.1em;border:1px solid #6a553a;font:600 15px/1.65 Georgia,serif;margin:.4rem 0 .6rem;box-shadow:inset 0 0 30px rgba(90,60,30,.35)}
+.glyph-chart{display:grid;gap:6px;margin:.4rem 0}.glyph-row{display:flex;align-items:center;gap:12px;color:#e8d9b4}.glyph-row span{display:flex;flex-direction:column}.glyph-row small{color:#9a8f7c;font-size:11px}
+.glyph{display:block}
+.glyph-lock{display:flex;gap:8px;justify-content:center;margin:.8rem 0;padding:.8rem;background:#0b0907;border:1px solid #4d3a2c}
+.gl-dial{width:clamp(46px,9vh,64px);aspect-ratio:1;display:grid;place-items:center;background:linear-gradient(#1c1610,#2c2218 55%,#120e0a);color:#e8d9b4;border:1px solid #5b4630;border-radius:4px;box-shadow:inset 0 3px 7px rgba(0,0,0,.9);cursor:pointer;transition:filter .15s}
+.gl-dial:hover,.gl-dial:focus-visible{filter:brightness(1.35)}.glyph-lock.is-open .gl-dial{color:#9fe3a0;border-color:#4a8a55}
+.slot-row,.toy-tray{display:flex;gap:8px;justify-content:center;margin:.6rem 0;flex-wrap:wrap}
+.slot,.toy{width:clamp(70px,13vh,96px);min-height:clamp(70px,13vh,96px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:#0b0907;color:#d8c9a8;border:1px dashed #5b4630;border-radius:4px;cursor:pointer;padding:4px}
+.slot.full,.toy{border-style:solid;background:linear-gradient(#241b12,#14100b)}.toy.sel{outline:2px solid #d85a55}.toy-ico{font-size:clamp(22px,4vh,32px);line-height:1}.slot small,.toy small{font-size:10px;text-align:center;line-height:1.2}
+.jig{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;width:min(440px,100%);aspect-ratio:3/2;margin:.6rem auto;background:#000;background-size:100% 100%}
+.jp{border:0;padding:0;cursor:pointer;background-repeat:no-repeat;box-shadow:inset 0 0 0 1px rgba(0,0,0,.45);filter:sepia(.25) brightness(.92)}.jp.sel{outline:2px solid #d85a55;outline-offset:-2px}.jp.ok{box-shadow:inset 0 0 0 2px rgba(120,220,140,.7)}
+.jig.peek{pointer-events:none}.jig.peek .jp{background-image:none!important;opacity:0}
+.bk-hint{margin-top:6px;font:inherit;font-size:11px;letter-spacing:.06em;color:#7a3735;background:none;border:1px solid #9b6a5b;padding:3px 8px;cursor:pointer}.bk-hinttext{margin-top:6px;font-size:12px;font-style:italic;color:#4a3a2a}

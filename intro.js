@@ -88,14 +88,14 @@ function finish() {
 
 /* Nạp dần các cảnh còn lại lúc rảnh để lúc chơi không bị khựng khi chuyển cảnh (từng ảnh một, không tranh băng thông). */
 function idlePreload() {
-  const rest = []; for (let n = 1; n <= 33; n++) { const s = BG(n); if (!IMAGES.includes(s)) rest.push(s); }
+  const rest = []; for (let n = 1; n <= 44; n++) { const s = BG(n); if (!IMAGES.includes(s)) rest.push(s); }
   const idle = window.requestIdleCallback || (fn => setTimeout(fn, 200));
   const next = () => { const s = rest.shift(); if (!s) return; const i = new Image(); kept.push(i); i.onload = i.onerror = () => idle(next); i.src = s; };
   idle(next);
 }
 
 /* ===================================================================
-   1b) NHẠC NỀN: trailer.mp3 — màn hình chính + phần intro sau khi bấm "Bắt đầu điều tra", tắt dần khi vào game.
+   1b) NHẠC NỀN: trailer.mp3 ở màn hình chính; sang đoạn intro (sau khi bấm "Bắt đầu điều tra") chuyển sang intro.mp3, tắt dần khi vào game.
    Trình duyệt chặn tự phát âm thanh, nên nhạc bắt đầu ở cú chạm/phím đầu tiên trên màn hình chính.
    Tệp khá to (≈ 3–6 lần các âm khác trong game) nên phát ở âm lượng thấp. =================================================================== */
 const MUSIC_FILE = 'trailer.mp3', MUSIC_VOL = .26, MUSIC_DUCK = .1, MUSIC_KEY = 'lnrt-music';
@@ -130,6 +130,18 @@ function musicStop(ms = 1400) {
   musicFade(0, ms, () => { try { music.pause(); music.currentTime = 0; } catch (_) {} });
 }
 function musicDuck() { if (music && !music.paused) musicFade(MUSIC_DUCK, 900); }
+/* Nhạc nền riêng cho đoạn intro (intro.mp3): nhạc màn hình chính tắt dần, intro.mp3 vào dần rồi tắt dần khi vào game. */
+let bed = null, bedT = 0;
+function bedFade(to, ms, done) {
+  if (!bed) return; clearInterval(bedT);
+  const a = bed, from = a.volume, steps = Math.max(1, Math.round(ms / 50)); let i = 0;
+  bedT = setInterval(() => { i++; a.volume = Math.max(0, Math.min(1, from + (to - from) * i / steps)); if (i >= steps) { clearInterval(bedT); if (done) done(); } }, 50);
+}
+function bedStart() {
+  if (!musicEnabled()) return;
+  try { bed = new Audio(SND('intro.mp3')); bed.volume = 0; bed.play().then(() => bedFade(.34, 1500)).catch(() => {}); } catch (_) {}
+}
+function bedStop(ms) { const a = bed; if (!a) return; bedFade(0, ms, () => { try { a.pause(); } catch (_) {} if (bed === a) bed = null; }); }
 /* Nút bật/tắt nhạc ở góc màn hình chính (nhớ lựa chọn) */
 const mbtn = document.createElement('button');
 mbtn.type = 'button'; mbtn.className = 'music-btn'; mbtn.textContent = '♪'; mbtn.title = 'Bật/tắt nhạc nền'; mbtn.setAttribute('aria-label', 'Bật hoặc tắt nhạc nền');
@@ -213,7 +225,7 @@ function next() {
     lineEl.textContent = b.line; subEl.textContent = b.sub || ''; subEl.hidden = !b.sub;
     textEl.classList.add('show');
     if (b.flick && !Perf.RM) textEl.classList.add('flick');
-    if (b.creak) { creak(); musicDuck(); }
+    if (b.creak) { creak(); musicDuck(); if (bed) bedFade(.12, 900); }
   }, idx ? 520 : 200);
   if (b.slamAt) later(slam, b.slamAt);
   if (b.knockAt) later(knock, b.knockAt);
@@ -240,7 +252,7 @@ function finishIntro() {
   intro.removeEventListener('click', onClick);
   root.classList.remove('is-busy');                  // hiệu ứng nền chạy lại ngay khi game hiện ra bên dưới
   if (onDone) onDone();
-  musicStop(1600);
+  musicStop(1600); bedStop(1800);
   intro.classList.add('out');
   setTimeout(() => {
     intro.hidden = true; intro.classList.remove('out'); root.classList.remove('is-intro');
@@ -253,6 +265,7 @@ const onClick = e => { if (e.target.closest('#intro-skip')) return; skipForward(
 function playIntro(startGame) {
   if (playing) return;
   playing = true; onDone = startGame; idx = -1; curImg = -1; curBg = 0;
+  musicStop(900); bedStart();
   root.classList.add('is-intro', 'is-busy');
   intro.hidden = false; intro.classList.remove('out');
   document.addEventListener('keydown', onKey, true);

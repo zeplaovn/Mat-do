@@ -218,7 +218,7 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
   "Tiếp tục" chỉ hiện khi có bản lưu mới. Muốn bảo vệ thật sự cần máy chủ.
 Âm thanh: tiếng thạch sùng (than_lan_keu_3s.mp3, cắt 3,0 s từ tệp gốc) chỉ phát 1 lần mỗi 2 phút trong nhà biệt thự,
   đúng 3 giây rồi tắt (lần đầu sau ~20 s). Thêm tiếng dế (tieng_de_keu.mp3, 61 s lặp) ở BG04, BG05, BG06; BG07 trở đi
-  im lặng như lời thoại của Nam. Tệp than_lan_keu.mp3 gốc vẫn còn trong assets/sound nhưng không còn được dùng.
+  im lặng như lời thoại của Nam. Tệp than_lan_keu.mp3 gốc đã được xóa khỏi assets (vẫn lấy lại được từ lịch sử git).
 
 15. CHƯƠNG 9 · NĂM CÁI TÊN (MỚI)
 --------------------------------
@@ -240,3 +240,31 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 
 17. TRAILER WEB
 - Mở trailer.html (cùng thư mục, dùng chung assets) để xem trailer giới thiệu ~65 giây: cảnh nền, chân dung, chữ chạy, nhạc trailer.mp3. Có nút tắt tiếng, bỏ qua, xem lại và nút CHƠI NGAY. Màn hình chính của game có nút "XEM TRAILER".
+
+18. CHUỖI CÂU ĐỐ MẢNH ĐƠN (MỚI)
+- Lá đơn tố cáo bị xé làm ba. Mảnh 2: giải mã dòng chữ sau khung ảnh (BG11, mật mã Caesar dịch 7). Dòng chữ chỉ giờ 11:45.
+  Mảnh 1: chỉnh kim đồng hồ quả lắc (BG11) về 11:45 để mở ngăn kín. Mảnh 3: sổ cứu trợ trên bàn ông Lâm (BG17).
+  Đủ ba mảnh thì bấm vào sổ ở BG17 để ghép (sắp ba mảnh đúng thứ tự) → nhận di vật "Mảnh đơn tố cáo".
+- Mỗi câu đố có nút GỢI Ý 3 bậc (hintBlock). Hộp sắt BG17 vẫn dùng mã 0317, két phòng ngủ mã 1988.
+
+19. CHƯƠNG MỚI: BÁT CƠM NÓNG · ĐÊM 17/3 · RỪNG THIÊNG (BG34–BG44)
+- Sau khi bóng ông Lâm tan (lamDone): bát cơm nóng ở phòng thờ BG12 → soi dấu chân bằng đèn pin ở bếp BG13 → gác nhỏ cô Lụa BG43
+  (sắp ba trang nhật ký theo thứ tự thời gian) → "Đêm 17/3/1988" chơi vai bé Mơ 7 tuổi (BG34→35→37→36→38→39):
+  chọn có đánh thức bà Mận hay không, giữ nhịp thở lấy chìa của cha, mở gian giam, ngã xuống giếng, sắp lại ba việc em đã làm.
+- Xong thì về giếng bị bịt BG42, rồi mới tới Chương 9 (năm cái tên). Đêm trại BG44 (hiên BG10) có ba đoạn hội thoại: Tuyết, Nam với Đông, Nguyệt.
+- Sau khi gọi đủ năm tên: ra cổng sẽ vào rừng thiêng BG40 → dải vải đỏ → nhà bà ngoại BG41 → bàn thờ đá để chọn "Công khai" hoặc "Tha thứ" (kết thúc 4).
+- Kịch bản gốc: KICH_BAN_CHUONG_MOI.md.
+
+20. CÂU ĐỐ MỚI: GHÉP HÌNH · KÝ HIỆU RIÊNG · SẮP ĐỒ · TÀI LIỆU · MƯA VÀ SƯƠNG
+- Ghép hình (BG43): mảnh ảnh giấu dưới gối, 12 mảnh, bấm hai mảnh để đổi chỗ, giữ nút "Xem ảnh mẫu" để so. Ghép xong có "Mặt sau tấm ảnh": thứ tự đứng ký đơn.
+- Sắp đồ (BG28): ngăn kéo giá sách có bốn hõm. Nhặt búp bê (BG43), hạc giấy, xe gỗ, viên phấn (BG28), đọc bài đồng dao trên bảng đen,
+  đặt đúng thứ tự → nhận "Bảng ký hiệu của năm người".
+- Ký hiệu riêng (BG26): nắp hầm có năm vòng ký hiệu (cây bút, cái cân, nốt nhạc, ngọn lửa, con sóng). Nhập đúng thứ tự đứng ký đơn.
+- Tài liệu: chạm vào giấy tờ trong túi đồ để đọc toàn văn, có nút "Gợi ý cách mở". Nhật ký cũng có gợi ý cho từng ghi chép.
+- Mưa và sương mù (weather.js, weather.css): cường độ theo từng cảnh; số hạt mưa và số lớp sương giảm theo mức hiệu năng; tắt khi bật giảm chuyển động.
+
+21. ÂM THANH MỚI (rain, nature_forest, ambient_house, crow, pick, intro)
+- rain.mp3: cảnh mưa BG38, BG39 (nhẹ ở BG25). nature_forest.mp3: ven rừng BG05–06, rừng thiêng BG40, vườn mộ BG29, nhà bà ngoại BG41 (BG07 vẫn im phăng phắc).
+- ambient_house.mp3: nền chung trong biệt thự (BG11–17, BG23–24, BG27–28, BG43 và ký ức BG34–35).
+- crow.mp3: quạ kêu thưa (45–100 giây một tiếng) ở các cảnh ngoài trời. pick.mp3: tiếng nhặt đồ (giấy tờ vẫn dùng tiếng lật giấy).
+- intro.mp3: nhạc nền đoạn intro; trailer.mp3 chỉ còn ở màn hình chính. Các tệp dài đã nén mono 80 kbps (tổng thêm ~9 MB).
