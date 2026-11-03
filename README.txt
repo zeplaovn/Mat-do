@@ -268,3 +268,11 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 - ambient_house.mp3: nền chung trong biệt thự (BG11–17, BG23–24, BG27–28, BG43 và ký ức BG34–35).
 - crow.mp3: quạ kêu thưa (45–100 giây một tiếng) ở các cảnh ngoài trời. pick.mp3: tiếng nhặt đồ (giấy tờ vẫn dùng tiếng lật giấy).
 - intro.mp3: nhạc nền đoạn intro; trailer.mp3 chỉ còn ở màn hình chính. Các tệp dài đã nén mono 80 kbps (tổng thêm ~9 MB).
+
+22. DỌN TUYẾN CŨ THEO KỊCH BẢN CHÍNH THỨC (docs/KICH_BAN_CHINH_THUC.md là bản chuẩn)
+- Đã bỏ: gạo cứu trợ, 312 bao gạo, 41 ngày giam, Mơ mang cơm và dùng chìa mở ngục.
+- BG26 = kho vật tư (thùng đồ lễ đóng dấu đỏ); BG32 = kho đồ lễ dưới hầm (năm vị trí vẽ phấn, năm bát lễ). Cơ chế câu đố, cờ và đường đi giữ nguyên.
+- Sổ Tâm ghi phiếu cấp đồ lễ và tấm vải che ô thông gió; đơn tố cáo nói về lễ lừa, cửa hầm khóa ngoài, ô gió bị che.
+- Hồi tưởng Mơ (BG34–39) viết lại: bát nhỏ để riêng (bát thứ sáu) → nghe lén ông Lâm và thầy Tịnh → tiếng kêu cứu sau cửa hầm, cha buông tay khỏi then cửa → chọn đúng ấn đồng trên thành giếng (cờ fbSeal) → trượt ngã 03:17 (chỉ có âm thanh).
+- Còn lại theo kịch bản mới (chưa làm): Sim, thầy Tịnh, ông Hựu, ông Đạt, Huyền Lâm Thánh Quân, BG45–47, năm hồi tưởng sinh viên, bốn kết thúc BAD/NORMAL/GOOD/TRUE (hiện vẫn là true/normal/forgive).
+- Âm nền ambient giảm 10% bằng hệ số AMB_GAIN trong game.js.
