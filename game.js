@@ -424,6 +424,7 @@ const AMBIENCE={
 };
 function playSound(name,volume=.25,from=0,dur=0){if(!state.sound)return;const file=SOUND[name];if(!file)return;try{const a=new Audio(ROOT+'sound/'+file);a.volume=Math.min(1,volume*2.2);const start=()=>{try{if(from)a.currentTime=from}catch(_){}a.play().catch(()=>{});if(dur)setTimeout(()=>{const v=a.volume,t=setInterval(()=>{a.volume=Math.max(0,a.volume-v/6);if(a.volume<=.001){clearInterval(t);a.pause()}},40)},dur*1000)};(from&&a.readyState<1)?a.addEventListener('loadedmetadata',start,{once:true}):start()}catch(_){}}
 /* Âm thanh nền theo cảnh: nhiều lớp phát cùng lúc, lớp nào không còn thuộc cảnh mới thì tắt dần */
+const AMB_GAIN=.9; /* hệ số âm nền chung: .9 = giảm 10% so với bảng AMBIENCE */
 const ambient={};
 function fadeTo(e,to,ms,done){clearInterval(e.fade);const a=e.a,from=a.volume,steps=Math.max(1,Math.round(ms/50));let i=0;e.fade=setInterval(()=>{i++;a.volume=Math.max(0,Math.min(1,from+(to-from)*i/steps));if(i>=steps){clearInterval(e.fade);if(done)done()}},50)}
 function setAmbience(){
@@ -432,8 +433,8 @@ function setAmbience(){
  for(const name of Object.keys(ambient)){if(!(name in want)){const e=ambient[name];delete ambient[name];fadeTo(e,0,900,()=>e.a.pause())}}
  for(const [name,vol] of Object.entries(want)){
   const e=ambient[name];
-  if(e){if(e.a.paused)e.a.play().catch(()=>{});fadeTo(e,vol,900);continue}
-  try{const a=new Audio(ROOT+'sound/'+SOUND[name]);a.loop=true;a.volume=0;const entry={a};ambient[name]=entry;a.play().catch(()=>{});fadeTo(entry,vol,1400)}catch(_){}
+  if(e){if(e.a.paused)e.a.play().catch(()=>{});fadeTo(e,vol*AMB_GAIN,900);continue}
+  try{const a=new Audio(ROOT+'sound/'+SOUND[name]);a.loop=true;a.volume=0;const entry={a};ambient[name]=entry;a.play().catch(()=>{});fadeTo(entry,vol*AMB_GAIN,1400)}catch(_){}
  }}
 function stopAmbience(){stopGecko();for(const name of Object.keys(ambient)){const e=ambient[name];delete ambient[name];clearInterval(e.fade);e.a.pause()}}
 /* Thạch sùng: không còn kêu liên tục. Cứ 2 phút (tính thời gian ở trong nhà biệt thự) phát đúng 3 giây rồi tắt.
