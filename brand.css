@@ -85,7 +85,6 @@ html[data-fx=low] .title-warn:before,html[data-fx=low] .title-warn:after{animati
 .title-screen.lit .title-bg{filter:brightness(1.7) contrast(1.15) saturate(.7)}
 .title-screen.lit .title-logo img{filter:drop-shadow(0 0 22px rgba(190,205,255,.6)) brightness(1.25)}
 @media(prefers-reduced-motion:reduce){.title-bolt{display:none}}
-html[data-fx=low] .title-bolt{display:none}
 
 /* Câu đố mảnh đơn */
 .cipher-line{font:700 clamp(18px,4.2vw,30px)/1.4 Georgia,serif;letter-spacing:.14em;text-align:center;color:#d8c39a;background:#0a0807;border:1px solid #4d3a2c;padding:.8em .6em;margin:.4rem 0 .8rem;word-break:break-word}

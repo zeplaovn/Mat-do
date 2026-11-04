@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#0d100f">
+  <meta name="theme-color" content="#08090a">
   <meta name="description" content="Trailer Lời Nguyền Rừng Thiêng — Bí mật biệt thự Vân Hòa.">
   <title>Trailer · Lời Nguyền Rừng Thiêng</title>
   <link rel="icon" href="assets/logo.webp">
@@ -11,39 +11,38 @@
   <script src="trailer.js" defer></script>
 </head>
 <body>
-  <main class="film" id="film">
-    <div class="film-art" id="film-art" aria-hidden="true"></div>
-    <div class="film-shade" aria-hidden="true"></div>
+<main class="film" id="film" aria-label="Trailer Lời Nguyền Rừng Thiêng">
+  <div class="film-frame">
+    <div class="shot-layer is-visible" aria-hidden="true"><div class="shot-image" id="shot-a"></div></div>
+    <div class="shot-layer" aria-hidden="true"><div class="shot-image" id="shot-b"></div></div>
+    <div class="film-vignette" aria-hidden="true"></div>
     <div class="film-grain" aria-hidden="true"></div>
+    <div class="film-flare" aria-hidden="true"></div>
+    <div class="film-flash" id="film-flash" aria-hidden="true"></div>
+    <div class="letterbox top" aria-hidden="true"></div><div class="letterbox bottom" aria-hidden="true"></div>
+
     <header class="film-header">
       <a href="index.html" class="film-brand" aria-label="Trở lại màn hình trò chơi"><span>◈</span> ĐỒNG CHAY <small> / 1988 — 2026</small></a>
-      <a href="index.html" class="text-link">VÀO TRÒ CHƠI <span>↗</span></a>
+      <a href="index.html" class="film-exit">VÀO TRÒ CHƠI <span>↗</span></a>
     </header>
 
-    <section class="poster" id="poster" aria-labelledby="poster-title">
-      <div class="poster-content">
-        <p class="eyebrow"><span></span> MỘT CÂU CHUYỆN KINH DỊ DÂN GIAN</p>
-        <p class="overline">LỜI NGUYỀN</p>
-        <h1 id="poster-title">RỪNG<br><em>THIÊNG</em></h1>
-        <p class="poster-sub">BÍ MẬT BIỆT THỰ VÂN HÒA</p>
-        <p class="poster-copy">Có những câu chuyện người ta không kể nữa.<br>Nhưng khu rừng vẫn còn nhớ.</p>
-        <div class="poster-actions"><button class="play-button" id="start-film" type="button"><span class="play-icon">▶</span> XEM TRAILER <small>01:10</small></button><a class="subtle-link" href="index.html">Khám phá trò chơi <span>→</span></a></div>
-      </div>
-      <div class="poster-side" aria-hidden="true"><span>01 / 05</span><i></i><span>ĐỒNG CHAY, BA VÌ</span></div>
-      <div class="poster-footer"><span>PHIÊU LƯU · ĐIỀU TRA · TÂM LÝ</span><span>NÊN XEM VỚI ÂM THANH</span></div>
+    <section class="poster" id="poster" aria-label="Xem trailer">
+      <p class="poster-label">MỘT CÂU CHUYỆN KINH DỊ DÂN GIAN</p>
+      <img class="film-logo" src="assets/logo.webp" alt="Lời Nguyền Rừng Thiêng — Bí mật biệt thự Vân Hòa">
+      <p class="poster-copy">Có những câu chuyện người ta không kể nữa.<br>Nhưng khu rừng vẫn còn nhớ.</p>
+      <button class="primary" id="start-film" type="button"><span aria-hidden="true">▶</span> XEM TRAILER <small id="poster-duration">01:10</small></button>
+      <p class="poster-warning">CÓ YẾU TỐ KINH DỊ · NÊN XEM VỚI ÂM THANH</p>
     </section>
 
     <section class="screen" id="screen" hidden aria-label="Nội dung trailer">
-      <div class="screen-content" id="screen-content" aria-live="polite">
-        <p class="screen-kicker" id="shot-kicker"></p><h2 id="shot-title"></h2><p id="shot-copy"></p>
-      </div>
+      <div class="captions" id="captions" aria-live="polite"></div>
     </section>
 
     <section class="end-card" id="end-card" hidden>
-      <p class="eyebrow"><span></span> BÍ MẬT BIỆT THỰ VÂN HÒA</p>
-      <h2>Họ vẫn đang<br><em>chờ được nhớ.</em></h2>
-      <p>Những gì còn sót lại đều có một câu chuyện.</p>
-      <div class="poster-actions"><a class="play-button" href="index.html">BẮT ĐẦU ĐIỀU TRA <span>→</span></a><button class="subtle-link" id="replay-film" type="button">↻ Xem lại trailer</button></div>
+      <p class="poster-label">BÍ MẬT BIỆT THỰ VÂN HÒA</p>
+      <img class="film-logo end-logo" src="assets/logo.webp" alt="Lời Nguyền Rừng Thiêng">
+      <p class="end-line">Bạn sẽ gọi tên họ chứ?</p>
+      <div class="end-actions"><a class="primary" href="index.html">BẮT ĐẦU ĐIỀU TRA <span>→</span></a><button class="secondary" id="replay-film" type="button">↻ Xem lại trailer</button></div>
     </section>
 
     <nav class="player" id="player" hidden aria-label="Điều khiển trailer">
@@ -52,9 +51,10 @@
       <input type="range" min="0" max="70" step="0.1" value="0" id="seek" aria-label="Tiến trình trailer">
       <span id="player-duration">01:10</span>
       <button id="toggle-mute" type="button" aria-label="Tắt tiếng" aria-pressed="false">ÂM THANH</button>
-      <button id="skip-film" type="button">BỎ QUA <span>→</span></button>
+      <button id="skip-film" class="skip" type="button">BỎ QUA <span>→</span></button>
     </nav>
     <audio id="film-audio" src="assets/sound/trailer.mp3" preload="metadata"></audio>
-  </main>
+  </div>
+</main>
 </body>
 </html>

@@ -456,6 +456,7 @@ const AMBIENCE={
  BG04:{water:.6,frogsNight:.9,crickets:.5},  /* cầu gỗ lúc chiều muộn: ếch + dế */
  BG05:{frogsNight:.6,crickets:.55,forest:.2},         /* ven rừng ban đêm */
  BG06:{crickets:.4,forest:.3},                        /* rừng tre: dế thưa dần; sang BG07 tắt hẳn (Nam: dế im phăng phắc) */
+ BG08:{rain:.08},BG09:{rain:.12},BG10:{rain:.08},
  BG25:{rain:.1,crickets:.2},BG29:{forest:.3,crickets:.2},BG38:{rain:.26},BG39:{rain:.24},BG40:{forest:.65,crickets:.1},BG41:{forest:.25},BG48:{forest:.3,crickets:.1},BG49:{forest:.12},BG42:{crickets:.35,forest:.15},BG44:{crickets:.55,frogsNight:.3,forest:.2},
  BG11:{house:.4},BG12:{house:.4},BG13:{house:.4},BG14:{house:.4},BG15:{house:.4},BG16:{house:.4},BG17:{house:.4},BG23:{house:.4},BG24:{house:.4},BG27:{house:.4},BG28:{house:.4},BG43:{house:.35},BG34:{house:.25},BG35:{house:.25},
  BG21:{musicbox:.5},                        /* bên kia gương: hộp nhạc đang phát sáng, giai điệu ru (Für Elise) */
@@ -601,7 +602,7 @@ const CAM_ORDER=['night','ir','thermal','vhs'];
 let camHud=null,camTimer=0,camSecs=0;
 function buildCamHud(){
  if(camHud)return;
- const st=$('scene-stage'),grain=st.querySelector('.fx-grain'),h=document.createElement('div');h.className='cam-hud';h.setAttribute('aria-hidden','true');
+ const st=$('scene-stage'),grain=st.querySelector('.fx-grain'),h=document.createElement('div');h.className='cam-hud';
  const g=grain&&grain.style.getPropertyValue('--grain');if(g)h.style.setProperty('--cam-noise',g);
  h.innerHTML='<div class="cam-tint"></div><div class="cam-noise"></div><div class="cam-scan"></div><div class="cam-band"></div><div class="cam-vig"></div>'
   +'<i class="cam-c tl"></i><i class="cam-c tr"></i><i class="cam-c bl"></i><i class="cam-c br"></i><div class="cam-cross"></div>'
@@ -610,6 +611,7 @@ function buildCamHud(){
   +'<div class="cam-bl-info"><span id="cam-sub"></span><span class="cam-temp" id="cam-temp"></span></div>'
   +'<div class="cam-br-info"><span id="cam-time"></span></div>'
   +'<button class="cam-mode-btn" id="cam-mode" type="button">⟳ ĐỔI CHẾ ĐỘ [V]</button><div class="cam-flash" id="cam-flash"></div>';
+ for(const part of h.children)if(part.id!=='cam-mode')part.setAttribute('aria-hidden','true');
  st.appendChild(h);camHud=h;
  $('cam-mode').addEventListener('click',e=>{e.stopPropagation();cycleCam()});
  if(!document.getElementById('cam-thermal'))document.body.insertAdjacentHTML('beforeend','<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="cam-thermal" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values=".33 .33 .33 0 0  .33 .33 .33 0 0  .33 .33 .33 0 0  0 0 0 1 0"/><feComponentTransfer><feFuncR type="table" tableValues="0 .1 .45 .85 1 1"/><feFuncG type="table" tableValues="0 0 .05 .3 .75 1"/><feFuncB type="table" tableValues=".15 .45 .55 .25 0 .6"/></feComponentTransfer></filter></svg>');
