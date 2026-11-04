@@ -23,13 +23,12 @@ const sceneNo = () => parseInt(($('scene-index').textContent.match(/BG(\d+)/) ||
 
 /* ---------- Lớp hiệu ứng (thứ tự = thứ tự chồng) ---------- */
 const mk = (tag, cls) => { const e = document.createElement(tag); e.className = 'fx ' + cls; e.setAttribute('aria-hidden', 'true'); stage.insertBefore(e, hot); return e; };
-mk('div', 'fx-fog');
 const dust = mk('canvas', 'fx-dust');
 const grain = mk('div', 'fx-grain');
 mk('div', 'fx-blood');
 mk('div', 'fx-vignette');
 mk('div', 'fx-scan');
-const shadow = mk('div', 'fx-shadow'), glitchL = mk('div', 'fx-glitch'), flash = mk('div', 'fx-flash');
+const shadow = mk('div', 'fx-shadow'), flash = mk('div', 'fx-flash');
 
 /* Hạt nhiễu: sinh MỘT lần thành ảnh nhỏ, sau đó chỉ dịch chuyển bằng CSS (không vẽ lại mỗi khung). */
 try {
@@ -95,7 +94,7 @@ function beatLoop() {
 }
 beatLoop();
 
-/* ---------- Jump scare / glitch / chớp đèn ---------- */
+/* ---------- Jump scare / chớp đèn ---------- */
 const pulse = (el, cls, ms) => { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); setTimeout(() => el.classList.remove(cls), ms); };
 function scare(big) {
   if (RM()) return;
@@ -109,7 +108,6 @@ function onScene() {
   const n = sceneNo(); dread = Math.min(1, .1 + (n - 1) * .0475);
   stage.style.setProperty('--dread', dread.toFixed(2));
   stage.classList.toggle('dread-high', dread > .8);
-  if (!RM()) { pulse(stage, 'fadein', 1100); pulse(stage, 'glitching', 450); }
 }
 new MutationObserver(onScene).observe($('scene-index'), { childList: true, characterData: true, subtree: true });
 onScene();
@@ -153,8 +151,7 @@ new MutationObserver(() => {
 new MutationObserver(() => { const e = document.querySelector('#modal-body .ending-number'); if (e && /BAD/.test(e.textContent)) scare(true); })
   .observe($('modal-body'), { childList: true });
 
-/* ---------- Màn hình tiêu đề: sương, máu nhỏ giọt, cảnh báo ---------- */
-const tf = document.createElement('div'); tf.className = 'title-fog'; tf.setAttribute('aria-hidden', 'true'); title.insertBefore(tf, title.querySelector('.title-content'));
+/* ---------- Màn hình tiêu đề: máu nhỏ giọt, cảnh báo ---------- */
 for (let i = 0; i < 10; i++) { const d = document.createElement('i'); d.className = 'drip'; d.setAttribute('aria-hidden', 'true');
   d.style.left = (4 + Math.random() * 92) + '%'; d.style.setProperty('--len', (70 + Math.random() * 190) + 'px'); d.style.animationDelay = (-Math.random() * 9) + 's'; d.style.animationDuration = (7 + Math.random() * 6) + 's'; title.appendChild(d); }
 const warn = document.createElement('div'); warn.className = 'title-warn'; warn.setAttribute('role', 'note');

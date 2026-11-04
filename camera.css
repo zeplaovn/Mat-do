@@ -12,7 +12,7 @@ html.cam-on[data-cam=ir] .scene-backdrop{filter:grayscale(1) brightness(.7)}
 html.cam-on[data-cam=thermal] .scene-backdrop{filter:grayscale(1) sepia(1) hue-rotate(-30deg) saturate(3) brightness(.6)}
 html.cam-on[data-cam=vhs] .scene-backdrop{filter:saturate(.6) sepia(.3) brightness(.6)}
 .scene-stage.cam-on .torch-shade{opacity:0}                  /* ống kính tự soi sáng, bỏ vòng đèn pin tối */
-.scene-stage.cam-on .fx-fog,.scene-stage.cam-on .fx-blood{opacity:.35}
+.scene-stage.cam-on .fx-blood{opacity:.35}
 
 /* ---------- Khung ngắm ---------- */
 .cam-hud{position:absolute;inset:0;z-index:4;display:none;pointer-events:none;overflow:hidden;
