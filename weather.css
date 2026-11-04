@@ -6,8 +6,11 @@
 .wx-c{background-size:700px 700px;opacity:.55;animation:wxdrift 95s linear infinite}
 @keyframes wxdrift{from{transform:translateX(0)}to{transform:translateX(520px)}}
 .wx-rain{width:100%;height:100%;opacity:0;transition:opacity 1s ease;image-rendering:auto}.wx-rain.on{opacity:1}
-.wx-bolt{opacity:0;background:linear-gradient(rgba(200,215,255,.5),rgba(200,215,255,.12));pointer-events:none;transition:opacity .04s}.wx-bolt.on{opacity:.38}
+.wx-bolt{opacity:0;background:linear-gradient(rgba(205,218,244,.42),rgba(205,218,244,.04));pointer-events:none}.wx-bolt.on{animation:wx-lightning 1.1s ease-out both}
+.wx-lamp{opacity:0;background:#0b0808;pointer-events:none}.wx-lamp.on{animation:wx-lamp-flicker 2.2s ease-in-out both}
+@keyframes wx-lightning{0%,100%{opacity:0}25%{opacity:.32}60%{opacity:.12}}
+@keyframes wx-lamp-flicker{0%,100%{opacity:0}38%{opacity:.13}68%{opacity:.04}}
 html[data-rain="1"] .scene-image{filter:brightness(.92) contrast(1.05)}
 html[data-fx=low] .wx-b,html[data-fx=low] .wx-c{display:none}
 html[data-fx=low] .wx-a{animation-duration:140s}
-@media(prefers-reduced-motion:reduce){.wx-layer{animation:none!important}.wx-bolt{display:none}}
+@media(prefers-reduced-motion:reduce){.wx-layer{animation:none!important}.wx-bolt,.wx-lamp{display:none}}

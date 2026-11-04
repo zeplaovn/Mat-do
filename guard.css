@@ -3,3 +3,6 @@ html,body,body *{-webkit-user-select:none;user-select:none;-webkit-touch-callout
 input,textarea{-webkit-user-select:text;user-select:text}
 img,svg,canvas{-webkit-user-drag:none;user-drag:none}
 @media print{html{display:none!important}}
+
+/* Tư liệu cho phép chọn chữ để lưu ghi chú; ô nhập vẫn dùng bàn phím và dán bình thường. */
+.research-page-content,.research-page-content *{user-select:text;-webkit-user-select:text;-webkit-touch-callout:default}

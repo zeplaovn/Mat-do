@@ -2,6 +2,23 @@ LỜI NGUYỀN RỪNG THIÊNG — BÍ MẬT BIỆT THỰ VÂN HÒA
 BẢN GAME WEB POINT-AND-CLICK CÓ THỂ CHƠI (2026)
 ====================================================
 
+CẬP NHẬT TRẢI NGHIỆM 04/11/2026
+--------------------------------
+- Trailer mới ở trailer.html là trang độc lập, có phát/tạm dừng, tua, tắt tiếng và bỏ qua.
+- Tích hợp 18 tài liệu và 25 câu đố, trong đó có ba hồ sơ đối chiếu mới; đọc sách,
+  đánh dấu và lưu đoạn văn. Mở Menu > Sách và câu đố để xem tư liệu đã tìm.
+- Năm di vật có các hồi tưởng mới. Thư viện lời thoại đã rà soát được lưu theo mã cảnh;
+  các cảnh và tương tác phù hợp đã được nối, những cảnh chưa có màn chơi vẫn là tư liệu.
+- Cảnh BG01–BG09 dùng ảnh nền mới; có danh sách điểm tương tác cho màn hình cảm ứng.
+- Ánh sáng chớp rất nhẹ, sấm chớp ở cảnh mưa; có thể tắt tại Menu > Đèn và chớp.
+  Hiệu ứng chuyển động cũng tuân theo cài đặt giảm chuyển động của thiết bị.
+- Gợi ý giờ ngắn và theo yêu cầu; không đưa sẵn lời giải trong nhật ký.
+- Bản lưu cũ được giữ; kết thúc Tha thứ của bản trước được ghi nhận riêng với bốn
+  kết thúc của bản hiện tại.
+- Các mục cập nhật cũ bên dưới được giữ làm lịch sử; có thể mô tả tính năng
+  hoặc cốt truyện đã thay đổi trong các bản sau.
+- Kiểm tra dữ liệu sách, câu đố, tiến trình và tương thích bản lưu: node tests/integration.test.js.
+
 1. CÁCH CHƠI NGAY
 ----------------
 - Giải nén toàn bộ tệp ZIP.
@@ -34,17 +51,16 @@ GitHub Pages hoặc Netlify, chỉ cần giữ nguyên các tệp/thư mục.
 
 3. NỘI DUNG ĐÃ CÓ
 -----------------
-- 20 khung cảnh BG01–BG20, mỗi BG 1280 x 720 px, WebP.
+- 47 cảnh được khai báo và nhiều ảnh nền WebP 1280 x 720 px.
 - Đường đi từ làng Đồng Chay, rừng tre, biệt thự Vân Hòa
   tới tầng hầm và căn phòng kín.
 - Chân dung năm sinh viên Đông, Nam, Tuyết, Ánh, Nguyệt.
 - Điểm click, các cuộc hội thoại, âm thanh bối cảnh/SFX.
-- Túi đồ, nhật ký, tự động lưu, nút gợi ý, sơ đồ.
+- Túi đồ, nhật ký, tự động lưu và gợi ý nhẹ khi người chơi yêu cầu.
 - 5 di vật cần tìm ở BG09, BG13, BG16, BG17 và BG20.
 - Câu đố chìa khóa cổng, mật mã 4 số, bức tường năm dấu tay,
   nghi lễ năm bát hương.
-- 3 kết thúc: Oán hồn chưa tan / Sự thật bị chôn vùi /
-  Trả lại tên người chết.
+- 4 kết thúc BAD / NORMAL / GOOD / TRUE tùy chứng cứ và lựa chọn.
 - Giao diện tương thích chuột, bàn phím và màn hình cảm ứng.
 
 4. GỢI Ý NGẮN (CÓ THỂ CHỨA SPOILER)
