@@ -268,3 +268,26 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 - ambient_house.mp3: nền chung trong biệt thự (BG11–17, BG23–24, BG27–28, BG43 và ký ức BG34–35).
 - crow.mp3: quạ kêu thưa (45–100 giây một tiếng) ở các cảnh ngoài trời. pick.mp3: tiếng nhặt đồ (giấy tờ vẫn dùng tiếng lật giấy).
 - intro.mp3: nhạc nền đoạn intro; trailer.mp3 chỉ còn ở màn hình chính. Các tệp dài đã nén mono 80 kbps (tổng thêm ~9 MB).
+
+22. DỌN TUYẾN CŨ THEO KỊCH BẢN CHÍNH THỨC (docs/KICH_BAN_CHINH_THUC.md là bản chuẩn)
+- Đã bỏ: gạo cứu trợ, 312 bao gạo, 41 ngày giam, Mơ mang cơm và dùng chìa mở ngục.
+- BG26 = kho vật tư (thùng đồ lễ đóng dấu đỏ); BG32 = kho đồ lễ dưới hầm (năm vị trí vẽ phấn, năm bát lễ). Cơ chế câu đố, cờ và đường đi giữ nguyên.
+- Sổ Tâm ghi phiếu cấp đồ lễ và tấm vải che ô thông gió; đơn tố cáo nói về lễ lừa, cửa hầm khóa ngoài, ô gió bị che.
+- Hồi tưởng Mơ (BG34–39) viết lại: bát nhỏ để riêng (bát thứ sáu) → nghe lén ông Lâm và thầy Tịnh → tiếng kêu cứu sau cửa hầm, cha buông tay khỏi then cửa → chọn đúng ấn đồng trên thành giếng (cờ fbSeal) → trượt ngã 03:17 (chỉ có âm thanh).
+- Còn lại theo kịch bản mới (chưa làm): Sim, thầy Tịnh, ông Hựu, ông Đạt, Huyền Lâm Thánh Quân, BG45–47, năm hồi tưởng sinh viên, bốn kết thúc BAD/NORMAL/GOOD/TRUE (hiện vẫn là true/normal/forgive).
+- Âm nền ambient giảm 10% bằng hệ số AMB_GAIN trong game.js.
+
+23. CHƯƠNG MỞ ĐẦU ĐỒNG CHAY (ảnh mới BG45–47)
+- BG45 sân chùa làng: vào từ cổng làng BG01 (lối bên phải). Ông Hựu xem quẻ ("Năm người. Năm nhà.", "Đừng đáp tiếng gọi từ giếng"), cờ huuDone, ghi vào nhật ký.
+- BG46 bàn lễ trước miếu: vào từ BG05. Sáu chỗ bày lễ, ngọn đèn thứ ba tự cháy (cờ lamp6); bài vị đọc được "Huyền Lâm Thánh Quân" để đối chiếu về sau.
+- BG47 (nền tế rừng cũ 2026) và BG47b (bản 1986, cùng góc máy): đã có ảnh và được nạp sẵn, chưa nối vào cốt truyện vì chưa có tuyến Sim/Đạt.
+- assets/props: Closeup01_Coins, Closeup02_Papers (hai bản sớ), Closeup03_SquareSeal (ấn đồng) chờ gắn vào câu đố sớ giả/sớ thật.
+
+24. ẢNH MỚI (bộ dong_chay_assets)
+- Thay nền: BG26 kho vật tư, BG32 kho đồ lễ (năm vòng phấn), BG34 bếp 1988 (sáu bát), BG36 hành lang bếp, BG37 cửa hầm có then cài ngoài. Vùng bấm đã chỉnh lại cho khớp bố cục.
+- Đã nạp sẵn: BG48 và BG49 (nhà và phòng khách có ảnh Sim, file gốc đặt tên "ong_huu" nhưng dùng làm nhà ông Đạt), BG50 (sân trước biệt thự dưới mưa, chưa dùng).
+- Chân dung vào khung thoại: Ông Hựu, Ông Đạt, Sim, Thầy Tịnh. Icon: ấn đồng, bản đồ 1988, khăn chàm, sớ giả, sớ gốc, thư Sim (đã khai báo trong ITEMS, chưa có chỗ nhặt).
+
+25. Thay ảnh nền từ bộ background mới
+- BG34 (bếp), BG41 (nhà bà ngoại Nguyệt), BG43 (gác Lụa): thay ảnh mới, căn lại hotspot.
+- BG51.webp = BG05 bản lễ (chưa dùng). Các cặp khác giữ ảnh cũ vì ảnh mới mâu thuẫn kịch bản (BG32/36/37 có người bị giam) hoặc kém hơn.
