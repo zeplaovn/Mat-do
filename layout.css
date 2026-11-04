@@ -492,3 +492,32 @@ html[data-fx=low] .chatter{backdrop-filter:none}
 }
 @media(max-height:520px){.dlg-portrait{width:clamp(84px,26vh,120px);height:clamp(84px,26vh,120px)}}
 @media(max-width:700px){.dlg-portrait-wrap{margin-left:10px}.dlg-portrait{width:clamp(96px,22vh,150px);height:clamp(96px,22vh,150px)}}
+
+/* Tài nguyên sổ nhật ký: bìa da, giấy ố, ruy băng đỏ */
+.bk-cover{
+  background:
+    url("assets/book/cover_front.webp") center/100% 100% no-repeat,
+    radial-gradient(120% 90% at 30% 14%,#4a2214,#241008 58%,#150805);
+}
+.bk-cover-frame{inset:6% 12%;border:0;box-shadow:none;justify-content:flex-start;padding-top:25%;gap:8px}
+.bk-cover-sigil{display:none}
+.bk-cover-title{color:#2e140b;text-shadow:0 1px 0 rgba(255,235,200,.5);font-size:clamp(15px,2.1vw,26px);letter-spacing:.28em}
+.bk-cover-sub{color:#4a2c18;font-size:clamp(8px,.9vw,11px);letter-spacing:.16em}
+.bk-page.left,.bk-face.left{
+  background:
+    radial-gradient(130% 90% at 30% 20%,rgba(255,246,218,.22),transparent 70%),
+    linear-gradient(90deg,rgba(80,50,20,.0) 0%,rgba(80,50,20,.0) 80%,rgba(60,34,14,.28) 100%),
+    linear-gradient(rgba(222,198,152,.42),rgba(222,198,152,.42)),
+    url("assets/book/paper.webp") center/cover no-repeat,#d5c39a;
+}
+.bk-page.right,.bk-face.right{
+  background:
+    radial-gradient(130% 90% at 70% 20%,rgba(255,246,218,.22),transparent 70%),
+    linear-gradient(270deg,rgba(80,50,20,.0) 0%,rgba(80,50,20,.0) 80%,rgba(60,34,14,.28) 100%),
+    linear-gradient(rgba(222,198,152,.42),rgba(222,198,152,.42)),
+    url("assets/book/paper.webp") center/cover no-repeat,#d5c39a;
+}
+.bk-ribbon{background:url("assets/book/ribbon.webp") center/100% 100% no-repeat;clip-path:none;width:14px;left:calc(50% - 7px);height:24%}
+.bk-cover-frame{inset:6% 20%}
+.bk-cover-title{font-size:clamp(13px,1.7vw,21px);letter-spacing:.18em;padding-left:.18em}
+.bk-cover-sub{font-size:clamp(7px,.75vw,9px);letter-spacing:.06em;white-space:nowrap}
