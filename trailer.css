@@ -96,3 +96,68 @@ button,a,input{touch-action:manipulation}button:focus-visible,a:focus-visible,in
 .end-meta{margin:0;font:clamp(9px,1.2vw,15px)/1.5 Arial,sans-serif;letter-spacing:.22em;color:#bba98f;text-align:center}
 @media(max-width:700px) and (orientation:portrait){.slate{left:7%;bottom:15%}.slate-in{font-size:10px;letter-spacing:.2em}.end-meta{font-size:10px;letter-spacing:.1em;padding:0 4%}}
 @media(prefers-reduced-motion:reduce){.cap{filter:none!important}.dust,.streak{display:none}}
+
+/* ===== Phiên bản điện ảnh nâng cao: máy quay, chuyển cảnh, chữ từng ký tự, nhịp nhạc ===== */
+.shot .bg{--rot:0deg;--dx:0%;--dy:0%}
+.shot.on .bg.in{animation:cmIn var(--d,6s) cubic-bezier(.25,.1,.35,1) forwards}
+.shot.on .bg.out{animation:cmOut var(--d,6s) cubic-bezier(.25,.1,.35,1) forwards}
+.shot.on .bg.pan{animation:cmPan var(--d,6s) cubic-bezier(.4,0,.6,1) forwards}
+@keyframes cmIn{from{transform:scale(1) translate(0,0) rotate(0)}to{transform:scale(1.2) translate(var(--dx),var(--dy)) rotate(var(--rot))}}
+@keyframes cmOut{from{transform:scale(1.22) translate(var(--dx),var(--dy)) rotate(var(--rot))}to{transform:scale(1.02) translate(0,0) rotate(0)}}
+@keyframes cmPan{from{transform:scale(1.14) translateX(-4%) rotate(calc(var(--rot) * -1))}to{transform:scale(1.14) translateX(4%) rotate(var(--rot))}}
+/* Lấy nét dần (rack focus) khi vào cảnh */
+.shot.on:not([class*="tr-"]){animation:rack 1.5s ease-out both}
+@keyframes rack{from{filter:blur(9px) brightness(1.25)}to{filter:blur(0) brightness(1)}}
+/* Các kiểu chuyển cảnh */
+.shot.on.tr-whip{animation:whipIn .75s cubic-bezier(.2,.8,.2,1) both}
+@keyframes whipIn{0%{transform:translateX(9%) scale(1.06);filter:blur(16px) brightness(1.5)}100%{transform:none;filter:none}}
+.shot.on.tr-glitch{animation:glitchIn .7s steps(1) both}
+@keyframes glitchIn{
+ 0%{transform:translateX(-2.2%);filter:hue-rotate(60deg) saturate(2.2);clip-path:inset(0 0 62% 0)}
+ 14%{transform:translateX(2.6%);filter:hue-rotate(-50deg) contrast(1.6);clip-path:inset(38% 0 0 0)}
+ 28%{transform:translateX(-1.4%);filter:saturate(3);clip-path:inset(0 0 22% 0)}
+ 42%{transform:translateX(1.1%);filter:hue-rotate(110deg);clip-path:inset(12% 0 40% 0)}
+ 58%{transform:none;filter:contrast(1.4);clip-path:inset(0)}
+ 100%{transform:none;filter:none;clip-path:inset(0)}}
+.shot.on.tr-flash{animation:flashIn 1s ease-out both}
+@keyframes flashIn{from{filter:brightness(4) contrast(.6)}to{filter:none}}
+.shot.on.tr-dip{animation:dipIn 1.4s ease-out both}
+@keyframes dipIn{0%{filter:brightness(0)}35%{filter:brightness(.15)}100%{filter:none}}
+/* Chữ hiện từng ký tự */
+.cap{filter:none;transition:none}
+.cap .w{display:inline-block;white-space:nowrap}
+.cap .c{display:inline-block;opacity:0;transform:translateY(.45em) scale(1.25);filter:blur(7px);transition:opacity .7s ease,transform .9s cubic-bezier(.2,.8,.2,1),filter .8s ease;transition-delay:calc(var(--i) * var(--step,26ms))}
+.cap.show .c{opacity:1;transform:none;filter:none}
+.cap{opacity:1;transform:none}
+.cap:not(.show) .c{transition-delay:0s;transition-duration:.35s}
+.cap.big{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#f1e2c8;text-shadow:0 0 28px rgba(0,0,0,.9),0 3px 0 rgba(0,0,0,.55);filter:none}
+.cap.big.show{filter:none}
+.cap.big.red{color:#ff6a62;text-shadow:0 0 30px #b01c1c,0 0 8px #000}
+.cap.big .c{text-shadow:0 0 22px rgba(255,214,160,.35)}
+.cap.show.big::after{content:"";display:block;height:2px;margin:.35em auto 0;width:0;background:linear-gradient(90deg,transparent,#c9a36a,transparent);animation:capLine 1.4s .5s cubic-bezier(.2,.8,.2,1) forwards}
+.cap.show.big.red::after{background:linear-gradient(90deg,transparent,#d85a55,transparent)}
+@keyframes capLine{to{width:min(70%,520px)}}
+.cap.glitch .c{animation:charGlitch 1.1s steps(2) infinite;animation-delay:calc(var(--i) * 40ms)}
+@keyframes charGlitch{0%,86%,100%{transform:none;text-shadow:none}88%{transform:translate(-2px,1px);text-shadow:3px 0 #f00,-3px 0 #0ff}93%{transform:translate(2px,-1px);text-shadow:-3px 0 #f00,3px 0 #0ff}}
+/* Nhịp nhạc: giật hình, bừng sáng, sắc viền */
+.stage.punch1 .shots{animation:pun1 .5s ease-out}.stage.punch2 .shots{animation:pun2 .5s ease-out}.stage.punch3 .shots{animation:pun3 .6s ease-out}
+@keyframes pun1{0%{transform:scale(1.018)}100%{transform:none}}
+@keyframes pun2{0%{transform:scale(1.035) translate(.3%,-.2%)}100%{transform:none}}
+@keyframes pun3{0%{transform:scale(1.06) translate(-.6%,.4%)}30%{transform:scale(1.03) translate(.4%,-.3%)}100%{transform:none}}
+.stage.punch3 .vignette{animation:vigPulse .6s ease-out}
+@keyframes vigPulse{0%{filter:brightness(1.8) hue-rotate(-12deg)}100%{filter:none}}
+.stage.punch2 .caps,.stage.punch3 .caps{animation:capShift .45s ease-out}
+@keyframes capShift{0%{text-shadow:none;filter:drop-shadow(3px 0 rgba(255,40,40,.65)) drop-shadow(-3px 0 rgba(40,220,255,.55))}100%{filter:none}}
+/* Rò sáng ấm trôi qua khung hình */
+.leak{position:absolute;inset:-20% -40%;z-index:5;pointer-events:none;mix-blend-mode:screen;opacity:.5;background:radial-gradient(ellipse 28% 60% at 30% 50%,rgba(255,150,70,.28),transparent 70%),radial-gradient(ellipse 22% 50% at 75% 40%,rgba(255,90,60,.16),transparent 70%);animation:leakDrift 11s ease-in-out infinite alternate}
+@keyframes leakDrift{from{transform:translateX(-12%) rotate(-3deg)}to{transform:translateX(12%) rotate(3deg)}}
+/* Khuôn mặt: vào cảnh bằng zoom chậm và đèn rọi */
+.face{transform:translateY(20px) scale(1.18);filter:blur(6px);transition:opacity 1.1s,transform 1.4s cubic-bezier(.2,.8,.2,1),filter 1s}.face.show{transform:none;filter:none}
+.face.show img{animation:faceBreath 4.5s ease-in-out infinite alternate}
+@keyframes faceBreath{from{transform:scale(1)}to{transform:scale(1.05)}}
+.face img{overflow:hidden;box-shadow:0 8px 28px #000,0 0 0 1px rgba(210,170,120,.25),0 0 30px rgba(190,60,50,.22)}
+/* Màn kết: tia sáng quét chậm */
+.end::before{content:"";position:absolute;inset:-30% -60%;pointer-events:none;background:linear-gradient(100deg,transparent 42%,rgba(255,190,150,.1) 50%,transparent 58%);animation:endSweep 6s 1.5s ease-in-out infinite}
+@keyframes endSweep{0%{transform:translateX(-45%)}100%{transform:translateX(45%)}}
+@media(prefers-reduced-motion:reduce){.leak,.end::before{display:none}.cap .c{opacity:1!important;transform:none!important;filter:none!important}.stage[class*="punch"] .shots{animation:none}}
+@media(max-width:700px) and (orientation:portrait){.leak{display:none}.cap.show.big::after{height:1.5px}}
