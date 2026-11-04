@@ -282,3 +282,8 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 - BG46 bàn lễ trước miếu: vào từ BG05. Sáu chỗ bày lễ, ngọn đèn thứ ba tự cháy (cờ lamp6); bài vị đọc được "Huyền Lâm Thánh Quân" để đối chiếu về sau.
 - BG47 (nền tế rừng cũ 2026) và BG47b (bản 1986, cùng góc máy): đã có ảnh và được nạp sẵn, chưa nối vào cốt truyện vì chưa có tuyến Sim/Đạt.
 - assets/props: Closeup01_Coins, Closeup02_Papers (hai bản sớ), Closeup03_SquareSeal (ấn đồng) chờ gắn vào câu đố sớ giả/sớ thật.
+
+24. ẢNH MỚI (bộ dong_chay_assets)
+- Thay nền: BG26 kho vật tư, BG32 kho đồ lễ (năm vòng phấn), BG34 bếp 1988 (sáu bát), BG36 hành lang bếp, BG37 cửa hầm có then cài ngoài. Vùng bấm đã chỉnh lại cho khớp bố cục.
+- Đã nạp sẵn: BG48 và BG49 (nhà và phòng khách có ảnh Sim, file gốc đặt tên "ong_huu" nhưng dùng làm nhà ông Đạt), BG50 (sân trước biệt thự dưới mưa, chưa dùng).
+- Chân dung vào khung thoại: Ông Hựu, Ông Đạt, Sim, Thầy Tịnh. Icon: ấn đồng, bản đồ 1988, khăn chàm, sớ giả, sớ gốc, thư Sim (đã khai báo trong ITEMS, chưa có chỗ nhặt).
