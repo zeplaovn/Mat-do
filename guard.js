@@ -4,14 +4,17 @@
 (() => {
 'use strict';
 const inField = t => !!(t && t.closest && t.closest('input,textarea'));
+const inBook = t => !!(t && t.closest && t.closest('.research-page-content'));
+const canSelect = t => inField(t) || inBook(t);
 const block = e => { e.preventDefault(); e.stopPropagation(); };
 
-['copy', 'cut', 'paste', 'dragstart', 'drop', 'contextmenu'].forEach(n => document.addEventListener(n, block, true));
-document.addEventListener('selectstart', e => { if (!inField(e.target)) block(e); }, true);
-document.addEventListener('beforeinput', e => { if (/^(insertFromPaste|insertFromDrop|insertFromYank|deleteByCut)/.test(e.inputType || '')) block(e); }, true);
+['copy', 'cut', 'paste', 'dragstart', 'drop', 'contextmenu'].forEach(n => document.addEventListener(n, e => { if (!(inField(e.target) || (n === 'copy' && inBook(e.target)))) block(e); }, true));
+document.addEventListener('selectstart', e => { if (!canSelect(e.target)) block(e); }, true);
+document.addEventListener('beforeinput', e => { if (!inField(e.target) && /^(insertFromPaste|insertFromDrop|insertFromYank|deleteByCut)/.test(e.inputType || '')) block(e); }, true);
 
 document.addEventListener('keydown', e => {
   const k = String(e.key || '').toLowerCase(), mod = e.ctrlKey || e.metaKey;
+  if (inField(e.target) || (inBook(e.target) && mod && ['c','a'].includes(k))) return;
   const bad =
     e.key === 'F12' ||
     (mod && !e.shiftKey && !e.altKey && ['c', 'x', 'v', 'a', 's', 'u', 'p'].includes(k)) ||   // copy, cut, paste, chọn hết, lưu, xem nguồn, in
@@ -24,6 +27,9 @@ document.addEventListener('keydown', e => {
 
 document.addEventListener('selectionchange', () => {
   const s = window.getSelection && window.getSelection();
-  if (s && !s.isCollapsed && !inField(document.activeElement)) s.removeAllRanges();
+  if (s && !s.isCollapsed && !inField(document.activeElement)) {
+    const el = s.anchorNode && (s.anchorNode.nodeType === 1 ? s.anchorNode : s.anchorNode.parentElement);
+    if (!inBook(el)) s.removeAllRanges();
+  }
 });
 })();
