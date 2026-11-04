@@ -964,14 +964,13 @@ function openResearchBook(id){
  flags.researchBookmarks=flags.researchBookmarks||{};
  flags.researchQuotes=flags.researchQuotes||{};
  flags.researchLastPage=flags.researchLastPage||{};
- const theme=researchBookTheme(b);
  const pageCount=b.pages.length;
- const mobile=window.matchMedia('(max-width:740px)').matches;
- const reduced=window.matchMedia('(prefers-reduced-motion:reduce)').matches || !!(window.Perf&&Perf.RM);
- const step=mobile?1:2;
+ const layoutQuery=window.matchMedia('(max-width:700px)');
+ let mobile=layoutQuery.matches,step=mobile?1:2;
+ const reduced=window.matchMedia('(prefers-reduced-motion:reduce)').matches||!!(window.Perf&&Perf.RM);
  let current=Math.max(0,Math.min(pageCount-1,Number(flags.researchLastPage[id]||0)));
  if(!mobile)current=Math.floor(current/2)*2;
- let busy=false,flipTimer=null;
+ let active=current,busy=false,flipTimer=null,firstDraw=true,openTimers=[];
  const bookmarks=()=>flags.researchBookmarks[id]||[];
  const quotes=()=>flags.researchQuotes[id]||[];
  const visible=()=>mobile?[current]:[current,current+1].filter(i=>i<pageCount);
@@ -982,74 +981,75 @@ function openResearchBook(id){
   for(const i of visible())if(!sealed(i))got.add(i);
   flags.researchPageViews[id]=[...got].sort((a,c)=>a-c);
   if(b.pages.every((_,i)=>got.has(i))&&!flags.researchRead.includes(id)){
-   flags.researchRead.push(id);
-   toast('Đã đọc hết: '+b.title);
+   flags.researchRead.push(id);toast('Đã đọc hết: '+b.title);
   }
   flags.researchLastPage[id]=current;save();
  }
- function leaf(i,side){
-  if(i>=pageCount)return '<section class="research-leaf research-empty" aria-hidden="true"><div class="research-empty-seal">✥</div></section>';
-  const p=b.pages[i],locked=sealed(i),marks=quotes();
-  const content=locked?b.protectedFinalText:p[1];
-  const heading=locked?'Trang giấy bị dính chặt':p[0];
-  const bookCover=i===0;
-  const mark=bookmarks().includes(i);
-  const paragraphs=researchClippedHTML(content,marks,i);
-  return `<section class="research-leaf ${bookCover?'research-first-page':''} ${locked?'research-locked':''}" data-page="${i}" aria-label="Trang ${i+1}: ${escapeHTML(heading)}">
-   <div class="research-leaf-texture" aria-hidden="true"></div>
-   <div class="research-page-top"><span>${escapeHTML(researchBookType(b))}</span><span>${mark?'◆ ĐÃ ĐÁNH DẤU':'ĐỒNG CHAY'}</span></div>
-   ${bookCover?`<div class="research-cover-medallion" aria-hidden="true">✥</div><span class="research-cover-legend">BẢN LƯU TRONG HỒ SƠ</span><h2 class="research-cover-title">${escapeHTML(b.title)}</h2>`:
-   `<div class="research-page-glyph" aria-hidden="true">${locked?'✣':'❦'}</div><h2 class="research-page-heading">${escapeHTML(heading)}</h2>`}
-   <div class="research-page-content" data-page-text="${i}">${paragraphs}</div>
-   <div class="research-page-foot"><span>${bookCover?'TƯ LIỆU SƯU TẦM':'BẢN CHÉP TAY'}</span><span>${String(i+1).padStart(2,'0')} / ${String(pageCount).padStart(2,'0')}</span></div>
+ function leaf(i){
+  if(i>=pageCount)return '<div class="bk-blank" aria-hidden="true"><span class="bk-fleuron">◈</span></div>';
+  const page=b.pages[i],locked=sealed(i),heading=locked?'Trang giấy bị dính chặt':page[0];
+  const content=locked?b.protectedFinalText:page[1],marked=bookmarks().includes(i);
+  return `<section class="research-paper${locked?' research-paper-locked':''}" data-page="${i}" aria-label="Trang ${i+1}: ${escapeHTML(heading)}">
+   <div class="bk-no">${escapeHTML(researchBookType(b))}${marked?' · ĐÃ ĐÁNH DẤU':''}</div>
+   <div class="bk-title">${escapeHTML(i===0?b.title:heading)}</div>
+   <div class="bk-body research-page-content" data-page-text="${i}">${researchClippedHTML(content,quotes(),i)}</div>
+   <div class="bk-folio">${i+1}</div>
   </section>`;
  }
- function draw(direction='none'){
-  if(modalType==='research-book'&&!$('modal-body'))return;
+ function updateActive(i){
+  if(!visible().includes(i))return;active=i;
+  const btn=$('research-add-bookmark');if(!btn)return;
+  btn.textContent=bookmarks().includes(active)?'◆ Bỏ dấu trang':'◇ Đánh dấu trang';
+  btn.setAttribute('aria-label',(bookmarks().includes(active)?'Bỏ dấu trang ':'Đánh dấu trang ')+(active+1));
+ }
+ function draw(){
   stamp();
-  const seen=researchPagesRead(id).length;
   const remembered=bookmarks().length+quotes().length;
-  const html=`<div class="research-reader theme-${theme}" data-theme="${theme}" data-turn="${direction}">
-   <div class="research-motes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-   <header class="research-reader-header">
-    <div class="research-title-group"><span class="research-section-label">HỒ SƠ / ${escapeHTML(researchBookType(b))}</span><h2>${escapeHTML(b.title)}</h2></div>
-    <button class="research-reader-close" id="research-reader-close" aria-label="Đóng sách" type="button">×</button>
-   </header>
-   <div class="research-workarea">
-    <aside class="research-book-sidebar">
-     <div class="research-sidebar-title">THẺ TÀI LIỆU</div>
-     <div class="research-mini-cover" aria-hidden="true"><span>✥</span><strong>${escapeHTML(b.title)}</strong><small>ĐỒNG CHAY</small></div>
-     <p class="research-summary">${escapeHTML(b.summary)}</p>
-     <div class="research-read-progress"><span>ĐÃ XEM</span><strong>${seen}/${pageCount} TRANG</strong></div>
-     <div class="research-progress-track"><i style="width:${Math.round(seen/pageCount*100)}%"></i></div>
-     <button class="research-bookmark-btn" id="research-add-bookmark" type="button">${bookmarks().includes(current)?'◆ Bỏ dấu trang':'◇ Đánh dấu trang'}</button>
-     <button class="research-bookmark-btn secondary" id="research-add-quote" type="button">✎ Lưu đoạn đang chọn</button>
-     <button class="research-bookmark-btn secondary" id="research-view-clips" type="button">Ghi chú đã lưu (${remembered})</button>
-    </aside>
-    <div class="research-binding" aria-label="Nội dung sách" tabindex="0">
-     <div class="research-board" aria-hidden="true"></div>
-     <div class="research-spread ${mobile?'research-one-page':''}">${leaf(current,'left')}${mobile?'':leaf(current+1,'right')}</div>
-     <div class="research-gutter" aria-hidden="true"></div>
-     <div class="research-binding-tassel" aria-hidden="true"></div>
+  const coverClass=firstDraw&&!reduced?'closed':'opened';
+  const html=`<div class="bk-scene research-journal">
+   <button class="bk-close" id="research-reader-close" type="button" aria-label="Đóng sách">×</button>
+   <div class="bk ${mobile?'single ':''}${coverClass}" id="research-book" aria-label="${escapeHTML(b.title)}">
+    <div class="bk-base"></div>
+    <div class="bk-pages">
+     <div class="bk-page left" id="research-left">${mobile?'':leaf(current)}</div>
+     <div class="bk-page right" id="research-right">${leaf(mobile?current:current+1)}</div>
     </div>
+    <div class="bk-ribbon" aria-hidden="true"></div>
+    <div class="bk-cover" aria-hidden="true"><div class="bk-cover-frame"><span class="bk-cover-sigil">◈</span><div class="bk-cover-title">${escapeHTML(b.title)}</div><div class="bk-cover-sub">Tư liệu · Đồng Chay</div></div></div>
    </div>
-   <footer class="research-reader-footer">
-    <div class="research-page-nav">
-     <button id="research-prev" type="button" ${current<=0?'disabled':''} aria-label="Trang trước">‹ <span>TRANG TRƯỚC</span></button>
-     <span class="research-folio-counter">${mobile?'TRANG '+(current+1):'TRANG '+(current+1)+(current+1<pageCount?' — '+(current+2):'')} / ${pageCount}</span>
-     <button id="research-next" type="button" ${current+step>=pageCount?'disabled':''} aria-label="Trang sau"><span>TRANG SAU</span> ›</button>
-    </div>
-    <div class="research-footer-actions"><span>← → LẬT TRANG</span><button id="research-to-archive" type="button">THƯ VIỆN TƯ LIỆU</button></div>
-   </footer>
+   <div class="bk-nav research-journal-nav">
+    <button class="bk-btn" id="research-prev" type="button" ${current<=0?'disabled':''} aria-label="Trang trước">‹ Trang trước</button>
+    <span class="bk-count">${mobile?'Trang '+(current+1):'Trang '+(current+1)+(current+1<pageCount?'–'+(current+2):'')} / ${pageCount}</span>
+    <button class="bk-btn" id="research-next" type="button" ${current+step>=pageCount?'disabled':''} aria-label="Trang sau">Trang sau ›</button>
+   </div>
+   <div class="bk-nav research-journal-tools">
+    <button class="bk-btn" id="research-add-bookmark" type="button"></button>
+    <button class="bk-btn" id="research-add-quote" type="button">✎ Lưu đoạn đang chọn</button>
+    <button class="bk-btn" id="research-view-clips" type="button">Ghi chú đã lưu (${remembered})</button>
+    <button class="bk-btn" id="research-to-archive" type="button">Thư viện tư liệu</button>
+   </div>
   </div>`;
   showModal(html,'SÁCH · TÀI LIỆU','research-book');
   $('research-reader-close').onclick=hideModal;
   $('research-prev').onclick=()=>turn(-1);
   $('research-next').onclick=()=>turn(1);
   $('research-to-archive').onclick=showResearchArchive;
+  const left=$('research-left'),right=$('research-right');
+  const bindPage=(el,i,dir)=>{
+   el.addEventListener('pointerdown',()=>updateActive(i));
+   el.addEventListener('click',e=>{
+    const selection=window.getSelection&&window.getSelection();
+    if(e.target.closest('.research-page-content')||(selection&&!selection.isCollapsed))return;
+    turn(dir);
+   });
+  };
+  if(!mobile)bindPage(left,current,-1);
+  if(mobile||current+1<pageCount)bindPage(right,mobile?current:current+1,1);
+  updateActive(active);
   $('research-add-bookmark').onclick=()=>{
+   if(sealed(active)){toast('Trang này chưa thể đánh dấu.');return;}
    const set=new Set(bookmarks());
-   if(set.has(current)){set.delete(current);toast('Đã bỏ dấu trang.')}else{set.add(current);toast('Đã đánh dấu trang '+(current+1)+'.');playSound('page',.12)}
+   if(set.has(active)){set.delete(active);toast('Đã bỏ dấu trang.');}else{set.add(active);toast('Đã đánh dấu trang '+(active+1)+'.');playSound('page',.12)}
    flags.researchBookmarks[id]=[...set].sort((a,c)=>a-c);save();draw();$('research-add-bookmark').focus({preventScroll:true});
   };
   const quotebtn=$('research-add-quote');let lastSelection='';
@@ -1061,26 +1061,40 @@ function openResearchBook(id){
    if(selection.length<7||found===undefined){toast('Bôi đen một đoạn trong trang sách rồi nhấn lưu.');return;}
    const records=quotes();
    if(!records.some(q=>q.page===found&&q.text===selection)){
-    records.push({page:found,text:selection});
-    flags.researchQuotes[id]=records.slice(-24);save();playSound('page',.12);
+    records.push({page:found,text:selection});flags.researchQuotes[id]=records.slice(-24);save();playSound('page',.12);
    }
    if(window.getSelection)window.getSelection().removeAllRanges();
-   toast('Đã lưu đoạn văn vào ghi chú.');draw();$('research-add-quote').focus({preventScroll:true});
+   active=found;toast('Đã lưu đoạn văn vào ghi chú.');draw();$('research-add-quote').focus({preventScroll:true});
   };
   $('research-view-clips').onclick=showClips;
-
+  if(firstDraw&&!reduced){
+   const bk=$('research-book');
+   openTimers.push(setTimeout(()=>{if(bk.isConnected)bk.classList.remove('closed')},380));
+   openTimers.push(setTimeout(()=>{if(bk.isConnected)bk.classList.add('opened')},1700));
+  }
+  firstDraw=false;
  }
  function turn(dir){
   if(busy)return;
   const to=current+dir*step;
   if(to<0||to>=pageCount)return;
   busy=true;playSound('page',.25);
-  const el=document.querySelector('.research-binding');
-  if(el&&!reduced){
-   const sheet=document.createElement('div');sheet.className='research-flip-sheet '+(dir>0?'forward':'backward');
-   sheet.setAttribute('aria-hidden','true');el.appendChild(sheet);
-  }
-  flipTimer=setTimeout(()=>{flipTimer=null;current=to;busy=false;if(modalType==='research-book'){draw(dir>0?'forward':'backward');const target=$(dir>0?'research-next':'research-prev');const fallback=$(dir>0?'research-prev':'research-next');(target.disabled?fallback:target).focus({preventScroll:true})}},reduced?0:320);
+  const bk=$('research-book'),left=$('research-left'),right=$('research-right');
+  if(bk&&!mobile&&!reduced){
+   const page=document.createElement('div');page.className='bk-leaf '+(dir>0?'next':'prev');
+   const front=dir>0?leaf(current+1):leaf(current),back=dir>0?leaf(to):leaf(to+1);
+   page.innerHTML=`<div class="bk-face front ${dir>0?'right':'left'}">${front}</div><div class="bk-face back ${dir>0?'left':'right'}">${back}</div>`;
+   page.setAttribute('aria-hidden','true');bk.appendChild(page);
+   if(dir>0)right.innerHTML=leaf(to+1);else left.innerHTML=leaf(to);
+   page.getBoundingClientRect();requestAnimationFrame(()=>page.classList.add('go'));
+  }else if(mobile&&!reduced){right.classList.add('swap')}
+  flipTimer=setTimeout(()=>{
+   flipTimer=null;current=to;active=current;busy=false;
+   if(modalType==='research-book'){
+    draw();const target=$(dir>0?'research-next':'research-prev'),fallback=$(dir>0?'research-prev':'research-next');
+    (target.disabled?fallback:target).focus({preventScroll:true});
+   }
+  },reduced?0:mobile?170:800);
  }
  function showClips(){
   const all=[...bookmarks().map(i=>({page:i,text:'Đã đánh dấu trang'})),...quotes()];
@@ -1089,11 +1103,23 @@ function openResearchBook(id){
   showModal('<div class="research-clip-list"><span class="research-section-label">GHI CHÚ / '+escapeHTML(b.title)+'</span><h2>Những trang đã đánh dấu</h2><div>'+list+'</div><button class="modal-option" id="research-clip-close" type="button">Trở lại sách</button></div>','GHI CHÚ TƯ LIỆU','research-clips');
   $('research-clip-close').onclick=()=>draw();
   document.querySelectorAll('[data-clip-page]').forEach(el=>el.onclick=()=>{
-   const page=Number(el.dataset.clipPage);
-   current=mobile?page:Math.floor(page/2)*2;draw();
+   const page=Number(el.dataset.clipPage);current=mobile?page:Math.floor(page/2)*2;active=page;draw();
   });
  }
- researchReaderActions={next:()=>turn(1),prev:()=>turn(-1),cancel:()=>{if(flipTimer){clearTimeout(flipTimer);flipTimer=null}busy=false}};
+ function onLayoutChange(event){
+  if(mobile===event.matches)return;
+  if(flipTimer){clearTimeout(flipTimer);flipTimer=null}busy=false;
+  mobile=event.matches;step=mobile?1:2;
+  current=mobile?active:Math.floor(active/2)*2;
+  if(modalType==='research-book')draw();
+ }
+ if(layoutQuery.addEventListener)layoutQuery.addEventListener('change',onLayoutChange);
+ else if(layoutQuery.addListener)layoutQuery.addListener(onLayoutChange);
+ researchReaderActions={next:()=>turn(1),prev:()=>turn(-1),cancel:()=>{
+  if(flipTimer){clearTimeout(flipTimer);flipTimer=null}openTimers.forEach(clearTimeout);openTimers=[];busy=false;
+  if(layoutQuery.removeEventListener)layoutQuery.removeEventListener('change',onLayoutChange);
+  else if(layoutQuery.removeListener)layoutQuery.removeListener(onLayoutChange);
+ }};
  draw();playSound('page',.17);
 }
 function showResearchArchive(){
@@ -1105,7 +1131,7 @@ function showResearchArchive(){
   const complete=(state.flags.researchRead||[]).includes(b.id);
   const marks=((state.flags.researchBookmarks||{})[b.id]||[]).length+((state.flags.researchQuotes||{})[b.id]||[]).length;
   return `<button type="button" class="research-archive-card theme-${researchBookTheme(b)}" data-book="${escapeHTML(b.id)}">
-    <span class="research-archive-cover" aria-hidden="true">✥</span><span class="research-archive-detail"><small>${escapeHTML(researchBookType(b))} · ${seen}/${b.pages.length} TRANG</small><strong>${escapeHTML(b.title)}</strong><em>${complete?'ĐÃ ĐỌC HẾT':marks?'ĐÃ LƯU '+marks+' GHI CHÚ':'CHƯA ĐỌC HẾT'}</em></span><span class="research-archive-arrow">›</span></button>`;
+    <span class="research-archive-cover" aria-hidden="true"></span><span class="research-archive-detail"><small>${escapeHTML(researchBookType(b))} · ${seen}/${b.pages.length} TRANG</small><strong>${escapeHTML(b.title)}</strong><em>${complete?'ĐÃ ĐỌC HẾT':marks?'ĐÃ LƯU '+marks+' GHI CHÚ':'CHƯA ĐỌC HẾT'}</em></span><span class="research-archive-arrow">›</span></button>`;
  }).join('');
  const panel=`<div class="research-archive-ui"><div class="research-archive-heading"><span class="research-section-label">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class="research-archive-stats"><span><strong>${found.length}</strong> / ${all} tài liệu</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class="research-archive-grid">${cards||'<p class="research-archive-empty">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>'}</div><div class="research-archive-bottom"><span>Chọn bìa sách để đọc hoặc mở lại.</span><button id="research-archive-close" class="modal-option">Đóng thư viện</button></div></div>`;
  showModal(panel,'THƯ VIỆN · ĐỒNG CHAY','research-archive');
