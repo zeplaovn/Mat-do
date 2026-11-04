@@ -13,7 +13,7 @@ class Element{
  get firstElementChild(){return this.children[0]} setAttribute(k,v){this.attrs[k]=v} append(...es){this.children.push(...es)} appendChild(e){this.children.push(e)} replaceChildren(...es){this.children=es}
  addEventListener(type,fn){this.listeners[type]=fn} dispatch(type){this.listeners[type]?.({key:''})} focus(){}
 }
-const ids=Object.fromEntries(['stage','start','end','player','hud','audio','seek','caps','player-duration','player-time','flash','btn-play','btn-replay','btn-skip','btn-pause','btn-mute'].map(k=>[k,new Element()]));
+const ids=Object.fromEntries(['stage','start','end','player','hud','audio','seek','caps','player-duration','player-time','flash','btn-play','btn-replay','btn-skip','btn-pause','btn-mute','slate','streak','btn-share'].map(k=>[k,new Element()]));
 ids.start.hidden=false;ids.end.hidden=true;ids.player.hidden=true;ids.hud.hidden=true;
 ids.audio.paused=true;ids.audio.play=function(){this.paused=false;return Promise.resolve()};ids.audio.pause=function(){this.paused=true};
 const layers=[new Element(),new Element()];layers.forEach(e=>{e.className='shot';e.appendChild(new Element())});
