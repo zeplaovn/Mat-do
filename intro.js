@@ -88,7 +88,7 @@ function finish() {
 
 /* Nạp dần các cảnh còn lại lúc rảnh để lúc chơi không bị khựng khi chuyển cảnh (từng ảnh một, không tranh băng thông). */
 function idlePreload() {
-  const rest = []; for (let n = 1; n <= 47; n++) { const s = BG(n); if (!IMAGES.includes(s)) rest.push(s); }
+  const rest = []; for (let n = 1; n <= 49; n++) { const s = BG(n); if (!IMAGES.includes(s)) rest.push(s); }
   const idle = window.requestIdleCallback || (fn => setTimeout(fn, 200));
   const next = () => { const s = rest.shift(); if (!s) return; const i = new Image(); kept.push(i); i.onload = i.onerror = () => idle(next); i.src = s; };
   idle(next);

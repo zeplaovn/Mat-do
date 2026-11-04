@@ -291,3 +291,10 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 25. Thay ảnh nền từ bộ background mới
 - BG34 (bếp), BG41 (nhà bà ngoại Nguyệt), BG43 (gác Lụa): thay ảnh mới, căn lại hotspot.
 - BG51.webp = BG05 bản lễ (chưa dùng). Các cặp khác giữ ảnh cũ vì ảnh mới mâu thuẫn kịch bản (BG32/36/37 có người bị giam) hoặc kém hơn.
+
+26. Arc ông Đạt và Sim
+- BG41: ngăn kéo tủ thờ cho bản đồ 1988 và mảnh giấy của bà ngoại (giới thiệu Sim, chỉ đường tới ông Đạt).
+- BG40 -> BG48 (nhà ông Đạt) -> BG49 (trong nhà). Gõ cửa phải trả lời thật lòng mới được vào.
+- BG49: ảnh Sim (lời kể hai chiều), khăn chàm, ngăn tủ (thư Sim + sớ gốc), bàn trà (đối chiếu sớ).
+- BG32: nhặt bản sớ giả ở xấp giấy lễ. Đối chiếu đúng thì có chứng cứ scrollProof.
+- Kết thúc TRUE giờ cần thêm scrollProof. Mục tiêu (objective) ở BG40/41/48/49 dẫn từng bước.
