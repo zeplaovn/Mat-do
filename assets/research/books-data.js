@@ -426,7 +426,7 @@ window.LNRT_RESEARCH = {
           "Tịnh nói chỉ có cách giữ năm vị trí thì Mơ mới qua khỏi. Tôi chẳng hiểu vì sao lại là năm người làm công. Tôi không hỏi tiếp."
         ],
         [
-          "Đêm ấy",
+          "Đêm 17/3/1988",
           "Tôi tới cửa hầm. Có người gọi tên tôi. Tôi đặt tay lên then, rồi bỏ xuống. Lúc đó tôi tin lời Tịnh hơn tiếng người dưới cửa."
         ],
         [
@@ -435,7 +435,7 @@ window.LNRT_RESEARCH = {
         ],
         [
           "Năm tháng sau",
-          "Không có ngày nào tôi quên được tiếng gõ. Tôi không thể tự gọi mình là người cha tốt chỉ vì đã khóc con."
+          "17/3/1988. Không có ngày nào tôi quên được tiếng gõ. Tôi không thể tự gọi mình là người cha tốt chỉ vì đã khóc con."
         ]
       ]
     },

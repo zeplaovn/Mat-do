@@ -17,6 +17,8 @@ CẬP NHẬT TRẢI NGHIỆM 04/11/2026
   khi mức hiệu năng tự động chuyển xuống thấp.
   Hiệu ứng chuyển động cũng tuân theo cài đặt giảm chuyển động của thiết bị.
 - Đã bỏ các lớp sương mù và hiệu ứng rè, nháy khi chuyển cảnh.
+- Nếu trình duyệt chặn tự phát, chọn “Bật nhạc và vào” hoặc “Vào không nhạc”
+  sau khi tải; lựa chọn tắt nhạc được ghi nhớ cho lần sau.
 - Gợi ý giờ ngắn và theo yêu cầu; không đưa sẵn lời giải trong nhật ký.
 - Bản lưu cũ được giữ; kết thúc Tha thứ của bản trước được ghi nhận riêng với bốn
   kết thúc của bản hiện tại.
@@ -29,6 +31,9 @@ CẬP NHẬT TRẢI NGHIỆM 04/11/2026
 - Kiểm tra lớp kinh dị và bụi ở mức thấp: node tests/horror.test.js
   (thêm --no-canvas để kiểm tra trường hợp canvas không khả dụng).
 - Kiểm tra chuỗi cảnh gốc và điều khiển trailer: node tests/trailer.test.js.
+- Kiểm tra nhạc lần đầu và toàn bộ câu đố tài liệu / câu đố chính:
+  node tests/intro-audio.test.js, node tests/research-puzzles.test.js,
+  node tests/core-puzzles.test.js.
 
 1. CÁCH CHƠI NGAY
 ----------------

@@ -54,6 +54,7 @@ html[data-fx=low] .title-warn:before,html[data-fx=low] .title-warn:after{animati
 .music-btn:hover,.music-btn:focus-visible{border-color:#ff6a58;background:rgba(80,12,14,.7)}
 .music-btn.off{color:#8a7a74}
 .music-btn.off:after{content:"";position:absolute;width:26px;height:2px;background:#e0584a;transform:rotate(-45deg);border-radius:2px}
+.music-btn.awaiting{width:auto;min-width:46px;padding:0 14px;border-radius:23px;font:600 13px var(--sans,system-ui,sans-serif)}
 
 /* Giữ vừa một màn hình: thu gọn khoảng cách màn hình chính để logo + cảnh báo + nút đều thấy được */
 .title-content{padding-top:max(14px,2.4vh);padding-bottom:max(14px,2.4vh)}

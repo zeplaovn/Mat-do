@@ -31,7 +31,7 @@ const MIN_MS = 2400, MAX_MS = 15000;
 const loader = $('loader');
 const stick = $('incense-ash'), ember = $('ember'), pctEl = $('loader-pct'), statEl = $('loader-status-text'), tipEl = $('loader-tip'), bar = $('loader-bar');
 const kept = [];                                  // giữ tham chiếu để trình duyệt không hủy tải
-let total = IMAGES.length + SOUNDS.length, done = 0, target = 0, shown = 0, finished = false;
+let total = IMAGES.length + SOUNDS.length, done = 0, target = 0, shown = 0, finished = false, loaderClosed = false;
 const t0 = performance.now();
 
 const bump = () => { done++; target = Math.min(1, done / total); };
@@ -42,7 +42,7 @@ SOUNDS.forEach(src => {
   a.addEventListener('canplaythrough', fin, { once: true }); a.addEventListener('error', fin, { once: true });
   setTimeout(fin, 2500); a.src = src;
 });
-setTimeout(() => { target = 1; }, MAX_MS);          // không bao giờ treo vì một tệp lỗi
+setTimeout(() => { if (!finished) { target=shown=1; render(1); finish(); } }, MAX_MS); // không kẹt nếu tải lỗi hoặc khung hình bị hạn chế
 
 const phase = p => p < .35 ? 'Đang thắp nén hương…' : p < .7 ? 'Đang gọi những cái tên…' : p < 1 ? 'Đang mở cổng làng…' : 'Sẵn sàng.';
 let barW = 0;
@@ -74,16 +74,31 @@ function tick(now) {
 requestAnimationFrame(tick);
 
 function finish() {
+  if (finished) return;
   finished = true; clearInterval(tipTimer);
+  if (musicEnabled()) loader.dataset.awaitingMusic='1';
   setTimeout(() => {
-    loader.classList.add('done');
-    root.classList.remove('is-loading', 'is-busy');
-    try { $('btn-new-game').focus({ preventScroll: true }); } catch (_) {}
-    Perf.watch();                                    // bắt đầu theo dõi FPS để tự hạ mức hiệu ứng nếu máy yếu
-    setTimeout(() => loader.remove(), 1000);
     idlePreload();
-    musicStart();
+    if (!musicEnabled()) { revealTitle(); return; }
+    // Nếu trình duyệt chặn tự phát, đợi một thao tác thật thay vì để nút nhạc báo bật nhưng không có tiếng.
+    const waiting=setTimeout(showSoundChoice, 1500);
+    musicStart().then(ok => { clearTimeout(waiting); if (ok) revealTitle(); else showSoundChoice(); });
   }, 450);
+}
+function revealTitle() {
+  if (loaderClosed) return;
+  loaderClosed = true; delete loader.dataset.awaitingMusic; loader.classList.add('done');
+  root.classList.remove('is-loading', 'is-busy');
+  try { $('btn-new-game').focus({ preventScroll: true }); } catch (_) {}
+  Perf.watch();
+  setTimeout(() => loader.remove(), 1000);
+}
+function showSoundChoice() {
+  if (loaderClosed) return;
+  if (loader.hidden) { loaderClosed=true; return; } // bộ dự phòng đã đưa người chơi vào màn hình chính
+  $('loader-tip').hidden=true;
+  $('loader-sound-choice').hidden=false;
+  try { $('loader-enter').focus({ preventScroll: true }); } catch (_) {}
 }
 
 /* Nạp dần các cảnh còn lại lúc rảnh để lúc chơi không bị khựng khi chuyển cảnh (từng ảnh một, không tranh băng thông). */
@@ -96,12 +111,14 @@ function idlePreload() {
 
 /* ===================================================================
    1b) NHẠC NỀN: trailer.mp3 ở màn hình chính; sang đoạn intro (sau khi bấm "Bắt đầu điều tra") chuyển sang intro.mp3, tắt dần khi vào game.
-   Trình duyệt chặn tự phát âm thanh, nên nhạc bắt đầu ở cú chạm/phím đầu tiên trên màn hình chính.
+   Khi trình duyệt chặn tự phát, người chơi chọn bật nhạc trước khi vào màn hình chính.
    Tệp khá to (≈ 3–6 lần các âm khác trong game) nên phát ở âm lượng thấp. =================================================================== */
 const MUSIC_FILE = 'trailer.mp3', MUSIC_VOL = .26, MUSIC_DUCK = .1, MUSIC_KEY = 'lnrt-music';
 const title = $('title-screen');
-let music = null, musicFadeT = 0, musicWanted = false;
-const musicEnabled = () => { try { return localStorage.getItem(MUSIC_KEY) !== '0'; } catch (_) { return true; } };
+let music = null, musicFadeT = 0, musicWanted = false, musicBlocked = false, musicAttempt = 0, retryArmed = false;
+let musicSetting = true;
+const musicEnabled = () => { try { return localStorage.getItem(MUSIC_KEY) !== '0'; } catch (_) { return musicSetting; } };
+function setMusicEnabled(on) { musicSetting=!!on; try { localStorage.setItem(MUSIC_KEY, on ? '1' : '0'); } catch (_) {} }
 function musicEl() {
   if (!music) { music = new Audio(SND(MUSIC_FILE)); music.loop = true; music.preload = 'auto'; music.volume = 0; }
   return music;
@@ -116,18 +133,38 @@ function musicFade(to, ms, done) {
 }
 function musicStart() {
   musicWanted = true;
-  if (!musicEnabled()) return;
-  const a = musicEl();
-  if (!a.paused && a.volume >= MUSIC_VOL * .9) return;
-  const p = a.play();
-  const ok = () => musicFade(MUSIC_VOL, 1800);
-  if (p && p.then) p.then(ok).catch(() => { const go = () => { removeEventListener('pointerdown', go, true); removeEventListener('keydown', go, true); if (musicWanted && !title.hidden || playing) musicStart(); }; addEventListener('pointerdown', go, true); addEventListener('keydown', go, true); });
-  else ok();
+  if (!musicEnabled()) return Promise.resolve(false);
+  let a; try { a=musicEl(); } catch (_) { musicBlocked=true;mbtnSync();return Promise.resolve(false); }
+  const attempt=++musicAttempt;
+  let p; try { p=a.play(); } catch (_) { p=Promise.reject(_); }
+  return Promise.resolve(p).then(() => {
+    if (attempt!==musicAttempt || !musicWanted || !musicEnabled() || title.hidden) {
+      if (!musicWanted || !musicEnabled() || title.hidden) a.pause();
+      return false;
+    }
+    musicBlocked=false; disarmMusicRetry(); mbtnSync(); musicFade(MUSIC_VOL, 1800); return true;
+  }, () => {
+    if (attempt===musicAttempt && musicWanted && musicEnabled()) { musicBlocked=true; mbtnSync(); armMusicRetry(); }
+    return false;
+  });
 }
 function musicStop(ms = 1400) {
-  musicWanted = false;
+  musicWanted = false; musicAttempt++; disarmMusicRetry(); clearInterval(musicFadeT);
   if (!music || music.paused) return;
+  if (ms<=0) { try { music.pause(); music.currentTime=0; } catch (_) {} return; }
   musicFade(0, ms, () => { try { music.pause(); music.currentTime = 0; } catch (_) {} });
+}
+function retryMusic(e) {
+  if (!loaderClosed || !musicWanted || !musicEnabled() || title.hidden || e.target===mbtn) return;
+  disarmMusicRetry(); musicStart();
+}
+function armMusicRetry() {
+  if (retryArmed) return; retryArmed=true;
+  ['pointerdown','touchend','keydown'].forEach(type=>addEventListener(type,retryMusic,true));
+}
+function disarmMusicRetry() {
+  if (!retryArmed) return; retryArmed=false;
+  ['pointerdown','touchend','keydown'].forEach(type=>removeEventListener(type,retryMusic,true));
 }
 function musicDuck() { if (music && !music.paused) musicFade(MUSIC_DUCK, 900); }
 /* Nhạc nền riêng cho đoạn intro (intro.mp3): nhạc màn hình chính tắt dần, intro.mp3 vào dần rồi tắt dần khi vào game. */
@@ -145,13 +182,16 @@ function bedStop(ms) { const a = bed; if (!a) return; bedFade(0, ms, () => { try
 /* Nút bật/tắt nhạc ở góc màn hình chính (nhớ lựa chọn) */
 const mbtn = document.createElement('button');
 mbtn.type = 'button'; mbtn.className = 'music-btn'; mbtn.textContent = '♪'; mbtn.title = 'Bật/tắt nhạc nền'; mbtn.setAttribute('aria-label', 'Bật hoặc tắt nhạc nền');
-const mbtnSync = () => { mbtn.classList.toggle('off', !musicEnabled()); mbtn.setAttribute('aria-pressed', musicEnabled() ? 'true' : 'false'); };
+const mbtnSync = () => { const waiting=musicEnabled()&&musicBlocked;mbtn.classList.toggle('off', !musicEnabled());mbtn.classList.toggle('awaiting',waiting);mbtn.textContent=waiting?'♪ Bật nhạc':'♪';mbtn.title=waiting?'Chạm để bật nhạc nền':'Bật/tắt nhạc nền';mbtn.setAttribute('aria-label',waiting?'Bật nhạc nền':'Bật hoặc tắt nhạc nền');mbtn.setAttribute('aria-pressed', musicEnabled()&&!waiting ? 'true' : 'false'); };
 mbtn.addEventListener('click', e => {
   e.stopPropagation();
-  const on = !musicEnabled(); try { localStorage.setItem(MUSIC_KEY, on ? '1' : '0'); } catch (_) {}
-  mbtnSync(); if (on) musicStart(); else { const w = musicWanted; musicStop(500); musicWanted = w; }
+  if (musicEnabled() && musicBlocked) { musicStart(); return; }
+  const on = !musicEnabled(); setMusicEnabled(on);musicBlocked=false;
+  mbtnSync(); if (on) musicStart(); else musicStop(500);
 });
 mbtnSync(); title.appendChild(mbtn);
+$('loader-enter').addEventListener('click',()=>{musicStart();revealTitle()});
+$('loader-silent').addEventListener('click',()=>{setMusicEnabled(false);musicBlocked=false;musicStop(0);mbtnSync();revealTitle()});
 /* Vào lại màn hình chính (Menu → Về màn hình chính) thì nhạc phát lại; vào game (Tiếp tục) thì tắt dần. */
 new MutationObserver(() => { if (!title.hidden) musicStart(); else if (!playing) musicStop(1200); }).observe(title, { attributes: true, attributeFilter: ['hidden'] });
 
