@@ -10,7 +10,7 @@ CẬP NHẬT TRẢI NGHIỆM 04/11/2026
 - Năm di vật có các hồi tưởng mới. Thư viện lời thoại đã rà soát được lưu theo mã cảnh;
   các cảnh và tương tác phù hợp đã được nối, những cảnh chưa có màn chơi vẫn là tư liệu.
 - Cảnh BG01–BG09 dùng ảnh nền mới; có danh sách điểm tương tác cho màn hình cảm ứng.
-- Ánh sáng chớp rất nhẹ, sấm chớp ở cảnh mưa; có thể tắt tại Menu > Ánh sáng.
+- Ánh sáng chớp rất nhẹ, sấm chớp ở cảnh mưa; có thể tắt tại Menu > Đèn và chớp.
   Hiệu ứng chuyển động cũng tuân theo cài đặt giảm chuyển động của thiết bị.
 - Gợi ý giờ ngắn và theo yêu cầu; không đưa sẵn lời giải trong nhật ký.
 - Bản lưu cũ được giữ; kết thúc Tha thứ của bản trước được ghi nhận riêng với bốn
