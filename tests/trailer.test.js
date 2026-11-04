@@ -27,8 +27,9 @@ let start=0;
 for(const [bg,duration] of original){
  const position=start+Math.min(duration/2,1);ids.seek.value=String(position);ids.seek.dispatch('input');flush();
  const visible=layers.find(x=>x.classList.contains('on'));
- assert.ok(visible,`no frame at ${position}`);assert.equal(visible.firstElementChild.style.backgroundImage,`url("assets/background/BG${bg}.webp")`);
- assert.ok(fs.existsSync(path.join(__dirname,'..','assets','background',`BG${bg}.webp`)),`missing original image BG${bg}`);
+ const file=bg==='01'?'BG01-fixed.webp':`BG${bg}.webp`;
+ assert.ok(visible,`no frame at ${position}`);assert.equal(visible.firstElementChild.style.backgroundImage,`url("assets/background/${file}")`);
+ assert.ok(fs.existsSync(path.join(__dirname,'..','assets','background',file)),`missing image ${file}`);
  assert.ok(Math.abs(ids.audio.currentTime-position)<.001,'audio should follow seeking');start+=duration;
 }
 assert.ok(Math.abs(Number(ids.seek.max)-start)<.001,'duration should match the original shot sequence');

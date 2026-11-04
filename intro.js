@@ -7,7 +7,7 @@ const root = document.documentElement;
 const R = 'assets/';
 const SND = f => `${R}sound/${f}`;
 const pad = n => String(n).padStart(2, '0');
-const BG = n => `${R}background/BG${pad(n)}.webp`;
+const BG = n => `${R}background/${Number(n) === 1 ? 'BG01-fixed' : `BG${pad(n)}`}.webp`;
 const coarse = matchMedia('(pointer: coarse)').matches;
 
 /* ===================================================================
