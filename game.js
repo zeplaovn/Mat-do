@@ -43,15 +43,15 @@ const ITEMS = {
   musicbox:{name:'Hộp nhạc gãy',image:'13_Hop_Nhac_128x128.webp',description:'Hộp nhạc cũ của một bé gái. Giai điệu vẫn còn ngân.',emoji:'🎵'},
   storekey:{name:'Chìa khóa kho vật tư',image:'14_Chia_Kho_128x128.webp',description:'Chiếc chìa đồng nhỏ giấu dưới đệm ghế bập bênh ở ban công phòng ông Bá Lâm.',emoji:'🗝'},
   incense5:{name:'Năm nén nhang mới',image:'15_Nam_Nen_Nhang_128x128.webp',description:'Năm nén nhang lấy từ bàn đá trong miếu cây đa. Bà Mận để dành cho năm người chưa có tên.',emoji:'🕯'},
-  toyDoll:{name:'Búp bê vải của Mơ',description:'Con búp bê khâu tay, mắt thêu chỉ đen, nhặt ở gác nhỏ của cô Lụa.',emoji:'🪆'},
-  toyCart:{name:'Xe gỗ đồ chơi',description:'Chiếc xe gỗ bánh nhỏ xíu của Mơ.',emoji:'🛒'},
-  paperCrane:{name:'Hạc giấy',description:'Con hạc gấp từ trang sách cũ, lấy từ sợi chỉ treo ở phòng học.',emoji:'🕊'},
-  chalkStub:{name:'Viên phấn trắng',description:'Mẩu phấn còn lại trên bảng đen của phòng học.',emoji:'✏'},
-  legendDoc:{name:'Bảng ký hiệu của năm người',description:'Tài liệu. Chạm để đọc. Mỗi người có một ký hiệu riêng.',emoji:'📋'},
-  backDoc:{name:'Mặt sau tấm ảnh',description:'Tài liệu. Chạm để đọc. Dòng chữ viết tay ở mặt sau.',emoji:'📋'},
-  fragA:{name:'Mảnh đơn 1/3',description:'Mảnh giấy rách giấu trong ngăn kín dưới đồng hồ quả lắc. Một đoạn chữ viết tay vội vã.',emoji:'📜'},
-  fragB:{name:'Mảnh đơn 2/3',description:'Mảnh giấy rách dán sau khung ảnh gia đình, được giấu bằng mật mã chữ cái.',emoji:'📜'},
-  fragC:{name:'Mảnh đơn 3/3',description:'Mảnh giấy rách kẹp trong sổ vật tư trên bàn ông Bá Lâm.',emoji:'📜'},
+  toyDoll:{name:'Búp bê vải của Mơ',image:'23_Bup_Be_Vai_128x128.webp',description:'Con búp bê khâu tay, mắt thêu chỉ đen, nhặt ở gác nhỏ của cô Lụa.',emoji:'🪆'},
+  toyCart:{name:'Xe gỗ đồ chơi',image:'24_Xe_Go_128x128.webp',description:'Chiếc xe gỗ bánh nhỏ xíu của Mơ.',emoji:'🛒'},
+  paperCrane:{name:'Hạc giấy',image:'25_Hac_Giay_128x128.webp',description:'Con hạc gấp từ trang sách cũ, lấy từ sợi chỉ treo ở phòng học.',emoji:'🕊'},
+  chalkStub:{name:'Viên phấn trắng',image:'26_Phan_Trang_128x128.webp',description:'Mẩu phấn còn lại trên bảng đen của phòng học.',emoji:'✏'},
+  legendDoc:{name:'Bảng ký hiệu của năm người',image:'27_Bang_Ky_Hieu_128x128.webp',description:'Tài liệu. Chạm để đọc. Mỗi người có một ký hiệu riêng.',emoji:'📋'},
+  backDoc:{name:'Mặt sau tấm ảnh',image:'28_Mat_Sau_Anh_128x128.webp',description:'Tài liệu. Chạm để đọc. Dòng chữ viết tay ở mặt sau.',emoji:'📋'},
+  fragA:{name:'Mảnh đơn 1/3',image:'29_Manh_Don_Rach_128x128.webp',description:'Mảnh giấy rách giấu trong ngăn kín dưới đồng hồ quả lắc. Một đoạn chữ viết tay vội vã.',emoji:'📜'},
+  fragB:{name:'Mảnh đơn 2/3',image:'29_Manh_Don_Rach_128x128.webp',description:'Mảnh giấy rách dán sau khung ảnh gia đình, được giấu bằng mật mã chữ cái.',emoji:'📜'},
+  fragC:{name:'Mảnh đơn 3/3',image:'29_Manh_Don_Rach_128x128.webp',description:'Mảnh giấy rách kẹp trong sổ vật tư trên bàn ông Bá Lâm.',emoji:'📜'},
   testimony:{name:'Lời khai của bà Mận',image:'16_Loi_Khai_128x128.webp',description:'Tờ giấy bà Mận viết trước khi mất, giấu trong hòm tre trên gác mái.',emoji:'📝'}
 };
 /* Dữ liệu sách hư cấu, tải bằng script defer trước game.js */
@@ -61,7 +61,7 @@ const RESEARCH=window.LNRT_RESEARCH||{books:{},puzzles:{}};
 const BOOKS=RESEARCH.books||{};
 const RESEARCH_PUZZLES=RESEARCH.puzzles||{};
 for(const [id,b] of Object.entries(BOOKS)){
- if(!ITEMS[id])ITEMS[id]={name:b.title,description:b.summary,emoji:'📖'};
+ if(!ITEMS[id])ITEMS[id]={name:b.title,image:'30_So_Tu_Lieu_128x128.webp',description:b.summary,emoji:'📖'};
 }
 
 const USE_ON={camera:['mirror'],bell:['cradle'],musicbox:['shirt'],crowbar:['sealedWall'],key:['gate'],storekey:['storeDoor'],incense5:['graves']};
@@ -640,6 +640,7 @@ function render(){const s=SCENES[state.scene],bg=BG(s.bg||state.scene);$('scene-
 function renderSidebar(){$('inventory-grid').replaceChildren(...state.items.map(id=>{
  const info=ITEMS[id],b=document.createElement('button');b.className='dock-slot'+(state.selectedItem===id?' selected':'')+(id==='flashlight'&&state.flashlight?' is-on':'');b.type='button';b.setAttribute('aria-label',info.name);b.setAttribute('aria-pressed',state.selectedItem===id?'true':'false');
  b.appendChild(itemArt(id,'dock-art'));if(info.relic){const dot=document.createElement('span');dot.className='dock-dot';b.appendChild(dot)}
+ const fragment={fragA:'1',fragB:'2',fragC:'3'}[id];if(fragment){const badge=document.createElement('span');badge.className='dock-fragment';badge.textContent=fragment;badge.setAttribute('aria-hidden','true');b.appendChild(badge)}
  b.title=info.name;
  b.addEventListener('click',()=>selectItem(id));return b}));
  const sel=state.selectedItem&&ITEMS[state.selectedItem],box=$('selected-item');box.hidden=!sel;box.classList.toggle('has-target',false);
@@ -1502,10 +1503,11 @@ function toyShelf(){
  if(!need.every(has)){say('Nguyệt','Ngăn kéo của giá sách có bốn hõm nhỏ như để đặt đồ chơi. Mình còn thiếu '+(need.filter(x=>!has(x)).length)+' món. Thử tìm quanh phòng học và gác nhỏ sau bếp.');return}
  const SOL=['toyDoll','paperCrane','toyCart','chalkStub'];let slots=[null,null,null,null],pick=null;
  showModal(`<h2>Ngăn kéo bốn hõm</h2><p>Trên nắp có bốn hõm xếp thành hàng ngang. Hãy đặt bốn món đồ chơi vào đúng thứ tự, từ trái sang phải.</p><div class="slot-row" id="sl-row"></div><div class="toy-tray" id="sl-tray"></div><p class="modal-note" id="sl-msg">Bấm một món rồi bấm hõm muốn đặt vào. Bấm món đã đặt để lấy ra.</p><div id="sl-actions" class="modal-buttons"></div>`,'CÂU ĐỐ · SẮP ĐỒ','shelf');
+ const putItem=(b,id)=>{b.appendChild(itemArt(id,'toy-ico'));const label=document.createElement('small');label.textContent=ITEMS[id].name;b.appendChild(label)};
  const draw=()=>{const row=$('sl-row'),tray=$('sl-tray');row.textContent='';tray.textContent='';
-  slots.forEach((id,i)=>{const b=document.createElement('button');b.type='button';b.className='slot'+(id?' full':'');b.setAttribute('aria-label','Hõm '+(i+1));b.innerHTML=id?`<span class="toy-ico">${ITEMS[id].emoji}</span><small>${ITEMS[id].name}</small>`:`<small>${i+1}</small>`;
+  slots.forEach((id,i)=>{const b=document.createElement('button');b.type='button';b.className='slot'+(id?' full':'');b.setAttribute('aria-label','Hõm '+(i+1)+(id?': '+ITEMS[id].name:': trống'));if(id)putItem(b,id);else{const n=document.createElement('small');n.textContent=String(i+1);b.appendChild(n)}
    b.onclick=()=>{if(id){slots[i]=null;playSound('switch',.06)}else if(pick){slots[i]=pick;pick=null;playSound('switch',.1)}draw();check()};row.appendChild(b)});
-  need.filter(id=>!slots.includes(id)).forEach(id=>{const b=document.createElement('button');b.type='button';b.className='toy'+(pick===id?' sel':'');b.innerHTML=`<span class="toy-ico">${ITEMS[id].emoji}</span><small>${ITEMS[id].name}</small>`;b.onclick=()=>{pick=pick===id?null:id;draw()};tray.appendChild(b)})};
+  need.filter(id=>!slots.includes(id)).forEach(id=>{const b=document.createElement('button');b.type='button';b.className='toy'+(pick===id?' sel':'');b.setAttribute('aria-pressed',String(pick===id));putItem(b,id);b.onclick=()=>{pick=pick===id?null:id;draw()};tray.appendChild(b)})};
  let done=false;
  const check=()=>{if(done||slots.some(x=>!x))return;if(SOL.every((id,i)=>slots[i]===id)){done=true;need.forEach(id=>consume(id,true));state.flags.shelfOpen=true;
    if(gain('legendDoc'))note('legend','Bảng ký hiệu của năm người','Trong ngăn kéo có một tờ giấy vẽ năm ký hiệu nhỏ, mỗi ký hiệu kèm một cái tên và nghề: Khoa (cây bút), Tâm (cái cân), Lụa (nốt nhạc), Sen (ngọn lửa), Hải (con sóng). Cô Lụa vẽ để dạy Mơ nhận mặt chữ.');

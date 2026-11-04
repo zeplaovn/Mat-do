@@ -109,8 +109,9 @@ html[data-fx=low] .title-warn:before,html[data-fx=low] .title-warn:after{animati
 .gl-dial{width:clamp(46px,9vh,64px);aspect-ratio:1;display:grid;place-items:center;background:linear-gradient(#1c1610,#2c2218 55%,#120e0a);color:#e8d9b4;border:1px solid #5b4630;border-radius:4px;box-shadow:inset 0 3px 7px rgba(0,0,0,.9);cursor:pointer;transition:filter .15s}
 .gl-dial:hover,.gl-dial:focus-visible{filter:brightness(1.35)}.glyph-lock.is-open .gl-dial{color:#9fe3a0;border-color:#4a8a55}
 .slot-row,.toy-tray{display:flex;gap:8px;justify-content:center;margin:.6rem 0;flex-wrap:wrap}
-.slot,.toy{width:clamp(70px,13vh,96px);min-height:clamp(70px,13vh,96px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:#0b0907;color:#d8c9a8;border:1px dashed #5b4630;border-radius:4px;cursor:pointer;padding:4px}
+.slot,.toy{width:min(clamp(70px,13vh,96px),calc((100% - 24px)/4));min-height:clamp(70px,13vh,96px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:#0b0907;color:#d8c9a8;border:1px dashed #5b4630;border-radius:4px;cursor:pointer;padding:4px}
 .slot.full,.toy{border-style:solid;background:linear-gradient(#241b12,#14100b)}.toy.sel{outline:2px solid #d85a55}.toy-ico{font-size:clamp(22px,4vh,32px);line-height:1}.slot small,.toy small{font-size:10px;text-align:center;line-height:1.2}
+.toy-ico{display:grid;place-items:center;width:min(100%,clamp(38px,7vh,58px));aspect-ratio:1;flex:none}.toy-ico img{width:100%;height:100%;object-fit:contain;pointer-events:none}
 .jig{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;width:min(440px,100%);aspect-ratio:3/2;margin:.6rem auto;background:#000;background-size:100% 100%}
 .jp{border:0;padding:0;cursor:pointer;background-repeat:no-repeat;box-shadow:inset 0 0 0 1px rgba(0,0,0,.45);filter:sepia(.25) brightness(.92)}.jp.sel{outline:2px solid #d85a55;outline-offset:-2px}.jp.ok{box-shadow:inset 0 0 0 2px rgba(120,220,140,.7)}
 .jig.peek{pointer-events:none}.jig.peek .jp{background-image:none!important;opacity:0}
