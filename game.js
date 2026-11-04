@@ -3,7 +3,7 @@
 (() => {
 'use strict';
 const ROOT = 'assets/';
-const BG = id => `${ROOT}background/${id}.webp`;
+const BG = id => `${ROOT}background/${id === 'BG01' ? 'BG01-fixed' : id}.webp`;
 const IMG = file => `${ROOT}items/${file}`;
 const PORTRAIT = file => `${ROOT}portraits/${file}`;
 const SAVE_KEY = 'loi-nguyen-rung-thieng-v1';

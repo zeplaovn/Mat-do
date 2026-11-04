@@ -20,7 +20,7 @@ const shots=[
  {d:5.5,bg:'33',o:'50% 45%',motion:'out',caps:[[.8,'Họ không muốn bị lãng quên.','']]}
 ];
 const faces=[['01_Dong','ĐÔNG'],['02_Nam','NAM'],['03_Tuyet','TUYẾT'],['04_Anh','ÁNH'],['05_Nguyet','NGUYỆT']];
-const bg=id=>`assets/background/BG${id}.webp`;
+const bg=id=>`assets/background/${id==='01'?'BG01-fixed':`BG${id}`}.webp`;
 let duration=0;shots.forEach(shot=>{shot.start=duration;duration+=shot.d});
 const stage=$('stage'),startCard=$('start'),endCard=$('end'),player=$('player'),hud=$('hud'),audio=$('audio'),seek=$('seek'),caps=$('caps'),layers=[...document.querySelectorAll('.shot')];
 const slate=$('slate'),streak=$('streak'),dust=$('dust'),loadStatus=$('load-status'),shareBtn=$('btn-share');
