@@ -23,7 +23,7 @@ function guess() {
   return weak >= 4 ? 'low' : weak >= 1 ? 'medium' : 'high';   // 'low' chỉ dành cho máy thật sự yếu
 }
 
-let pref = PREFS.includes(read()) ? read() : 'auto';
+let pref = PREFS.includes(read()) ? read() : 'high';   // mặc định mức Cao; người chơi đổi trong Menu
 let level = pref === 'auto' ? guess() : pref;
 const listeners = [];
 const apply = () => {
