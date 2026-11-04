@@ -1,4 +1,4 @@
-/* Sương, mưa, ánh đèn và chớp xa theo cảnh; không ảnh hưởng đến tiến trình chơi. */
+/* Mưa, ánh đèn và chớp xa theo cảnh; không ảnh hưởng đến tiến trình chơi. */
 (() => {
 'use strict';
 const $ = id => document.getElementById(id);
@@ -21,27 +21,9 @@ window.WeatherFX={get enabled(){return lightEnabled},setEnabled(value){
 }};
 const lvl = () => (window.Perf ? Perf.level : 'medium');
 /* mức độ 0..1 theo số cảnh BG */
-const FOG = {1:.35,2:.4,3:.4,4:.5,5:.5,6:.5,7:.6,8:.5,9:.5,10:.35,25:.35,29:.6,30:.45,38:.4,39:.5,40:.75,42:.5,44:.3};
 const RAIN = {8:.35,9:.48,10:.3,25:.3,38:1,39:.9};
 const mk = (tag, cls) => { const e = document.createElement(tag); e.className = 'fx ' + cls; e.setAttribute('aria-hidden', 'true'); stage.insertBefore(e, hot); return e; };
-const fog = mk('div', 'wx-fog');
-['a', 'b', 'c'].forEach(k => { const l = document.createElement('div'); l.className = 'wx-layer wx-' + k; fog.appendChild(l); });
 const rainCv = mk('canvas', 'wx-rain'), rainCSS = mk('div', 'wx-rain-css'), bolt = mk('div', 'wx-bolt'), lamp = mk('div', 'wx-lamp');
-
-/* Mây nhiễu: cộng nhiều đốm tròn mờ vào canvas 256px, dùng làm ảnh lặp. */
-try {
-  const c = document.createElement('canvas'); c.width = c.height = 256; const x = c.getContext('2d');
-  if (!x) throw new Error('Canvas unavailable');
-  for (let i = 0; i < 70; i++) {
-    const px = Math.random() * 256, py = Math.random() * 256, r = 28 + Math.random() * 50, a = .05 + Math.random() * .09;
-    for (const dx of [-256, 0, 256]) for (const dy of [-256, 0, 256]) {
-      const g = x.createRadialGradient(px + dx, py + dy, 0, px + dx, py + dy, r);
-      g.addColorStop(0, `rgba(205,215,222,${a})`); g.addColorStop(1, 'rgba(205,215,222,0)');
-      x.fillStyle = g; x.fillRect(px + dx - r, py + dy - r, r * 2, r * 2);
-    }
-  }
-  fog.style.setProperty('--wx-tile', `url(${c.toDataURL()})`);
-} catch (_) { /* CSS dùng sương gradient nếu canvas không khả dụng. */ }
 
 let rctx=null;try{rctx=rainCv.getContext('2d')}catch(_){}
 const cssRain = () => smallScreen.matches || !rctx;
@@ -101,10 +83,8 @@ const t0 = () => performance.now();
 
 function apply() {
   const n = parseInt((idx.textContent.match(/BG(\d+)/) || [0, 0])[1], 10);
-  const changed=n!==scene;scene=n;const f = FOG[n] || 0; rain = RAIN[n] || 0;
+  const changed=n!==scene;scene=n;rain = RAIN[n] || 0;
   if(changed){lamp.classList.remove('on');if(!rain)bolt.classList.remove('on')}
-  fog.style.setProperty('--wx', RM() ? f * .6 : Math.min(.8,f*(smallScreen.matches?1.4:1)));
-  fog.classList.toggle('on', f > 0);
   const showRain=rain>0&&!RM()&&active();
   rainCv.classList.toggle('on', showRain&&!cssRain());
   rainCSS.classList.toggle('on', showRain&&cssRain());

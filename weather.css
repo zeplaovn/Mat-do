@@ -1,10 +1,4 @@
-/* Sương mù và mưa theo cảnh (weather.js) */
-.wx-fog{overflow:hidden;opacity:0;transition:opacity 1.6s ease}.wx-fog.on{opacity:var(--wx,.4)}
-.wx-layer{position:absolute;top:-5%;bottom:-5%;left:-100%;right:-100%;background-image:var(--wx-tile,radial-gradient(ellipse,rgba(205,215,222,.2),transparent 68%));background-repeat:repeat;will-change:transform;mix-blend-mode:screen}
-.wx-a{background-size:520px 520px;opacity:.9;animation:wxdrift 70s linear infinite}
-.wx-b{background-size:380px 380px;opacity:.7;animation:wxdrift 48s linear infinite reverse;top:5%}
-.wx-c{background-size:700px 700px;opacity:.55;animation:wxdrift 95s linear infinite}
-@keyframes wxdrift{from{transform:translateX(0)}to{transform:translateX(520px)}}
+/* Mưa theo cảnh (weather.js) */
 .wx-rain{width:100%;height:100%;opacity:0;transition:opacity 1s ease;image-rendering:auto}.wx-rain.on{opacity:1}
 /* Mưa CSS nhẹ cho cảm ứng và trình duyệt không tạo được canvas. */
 .wx-rain-css{overflow:hidden;opacity:0;transition:opacity 1s ease}.wx-rain-css.on{opacity:var(--wx-rain-opacity,.65)}
@@ -16,10 +10,7 @@
 @keyframes wx-lightning{0%,100%{opacity:0}22%{opacity:.42}58%{opacity:.16}}
 @keyframes wx-lamp-flicker{0%,100%{opacity:0}32%{opacity:.28}70%{opacity:.08}}
 html[data-rain="1"] .scene-image{filter:brightness(.92) contrast(1.05)}
-html[data-fx=low] .wx-b,html[data-fx=low] .wx-c{display:none}
-html[data-fx=low] .wx-a{animation-duration:140s}
-@media (pointer:coarse),(max-width:700px){.wx-a{background-size:280px 280px;animation-duration:42s}html[data-fx=low] .wx-a{animation-duration:55s}}
-@media(prefers-reduced-motion:reduce){.wx-layer{animation:none!important}.wx-bolt,.wx-lamp,.wx-rain-css{display:none}}
+@media(prefers-reduced-motion:reduce){.wx-bolt,.wx-lamp,.wx-rain-css{display:none}}
 /* Tùy chọn ánh sáng áp dụng cả hiệu ứng chụp ảnh và kinh dị cũ. */
 html[data-light-effects="off"] .wx-bolt,html[data-light-effects="off"] .wx-lamp,
 html[data-light-effects="off"] .fx-flash,html[data-light-effects="off"] .cam-flash,

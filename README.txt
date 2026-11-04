@@ -11,11 +11,12 @@ CẬP NHẬT TRẢI NGHIỆM 04/11/2026
 - Năm di vật có các hồi tưởng mới. Thư viện lời thoại đã rà soát được lưu theo mã cảnh;
   các cảnh và tương tác phù hợp đã được nối, những cảnh chưa có màn chơi vẫn là tư liệu.
 - Cảnh BG01–BG09 dùng ảnh nền mới; có danh sách điểm tương tác cho màn hình cảm ứng.
-- Mưa, sương, sấm chớp ở các cảnh phù hợp và ánh đèn chập chờn trong nhà;
+- Mưa, sấm chớp ở các cảnh phù hợp và ánh đèn chập chờn trong nhà;
   có thể tắt ánh chớp tại Menu > Đèn và chớp.
-- Điện thoại dùng lớp mưa nhẹ không phụ thuộc canvas; bụi và sương vẫn hiển thị
+- Điện thoại dùng lớp mưa nhẹ không phụ thuộc canvas; bụi vẫn hiển thị
   khi mức hiệu năng tự động chuyển xuống thấp.
   Hiệu ứng chuyển động cũng tuân theo cài đặt giảm chuyển động của thiết bị.
+- Đã bỏ các lớp sương mù và hiệu ứng rè, nháy khi chuyển cảnh.
 - Gợi ý giờ ngắn và theo yêu cầu; không đưa sẵn lời giải trong nhật ký.
 - Bản lưu cũ được giữ; kết thúc Tha thứ của bản trước được ghi nhận riêng với bốn
   kết thúc của bản hiện tại.
