@@ -349,3 +349,4 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 - Tự hạ mức khi giật: Cao -> Vừa như cũ; Vừa -> Thấp chỉ khi dưới khoảng 22 khung/giây kéo dài.
 - Menu có mục "Hiệu ứng hình ảnh": Tự động -> Cao -> Vừa -> Thấp, lưu trong localStorage (lnrt-fx-pref).
 - Nếu điện thoại bật "Xóa hiệu ứng động" hoặc tiết kiệm pin (prefers-reduced-motion) thì game vẫn tắt gần hết animation.
+- (05/11/2026) Mặc định hiệu ứng là mức Cao cho mọi thiết bị; chế độ Tự động chỉ dùng khi người chơi chọn trong Menu.
