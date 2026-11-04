@@ -32,22 +32,25 @@ mk('div', 'fx-scan');
 const shadow = mk('div', 'fx-shadow'), glitchL = mk('div', 'fx-glitch'), flash = mk('div', 'fx-flash');
 
 /* Hạt nhiễu: sinh MỘT lần thành ảnh nhỏ, sau đó chỉ dịch chuyển bằng CSS (không vẽ lại mỗi khung). */
-(() => {
+try {
   const c = document.createElement('canvas'); c.width = c.height = 64;
-  const x = c.getContext('2d'), d = x.createImageData(64, 64), p = new Uint32Array(d.data.buffer);
+  const x = c.getContext('2d');if(!x)throw new Error('Canvas unavailable');
+  const d = x.createImageData(64, 64), p = new Uint32Array(d.data.buffer);
   for (let i = 0; i < p.length; i++) { const v = Math.random() * 255 | 0, a = (Math.random() * 38) | 0; p[i] = (a << 24) | (v << 16) | (v << 8) | v; }
   x.putImageData(d, 0, 0);
   grain.style.setProperty('--grain', `url(${c.toDataURL()})`);
-})();
+} catch (_) { /* Các hiệu ứng khác vẫn hoạt động khi không có canvas. */ }
 
-/* ---------- Bụi lơ lửng (canvas độ phân giải thấp, chỉ mức vừa/cao) ---------- */
-const dctx = dust.getContext('2d');
-const COUNT = { medium: 22, high: 46 }, FPS = { medium: 15, high: 30 };
+/* ---------- Bụi lơ lửng, giảm số hạt và khung hình trên máy yếu ---------- */
+let dctx=null;try{dctx=dust.getContext('2d')}catch(_){}
+const COUNT = { low: 14, medium: 22, high: 46 }, FPS = { low: 12, medium: 15, high: 30 };
 let DW = 2, DH = 2, raf = 0, last = 0;
 const motes = Array.from({ length: 46 }, () => ({ x: Math.random(), y: Math.random(), r: .5 + Math.random() * .9, vx: (Math.random() - .5) * .00012, vy: -.00004 - Math.random() * .0001, a: .15 + Math.random() * .5, p: Math.random() * 6 }));
 const resize = () => { DW = dust.width = Math.max(2, stage.clientWidth / 3 | 0); DH = dust.height = Math.max(2, stage.clientHeight / 3 | 0); };
-new ResizeObserver(resize).observe(stage); resize();
-const wantDust = () => lvl() !== 'low' && !document.hidden && running();
+if(typeof ResizeObserver!=='undefined')new ResizeObserver(resize).observe(stage);
+else window.addEventListener('resize',resize,{passive:true});
+window.addEventListener('orientationchange',resize,{passive:true});resize();
+const wantDust = () => !!dctx && !RM() && !document.hidden && running();
 function frame(t) {
   raf = 0;
   if (!wantDust()) return;
@@ -65,8 +68,10 @@ function frame(t) {
     dctx.fillRect(m.x * DW - m.r, m.y * DH - m.r, m.r * 2, m.r * 2);
   }
 }
-const kick = () => { if (!raf && wantDust()) raf = requestAnimationFrame(frame); else if (!wantDust()) dctx.clearRect(0, 0, DW, DH); };
+const kick = () => { if (!raf && wantDust()) raf = requestAnimationFrame(frame); else if (dctx&&!wantDust()) dctx.clearRect(0, 0, DW, DH); };
 document.addEventListener('visibilitychange', kick);
+window.addEventListener('pageshow',()=>{resize();kick()});
+if(motion.addEventListener)motion.addEventListener('change',kick);else if(motion.addListener)motion.addListener(kick);
 new MutationObserver(kick).observe(title, { attributes: true, attributeFilter: ['hidden'] });
 new MutationObserver(kick).observe(root, { attributes: true, attributeFilter: ['class'] });
 

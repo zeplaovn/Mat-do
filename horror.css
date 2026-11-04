@@ -23,7 +23,7 @@ html[data-fx=high] .scene-image{will-change:transform}
 html[data-fx=low] .scene-stage.fadein .scene-image{animation:fadeinL .9s ease-out}
 .fx{position:absolute;inset:0;pointer-events:none}
 canvas.fx{width:100%;height:100%}
-html[data-fx=low] .fx-dust{display:none}
+html[data-fx=low] .fx-dust{opacity:.8}
 
 /* Sương: 2 lớp gradient trôi bằng transform (không phải vẽ lại). Mức thấp chỉ còn 1 lớp, trôi chậm. */
 .fx-fog{overflow:hidden}
