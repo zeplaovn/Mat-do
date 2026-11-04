@@ -6,6 +6,10 @@
 <meta name="theme-color" content="#000000">
 <meta name="description" content="Trailer giới thiệu game kinh dị điều tra Lời Nguyền Rừng Thiêng — Bí Mật Biệt Thự Vân Hòa.">
 <title>Trailer · Lời Nguyền Rừng Thiêng</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Trailer · Lời Nguyền Rừng Thiêng">
+<meta property="og:description" content="Năm người bạn, một đêm, một bí mật trong biệt thự Vân Hòa. Game kinh dị điều tra chơi ngay trên trình duyệt.">
+<meta property="og:image" content="assets/title_bg.webp">
 <link rel="icon" href="assets/logo.webp">
 <link rel="stylesheet" href="trailer.css">
 <script src="trailer.js" defer></script>
@@ -15,22 +19,26 @@
   <div id="shots" class="shots" aria-hidden="true">
     <div class="shot"><div class="bg"></div></div><div class="shot"><div class="bg"></div></div>
   </div>
-  <div class="vignette" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div><div class="flare" aria-hidden="true"></div><div id="flash" class="flash" aria-hidden="true"></div>
+  <canvas id="dust" class="dust" aria-hidden="true"></canvas><div class="vignette" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div><div class="flare" aria-hidden="true"></div><div id="streak" class="streak" aria-hidden="true"></div><div id="flash" class="flash" aria-hidden="true"></div>
   <div class="bar bar-top" aria-hidden="true"></div><div class="bar bar-bot" aria-hidden="true"></div>
+  <div id="slate" class="slate" aria-hidden="true"></div>
   <div id="caps" class="caps" aria-live="polite"></div>
 
   <section id="start" class="start" aria-label="Xem trailer">
     <img class="start-logo" src="assets/logo.webp" alt="Lời Nguyền Rừng Thiêng — Bí Mật Biệt Thự Vân Hòa">
     <p class="start-warn">⚠ Có yếu tố kinh dị · Nên xem với âm thanh bật</p>
     <button id="btn-play" class="btn big" type="button">▶ XEM TRAILER</button>
+    <p id="load-status" class="start-load" aria-live="polite"></p>
+    <p class="start-hint">Đeo tai nghe để có trải nghiệm tốt nhất</p>
     <a class="return-link" href="index.html">VỀ TRÒ CHƠI</a>
   </section>
 
   <section id="end" class="end" hidden>
     <img class="end-logo" src="assets/logo.webp" alt="Lời Nguyền Rừng Thiêng">
     <p class="end-tag">Bạn sẽ gọi tên họ chứ?</p>
+    <p class="end-meta">MIỄN PHÍ · CHƠI NGAY TRÊN TRÌNH DUYỆT · MÁY TÍNH VÀ ĐIỆN THOẠI</p>
     <p class="end-warn">⚠ CẢNH BÁO · YẾU TỐ KINH DỊ</p>
-    <div class="end-btns"><a class="btn big" href="index.html">CHƠI NGAY</a><button id="btn-replay" class="btn" type="button">↺ Xem lại</button></div>
+    <div class="end-btns"><a class="btn big" href="index.html">CHƠI NGAY</a><button id="btn-replay" class="btn" type="button">↺ Xem lại</button><button id="btn-share" class="btn" type="button" hidden>⇪ Chia sẻ</button></div>
   </section>
 
   <div class="hud" id="hud" hidden>

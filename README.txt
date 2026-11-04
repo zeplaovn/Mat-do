@@ -328,3 +328,18 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 27. Sổ nhật ký dùng asset mới (assets/book/)
 - Đang dùng: cover_front (bìa), paper (giấy), ribbon (ruy băng đánh dấu). CSS ở cuối layout.css.
 - Lưu sẵn chưa dùng: cover_back, open_book, torn_page, photo_frame, stains, tabs.
+
+28. TÓM TẮT NHANH BẢN HIỆN TẠI (cập nhật 05/11/2026)
+- Kịch bản chuẩn: docs/KICH_BAN_CHINH_THUC.md. Nhánh làm việc nên tách từ main, merge lại sau khi test.
+- Cốt truyện: mở đầu Đồng Chay (BG45–47) -> biệt thự Vân Hòa -> hồi tưởng đêm 17/3/1988 của Mơ -> rừng thiêng ->
+  nhà bà ngoại Nguyệt (BG41) -> nhà ông Đạt (BG48/49) -> đối chiếu sớ giả/sớ gốc -> bàn thờ đá, 4 kết thúc.
+- Sổ nhật ký dùng bìa da, giấy ố, ruy băng đỏ (assets/book/). Chi tiết ở mục 26 và 27.
+- Kiểm thử: node tests/trailer.test.js (và các file trong tests/).
+
+29. TRAILER (trailer.html · trailer.css · trailer.js) — bản nâng cấp điện ảnh
+- Giữ nguyên chuỗi cảnh, thời lượng và nhạc của trailer gốc (tests/trailer.test.js kiểm tra điều này).
+- Mới: tải trước ảnh có phần trăm, nút Xem chỉ bật khi tải xong; thanh viền phim trượt vào; chỉnh màu lạnh cho cảnh đầu;
+  bụi/tàn tro bay (tự giảm hạt trên điện thoại, tắt khi bật giảm chuyển động); chữ hiện từ mờ sang nét, tiêu đề lớn tô gradient;
+  nhãn địa điểm góc dưới trái; vệt sáng ở cảnh chớp; màn kết hiện lần lượt, có dòng "Miễn phí", nút Chia sẻ.
+- Phím tắt: Space hoặc K tạm dừng, M tắt tiếng, mũi tên trái/phải tua 5 giây, Esc bỏ qua.
+- Thẻ og:* trong trailer.html để chia sẻ liên kết có tiêu đề và ảnh.
