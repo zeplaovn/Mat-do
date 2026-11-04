@@ -16,12 +16,11 @@ function guess() {
   const cores = navigator.hardwareConcurrency || 4;
   const mem = navigator.deviceMemory || (coarse ? 4 : 8);   // Safari/Firefox không báo RAM
   const px = screen.width * screen.height * Math.pow(window.devicePixelRatio || 1, 2);
-  let weak = 0;
+  let weak = 0;                                             // máy cảm ứng không còn bị trừ điểm: điện thoại hiện nay đủ mạnh cho mức Vừa
   if (cores <= 2) weak += 2; else if (cores <= 4) weak += 1;
   if (mem <= 2) weak += 2; else if (mem <= 4) weak += 1;
-  if (coarse) weak += 1;
   if (px > 8e6) weak += 1;                                  // màn hình ~4K: nhiều điểm ảnh phải vẽ
-  return weak >= 3 ? 'low' : weak >= 1 ? 'medium' : 'high';
+  return weak >= 4 ? 'low' : weak >= 1 ? 'medium' : 'high';   // 'low' chỉ dành cho máy thật sự yếu
 }
 
 let pref = PREFS.includes(read()) ? read() : 'auto';
@@ -52,7 +51,9 @@ function watch(ms = 20000) {
         buf.sort((a, b) => a - b);
         const med = buf[buf.length >> 1], p90 = buf[Math.floor(buf.length * .9)];
         buf.length = 0;
-        if (med > 24 || p90 > 42) { level = ORDER[ORDER.indexOf(level) - 1]; apply(); end = t + 8000; }
+        // Cao -> Vừa khi giật rõ; Vừa -> Thấp chỉ khi dưới ~22 khung/giây kéo dài (giật nhẹ không còn làm mất hiệu ứng)
+        const slow = level === 'high' ? (med > 24 || p90 > 42) : (med > 45 && p90 > 60);
+        if (slow) { level = ORDER[ORDER.indexOf(level) - 1]; apply(); end = t + 8000; }
       }
     }
     if (t < end) requestAnimationFrame(tick); else watching = false;
