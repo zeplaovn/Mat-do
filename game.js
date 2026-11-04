@@ -862,11 +862,12 @@ function showMenu(){const ob=getObjective(),rc=state.relics.length;
  showModal(`<h2>Tạm dừng</h2>
  <div class="menu-status"><div class="menu-kick">NHIỆM VỤ HIỆN TẠI</div><div class="menu-ob-title">${escapeHTML(ob[0])}</div><div class="menu-ob-text">${escapeHTML(ob[1])}</div><div class="menu-relics"><span>DI VẬT</span><div class="menu-track"><i style="width:${rc/5*100}%"></i></div><b>${rc} / 5</b></div></div>
  <div class="menu-grid" id="menu-actions"></div>
- <p class="modal-note">Tiến trình được tự động lưu. Đặt lại sẽ xóa tiến trình hiện tại.</p>`,'MENU','menu');
+ <p class="modal-note">Tiến trình được tự động lưu. Đặt lại sẽ xóa tiến trình hiện tại. Nếu máy giật, hãy hạ Hiệu ứng hình ảnh xuống Vừa hoặc Thấp.</p>`,'MENU','menu');
  const w=$('menu-actions'),add=(label,fn,opt={})=>{const b=modalButton(label,fn);if(opt.cls)b.classList.add(opt.cls);if(opt.disabled)b.disabled=true;w.appendChild(b)};
  add('Cách chơi',showGuide);add('Gợi ý',showHint);add('Sách và câu đố',showResearchArchive);add('Tư liệu quanh đây',showNearbyResearch);add('Ký ức di vật',showMemories);
  add(state.sound?'Âm thanh: BẬT':'Âm thanh: TẮT',()=>{toggleSound();showMenu()});
  if(window.WeatherFX)add(WeatherFX.enabled?'Đèn và chớp: BẬT':'Đèn và chớp: TẮT',()=>{WeatherFX.setEnabled(!WeatherFX.enabled);showMenu()});
+ if(window.Perf){const N={auto:'Tự động',high:'Cao',medium:'Vừa',low:'Thấp'};add('Hiệu ứng hình ảnh: '+N[Perf.pref]+(Perf.pref==='auto'?' ('+N[Perf.level]+')':''),()=>{Perf.cycle();showMenu()})}
  add('Bắt đầu lại từ đầu',()=>{hideModal();if(confirm('Bạn có chắc muốn bắt đầu một lần điều tra mới?'))newGame()},{cls:'is-danger'});
  add('Về màn hình chính',()=>{hideModal();stopAmbience();clearDialogue();$('title-screen').hidden=false;updateContinue()})}
 

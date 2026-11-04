@@ -343,3 +343,9 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
   nhãn địa điểm góc dưới trái; vệt sáng ở cảnh chớp; màn kết hiện lần lượt, có dòng "Miễn phí", nút Chia sẻ.
 - Phím tắt: Space hoặc K tạm dừng, M tắt tiếng, mũi tên trái/phải tua 5 giây, Esc bỏ qua.
 - Thẻ og:* trong trailer.html để chia sẻ liên kết có tiêu đề và ảnh.
+
+30. HIỆU ỨNG TRÊN ĐIỆN THOẠI (perf.js, game.js)
+- Máy cảm ứng không còn bị trừ điểm khi tự đoán mức hiệu ứng; mức Thấp chỉ dành cho máy thật sự yếu (ít nhân và RAM <= 2GB).
+- Tự hạ mức khi giật: Cao -> Vừa như cũ; Vừa -> Thấp chỉ khi dưới khoảng 22 khung/giây kéo dài.
+- Menu có mục "Hiệu ứng hình ảnh": Tự động -> Cao -> Vừa -> Thấp, lưu trong localStorage (lnrt-fx-pref).
+- Nếu điện thoại bật "Xóa hiệu ứng động" hoặc tiết kiệm pin (prefers-reduced-motion) thì game vẫn tắt gần hết animation.
