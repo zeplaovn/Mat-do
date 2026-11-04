@@ -36,11 +36,11 @@ function setup({muted=false,deferAutoplay=false,storageBlocked=false}={}){
  return {qa:win.audioQA,ids,audio,storage,advance,delayed,observers,globalEvents};
 }
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
-function verifyLoaderFallback(waiting){
- const classes=new Set(['is-loading','is-busy']),loader={hidden:false,dataset:waiting?{awaitingMusic:'1'}:{}},html={dataset:{},classList:{contains:x=>classes.has(x),remove:(...xs)=>xs.forEach(x=>classes.delete(x))}};let fallback;
- const sandbox={document:{documentElement:html,getElementById:()=>loader,hidden:false},window:{devicePixelRatio:1},navigator:{},screen:{width:390,height:800},localStorage:{getItem:()=>null},matchMedia:()=>({matches:false}),setTimeout:fn=>{fallback=fn},requestAnimationFrame(){},performance:{now:()=>0},console};
+function verifyLoaderFallback(waiting,choiceVisible=waiting){
+ const classes=new Set(['is-loading','is-busy']),loader={hidden:false,dataset:waiting?{awaitingMusic:'1'}:{}},choice={hidden:!choiceVisible},html={dataset:{},classList:{contains:x=>classes.has(x),remove:(...xs)=>xs.forEach(x=>classes.delete(x))}};let fallback;
+ const sandbox={document:{documentElement:html,getElementById:id=>id==='loader'?loader:id==='loader-sound-choice'?choice:null,hidden:false},window:{devicePixelRatio:1},navigator:{},screen:{width:390,height:800},localStorage:{getItem:()=>null},matchMedia:()=>({matches:false}),setTimeout:fn=>{fallback=fn},requestAnimationFrame(){},performance:{now:()=>0},console};
  vm.createContext(sandbox);vm.runInContext(fs.readFileSync(path.join(__dirname,'..','perf.js'),'utf8'),sandbox);fallback();
- assert.equal(loader.hidden,!waiting,waiting?'the music choice must remain visible':'a broken loader must still be released');
+ assert.equal(loader.hidden,!(waiting&&choiceVisible),waiting&&choiceVisible?'the music choice must remain visible':'a broken loader must still be released');
 }
 (async()=>{
  let t=setup();t.qa.finish();t.advance(450);await flush();
@@ -58,6 +58,6 @@ function verifyLoaderFallback(waiting){
  assert.equal(t.storage.get('lnrt-music'),'0');assert.equal(t.audio[0].paused,true,'a late play promise must not override the silent choice');
  t=setup();t.advance(15000);t.advance(450);await flush();assert.equal(t.ids['loader-sound-choice'].hidden,false,'loader timeout must continue even if animation frames stop');assert.equal(t.ids.loader.dataset.awaitingMusic,'1','fallback must preserve the explicit music choice');
  t=setup({storageBlocked:true});t.qa.finish();t.advance(450);await flush();t.ids['loader-enter'].click();await flush();const fallbackButton=t.ids['title-screen'].children.find(e=>e.className==='music-btn');fallbackButton.click();t.advance(500);assert.equal(t.audio[0].paused,true,'mute must work when storage is unavailable');assert.equal(fallbackButton.attrs['aria-pressed'],'false');
- verifyLoaderFallback(true);verifyLoaderFallback(false);
+ verifyLoaderFallback(true);verifyLoaderFallback(false);verifyLoaderFallback(true,false);
  console.log('OK: first-visit autoplay blocking, user-gesture playback, mute preference and delayed-play race.');
 })().catch(e=>{console.error(e);process.exitCode=1});

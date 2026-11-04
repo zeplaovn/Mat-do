@@ -62,7 +62,7 @@ function watch(ms = 20000) {
 }
 
 /* Phòng hờ: nếu script lỗi vẫn không để kẹt ở màn loading (trước đây là script inline; chuyển ra đây để CSP không cần cho phép inline) */
-setTimeout(() => { const r = document.documentElement, l = document.getElementById('loader'); if (r.classList.contains('is-loading') && !(l && l.dataset.awaitingMusic==='1')) { r.classList.remove('is-loading', 'is-busy'); if (l) l.hidden = true; } }, 20000);
+setTimeout(() => { const r = document.documentElement, l = document.getElementById('loader'), choice=document.getElementById('loader-sound-choice'); if (r.classList.contains('is-loading') && !(l && l.dataset.awaitingMusic==='1' && choice && !choice.hidden)) { r.classList.remove('is-loading', 'is-busy'); if (l) l.hidden = true; } }, 20000);
 
 window.Perf = {
   RM,
