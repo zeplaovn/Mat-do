@@ -8,7 +8,12 @@
 const $ = id => document.getElementById(id);
 const root = document.documentElement;
 const stage = $('scene-stage'), img = $('scene-image'), hot = $('hotspots'), title = $('title-screen');
-const RM = Perf.RM;
+const motion = matchMedia('(prefers-reduced-motion: reduce)');
+const RM = () => motion.matches;
+const lighting = () => {
+  if(window.WeatherFX)return WeatherFX.enabled;
+  try{return localStorage.getItem('lnrt-light-effects')!=='0'}catch(_){return true}
+};
 const lvl = () => Perf.level;
 const busy = () => root.classList.contains('is-busy');            // đang loading / intro
 const running = () => title.hidden && !busy();                   // đang chơi thật
@@ -79,7 +84,7 @@ function playAsset(file, vol, from) {
 function beatLoop() {
   clearTimeout(bt);
   if (running() && !document.hidden) {
-    if (!RM) { stage.classList.remove('beat'); void stage.offsetWidth; stage.classList.add('beat'); }
+    if (!RM()) { stage.classList.remove('beat'); void stage.offsetWidth; stage.classList.add('beat'); }
   }
   bt = setTimeout(beatLoop, 1600 - dread * 950);
 }
@@ -88,32 +93,32 @@ beatLoop();
 /* ---------- Jump scare / glitch / chớp đèn ---------- */
 const pulse = (el, cls, ms) => { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); setTimeout(() => el.classList.remove(cls), ms); };
 function scare(big) {
-  if (RM) return;
+  if (RM()) return;
   if (!big && Date.now() - lastScare < 9000) return;
   lastScare = Date.now();
   shadow.style.left = Math.random() < .5 ? '5%' : '72%';
-  pulse(shadow, 'show', 750); pulse(flash, 'on', 560); pulse(stage, 'shake', 520);
+  pulse(shadow, 'show', 750); if(lighting())pulse(flash, 'on', 560); pulse(stage, 'shake', 520);
   playAsset('door-slam.mp3', .8, 3.7);   // cú đập cửa thay cho tiếng "sting" tạo bằng code
 }
 function onScene() {
   const n = sceneNo(); dread = Math.min(1, .1 + (n - 1) * .0475);
   stage.style.setProperty('--dread', dread.toFixed(2));
   stage.classList.toggle('dread-high', dread > .8);
-  if (!RM) { pulse(stage, 'fadein', 1100); pulse(stage, 'glitching', 450); }
+  if (!RM()) { pulse(stage, 'fadein', 1100); pulse(stage, 'glitching', 450); }
 }
 new MutationObserver(onScene).observe($('scene-index'), { childList: true, characterData: true, subtree: true });
 onScene();
 setInterval(() => {
   if (!running() || document.hidden || !$('modal-backdrop').hidden) return;
   const n = sceneNo();
-  if (n >= 6 && !RM && Math.random() < .2 + dread * .25) pulse(stage, 'flick', 460);   // chớp đèn
+  if (n >= 6 && !RM() && lighting() && Math.random() < .2 + dread * .25) pulse(stage, 'flick', 460);   // chớp đèn
   if (n >= 9 && Math.random() < dread * .07) scare(false);
 }, 4000);
 
 /* ---------- Đèn pin mềm bám con trỏ + parallax nhẹ (gộp theo khung hình) ---------- */
 let pend = 0, px = 0, py = 0;
 stage.addEventListener('pointermove', e => {
-  if (RM) return;
+  if (RM()) return;
   px = e.clientX; py = e.clientY;
   if (!pend) pend = requestAnimationFrame(() => {
     pend = 0;
@@ -160,7 +165,7 @@ $('btn-new-game').parentElement.before(warn);
 let wt2 = 0;
 function warnFlicker() {
   clearTimeout(wt2);
-  if (RM || title.hidden || busy() || document.hidden) { wt2 = setTimeout(warnFlicker, 900); return; }
+  if (RM() || !lighting() || title.hidden || busy() || document.hidden) { wt2 = setTimeout(warnFlicker, 900); return; }
   const n = 1 + (Math.random() < .45 ? 1 : 0) + (Math.random() < .15 ? 1 : 0);
   let i = 0;
   const step = () => {
@@ -178,7 +183,7 @@ title.insertBefore(bolt, title.querySelector('.title-content'));
 let boltT = 0;
 function boltStrike() {
   clearTimeout(boltT);
-  if (RM || title.hidden || busy() || document.hidden) { boltT = setTimeout(boltStrike, 1200); return; }
+  if (RM() || !lighting() || title.hidden || busy() || document.hidden) { boltT = setTimeout(boltStrike, 1200); return; }
   bolt.style.setProperty('--bx', (15 + Math.random() * 70).toFixed(0) + '%');
   const double = Math.random() < .6;
   const hit = (peak, dur, next) => {
@@ -198,7 +203,7 @@ let rt = 0;
 function rerLoop() {
   clearTimeout(rt);
   // Chỉ chạy khi màn hình tiêu đề đang hiện rõ — trong lúc chơi/loading/intro thì ngủ.
-  if (RM || title.hidden || busy() || document.hidden) { rt = setTimeout(rerLoop, 700); return; }
+  if (RM() || title.hidden || busy() || document.hidden) { rt = setTimeout(rerLoop, 700); return; }
   const burst = Math.random() < .25;
   if (lvl() === 'high') {
     disp.setAttribute('scale', burst ? String(8 + Math.random() * 20 | 0) : (Math.random() < .5 ? '2' : '0'));

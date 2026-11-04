@@ -4,13 +4,15 @@ BẢN GAME WEB POINT-AND-CLICK CÓ THỂ CHƠI (2026)
 
 CẬP NHẬT TRẢI NGHIỆM 04/11/2026
 --------------------------------
-- Trailer mới ở trailer.html là trang độc lập, có phát/tạm dừng, tua, tắt tiếng và bỏ qua.
+- Trailer ở trailer.html là trang độc lập: dựng cảnh, chữ và chân dung theo nhịp,
+  có phát/tạm dừng, tua, tắt tiếng, bỏ qua và xem lại.
 - Tích hợp 18 tài liệu và 25 câu đố, trong đó có ba hồ sơ đối chiếu mới; đọc sách,
   đánh dấu và lưu đoạn văn. Mở Menu > Sách và câu đố để xem tư liệu đã tìm.
 - Năm di vật có các hồi tưởng mới. Thư viện lời thoại đã rà soát được lưu theo mã cảnh;
   các cảnh và tương tác phù hợp đã được nối, những cảnh chưa có màn chơi vẫn là tư liệu.
 - Cảnh BG01–BG09 dùng ảnh nền mới; có danh sách điểm tương tác cho màn hình cảm ứng.
-- Ánh sáng chớp rất nhẹ, sấm chớp ở cảnh mưa; có thể tắt tại Menu > Đèn và chớp.
+- Mưa, sương, sấm chớp ở các cảnh phù hợp và ánh đèn chập chờn trong nhà;
+  có thể tắt ánh chớp tại Menu > Đèn và chớp.
   Hiệu ứng chuyển động cũng tuân theo cài đặt giảm chuyển động của thiết bị.
 - Gợi ý giờ ngắn và theo yêu cầu; không đưa sẵn lời giải trong nhật ký.
 - Bản lưu cũ được giữ; kết thúc Tha thứ của bản trước được ghi nhận riêng với bốn
@@ -18,6 +20,7 @@ CẬP NHẬT TRẢI NGHIỆM 04/11/2026
 - Các mục cập nhật cũ bên dưới được giữ làm lịch sử; có thể mô tả tính năng
   hoặc cốt truyện đã thay đổi trong các bản sau.
 - Kiểm tra dữ liệu sách, câu đố, tiến trình và tương thích bản lưu: node tests/integration.test.js.
+- Kiểm tra thời điểm hiệu ứng và tùy chọn ánh sáng: node tests/weather.test.js.
 
 1. CÁCH CHƠI NGAY
 ----------------
