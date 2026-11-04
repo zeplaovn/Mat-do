@@ -220,3 +220,36 @@
 #modal-body .theme-forged .research-leaf .research-page-heading{color:#622a28}
 @media(max-width:740px){#modal-body .research-leaf .research-cover-title{font-size:clamp(24px,6vw,32px)}}
 #modal-body .research-puzzle-prompt p{color:#37271e;font:clamp(14px,1.2vw,17px)/1.6 Georgia,serif;margin:0}
+
+/* Sách tư liệu dùng cùng bìa, giấy, ruy băng và lật trang với nhật ký trên main. */
+.modal-window.is-research-book{width:auto;max-width:100%;max-height:none;padding:0;border:0;border-radius:0;background:none;box-shadow:none;overflow:visible}
+.modal-backdrop:has(.is-research-book){background:radial-gradient(ellipse at 50% 45%,rgba(26,10,9,.9),rgba(2,2,4,.97));backdrop-filter:none}
+.research-journal{gap:14px;padding:26px 18px 8px}
+.research-journal .bk{--bw:min(980px,90vw,calc((100vh - 245px) * 1.46))}
+.research-journal .bk.single{--bw:min(520px,90vw,calc((100vh - 245px) * .72))}
+.research-journal .bk-cover-title{font-size:clamp(11px,1.45vw,18px);letter-spacing:.07em;line-height:1.25;overflow-wrap:anywhere;padding:0 5px}
+.research-journal .bk-cover-sub{letter-spacing:.06em;white-space:normal}
+.research-journal .bk-page,.research-journal .bk-face{display:flex;flex-direction:column}
+.research-paper{height:100%;min-height:0;display:flex;flex-direction:column}
+.research-journal .research-page-content{position:relative;z-index:1;flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 3px 8px 0;color:#2b2017;font:inherit;line-height:1.72;letter-spacing:normal;scrollbar-color:#a08361 transparent;scrollbar-width:thin}
+.research-journal .research-page-content::first-letter{font-size:1em}
+.research-paper-locked .research-page-content{color:#5d4634}
+.research-journal-nav{margin-top:2px}
+.research-journal-tools{gap:7px;max-width:min(100%,900px)}
+.research-journal-tools .bk-btn{min-height:40px;padding:8px 13px;font-size:12px}
+.research-archive-cover{background:url('../book/cover_front.webp') center/contain no-repeat;border:0;border-radius:0;box-shadow:none}
+@media(max-width:700px){
+ .research-journal{gap:10px;padding:20px 9px 8px}
+ .research-journal .bk-cover-title{font-size:clamp(12px,3.4vw,18px)}
+ .research-journal-tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:min(100%,480px)}
+ .research-journal-tools .bk-btn{min-width:0;padding:8px 5px;font-size:11px}
+ .research-journal-nav{gap:8px}
+ .research-journal-nav .bk-btn{padding:9px 12px}
+ .research-journal-nav .bk-count{min-width:100px}
+}
+@media(max-height:520px) and (orientation:landscape){
+ .research-journal{gap:8px;padding:14px 10px 5px}
+ .research-journal .bk{--bw:min(980px,90vw,calc((100vh - 165px) * 1.46))}
+ .research-journal .bk.single{--bw:min(520px,90vw,calc((100vh - 165px) * .72))}
+ .research-journal-tools .bk-btn{min-height:34px;padding:5px 10px}
+}
