@@ -178,6 +178,7 @@ html[data-fx=low] .scene-backdrop{filter:brightness(.28)}
 .dock-art img{width:100%;height:100%;object-fit:contain;pointer-events:none}
 .dock-art.is-emoji{font-size:clamp(24px,3.7vh,32px);line-height:1}
 .dock-dot{position:absolute;right:5px;bottom:5px;width:6px;height:6px;border-radius:50%;background:#c85850;box-shadow:0 0 7px #c85850}
+.dock-fragment{position:absolute;right:3px;bottom:3px;min-width:16px;height:16px;display:grid;place-items:center;border-radius:50%;background:#38231c;color:#f9e6c7;font:700 10px/1 var(--sans);box-shadow:0 0 0 1px rgba(238,204,163,.5)}
 .dock-selected{
   max-width:min(92vw,560px);padding:9px 18px;
   border:1px dashed rgba(224,190,170,.26);border-radius:14px;
