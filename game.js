@@ -630,7 +630,13 @@ function updateCam(){
  if(!camTimer){camSecs=0;camTick();camTimer=setInterval(camTick,1000)}}
 function cycleCam(){if(state.selectedItem!=='camera')return;state.camMode=CAM_ORDER[(CAM_ORDER.indexOf(state.camMode)+1)%CAM_ORDER.length];save();updateCam();toast('Máy ảnh: '+CAM_MODES[state.camMode].label)}
 function camFlash(){buildCamHud();const f=$('cam-flash');if(!f)return;f.classList.remove('on');void f.offsetWidth;f.classList.add('on')}
-function render(){const s=SCENES[state.scene],bg=BG(s.bg||state.scene);$('scene-image').src=bg;$('scene-image').alt='Cảnh '+state.scene+': '+s.name;$('scene-backdrop').style.backgroundImage=`url("${bg}")`;
+function centerScene(){
+ const g=document.querySelector('.game-column');if(!g||g.scrollWidth<=g.clientWidth+4)return;
+ g.scrollLeft=(g.scrollWidth-g.clientWidth)/2;
+ if(!state.flags.panHint&&state.visited&&state.visited.length>1){state.flags.panHint=true;save();toast('Vuốt ngang để nhìn quanh cảnh.')}
+}
+window.addEventListener('resize',()=>{if(!$('title-screen').hidden===false)centerScene()});
+function render(){centerScene();const s=SCENES[state.scene],bg=BG(s.bg||state.scene);$('scene-image').src=bg;$('scene-image').alt='Cảnh '+state.scene+': '+s.name;$('scene-backdrop').style.backgroundImage=`url("${bg}")`;
  $('scene-title').textContent=s.name;$('scene-stage').dataset.tint=s.tint||'';$('clock-label').textContent=s.time;$('chapter-label').textContent=state.flags.mo?'CHƯƠNG 9B · ĐÊM 17/3/1988':(s.chapter==='CHƯƠNG 10 · NĂM CÁI TÊN'&&arcOn())?'CHƯƠNG 9B · BÁT CƠM NÓNG':(questOn()&&/^CHƯƠNG 10/.test(s.chapter)?'CHƯƠNG 10 · NĂM CÁI TÊN':s.chapter);$('scene-index').textContent=`${state.scene} / ${Object.keys(SCENES).length}`;
  $('hotspots').replaceChildren(...[...s.spots.filter(h=>!h.req||state.flags[h.req]),...researchActiveSpots()].map(makeHotspot));
  $('scene-stage').classList.toggle('torch-on',state.flashlight&&parseInt(state.scene.slice(2))>=18);$('scene-stage').classList.toggle('has-selection',!!state.selectedItem);
