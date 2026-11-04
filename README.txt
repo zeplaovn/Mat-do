@@ -298,3 +298,7 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 - BG49: ảnh Sim (lời kể hai chiều), khăn chàm, ngăn tủ (thư Sim + sớ gốc), bàn trà (đối chiếu sớ).
 - BG32: nhặt bản sớ giả ở xấp giấy lễ. Đối chiếu đúng thì có chứng cứ scrollProof.
 - Kết thúc TRUE giờ cần thêm scrollProof. Mục tiêu (objective) ở BG40/41/48/49 dẫn từng bước.
+
+27. Sổ nhật ký dùng asset mới (assets/book/)
+- Đang dùng: cover_front (bìa), paper (giấy), ribbon (ruy băng đánh dấu). CSS ở cuối layout.css.
+- Lưu sẵn chưa dùng: cover_back, open_book, torn_page, photo_frame, stains, tabs.
