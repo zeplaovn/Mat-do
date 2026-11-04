@@ -287,3 +287,7 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 - Thay nền: BG26 kho vật tư, BG32 kho đồ lễ (năm vòng phấn), BG34 bếp 1988 (sáu bát), BG36 hành lang bếp, BG37 cửa hầm có then cài ngoài. Vùng bấm đã chỉnh lại cho khớp bố cục.
 - Đã nạp sẵn: BG48 và BG49 (nhà và phòng khách có ảnh Sim, file gốc đặt tên "ong_huu" nhưng dùng làm nhà ông Đạt), BG50 (sân trước biệt thự dưới mưa, chưa dùng).
 - Chân dung vào khung thoại: Ông Hựu, Ông Đạt, Sim, Thầy Tịnh. Icon: ấn đồng, bản đồ 1988, khăn chàm, sớ giả, sớ gốc, thư Sim (đã khai báo trong ITEMS, chưa có chỗ nhặt).
+
+25. Thay ảnh nền từ bộ background mới
+- BG34 (bếp), BG41 (nhà bà ngoại Nguyệt), BG43 (gác Lụa): thay ảnh mới, căn lại hotspot.
+- BG51.webp = BG05 bản lễ (chưa dùng). Các cặp khác giữ ảnh cũ vì ảnh mới mâu thuẫn kịch bản (BG32/36/37 có người bị giam) hoặc kém hơn.
