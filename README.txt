@@ -350,3 +350,11 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 - Menu có mục "Hiệu ứng hình ảnh": Tự động -> Cao -> Vừa -> Thấp, lưu trong localStorage (lnrt-fx-pref).
 - Nếu điện thoại bật "Xóa hiệu ứng động" hoặc tiết kiệm pin (prefers-reduced-motion) thì game vẫn tắt gần hết animation.
 - (05/11/2026) Mặc định hiệu ứng là mức Cao cho mọi thiết bị; chế độ Tự động chỉ dùng khi người chơi chọn trong Menu.
+
+31. TRAILER ĐIỆN ẢNH NÂNG CAO (trailer.js, trailer.css)
+- Máy quay: zoom có tăng tốc, xoay và trôi nhẹ riêng cho từng cảnh, lấy nét dần khi vào cảnh.
+- Chuyển cảnh theo từng cảnh: whip (quét nhanh), glitch (nhiễu cắt lớp), flash (bừng sáng), dip (qua đen).
+- Chữ hiện từng ký tự (mờ -> nét), tiêu đề lớn có đường kẻ vàng/đỏ, chữ đỏ rung nhiễu màu.
+- Nhịp nhạc: mảng `hits` trong trailer.js là các nhịp mạnh phân tích từ trailer.mp3; mỗi nhịp gây giật hình, nháy sáng và lệch màu chữ.
+- Khuôn mặt vào bằng zoom chậm, rò sáng ấm trôi qua khung hình, màn kết có tia sáng quét.
+- Tự tắt/giảm khi bật giảm chuyển động; ẩn rò sáng trên điện thoại dọc.
