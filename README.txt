@@ -4,8 +4,8 @@ BẢN GAME WEB POINT-AND-CLICK CÓ THỂ CHƠI (2026)
 
 CẬP NHẬT TRẢI NGHIỆM 04/11/2026
 --------------------------------
-- Trailer ở trailer.html là trang độc lập: dựng cảnh, chữ và chân dung theo nhịp,
-  có phát/tạm dừng, tua, tắt tiếng, bỏ qua và xem lại.
+- Trailer ở trailer.html khôi phục chuỗi cảnh, lời dẫn và chân dung của bản gốc;
+  vẫn là trang độc lập với phát/tạm dừng, tua, tắt tiếng, bỏ qua và xem lại.
 - Tích hợp 18 tài liệu và 25 câu đố, trong đó có ba hồ sơ đối chiếu mới; đọc sách,
   đánh dấu và lưu đoạn văn. Mở Menu > Sách và câu đố để xem tư liệu đã tìm.
 - Năm di vật có các hồi tưởng mới. Thư viện lời thoại đã rà soát được lưu theo mã cảnh;
@@ -13,6 +13,8 @@ CẬP NHẬT TRẢI NGHIỆM 04/11/2026
 - Cảnh BG01–BG09 dùng ảnh nền mới; có danh sách điểm tương tác cho màn hình cảm ứng.
 - Mưa, sương, sấm chớp ở các cảnh phù hợp và ánh đèn chập chờn trong nhà;
   có thể tắt ánh chớp tại Menu > Đèn và chớp.
+- Điện thoại dùng lớp mưa nhẹ không phụ thuộc canvas; bụi và sương vẫn hiển thị
+  khi mức hiệu năng tự động chuyển xuống thấp.
   Hiệu ứng chuyển động cũng tuân theo cài đặt giảm chuyển động của thiết bị.
 - Gợi ý giờ ngắn và theo yêu cầu; không đưa sẵn lời giải trong nhật ký.
 - Bản lưu cũ được giữ; kết thúc Tha thứ của bản trước được ghi nhận riêng với bốn
@@ -21,6 +23,11 @@ CẬP NHẬT TRẢI NGHIỆM 04/11/2026
   hoặc cốt truyện đã thay đổi trong các bản sau.
 - Kiểm tra dữ liệu sách, câu đố, tiến trình và tương thích bản lưu: node tests/integration.test.js.
 - Kiểm tra thời điểm hiệu ứng và tùy chọn ánh sáng: node tests/weather.test.js.
+- Kiểm tra tương thích khi thiếu canvas/ResizeObserver:
+  node tests/weather.test.js --no-canvas --no-resize-observer.
+- Kiểm tra lớp kinh dị và bụi ở mức thấp: node tests/horror.test.js
+  (thêm --no-canvas để kiểm tra trường hợp canvas không khả dụng).
+- Kiểm tra chuỗi cảnh gốc và điều khiển trailer: node tests/trailer.test.js.
 
 1. CÁCH CHƠI NGAY
 ----------------
