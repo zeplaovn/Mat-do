@@ -41,7 +41,7 @@ html[data-fx=low] .hotspot:before{animation:none}
 
 /* Mũi tên chỉ hướng nằm sát chân vùng bấm (trên mặt đường); dấu chấm than nhỏ hơn */
 .hotspot--travel:before,.hotspot--travel:hover:before,.hotspot--travel:focus-visible:before{top:84%}
-.hotspot--special:before,.hotspot--special:hover:before,.hotspot--special:focus-visible:before{width:54px;height:54px}
-.hotspot--special.is-target:before,.hide-hotspots .hotspot--special.is-target:before{width:54px;height:54px}
-.hotspot--special .hotspot-label{bottom:calc(50% + 20px)}
+.hotspot--special:before,.hotspot--special:hover:before,.hotspot--special:focus-visible:before{width:32px;height:32px}
+.hotspot--special.is-target:before,.hide-hotspots .hotspot--special.is-target:before{width:32px;height:32px}
+.hotspot--special .hotspot-label{bottom:calc(50% + 12px)}
 .hotspot--travel .hotspot-label{bottom:calc(16% + 36px)}
