@@ -49,6 +49,7 @@ const ITEMS = {
   chalkStub:{name:'Viên phấn trắng',image:'26_Phan_Trang_128x128.webp',description:'Mẩu phấn còn lại trên bảng đen của phòng học.',emoji:'✏'},
   legendDoc:{name:'Bảng ký hiệu của năm người',image:'27_Bang_Ky_Hieu_128x128.webp',description:'Tài liệu. Chạm để đọc. Mỗi người có một ký hiệu riêng.',emoji:'📋'},
   backDoc:{name:'Mặt sau tấm ảnh',image:'28_Mat_Sau_Anh_128x128.webp',description:'Tài liệu. Chạm để đọc. Dòng chữ viết tay ở mặt sau.',emoji:'📋'},
+  folkPrint:{name:'Mảnh giấy dó dập dấu',image:'29_Manh_Don_Rach_128x128.webp',description:'Mảnh giấy dập bốn hình ở miếu. Chạm để xem hoặc cầm đối chiếu.',emoji:'📜'},
   fragA:{name:'Mảnh đơn 1/3',image:'29_Manh_Don_Rach_128x128.webp',description:'Mảnh giấy rách giấu trong ngăn kín dưới đồng hồ quả lắc. Một đoạn chữ viết tay vội vã.',emoji:'📜'},
   fragB:{name:'Mảnh đơn 2/3',image:'29_Manh_Don_Rach_128x128.webp',description:'Mảnh giấy rách dán sau khung ảnh gia đình, được giấu bằng mật mã chữ cái.',emoji:'📜'},
   fragC:{name:'Mảnh đơn 3/3',image:'29_Manh_Don_Rach_128x128.webp',description:'Mảnh giấy rách kẹp trong sổ vật tư trên bàn ông Bá Lâm.',emoji:'📜'},
@@ -64,7 +65,7 @@ for(const [id,b] of Object.entries(BOOKS)){
  if(!ITEMS[id])ITEMS[id]={name:b.title,image:'30_So_Tu_Lieu_128x128.webp',description:b.summary,emoji:'📖'};
 }
 
-const USE_ON={camera:['mirror'],bell:['cradle'],musicbox:['shirt'],crowbar:['sealedWall'],key:['gate'],storekey:['storeDoor'],incense5:['graves']};
+const USE_ON={camera:['mirror'],bell:['cradle'],musicbox:['shirt'],crowbar:['sealedWall'],key:['gate'],storekey:['storeDoor'],incense5:['graves'],folkPrint:['marker']};
 const RELIC_ORDER = ['scarf','spoon','comb','petition','sandals'];
 const RITUAL_SHOW = ['petition','scarf','sandals','spoon','comb']; /* thứ tự hiển thị khác thứ tự đúng, để câu đố không lộ đáp án */
 const SCENES = {
@@ -114,7 +115,7 @@ const SCENES = {
  BG43:{name:"Gác nhỏ của cô Lụa",time:"04:00",chapter:"CHƯƠNG 9B · BÁT CƠM NÓNG",mood:"GÁC NHỎ · 04:00",caption:"Hạc giấy khẽ xoay trên xà. Trên bàn, một cuốn sổ nằm mở.",look:"Căn gác sau bếp, nơi cô Lụa ngủ mỗi đêm trước khi bị nhốt.",spots:[H("luaDiary","Cuốn nhật ký trên bàn",47,42,20,16),H("takeDoll","Con búp bê vải",75,50,12,16),H("tornPhoto","Mảnh ảnh giấu dưới gối",6,48,25,16),H("inspect:comb2","Chiếc lược gỗ",73,66,11,16),H("inspect:cranes2","Hạc giấy treo trên xà",45,10,22,18),H("inspect:window3","Cửa sổ nhìn xuống sân",84,18,15,28),H("travel:BG13","Xuống bếp",0,4,9,28)]},
  BG44:{name:"Chỗ cắm trại trên hiên",time:"01:30",chapter:"ĐÊM TRẠI",mood:"HIÊN NHÀ · 01:30",caption:"Ngọn lửa nhỏ đủ sưởi ấm năm người, và đủ để họ nói chuyện.",look:"Năm túi ngủ quanh đống lửa trước hiên biệt thự.",spots:[H("campfire","Đống lửa trại",49,56,13,23),H("inspect:kettle","Ấm nước đun trên lửa",42,62,6,8),H("inspect:bags","Túi ngủ của cả nhóm",16,70,26,22),H("inspect:flash2","Đèn pin để dưới đất",56,80,6,4),H("travel:BG10","Xuống bậc hiên",88,8,12,60)]},
  BG45:{name:"Sân ngoài chùa làng",time:"08:30",chapter:'CHƯƠNG 1 · ĐỒNG CHAY',mood:"SÂN CHÙA · 08:30",caption:"Sân gạch dưới tán cây đại. Một bàn gỗ nhỏ, ba đồng xu trên đĩa sứ.",intro:["Ánh","Sân chùa yên quá. Ông cụ ngồi bên bàn xem quẻ kia có vẻ biết trước bọn mình sẽ đến."],look:"Hoa đại rụng trắng trên gạch. Ở sâu trong chùa có hai ngọn đèn lồng sáng giữa ban ngày.",spots:[H("huu","Ông Hựu và bàn xem quẻ",61,63,28,34),H("inspect:pagoda","Chùa làng",33,10,30,35),H("inspect:daitree","Cây đại nở hoa",72,0,28,40),H("travel:BG01","Về cổng làng",0,60,24,38)]},
- BG46:{name:"Bàn lễ trước miếu cây đa",time:"20:30",chapter:'CHƯƠNG 1 · LỐI VÀO RỪNG',mood:"BÀN LỄ · 20:30",caption:"Sáu chỗ bày lễ trên mặt bàn gỗ mục. Hai ngọn đèn đang cháy.",intro:["Nguyệt","Mâm lễ bày trước miếu. Đếm thử xem: sáu chỗ."],look:"Cơm, nước, hoa cúc trắng. Một chỗ đèn chưa thắp. Rễ đa ôm kín bức tường miếu.",spots:[H("lampSix","Ngọn đèn chưa thắp",62,67,17,15),H("inspect:lamps2","Hai ngọn đèn đang cháy",24,66,34,17),H("inspect:bowls3","Cơm, nước, hoa",26,50,52,14),H("inspect:petition2","Cuộn giấy và tấm vải đỏ",3,58,17,22),H("inspect:idol","Bài vị trong khám đá",40,14,20,28),H("travel:BG05","Lùi lại",34,91,32,9)]},
+ BG46:{name:"Bàn lễ trước miếu cây đa",time:"20:30",chapter:'CHƯƠNG 1 · LỐI VÀO RỪNG',mood:"BÀN LỄ · 20:30",caption:"Sáu chỗ bày lễ trên mặt bàn gỗ mục. Hai ngọn đèn đang cháy.",intro:["Nguyệt","Mâm lễ bày trước miếu. Đếm thử xem: sáu chỗ."],look:"Cơm, nước, hoa cúc trắng. Một chỗ đèn chưa thắp. Rễ đa ôm kín bức tường miếu.",spots:[H("lampSix","Ngọn đèn chưa thắp",62,67,17,15),H("inspect:lamps2","Hai ngọn đèn đang cháy",24,66,34,17),H("folkOffering","Mâm lễ có bốn hõm gỗ",26,50,52,14),H("inspect:petition2","Cuộn giấy và tấm vải đỏ",3,58,17,22),H("inspect:idol","Bài vị trong khám đá",40,14,20,28),H("travel:BG05","Lùi lại",34,91,32,9)]},
 };
 
 /* ================= HỘI THOẠI THEO TỪNG CẢNH =================
@@ -447,7 +448,7 @@ const SOUND={door:'creaking-door.mp3',slam:'door-slam.mp3',knock:'knock-on-the-d
  market:'tieng_on_ao_o_cho.mp3',water:'nuoc_chay.mp3',frogs:'community-frogs.mp3',frogsNight:'frogs-croaking-at-night.mp3',gecko:'than_lan_keu_3s.mp3',crickets:'tieng_de_keu.mp3',musicbox:'music_box.mp3',rain:'rain.mp3',forest:'nature_forest.mp3',house:'ambient_house.mp3',crow:'crow.mp3',pick:'pick.mp3'};
 const SLAM_LEAD=3.3;                         /* door-slam.mp3: cú đập nằm ở ~4,0 s; bắt đầu phát từ 3,3 s để nó vang ngay sau tiếng kẽo kẹt */
 /* Tương tác = nhân vật bước tới chỗ đó: dùng tieng_buoc_chan.mp3 (3 bước khi đi sang cảnh khác, 2 bước khi xem/nhặt đồ). */
-const PAPER_ITEMS=['scrollFake','scrollOrig','simLetter','map88','petition','testimony','fragA','fragB','fragC','legendDoc','backDoc'];  /* chỉ vật bằng giấy mới có tiếng lật giấy khi nhặt */
+const PAPER_ITEMS=['scrollFake','scrollOrig','simLetter','map88','petition','testimony','fragA','fragB','fragC','legendDoc','backDoc','folkPrint'];  /* chỉ vật bằng giấy mới có tiếng lật giấy khi nhặt */
 const VILLA_ROOMS=['BG43','BG11','BG12','BG13','BG14','BG15','BG16','BG17','BG23','BG24','BG27','BG28']; /* tiếng thằn lằn chỉ có ở trong nhà biệt thự */
 const AMBIENCE={
  BG01:{market:.22},                        /* cổng làng, đông người */
@@ -674,7 +675,11 @@ function act(action){if(modalType)return;clearDialogue();playSound('steps',.5,0,
    state.flags.oldwomanTalked=true;note('oldwoman','Quán nước đầu làng','Bà bán nước kể về đường cũ, ngôi miếu và căn nhà trên đồi.');
    talk(reviewed('S02'));save();break;
   case 'shrine':if(state.flags.lamDone){go('BG31');break}if(!gain('incense')){say('Nguyệt','Bát hương chỉ còn lớp tàn lạnh.');break}note('shrine','Bát hương ven rừng','Nhang cũ chưa đốt. Trên mảnh giấy mờ chỉ đọc được: “Năm hồn giữ cửa, một bóng giữ nhà.”');talk([["Nguyệt","Nhang này còn dùng được, tớ giữ lại. ...Dưới chân bát hương có một mảnh giấy nhàu, chữ nhòe gần hết."],["Tuyết","“Năm hồn giữ cửa, một bóng giữ nhà.” ...Một bóng là ai nhỉ? Đọc xong tự nhiên tớ lạnh hết cả gáy."],["Đông","Chưa biết. Cứ giữ lại, biết đâu cần. Đừng nghĩ nhiều quá, Tuyết."]]);break;
-  case 'marker':if(!gain('key')){say('Nam','Khe đá giờ trống rỗng.');break}note('marker','Chìa ở cột mốc đá','Một chìa khóa sắt rỉ nằm trong khe đá, hướng về cổng biệt thự.');talk([["Nam","Đây rồi! Chìa khóa cổng, nằm trong khe đá. Sao lại có người giấu nó ở chỗ này nhỉ?"],["Ánh","Chìa còn mới hơn khóa cổng nhiều. Chắc có người thường xuyên ra vào, hoặc thường xuyên đặt nó ở đây... Nghĩ thế càng sợ."],["Đông","Thôi, đi nào. Nhưng đừng ai quên đường về."]]);break;
+  case 'marker':
+   if(state.selectedItem==='folkPrint'&&has('folkPrint')&&!state.flags.folkMarkerDone){folkStonePuzzle();break}
+   if(state.flags.folkMarkerDone||has('key')||state.used.includes('key')||state.flags.gateOpened){say('Nam','Khe đá giờ trống rỗng.');break}
+   say('Nam','Cột đá có bốn vòng khắc và một khe hẹp. Những nét này giống vết trên mâm gỗ ở miếu.');break;
+  case 'folkOffering':folkOfferingPuzzle();break;
   case 'gate':if(!state.flags.gateOpened){if(!has('key')){say('Đông','Cổng bị xích, ổ khóa còn nguyên. Chắc phải có chìa ở đâu đó.');break}state.flags.gateOpened=true;consume('key');note('gate','Cổng sắt mở khóa','Chiếc chìa rỉ vừa khít với ổ khóa cổng. Cánh cổng khép lại rất mạnh sau khi cả nhóm đi qua.');playSound('door',.2);setTimeout(()=>playSound('slam',.32,SLAM_LEAD),1400);talk([["Nam","Được rồi... khóa bật ra rồi. Nhưng sao cánh cổng tự khép mạnh thế? Mới nãy tớ còn đứng ngay đó!"],["Đông","Gió thôi. Vào đi, nhớ đừng tách nhau."],["Tuyết","Bà bán nước không nói dối. Nhưng tớ vẫn muốn biết sự thật. Tớ không thể đứng nhìn rồi bỏ đi."]]);renderSidebar();save()}else go('BG09');break;
 case 'exitForest':if(!state.visited.includes('BG11')){say('Đông','Mới tới cổng mà. Mình ít nhất cũng nên xem qua căn nhà rồi tính chuyện quay về.');break}showEscapeChoice();break;
   case 'well':if(state.flags.awakened&&!has('bell')&&!state.used.includes('bell')){clue('well');gain('bell');note('bell','Chuông đồng dưới đáy xô','Chiếc xô giếng vừa kéo lên có một chuông đồng nhỏ buộc dây đỏ, loại chuông người ta buộc cho trẻ con khỏi lạc.');say('Tuyết','Chuông trẻ con ở dưới giếng... Ai đã thả nó xuống?');break}if(gain('scarf')){note('scarf','Di vật 1 — giếng đá','Một chiếc khăn vải cũ mắc dưới nắp gỗ bên giếng. Đây có thể là di vật của người mất tích.');talk([["Tuyết","Khăn này không giống đồ gia chủ. Có lẽ của một người làm công. Chạm vào mà tay tớ cứ lạnh dần."],["Nguyệt","Tớ nghĩ nó thuộc về một trong năm người. Mình sẽ giữ gìn cẩn thận. Họ xứng đáng được mang về."],["Nam","Dưới giếng có tiếng nước chảy nhè nhẹ. ...Dù giếng này khô cạn từ lâu rồi. Nghe thật mà."]])}else say('Nam','Dưới giếng tối om. Chúng ta đã lấy chiếc khăn mắc ở nắp gỗ rồi.');break;
@@ -1485,12 +1490,66 @@ const glyph=(id,s=44)=>`<svg class="glyph" viewBox="0 0 32 32" width="${s}" heig
 const GLYPH_OF=[['khoa','Đỗ Văn Khoa','thầy giáo','pen'],['tam','Nguyễn Văn Tâm','thủ kho','scale'],['lua','Phạm Thị Lụa','vú nuôi','note'],['sen','Trần Thị Sen','nấu bếp','flame'],['hai','Lê Văn Hải','trông giếng','wave']];
 const GLYPH_ORDER=['wave','flame','note','scale','pen'];
 /* Tài liệu cầm theo người, chạm vào ô đồ để đọc */
-const READ_ITEMS={petition:'petition',fragA:'fragA',fragB:'fragB',fragC:'ledger',testimony:'testimony',legendDoc:'legend',backDoc:'photoBack'};
+const READ_ITEMS={petition:'petition',fragA:'fragA',fragB:'fragB',fragC:'ledger',testimony:'testimony',legendDoc:'legend',backDoc:'photoBack',folkPrint:'folkPrint'};
 function showDoc(noteId){
  const n=state.notes.find(x=>x.id===noteId);if(!n){toast('Chưa có gì để đọc.');return}
- const chart=noteId==='legend'?'<div class="glyph-chart">'+GLYPH_OF.map(r=>`<div class="glyph-row">${glyph(r[3],34)}<span>${r[1]}<small>${r[2]}</small></span></div>`).join('')+'</div>':'';
+ const chart=noteId==='legend'?'<div class="glyph-chart">'+GLYPH_OF.map(r=>`<div class="glyph-row">${glyph(r[3],34)}<span>${r[1]}<small>${r[2]}</small></span></div>`).join('')+'</div>':noteId==='folkPrint'?folkPrintChart():'';
  showModal(`<h2>${escapeHTML(n.title)}</h2><div class="doc-paper">${escapeHTML(n.body).replace(/\n/g,'<br>')}</div>${chart}<div id="doc-actions" class="modal-buttons"></div><p class="modal-note" id="doc-hint" hidden></p>`,'TÀI LIỆU','doc');
+ if(noteId==='folkPrint')$('doc-actions').appendChild(modalButton(state.selectedItem==='folkPrint'?'Cất tờ giấy':'Cầm giấy để đối chiếu',()=>{state.selectedItem=state.selectedItem==='folkPrint'?null:'folkPrint';hideModal();render();save()}));
  $('doc-actions').appendChild(modalButton('Đóng',hideModal));playSound('page',.18)}
+
+/* Chuỗi manh mối của miếu: quy ước riêng trong câu chuyện Đồng Chay. */
+const FOLK_MARKS={
+ rice:{label:'Bát cơm',path:'M4 17h24a12 12 0 0 1-24 0ZM9 14q2-4 5-1 2-5 5 0 3-3 5 1'},
+ water:{label:'Dòng nước',path:'M3 11q4-4 8 0t8 0t8 0M3 18q4-4 8 0t8 0t8 0M3 25q4-4 8 0t8 0t8 0'},
+ flower:{label:'Cành hoa',path:'M16 15v13M16 22q-6-6-10-3 4 5 10 4M16 15c-7-1-8-7-4-8 1-5 7-5 8 0 5 1 4 7-4 8ZM16 10h.01'},
+ lamp:{label:'Đèn dầu',path:'M7 24h18M9 21h14l-2-5H11ZM16 14c-5-4 0-7 0-11 3 4 6 7 0 11Z'},
+ leaf:{label:'Lá cây',path:'M5 27C5 13 11 5 27 4c0 15-7 23-22 23ZM7 25 23 8M13 19l-1-6M18 14l5 1'},
+ grain:{label:'Bông lúa',path:'M10 28 23 4M19 10q-7-1-7-5 5-1 7 5ZM16 16q-7-1-7-5 5-1 7 5ZM13 22q-7-1-7-5 5-1 7 5ZM19 12q6 0 7-4-5-2-7 4ZM16 18q6 0 7-4-5-2-7 4Z'},
+ flame:{label:'Ngọn lửa',path:'M16 3c2 6 9 9 9 16a9 9 0 0 1-18 0c0-4 3-7 5-10 1 3 3 4 4-6Z'}
+};
+const folkGlyph=id=>`<svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${FOLK_MARKS[id].path}"/></svg>`;
+function folkPrintChart(){
+ return '<div class="folk-print" aria-label="Các dấu trên giấy, từ trái sang phải">'+['leaf','water','grain','flame'].map(id=>`<span>${folkGlyph(id)}<small>${FOLK_MARKS[id].label}</small></span>`).join('')+'</div>';
+}
+function folkDials({title,intro,inscription,choices,solution,hint,onDone,reference=false}){
+ let values=[null,null,null,null],done=false;
+ const paper=reference&&state.notes.find(n=>n.id==='folkPrint');
+ const referenceHTML=paper?`<details class="folk-reference"><summary>Xem mảnh giấy dó</summary><div class="doc-paper">${escapeHTML(paper.body).replace(/\n/g,'<br>')}</div>${folkPrintChart()}</details>`:'';
+ showModal(`<div class="folk-puzzle${reference?' is-stone':''}"><h2>${title}</h2><p>${intro}</p><p class="folk-inscription">${inscription}</p><div class="folk-slots" id="folk-slots"></div><p class="modal-note" id="folk-status" aria-live="polite">Chạm từng ô để đổi hình, rồi kiểm tra.</p>${referenceHTML}<div class="modal-buttons" id="folk-actions"></div></div>`,'CÂU ĐỐ · DẤU MIẾU','folk');
+ const draw=()=>{const box=$('folk-slots');box.replaceChildren();values.forEach((id,i)=>{
+  const b=document.createElement('button');b.type='button';b.className='folk-slot';b.setAttribute('aria-label','Vị trí '+(i+1)+': '+(id?FOLK_MARKS[id].label:'chưa chọn'));
+  b.innerHTML=`<span class="folk-number">${i+1}</span>${id?folkGlyph(id):'<span class="folk-empty">?</span>'}<small>${id?FOLK_MARKS[id].label:'Chọn hình'}</small>`;
+  b.onclick=()=>{if(done)return;const next=(choices.indexOf(values[i])+1)%(choices.length+1);values[i]=next===choices.length?null:choices[next];draw();const current=$('folk-slots').children[i];if(current)current.focus({preventScroll:true})};box.appendChild(b)
+ })};
+ draw();const actions=$('folk-actions');
+ actions.appendChild(modalButton('Kiểm tra',()=>{if(done)return;if(values.some(v=>v===null)){$('folk-status').textContent='Hãy chọn hình cho cả bốn vị trí.';return}
+  if(!solution.every((id,i)=>values[i]===id)){$('folk-status').textContent='Cơ cấu vẫn im. Hãy đối chiếu lại các dấu.';playSound('switch',.1);return}
+  done=true;hideModal();playSound('switch',.22);onDone()}));
+ actions.appendChild(modalButton('Đặt lại',()=>{values=[null,null,null,null];draw();$('folk-status').textContent='Đã xóa các hình vừa chọn.'}));
+ actions.appendChild(modalButton('Đóng',hideModal));$('modal-body').appendChild(hintBlock([hint]));
+}
+function folkOfferingPuzzle(){
+ if(state.flags.folkOfferingDone){if(has('folkPrint'))showDoc('folkPrint');else say('Nguyệt','Mâm gỗ đã mở. Dấu in còn được ghi trong nhật ký.');return}
+ folkDials({title:'Mâm gỗ ở miếu',intro:'Bốn hõm trên mâm có thể xoay hình. Những món lễ đã được bày lệch khỏi vị trí cũ.',
+  inscription:'Nhìn từ lối vào: mép trái khắc bông lúa, mép phải ám đen như từng đặt đèn.',choices:['rice','water','flower','lamp'],solution:['rice','water','flower','lamp'],
+  hint:'Sổ miếu ghi vị trí của nước so với cơm và hoa.',onDone:()=>{
+   gain('folkPrint');note('folkPrint','Mảnh giấy dó dập dấu','Một hàng dấu được in trên giấy dó. Góc giấy có hình cột mốc giữa rừng.\nDòng chữ nhỏ: “Tìm đường về từ hơi ấm đến bóng cây.”');
+   state.flags.folkOfferingDone=true;save();render();const dock=$('inventory-grid');if(dock)dock.scrollLeft=dock.scrollWidth;
+   talk([['Nguyệt','Mâm khẽ bật lên. Có một mảnh giấy dó nằm dưới đáy.'],['Ánh','Bốn hình này giống nét khắc trên cột đá trong rừng. Giữ lại, biết đâu còn dùng được.']])
+  }});
+}
+function folkStonePuzzle(){
+ if(state.flags.folkMarkerDone){say('Nam','Những vòng đá đã dừng. Khe cất chìa giờ trống rồi.');return}
+ folkDials({title:'Bốn vòng trên cột đá',intro:'Mảnh giấy dó vừa khít khe đá. Bốn vòng khắc có thể xoay độc lập.',
+  inscription:'Một đường rãnh chạy từ vòng thứ nhất đến vòng thứ tư.',choices:['leaf','water','grain','flame'],solution:['flame','grain','water','leaf'],
+  hint:'Xem hàng dấu và dòng chữ trên mảnh giấy dó.',reference:true,onDone:()=>{
+   const got=!state.flags.gateOpened&&gain('key');state.flags.folkMarkerDone=true;state.selectedItem=null;
+   note('folkStone','Những dấu trên cột đá','Bốn dấu ở cột mốc khớp với mảnh giấy dập dưới mâm gỗ của miếu. Một khe bí mật mở ra.');
+   if(got)note('marker','Chìa ở cột mốc đá','Một chìa khóa sắt rỉ được giấu trong khe đá, hướng về cổng biệt thự.');
+   save();render();const dock=$('inventory-grid');if(got&&dock)dock.scrollLeft=dock.scrollWidth;talk(got?[["Nam","Cạch... Trong khe có một chiếc chìa sắt. Có lẽ vừa ổ khóa ở cổng."],["Ánh","Có người giấu nó kỹ thật. Mảnh giấy ở miếu đã dẫn chúng ta tới đây."]]:[["Nguyệt","Khe đá đã mở. Mảnh giấy ở miếu và cột mốc quả thật liên quan tới nhau."]])
+  }});
+}
 function takeToy(id,okLines,againText){
  if(has(id)||state.used.includes(id)){say('Nguyệt',againText);return}
  if(gain(id)){note('toy_'+id,ITEMS[id].name,ITEMS[id].description);talk(okLines)}}
