@@ -528,3 +528,53 @@ html[data-fx=low] .chatter{backdrop-filter:none}
 .point-actions .modal-option{min-height:48px}
 @media(max-width:700px){.hud-place{max-width:calc(100vw - 195px)}.point-actions{grid-template-columns:1fr}}
 @media(max-width:380px){.hud-actions{gap:5px}.hud-btn{width:40px;height:40px}.hud-place{max-width:calc(100vw - 160px);padding:7px}.hud-place-meta{font-size:8px;letter-spacing:.1em}.hud-place strong{font-size:13px}}
+
+/* ---------- Điện thoại dọc: cảnh phủ gần hết màn hình, vuốt ngang để nhìn quanh ----------
+   Trước đây khung 16:9 chỉ là một dải mỏng giữa màn hình đen nên sương, mưa, vignette đều bị cắt gọn trong dải đó. */
+@media(max-width:700px) and (orientation:portrait){
+  #app-shell .game-column{display:block;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  #app-shell .game-column::-webkit-scrollbar{display:none}
+  #app-shell .scene-stage{
+    width:max(100vw,calc(78vh * 16 / 9));
+    width:max(100dvw,calc(78dvh * 16 / 9));
+    margin-top:11vh;margin-top:11dvh;flex:none;
+    box-shadow:none;
+  }
+  .scene-backdrop{filter:blur(24px) brightness(.5) saturate(1)}
+}
+
+/* ---------- Rà soát UI/UX (điện thoại) ---------- */
+/* Chữ quá nhỏ: nhãn chương/giờ, tiêu đề mục menu, số mục trong nhật ký */
+@media(max-width:700px){
+  .hud-place-meta{font-size:11px;letter-spacing:.14em}
+  .menu-kick,.menu-relics span{font-size:11px}
+  .bk .bk-no{font-size:max(.6em,10px)}
+  .bk-folio{font-size:max(.74em,10px)}
+}
+/* Nút đổi chế độ máy ảnh và nút Tiếp quá thấp để chạm */
+.cam-mode-btn{min-height:40px}
+@media(max-width:700px){.dlg-next{min-height:40px}}
+/* Hộp thoại dài: có vệt mờ ở đáy để biết còn nội dung cuộn xuống */
+.modal-window{scrollbar-width:thin;scrollbar-color:rgba(200,120,100,.45) transparent}
+.modal-window::after{content:"";display:block;position:sticky;bottom:-1px;height:26px;margin-top:-26px;pointer-events:none;background:linear-gradient(transparent,rgba(8,6,8,.92))}
+.modal-window.is-book::after{display:none}
+/* Điện thoại ngang (màn thấp): thu gọn tiêu đề hộp thoại và danh sách để thấy nhiều hơn */
+@media(max-height:520px) and (orientation:landscape){
+  .modal-window{padding:12px 18px 18px;max-height:calc(100dvh - 12px)}
+  .modal-head{margin-bottom:6px}
+  #modal-body h2,.modal-body h2{font-size:20px;margin:0 0 6px}
+  #modal-body p{font-size:13px;line-height:1.5}
+  .menu-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .menu-status{padding:10px 12px}
+  .point-actions{grid-template-columns:1fr 1fr}
+  .bk{--bw:min(980px,92vw,calc((100vh - 70px) * 1.46))}
+  .bk-scene{gap:8px;padding-top:6px}
+  .toast{bottom:calc(max(8px,var(--safe-b)) + 64px)}
+}
+/* Thông báo không đè lên khung máy ảnh */
+.scene-stage.cam-on ~ .toast,body:has(.scene-stage.cam-on) .toast{bottom:auto;top:calc(max(14px,var(--safe-t)) + 74px)}
+/* Điện thoại dọc: khung máy ảnh bám theo màn hình (không bám theo khung cảnh rộng hơn màn hình) */
+@media(max-width:700px) and (orientation:portrait){
+  .scene-stage.cam-on .cam-hud{position:fixed;inset:0}
+}
+@media(max-width:700px) and (orientation:portrait){.cam-mode-btn{bottom:36%}}

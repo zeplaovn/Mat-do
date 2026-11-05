@@ -364,3 +364,24 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 - Nhịp nhạc: mảng `hits` trong trailer.js là các nhịp mạnh phân tích từ trailer.mp3; mỗi nhịp gây giật hình, nháy sáng và lệch màu chữ.
 - Khuôn mặt vào bằng zoom chậm, rò sáng ấm trôi qua khung hình, màn kết có tia sáng quét.
 - Tự tắt/giảm khi bật giảm chuyển động; ẩn rò sáng trên điện thoại dọc.
+
+32. CẢNH TRÊN ĐIỆN THOẠI DỌC (layout.css, game.js)
+- Nguyên nhân hiệu ứng "mất" trên điện thoại: khung cảnh 16:9 chỉ là một dải mỏng (khoảng 1/3 chiều cao) giữa màn hình đen,
+  nên mưa, sương, vignette đều bị cắt gọn trong dải đó.
+- Sửa: ở điện thoại dọc, khung cảnh cao ~78% màn hình, rộng hơn màn hình; vuốt ngang để nhìn quanh (hotspot và hiệu ứng nằm
+  trong cùng khung nên vẫn khớp). Cảnh tự căn giữa khi đổi cảnh; lần đầu có gợi ý "Vuốt ngang để nhìn quanh cảnh".
+- Điện thoại ngang và máy tính không đổi.
+
+33. RÀ SOÁT UI/UX (11/2026) — layout.css cuối tệp
+- Điện thoại ngang: hộp thoại/menu/danh sách điểm gọn lại, 2 cột, nhật ký dùng được chiều cao thấp.
+- Chữ nhỏ (nhãn chương/giờ, mục menu, số mục nhật ký) tăng lên tối thiểu 10-11px; nút Tiếp và Đổi chế độ máy ảnh cao tối thiểu 40px.
+- Hộp thoại dài có vệt mờ ở đáy báo còn nội dung cuộn; thông báo không đè khung máy ảnh.
+- Điện thoại dọc: khung máy ảnh bám theo màn hình.
+
+34. TRAILER: CẢNH CHƠI THẬT VÀ ĐOẠN DỌA (trailer.js, trailer.css, assets/trailer/gp1-5.webp)
+- Trailer dài 1:12. Chèn 5 cảnh chơi thật (chụp từ chính game): khám phá (có con trỏ chuột bấm), câu đố đồng hồ, nhật ký, máy ảnh night vision ở hầm, hội thoại ông Đạt.
+- Đoạn dọa dẫn dần (36,6-38,5s): nhạc nhỏ dần, tim đập nhanh dần, nhạc dâng, vignette khép lại, nháy hình ngắn rồi tối đen, sau đó bừng sáng cùng nhịp mạnh.
+- Cú dọa thứ hai ở cảnh máy ảnh (48,1s): nổ + tiếng rít + rung hình.
+- Âm thanh dọa tự tổng hợp bằng Web Audio (không thêm tệp); tôn trọng nút tắt tiếng.
+- Điện thoại dọc: cảnh chơi được cắt vào vùng chính (thuộc tính pos) để chữ trong game vẫn đọc được.
+- Chụp lại ảnh cảnh chơi khi giao diện game đổi: xem mô tả ở mục này, ảnh 1280x720, lưu webp.

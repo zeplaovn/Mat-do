@@ -22,19 +22,19 @@ const context={document:{hidden:false,getElementById:id=>ids[id],querySelectorAl
 vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(__dirname,'..','trailer.js'),'utf8'),context);
 ids['btn-play'].dispatch('click');ids['btn-pause'].dispatch('click');flush();
 assert.ok(ids.audio.paused,'pause should pause audio');
-const original=[['01',1.6],['01',6.5],['09',6.5],['11',5.5],['12',5],['11',6],['16',5.5],['13',2.2],['20',2.2],['27',2.2],['21',2.4],['29',6],['32',5.5],['32',1.2],['33',5.5]];
+const original=[['01',1.6],['01',6.5],['09',6.5],['11',5.5],['12',5],['11',6],['16',5.5],['16',1.88],['gp1',3.2],['gp2',3.2],['gp3',3.2],['gp4',3.2],['gp5',3.2],['29',6],['32',5.5],['32',1.2],['33',5.5]];
+const urlOf=id=>id.startsWith('gp')?`assets/trailer/${id}.webp`:`assets/background/${id==='01'?'BG01-fixed':`BG${id}`}.webp`;
 let start=0;
 for(const [bg,duration] of original){
  const position=start+Math.min(duration/2,1);ids.seek.value=String(position);ids.seek.dispatch('input');flush();
  const visible=layers.find(x=>x.classList.contains('on'));
- const file=bg==='01'?'BG01-fixed.webp':`BG${bg}.webp`;
- assert.ok(visible,`no frame at ${position}`);assert.equal(visible.firstElementChild.style.backgroundImage,`url("assets/background/${file}")`);
- assert.ok(fs.existsSync(path.join(__dirname,'..','assets','background',file)),`missing image ${file}`);
+ assert.ok(visible,`no frame at ${position}`);assert.equal(visible.firstElementChild.style.backgroundImage,`url("${urlOf(bg)}")`);
+ assert.ok(fs.existsSync(path.join(__dirname,'..',urlOf(bg))),`missing image ${urlOf(bg)}`);
  assert.ok(Math.abs(ids.audio.currentTime-position)<.001,'audio should follow seeking');start+=duration;
 }
-assert.ok(Math.abs(Number(ids.seek.max)-start)<.001,'duration should match the original shot sequence');
+assert.ok(Math.abs(Number(ids.seek.max)-start)<.001,'duration should match the shot sequence');
 ids.seek.value='28.5';ids.seek.dispatch('input');flush();
 assert.equal(ids.caps.children.at(-1).children.length,5,'five original portraits should be present');
 ids['btn-skip'].dispatch('click');assert.equal(ids.end.hidden,false);assert.equal(ids.player.hidden,true);assert.equal(ids.caps.children.length,0,'ended trailer should not expose old captions');
 ids['btn-replay'].dispatch('click');assert.equal(ids.end.hidden,true);assert.equal(ids.seek.value,'0');
-console.log('OK: original trailer shots, images, seeking, audio, portraits, skip and replay.');
+console.log('OK: trailer shots incl. gameplay frames, images, seeking, audio, portraits, skip and replay.');
