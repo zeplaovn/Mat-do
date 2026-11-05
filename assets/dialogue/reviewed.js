@@ -300,82 +300,46 @@ window.LNRT_DIALOGUE = {
  ],
  "S04": [
   [
-   "Người kể chuyện",
-   "Ngoài sân chùa, một ông lão ngồi bên chiếc bàn con. Ba đồng xu còn nằm trên mặt bàn, cạnh chén trà uống dở."
+    "Người kể chuyện",
+    "Ngoài sân chùa, một ông lão ngồi im bên ba đồng xu và chén trà nguội."
   ],
   [
-   "Thầy Hựu",
-   "Mấy cháu đi đâu mà tay xách nách mang thế? Ngồi nghỉ chân đã."
+    "Đông",
+    "Dạ, bọn cháu muốn tới biệt thự Vân Hòa. Ông chỉ đường giúp được không ạ?"
   ],
   [
-   "Đông",
-   "Dạ, bọn cháu định lên biệt thự Vân Hòa. Ông chỉ giúp bọn cháu đường vào với ạ."
+    "Thầy Hựu",
+    "Qua cầu gỗ. Theo đường xe cũ."
   ],
   [
-   "Thầy Hựu",
-   "À, nhà Vân Hòa. Qua cầu gỗ rồi men theo đường xe cũ là tới. Nhưng đường ấy giờ rậm lắm, có đoạn phải nhìn kỹ mới thấy lối."
+    "Nguyệt",
+    "Ông biết chuyện gì đã xảy ra ở đó không ạ?"
   ],
   [
-   "Nam",
-   "Ơ, mấy đồng xu này để xem quẻ hả ông?"
+    "Thầy Hựu",
+    "Năm người. Năm nhà."
   ],
   [
-   "Thầy Hựu",
-   "Có người vừa nhờ xem, tôi chưa kịp cất xu. Chứ tôi đã xem gì cho các cháu đâu."
+    "Ánh",
+    "Còn ai nhớ chuyện cũ không ông?"
   ],
   [
-   "Nguyệt",
-   "Dạ thế quẻ vừa rồi ra sao ạ?"
+    "Thầy Hựu",
+    "Tìm người từng ở đó. Hỏi tên họ."
   ],
   [
-   "Thầy Hựu",
-   "Không được đẹp lắm. Nhưng quẻ của người ta, tôi cũng chẳng tiện kể. Các cháu cứ hỏi chuyện của mình đi."
+    "Nam",
+    "Chỉ vậy thôi ạ?"
   ],
   [
-   "Ánh",
-   "Nhà Vân Hòa ấy... bỏ hoang lâu lắm rồi hả ông?"
+    "Thầy Hựu",
+    "Đừng đáp tiếng gọi từ giếng."
   ],
   [
-   "Thầy Hựu",
-   "Ừ, lâu rồi. Nhà ấy có chuyện nên chẳng mấy ai muốn bén mảng. Các cháu tìm đến đấy làm gì?"
-  ],
-  [
-   "Tuyết",
-   "Bọn cháu đến tìm hiểu chuyện cũ ạ. Hồi ấy nhà đó xảy ra chuyện gì thế ông?"
-  ],
-  [
-   "Thầy Hựu",
-   "Hồi ấy có người chết. Từ sau đêm đó, cổng cứ đóng im ỉm. Chuyện mấy chục năm rồi, người ta kể thêm kể bớt nhiều lắm."
-  ],
-  [
-   "Đông",
-   "Trước giờ có ai lên đấy hỏi chuyện như bọn cháu chưa ông?"
-  ],
-  [
-   "Thầy Hựu",
-   "Có chứ. Hỏi chuyện ma thì nhiều, hỏi người chết tên gì lại chẳng mấy ai."
-  ],
-  [
-   "Nam",
-   "Thế họ có về kể lại gì không ạ?"
-  ],
-  [
-   "Thầy Hựu",
-   "Người hỏi xong rồi về, người vẫn đi tiếp. Còn tìm được gì thì tôi chịu. Tôi có đi theo họ đâu."
-  ],
-  [
-   "Nguyệt",
-   "Nếu bọn cháu muốn tìm người biết rõ chuyện hồi đó thì hỏi ai được ạ?"
-  ],
-  [
-   "Thầy Hựu",
-   "Chuyện cũ thì hỏi người đã ở đấy lúc xảy ra chuyện. Nghe tôi kể, các cháu cũng chỉ biết được một phía thôi."
-  ],
-  [
-   "Người kể chuyện",
-   "Ông Hựu thu ba đồng xu vào chiếc túi vải rồi nhấp ngụm trà. Thấy các cháu im lặng, ông cũng không hỏi thêm."
+    "Người kể chuyện",
+    "Ông thu ba đồng xu vào túi vải, không nói thêm."
   ]
- ],
+],
  "S05": [
   [
    "Ánh",
@@ -2541,11 +2505,11 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Nguyệt",
-   "Vậy giọng em nghe được có thể không phải Mơ. Còn ai gắn vào chiếc ấn này?"
+   "Vậy người khóc bên giếng có thể không phải em. Còn ai gắn với chiếc ấn này?"
   ],
   [
    "Tuyết",
-   "Cô gái trong ảnh cũ... Người ta gọi cô ấy là gì?"
+   "Người cao hơn trong ảnh... chị ấy là ai?"
   ],
   [
    "Đông",

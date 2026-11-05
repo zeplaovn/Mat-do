@@ -106,9 +106,9 @@ Một nhóm người từng giữ các bản sớ cấm đã diễn giải sai l
 
 ## 3.1. Lê Thị Sim
 
-- **Sinh:** 1962. **Mất:** 1986, hưởng dương khoảng 24 tuổi.
+- **Sinh:** 1971. **Mất:** 1986, hưởng dương khoảng 15 tuổi.
 - **Quê:** Đồng Chay. **Công việc:** làm nương, hái thuốc, quen đường rừng, giúp người lạc và người ốm.
-- **Gia đình:** lớn lên bên bà ngoại từng trông nom miếu. Có em trai **Lê Văn Đạt**, sinh năm 1967, còn sống năm 2026.
+- **Gia đình:** lớn lên bên bà ngoại từng trông nom miếu. Có em trai **Lê Văn Đạt**, sinh năm 1974, còn sống năm 2026.
 - **Tính cách khi sống:** thẳng, hơi cứng đầu, thương trẻ, biết cảnh giác với người lấy chuyện linh thiêng để ép buộc người khác.
 - **Chi tiết đời thường:** thắt khăn chàm cũ khi đi rừng, để cành lá thuốc trong túi vải, thường ngồi sửa dây gùi trước hiên; ít nói lời lớn lao về lòng tốt.
 - **Điều tin:** con người cần kính trọng thiên nhiên, nhưng không ai có quyền nhân danh thần linh để giết người.
@@ -128,7 +128,7 @@ Sim trở thành lệ quỷ vì hai tầng nguyên nhân: chết oan trong bạo
 
 ## 3.2. Lê Văn Đạt — em trai Sim
 
-Năm 1986 Đạt 19 tuổi. Sim kịp đưa em một phần giấy tờ và nhờ báo người có thẩm quyền. Đạt dẫn người đến nơi làm lễ; Sim vẫn không sống sót. Đạt mang mặc cảm tới năm 2026.
+Năm 1986 Đạt 12 tuổi. Sim kịp đưa em một phần giấy tờ và nhờ báo người có thẩm quyền. Đạt dẫn người đến nơi làm lễ; Sim vẫn không sống sót. Đạt mang mặc cảm tới năm 2026.
 
 Đạt từng rời làng, sau đó quay về sống kín đáo. Ông không giữ toàn bộ sự thật trong một bài độc thoại: ông giữ **bản sao sớ lễ tạ và lời kể trực tiếp**, nhưng không có chiếc ấn đang ở giếng và không biết hết chuyện năm 1988. Muốn ông nói chuyện, người chơi phải chứng minh mình không đến để săn chuyện ma.
 
@@ -230,7 +230,7 @@ Không hòa giải chỉ sau một câu xin lỗi. Nguyệt phải giao toàn b�
 
 | Mốc | Diễn biến xác nhận |
 |---|---|
-| **1962** | Sim ra đời ở Đồng Chay. |
+| **1971** | Sim ra đời ở Đồng Chay. |
 | **1981** | Mơ ra đời; sau đó được vợ chồng Bá Lâm nhận nuôi, Lụa tiếp tục chăm sóc em. |
 | **1986 – mùa khô** | Làng gặp thời tiết và mùa màng khó khăn; Tịnh lợi dụng nỗi lo để đưa ra tà bản tế thần rừng. |
 | **1986 – đêm tế** | Sim phát hiện bản sớ bị sửa, bị vu cáo và khống chế. Em trai báo chính quyền; buổi lễ bị ngăn chặn nhưng Sim chết do thương tích mất máu. Tịnh bỏ trốn mang theo ấn. |
@@ -827,7 +827,7 @@ Mỗi câu đố có dấu hiệu quan sát được, lời giải suy từ bằ
 
 ## 19.1. Hình ảnh cần có
 
-**Nhân vật:** Sim khi sống (24 tuổi, quần áo đi rừng đời thường), Sim ở trạng thái lệ quỷ (không cần phô bày thương tích), thầy Tịnh trong lễ, ông Hựu tuổi già, Lê Văn Đạt, năm người 1988, Mơ trước/sau biến cố, Bá Lâm và bà Mận.
+**Nhân vật:** Sim khi sống (15 tuổi, quần áo đi rừng đời thường), Sim ở trạng thái lệ quỷ (không cần phô bày thương tích), thầy Tịnh trong lễ, ông Hựu tuổi già, Lê Văn Đạt, năm người 1988, Mơ trước/sau biến cố, Bá Lâm và bà Mận.
 
 **Đạo cụ đặc trưng:** bài vị miếu ghi **Huyền Lâm Thánh Quân** (chữ Hán hư cấu *玄林聖君* nếu phù hợp art), một bản sớ giả ghi **Huyền Lâm Tôn Thần**, chiếc ấn đồng có hoa văn riêng; hai bản sớ với điểm khác nhau; khăn chàm/túi lá thuốc Sim; ba đồng xu của Hựu; đèn dầu, bát lễ, dây đỏ hư cấu; khung ảnh nhóm; chiếc kẹp tóc Mơ; thư em trai Sim; sơ đồ nhà và cửa hầm.
 
@@ -957,7 +957,7 @@ Tên cờ chỉ là gợi ý kỹ thuật. Phải có cơ chế lưu/tải tươ
 
 # 22. TÓM TẮT CỐT TRUYỆN DÙNG CHO NHÓM SẢN XUẤT
 
-Tại Đồng Chay, dân làng vốn thờ vị thần bảo hộ hư cấu **Huyền Lâm Thánh Quân**, kính gọi là **Đức Ngài**, bằng lễ tạ rừng không sát sinh. Năm 1986, Lê Thị Sim, cô gái 24 tuổi ở Đồng Chay, phát hiện thầy Tịnh mạo danh vị thần này, sửa sớ thành nghi thức tế người. Sim tìm cách tố cáo, bị vu là người làm ô uế miếu và bị đưa làm vật tế. Em trai Sim dẫn người tới phá lễ, nhưng cô chết vì thương tích mất máu trước khi được cứu. Tịnh bỏ trốn cùng chiếc ấn đang trói hồn Sim vào nghi thức, khiến cô trở thành lệ quỷ.
+Tại Đồng Chay, dân làng vốn thờ vị thần bảo hộ hư cấu **Huyền Lâm Thánh Quân**, kính gọi là **Đức Ngài**, bằng lễ tạ rừng không sát sinh. Năm 1986, Lê Thị Sim, cô gái 15 tuổi ở Đồng Chay, phát hiện thầy Tịnh mạo danh vị thần này, sửa sớ thành nghi thức tế người. Sim tìm cách tố cáo, bị vu là người làm ô uế miếu và bị đưa làm vật tế. Em trai Sim dẫn người tới phá lễ, nhưng cô chết vì thương tích mất máu trước khi được cứu. Tịnh bỏ trốn cùng chiếc ấn đang trói hồn Sim vào nghi thức, khiến cô trở thành lệ quỷ.
 
 Hai năm sau, Tịnh lợi dụng bệnh tình của bé Mơ để thuyết phục ông Bá Lâm thực hiện lễ “giữ mệnh” tại biệt thự Vân Hòa. Hải, Sen, Lụa, Tâm và Khoa được gọi vào tầng hầm như năm người giữ lễ. Họ phát hiện nguy hiểm và chống trả. Tịnh khóa cửa và che ô lấy gió; Bá Lâm nghe tiếng kêu cứu nhưng không mở vì tin rằng làm thế Mơ sẽ chết. Mơ tìm cách phá lễ, giật ấn của Tịnh rồi ngã xuống giếng lúc 03:17. Nghi lễ thất bại, cả Mơ và năm người đều chết; Bá Lâm che giấu câu chuyện.
 
