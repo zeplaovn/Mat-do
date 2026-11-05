@@ -393,7 +393,7 @@ window.LNRT_RESEARCH = {
         ],
         [
           "Đêm 17/3",
-          "Thầy Tịnh dặn phải đóng cửa. Tôi đã cầm chốt, rồi ông Lâm tới. Khi nghe tiếng đập, tôi đứng im."
+          "Thầy Tịnh dặn phải đóng cửa. Ông Lâm đến, chạm then rồi buông tay. Tôi nghe tiếng đập mà sợ quá, chỉ đứng im."
         ],
         [
           "Sáng sau",
@@ -1062,10 +1062,10 @@ window.LNRT_RESEARCH = {
       ],
       "kind": "choice",
       "prompt": "Điều nào bà Mận tự nhận đã làm đêm đó?",
-      "answer": "Đã cầm chốt cửa nhưng đứng im",
+      "answer": "Đã đứng im khi nghe tiếng đập",
       "options": [
         "Đã đẩy Mơ xuống giếng",
-        "Đã cầm chốt cửa nhưng đứng im",
+        "Đã đứng im khi nghe tiếng đập",
         "Đã giết Sim",
         "Đã giấu ấn đồng"
       ],
@@ -1073,7 +1073,7 @@ window.LNRT_RESEARCH = {
       "hints": [
         "Đọc trang “Đêm 17/3”.",
         "Đây là một quyết định bên cửa hầm.",
-        "Bà cầm chốt rồi đứng im."
+        "Bà nghe tiếng đập nhưng đứng im vì sợ."
       ],
       "rewardEvidence": "mantSilence"
     },

@@ -77,6 +77,13 @@ html[data-fx=low] .title-warn:before,html[data-fx=low] .title-warn:after{animati
 #app-shell.interaction-active .hotspot-layer{visibility:hidden;pointer-events:none}
 #app-shell.interaction-active .fx-vignette{opacity:.35}
 #app-shell.interaction-active .fx-blood,#app-shell.interaction-active .fx-scan{opacity:.15}
+/* Hồi ức luôn có nhãn và màu riêng, không dùng hiệu ứng nháy chuyển cảnh. */
+.memory-banner{position:absolute;z-index:5;top:max(78px,calc(env(safe-area-inset-top) + 64px));left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100vw - 28px);padding:8px 17px;border:1px solid #d3a96c;border-radius:6px;background:rgba(38,27,19,.93);color:#f8e6c4;box-shadow:0 8px 24px #0009;text-align:center;text-shadow:0 1px 3px #000}
+.memory-banner span,.memory-banner strong{display:block;line-height:1.25}.memory-banner span{font:700 11px/1.3 var(--sans,Arial,sans-serif);letter-spacing:.18em}.memory-banner strong{margin-top:3px;font:400 14px/1.25 var(--serif,Georgia,serif)}
+#app-shell.memory-active .interaction-view{filter:sepia(.18) saturate(.82)}
+#app-shell.flashback-active .scene-image{filter:sepia(.15) saturate(.85)}
+#app-shell.memory-active .hud-place{visibility:hidden}
+@media(max-height:520px) and (orientation:landscape){.memory-banner{top:max(8px,env(safe-area-inset-top));padding:5px 12px}.memory-banner strong{font-size:12px}.memory-banner span{font-size:10px}}
 @media(max-width:700px) and (orientation:portrait){
  #app-shell:not(.interaction-active) .game-column{display:flex;align-items:flex-start;justify-content:flex-start}
  #app-shell:not(.interaction-active) .scene-stage{flex:none}
