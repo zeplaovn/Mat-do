@@ -45,7 +45,7 @@ function place(el, msg) {
   if (r.width < 4 || r.right < 8 || r.left > innerWidth - 8 || r.top < 40 || r.bottom > innerHeight) return false;
   text.textContent = msg; text.hidden = false;
   const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-  hand.style.left = Math.round(Math.min(innerWidth - 50, cx - 6)) + 'px'; hand.style.top = Math.round(Math.min(innerHeight - 58, cy - 4)) + 'px'; hand.hidden = false;
+  hand.style.left = Math.round(Math.min(innerWidth - 50, cx - 4)) + 'px'; hand.style.top = Math.round(Math.min(innerHeight - 58, cy + 26)) + 'px'; hand.hidden = false;
   text.style.left = '50%'; const above = cy > innerHeight * 0.45, half = (text.offsetWidth || 200) / 2;
   text.style.left = Math.max(12 + half, Math.min(innerWidth - 12 - half, cx)) + 'px';
   text.style.top = above ? Math.max(60, cy - 112) + 'px' : Math.min(innerHeight - 90, cy + 84) + 'px';
@@ -61,7 +61,7 @@ function tick() {
   if (busy()) { if (shown) hide(); return; }
   if (!store.get(TAP_KEY)) {
     const h = [...document.querySelectorAll('#hotspots .hotspot')].find(b => { const r = b.getBoundingClientRect(); return r.width > 2 && r.left > 8 && r.right < innerWidth - 8 && r.top > 60 && r.bottom < innerHeight - 90; });
-    if (h && place(h, 'Chạm vào vòng sáng để xem gần')) { shown = 'tap'; return; }
+    if (h && place(h, 'Chạm vào biểu tượng sáng để xem gần')) { shown = 'tap'; return; }
   } else if (!store.get(ITEM_KEY)) {
     const s = document.querySelector('#inventory-grid .dock-slot');
     if (s && place(s, 'Chạm vào vật phẩm để chọn, rồi chạm vào cảnh để dùng')) { shown = 'item'; return; }

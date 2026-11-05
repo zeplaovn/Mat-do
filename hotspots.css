@@ -30,3 +30,11 @@
   filter:sepia(1) saturate(3.2) hue-rotate(338deg) brightness(1.35) drop-shadow(0 0 7px #ffd48a);
 }
 @media(prefers-reduced-motion:reduce){.hotspot:before{transition:none}}
+
+/* Biểu tượng nhấp nhô nhẹ để dễ thấy, tự tắt khi giảm chuyển động hoặc hiệu ứng thấp */
+@keyframes spotFloat{0%,100%{translate:0 0}50%{translate:0 -4px}}
+.hotspot:before{animation:spotFloat 2.6s ease-in-out infinite}
+.hotspot:nth-child(2n):before{animation-delay:-.9s}.hotspot:nth-child(3n):before{animation-delay:-1.7s}
+html[data-fx=low] .hotspot:before{animation:none}
+@media(prefers-reduced-motion:reduce){.hotspot:before{animation:none}}
+.hotspot:hover:before,.hotspot:focus-visible:before{animation-play-state:paused}
