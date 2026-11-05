@@ -11,6 +11,32 @@ const RM = matchMedia('(prefers-reduced-motion: reduce)');
 const level = () => root.dataset.fx || 'medium';
 const mk = (tag, cls) => { const e = document.createElement(tag); e.className = 'fx ' + cls; e.setAttribute('aria-hidden', 'true'); stage.insertBefore(e, hot); return e; };
 const fog = mk('div', 'vfx-fog'), glows = mk('div', 'vfx-glows'), cv = mk('canvas', 'vfx-motes'), wipe = mk('div', 'vfx-wipe');
+/* Lớp "ngột ngạt": ép viền tối thở theo nhịp, nhịp tim, bóng tối trườn từ hai mép, ánh mắt trong bóng tối. Cường độ theo --dread của cảnh. */
+const cold = mk('div', 'vfx-cold'), press = mk('div', 'vfx-press'), creep = mk('div', 'vfx-creep'), pulse = mk('div', 'vfx-pulse'), eyes = mk('div', 'vfx-eyes');
+eyes.innerHTML = '<i></i><i></i>';
+const dread = () => { const v = parseFloat(stage.style.getPropertyValue('--dread')); return isNaN(v) ? .2 : Math.max(0, Math.min(1, v)); };
+function applyDread() {
+  const d = dread();
+  stage.style.setProperty('--breath', (7.5 - d * 4).toFixed(2) + 's');
+  stage.style.setProperty('--hb', (1.9 - d * 0.9).toFixed(2) + 's');
+  pulse.classList.toggle('hb-on', d >= .35);
+}
+/* Ánh mắt: hiếm, chỉ ở cảnh tối đủ căng, hiện ở mép trái/phải rồi chớp tắt */
+let eyeTimer = 0;
+function scheduleEyes() {
+  clearTimeout(eyeTimer);
+  eyeTimer = setTimeout(() => {
+    if (live() && rich() && dread() >= .4 && level() === 'high' && mode === 'night') {
+      const left = Math.random() < .5;
+      eyes.style.left = (left ? 3 + Math.random() * 9 : 86 - Math.random() * 9) + '%';
+      eyes.style.top = (42 + Math.random() * 30) + '%';
+      eyes.classList.remove('go'); void eyes.offsetWidth; eyes.classList.add('go');
+      setTimeout(() => eyes.classList.remove('go'), 2800);
+    }
+    scheduleEyes();
+  }, (28 + Math.random() * 40) * 1000 * (1.3 - dread()));
+}
+scheduleEyes();
 const ctx = (() => { try { return cv.getContext('2d'); } catch (_) { return null; } })();
 
 const live = () => !document.hidden && title && title.hidden && !root.classList.contains('is-busy')
@@ -51,6 +77,7 @@ function setup() {
   if (!img.complete || !img.naturalWidth || !rich()) { mode = 'none'; return; }
   const a = analyse(img.currentSrc || img.src);
   mode = a.mean < 95 ? 'night' : 'day';
+  setTimeout(applyDread, 80);
   if (mode === 'night') {
     a.lamps.forEach(p => {
       const s = document.createElement('i'), size = 7 + (p.l - 165) / 90 * 5;
@@ -74,7 +101,7 @@ function resize() {
   if (w !== W || h !== H) { W = cv.width = w; H = cv.height = h; }
 }
 function seed() {
-  const n = COUNT[level()] || 0;
+  const n = Math.round((COUNT[level()] || 0) * (1 - dread() * .55));
   motes = Array.from({ length: n }, () => ({
     x: Math.random(), y: mode === 'night' ? .3 + Math.random() * .65 : Math.random(),
     vx: (Math.random() - .5) * .006, vy: mode === 'night' ? (Math.random() - .5) * .004 : -.002 - Math.random() * .004,
@@ -119,6 +146,7 @@ new MutationObserver(() => {
   }
 }).observe(img, { attributes: true, attributeFilter: ['src'] });
 img.addEventListener('load', () => { setup(); });
+setTimeout(applyDread, 200);
 if (img.complete) setup();
 
 /* ---------- 4. Gợn chạm trên cảnh ---------- */
