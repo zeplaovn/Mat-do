@@ -1063,6 +1063,11 @@ function researchActiveSpots(){
  }
  return result;
 }
+function showHint(){
+ const ob=getObjective();
+ showModal(`<h2>Gợi ý</h2><div class="menu-status"><div class="menu-kick">VIỆC CẦN LÀM</div><div class="menu-ob-title">${escapeHTML(ob[0])}</div><div class="menu-ob-text">${escapeHTML(ob[1])}</div></div><p class="modal-note">Vẫn bí? Mở "Điểm tương tác" để xem mọi chỗ chạm được trong cảnh này, hoặc đọc lại Nhật ký.</p><div id="hint-actions" class="modal-buttons"></div>`,'GỢI Ý','hint');
+ const box=$('hint-actions');box.appendChild(modalButton('Điểm tương tác',()=>{hideModal();showScenePoints()}));box.appendChild(modalButton('Nhật ký',()=>{hideModal();showJournal()}));box.appendChild(modalButton('Đóng',hideModal));
+}
 function showScenePoints(){
  const points=SCENES[state.scene].spots.filter(h=>!h.req||state.flags[h.req]);
  const positions=researchActiveSpots();
@@ -1900,7 +1905,7 @@ function toggleSound(){state.sound=!state.sound;if(!state.sound)stopAmbience();e
 function updateContinue(){const existing=load();if(existing)syncAchievements(false,existing);$('btn-continue').hidden=!existing;}
 function newGame(){pendingMemories=[];state=initialState();geckoClock=GECKO_FIRST;chatScene=null;stopAmbience();hideModal();clearDialogue();$('title-screen').hidden=true;render();talk(introOf('BG01'));save()}
 function continueGame(){pendingMemories=[];state=load()||initialState();syncAchievements(false);geckoClock=GECKO_FIRST;chatScene=null;$('title-screen').hidden=true;hideModal();clearDialogue();render();if(state.flags.ending){state.flags.ending=null;save()}talk(state.flags.mo?[["Người kể chuyện","Ký ức năm 1988 tiếp tục. Mơ vẫn ở trong đêm hôm ấy."],["Mơ","Con nhớ rồi... mình đang tìm cách giúp mọi người."]]:[["Người kể chuyện","Hành trình tiếp tục. Những trang nhật ký vẫn còn lưu các manh mối bạn đã tìm thấy."],["Nguyệt","Tớ đã ghi lại hết rồi. Mình đi tiếp thôi, nhưng đừng ai tách nhóm."]]);}
-function mount(){$('btn-new-game').onclick=newGame;$('btn-continue').onclick=continueGame;$('btn-points').onclick=showScenePoints;$('btn-audio').onclick=toggleSound;$('btn-menu').onclick=showMenu;$('btn-journal').onclick=showJournal;$('modal-close').onclick=hideModal;$('dialogue-next').onclick=nextLine;
+function mount(){$('btn-new-game').onclick=newGame;$('btn-continue').onclick=continueGame;$('btn-points').onclick=showScenePoints;{const bh=$('btn-hint');if(bh)bh.onclick=showHint}$('btn-audio').onclick=toggleSound;$('btn-menu').onclick=showMenu;$('btn-journal').onclick=showJournal;$('modal-close').onclick=hideModal;$('dialogue-next').onclick=nextLine;
  $('modal-backdrop').addEventListener('click',e=>{if(e.target===$('modal-backdrop')&&modalType!=='ending')hideModal()});
  let torchRaf=0,torchEv=null;$('scene-stage').addEventListener('pointermove',e=>{torchEv=e;if(torchRaf)return;torchRaf=requestAnimationFrame(()=>{torchRaf=0;if(!$('scene-stage').classList.contains('torch-on'))return;const box=$('scene-stage').getBoundingClientRect();const x=Math.max(0,Math.min(100,(torchEv.clientX-box.left)/box.width*100));const y=Math.max(0,Math.min(100,(torchEv.clientY-box.top)/box.height*100));$('scene-stage').style.setProperty('--torch-x',x.toFixed(1)+'%');$('scene-stage').style.setProperty('--torch-y',y.toFixed(1)+'%')})});
  $('scene-stage').addEventListener('click',e=>{if(e.target===$('scene-stage')||e.target===$('hotspots')){if(!dialogueOpen)toast(sceneLook())}});
