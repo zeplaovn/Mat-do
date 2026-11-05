@@ -8,18 +8,6 @@ const store = {
 };
 const RM = () => !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
 
-/* ---------- 1. Màn Lưu ý: hiện một lần trên mỗi thiết bị ---------- */
-const NOTICE_KEY = 'lnrt-notice-v1';
-const notice = $('notice');
-if (notice && !store.get(NOTICE_KEY)) {
-  notice.hidden = false;
-  const ok = $('notice-ok');
-  const close = () => { store.set(NOTICE_KEY, '1'); notice.hidden = true; const b = $('btn-new-game'); try { b && b.focus({ preventScroll: true }); } catch (_) {} };
-  ok.addEventListener('click', close);
-  setTimeout(() => { try { ok.focus({ preventScroll: true }); } catch (_) {} }, 50);
-  notice.addEventListener('keydown', e => { if (e.key === 'Tab') { e.preventDefault(); ok.focus(); } });
-}
-
 /* ---------- 2. Tiêu đề chương ---------- */
 const chapterEl = $('chapter-label'), card = $('chapter-card');
 let lastChapter = null, cardTimer = 0;
@@ -65,7 +53,7 @@ function place(el, msg) {
 }
 function busy() {
   const t = $('title-screen'), d = $('dialogue'), m = $('modal-backdrop'), i = $('intro');
-  return document.hidden || document.documentElement.classList.contains('is-loading') || (notice && !notice.hidden) ||
+  return document.hidden || document.documentElement.classList.contains('is-loading') || (($('notice-screen')||{}).hidden===false) ||
     (t && !t.hidden) || (d && !d.hidden) || (m && !m.hidden) || (i && !i.hidden) || !!document.querySelector('.scene-stage.cam-on');
 }
 function tick() {
