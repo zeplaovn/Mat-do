@@ -741,7 +741,7 @@ function renderSidebar(){$('inventory-grid').replaceChildren(...state.items.map(
  b.appendChild(itemArt(id,'dock-art'));if(info.relic){const dot=document.createElement('span');dot.className='dock-dot';b.appendChild(dot)}
  const fragment={fragA:'1',fragB:'2',fragC:'3'}[id];if(fragment){const badge=document.createElement('span');badge.className='dock-fragment';badge.textContent=fragment;badge.setAttribute('aria-hidden','true');b.appendChild(badge)}
  b.title=info.name;
- b.addEventListener('click',()=>selectItem(id));return b}));
+ b.addEventListener('click',()=>selectItem(id));return b}),...Array.from({length:Math.max(0,5-state.items.length)},()=>{const e=document.createElement('span');e.className='dock-empty';e.setAttribute('aria-hidden','true');return e}));
  const sel=state.selectedItem&&ITEMS[state.selectedItem],box=$('selected-item');box.hidden=!sel;box.classList.toggle('has-target',false);
  if(!sel){box.textContent='';return}
  const targets=USE_ON[state.selectedItem],here=targets&&SCENES[state.scene].spots.some(h=>targets.includes(h.action)&&(!h.req||state.flags[h.req]));
