@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="weather.css">
   <link rel="stylesheet" href="assets/research/research.css">
   <link rel="stylesheet" href="skin.css">
+  <link rel="stylesheet" href="title-screen.css">
   <link rel="preload" as="image" href="assets/logo.webp">
   <script src="guard.js"></script>
   <script src="perf.js"></script>
@@ -27,6 +28,7 @@
   <script src="game.js" defer></script>
   <script src="horror.js" defer></script>
   <script src="weather.js" defer></script>
+  <script src="notice.js" defer></script>
   <script src="intro.js" defer></script>
 </head>
 <body>
@@ -46,7 +48,7 @@
     </div>
   </div>
 </div>
-<div class="app-shell" id="app-shell">
+<div class="app-shell" id="app-shell" inert>
   <div id="scene-backdrop" class="scene-backdrop" aria-hidden="true"></div>
 
   <!-- Màn chơi: khung 16:9 lớn nhất vừa với màn hình, căn giữa -->
@@ -110,17 +112,39 @@
   <div hidden aria-hidden="true"><button id="btn-audio" type="button" aria-pressed="true">♪</button></div>
 </div>
 
-<div id="title-screen" class="title-screen" role="dialog" aria-modal="true" aria-label="Màn hình mở đầu">
-  <div class="title-bg" aria-hidden="true"></div><div class="title-content">
-    <div class="eyebrow-line"><span>TRUYỆN KINH DỊ DÂN GIAN VIỆT NAM</span></div>
-    <div class="title-sigil">◈</div>
-    <h1 class="title-logo"><img src="assets/logo.webp" alt="Lời Nguyền Rừng Thiêng" draggable="false"></h1>
-    <p class="title-subtitle">BÍ MẬT BIỆT THỰ VÂN HÒA</p>
-    <p class="title-description">Năm sinh viên. Một biệt thự bị lãng quên. Năm cái tên chưa từng được trả lại.<br>Đừng trả lời khi bóng tối gọi tên bạn.</p>
-    <div class="title-buttons"><button class="primary-btn" id="btn-new-game" type="button">BẮT ĐẦU ĐIỀU TRA <span>→</span></button><button class="secondary-btn" id="btn-continue" type="button" hidden>TIẾP TỤC LẦN CHƠI</button><a class="secondary-btn" id="btn-trailer" href="trailer.html" style="text-decoration:none;display:inline-flex;align-items:center">▶ XEM TRAILER</a></div>
-    <div class="title-footer">POINT & CLICK <span>◆</span> KHÁM PHÁ · GIẢI ĐỐ · 4 KẾT THÚC <span>◆</span> CHƠI TRÊN TRÌNH DUYỆT</div>
+<div id="title-screen" class="title-screen" role="dialog" aria-modal="true" aria-label="Màn hình chính" aria-hidden="true" inert>
+  <div class="title-bg" aria-hidden="true"></div>
+  <div class="title-content">
+    <p class="title-kicker">MỘT CÂU CHUYỆN KINH DỊ DÂN GIAN VIỆT NAM</p>
+    <div class="title-heading">
+      <p class="title-eyebrow">BÍ MẬT BIỆT THỰ VÂN HÒA</p>
+      <h1 class="title-logo"><img src="assets/logo.webp" alt="Lời Nguyền Rừng Thiêng" draggable="false"></h1>
+      <p class="title-description">Đừng trả lời khi bóng tối gọi tên bạn.</p>
+    </div>
+    <div class="title-bottom">
+      <div class="title-buttons">
+        <button class="primary-btn" id="btn-new-game" type="button">Chơi ngay</button>
+        <div class="title-secondary-actions">
+          <button class="secondary-btn" id="btn-continue" type="button" hidden>Tiếp tục</button>
+          <a class="secondary-btn" id="btn-trailer" href="trailer.html">Xem trailer</a>
+        </div>
+      </div>
+      <p class="title-footer">KHÁM PHÁ <span>·</span> GIẢI ĐỐ <span>·</span> TÌM LỐI THOÁT</p>
+    </div>
   </div>
 </div>
+
+<section id="notice-screen" class="notice-screen" role="dialog" aria-modal="true" aria-labelledby="notice-title" aria-describedby="notice-copy">
+  <div class="notice-content">
+    <p class="notice-kicker">LỜI NGUYỀN RỪNG THIÊNG</p>
+    <h2 id="notice-title">Lưu ý</h2>
+    <div id="notice-copy" class="notice-copy">
+      <p>Trò chơi có yếu tố kinh dị, cảnh hù dọa bất ngờ, ánh sáng nhấp nháy và âm thanh lớn. Một số chi tiết lấy cảm hứng từ văn hóa dân gian; câu chuyện và nhân vật đều là hư cấu.</p>
+      <p>Nếu bạn nhạy cảm với những nội dung này, hãy cân nhắc trước khi tiếp tục. Người dưới 18 tuổi nên chơi cùng người lớn.</p>
+    </div>
+    <button id="notice-confirm" class="notice-confirm" type="button">Xác nhận</button>
+  </div>
+</section>
 
 <div id="intro" class="intro" hidden tabindex="-1" role="dialog" aria-modal="true" aria-label="Mở đầu câu chuyện">
   <div class="intro-bg" aria-hidden="true"><img id="intro-img-a" alt="" draggable="false"><img id="intro-img-b" alt="" draggable="false"></div>
