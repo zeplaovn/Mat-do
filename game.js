@@ -442,6 +442,15 @@ const initialState = () => ({
 });
 let state=initialState();
 let dialogueOpen=false;let modalType=null;let modalReturnFocus=null;let toastTimer=null;
+/* Ảnh góc nhìn riêng cho những cuộc gặp và vật chứng quan trọng. */
+const INTERACTION_VIEWS={
+ warning:{scene:'BG01',file:'POV_Ba_Ban_Nuoc.webp',subject:'Bà bán nước',alt:'Bà bán nước ngồi đối diện bên bàn trà'},
+ huu:{scene:'BG45',file:'POV_Ong_Huu.webp',subject:'Ông Hựu',alt:'Ông Hựu ngồi đối diện bên bàn xem quẻ và ba đồng xu'},
+ shrine:{scene:'BG05',file:'POV_Bat_Huong.webp',alt:'Bát hương trước miếu cây đa'},
+ marker:{scene:'BG07',file:'POV_Cot_Moc.webp',alt:'Cột mốc đá có bốn vòng khắc'},
+ well:{scene:'BG09',file:'POV_Gieng_Da.webp',alt:'Nhìn gần miệng giếng đá trong sân'}
+};
+let activeInteractionView=null,interactionViewToken=0,interactionPan=null;
 /* Thành tựu tồn tại qua nhiều lần chơi, riêng với bản lưu của từng cuộc điều tra. */
 const ACHIEVEMENT_KEY='loi-nguyen-rung-thieng-achievements-v1';
 const ACHIEVEMENTS=[
@@ -565,13 +574,24 @@ function say(who,text){dlgQueue=[];showLine(who,text);setNextLabel()}
 function talk(lines,cb){const l=(lines||[]).filter(Boolean);if(!l.length)return;say(l[0][0],l[0][1]);dlgQueue=l.slice(1);dlgCb=cb||null;setNextLabel()}
 function setNextLabel(){const b=$('dialogue-next');if(b)b.innerHTML=dlgQueue.length?'TIẾP <span>›</span>':'ĐÓNG <span>✕</span>'}
 function nextLine(){if(window.finishTyping&&window.finishTyping())return;if(dlgQueue.length){const [w,t]=dlgQueue.shift();showLine(w,t);setNextLabel()}else{const cb=dlgCb;clearDialogue();if(cb)cb();setTimeout(drainMemories,0)}}
-function showLine(who,text){const pf=PORTRAITS[who],isPerson=!!pf;
+function setDialoguePortrait(who){const pf=PORTRAITS[who],isPerson=!!pf&&(!activeInteractionView||activeInteractionView.subject!==who);
  $('dialogue-portrait-wrap').hidden=!isPerson;$('dialogue').classList.toggle('has-portrait',isPerson);$('dialogue-symbol').hidden=isPerson;
- if(isPerson){$('dialogue-portrait').src=PORTRAIT(pf);$('dialogue-portrait').alt='Chân dung '+who}
+ if(isPerson){$('dialogue-portrait').src=PORTRAIT(pf);$('dialogue-portrait').alt='Chân dung '+who}}
+function showLine(who,text){setDialoguePortrait(who);
 $('dialogue-speaker').textContent=who;$('dialogue-text').textContent=text;
  $('chatter').classList.remove('on');
  $('dialogue').hidden=false;dialogueOpen=true;setDialogueMode(true)}
-function clearDialogue(){dlgQueue=[];dlgCb=null;$('dialogue').hidden=true;dialogueOpen=false;setDialogueMode(false)}
+function resetSceneScroll(){for(const id of ['app-shell','scene-stage']){const el=$(id);if(el){el.scrollTop=0;el.scrollLeft=0}}}
+function clearInteractionView(){interactionViewToken++;const prior=activeInteractionView,pan=interactionPan;activeInteractionView=null;interactionPan=null;const view=$('interaction-view'),shell=$('app-shell'),backdrop=$('scene-backdrop'),column=document.querySelector&&document.querySelector('.game-column');if(view){view.hidden=true;view.onload=null;view.onerror=null}if(shell)shell.classList.remove('interaction-active');if(backdrop&&SCENES[state.scene])backdrop.style.backgroundImage=`url("${BG(SCENES[state.scene].bg||state.scene)}")`;resetSceneScroll();if(column&&prior&&prior.scene===state.scene&&Number.isFinite(pan))column.scrollLeft=pan}
+function showInteractionView(action,scene){
+ const shot=INTERACTION_VIEWS[action],view=$('interaction-view'),shell=$('app-shell');
+ if(!shot||!view||!shell||!dialogueOpen||modalType||shot.scene!==scene||state.scene!==scene)return;
+ const token=++interactionViewToken;
+ const reveal=()=>{if(token!==interactionViewToken||!dialogueOpen||state.scene!==scene)return;if(!activeInteractionView){const column=document.querySelector&&document.querySelector('.game-column');interactionPan=column?column.scrollLeft:null}activeInteractionView=shot;view.hidden=false;shell.classList.add('interaction-active');const backdrop=$('scene-backdrop');if(backdrop)backdrop.style.backgroundImage=`url("${ROOT}props/${shot.file}")`;resetSceneScroll();setDialoguePortrait($('dialogue-speaker').textContent)};
+ view.onload=reveal;view.onerror=()=>{if(token===interactionViewToken)clearInteractionView()};view.alt=shot.alt;view.src=ROOT+'props/'+shot.file;
+ if(view.complete&&view.naturalWidth)reveal();
+}
+function clearDialogue(){clearInteractionView();dlgQueue=[];dlgCb=null;$('dialogue').hidden=true;dialogueOpen=false;setDialogueMode(false)}
 /* ================= LỜI NGƯỜI XUNG QUANH (nghe lỏm) =================
    Người trong cảnh nói chuyện với nhau. Chưa có tệp thoại nên hiện chữ nhỏ ở góc màn hình, không chặn thao tác,
    tự ẩn khi có hội thoại/bảng mở. Mỗi đoạn chỉ lặp lại sau khi đã nghe hết các đoạn khác của cảnh đó. */
@@ -665,7 +685,7 @@ function centerScene(){
  if(!state.flags.panHint&&state.visited&&state.visited.length>1){state.flags.panHint=true;save();toast('Vuốt ngang để nhìn quanh cảnh.')}
 }
 if(typeof window.addEventListener==='function')window.addEventListener('resize',()=>{if($('title-screen').hidden)centerScene()});
-function render(){centerScene();const s=SCENES[state.scene],bg=BG(s.bg||state.scene),image=$('scene-image');if(image.getAttribute('src')!==bg)image.src=bg;image.alt='Cảnh '+state.scene+': '+s.name;$('scene-backdrop').style.backgroundImage=`url("${bg}")`;
+function render(){centerScene();const s=SCENES[state.scene],bg=BG(s.bg||state.scene),image=$('scene-image');if(image.getAttribute('src')!==bg)image.src=bg;image.alt='Cảnh '+state.scene+': '+s.name;$('scene-backdrop').style.backgroundImage=`url("${activeInteractionView?ROOT+'props/'+activeInteractionView.file:bg}")`;
  $('scene-title').textContent=s.name;$('scene-stage').dataset.tint=s.tint||'';$('clock-label').textContent=s.time;$('chapter-label').textContent=state.flags.mo?'CHƯƠNG 9B · ĐÊM 17/3/1988':(s.chapter==='CHƯƠNG 10 · NĂM CÁI TÊN'&&arcOn())?'CHƯƠNG 9B · BÁT CƠM NÓNG':(questOn()&&/^CHƯƠNG 10/.test(s.chapter)?'CHƯƠNG 10 · NĂM CÁI TÊN':s.chapter);$('scene-index').textContent=`${state.scene} / ${Object.keys(SCENES).length}`;
  $('hotspots').replaceChildren(...[...s.spots.filter(h=>!h.req||state.flags[h.req]),...researchActiveSpots()].map(makeHotspot));
  $('scene-stage').classList.toggle('torch-on',state.flashlight&&parseInt(state.scene.slice(2))>=18);$('scene-stage').classList.toggle('has-selection',!!state.selectedItem);
@@ -698,7 +718,7 @@ function getObjective(){
 }
 
 function selectItem(id){if(BOOKS[id]){openResearchBook(id);return}if(id==='flashlight'){state.flashlight=!state.flashlight;toast(state.flashlight?'Đèn pin: BẬT':'Đèn pin: TẮT');playSound('switch',.19);render();save();return}else if(id==='notebook'){showJournal();return}else if(READ_ITEMS[id]){showDoc(READ_ITEMS[id]);return}else if(id==='camera'){}else if(id==='lighter'){toast('Chiếc bật lửa cũ vẫn còn gas.')}state.selectedItem=state.selectedItem===id?null:id;render();save();if(id==='camera'&&state.selectedItem==='camera')toast('Máy ảnh: '+CAM_MODES[state.camMode].label+' · nhấn V để đổi chế độ')}
-function act(action){if(modalType)return;clearDialogue();playSound('steps',.5,0,action.startsWith('travel:')?2.4:1.6);if(nameClueAt(action)){renderSidebar();if(action==='kidDrawing')showSpotCloseup(action);return}if(action.startsWith('travel:')){const to=action.slice(7);if(to==='BG06'&&!has('incense')&&!state.used.includes('incense')){say('Tuyết','Khoan đã... tớ thấy bất an lắm. Mình xem kỹ chỗ này trước khi vào rừng đã.');return}go(to);return}
+function act(action){if(modalType)return;clearDialogue();const origin=state.scene;playSound('steps',.5,0,action.startsWith('travel:')?2.4:1.6);if(nameClueAt(action)){renderSidebar();if(action==='kidDrawing')showSpotCloseup(action);else showInteractionView(action,origin);return}if(action.startsWith('travel:')){const to=action.slice(7);if(to==='BG06'&&!has('incense')&&!state.used.includes('incense')){say('Tuyết','Khoan đã... tớ thấy bất an lắm. Mình xem kỹ chỗ này trước khi vào rừng đã.');return}go(to);return}
  if(action.startsWith('inspect:')){inspect(action.slice(8));if(!modalType)showSpotCloseup(action);return}
  if(action.startsWith('researchBook:')){collectResearchBook(action.slice(13));return}
  if(action.startsWith('researchPuzzle:')){openResearchPuzzle(action.slice(15));return}
@@ -782,14 +802,14 @@ case 'exitForest':if(!state.visited.includes('BG11')){say('Đông','Mới tới 
   case 'forestAltar':forestAltar();break;
   default:toast('Chưa có tương tác ở vị trí này.');
  }
- renderSidebar();save();if((action==='takeDoll'||action==='comb')&&!modalType)showSpotCloseup(action);}
+ renderSidebar();save();if((action==='takeDoll'||action==='comb')&&!modalType)showSpotCloseup(action);else showInteractionView(action,origin);}
 const SPECIAL_CLOSEUPS={
  kidDrawing:{file:'Mo_Tranh_Sap.webp',caption:'Dưới chân người phụ nữ có dòng chữ trẻ con: “cô Lụa”.',drawing:true},
  takeDoll:{file:'Mo_Bup_Be.webp',caption:'Búp bê vải được khâu và vá bằng tay.'},
  comb:{file:'Mo_Tram_Go.webp',caption:'Chiếc trâm gỗ gãy nằm trong chiếc nôi cũ.'}
 };
 function closeupInfo(h){
- const special=SPECIAL_CLOSEUPS[h.action];if(special)return {special};
+ const special=SPECIAL_CLOSEUPS[h.action]||INTERACTION_VIEWS[h.action];if(special)return {special};
  /* Phóng từ nền cảnh, giữ tâm vùng tương tác trong khung và không vượt mép ảnh. */
  const zoom=Math.max(1.35,Math.min(3,70/Math.max(h.w,h.h))),position=(center)=>Math.max(0,Math.min(100,(center*zoom-.5)/(zoom-1)*100));
  return {zoom,x:position((h.x+h.w/2)/100),y:position((h.y+h.h/2)/100)};
@@ -797,7 +817,7 @@ function closeupInfo(h){
 function showSpotCloseup(action,spot){
  const scene=SCENES[state.scene],h=spot||scene.spots.find(x=>x.action===action);if(!h)return;
  const info=closeupInfo(h),label=escapeHTML(h.label);let art,caption;
- if(info.special){const s=info.special;art=`<div class="prop-view"><div class="detail-art"><img src="${ROOT}props/${s.file}" alt="${label}" draggable="false">${s.drawing?'<span class="drawing-label" aria-hidden="true">cô Lụa</span>':''}</div></div>`;caption=s.caption}
+ if(info.special){const s=info.special;art=`<div class="prop-view"><div class="detail-art"><img src="${ROOT}props/${s.file}" alt="${label}" draggable="false">${s.drawing?'<span class="drawing-label" aria-hidden="true">cô Lụa</span>':''}</div></div>`;caption=s.caption||''}
  else{const bg=BG(scene.bg||state.scene);art=`<div class="scene-closeup" role="img" aria-label="${label}" style="background-image:url('${bg}');background-size:${info.zoom*100}% auto;background-position:${info.x}% ${info.y}%"></div>`;caption=''}
  showModal(`<h2>${label}</h2>${art}${caption?`<p class="modal-note">${escapeHTML(caption)}</p>`:''}<div id="closeup-actions" class="modal-buttons"></div>`,'QUAN SÁT GẦN','closeup');
  $('closeup-actions').appendChild(modalButton('Đóng',hideModal));
@@ -1578,7 +1598,7 @@ function folkDials({title,intro,inscription,choices,solution,hint,onDone,referen
  let values=[null,null,null,null],done=false;
  const paper=reference&&state.notes.find(n=>n.id==='folkPrint');
  const referenceHTML=paper?`<details class="folk-reference"><summary>Xem mảnh giấy dó</summary><div class="doc-paper">${escapeHTML(paper.body).replace(/\n/g,'<br>')}</div>${folkPrintChart()}</details>`:'';
- showModal(`<div class="folk-puzzle${reference?' is-stone':''}"><h2>${title}</h2><p>${intro}</p><p class="folk-inscription">${inscription}</p><div class="folk-slots" id="folk-slots"></div><p class="modal-note" id="folk-status" aria-live="polite">Chạm từng ô để đổi hình, rồi kiểm tra.</p>${referenceHTML}<div class="modal-buttons" id="folk-actions"></div></div>`,'CÂU ĐỐ · DẤU MIẾU','folk');
+ showModal(`<div class="folk-puzzle${reference?' is-stone':''}"><h2>${title}</h2>${reference?`<img class="folk-location-art" src="${ROOT}props/POV_Cot_Moc.webp" alt="Cột mốc đá giữa rừng" draggable="false">`:''}<p>${intro}</p><p class="folk-inscription">${inscription}</p><div class="folk-slots" id="folk-slots"></div><p class="modal-note" id="folk-status" aria-live="polite">Chạm từng ô để đổi hình, rồi kiểm tra.</p>${referenceHTML}<div class="modal-buttons" id="folk-actions"></div></div>`,'CÂU ĐỐ · DẤU MIẾU','folk');
  const draw=()=>{const box=$('folk-slots');box.replaceChildren();values.forEach((id,i)=>{
   const b=document.createElement('button');b.type='button';b.className='folk-slot';b.setAttribute('aria-label','Vị trí '+(i+1)+': '+(id?FOLK_MARKS[id].label:'chưa chọn'));
   b.innerHTML=`<span class="folk-number">${i+1}</span>${id?folkGlyph(id):'<span class="folk-empty">?</span>'}<small>${id?FOLK_MARKS[id].label:'Chọn hình'}</small>`;
