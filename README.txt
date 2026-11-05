@@ -2,6 +2,10 @@ LỜI NGUYỀN RỪNG THIÊNG — BÍ MẬT BIỆT THỰ VÂN HÒA
 BẢN GAME WEB POINT-AND-CLICK CÓ THỂ CHƠI (2026)
 ====================================================
 
+CẬP NHẬT 05/11/2026 — DỌN DẸP
+- Đã xóa 8 nhánh cục bộ update/* (đều đã gộp vào main); remote chỉ còn main.
+- Giữ nguyên toàn bộ file game; không xóa tài nguyên đang dùng.
+
 CẬP NHẬT TRẢI NGHIỆM 04/11/2026
 --------------------------------
 - Trailer ở trailer.html khôi phục chuỗi cảnh, lời dẫn và chân dung của bản gốc;
