@@ -1,0 +1,74 @@
+/* Ảnh vật thể cho câu đố; chữ, kim và các nút vẫn do game vẽ và điều khiển. */
+.puzzle-cipher-art,.puzzle-clock-art,.puzzle-drawer-art,.puzzle-hatch-art {
+  position:relative;
+  width:min(100%,640px);
+  aspect-ratio:1279/720;
+  margin:.8rem auto;
+  overflow:hidden;
+  border:1px solid #765539;
+  border-radius:5px;
+  background-color:#20170f;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  box-shadow:0 12px 30px #0008;
+}
+.puzzle-cipher-art{background-image:url('assets/puzzles/cipher-frame.webp')}
+.puzzle-cipher-art .cipher-line{
+  position:absolute;
+  left:16%;top:28%;width:35%;
+  margin:0;padding:.45em;
+  border:1px solid #654f39;
+  background:rgba(220,197,157,.9);
+  color:#26180e;
+  font:700 clamp(11px,2.5vw,19px)/1.35 Georgia,serif;
+  letter-spacing:.04em;
+  overflow-wrap:anywhere;
+  text-shadow:none;
+}
+.puzzle-clock-art{background-image:url('assets/puzzles/clock-mechanism.webp')}
+.puzzle-clock-art .clock-wrap{position:absolute;left:50%;top:44.8%;width:31%;margin:0;transform:translate(-50%,-50%)}
+.puzzle-clock-art .mini-clock{display:block;width:100%;max-width:none;height:auto}
+.puzzle-paper-art{
+  margin:.8rem 0;padding:clamp(16px,4vw,34px);
+  border:1px solid #765539;border-radius:5px;
+  background:linear-gradient(#120b0670,#120b0670),url('assets/puzzles/torn-papers.webp') center/cover;
+  box-shadow:0 12px 30px #0008;
+}
+.puzzle-paper-art .asm-strips{margin:0}
+.puzzle-paper-art .asm-strip{background:linear-gradient(#dfcba0,#bfaa80);color:#281b10;box-shadow:0 4px 12px #0008}
+.puzzle-drawer-art{display:grid;place-items:center;background-image:url('assets/puzzles/toy-drawer.webp')}
+.puzzle-drawer-art .slot-row{display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-around;width:82%;gap:clamp(4px,1.3vw,9px);margin:0}
+.puzzle-drawer-art .slot{
+  flex:0 1 96px;min-width:0;min-height:0;width:auto;aspect-ratio:1;
+  background:rgba(22,12,7,.72);border:1px solid #bb9367;border-radius:50%;
+  box-shadow:inset 0 3px 12px #000c;
+}
+.puzzle-drawer-art .slot.full{background:rgba(37,23,12,.8)}
+.puzzle-hatch-art{display:flex;align-items:center;justify-content:center;gap:clamp(3px,1.3vw,9px);padding:0 10%;background-image:url('assets/puzzles/hatch-plate.webp')}
+.puzzle-hatch-art .gl-dial{
+  flex:0 1 64px;min-width:0;width:12%;aspect-ratio:1;
+  border:2px solid #a28258;border-radius:50%;
+  background:radial-gradient(circle at 35% 28%,#6d5637,#302719 65%,#17120d);
+  box-shadow:inset 0 0 10px #000b,0 2px 5px #000b;
+}
+.puzzle-hatch-art .gl-dial svg{width:78%;height:78%}
+.research-puzzle-art,.puzzle-context-art{
+  display:block;width:100%;max-height:180px;aspect-ratio:2.5/1;object-fit:cover;
+  margin:0 0 16px;border:1px solid #765539;border-radius:4px;box-shadow:0 8px 20px #0007;
+}
+.ritual-art-option{display:flex;align-items:center;justify-content:flex-start;gap:12px}
+.ritual-art-icon{display:grid;place-items:center;flex:none;width:44px;height:44px;font-size:25px}
+.ritual-art-icon img{display:block;max-width:100%;max-height:100%;object-fit:contain}
+@media(max-width:480px){
+  .puzzle-cipher-art .cipher-line{left:14%;top:25%;width:40%;padding:.3em;font-size:clamp(13px,3.4vw,15px)}
+  .puzzle-hatch-art{padding:0 8%;gap:4px}
+  .puzzle-hatch-art .gl-dial{width:15%;min-width:38px}
+  .puzzle-drawer-art .slot small{font-size:8px}
+  .research-puzzle-art,.puzzle-context-art{max-height:130px}
+}
+@media(max-height:500px) and (orientation:landscape){
+  .puzzle-cipher-art,.puzzle-clock-art,.puzzle-drawer-art,.puzzle-hatch-art{width:min(100%,320px)}
+  .puzzle-cipher-art .cipher-line{left:14%;top:25%;width:40%;font-size:14px}
+  .research-puzzle-art,.puzzle-context-art{max-height:110px}
+}
