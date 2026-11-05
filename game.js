@@ -616,7 +616,7 @@ function showMemories(){
 function say(who,text){dlgQueue=[];showLine(who,text);setNextLabel()}
 function talk(lines,cb){const l=(lines||[]).filter(Boolean);if(!l.length)return;say(l[0][0],l[0][1]);dlgQueue=l.slice(1);dlgCb=cb||null;setNextLabel()}
 function setNextLabel(){const b=$('dialogue-next');if(b)b.innerHTML=dlgQueue.length?'TIẾP <span>›</span>':'ĐÓNG <span>✕</span>'}
-function nextLine(){if(window.finishTyping&&window.finishTyping())return;if(dlgQueue.length){const [w,t,onShow]=dlgQueue.shift();if(typeof onShow==='function')onShow();showLine(w,t);setNextLabel()}else{const cb=dlgCb;clearDialogue();if(cb)cb();setTimeout(drainMemories,0)}}
+function nextLine(){if(window.isTyping&&window.isTyping())return;if(dlgQueue.length){const [w,t,onShow]=dlgQueue.shift();if(typeof onShow==='function')onShow();showLine(w,t);setNextLabel()}else{const cb=dlgCb;clearDialogue();if(cb)cb();setTimeout(drainMemories,0)}}
 function setDialoguePortrait(who){const pf=PORTRAITS[who],isPerson=!!pf&&(!activeInteractionView||activeInteractionView.subject!==who);
  $('dialogue-portrait-wrap').hidden=!isPerson;$('dialogue').classList.toggle('has-portrait',isPerson);$('dialogue-symbol').hidden=isPerson;
  if(isPerson){$('dialogue-portrait').src=PORTRAIT(pf);$('dialogue-portrait').alt='Chân dung '+who}}
@@ -997,13 +997,15 @@ function showJournal(){
  </div>`,'NHẬT KÝ ĐIỀU TRA','journal');
  $('bk-left').innerHTML=bookPageHTML(book.cur);$('bk-right').innerHTML=bookPageHTML(per===2?book.cur+1:book.cur);
  bookCount();
- $('bk-close').onclick=hideModal;$('bk-prev').onclick=()=>bookTurn(-1);$('bk-next').onclick=()=>bookTurn(1);
- $('bk-left').onclick=()=>bookTurn(-1);$('bk-right').onclick=()=>bookTurn(1);
+ $('bk-close').onclick=hideModal;$('bk-prev').onclick=()=>{if(!$('bk').classList.contains('closed'))bookTurn(-1)};$('bk-next').onclick=()=>{if(!$('bk').classList.contains('closed'))bookTurn(1)};
+ $('bk-left').onclick=()=>{if(!$('bk').classList.contains('closed'))bookTurn(-1)};$('bk-right').onclick=()=>{if(!$('bk').classList.contains('closed'))bookTurn(1)};
  playSound('page',.28);
  const bk=$('bk'),rm=window.Perf&&Perf.RM;
- setTimeout(()=>{if(!book)return;bk.classList.remove('closed')},rm?0:380);
- setTimeout(()=>{if(!book)return;bk.classList.add('opened')},rm?0:1700);
- $('bk-next').focus({preventScroll:true})}
+ const openBook=()=>{if(!book||!bk.classList.contains('closed'))return;bk.classList.remove('closed');playSound('page',.28);setTimeout(()=>{if(book)bk.classList.add('opened')},rm?0:1300)};
+ bk.classList.add('cover-wait');$('bk-cover').setAttribute('aria-hidden','false');
+ $('bk-cover').onclick=openBook;$('bk-cover').setAttribute('role','button');$('bk-cover').tabIndex=0;
+ $('bk-cover').onkeydown=ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();openBook()}};
+ $('bk-cover').focus({preventScroll:true})}
 function showHint(){
  const ob=getObjective();
  showModal(`<h2>Gợi ý</h2><p>${escapeHTML(ob[1])}</p><p class="modal-note">Hãy đọc lại nhật ký và các tư liệu đã thu thập.</p><div id="hint-actions" class="modal-buttons"></div>`,'GỢI Ý','hint');
