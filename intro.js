@@ -89,7 +89,10 @@ function revealTitle() {
   if (loaderClosed) return;
   loaderClosed = true; delete loader.dataset.awaitingMusic; loader.classList.add('done');
   root.classList.remove('is-loading', 'is-busy');
-  try { $('btn-new-game').focus({ preventScroll: true }); } catch (_) {}
+  try {
+    const notice = $('notice-screen');
+    (notice && !notice.hidden ? $('notice-confirm') : $('btn-new-game')).focus({ preventScroll: true });
+  } catch (_) {}
   Perf.watch();
   setTimeout(() => loader.remove(), 1000);
 }

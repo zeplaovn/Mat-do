@@ -151,34 +151,9 @@ new MutationObserver(() => {
 new MutationObserver(() => { const e = document.querySelector('#modal-body .ending-number'); if (e && /BAD/.test(e.textContent)) scare(true); })
   .observe($('modal-body'), { childList: true });
 
-/* ---------- Màn hình tiêu đề: máu nhỏ giọt, cảnh báo ---------- */
+/* ---------- Màn hình tiêu đề: máu nhỏ giọt ---------- */
 for (let i = 0; i < 10; i++) { const d = document.createElement('i'); d.className = 'drip'; d.setAttribute('aria-hidden', 'true');
   d.style.left = (4 + Math.random() * 92) + '%'; d.style.setProperty('--len', (70 + Math.random() * 190) + 'px'); d.style.animationDelay = (-Math.random() * 9) + 's'; d.style.animationDuration = (7 + Math.random() * 6) + 's'; title.appendChild(d); }
-const warn = document.createElement('div'); warn.className = 'title-warn'; warn.setAttribute('role', 'note');
-const wi = document.createElement('span'); wi.className = 'warn-ico'; wi.setAttribute('aria-hidden', 'true'); wi.textContent = '⚠';
-const wt = document.createElement('span'); wt.className = 'warn-text';
-const wb = document.createElement('b'); wb.textContent = 'CẢNH BÁO';
-wt.append(wb, ' Có yếu tố kinh dị, hiệu ứng chớp sáng và âm thanh lớn. Nên đeo tai nghe, chơi trong phòng tối.');
-warn.append(wi, wt);
-const flare = document.createElement('div'); flare.className = 'title-flare'; flare.setAttribute('aria-hidden', 'true');
-title.insertBefore(flare, title.querySelector('.title-content'));
-$('btn-new-game').parentElement.before(warn);
-/* Ánh sáng nhấp nháy quanh cảnh báo: loạt chớp ngắn, ngẫu nhiên, cách nhau vài giây (không quá 3 lần chớp mỗi giây). */
-let wt2 = 0;
-function warnFlicker() {
-  clearTimeout(wt2);
-  if (RM() || !lighting() || title.hidden || busy() || document.hidden) { wt2 = setTimeout(warnFlicker, 900); return; }
-  const n = 1 + (Math.random() < .45 ? 1 : 0) + (Math.random() < .15 ? 1 : 0);
-  let i = 0;
-  const step = () => {
-    warn.classList.add('burst'); flare.classList.add('on');
-    setTimeout(() => { warn.classList.remove('burst'); flare.classList.remove('on'); if (++i < n) setTimeout(step, 230); }, 110);
-  };
-  step();
-  wt2 = setTimeout(warnFlicker, 2200 + Math.random() * 3800 + n * 400);
-}
-warnFlicker();
-
 /* Chớp sét trên màn hình chính: 1-2 nhát ngắn, cách nhau 5-12 giây, độ sáng vừa phải (an toàn hơn cho người nhạy sáng). */
 const bolt = document.createElement('div'); bolt.className = 'title-bolt'; bolt.setAttribute('aria-hidden', 'true');
 title.insertBefore(bolt, title.querySelector('.title-content'));
