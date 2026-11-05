@@ -43,6 +43,8 @@ for(const p of Object.values(qa.RESEARCH_PUZZLES)){
  assert.equal(modal.type,'research-need',`${p.id}: missing source must block the puzzle`);
  assert.ok(!(state.flags.researchSolved||[]).includes(p.id));state.items.push(missing);
  qa.openResearchPuzzle(p.id);assert.equal(modal.type,'research-puzzle',`${p.id}: should open with its sources`);
+ const art=modal.html.match(/class="research-puzzle-art" src="([^"]+)"/);
+ assert.ok(art&&fs.existsSync(path.join(root,art[1])),`${p.id}: the puzzle image must exist`);
  let wrong;
  if(p.kind==='code')wrong=p.answer==='0000'?'1111':'0000';
  else if(p.kind==='choice')wrong=p.options.find(x=>x!==p.answer);
