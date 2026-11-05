@@ -688,7 +688,24 @@ function nextPop(){const id=popQueue.shift();if(!id){popBusy=false;return}popBus
  setTimeout(()=>{card.classList.remove('in');card.classList.add('out');setTimeout(()=>{card.remove();nextPop()},420)},3300)}
 function go(target){pendingMemories=[];if(target==='BG11'&&state.flags.lamAwake&&!state.flags.lamDone)target='BG23';if(!SCENES[target])return;const from=state.scene,first=!state.visited.includes(target);state.scene=target;if(first)state.visited.push(target);clearDialogue();hideModal();render();if(first&&(SCENES[target].intro||REVIEWED_INTROS[target]))talk(introOf(target));if(first&&(target==='BG18'||target==='BG19'))setTimeout(()=>playSound('knock',.13),2600);else if((from==='BG11'||from==='BG23')&&target==='BG10')playSound('door',.22);if(target==='BG44')setTimeout(()=>{if(state.scene==='BG44'&&!dialogueOpen&&!modalType)campTalk()},600);save();}
 function isTarget(h){const sel=state.selectedItem;return !!(sel&&USE_ON[sel]&&USE_ON[sel].includes(h.action))}
-function makeHotspot(h){const b=document.createElement('button');b.type='button';b.className='hotspot'+(isTarget(h)?' is-target':'');b.setAttribute('aria-label',h.label);b.title=h.label;b.style.left=h.x+'%';b.style.top=h.y+'%';b.style.width=h.w+'%';b.style.height=h.h+'%';const span=document.createElement('span');span.className='hotspot-label';span.textContent=h.label;b.appendChild(span);b.addEventListener('click',event=>{event.stopPropagation();act(h.action);});return b}
+/* Các biểu tượng chỉ mô tả loại tương tác; vùng chạm và hành động vẫn lấy từ dữ liệu cảnh. */
+const CONVERSATION_SPOTS=new Set(['warning','huu','fbMan','fbLua','campfire']);
+const PASSAGE_SPOTS=new Set(['frontDoor','basementDoor','exitForest','fbLeft','fbWell']);
+function hotspotKind(h){
+ const action=h.action,f=state.flags;
+ if(action.startsWith('travel:')||PASSAGE_SPOTS.has(action)||(action==='gate'&&f.gateOpened)||(action==='sealedWall'&&f.wallOpened)||(action==='storeDoor'&&f.storeOpen)||(action==='shrine'&&f.lamDone)||(action==='datDoor'&&f.datTrust))return 'travel';
+ if(CONVERSATION_SPOTS.has(action)||(action==='datDoor'&&!f.datTrust))return 'conversation';
+ return 'special';
+}
+function hotspotDirection(h){
+ const x=h.x+h.w/2,y=h.y+h.h/2;
+ if(y>=70&&/^(Trở|Quay|Lùi|Về|Rời)/i.test(h.label))return 'down';
+ if(x<33)return 'left';
+ if(x>67)return 'right';
+ return y>=78?'down':'up';
+}
+function hotspotClass(h){const kind=hotspotKind(h);return 'hotspot hotspot--'+kind+(kind==='travel'?' hotspot--'+hotspotDirection(h):'')+(isTarget(h)?' is-target':'')}
+function makeHotspot(h){const b=document.createElement('button');b.type='button';b.className=hotspotClass(h);b.setAttribute('aria-label',h.label);b.title=h.label;b.style.left=h.x+'%';b.style.top=h.y+'%';b.style.width=h.w+'%';b.style.height=h.h+'%';const span=document.createElement('span');span.className='hotspot-label';span.textContent=h.label;b.appendChild(span);b.addEventListener('click',event=>{event.stopPropagation();const selected=state.selectedItem;act(h.action);b.className=hotspotClass(h);const stage=$('scene-stage');if(stage&&selected!==state.selectedItem)stage.classList.toggle('has-selection',!!state.selectedItem)});return b}
 /* ================= MÁY ẢNH / MÁY QUAY: bộ lọc nhìn đêm (camera.css) ================= */
 const CAM_MODES={night:{label:'NIGHT VISION',sub:'NV · IR ILLUMINATOR ON'},ir:{label:'INFRARED',sub:'IR 850 nm · MONO'},thermal:{label:'THERMAL',sub:'HEAT MAP · AUTO GAIN'},vhs:{label:'CAMCORDER',sub:'VHS · LP · TRACKING'}};
 const CAM_ORDER=['night','ir','thermal','vhs'];
