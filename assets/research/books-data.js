@@ -271,7 +271,7 @@ window.LNRT_RESEARCH = {
     },
     "book_kyhieu": {
       "id": "book_kyhieu",
-      "title": "Bảng Ký Hiệu Năm Người",
+      "title": "Bảng Ký Hiệu Người Làm Công",
       "scene": "BG28",
       "spot": [
         66,
@@ -279,7 +279,7 @@ window.LNRT_RESEARCH = {
         21,
         13
       ],
-      "summary": "Bảng ký hiệu năm người dùng để đánh dấu trang đơn chung.",
+      "summary": "Bảng ký hiệu được dùng để đánh dấu trang đơn chung.",
       "pages": [
         [
           "Trang đầu",
@@ -485,7 +485,7 @@ window.LNRT_RESEARCH = {
         20,
         13
       ],
-      "summary": "Sổ nhỏ ghi tên những người được tưởng nhớ bên năm nấm mộ không bia.",
+      "summary": "Sổ nhỏ ghi tên những người được tưởng nhớ bên những nấm mộ không bia.",
       "pages": [
         [
           "Lời ghi",
@@ -764,7 +764,7 @@ window.LNRT_RESEARCH = {
         "Nước sạch",
         "Bát máu",
         "Hoa",
-        "Năm vòng phấn"
+        "Những vòng phấn"
       ],
       "clue": "Mâm tạ rừng nguyên bản là lễ vật thường ngày; những đồ trấn về sau được thêm vào.",
       "hints": [
@@ -818,7 +818,7 @@ window.LNRT_RESEARCH = {
         "book_bep"
       ],
       "kind": "choice",
-      "prompt": "Trên mâm lễ có sáu bát, nhưng bao nhiêu bát dành cho năm người làm?",
+      "prompt": "Theo sổ bếp, có bao nhiêu bát lớn dành cho người làm công?",
       "answer": "Năm bát",
       "options": [
         "Bốn bát",
@@ -929,7 +929,7 @@ window.LNRT_RESEARCH = {
     },
     "pz_nam_ky_hieu": {
       "id": "pz_nam_ky_hieu",
-      "title": "Năm dấu ký tên",
+      "title": "Những dấu ký tên",
       "scene": "BG28",
       "spot": [
         40,
@@ -941,7 +941,7 @@ window.LNRT_RESEARCH = {
         "book_kyhieu"
       ],
       "kind": "sequence",
-      "prompt": "Sắp dấu theo thứ tự đứng ký đơn: Khoa, Tâm, Lụa, Sen, Hải.",
+      "prompt": "Sắp các ký hiệu theo thứ tự đứng ký đơn ghi trong tư liệu.",
       "answer": "bút|cân|nhạc|lửa|sóng",
       "options": [
         "sóng",
@@ -950,7 +950,7 @@ window.LNRT_RESEARCH = {
         "cân",
         "nhạc"
       ],
-      "clue": "Năm người từng ký đơn cùng nhau phản đối nghi thức.",
+      "clue": "Những người làm công từng ký đơn cùng nhau phản đối nghi thức.",
       "hints": [
         "Tập ký hiệu liệt kê nghề và dấu.",
         "Đổi tên thành dấu: Khoa→bút, Tâm→cân.",
@@ -1031,15 +1031,15 @@ window.LNRT_RESEARCH = {
         "book_mant"
       ],
       "kind": "choice",
-      "prompt": "Năm nấm mộ sau vườn là gì?",
+      "prompt": "Những nấm mộ sau vườn là gì?",
       "answer": "Mộ gió tưởng niệm",
       "options": [
-        "Mộ chứa hài cốt của cả năm người",
+        "Mộ chứa hài cốt của những người mất tích",
         "Mộ gió tưởng niệm",
         "Nơi chôn Sim",
         "Cửa vào giếng"
       ],
-      "clue": "Năm nấm mộ là nơi tưởng niệm; căn hầm mới chứa dấu tích cần điều tra.",
+      "clue": "Những nấm mộ là nơi tưởng niệm; căn hầm mới chứa dấu tích cần điều tra.",
       "hints": [
         "Đọc sổ bà Mận.",
         "Bà ghi rõ chúng không có hài cốt.",
@@ -1177,7 +1177,7 @@ window.LNRT_RESEARCH = {
     },
     "pz_vong_phan": {
       "id": "pz_vong_phan",
-      "title": "Ý nghĩa năm vòng phấn",
+      "title": "Ý nghĩa những vòng phấn",
       "scene": "BG32",
       "spot": [
         61,
@@ -1191,18 +1191,18 @@ window.LNRT_RESEARCH = {
       ],
       "kind": "choice",
       "prompt": "Đâu là nguy cơ lớn nhất ở bước cuối của Tập Chép Ngũ Vị?",
-      "answer": "Đưa năm người sống vào vòng thay cho năm nạn nhân",
+      "answer": "Đưa người sống vào vòng thay cho các nạn nhân",
       "options": [
         "Thắp hương để tưởng niệm",
-        "Ghi đủ tên năm người",
-        "Đưa năm người sống vào vòng thay cho năm nạn nhân",
+        "Ghi đủ tên những người đã khuất",
+        "Đưa người sống vào vòng thay cho các nạn nhân",
         "Mang chứng cứ ra làng"
       ],
       "clue": "Điều mà tập chép gọi là “hoàn tất” có thể chính là một lần trấn mới.",
       "hints": [
         "So phần ba tập chép với lời Khoa.",
-        "Năm người sống được yêu cầu đứng đúng vị trí từng giam nạn nhân.",
-        "Đáp án là năm người sống đứng vào vòng."
+        "Người sống được yêu cầu đứng đúng vị trí từng giam nạn nhân.",
+        "Đáp án là đưa người sống đứng vào vòng."
       ],
       "rewardEvidence": "fiveAnchorDoubt"
     },
@@ -1292,7 +1292,7 @@ window.LNRT_RESEARCH = {
       "clue": "Ấn đồng thuộc hệ thống trấn do Tịnh sử dụng, không phải biểu tượng của Đức Ngài.",
       "hints": [
         "Xem mép triện trên hai bản sớ.",
-        "Bản gốc không có vòng đồng khắc năm móc.",
+        "Bản gốc không có vòng đồng khắc móc.",
         "Dấu ấn khớp với sớ của Tịnh."
       ],
       "requiresFlag": "sealRecovered",
@@ -1311,7 +1311,7 @@ Object.assign(window.LNRT_RESEARCH.puzzles, {
     id:'pz_ho_so_dem_le',title:'Hồ sơ đêm lễ',scene:'BG24',spot:[38,56,12,12],
     requires:['book_cua','book_vattu','book_mant'],kind:'multi',
     prompt:'Chọn BA nhận định được các nguồn độc lập trong hồ sơ ủng hộ. Đừng nhầm dấu vết vật lý với lời suy đoán.',
-    options:['Then cửa phải mở từ hành lang','Có phiếu xuất vải bịt ô gió','Bà Mận thừa nhận đã đứng im khi nghe tiếng đập','Trong hầm có lối ngầm ra giếng','Năm mộ gió chứa hài cốt','Tâm tự khóa tất cả mọi người ở trong'],
+    options:['Then cửa phải mở từ hành lang','Có phiếu xuất vải bịt ô gió','Bà Mận thừa nhận đã đứng im khi nghe tiếng đập','Trong hầm có lối ngầm ra giếng','Các mộ gió chứa hài cốt','Tâm tự khóa tất cả mọi người ở trong'],
     answer:['Then cửa phải mở từ hành lang','Có phiếu xuất vải bịt ô gió','Bà Mận thừa nhận đã đứng im khi nghe tiếng đập'],
     clue:'Phiếu vật tư, kết cấu cửa và lời khai là ba loại nguồn riêng cần được giữ cùng nhau.',
     hints:['Đối chiếu một ghi chép vật tư, một bản kiểm tra cửa và một lời khai.'],rewardEvidence:'crossNight'

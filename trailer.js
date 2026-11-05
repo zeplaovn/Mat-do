@@ -4,11 +4,11 @@ const $=id=>document.getElementById(id);
 // Thứ tự cảnh, lời dẫn và ảnh của trailer gốc trên GitHub.
 const shots=[
  {d:1.6,bg:'01',motion:'out',caps:[]},
- {d:6.5,bg:'01',loc:'ĐỒNG CHAY · THÁNG 3, 2026',tone:'cold',o:'30% 62%',motion:'in',caps:[[.6,'Tháng Ba, năm 2026.','small'],[2.6,'Năm người bạn lên Đồng Chay để ghi lại một truyền thuyết.','']]},
+ {d:6.5,bg:'01',loc:'ĐỒNG CHAY · THÁNG 3, 2026',tone:'cold',o:'30% 62%',motion:'in',caps:[[.6,'Tháng Ba, năm 2026.','small'],[2.6,'Một nhóm bạn lên Đồng Chay để ghi lại một truyền thuyết.','']]},
  {d:6.5,bg:'09',loc:'BIỆT THỰ VÂN HÒA · SÂN NHÀ',tone:'cold',motion:'pan',caps:[[.4,'Biệt thự Vân Hòa.','big'],[2.8,'Bị bỏ hoang từ năm 1988.','small']]},
  {d:5.5,bg:'11',loc:'ĐẠI SẢNH',tone:'cold',o:'50% 70%',tr:'dip',motion:'in',caps:[[.6,'Không ai trong làng dám nhắc tên nó.','']]},
  {d:5,bg:'12',loc:'PHÒNG THỜ',tone:'cold',o:'60% 40%',tr:'flash',motion:'in',flash:true,caps:[[.5,'Và cánh cổng vừa khép lại sau lưng họ.','red']]},
- {d:6,faces:true,bg:'11',tone:'cold',tr:'whip',motion:'out',caps:[[.5,'Năm người. Một đêm. Một bí mật.','small']]},
+ {d:6,faces:true,bg:'11',tone:'cold',tr:'whip',motion:'out',caps:[[.5,'Một chuyến đi. Một đêm. Một bí mật.','small']]},
  {d:5.5,bg:'16',loc:'PHÒNG TRẺ',o:'45% 55%',tr:'glitch',motion:'in',tone:'red',caps:[[.5,'Trong bóng tối, có một đứa trẻ vẫn đang chờ.','red']]},
  {d:1.88,bg:'16',tone:'dread',scare:true,o:'50% 58%',tr:'dip',motion:'in',caps:[[.25,'Đừng trả lời khi bóng tối gọi tên bạn.','red small']]},
  {d:3.2,img:'gp1',pos:'72% 50%',gp:true,tr:'flash',flash:true,motion:'gp',cursor:{from:[30,18],to:[87,68],at:.5,dur:1.2,click:1.85},caps:[[.25,'KHÁM PHÁ','big']]},
@@ -16,7 +16,7 @@ const shots=[
  {d:3.2,img:'gp3',pos:'30% 50%',gp:true,tr:'whip',motion:'gp',cursor:{from:[40,60],to:[62,92],at:.5,dur:1.1,click:1.9},caps:[[.25,'TÌM SỰ THẬT','big']]},
  {d:3.2,img:'gp4',pos:'50% 55%',gp:true,tr:'glitch',flash:true,tone:'shake',motion:'gp',scream:true,caps:[[.2,'SỐNG SÓT','big red glitch']]},
  {d:3.2,img:'gp5',pos:'30% 50%',gp:true,tr:'dip',motion:'gp',cursor:{from:[60,50],to:[90,92],at:.8,dur:1,click:2.1},caps:[[.25,'LẮNG NGHE','big']]},
- {d:6,bg:'29',loc:'VƯỜN SAU · NĂM NẤM MỘ',tr:'dip',motion:'pan',caps:[[.5,'Năm nấm mộ. Năm cái tên bị xóa.','']]},
+ {d:6,bg:'29',loc:'VƯỜN SAU · NHỮNG NẤM MỘ',tr:'dip',motion:'pan',caps:[[.5,'Những nấm mộ không bia. Những cái tên bị xóa.','']]},
  {d:5.5,bg:'32',loc:'HẦM DƯỚI BIỆT THỰ',o:'50% 60%',tr:'dip',motion:'in',tone:'red',caps:[[.5,'Sự thật nằm dưới lòng đất.','red']]},
  {d:1.2,bg:'32',tr:'glitch',motion:'in',tone:'red shake',flash:true,caps:[]},
  {d:5.5,bg:'33',o:'50% 45%',tr:'dip',motion:'out',caps:[[.8,'Họ không muốn bị lãng quên.','']]}
@@ -135,5 +135,5 @@ function bump(){loaded++;if(loadStatus&&!ready)loadStatus.textContent=`Đang t�
 if(playBtn&&typeof setTimeout==='function'){playBtn.disabled=true;setTimeout(markReady,9000)}
 assets.forEach(src=>{const img=new Image();img.onload=img.onerror=bump;img.src=src;if(img.decode)img.decode().catch(()=>{})});
 if(audio&&audio.load)audio.preload='auto';
-if(shareBtn&&typeof navigator!=='undefined'&&(navigator.share||navigator.clipboard)){shareBtn.hidden=false;shareBtn.addEventListener('click',async()=>{const url=location.href.split('#')[0],data={title:'Lời Nguyền Rừng Thiêng',text:'Năm người bạn, một đêm, một bí mật trong biệt thự Vân Hòa.',url};try{if(navigator.share)await navigator.share(data);else{await navigator.clipboard.writeText(url);shareBtn.textContent='✓ Đã chép liên kết'}}catch(_){}})}
+if(shareBtn&&typeof navigator!=='undefined'&&(navigator.share||navigator.clipboard)){shareBtn.hidden=false;shareBtn.addEventListener('click',async()=>{const url=location.href.split('#')[0],data={title:'Lời Nguyền Rừng Thiêng',text:'Một nhóm bạn, một đêm, một bí mật trong biệt thự Vân Hòa.',url};try{if(navigator.share)await navigator.share(data);else{await navigator.clipboard.writeText(url);shareBtn.textContent='✓ Đã chép liên kết'}}catch(_){}})}
 })();
