@@ -34,7 +34,7 @@ const ITEMS = {
   petition:{name:'Mảnh đơn tố cáo',image:'10_Manh_Don_128x128.webp',description:'Di vật 4/5. Mảnh giấy giấu trong sổ của ông Bá Lâm.',emoji:'📜',relic:true},
   sandals:{name:'Đôi dép vải cũ',image:'11_Dep_Vai_128x128.webp',description:'Di vật 5/5. Vật dụng bị bỏ lại trong căn hầm kín.',emoji:'🩴',relic:true},
   bell:{name:'Chuông đồng nhỏ',image:'12_Chuong_Dong_128x128.webp',description:'Chuông đồng nhỏ buộc dây đỏ, vớt từ xô giếng.',emoji:'🔔'},
-  seal:{name:'Ấn đồng',image:'17_An_Dong_128x128.webp',description:'Chiếc ấn đồng tròn, tay cầm ngắn, đáy khắc một dấu lạ. Rỉ xanh phủ kín.',emoji:'🟤'},
+  seal:{name:'Ấn đồng',image:'17_An_Dong_128x128.webp',description:'Chiếc ấn đồng hình vuông, tay cầm ngắn, đáy khắc một dấu lạ. Rỉ xanh phủ kín.',emoji:'🟫'},
   map88:{name:'Bản đồ Đồng Chay 1988',image:'18_Ban_Do_1988_128x128.webp',description:'Bản đồ vẽ tay: biệt thự nằm ở cuối đường làng, sát rìa vùng đồi.',emoji:'🗺️'},
   simScarf:{name:'Khăn chàm và túi lá thuốc',image:'19_Khan_Cham_128x128.webp',description:'Khăn chàm cũ và túi vải đựng lá thuốc, đồ đi rừng của Sim.',emoji:'🧣'},
   scrollFake:{name:'Bản sớ giả',image:'20_So_Gia_128x128.webp',description:'Giấy mới chắp vào giấy cũ, mực đậm hơn, một dòng viết lệch.',emoji:'📜'},
@@ -115,7 +115,7 @@ const SCENES = {
  BG43:{name:"Gác nhỏ của cô Lụa",time:"04:00",chapter:"CHƯƠNG 9 · BÁT CƠM NÓNG",mood:"GÁC NHỎ · 04:00",caption:"Hạc giấy khẽ xoay trên xà. Trên bàn, một cuốn sổ nằm mở.",look:"Căn gác sau bếp, nơi cô Lụa ngủ mỗi đêm trước khi bị nhốt.",spots:[H("luaDiary","Cuốn nhật ký trên bàn",47,42,20,16),H("takeDoll","Con búp bê vải",75,50,12,16),H("tornPhoto","Mảnh ảnh giấu dưới gối",6,48,25,16),H("inspect:comb2","Chiếc lược gỗ",73,66,11,16),H("inspect:cranes2","Hạc giấy treo trên xà",45,10,22,18),H("inspect:window3","Cửa sổ nhìn xuống sân",84,18,15,28),H("travel:BG13","Xuống bếp",0,4,9,28)]},
  BG44:{name:"Chỗ cắm trại trên hiên",time:"03:45",chapter:"ĐÊM TRẠI",mood:"HIÊN NHÀ · 03:45",caption:"Ngọn lửa nhỏ đủ sưởi ấm năm người, và đủ để họ nói chuyện.",look:"Năm túi ngủ quanh đống lửa trước hiên biệt thự.",spots:[H("campfire","Đống lửa trại",49,56,13,23),H("inspect:kettle","Ấm nước đun trên lửa",42,62,6,8),H("inspect:bags","Túi ngủ của cả nhóm",16,70,26,22),H("inspect:flash2","Đèn pin để dưới đất",56,80,6,4),H("travel:BG10","Xuống bậc hiên",88,8,12,60)]},
  BG45:{name:"Sân ngoài chùa làng",time:"08:30",chapter:'CHƯƠNG 1 · ĐỒNG CHAY',mood:"SÂN CHÙA · 08:30",caption:"Sân gạch dưới tán cây đại. Một bàn gỗ nhỏ, ba đồng xu trên đĩa sứ.",intro:["Ánh","Sân chùa yên quá. Ông cụ ngồi bên bàn xem quẻ kia có vẻ biết trước bọn mình sẽ đến."],look:"Hoa đại rụng trắng trên gạch. Ở sâu trong chùa có hai ngọn đèn lồng sáng giữa ban ngày.",spots:[H("huu","Ông Hựu và bàn xem quẻ",61,63,28,34),H("inspect:pagoda","Chùa làng",33,10,30,35),H("inspect:daitree","Cây đại nở hoa",72,0,28,40),H("travel:BG01","Về cổng làng",0,60,24,38)]},
- BG46:{name:"Bàn lễ trước miếu cây đa",time:"20:30",chapter:'CHƯƠNG 1 · LỐI VÀO RỪNG',mood:"BÀN LỄ · 20:30",caption:"Sáu chỗ bày lễ trên mặt bàn gỗ mục. Hai ngọn đèn đang cháy.",intro:["Nguyệt","Mâm lễ bày trước miếu. Đếm thử xem: sáu chỗ."],look:"Cơm, nước, hoa cúc trắng. Một chỗ đèn chưa thắp. Rễ đa ôm kín bức tường miếu.",spots:[H("lampSix","Ngọn đèn chưa thắp",62,67,17,15),H("inspect:lamps2","Hai ngọn đèn đang cháy",24,66,34,17),H("folkOffering","Mâm lễ có bốn hõm gỗ",26,50,52,14),H("inspect:petition2","Cuộn giấy và tấm vải đỏ",3,58,17,22),H("inspect:idol","Bài vị trong khám đá",40,14,20,28),H("travel:BG05","Lùi lại",34,91,32,9)]},
+ BG46:{name:"Bàn lễ trước miếu cây đa",time:"20:30",chapter:'CHƯƠNG 1 · LỐI VÀO RỪNG',mood:"BÀN LỄ · 20:30",caption:"Sáu chỗ bày lễ trên mặt bàn gỗ mục. Hai ngọn đèn đang cháy.",intro:["Nguyệt","Mâm lễ bày trước miếu. Đếm thử xem: sáu chỗ."],look:"Cơm, nước, hoa cúc trắng. Một chỗ đèn chưa thắp. Rễ đa ôm kín bức tường miếu.",spots:[H("lampSix","Ngọn đèn chưa thắp",64,75,13,14),H("inspect:lamps2","Hai ngọn đèn đang cháy",24,66,34,17),H("folkOffering","Mâm lễ có bốn hõm gỗ",32,59,36,15),H("inspect:petition2","Cuộn giấy và tấm vải đỏ",3,58,17,22),H("inspect:idol","Bài vị trong khám đá",40,14,20,28),H("travel:BG05","Lùi lại",34,91,32,9)]},
 };
 
 /* ================= HỘI THOẠI THEO TỪNG CẢNH =================
@@ -450,8 +450,8 @@ let dialogueOpen=false;let modalType=null;let modalReturnFocus=null;let toastTim
 /* Ảnh góc nhìn riêng cho những cuộc gặp và vật chứng quan trọng. */
 const DAT_ROOM_VIEW={scene:'BG49',file:'POV_Ong_Dat_Trong_Nha.webp',subject:'Ông Đạt',alt:'Ông Đạt ngồi đối diện trong căn nhà bên bàn thờ chị Sim'};
 const INTERACTION_VIEWS={
- warning:{scene:'BG01',file:'POV_Ba_Ban_Nuoc.webp',subject:'Bà bán nước',alt:'Bà bán nước ngồi đối diện bên bàn trà'},
- huu:{scene:'BG45',file:'POV_Ong_Huu.webp',subject:'Ông Hựu',alt:'Ông Hựu ngồi đối diện bên bàn xem quẻ và ba đồng xu'},
+ warning:{scene:'BG01',file:'POV_Ba_Ban_Nuoc.webp',nightFile:'POV_Ba_Ban_Nuoc-night.webp',subject:'Bà bán nước',alt:'Bà bán nước ngồi đối diện bên bàn trà'},
+ huu:{scene:'BG45',file:'POV_Ong_Huu.webp',nightFile:'POV_Ong_Huu-night.webp',subject:'Ông Hựu',alt:'Ông Hựu ngồi đối diện bên bàn xem quẻ và ba đồng xu'},
  shrine:{scene:'BG05',file:'POV_Bat_Huong.webp',alt:'Bát hương trước miếu cây đa'},
  marker:{scene:'BG07',file:'POV_Cot_Moc.webp',alt:'Cột mốc đá có bốn vòng khắc'},
  well:{scene:'BG09',file:'POV_Gieng_Da.webp',alt:'Nhìn gần miệng giếng đá trong sân'},
@@ -467,7 +467,7 @@ const INTERACTION_VIEWS={
  wellSealed:{scene:'BG42',file:'POV_Gieng_Tram.webp',alt:'Vòng hoa nhài trên nắp giếng bị trám'}
 };
 let activeInteractionView=null,interactionViewToken=0,interactionPan=null;
-function interactionViewFor(action){return INTERACTION_VIEWS[action==='fbMan'&&state.flags.fbMan==='wake'?'fbManWake':action]}
+function interactionViewFor(action){const shot=INTERACTION_VIEWS[action==='fbMan'&&state.flags.fbMan==='wake'?'fbManWake':action];if(shot&&shot.nightFile&&!state.flags.mo&&['night','dawn'].includes(storyPeriod(presentStoryMinute())))return {...shot,file:shot.nightFile,nativeNight:true};return shot}
 /* Thành tựu tồn tại qua nhiều lần chơi, riêng với bản lưu của từng cuộc điều tra. */
 const ACHIEVEMENT_KEY='loi-nguyen-rung-thieng-achievements-v1';
 const ACHIEVEMENTS=[
@@ -524,7 +524,7 @@ const ambient={};
 function fadeTo(e,to,ms,done){clearInterval(e.fade);const a=e.a,from=a.volume,steps=Math.max(1,Math.round(ms/50));let i=0;e.fade=setInterval(()=>{i++;a.volume=Math.max(0,Math.min(1,from+(to-from)*i/steps));if(i>=steps){clearInterval(e.fade);if(done)done()}},50)}
 function sceneAmbience(){
  let want=(state.sound&&$('title-screen').hidden)?(AMBIENCE[state.scene]||{}):{};
- if(state.sound&&$('title-screen').hidden&&quietVillageAtNight())want=state.scene==='BG03'?{water:.5,frogsNight:.35,crickets:.2}:{crickets:.25,frogsNight:.15};
+ if(state.sound&&$('title-screen').hidden&&quietVillageAtNight())want=state.scene==='BG03'?{water:.5,frogsNight:.35,crickets:.2}:state.scene==='BG04'?{water:.6,frogsNight:.5,crickets:.3}:{crickets:.25,frogsNight:.15};
  if(state.flags.sixthDone&&want.musicbox){want={...want};delete want.musicbox}
  return want;
 }
@@ -616,7 +616,7 @@ function showMemories(){
 function say(who,text){dlgQueue=[];showLine(who,text);setNextLabel()}
 function talk(lines,cb){const l=(lines||[]).filter(Boolean);if(!l.length)return;say(l[0][0],l[0][1]);dlgQueue=l.slice(1);dlgCb=cb||null;setNextLabel()}
 function setNextLabel(){const b=$('dialogue-next');if(b)b.innerHTML=dlgQueue.length?'TIẾP <span>›</span>':'ĐÓNG <span>✕</span>'}
-function nextLine(){if(window.finishTyping&&window.finishTyping())return;if(dlgQueue.length){const [w,t]=dlgQueue.shift();showLine(w,t);setNextLabel()}else{const cb=dlgCb;clearDialogue();if(cb)cb();setTimeout(drainMemories,0)}}
+function nextLine(){if(window.finishTyping&&window.finishTyping())return;if(dlgQueue.length){const [w,t,onShow]=dlgQueue.shift();if(typeof onShow==='function')onShow();showLine(w,t);setNextLabel()}else{const cb=dlgCb;clearDialogue();if(cb)cb();setTimeout(drainMemories,0)}}
 function setDialoguePortrait(who){const pf=PORTRAITS[who],isPerson=!!pf&&(!activeInteractionView||activeInteractionView.subject!==who);
  $('dialogue-portrait-wrap').hidden=!isPerson;$('dialogue').classList.toggle('has-portrait',isPerson);$('dialogue-symbol').hidden=isPerson;
  if(isPerson){$('dialogue-portrait').src=PORTRAIT(pf);$('dialogue-portrait').alt='Chân dung '+who}}
@@ -625,12 +625,12 @@ $('dialogue-speaker').textContent=who;$('dialogue-text').textContent=text;
  $('chatter').classList.remove('on');
  $('dialogue').hidden=false;dialogueOpen=true;setDialogueMode(true)}
 function resetSceneScroll(){for(const id of ['app-shell','scene-stage']){const el=$(id);if(el){el.scrollTop=0;el.scrollLeft=0}}}
-function clearInteractionView(){interactionViewToken++;const prior=activeInteractionView,pan=interactionPan;activeInteractionView=null;interactionPan=null;const view=$('interaction-view'),shell=$('app-shell'),backdrop=$('scene-backdrop'),column=document.querySelector&&document.querySelector('.game-column');if(view){view.hidden=true;view.onload=null;view.onerror=null}if(shell)shell.classList.remove('interaction-active');if(backdrop&&SCENES[state.scene])backdrop.style.backgroundImage=`url("${sceneBackground(state.scene)}")`;resetSceneScroll();if(column&&prior&&prior.scene===state.scene&&Number.isFinite(pan))column.scrollLeft=pan}
+function clearInteractionView(){interactionViewToken++;const prior=activeInteractionView,pan=interactionPan;activeInteractionView=null;interactionPan=null;const view=$('interaction-view'),shell=$('app-shell'),backdrop=$('scene-backdrop'),column=document.querySelector&&document.querySelector('.game-column');if(view){view.hidden=true;view.onload=null;view.onerror=null;view.classList.remove('native-night')}if(shell)shell.classList.remove('interaction-active');if(backdrop&&SCENES[state.scene])backdrop.style.backgroundImage=`url("${sceneBackground(state.scene)}")`;resetSceneScroll();if(column&&prior&&prior.scene===state.scene&&Number.isFinite(pan))column.scrollLeft=pan}
 function showSceneView(shot,scene){
  const view=$('interaction-view'),shell=$('app-shell');
  if(!shot||!view||!shell||!dialogueOpen||modalType||shot.scene!==scene||state.scene!==scene)return;
  const token=++interactionViewToken;
- const reveal=()=>{if(token!==interactionViewToken||!dialogueOpen||state.scene!==scene)return;if(!activeInteractionView){const column=document.querySelector&&document.querySelector('.game-column');interactionPan=column?column.scrollLeft:null}activeInteractionView=shot;view.hidden=false;shell.classList.add('interaction-active');const backdrop=$('scene-backdrop');if(backdrop)backdrop.style.backgroundImage=`url("${ROOT}props/${shot.file}")`;resetSceneScroll();setDialoguePortrait($('dialogue-speaker').textContent)};
+ const reveal=()=>{if(token!==interactionViewToken||!dialogueOpen||state.scene!==scene)return;if(!activeInteractionView){const column=document.querySelector&&document.querySelector('.game-column');interactionPan=column?column.scrollLeft:null}activeInteractionView=shot;view.classList.toggle('native-night',!!shot.nativeNight);view.hidden=false;shell.classList.add('interaction-active');const backdrop=$('scene-backdrop');if(backdrop)backdrop.style.backgroundImage=`url("${ROOT}props/${shot.file}")`;resetSceneScroll();setDialoguePortrait($('dialogue-speaker').textContent)};
  view.onload=reveal;view.onerror=()=>{if(token===interactionViewToken)clearInteractionView()};view.alt=shot.alt;view.src=ROOT+'props/'+shot.file;
  if(view.complete&&view.naturalWidth)reveal();
 }
@@ -737,9 +737,10 @@ function storyPeriod(minutes){if(!Number.isFinite(minutes)||minutes<=0)return 'd
 const NIGHT_SCENE_FILES={BG01:'BG01-night.webp',BG02:'BG02-night.webp',BG03:'BG03-night.webp',BG04:'BG04-night.webp',BG45:'BG45-night.webp'};
 const MORNING_SCENE_FILES={BG05:'BG05-morning.webp',BG06:'BG06-morning.webp',BG07:'BG07-morning.webp',BG08:'BG08-morning.webp',BG09:'BG09-morning.webp',BG10:'BG10-morning.webp'};
 const NIGHT_OUTDOORS=new Set(['BG05','BG06','BG07','BG08','BG09','BG10','BG25','BG29','BG31','BG42','BG44','BG46']);
-const QUIET_VILLAGE=new Set(['BG01','BG02','BG03']);
+const QUIET_VILLAGE=new Set(['BG01','BG02','BG03','BG04']);
 function quietVillageAtNight(){return !state.flags.mo&&QUIET_VILLAGE.has(state.scene)&&['night','dawn'].includes(storyPeriod(presentStoryMinute()))}
-function sceneBackground(id){const s=SCENES[id];if(!s)return BG(id);const minutes=presentStoryMinute(),phase=state.flags.mo?'memory':storyPeriod(minutes);if(NIGHT_SCENE_FILES[id]&&(phase==='night'||phase==='dawn'))return `${ROOT}background/variants/${NIGHT_SCENE_FILES[id]}`;if(MORNING_SCENE_FILES[id]&&minutes>=1440&&(phase==='dawn'||phase==='day'))return `${ROOT}background/variants/${MORNING_SCENE_FILES[id]}`;return BG(s.bg||id)}
+function sceneBackground(id){const s=SCENES[id];if(!s)return BG(id);const minutes=presentStoryMinute(),phase=state.flags.mo?'memory':storyPeriod(minutes);if(id==='BG46'&&state.flags.lamp6&&!state.flags.mo)return `${ROOT}background/variants/BG46-lit.webp`;if(NIGHT_SCENE_FILES[id]&&(phase==='night'||phase==='dawn'))return `${ROOT}background/variants/${NIGHT_SCENE_FILES[id]}`;if(MORNING_SCENE_FILES[id]&&minutes>=1440&&(phase==='dawn'||phase==='day'))return `${ROOT}background/variants/${MORNING_SCENE_FILES[id]}`;return BG(s.bg||id)}
+function sceneLook(){if(state.scene==='BG46'&&state.flags.lamp6)return 'Cơm, nước, hoa cúc trắng. Cả ba ngọn đèn đều đã cháy. Rễ đa ôm kín bức tường miếu.';if(state.scene==='BG45'&&['night','dawn'].includes(storyPeriod(presentStoryMinute())))return 'Hoa đại rụng trắng trên gạch. Hai ngọn đèn lồng soi nhẹ khoảng sân chùa.';return SCENES[state.scene].look}
 function sceneTimeGrade(id){
  if(state.flags.mo||FLASHBACK_SCENES.has(id))return '';
  const minutes=presentStoryMinute(),phase=storyPeriod(minutes);
@@ -757,7 +758,7 @@ function displayStoryTime(){if(state.flags.mo)return SCENES[state.scene].time;
  const minutes=presentStoryMinute();state.flags.storyMinute=minutes;const dayMinute=minutes%1440;return String(Math.floor(dayMinute/60)).padStart(2,'0')+':'+String(dayMinute%60).padStart(2,'0')}
 function render(){centerScene();const s=SCENES[state.scene],clock=displayStoryTime(),bg=sceneBackground(state.scene),grade=sceneTimeGrade(state.scene),image=$('scene-image');if(image.getAttribute('src')!==bg)image.src=bg;image.alt='Cảnh '+state.scene+': '+s.name;$('scene-backdrop').style.backgroundImage=`url("${activeInteractionView?ROOT+'props/'+activeInteractionView.file:bg}")`;
  $('scene-title').textContent=s.name;$('scene-stage').dataset.tint=s.tint||'';$('scene-stage').dataset.timeGrade=grade;$('app-shell').dataset.timeGrade=grade;$('clock-label').textContent=clock;$('chapter-label').textContent=state.flags.mo?'CHƯƠNG 9 · ĐÊM 17/3/1988':(s.chapter==='CHƯƠNG 10 · NĂM CÁI TÊN'&&arcOn())?'CHƯƠNG 9 · BÁT CƠM NÓNG':(questOn()&&/^CHƯƠNG 10/.test(s.chapter)?'CHƯƠNG 10 · NĂM CÁI TÊN':s.chapter);$('scene-index').textContent=`${state.scene} / ${Object.keys(SCENES).length}`;refreshMemoryUI();
- $('hotspots').replaceChildren(...[...s.spots.filter(h=>!h.req||state.flags[h.req]),...researchActiveSpots()].map(makeHotspot));
+ $('hotspots').replaceChildren(...[...s.spots.filter(h=>!h.req||state.flags[h.req]).map(h=>h.action==='lampSix'&&state.flags.lamp6?{...h,label:'Ngọn đèn thứ ba đang cháy'}:h),...researchActiveSpots()].map(makeHotspot));
  $('scene-stage').classList.toggle('torch-on',state.flashlight&&parseInt(state.scene.slice(2))>=18);$('scene-stage').classList.toggle('has-selection',!!state.selectedItem);
  $('btn-audio').textContent=state.sound?'♪':'♪̸';$('btn-audio').setAttribute('aria-pressed',state.sound?'true':'false');
  renderSidebar();updateCam();setAmbience();if(chatScene!==state.scene){chatScene=state.scene;chatEnter()}}
@@ -913,7 +914,7 @@ function inspect2(k){const texts={
  lamp:["Nguyệt","Đèn bàn bằng đồng không còn hoạt động, bóng đèn nứt từ lâu."],
  sacks:["Nam","Bao vữa khô cứng, vẫn còn dấu niêm phong của kho vật tư. Có người đã bịt hầm bằng chính số vật liệu này... tớ rùng mình."],
  belongings:["Nguyệt","Năm cụm đồ nằm sát tường. Không phải vật quý giá, nhưng là dấu vết của những con người thật. Từng người một."]
-};Object.assign(texts,INSPECT2);if(k==='pagoda'&&['night','dawn'].includes(storyPeriod(presentStoryMinute())))texts.pagoda=['Ánh','Chùa làng nhỏ, mái ngói phủ rêu. Hai ngọn đèn lồng soi nhẹ khoảng sân vắng.'];const [who,text]=texts[k]||['Người kể chuyện',SCENES[state.scene].look];talk([[who,text],...(MORE[k]||[])])}
+};Object.assign(texts,INSPECT2);if(k==='pagoda'&&['night','dawn'].includes(storyPeriod(presentStoryMinute())))texts.pagoda=['Ánh','Chùa làng nhỏ, mái ngói phủ rêu. Hai ngọn đèn lồng soi nhẹ khoảng sân vắng.'];const [who,text]=texts[k]||['Người kể chuyện',sceneLook()];talk([[who,text],...(MORE[k]||[])])}
 function showModal(html,kicker='HỒ SƠ ĐIỀU TRA',type='generic'){
  const opening=$('modal-backdrop').hidden;if(opening)modalReturnFocus=document.activeElement;
  $('chatter').classList.remove('on');
@@ -1520,8 +1521,9 @@ function huuTalk(){
 
 function lampSix(){
  if(state.flags.lamp6){say('Nguyệt','Ngọn đèn thứ ba vẫn cháy, dù không ai thắp. Sáu chỗ bày lễ, mà chúng ta chỉ có năm người.');return}
- state.flags.lamp6=true;save();
- talk([['Nguyệt','Sáu chỗ: cơm, nước, hoa, và ba chỗ để đèn. Hai ngọn đang cháy, một ngọn còn tắt.'],['Tuyết','Miếu không ai trông, vậy ai thắp hai ngọn kia?'],['Người kể chuyện','Ngọn đèn thứ ba bật cháy, không ai chạm vào. Không có gió. Tiếng côn trùng im bặt một nhịp.'],['Nam','...Tớ không thích chuyện này chút nào.'],['Đông','Sáu chỗ. Mà bọn mình chỉ có năm người.']],()=>{note('lamp6','Ngọn đèn thứ sáu','Trên bàn lễ trước miếu có sáu chỗ bày lễ. Chỗ đèn cuối cùng tự cháy khi cả nhóm đứng trước bàn. Nhóm chỉ có năm người.');renderSidebar()})}
+ talk([['Nguyệt','Sáu chỗ: cơm, nước, hoa, và ba chỗ để đèn. Hai ngọn đang cháy, một ngọn còn tắt.'],['Tuyết','Miếu không ai trông, vậy ai thắp hai ngọn kia?'],
+  ['Người kể chuyện','Ngọn đèn thứ ba bật cháy, không ai chạm vào. Không có gió. Tiếng côn trùng im bặt một nhịp.',()=>{state.flags.lamp6=true;save();render()}],
+  ['Nam','...Tớ không thích chuyện này chút nào.'],['Đông','Sáu chỗ. Mà bọn mình chỉ có năm người.']],()=>{note('lamp6','Ngọn đèn thứ sáu','Trên bàn lễ trước miếu có sáu chỗ bày lễ. Chỗ đèn cuối cùng tự cháy khi cả nhóm đứng trước bàn. Nhóm chỉ có năm người.');renderSidebar()})}
 function fbSealPick(){
  if(state.flags.fbSeal){say('Mơ','Chiếc ấn nằm chặt trong tay con, lạnh và nặng.');return}
  const wrong=m=>talk([['Mơ',m]],fbSealPick);
@@ -1901,7 +1903,7 @@ function continueGame(){pendingMemories=[];state=load()||initialState();syncAchi
 function mount(){$('btn-new-game').onclick=newGame;$('btn-continue').onclick=continueGame;$('btn-points').onclick=showScenePoints;$('btn-audio').onclick=toggleSound;$('btn-menu').onclick=showMenu;$('btn-journal').onclick=showJournal;$('modal-close').onclick=hideModal;$('dialogue-next').onclick=nextLine;
  $('modal-backdrop').addEventListener('click',e=>{if(e.target===$('modal-backdrop')&&modalType!=='ending')hideModal()});
  let torchRaf=0,torchEv=null;$('scene-stage').addEventListener('pointermove',e=>{torchEv=e;if(torchRaf)return;torchRaf=requestAnimationFrame(()=>{torchRaf=0;if(!$('scene-stage').classList.contains('torch-on'))return;const box=$('scene-stage').getBoundingClientRect();const x=Math.max(0,Math.min(100,(torchEv.clientX-box.left)/box.width*100));const y=Math.max(0,Math.min(100,(torchEv.clientY-box.top)/box.height*100));$('scene-stage').style.setProperty('--torch-x',x.toFixed(1)+'%');$('scene-stage').style.setProperty('--torch-y',y.toFixed(1)+'%')})});
- $('scene-stage').addEventListener('click',e=>{if(e.target===$('scene-stage')||e.target===$('hotspots')){if(!dialogueOpen)toast(SCENES[state.scene].look)}});
+ $('scene-stage').addEventListener('click',e=>{if(e.target===$('scene-stage')||e.target===$('hotspots')){if(!dialogueOpen)toast(sceneLook())}});
  document.addEventListener('keydown',e=>{if($('title-screen').hidden===false)return;if(e.key==='Tab'&&modalType){const win=$('modal-body').closest('.modal-window'),focusable=[...win.querySelectorAll('button:not(:disabled),input:not(:disabled),[href],[tabindex="0"]')].filter(el=>el.getClientRects().length);if(focusable.length){const i=focusable.indexOf(document.activeElement);if(e.shiftKey&&i<=0){e.preventDefault();focusable[focusable.length-1].focus()}else if(!e.shiftKey&&(i<0||i===focusable.length-1)){e.preventDefault();focusable[0].focus()}}}if(e.key==='Escape'){if(modalType&&modalType!=='ending')hideModal();else{clearDialogue();setTimeout(drainMemories,0)}return}if(modalType==='journal'){if(e.key==='ArrowRight')bookTurn(1);else if(e.key==='ArrowLeft')bookTurn(-1);return}if(modalType==='research-book'){if(e.key==='ArrowRight'){e.preventDefault();researchReaderActions?.next()}else if(e.key==='ArrowLeft'){e.preventDefault();researchReaderActions?.prev()}return}if(modalType||['INPUT','TEXTAREA'].includes(document.activeElement.tagName))return;if(dialogueOpen&&(e.key==='Enter'||e.key===' ')){e.preventDefault();nextLine();return}const k=e.key.toLowerCase();if(k==='h')showHint();if(k==='f'&&has('flashlight'))selectItem('flashlight');if(k==='v')cycleCam();if(k==='j')showJournal()});
  updateContinue();render();setInterval(()=>{geckoTick();crowTick()},1000);}
 mount();
