@@ -23,7 +23,7 @@ window.LNRT_RESEARCH = {
         ],
         [
           "Ba phần lễ",
-          "Trên bàn tạ rừng là cơm, nước sạch và hoa. Đèn thắp để soi đường về; người đứng khấn không phải người đem thân mình thay lễ vật.\nLễ xong, dập than, rửa bát và mang đồ về."
+          "Trên bàn tạ rừng là cơm, nước sạch và hoa. Đèn thắp để soi đường về; người đứng khấn không phải người đem thân mình thay lễ vật.\nNgười giữ miếu ghi riêng về mâm gỗ: bát nước nằm giữa bát cơm và cành hoa; ngọn đèn ở một đầu. Hãy nhìn từ phía lối vào.\nLễ xong, dập than, rửa bát và mang đồ về."
         ],
         [
           "Lời khấn",

@@ -113,6 +113,18 @@ html[data-fx=low] .title-warn:before,html[data-fx=low] .title-warn:after{animati
 .slot,.toy{width:min(clamp(70px,13vh,96px),calc((100% - 24px)/4));min-height:clamp(70px,13vh,96px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:#0b0907;color:#d8c9a8;border:1px dashed #5b4630;border-radius:4px;cursor:pointer;padding:4px}
 .slot.full,.toy{border-style:solid;background:linear-gradient(#241b12,#14100b)}.toy.sel{outline:2px solid #d85a55}.toy-ico{font-size:clamp(22px,4vh,32px);line-height:1}.slot small,.toy small{font-size:10px;text-align:center;line-height:1.2}
 .toy-ico{display:grid;place-items:center;width:min(100%,clamp(38px,7vh,58px));aspect-ratio:1;flex:none}.toy-ico img{width:100%;height:100%;object-fit:contain;pointer-events:none}
+/* Bốn dấu mộc: mỗi ô đủ lớn để chạm và luôn giữ thứ tự trái sang phải. */
+.folk-inscription{padding:10px 12px;border-left:2px solid #a0714b;background:#211710;color:#dfc7a3!important;font-style:italic}
+.folk-slots,.folk-print{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:16px 0}
+.folk-slot{position:relative;min-width:0;min-height:108px;padding:16px 3px 7px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;border:1px solid #826140;border-radius:5px;background:linear-gradient(145deg,#3c2a1a,#1b130d);box-shadow:inset 0 0 15px #0009;color:#eed6aa;cursor:pointer}
+.folk-slot:hover,.folk-slot:focus-visible{border-color:#e4b77c;background:linear-gradient(145deg,#533923,#24170e)}
+.folk-puzzle.is-stone .folk-slot{border-color:#79756a;background:linear-gradient(145deg,#3d403d,#1b1e1c);color:#e3dcc7;box-shadow:inset 0 0 16px #000a}
+.folk-puzzle.is-stone .folk-slot:hover,.folk-puzzle.is-stone .folk-slot:focus-visible{border-color:#d5c8a3;background:linear-gradient(145deg,#56584f,#292b27)}
+.folk-slot:focus-visible{outline:2px solid #f3ce9b;outline-offset:2px}.folk-slot svg,.folk-print svg{width:clamp(29px,8vw,42px);height:clamp(29px,8vw,42px);flex:none}
+.folk-slot small,.folk-print small{font:11px/1.2 var(--sans,system-ui,sans-serif);text-align:center}.folk-number{position:absolute;top:5px;left:7px;color:#c6a477;font:10px var(--sans,system-ui,sans-serif)}.folk-empty{font:32px/1 var(--serif,Georgia,serif);color:#b89972}
+.folk-print{padding:13px 9px;background:#d7c49d;border:1px solid #806646;border-radius:3px;color:#4a2a18}.folk-print span{min-width:0;display:flex;flex-direction:column;align-items:center;gap:5px}
+.folk-reference{margin:12px 0}.folk-reference summary{min-height:44px;padding:10px 12px;border:1px solid #6f5943;border-radius:5px;color:#e1cda9;cursor:pointer}.folk-reference[open] summary{margin-bottom:10px}
+@media(max-width:360px){.folk-slots,.folk-print{gap:5px}.folk-slot{min-height:96px}.folk-slot small,.folk-print small{font-size:10px}}
 .jig{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;width:min(440px,100%);aspect-ratio:3/2;margin:.6rem auto;background:#000;background-size:100% 100%}
 .jp{border:0;padding:0;cursor:pointer;background-repeat:no-repeat;box-shadow:inset 0 0 0 1px rgba(0,0,0,.45);filter:sepia(.25) brightness(.92)}.jp.sel{outline:2px solid #d85a55;outline-offset:-2px}.jp.ok{box-shadow:inset 0 0 0 2px rgba(120,220,140,.7)}
 .jig.peek{pointer-events:none}.jig.peek .jp{background-image:none!important;opacity:0}
