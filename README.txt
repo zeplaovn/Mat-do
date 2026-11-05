@@ -377,3 +377,11 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 - Chữ nhỏ (nhãn chương/giờ, mục menu, số mục nhật ký) tăng lên tối thiểu 10-11px; nút Tiếp và Đổi chế độ máy ảnh cao tối thiểu 40px.
 - Hộp thoại dài có vệt mờ ở đáy báo còn nội dung cuộn; thông báo không đè khung máy ảnh.
 - Điện thoại dọc: khung máy ảnh bám theo màn hình.
+
+34. TRAILER: CẢNH CHƠI THẬT VÀ ĐOẠN DỌA (trailer.js, trailer.css, assets/trailer/gp1-5.webp)
+- Trailer dài 1:12. Chèn 5 cảnh chơi thật (chụp từ chính game): khám phá (có con trỏ chuột bấm), câu đố đồng hồ, nhật ký, máy ảnh night vision ở hầm, hội thoại ông Đạt.
+- Đoạn dọa dẫn dần (36,6-38,5s): nhạc nhỏ dần, tim đập nhanh dần, nhạc dâng, vignette khép lại, nháy hình ngắn rồi tối đen, sau đó bừng sáng cùng nhịp mạnh.
+- Cú dọa thứ hai ở cảnh máy ảnh (48,1s): nổ + tiếng rít + rung hình.
+- Âm thanh dọa tự tổng hợp bằng Web Audio (không thêm tệp); tôn trọng nút tắt tiếng.
+- Điện thoại dọc: cảnh chơi được cắt vào vùng chính (thuộc tính pos) để chữ trong game vẫn đọc được.
+- Chụp lại ảnh cảnh chơi khi giao diện game đổi: xem mô tả ở mục này, ảnh 1280x720, lưu webp.
