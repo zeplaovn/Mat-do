@@ -1192,7 +1192,7 @@ function openResearchBook(id){
  function draw(){
   stamp();
   const remembered=bookmarks().length+quotes().length;
-  const coverClass=firstDraw&&!reduced?'closed':'opened';
+  const coverClass=firstDraw?'closed cover-wait':'opened';
   const html=`<div class="bk-scene research-journal">
    <button class="bk-close" id="research-reader-close" type="button" aria-label="Đóng sách">×</button>
    <div class="bk ${mobile?'single ':''}${coverClass}" id="research-book" aria-label="${escapeHTML(b.title)}">
@@ -1218,8 +1218,8 @@ function openResearchBook(id){
   </div>`;
   showModal(html,'SÁCH · TÀI LIỆU','research-book');
   $('research-reader-close').onclick=hideModal;
-  $('research-prev').onclick=()=>turn(-1);
-  $('research-next').onclick=()=>turn(1);
+  $('research-prev').onclick=()=>{if(!$('research-book').classList.contains('closed'))turn(-1)};
+  $('research-next').onclick=()=>{if(!$('research-book').classList.contains('closed'))turn(1)};
   $('research-to-archive').onclick=showResearchArchive;
   const left=$('research-left'),right=$('research-right');
   const bindPage=(el,i,dir)=>{
@@ -1227,6 +1227,7 @@ function openResearchBook(id){
    el.addEventListener('click',e=>{
     const selection=window.getSelection&&window.getSelection();
     if(e.target.closest('.research-page-content')||(selection&&!selection.isCollapsed))return;
+    if($('research-book').classList.contains('closed'))return;
     turn(dir);
    });
   };
@@ -1254,10 +1255,12 @@ function openResearchBook(id){
    active=found;toast('Đã lưu đoạn văn vào ghi chú.');draw();$('research-add-quote').focus({preventScroll:true});
   };
   $('research-view-clips').onclick=showClips;
-  if(firstDraw&&!reduced){
-   const bk=$('research-book');
-   openTimers.push(setTimeout(()=>{if(bk.isConnected)bk.classList.remove('closed')},380));
-   openTimers.push(setTimeout(()=>{if(bk.isConnected)bk.classList.add('opened')},1700));
+  if(firstDraw){
+   const bk=$('research-book'),cv=bk.querySelector('.bk-cover');
+   const openIt=()=>{if(!bk.isConnected||!bk.classList.contains('closed'))return;bk.classList.remove('closed');playSound('page',.28);openTimers.push(setTimeout(()=>{if(bk.isConnected)bk.classList.add('opened')},reduced?0:1300))};
+   cv.setAttribute('aria-hidden','false');cv.setAttribute('role','button');cv.tabIndex=0;cv.onclick=openIt;
+   cv.onkeydown=ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();openIt()}};
+   cv.focus({preventScroll:true});
   }
   firstDraw=false;
  }

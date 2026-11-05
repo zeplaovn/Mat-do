@@ -44,7 +44,7 @@ function place(el, msg) {
   const r = el.getBoundingClientRect();
   if (r.width < 4 || r.right < 8 || r.left > innerWidth - 8 || r.top < 40 || r.bottom > innerHeight) return false;
   text.textContent = msg; text.hidden = false;
-  const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+  const cx = r.left + r.width / 2, cy = r.top + r.height * (el.classList && el.classList.contains('hotspot--travel') ? .84 : .5);
   hand.style.left = Math.round(Math.min(innerWidth - 50, cx - 4)) + 'px'; hand.style.top = Math.round(Math.min(innerHeight - 58, cy + 26)) + 'px'; hand.hidden = false;
   text.style.left = '50%'; const above = cy > innerHeight * 0.45, half = (text.offsetWidth || 200) / 2;
   text.style.left = Math.max(12 + half, Math.min(innerWidth - 12 - half, cx)) + 'px';

@@ -210,6 +210,6 @@
 
 /* ---------- Nhật ký: hiện trang bìa, chạm để mở ---------- */
 .bk.cover-wait.closed .bk-cover{cursor:pointer}
-.bk.cover-wait.closed + .bk-nav{visibility:hidden}
+.bk.cover-wait.closed ~ .bk-nav{visibility:hidden}
 .bk.cover-wait.closed .bk-cover:after{content:"Chạm để mở";position:absolute;left:0;right:0;bottom:9%;text-align:center;font:600 12px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,235,220,.75);animation:coverHint 1.8s ease-in-out infinite}
 @keyframes coverHint{50%{opacity:.35}}
