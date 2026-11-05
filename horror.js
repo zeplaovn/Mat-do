@@ -141,13 +141,14 @@ Perf.onChange(l => { if (l !== 'high') img.style.transform = ''; kick(); });
 const dt = $('dialogue-text'); let lastSet = '', ti = 0;
 const setT = t => { lastSet = t; dt.textContent = t; };
 let typing = false, curFull = '';
-const finishNow = () => { if (!typing) return false; clearInterval(ti); typing = false; setT(curFull); return true; };
+const dlgEl = $('dialogue'), setTyping = v => { typing = v; if (dlgEl) dlgEl.classList.toggle('is-typing', v); };
+const finishNow = () => { if (!typing) return false; clearInterval(ti); setTyping(false); setT(curFull); return true; };
 window.finishTyping = finishNow;
+window.isTyping = () => typing;   // hội thoại: chỉ chuyển câu khi chữ đã chạy xong
 new MutationObserver(() => {
   const full = dt.textContent; if (!full || full === lastSet) return;
-  clearInterval(ti); let i = 0; setT(''); typing = true; curFull = full;
-  ti = setInterval(() => { i += 1; setT(full.slice(0, i)); if (i >= full.length) { clearInterval(ti); typing = false; } }, 24);
-  dt.onclick = () => { finishNow(); };
+  clearInterval(ti); let i = 0; setT(''); setTyping(true); curFull = full;
+  ti = setInterval(() => { i += 1; setT(full.slice(0, i)); if (i >= full.length) { clearInterval(ti); setTyping(false); } }, 24);
 }).observe(dt, { childList: true, characterData: true, subtree: true });
 
 /* ---------- Kết thúc xấu = scare lớn ---------- */
