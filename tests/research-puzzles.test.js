@@ -37,7 +37,7 @@ function submit(p,answer){
 }
 for(const p of Object.values(qa.RESEARCH_PUZZLES)){
  const state=qa.initialState();state.scene=p.scene;state.items.push(...p.requires);if(p.requiresFlag)state.flags[p.requiresFlag]=true;
- state.flags.researchPageViews={book_lua:[qa.BOOKS.book_lua.pages.length-1]};qa.setState(state);
+ state.flags.researchPageViews={book_lua:[qa.BOOKS.book_lua.pages.length-1],book_bep:[2]};qa.setState(state);
  if(p.requiresFlag){state.flags[p.requiresFlag]=false;modal=null;qa.openResearchPuzzle(p.id);assert.equal(modal,null,`${p.id}: required story flag must block the puzzle`);state.flags[p.requiresFlag]=true;}
  const missing=p.requires[0];state.items=state.items.filter(x=>x!==missing);qa.openResearchPuzzle(p.id);
  assert.equal(modal.type,'research-need',`${p.id}: missing source must block the puzzle`);
@@ -61,4 +61,9 @@ const yearPages=qa.BOOKS.book_balam.pages.map(p=>p.join(' ')).join(' ');
 assert.match(yearPages,/1988/,'the 1988 code must be discoverable in Bá Lâm’s diary');
 const lua=qa.initialState();lua.scene='BG43';lua.items.push('book_lua');lua.flags.flashDone=true;qa.setState(lua);qa.openResearchPuzzle('pz_chu_lua');
 assert.equal(modal.type,'research-need','Lụa’s protected page must be read after the flashback');
+const bowl=qa.initialState();bowl.scene='BG13';bowl.items.push('book_bep');qa.setState(bowl);qa.openResearchPuzzle('pz_sau_bat');
+assert.equal(modal.type,'research-need','the bowl puzzle must not reveal the count before the kitchen diary is read');
+assert.doesNotMatch(modal.html,/năm người|năm bát|5 người|5 bát/i);
+bowl.flags.researchPageViews={book_bep:[2]};qa.openResearchPuzzle('pz_sau_bat');
+assert.equal(modal.type,'research-puzzle','the bowl puzzle should open after the relevant diary page is read');
 console.log(`OK: all ${Object.keys(qa.RESEARCH_PUZZLES).length} document puzzles reject missing/wrong answers, accept correct answers and save their rewards.`);

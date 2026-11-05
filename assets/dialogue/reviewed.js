@@ -3,7 +3,7 @@ window.LNRT_DIALOGUE = {
  "M00": [
   [
    "Người kể chuyện",
-   "Sáng sớm, tàu lăn qua những cánh đồng còn mờ sương. Trong khoang, năm chiếc ba lô chen nhau dưới gầm ghế, bên cạnh một túi đồ ăn đã vơi gần hết."
+   "Sáng sớm, tàu lăn qua những cánh đồng còn mờ sương. Trong khoang, những chiếc ba lô chen nhau dưới gầm ghế, bên cạnh một túi đồ ăn đã vơi gần hết."
   ],
   [
    "Nam",
@@ -181,7 +181,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Nam",
-   "Hai cái chia năm người? Thế chắc tớ được ăn giấy gói."
+   "Hai cái chia cả nhóm? Thế chắc tớ được ăn giấy gói."
   ],
   [
    "Ánh",
@@ -317,7 +317,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
     "Thầy Hựu",
-    "Năm người. Năm nhà."
+    "Đường cũ không dễ trở về."
   ],
   [
     "Ánh",
@@ -525,7 +525,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Người giữ miếu",
-   "Tôi vừa xếp có năm cái thôi mà."
+   "Tôi nhớ đã xếp đủ rồi mà."
   ]
  ],
  "S09": [
@@ -535,11 +535,11 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Tuyết",
-   "Nhưng ngoài kia có năm thôi. Tớ đếm rồi."
+   "Nhưng ngoài kia chỉ có bọn mình thôi. Tớ nhìn kỹ rồi."
   ],
   [
    "Nam",
-   "Để tớ đếm lại... Một, hai, ba, bốn, năm. Năm thật."
+   "Để tớ nhìn lại... Chỉ có bọn mình. Vậy chiếc bát kia dành cho ai?"
   ],
   [
    "Nguyệt",
@@ -849,7 +849,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Nguyệt",
-   "Danh sách ghi năm người phụ bếp, sao mâm lại có sáu bát lễ?"
+   "Danh sách chỉ ghi phần cho người làm. Sao mâm lại có thêm một bát lễ?"
   ],
   [
    "Đông",
@@ -999,7 +999,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Nguyệt",
-   "Nếu năm người xuống bằng lối này, sao lúc quay lên lại bị chặn?"
+   "Nếu những người đó xuống bằng lối này, sao lúc quay lên lại bị chặn?"
   ],
   [
    "Ánh",
@@ -1039,11 +1039,11 @@ window.LNRT_DIALOGUE = {
  "S25": [
   [
    "Người kể chuyện",
-   "Dưới lớp bụi mỏng là năm vòng phấn đã nhòe. Một chiếc dép vải nằm nghiêng sát chân cửa."
+   "Dưới lớp bụi mỏng là những vòng phấn đã nhòe. Một chiếc dép vải nằm nghiêng sát chân cửa."
   ],
   [
    "Tuyết",
-   "Trên sàn năm vòng. Trong giấy vẽ lại có sáu, sao thế?"
+   "Những vòng trên sàn và hình trong giấy vẽ không giống nhau. Sao thế?"
   ],
   [
    "Nguyệt",
@@ -1153,7 +1153,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Đông",
-   "Rồi Mơ cũng chết. Cả năm người trong hầm nữa."
+   "Rồi Mơ cũng chết. Những người trong hầm cũng vậy."
   ],
   [
    "Ánh",
@@ -1219,7 +1219,7 @@ window.LNRT_DIALOGUE = {
  "S31": [
   [
    "Nguyệt",
-   "Phiếu ngày mười sáu ghi năm đèn, sáu bát và vải để che ô thông gió. Mục vải bị viết chen vào."
+   "Phiếu ngày mười sáu ghi đèn, bát lễ và vải để che ô thông gió. Mục vải bị viết chen vào."
   ],
   [
    "Nam",
@@ -1261,7 +1261,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Nam",
-   "Có bốn chữ ấy mà ông ta không dám nhìn thẳng vào năm cái tên."
+   "Có bốn chữ ấy mà ông ta không dám nhìn thẳng vào những cái tên kia."
   ]
  ],
  "S33": [
@@ -1301,7 +1301,7 @@ window.LNRT_DIALOGUE = {
  "S34": [
   [
    "Tuyết",
-   "Năm mô đất không có bia, chỉ cắm những cọc tre cũ."
+   "Những mô đất không có bia, chỉ cắm những cọc tre cũ."
   ],
   [
    "Nguyệt",
@@ -1375,11 +1375,11 @@ window.LNRT_DIALOGUE = {
  "S37": [
   [
    "Người kể chuyện",
-   "Trong căn kho thấp, chuông lễ, nến và giấy sớ chất trên những giá gỗ. Bên dưới là tờ sơ đồ có năm vòng tròn quanh một dấu ấn."
+   "Trong căn kho thấp, chuông lễ, nến và giấy sớ chất trên những giá gỗ. Bên dưới là tờ sơ đồ có những vòng tròn quanh một dấu ấn."
   ],
   [
    "Nguyệt",
-   "Năm vòng dưới hầm, một dấu ở sân giếng. Sơ đồ chia làm hai chỗ khác nhau."
+   "Những vòng dưới hầm và dấu ở sân giếng nằm ở hai chỗ khác nhau."
   ],
   [
    "Tuyết",
@@ -1457,7 +1457,7 @@ window.LNRT_DIALOGUE = {
  "S40": [
   [
    "Người kể chuyện",
-   "Mưa đập lộp bộp trên mái hiên. Năm người co lại quanh chiếc đèn pin dựng đứng, không ai còn đủ sức giả vờ bình thản."
+   "Mưa đập lộp bộp trên mái hiên. Cả nhóm co lại quanh chiếc đèn pin dựng đứng, không ai còn đủ sức giả vờ bình thản."
   ],
   [
    "Nam",
@@ -1517,7 +1517,7 @@ window.LNRT_DIALOGUE = {
  "S42": [
   [
    "Nguyệt",
-   "Bà để lại năm phong bì. Tớ mở từ trước lúc rủ các cậu đi."
+   "Bà để lại những phong bì. Tớ mở từ trước lúc rủ các cậu đi."
   ],
   [
    "Ánh",
@@ -1731,7 +1731,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Tuyết",
-   "Năm bát đã xếp đủ. Cái bát nhỏ này có người lén bỏ vào sau."
+   "Những bát lớn đã xếp đủ. Cái bát nhỏ này có người lén bỏ vào sau."
   ],
   [
    "Bà Mận",
@@ -1965,7 +1965,7 @@ window.LNRT_DIALOGUE = {
  "F05": [
   [
    "Người kể chuyện",
-   "Bức tường hầm sáng rực lên như được soi bởi đèn dầu năm cũ. Năm người đang đứng giữa những bát lễ, cạnh cửa có tiếng sắt gài."
+   "Bức tường hầm sáng rực lên như được soi bởi đèn dầu năm cũ. Những người làm công đang đứng giữa các bát lễ, cạnh cửa có tiếng sắt gài."
   ],
   [
    "Đông",
@@ -2063,7 +2063,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Nguyệt",
-   "Bà để lại năm cái phong bì. Tớ mở hết rồi... trước khi rủ mọi người đi."
+   "Bà để lại những phong bì. Tớ mở hết rồi... trước khi rủ mọi người đi."
   ],
   [
    "Nam",
@@ -2219,7 +2219,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Bá Lâm",
-   "Thế năm người dưới hầm thì sao? Tôi không muốn họ gặp chuyện."
+   "Thế những người dưới hầm thì sao? Tôi không muốn họ gặp chuyện."
   ],
   [
    "Thầy Tịnh",
@@ -2427,7 +2427,7 @@ window.LNRT_DIALOGUE = {
  "M88F": [
   [
    "Người kể chuyện",
-   "Năm người trở về sân giếng hiện tại. Mơ ngồi ở bậc thềm, hai bàn tay nắm chặt chiếc trâm cũ."
+   "Cả nhóm trở về sân giếng hiện tại. Mơ ngồi ở bậc thềm, hai bàn tay nắm chặt chiếc trâm cũ."
   ],
   [
    "Mơ",
@@ -3089,7 +3089,7 @@ window.LNRT_DIALOGUE = {
  "P10": [
   [
    "Nguyệt",
-   "Tờ giấy vẽ năm dấu dưới hầm, còn một dấu ở sân. Hai chỗ tách hẳn nhau."
+   "Tờ giấy vẽ những dấu dưới hầm, còn một dấu ở sân. Hai chỗ tách hẳn nhau."
   ],
   [
    "Đông",
@@ -3207,7 +3207,7 @@ window.LNRT_DIALOGUE = {
  "FINAL01": [
   [
    "Người kể chuyện",
-   "Năm món di vật được trải trên tấm vải sạch. Trước mặt nhóm là cửa ra, bản sớ do Tịnh để lại và những dấu trói chưa được tháo ở nền hầm."
+   "Các di vật được trải trên tấm vải sạch. Trước mặt nhóm là cửa ra, bản sớ do Tịnh để lại và những dấu trói chưa được tháo ở nền hầm."
   ],
   [
    "Đông",
@@ -3215,11 +3215,11 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Nguyệt",
-   "Bản sớ của Tịnh bắt năm người sống đứng lại đúng chỗ năm người đã chết. Tớ không tin nó là cách cứu Mơ."
+   "Bản sớ của Tịnh bắt người sống đứng lại đúng chỗ những người đã chết. Tớ không tin nó là cách cứu Mơ."
   ],
   [
    "Nam",
-   "Nhưng nếu mình cứ bỏ đi thì sao? Mơ với năm người kia vẫn ở đây mà."
+   "Nhưng nếu mình cứ bỏ đi thì sao? Mơ với những người kia vẫn ở đây mà."
   ],
   [
    "Tuyết",
@@ -3241,7 +3241,7 @@ window.LNRT_DIALOGUE = {
  "BAD01": [
   [
    "Nam",
-   "Khoan. Các cậu đọc kỹ chưa? Tờ này bắt bọn mình đứng đúng năm chỗ cũ đấy."
+   "Khoan. Các cậu đọc kỹ chưa? Tờ này bắt bọn mình đứng đúng những chỗ cũ đấy."
   ],
   [
    "Nguyệt",
@@ -3257,11 +3257,11 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Ánh",
-   "Máy vẫn đang quay. Nhưng trên màn hình cả năm đứng im, không thấy ai cử động."
+   "Máy vẫn đang quay. Nhưng trên màn hình cả nhóm đứng im, không thấy ai cử động."
   ],
   [
    "Người kể chuyện",
-   "Năm vòng phấn sáng rồi tắt. Cả nhóm vẫn sống, nhưng không ai bước được ra khỏi gian hầm, như có thứ gì níu chặt dưới chân."
+   "Những vòng phấn sáng rồi tắt. Cả nhóm vẫn sống, nhưng không ai bước được ra khỏi gian hầm, như có thứ gì níu chặt dưới chân."
   ],
   [
    "Mơ",
@@ -3285,7 +3285,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Người kể chuyện",
-   "Trong tấm ảnh mới chụp, năm sinh viên đứng vào đúng chỗ năm người cũ. Tiếng giếng sâu vẫn đều đều vọng lên, như một nhịp gọi chưa bao giờ dứt."
+   "Trong tấm ảnh mới chụp, cả nhóm đứng vào đúng chỗ những người cũ. Tiếng giếng sâu vẫn đều đều vọng lên, như một nhịp gọi chưa bao giờ dứt."
   ],
   [
    "Mơ",
@@ -3315,7 +3315,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Nam",
-   "Lần sau có đến cũng phải có người hỗ trợ. Hôm nay về đủ năm đứa đã."
+   "Lần sau có đến cũng phải có người hỗ trợ. Hôm nay cả nhóm về cùng nhau đã."
   ],
   [
    "Mơ",
@@ -3327,7 +3327,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Người kể chuyện",
-   "Cổng sắt mở ra con đường cũ. Năm người trở về cùng những tấm ảnh và giấy tờ mang theo; sau lưng họ, tiếng nước dưới giếng vẫn chưa dứt."
+   "Cổng sắt mở ra con đường cũ. Cả nhóm trở về cùng những tấm ảnh và giấy tờ mang theo; sau lưng họ, tiếng nước dưới giếng vẫn chưa dứt."
   ]
  ],
  "GOOD01": [
@@ -3361,7 +3361,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Người kể chuyện",
-   "Trong màn hình máy ảnh, năm dấu tay trên cửa mờ dần. Tiếng đập cửa đứt quãng rồi thay bằng tiếng bước chân đi ra hành lang."
+   "Trong màn hình máy ảnh, những dấu tay trên cửa mờ dần. Tiếng đập cửa đứt quãng rồi thay bằng tiếng bước chân đi ra hành lang."
   ],
   [
    "Hải",
@@ -3427,7 +3427,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Nguyệt",
-   "Tên năm người đã có rồi. Về làng, tớ muốn đưa cho gia đình họ xem trước."
+   "Tên của họ đã có rồi. Về làng, tớ muốn đưa cho gia đình họ xem trước."
   ],
   [
    "Mơ",
@@ -3573,7 +3573,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Đông",
-   "Còn năm người mất năm tám tám nữa. Bọn cháu sẽ trình cả chuyện ấy, không thể để qua được."
+   "Còn những người mất năm tám tám nữa. Bọn cháu sẽ trình cả chuyện ấy, không thể để qua được."
   ],
   [
    "Nam",
@@ -3597,7 +3597,7 @@ window.LNRT_DIALOGUE = {
   ],
   [
    "Người kể chuyện",
-   "Bức ảnh cuối chỉ có năm người đứng trước bậc đá. Bên cạnh Ánh là một khoảng trống vừa đủ cho một đứa bé, nơi đặt chiếc trâm gỗ cũ."
+   "Bức ảnh cuối chỉ có cả nhóm đứng trước bậc đá. Bên cạnh Ánh là một khoảng trống vừa đủ cho một đứa bé, nơi đặt chiếc trâm gỗ cũ."
   ],
   [
    "Nguyệt",
