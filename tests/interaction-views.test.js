@@ -21,7 +21,8 @@ vm.createContext(context);
 for(const file of ['assets/research/books-data.js','assets/dialogue/reviewed.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context);
 const script=fs.readFileSync(path.join(root,'game.js'),'utf8').replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
 render=()=>{};renderSidebar=()=>{};hideModal=()=>{};playSound=()=>{};save=()=>{};itemPop=()=>{};queueMemory=()=>{};toast=()=>{};
-window.testGame={initialState,setState:s=>{state=s},act,nextLine,clearDialogue,showLine,showInteractionView,INTERACTION_VIEWS};})();`);
+chooseModal=(title,body,choices)=>{window.lastChoices=choices};go=id=>{state.scene=id};
+window.testGame={initialState,setState:s=>{state=s},act,nextLine,clearDialogue,showLine,showInteractionView,datTrustNo,datTrustYes,INTERACTION_VIEWS};})();`);
 assert.ok(script.includes('window.testGame='));vm.runInContext(script,context);const g=window.testGame;
 for(const config of Object.values(g.INTERACTION_VIEWS))assert.ok(fs.existsSync(path.join(root,'assets/props',config.file)),config.file);
 const view=nodes['interaction-view'],shell=nodes['app-shell'];
@@ -34,4 +35,11 @@ s=g.initialState();s.scene='BG45';s.flags.huuDone=true;g.setState(s);g.act('huu'
 assert.equal(nodes['dialogue-portrait-wrap'].hidden,true,'the person in the view must not be covered by a duplicate portrait');
 g.nextLine();g.showLine('Ông Hựu','Xin chào');assert.equal(nodes['dialogue-portrait-wrap'].hidden,false,'normal dialogue still displays the portrait');g.clearDialogue();
 s=g.initialState();s.scene='BG05';g.setState(s);g.act('shrine');assert.ok(s.items.includes('incense'),'the incense interaction must still grant the item');assert.match(view.src,/POV_Bat_Huong/);const failed=view.onerror;failed();assert.equal(view.hidden,true,'a missing image must leave the original scene playable');
-console.log('OK: interaction view, dialogue, scene restoration, late loading, failure fallback and existing progression.');
+for(const [scene,action,filename] of [['BG13','spoon','POV_Muoi_Com'],['BG16','mirror','POV_Guong_Phong_Tre'],['BG21','musicbox','POV_Hop_Nhac'],['BG42','wellSealed','POV_Gieng_Tram'],['BG49','simPhoto','POV_Ong_Dat_Trong_Nha']]){
+ s=g.initialState();s.scene=scene;g.setState(s);g.act(action);assert.match(view.src,new RegExp(filename),`${action} opens its dedicated view`);view.onload();assert.equal(view.hidden,false);g.clearDialogue();assert.equal(view.hidden,true);
+}
+s=g.initialState();s.scene='BG34';g.setState(s);g.act('fbMan');window.lastChoices[0][1]();assert.equal(s.flags.fbMan,'wake');assert.match(view.src,/POV_Ba_Man_Thuc/);view.onload();g.nextLine();assert.equal(nodes['dialogue-portrait-wrap'].hidden,true,'the awakened bà Mận speaks in her own scene');g.clearDialogue();g.act('fbMan');assert.match(view.src,/POV_Ba_Man_Thuc/,'returning to bà Mận remembers the earlier choice');g.clearDialogue();
+s=g.initialState();s.scene='BG34';g.setState(s);g.act('fbMan');window.lastChoices[1][1]();assert.equal(s.flags.fbMan,'quiet');assert.match(view.src,/POV_Ba_Man_Ben_Bep/);g.clearDialogue();
+s=g.initialState();s.scene='BG48';g.setState(s);g.datTrustNo(1);assert.match(view.src,/POV_Ong_Dat_Cua_Nha/);g.clearDialogue();g.datTrustYes();assert.equal(s.flags.datTrust,true);assert.match(view.src,/POV_Ong_Dat_Cua_Nha/);view.onload();for(let i=0;i<6;i++)g.nextLine();assert.equal(s.scene,'BG49','the accepted conversation still leads into the house');assert.equal(view.hidden,true);
+s=g.initialState();s.scene='BG49';s.flags.datBoxDone=true;s.items.push('scrollFake');g.setState(s);g.act('compareScrolls');window.lastChoices[1][1]();assert.match(view.src,/POV_Ong_Dat_Trong_Nha/,'feedback after a choice returns to ông Đạt');g.clearDialogue();g.act('compareScrolls');window.lastChoices[0][1]();window.lastChoices[1][1]();assert.equal(s.flags.scrollCompared,true);assert.match(view.src,/POV_Ong_Dat_Trong_Nha/,'the completed comparison keeps its scene');g.clearDialogue();
+console.log('OK: close-ups follow dialogue and choices, restore scenes, handle failed loads, and preserve progression.');

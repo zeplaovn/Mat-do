@@ -443,14 +443,26 @@ const initialState = () => ({
 let state=initialState();
 let dialogueOpen=false;let modalType=null;let modalReturnFocus=null;let toastTimer=null;
 /* Ảnh góc nhìn riêng cho những cuộc gặp và vật chứng quan trọng. */
+const DAT_ROOM_VIEW={scene:'BG49',file:'POV_Ong_Dat_Trong_Nha.webp',subject:'Ông Đạt',alt:'Ông Đạt ngồi đối diện trong căn nhà bên bàn thờ chị Sim'};
 const INTERACTION_VIEWS={
  warning:{scene:'BG01',file:'POV_Ba_Ban_Nuoc.webp',subject:'Bà bán nước',alt:'Bà bán nước ngồi đối diện bên bàn trà'},
  huu:{scene:'BG45',file:'POV_Ong_Huu.webp',subject:'Ông Hựu',alt:'Ông Hựu ngồi đối diện bên bàn xem quẻ và ba đồng xu'},
  shrine:{scene:'BG05',file:'POV_Bat_Huong.webp',alt:'Bát hương trước miếu cây đa'},
  marker:{scene:'BG07',file:'POV_Cot_Moc.webp',alt:'Cột mốc đá có bốn vòng khắc'},
- well:{scene:'BG09',file:'POV_Gieng_Da.webp',alt:'Nhìn gần miệng giếng đá trong sân'}
+ well:{scene:'BG09',file:'POV_Gieng_Da.webp',alt:'Nhìn gần miệng giếng đá trong sân'},
+ datDoor:{scene:'BG48',file:'POV_Ong_Dat_Cua_Nha.webp',subject:'Ông Đạt',alt:'Ông Đạt đứng ở cánh cửa hé mở'},
+ simPhoto:DAT_ROOM_VIEW,simScarf:DAT_ROOM_VIEW,datBox:DAT_ROOM_VIEW,compareScrolls:DAT_ROOM_VIEW,
+ fbMan:{scene:'BG34',file:'POV_Ba_Man_Ben_Bep.webp',subject:'Bà Mận',alt:'Bà Mận ngồi bên bếp than trong đêm năm 1988'},
+ fbManWake:{scene:'BG34',file:'POV_Ba_Man_Thuc.webp',subject:'Bà Mận',alt:'Bà Mận đã tỉnh và nhìn về phía Mơ'},
+ spoon:{scene:'BG13',file:'POV_Muoi_Com.webp',alt:'Chiếc muôi cơm gãy nằm trong tro bếp'},
+ mirror:{scene:'BG16',file:'POV_Guong_Phong_Tre.webp',alt:'Chiếc gương cũ phản chiếu căn phòng trẻ trống'},
+ musicbox:{scene:'BG21',file:'POV_Hop_Nhac.webp',alt:'Hộp nhạc cũ trên nền phòng trẻ'},
+ folkOffering:{scene:'BG46',file:'POV_Mam_Le.webp',alt:'Mâm gỗ trước miếu cây đa'},
+ sealedWall:{scene:'BG19',file:'POV_Tuong_Chan.webp',alt:'Những dấu tay trên bức tường bị bịt'},
+ wellSealed:{scene:'BG42',file:'POV_Gieng_Tram.webp',alt:'Vòng hoa nhài trên nắp giếng bị trám'}
 };
 let activeInteractionView=null,interactionViewToken=0,interactionPan=null;
+function interactionViewFor(action){return INTERACTION_VIEWS[action==='fbMan'&&state.flags.fbMan==='wake'?'fbManWake':action]}
 /* Thành tựu tồn tại qua nhiều lần chơi, riêng với bản lưu của từng cuộc điều tra. */
 const ACHIEVEMENT_KEY='loi-nguyen-rung-thieng-achievements-v1';
 const ACHIEVEMENTS=[
@@ -584,7 +596,7 @@ $('dialogue-speaker').textContent=who;$('dialogue-text').textContent=text;
 function resetSceneScroll(){for(const id of ['app-shell','scene-stage']){const el=$(id);if(el){el.scrollTop=0;el.scrollLeft=0}}}
 function clearInteractionView(){interactionViewToken++;const prior=activeInteractionView,pan=interactionPan;activeInteractionView=null;interactionPan=null;const view=$('interaction-view'),shell=$('app-shell'),backdrop=$('scene-backdrop'),column=document.querySelector&&document.querySelector('.game-column');if(view){view.hidden=true;view.onload=null;view.onerror=null}if(shell)shell.classList.remove('interaction-active');if(backdrop&&SCENES[state.scene])backdrop.style.backgroundImage=`url("${BG(SCENES[state.scene].bg||state.scene)}")`;resetSceneScroll();if(column&&prior&&prior.scene===state.scene&&Number.isFinite(pan))column.scrollLeft=pan}
 function showInteractionView(action,scene){
- const shot=INTERACTION_VIEWS[action],view=$('interaction-view'),shell=$('app-shell');
+ const shot=interactionViewFor(action),view=$('interaction-view'),shell=$('app-shell');
  if(!shot||!view||!shell||!dialogueOpen||modalType||shot.scene!==scene||state.scene!==scene)return;
  const token=++interactionViewToken;
  const reveal=()=>{if(token!==interactionViewToken||!dialogueOpen||state.scene!==scene)return;if(!activeInteractionView){const column=document.querySelector&&document.querySelector('.game-column');interactionPan=column?column.scrollLeft:null}activeInteractionView=shot;view.hidden=false;shell.classList.add('interaction-active');const backdrop=$('scene-backdrop');if(backdrop)backdrop.style.backgroundImage=`url("${ROOT}props/${shot.file}")`;resetSceneScroll();setDialoguePortrait($('dialogue-speaker').textContent)};
@@ -809,7 +821,7 @@ const SPECIAL_CLOSEUPS={
  comb:{file:'Mo_Tram_Go.webp',caption:'Chiếc trâm gỗ gãy nằm trong chiếc nôi cũ.'}
 };
 function closeupInfo(h){
- const special=SPECIAL_CLOSEUPS[h.action]||INTERACTION_VIEWS[h.action];if(special)return {special};
+ const special=SPECIAL_CLOSEUPS[h.action]||interactionViewFor(h.action);if(special)return {special};
  /* Phóng từ nền cảnh, giữ tâm vùng tương tác trong khung và không vượt mép ảnh. */
  const zoom=Math.max(1.35,Math.min(3,70/Math.max(h.w,h.h))),position=(center)=>Math.max(0,Math.min(100,(center*zoom-.5)/(zoom-1)*100));
  return {zoom,x:position((h.x+h.w/2)/100),y:position((h.y+h.h/2)/100)};
@@ -1401,8 +1413,8 @@ function startFlashbackPrompt(){
 
 function startFlashback(){state.flags.mo=true;state.flags.fbBowl=false;state.flags.fbMan=null;state.flags.fbKeys=false;state.flags.fbSeal=false;state.flags.fbFed=false;state.flags.fbCha=false;save();go('BG34')}
 function fbMan(){
- if(state.flags.fbMan){say('Mơ','Bà Mận vẫn ngủ gật bên bếp.');return}
- chooseModal('Bà Mận ngủ gật bên bếp','Bà ngồi bên bếp than, đầu gục xuống, hai tay còn nắm chiếc muôi. Mơ định bước qua thật khẽ.',[['Đánh thức bà',()=>{state.flags.fbMan='wake';save();talk([['Mơ','Bà ơi, ai đang làm gì ngoài sân vậy?'],['Bà Mận','...Con. Mơ, không được ra sân. Cha con dặn rồi.'],['Bà Mận','Bà không giúp được con đâu. Bà sợ... Thôi, con về buồng đi, đừng nghe gì cả.'],['Mơ','Con thấy bà khóc. Bà ơi, con chỉ đi xem một chút thôi.']])}],['Để bà ngủ',()=>{state.flags.fbMan='quiet';save();talk([['Mơ','Con đi nhẹ lắm đấy, bà Mận ơi.'],['Mơ','Mỗi đêm bà đều giả vờ ngủ. Con biết bà biết hết. Bà vẫn để cho con đi.']])}]],'LỰA CHỌN')}
+ if(state.flags.fbMan){say('Mơ',state.flags.fbMan==='wake'?'Bà Mận lặng im bên bếp.':'Bà Mận vẫn ngủ gật bên bếp.');return}
+ chooseModal('Bà Mận ngủ gật bên bếp','Bà ngồi bên bếp than, đầu gục xuống, hai tay còn nắm chiếc muôi. Mơ định bước qua thật khẽ.',[['Đánh thức bà',()=>{state.flags.fbMan='wake';save();talk([['Mơ','Bà ơi, ai đang làm gì ngoài sân vậy?'],['Bà Mận','...Con. Mơ, không được ra sân. Cha con dặn rồi.'],['Bà Mận','Bà không giúp được con đâu. Bà sợ... Thôi, con về buồng đi, đừng nghe gì cả.'],['Mơ','Con thấy bà khóc. Bà ơi, con chỉ đi xem một chút thôi.']]);showInteractionView('fbManWake','BG34')}],['Để bà ngủ',()=>{state.flags.fbMan='quiet';save();talk([['Mơ','Con đi nhẹ lắm đấy, bà Mận ơi.'],['Mơ','Mỗi đêm bà đều giả vờ ngủ. Con biết bà biết hết. Bà vẫn để cho con đi.']]);showInteractionView('fbMan','BG34')}]],'LỰA CHỌN')}
 function fbBowl(){if(state.flags.fbBowl){say('Mơ','Chiếc bát bé xíu vẫn nằm đó, trống không.');return}state.flags.fbBowl=true;save();render();talk([['Mơ','Bát này nhỏ xíu, vừa tay con. Sao lại để riêng, không ai ăn?'],['Mơ','Con nghe tiếng người lớn nói chuyện trên gác. Con lên xem.']]);renderSidebar()}
 function fbKeys(){
  if(state.flags.fbKeys){say('Mơ','Con nhớ mãi: “Nó sẽ đứng dậy.” Con không hiểu thầy ấy nói về ai.');return}
@@ -1459,7 +1471,7 @@ function wellSealed(){
   ['Dùng móc gầu kéo vật kim loại lên',()=>{
    f.sealRecovered=true;gain('seal');evidence('bronzeSeal');
    note('bronzeSeal','Ấn đồng tìm thấy ở giếng','Ấn đồng từng dùng trong đêm 1988 được kéo lên bằng móc gầu. Nó là vật chứng của tà lễ, không phải đồ thờ Huyền Lâm Thánh Quân.');save();
-   talk([['Nam','Ra rồi. Nhìn nhỏ thế mà nặng thật.'],['Ánh','Đáy ấn có cùng nét khắc với dấu trên tờ giấy của thầy Tịnh.'],['Đông','Giữ cẩn thận. Đừng để nó lại trong nhà này.']]);
+   talk([['Nam','Ra rồi. Nhìn nhỏ thế mà nặng thật.'],['Ánh','Đáy ấn có cùng nét khắc với dấu trên tờ giấy của thầy Tịnh.'],['Đông','Giữ cẩn thận. Đừng để nó lại trong nhà này.']]);showInteractionView('wellSealed','BG42');
   }],['Đậy nắp lại, chưa động vào',hideModal]
  ],'ĐIỀU TRA · MIỆNG GIẾNG','choice'));
 }
@@ -1496,10 +1508,10 @@ function datDoor(){
  if(!f.datKnock){f.datKnock=true;save();talk([['Người kể chuyện','Nguyệt gõ cửa ba tiếng. Một lúc sau có tiếng dép lê, cánh cửa mở hé. Một ông cụ tóc bạc nhìn cả nhóm từ đầu đến chân.'],['Ông Đạt','Ai đấy? Không phải người làng này. Lại đi làm báo, làm phim đấy à? Tôi nói trước, tôi không kể chuyện cho người ta đăng lên mạng đâu.']],ask)}
  else talk([['Ông Đạt','Lại mấy đứa đấy à. Lần này định nói gì?']],ask)}
 function datTrustNo(k){
- talk([['Ông Đạt',k===1?'Truyền thuyết hả? Người ta chết thật chứ có phải truyền thuyết đâu. Về đi các cháu.':'Biết hết rồi mà còn hỏi tôi? Hồi đó cũng có người nói thế, rồi viết ra toàn chuyện bịa. Tôi mệt rồi.'],['Người kể chuyện','Cánh cửa khép lại. Nhưng ông không cài then.']])}
+ talk([['Ông Đạt',k===1?'Truyền thuyết hả? Người ta chết thật chứ có phải truyền thuyết đâu. Về đi các cháu.':'Biết hết rồi mà còn hỏi tôi? Hồi đó cũng có người nói thế, rồi viết ra toàn chuyện bịa. Tôi mệt rồi.'],['Người kể chuyện','Cánh cửa khép lại. Nhưng ông không cài then.']]);showInteractionView('datDoor','BG48')}
 function datTrustYes(){
  state.flags.datTrust=true;save();render();
- talk([['Ông Đạt','Bà Sáu... Bà ấy còn nhớ tôi cơ à. Vào đi, vào đi, đừng đứng ngoài sương.'],['Nguyệt','Bà cháu mất rồi bác ạ.'],['Ông Đạt','Ừ, tôi biết. Mấy năm trước tôi có ra thắp cho bà nén nhang. Người giữ chuyện cũ, đi trước hết cả.'],['Ông Đạt','Chị Sim nhà tôi ấy mà, hồi đó cả làng chia làm hai phe. Bên bảo chị phá lễ nên rừng nổi giận, bên bảo chị là người cứu cả xóm. Tôi chỉ biết chị tôi không làm gì có lỗi với ai.'],['Tuyết','Bác kể tụi cháu nghe được không ạ?'],['Ông Đạt','Từ từ, vào nhà đã. Ấm nước tôi vừa đun xong.']],()=>go('BG49'))}
+ talk([['Ông Đạt','Bà Sáu... Bà ấy còn nhớ tôi cơ à. Vào đi, vào đi, đừng đứng ngoài sương.'],['Nguyệt','Bà cháu mất rồi bác ạ.'],['Ông Đạt','Ừ, tôi biết. Mấy năm trước tôi có ra thắp cho bà nén nhang. Người giữ chuyện cũ, đi trước hết cả.'],['Ông Đạt','Chị Sim nhà tôi ấy mà, hồi đó cả làng chia làm hai phe. Bên bảo chị phá lễ nên rừng nổi giận, bên bảo chị là người cứu cả xóm. Tôi chỉ biết chị tôi không làm gì có lỗi với ai.'],['Tuyết','Bác kể tụi cháu nghe được không ạ?'],['Ông Đạt','Từ từ, vào nhà đã. Ấm nước tôi vừa đun xong.']],()=>go('BG49'));showInteractionView('datDoor','BG48')}
 function simPhoto(){
  const f=state.flags;
  if(f.simHeard){say('Ông Đạt','Chị tôi đó. Ảnh chụp hồi hai mươi hai tuổi, cái khăn ấy chị tự nhuộm.');return}
@@ -1517,7 +1529,7 @@ function datBox(){
  f.datBoxDone=true;gain('scrollOrig');gain('simLetter');
  note('simLetter','Thư Sim gửi Đạt','“Đạt à. Chị đối chiếu rồi, tờ thầy Tịnh đang đọc không phải tờ bà để lại. Giấy mới dán vào giấy cũ, mực khác, cái câu “nhận máu người” là họ thêm vào. Chị không sợ, chỉ sợ họ chặn em. Em cầm cái này chạy lên xã, bảo người ta ra nền tế ngay. Đừng quay lại tìm chị. Chị Sim.”');
  note('scrollOrig','Bản sớ tạ rừng nguyên bản','Danh hiệu ở dòng đầu: Huyền Lâm Thánh Quân. Lời tạ: “Rừng nuôi người sống, người giữ rừng xanh.” Nét chữ đều, triện đỏ đã phai.');save();
- talk([['Ông Đạt','Hai thứ này chị đưa tôi đêm ấy. Tôi giữ ba mươi năm, chưa dám đưa ai.'],['Ông Đạt','Một là bản chép lễ tạ rừng của bà ngoại chị. Một là lá thư chị viết vội, buộc bằng dải khăn chàm.'],['Nguyệt','Cháu đọc thử được không bác?'],['Ông Đạt','Đọc đi. Chữ chị tôi, tôi nhìn là nhận ra.']],()=>chooseModal('Thư Sim gửi Đạt','“Đạt à. Chị đối chiếu rồi, tờ thầy Tịnh đang đọc không phải tờ bà để lại. Giấy mới dán vào giấy cũ, mực khác, cái câu “nhận máu người” là họ thêm vào. Chị không sợ, chỉ sợ họ chặn em. Em cầm cái này chạy lên xã, bảo người ta ra nền tế ngay. Đừng quay lại tìm chị. Chị Sim.”',[['Gấp thư lại',()=>talk([['Ông Đạt','Tờ của Tịnh chắc còn nằm đâu đó dưới hầm, chỗ họ làm lễ. Tìm được thì đem lại đây, mình trải ra so với tờ của bà ngoại chị.']])]],'THƯ CŨ','choice'))}
+ talk([['Ông Đạt','Hai thứ này chị đưa tôi đêm ấy. Tôi giữ ba mươi năm, chưa dám đưa ai.'],['Ông Đạt','Một là bản chép lễ tạ rừng của bà ngoại chị. Một là lá thư chị viết vội, buộc bằng dải khăn chàm.'],['Nguyệt','Cháu đọc thử được không bác?'],['Ông Đạt','Đọc đi. Chữ chị tôi, tôi nhìn là nhận ra.']],()=>chooseModal('Thư Sim gửi Đạt','“Đạt à. Chị đối chiếu rồi, tờ thầy Tịnh đang đọc không phải tờ bà để lại. Giấy mới dán vào giấy cũ, mực khác, cái câu “nhận máu người” là họ thêm vào. Chị không sợ, chỉ sợ họ chặn em. Em cầm cái này chạy lên xã, bảo người ta ra nền tế ngay. Đừng quay lại tìm chị. Chị Sim.”',[['Gấp thư lại',()=>{talk([['Ông Đạt','Tờ của Tịnh chắc còn nằm đâu đó dưới hầm, chỗ họ làm lễ. Tìm được thì đem lại đây, mình trải ra so với tờ của bà ngoại chị.']]);showInteractionView('datBox','BG49')}]],'THƯ CŨ','choice'))}
 function fakeFind(){
  const f=state.flags;
  if(f.fakeGot){say('Nguyệt','Tờ sớ giả mình đã lấy rồi.');return}
@@ -1531,13 +1543,13 @@ function compareScrolls(){
  if(!has('scrollFake')){say('Ông Đạt','Tờ của bà ngoại chị tôi có đây rồi. Muốn so thì phải có tờ của Tịnh, chắc nó nằm dưới hầm, chỗ làm lễ.');return}
  chooseModal('Đối chiếu hai bản sớ','Bản gốc ghi “Huyền Lâm Thánh Quân”. Bản của Tịnh ghi “Huyền Lâm Tôn Thần”. Bài vị ở miếu cây đa đề tên nào?',[
   ['Huyền Lâm Thánh Quân',()=>chooseModal('Đối chiếu hai bản sớ','Bản của Tịnh có một đoạn giấy mới chắp vào, mực đậm hơn. Đoạn đó viết gì?',[
-    ['“Rừng nuôi người sống, người giữ rừng xanh.”',()=>say('Ông Đạt','Câu đó có trong cả hai bản, nét chữ cũng đều. Nhìn lại chỗ giấy chắp xem.')],
+    ['“Rừng nuôi người sống, người giữ rừng xanh.”',()=>{say('Ông Đạt','Câu đó có trong cả hai bản, nét chữ cũng đều. Nhìn lại chỗ giấy chắp xem.');showInteractionView('compareScrolls','BG49')}],
     ['“Rừng nhận máu người, người nhận phúc rừng.”',scrollsMatch]],'SO CHỮ','choice')],
-  ['Huyền Lâm Tôn Thần',()=>say('Ông Đạt','Nhớ lại đi. Tôi với chị hay quét miếu, bài vị không có chữ “Tôn”.')]],'SO CHỮ','choice')}
+  ['Huyền Lâm Tôn Thần',()=>{say('Ông Đạt','Nhớ lại đi. Tôi với chị hay quét miếu, bài vị không có chữ “Tôn”.');showInteractionView('compareScrolls','BG49')}]],'SO CHỮ','choice')}
 function scrollsMatch(){
  state.flags.scrollCompared=true;evidence('scrollProof');
  note('scrollProof','Sớ giả và sớ gốc','Danh hiệu bị đổi từ Thánh Quân thành Tôn Thần, giấy mới chắp vào giấy cũ, mực và nét chữ khác, câu “Rừng nhận máu người” là bị thêm vào. Đây là bằng chứng Tịnh cố ý sửa sớ.');save();render();
- talk([['Ông Đạt','Đó. Chữ lệch, mực khác, tên thần cũng bị đổi. Tịnh không hiểu sai đâu, ông ta cố ý sửa.'],['Nam','Vậy là Đức Ngài không đòi máu ai hết.'],['Nguyệt','Giờ mình có thứ để nói với cả làng rồi.'],['Ông Đạt','Còn cái ấn thì tôi không có. Nghe nói nó rơi xuống giếng nhà họ Lâm từ năm tám tám. Việc đó tôi chịu, các cháu lo nhé.'],['Tuyết','Dạ. Tụi cháu sẽ làm cho trọn.']])}
+ talk([['Ông Đạt','Đó. Chữ lệch, mực khác, tên thần cũng bị đổi. Tịnh không hiểu sai đâu, ông ta cố ý sửa.'],['Nam','Vậy là Đức Ngài không đòi máu ai hết.'],['Nguyệt','Giờ mình có thứ để nói với cả làng rồi.'],['Ông Đạt','Còn cái ấn thì tôi không có. Nghe nói nó rơi xuống giếng nhà họ Lâm từ năm tám tám. Việc đó tôi chịu, các cháu lo nhé.'],['Tuyết','Dạ. Tụi cháu sẽ làm cho trọn.']]);showInteractionView('compareScrolls','BG49')}
 function endingEligibility(){
  const f=state.flags;
  const base=!!(f.ritualDone&&f.sixthDone&&f.flashDone&&f.lamDone&&f.namesDone);
@@ -1594,11 +1606,12 @@ const folkGlyph=id=>`<svg viewBox="0 0 32 32" aria-hidden="true" fill="none" str
 function folkPrintChart(){
  return '<div class="folk-print" aria-label="Các dấu trên giấy, từ trái sang phải">'+['leaf','water','grain','flame'].map(id=>`<span>${folkGlyph(id)}<small>${FOLK_MARKS[id].label}</small></span>`).join('')+'</div>';
 }
-function folkDials({title,intro,inscription,choices,solution,hint,onDone,reference=false}){
+function folkDials({title,intro,inscription,choices,solution,hint,onDone,reference=false,art=null}){
  let values=[null,null,null,null],done=false;
  const paper=reference&&state.notes.find(n=>n.id==='folkPrint');
  const referenceHTML=paper?`<details class="folk-reference"><summary>Xem mảnh giấy dó</summary><div class="doc-paper">${escapeHTML(paper.body).replace(/\n/g,'<br>')}</div>${folkPrintChart()}</details>`:'';
- showModal(`<div class="folk-puzzle${reference?' is-stone':''}"><h2>${title}</h2>${reference?`<img class="folk-location-art" src="${ROOT}props/POV_Cot_Moc.webp" alt="Cột mốc đá giữa rừng" draggable="false">`:''}<p>${intro}</p><p class="folk-inscription">${inscription}</p><div class="folk-slots" id="folk-slots"></div><p class="modal-note" id="folk-status" aria-live="polite">Chạm từng ô để đổi hình, rồi kiểm tra.</p>${referenceHTML}<div class="modal-buttons" id="folk-actions"></div></div>`,'CÂU ĐỐ · DẤU MIẾU','folk');
+ const image=reference?INTERACTION_VIEWS.marker:art;
+ showModal(`<div class="folk-puzzle${reference?' is-stone':''}"><h2>${title}</h2>${image?`<img class="folk-location-art" src="${ROOT}props/${image.file}" alt="${escapeHTML(image.alt)}" draggable="false">`:''}<p>${intro}</p><p class="folk-inscription">${inscription}</p><div class="folk-slots" id="folk-slots"></div><p class="modal-note" id="folk-status" aria-live="polite">Chạm từng ô để đổi hình, rồi kiểm tra.</p>${referenceHTML}<div class="modal-buttons" id="folk-actions"></div></div>`,'CÂU ĐỐ · DẤU MIẾU','folk');
  const draw=()=>{const box=$('folk-slots');box.replaceChildren();values.forEach((id,i)=>{
   const b=document.createElement('button');b.type='button';b.className='folk-slot';b.setAttribute('aria-label','Vị trí '+(i+1)+': '+(id?FOLK_MARKS[id].label:'chưa chọn'));
   b.innerHTML=`<span class="folk-number">${i+1}</span>${id?folkGlyph(id):'<span class="folk-empty">?</span>'}<small>${id?FOLK_MARKS[id].label:'Chọn hình'}</small>`;
@@ -1613,12 +1626,12 @@ function folkDials({title,intro,inscription,choices,solution,hint,onDone,referen
 }
 function folkOfferingPuzzle(){
  if(state.flags.folkOfferingDone){if(has('folkPrint'))showDoc('folkPrint');else say('Nguyệt','Mâm gỗ đã mở. Dấu in còn được ghi trong nhật ký.');return}
- folkDials({title:'Mâm gỗ ở miếu',intro:'Bốn hõm trên mâm có thể xoay hình. Những món lễ đã được bày lệch khỏi vị trí cũ.',
+ folkDials({title:'Mâm gỗ ở miếu',art:INTERACTION_VIEWS.folkOffering,intro:'Bốn hõm trên mâm có thể xoay hình. Những món lễ đã được bày lệch khỏi vị trí cũ.',
   inscription:'Nhìn từ lối vào: mép trái khắc bông lúa, mép phải ám đen như từng đặt đèn.',choices:['rice','water','flower','lamp'],solution:['rice','water','flower','lamp'],
   hint:'Sổ miếu ghi vị trí của nước so với cơm và hoa.',onDone:()=>{
    gain('folkPrint');note('folkPrint','Mảnh giấy dó dập dấu','Một hàng dấu được in trên giấy dó. Góc giấy có hình cột mốc giữa rừng.\nDòng chữ nhỏ: “Tìm đường về từ hơi ấm đến bóng cây.”');
    state.flags.folkOfferingDone=true;save();render();const dock=$('inventory-grid');if(dock)dock.scrollLeft=dock.scrollWidth;
-   talk([['Nguyệt','Mâm khẽ bật lên. Có một mảnh giấy dó nằm dưới đáy.'],['Ánh','Bốn hình này giống nét khắc trên cột đá trong rừng. Giữ lại, biết đâu còn dùng được.']])
+   talk([['Nguyệt','Mâm khẽ bật lên. Có một mảnh giấy dó nằm dưới đáy.'],['Ánh','Bốn hình này giống nét khắc trên cột đá trong rừng. Giữ lại, biết đâu còn dùng được.']]);showInteractionView('folkOffering','BG46')
   }});
 }
 function folkStonePuzzle(){
@@ -1688,7 +1701,7 @@ function hatchLock(){
  $('modal-body').appendChild(hintBlock(['Cần hai thứ: bảng ký hiệu và thứ tự đứng ký đơn. Bảng ký hiệu nằm trong ngăn kéo giá sách phòng học của Mơ, thứ tự ghi ở mặt sau một tấm ảnh dưới gối ở gác nhỏ.','Thứ tự đứng ký: thầy Khoa, bác Tâm, cô Lụa, chị Sen, bác Hải.','Từ trái sang phải: cây bút, cái cân, nốt nhạc, ngọn lửa, con sóng.']))}
 function showSafe(){if(state.flags.safeOpened){say('Nguyệt','Trong hộp đã tìm được bản thú tội của người tham gia nghi lễ.');return}
  showLock({title:'Hộp tài liệu của ông Bá Lâm',kicker:'CÂU ĐỐ · HỘP SẮT',type:'safe',code:'0317',plate:'KIM ĐỒNG HỒ KHÔNG BAO GIỜ ĐI TIẾP',hint:'Bấm vào từng ô số để đổi chữ số. Khóa đã rỉ sét.',onOpen:()=>{state.flags.safeOpened=true;evidence('confession');note('confession','Bản thú tội trong hộp sắt','Tài liệu ghi lại cách ông Bá Lâm che giấu việc giam năm người tố cáo trong tầng hầm và một nghi thức trấn yểm thất bại.');save();say('Nguyệt','Bản thú tội... Chúng ta đã có thêm chứng cứ về vụ án năm 1988.');renderSidebar()}})}
-function showWall(){const count=state.flags.wallImpressions||[];showModal(`<h2>Năm dấu tay trong vữa</h2><p>Lớp gạch mới bịt kín lối đi. Năm dấu tay mờ cho thấy từng có người đập vào đây từ phía bên kia.</p><p>Hãy chạm vào <strong>năm dấu tay</strong> để kiểm tra từng dấu, sau đó dùng thanh sắt cạy tường.</p><div class="modal-buttons" id="handprints"></div><p class="modal-note" id="hands-status">Đã kiểm tra ${count.length}/5 dấu tay.</p><div class="modal-buttons"><button class="modal-option" id="break-wall" type="button" ${count.length===5?'':'disabled'}>DÙNG THANH SẮT PHÁ TƯỜNG →</button></div>`,'CÂU ĐỐ · BỨC TƯỜNG','wall');renderHands()}
+function showWall(){const count=state.flags.wallImpressions||[];showModal(`<h2>Năm dấu tay trong vữa</h2><img class="folk-location-art" src="${ROOT}props/${INTERACTION_VIEWS.sealedWall.file}" alt="Năm dấu tay trên bức tường bị bịt" draggable="false"><p>Lớp gạch mới bịt kín lối đi. Năm dấu tay mờ cho thấy từng có người đập vào đây từ phía bên kia.</p><p>Hãy chạm vào <strong>năm dấu tay</strong> để kiểm tra từng dấu, sau đó dùng thanh sắt cạy tường.</p><div class="modal-buttons" id="handprints"></div><p class="modal-note" id="hands-status">Đã kiểm tra ${count.length}/5 dấu tay.</p><div class="modal-buttons"><button class="modal-option" id="break-wall" type="button" ${count.length===5?'':'disabled'}>DÙNG THANH SẮT PHÁ TƯỜNG →</button></div>`,'CÂU ĐỐ · BỨC TƯỜNG','wall');renderHands()}
 function renderHands(){const done=state.flags.wallImpressions||[];const box=$('handprints');box.replaceChildren();for(let i=1;i<=5;i++){const b=modalButton(done.includes(i)?`✓ Dấu tay ${i}`:`✋ Dấu tay ${i}`,()=>{if(!state.flags.wallImpressions)state.flags.wallImpressions=[];if(!state.flags.wallImpressions.includes(i))state.flags.wallImpressions.push(i);save();renderHands()});if(done.includes(i))b.disabled=true;box.appendChild(b)}$('hands-status').textContent=`Đã kiểm tra ${done.length}/5 dấu tay.`;$('break-wall').disabled=done.length<5;$('break-wall').onclick=()=>{state.flags.wallOpened=true;note('wall','Bức tường bị bịt năm 1988','Lớp gạch vừa bị nạy ra, lộ một phòng kín chứa dấu vết của năm nạn nhân.');consume('crowbar');save();hideModal();playSound('slam',.3,3.9);go('BG20')}}
 function showAltar(){if(questOn()){say('Mơ','Ngoài vườn có những nấm mộ gió để nhớ các bác. Chị giúp em tìm tên từng người nhé.');return}if(state.flags.ritualDone){say('Tuyết','Năm di vật đã đặt đủ. Tiếng gõ đã lặng, nhưng tớ không chắc mọi chuyện đã xong.');return}if(!has('incense')){say('Tuyết','Không thể làm nghi thức khi thiếu nhang. Hãy quay về miếu ở BG05.');return}const notFound=RELIC_ORDER.filter(x=>!state.relics.includes(x));if(notFound.length){showModal(`<h2>Năm bát hương lạnh</h2><p>Mỗi bát hương tượng trưng cho một người bị quên tên. Bạn cần tìm đủ <strong>năm di vật</strong> rồi mới tiến hành nghi lễ.</p><p>Đã tìm được: <strong>${state.relics.length}/5</strong>.</p><p class="modal-note">Năm bát hương đang chờ. Hãy tìm kỹ trong căn nhà này.</p>`,'BÀN THỜ GIA TIÊN','altar');return}renderRitual()}
 function renderRitual(){const progress=state.ritualProgress.length;showModal(`<h2>Trả lại tên cho người đã khuất</h2><p>Đặt năm di vật lên bát hương <strong>theo đúng thứ tự mà nhật ký đã ghi lại</strong>.</p><p><strong>Bát hương ${Math.min(progress+1,5)} / 5</strong></p><div id="ritual-options" class="ritual-list"></div><p class="ritual-history" id="ritual-progress">${progress?`Đã đặt ${progress} di vật.`:'Chưa đặt di vật nào.'}</p><p class="modal-note">Chọn sai thứ tự sẽ phải bắt đầu lại.</p>`,'CÂU ĐỐ · NGHI LỄ','ritual');const choices=$('ritual-options');RITUAL_SHOW.forEach((id,i)=>{const b=document.createElement('button');b.type='button';b.className='ritual-option';b.disabled=state.ritualProgress.includes(id);b.textContent=(ITEMS[id].emoji||'◆')+'  '+ITEMS[id].name;b.addEventListener('click',()=>placeRelic(id));choices.appendChild(b)})}
