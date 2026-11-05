@@ -186,12 +186,9 @@
 .title-buttons .primary-btn{
   width:min(100%,360px);min-height:64px;padding:14px 20px;color:#fff;
   font:700 clamp(21px,5.6vw,26px)/1.1 var(--serif);letter-spacing:.12em;text-shadow:0 0 16px var(--jade-glow),0 2px 6px #000;
-  background:radial-gradient(70% 160% at 50% 50%,rgba(60,200,205,.28),transparent 72%);
 }
 .title-buttons .primary-btn span{display:none}
-.title-buttons .primary-btn:before,.title-buttons .primary-btn:after{content:"";position:absolute;left:4%;right:4%;height:1px;background:linear-gradient(90deg,transparent,var(--jade),transparent);box-shadow:0 0 12px var(--jade-glow)}
-.title-buttons .primary-btn:before{top:0}.title-buttons .primary-btn:after{bottom:0}
-.title-buttons .primary-btn:hover,.title-buttons .primary-btn:focus-visible{background:radial-gradient(70% 160% at 50% 50%,rgba(60,200,205,.42),transparent 72%);outline:0}
+.title-buttons .primary-btn:hover,.title-buttons .primary-btn:focus-visible{background:none;outline:0;text-decoration:none;text-shadow:0 0 22px var(--jade),0 2px 6px #000}
 .title-buttons .secondary-btn{min-height:46px;padding:10px 18px;color:#cdd8d7;font:600 14px var(--sans);letter-spacing:.16em}
 .title-buttons .secondary-btn:hover,.title-buttons .secondary-btn:focus-visible{color:var(--jade);background:none}
 @media(min-width:900px){.title-content{max-width:760px}.title-content h1.title-logo{margin-top:8vh}}
