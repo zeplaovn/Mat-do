@@ -9,6 +9,8 @@
 
 #app-shell:not(.memory-active):not(.flashback-active) .scene-stage[data-time-grade="night-art"] .interaction-view{filter:brightness(.52) saturate(.72) contrast(1.05)}
 #app-shell:not(.memory-active):not(.flashback-active) .scene-stage[data-time-grade="dawn-art"] .interaction-view{filter:brightness(.78) sepia(.12) saturate(.85)}
+#app-shell:not(.memory-active):not(.flashback-active) .scene-stage[data-time-grade="night-art"] .interaction-view.native-night{filter:none}
+#app-shell:not(.memory-active):not(.flashback-active) .scene-stage[data-time-grade="dawn-art"] .interaction-view.native-night{filter:brightness(1.25) sepia(.12) saturate(.9)}
 #app-shell:not(.memory-active):not(.flashback-active) .scene-stage[data-time-grade="dusk"] .interaction-view{filter:sepia(.18) saturate(.85) brightness(.78)}
 #app-shell:not(.memory-active):not(.flashback-active) .scene-stage[data-time-grade="dawn-night"] .interaction-view{filter:brightness(1.45) sepia(.18) saturate(.95)}
 #app-shell:not(.memory-active):not(.flashback-active) .scene-stage[data-time-grade="day-night"] .interaction-view{filter:brightness(1.8) sepia(.12) saturate(1.05)}

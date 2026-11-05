@@ -24,7 +24,7 @@ render=()=>{};renderSidebar=()=>{};hideModal=()=>{};playSound=()=>{};save=()=>{}
 chooseModal=(title,body,choices)=>{window.lastChoices=choices};go=id=>{state.scene=id};
 window.testGame={initialState,setState:s=>{state=s},act,nextLine,clearDialogue,showLine,showInteractionView,datTrustNo,datTrustYes,INTERACTION_VIEWS};})();`);
 assert.ok(script.includes('window.testGame='));vm.runInContext(script,context);const g=window.testGame;
-for(const config of Object.values(g.INTERACTION_VIEWS))assert.ok(fs.existsSync(path.join(root,'assets/props',config.file)),config.file);
+for(const config of Object.values(g.INTERACTION_VIEWS)){assert.ok(fs.existsSync(path.join(root,'assets/props',config.file)),config.file);if(config.nightFile)assert.ok(fs.existsSync(path.join(root,'assets/props',config.nightFile)),config.nightFile)}
 const view=nodes['interaction-view'],shell=nodes['app-shell'];
 let s=g.initialState();s.flags.oldwomanTalked=true;g.setState(s);column.scrollLeft=310;g.act('warning');
 assert.equal(nodes['dialogue'].hidden,false);assert.match(view.src,/POV_Ba_Ban_Nuoc/);shell.scrollTop=76;nodes['scene-stage'].scrollTop=14;view.onload();assert.equal(view.hidden,false);assert.ok(shell.classList.contains('interaction-active'));
@@ -34,6 +34,12 @@ g.act('warning');const late=view.onload;g.clearDialogue();late();assert.equal(vi
 s=g.initialState();s.scene='BG45';s.flags.huuDone=true;g.setState(s);g.act('huu');assert.match(view.src,/POV_Ong_Huu/);view.onload();
 assert.equal(nodes['dialogue-portrait-wrap'].hidden,true,'the person in the view must not be covered by a duplicate portrait');
 g.nextLine();g.showLine('Ông Hựu','Xin chào');assert.equal(nodes['dialogue-portrait-wrap'].hidden,false,'normal dialogue still displays the portrait');g.clearDialogue();
+for(const [scene,action,file,flag] of [['BG01','warning','POV_Ba_Ban_Nuoc-night.webp','oldwomanTalked'],['BG45','huu','POV_Ong_Huu-night.webp','huuDone']]){
+ s=g.initialState();s.scene=scene;s.visited.push('BG05');s.flags[flag]=true;g.setState(s);g.act(action);
+ assert.ok(view.src.endsWith(file),`${action} uses the night close-up after sunset`);view.onload();assert.ok(view.classList.contains('native-night'));assert.match(nodes['scene-backdrop'].style.backgroundImage,new RegExp(file.replace('.','\\.')));
+ g.clearDialogue();assert.ok(!view.classList.contains('native-night'),'closing dialogue clears the night lighting override');
+ s.flags.mo=true;g.setState(s);g.act(action);assert.ok(!view.src.endsWith(file),'flashback lighting must not use a present-day night variant');g.clearDialogue();
+}
 s=g.initialState();s.scene='BG05';g.setState(s);g.act('shrine');assert.ok(s.items.includes('incense'),'the incense interaction must still grant the item');assert.match(view.src,/POV_Bat_Huong/);const failed=view.onerror;failed();assert.equal(view.hidden,true,'a missing image must leave the original scene playable');
 for(const [scene,action,filename] of [['BG13','spoon','POV_Muoi_Com'],['BG16','mirror','POV_Guong_Phong_Tre'],['BG21','musicbox','POV_Hop_Nhac'],['BG42','wellSealed','POV_Gieng_Tram'],['BG49','simPhoto','POV_Ong_Dat_Trong_Nha']]){
  s=g.initialState();s.scene=scene;g.setState(s);g.act(action);assert.match(view.src,new RegExp(filename),`${action} opens its dedicated view`);view.onload();assert.equal(view.hidden,false);g.clearDialogue();assert.equal(view.hidden,true);

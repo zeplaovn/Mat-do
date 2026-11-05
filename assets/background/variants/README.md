@@ -2,6 +2,8 @@
 
 These WebP assets were created with the built-in image generation tool by editing the corresponding background in `assets/background/`. The generated images were resized to approximately 1280 × 720 and encoded as WebP for the game. The original scene images remain in place.
 
+Some variants were subsequently edited to correct visual continuity. Their updated prompts and the additional lit-lamp variant are documented in [the image consistency audit](../../IMAGE_AUDIT.md).
+
 The edits should keep camera framing and the position of interactive objects recognizable, because the game uses fixed hotspot coordinates.
 
 ## Night variants
