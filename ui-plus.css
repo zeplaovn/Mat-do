@@ -1,0 +1,117 @@
+/* ============ UI PLUS — nâng cấp giao diện, nạp cuối cùng ============
+   Tham khảo Demo_UI (Áo Cưới Giấy 3): khung túi đồ viền đồng có góc, nhãn vật đang chọn kèm kính lúp,
+   banner gợi ý ngọc bích, thẻ vật phẩm có vạch nhấn, phản hồi chạm rõ ràng. Chỉ ghi đè bề mặt, không đổi bố cục. */
+:root{
+  --brass:#a87e46;--brass-dim:rgba(168,126,70,.34);--brass-deep:#4a3419;
+  --jade-soft:rgba(95,227,221,.14);
+  --ease-out:cubic-bezier(.2,.8,.2,1);
+}
+
+/* ---------- Nút HUD: chạm có vòng sáng ---------- */
+.hud-btn{position:relative;transition:background .2s,color .2s,transform .12s var(--ease-out)}
+.hud-btn:active{transform:scale(.9)}
+.hud-btn:after{
+  content:"";position:absolute;inset:5px;border-radius:50%;border:1px solid var(--jade-dim);opacity:0;transform:scale(.7);
+  transition:opacity .2s,transform .25s var(--ease-out);pointer-events:none;
+}
+.hud-btn:hover:after,.hud-btn:focus-visible:after{opacity:1;transform:scale(1)}
+.hud-btn:focus-visible,.hint-btn:focus-visible,.dock-slot:focus-visible,.dlg-next:focus-visible{outline:2px solid var(--jade);outline-offset:2px}
+
+/* Nút gợi ý: vòng tròn đồng quanh quyển sách, thở nhẹ khi rảnh */
+.hint-btn svg{
+  padding:5px;box-sizing:content-box;width:26px;height:26px;border-radius:50%;
+  background:radial-gradient(circle at 50% 35%,rgba(95,227,221,.16),rgba(2,10,12,.72));
+  border:1px solid var(--brass-dim);box-shadow:inset 0 0 8px rgba(0,0,0,.7),0 0 10px rgba(70,220,214,.2);
+}
+.hint-btn:hover svg,.hint-btn:focus-visible svg{border-color:var(--jade);box-shadow:inset 0 0 8px rgba(0,0,0,.7),0 0 18px var(--jade-glow)}
+
+/* ---------- Túi đồ: khung viền đồng, góc nhấn ---------- */
+.dock-slot,.dock-empty{
+  position:relative;border-radius:4px;border:1px solid var(--brass-deep);
+  background:linear-gradient(160deg,rgba(24,18,10,.86),rgba(3,5,7,.92));
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.7),inset 0 0 0 2px var(--brass-dim),inset 0 -12px 18px rgba(0,0,0,.65);
+}
+.dock-slot:before,.dock-empty:before{
+  content:"";position:absolute;inset:3px;pointer-events:none;opacity:.9;
+  --c:var(--brass);
+  background:
+    linear-gradient(var(--c),var(--c)) 0 0/9px 1px no-repeat,linear-gradient(var(--c),var(--c)) 0 0/1px 9px no-repeat,
+    linear-gradient(var(--c),var(--c)) 100% 0/9px 1px no-repeat,linear-gradient(var(--c),var(--c)) 100% 0/1px 9px no-repeat,
+    linear-gradient(var(--c),var(--c)) 0 100%/9px 1px no-repeat,linear-gradient(var(--c),var(--c)) 0 100%/1px 9px no-repeat,
+    linear-gradient(var(--c),var(--c)) 100% 100%/9px 1px no-repeat,linear-gradient(var(--c),var(--c)) 100% 100%/1px 9px no-repeat;
+}
+.dock-empty:before{opacity:.4}
+.dock-slot.selected:before,.dock-slot.is-on:before{--c:var(--jade)}
+.dock-slot.selected{background:linear-gradient(160deg,rgba(10,52,56,.8),rgba(2,14,16,.92))}
+.dock-slot.selected .dock-art{animation:upFloat 2.4s ease-in-out infinite}
+@keyframes upFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+.dock-slot.vfx-new{animation:slotNew .9s var(--ease-out) both}
+@keyframes slotNew{0%{transform:scale(.6);box-shadow:0 0 0 0 var(--jade-glow)}45%{transform:scale(1.14);box-shadow:0 0 0 10px rgba(95,227,221,0),0 0 28px var(--jade)}100%{transform:scale(1)}}
+#item-dock.vfx-dock-pulse .dock-slots{animation:dockPulse .9s ease-out}
+@keyframes dockPulse{0%{filter:drop-shadow(0 0 0 transparent)}30%{filter:drop-shadow(0 0 14px var(--jade-glow))}100%{filter:drop-shadow(0 0 0 transparent)}}
+
+/* Nhãn vật đang chọn: kính lúp + tên, như "Tấm Gỗ" trong ảnh mẫu */
+.dock-selected:not([hidden]){display:flex;align-items:center;gap:8px}
+.dock-selected:not([hidden]):before{
+  content:"";flex:none;width:26px;height:26px;border-radius:50%;border:1px solid var(--jade-dim);
+  background:rgba(95,227,221,.1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235fe3dd' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='10.500' cy='10.500' r='5.500'/%3E%3Cpath d='M15 15l5 5'/%3E%3C/svg%3E") center/15px no-repeat;
+  box-shadow:0 0 10px var(--jade-soft);
+}
+
+/* ---------- Banner gợi ý / chữ chỉ dẫn: khung ngọc có góc ---------- */
+.tut-text{
+  border:1px solid var(--jade-dim);border-radius:2px;backdrop-filter:blur(4px);
+  background:linear-gradient(180deg,rgba(6,40,46,.82),rgba(3,22,26,.86));
+  box-shadow:0 0 0 1px rgba(0,0,0,.5),0 0 22px rgba(70,220,214,.16),0 8px 24px rgba(0,0,0,.5);
+}
+html[data-fx=low] .tut-text{backdrop-filter:none}
+.tut-hand:after{content:"";position:absolute;left:2px;top:-4px;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--jade);opacity:0;animation:tapRing 1.3s ease-out infinite}
+@keyframes tapRing{0%,30%{opacity:0;transform:scale(.4)}45%{opacity:.9}100%{opacity:0;transform:scale(1.6)}}
+
+/* ---------- Hội thoại: bảng tên có vạch ngọc, nút TIẾP nhịp thở ---------- */
+.dlg-name strong{padding-bottom:3px;border-bottom:1px solid var(--jade-dim);background:linear-gradient(90deg,var(--jade-soft),transparent) no-repeat;padding-right:18px}
+.dlg-box{animation:dlgLift .32s var(--ease-out) both}
+@keyframes dlgLift{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.dlg-next{border-radius:2px;transition:background .2s,box-shadow .2s,transform .12s var(--ease-out)}
+.dlg-next:active{transform:scale(.95)}
+.dlg-next span{display:inline-block;animation:nextBob 1.2s ease-in-out infinite}
+@keyframes nextBob{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
+
+/* ---------- Thẻ vật phẩm mới / thông báo ---------- */
+.pop-card{position:relative;overflow:hidden;border-left:3px solid var(--jade)}
+.pop-card:after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(105deg,transparent 35%,rgba(95,227,221,.22) 50%,transparent 65%);transform:translateX(-120%);animation:popSheen 1.1s .15s ease-out forwards;
+}
+@keyframes popSheen{to{transform:translateX(120%)}}
+.toast{border-left:3px solid var(--jade)}
+
+/* ---------- Cửa sổ: góc đồng + vạch ngọc ở đỉnh ---------- */
+.modal-window:not(.is-book){position:relative;border-radius:6px}
+.modal-window:not(.is-book):before{
+  content:"";position:absolute;left:12%;right:12%;top:-1px;height:2px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,var(--jade),transparent);box-shadow:0 0 14px var(--jade-glow);
+}
+.modal-option,.ritual-option{transition:border-color .2s,background .2s,transform .12s var(--ease-out)}
+.modal-option:active,.ritual-option:active{transform:scale(.98)}
+
+/* ---------- Chữ tiêu đề chương: nét kẻ vẽ ra ---------- */
+.chapter-card.on:before,.chapter-card.on:after{animation:ruleDraw 1.2s .2s var(--ease-out) both}
+@keyframes ruleDraw{from{left:50%;right:50%;opacity:0}to{left:14%;right:14%;opacity:1}}
+
+/* ---------- Điểm tương tác: vòng đôi, bấm vào là nở ra ---------- */
+.hotspot:after{
+  content:"";position:absolute;top:50%;left:50%;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;
+  border:1px solid var(--jade-dim);opacity:.55;pointer-events:none;transition:transform .25s var(--ease-out),opacity .25s;
+}
+.hotspot:hover:after,.hotspot:focus-visible:after{transform:scale(1.35);opacity:.9}
+.hotspot:active:before{transform:translate(-50%,-50%) rotate(45deg) scale(.8)}
+
+/* ---------- Màn thông báo & tiêu đề: nút có chuyển động nhẹ ---------- */
+.notice-confirm{transition:color .2s,letter-spacing .3s var(--ease-out),text-shadow .2s}
+.notice-confirm:hover,.notice-confirm:focus-visible{letter-spacing:.08em;text-shadow:0 0 14px var(--jade-glow);color:#e6fffe}
+
+@media(prefers-reduced-motion:reduce){
+  .dlg-box,.dock-slot.selected .dock-art,.dlg-next span,.pop-card:after,.tut-hand:after,.dock-slot.vfx-new,
+  #item-dock.vfx-dock-pulse .dock-slots,.chapter-card.on:before,.chapter-card.on:after{animation:none!important}
+}

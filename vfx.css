@@ -1,0 +1,57 @@
+/* VFX — bụi sáng / đom đóm, quầng đèn tự dò, sương, gợn chạm, chuyển cảnh, tia sáng nhặt đồ (vfx.js).
+   Mọi lớp đều pointer-events:none và nằm dưới lớp điểm tương tác nên không lệch tọa độ. */
+.vfx-motes{width:100%;height:100%;opacity:0;transition:opacity 1.2s ease}
+.vfx-motes.on{opacity:1}
+
+/* Quầng đèn: vị trí do vfx.js dò từ ảnh nền, nhấp nháy nhẹ như ngọn lửa */
+.vfx-glows{overflow:hidden;opacity:0;transition:opacity 1s ease}
+.vfx-glows.on{opacity:1}
+.vfx-glow{
+  position:absolute;border-radius:50%;transform:translate(-50%,-50%);mix-blend-mode:screen;
+  background:radial-gradient(circle,rgba(255,196,110,.62) 0,rgba(255,150,60,.26) 32%,rgba(255,120,40,0) 70%);
+  animation:glowFlick var(--d,3.4s) ease-in-out var(--dl,0s) infinite;
+}
+@keyframes glowFlick{0%,100%{opacity:.68;scale:1}18%{opacity:.95;scale:1.06}36%{opacity:.6;scale:.97}58%{opacity:.88;scale:1.04}78%{opacity:.7;scale:.99}}
+html[data-fx=low] .vfx-glow{mix-blend-mode:normal;opacity:.5;animation:none}
+
+/* Sương trôi thấp: hai lớp chuyển động chậm */
+.vfx-fog{overflow:hidden;opacity:0;transition:opacity 1.6s ease}
+.vfx-fog.on{opacity:1}
+.vfx-fog:before,.vfx-fog:after{
+  content:"";position:absolute;left:-30%;right:-30%;bottom:-4%;height:42%;will-change:transform;
+  background:
+    radial-gradient(ellipse 28% 60% at 20% 70%,rgba(150,175,195,.2),transparent 70%),
+    radial-gradient(ellipse 34% 50% at 55% 60%,rgba(140,165,185,.16),transparent 70%),
+    radial-gradient(ellipse 26% 55% at 85% 72%,rgba(150,175,195,.18),transparent 70%);
+  animation:fogDrift 48s linear infinite;
+}
+.vfx-fog:after{height:30%;opacity:.7;animation-duration:70s;animation-direction:reverse}
+@keyframes fogDrift{from{transform:translate3d(-9%,0,0)}to{transform:translate3d(9%,0,0)}}
+.vfx-fog.day:before,.vfx-fog.day:after{filter:brightness(1.7);opacity:.55}
+
+/* Gợn chạm */
+.vfx-tap{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;pointer-events:none;border:1.5px solid rgba(95,227,221,.9);box-shadow:0 0 12px rgba(95,227,221,.6);animation:vfxTap .65s ease-out forwards}
+@keyframes vfxTap{from{opacity:.95;transform:scale(.4)}to{opacity:0;transform:scale(4.4)}}
+
+/* Chuyển cảnh: tối dần rồi sáng lại, có chút mờ */
+.vfx-wipe{background:#000;opacity:0}
+.vfx-wipe.go{animation:vfxWipe .55s ease-in-out both}
+@keyframes vfxWipe{0%{opacity:.88}100%{opacity:0}}
+.scene-stage.vfx-settle .scene-image{animation:vfxSettle .7s var(--ease-out,ease-out) both}
+@keyframes vfxSettle{from{filter:blur(5px) brightness(1.25);transform:scale(1.025)}to{filter:none;transform:none}}
+
+/* Tia sáng nhặt đồ */
+.vfx-spark{
+  position:fixed;z-index:12;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;pointer-events:none;
+  background:#d9fffd;box-shadow:0 0 10px 2px rgba(95,227,221,.9);animation:vfxSpark .8s ease-out forwards;
+}
+@keyframes vfxSpark{from{opacity:1;transform:translate(0,0) scale(1)}to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.2)}}
+
+@media(prefers-reduced-motion:reduce){
+  .vfx-motes,.vfx-fog,.vfx-wipe,.vfx-spark,.vfx-tap{display:none}
+  .vfx-glow{animation:none}
+  .scene-stage.vfx-settle .scene-image{animation:none}
+}
+html[data-light-effects="off"] .vfx-glows,html[data-light-effects="off"] .vfx-motes,html[data-light-effects="off"] .vfx-fog{display:none!important}
+.hide-vfx .vfx-motes,.hide-vfx .vfx-glows,.hide-vfx .vfx-fog{display:none}
+#app-shell.interaction-active .vfx-motes,#app-shell.interaction-active .vfx-glows,#app-shell.interaction-active .vfx-fog{opacity:0}
