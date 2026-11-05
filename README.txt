@@ -364,3 +364,10 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
 - Nhịp nhạc: mảng `hits` trong trailer.js là các nhịp mạnh phân tích từ trailer.mp3; mỗi nhịp gây giật hình, nháy sáng và lệch màu chữ.
 - Khuôn mặt vào bằng zoom chậm, rò sáng ấm trôi qua khung hình, màn kết có tia sáng quét.
 - Tự tắt/giảm khi bật giảm chuyển động; ẩn rò sáng trên điện thoại dọc.
+
+32. CẢNH TRÊN ĐIỆN THOẠI DỌC (layout.css, game.js)
+- Nguyên nhân hiệu ứng "mất" trên điện thoại: khung cảnh 16:9 chỉ là một dải mỏng (khoảng 1/3 chiều cao) giữa màn hình đen,
+  nên mưa, sương, vignette đều bị cắt gọn trong dải đó.
+- Sửa: ở điện thoại dọc, khung cảnh cao ~78% màn hình, rộng hơn màn hình; vuốt ngang để nhìn quanh (hotspot và hiệu ứng nằm
+  trong cùng khung nên vẫn khớp). Cảnh tự căn giữa khi đổi cảnh; lần đầu có gợi ý "Vuốt ngang để nhìn quanh cảnh".
+- Điện thoại ngang và máy tính không đổi.

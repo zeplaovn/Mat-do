@@ -528,3 +528,17 @@ html[data-fx=low] .chatter{backdrop-filter:none}
 .point-actions .modal-option{min-height:48px}
 @media(max-width:700px){.hud-place{max-width:calc(100vw - 195px)}.point-actions{grid-template-columns:1fr}}
 @media(max-width:380px){.hud-actions{gap:5px}.hud-btn{width:40px;height:40px}.hud-place{max-width:calc(100vw - 160px);padding:7px}.hud-place-meta{font-size:8px;letter-spacing:.1em}.hud-place strong{font-size:13px}}
+
+/* ---------- Điện thoại dọc: cảnh phủ gần hết màn hình, vuốt ngang để nhìn quanh ----------
+   Trước đây khung 16:9 chỉ là một dải mỏng giữa màn hình đen nên sương, mưa, vignette đều bị cắt gọn trong dải đó. */
+@media(max-width:700px) and (orientation:portrait){
+  #app-shell .game-column{display:block;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  #app-shell .game-column::-webkit-scrollbar{display:none}
+  #app-shell .scene-stage{
+    width:max(100vw,calc(78vh * 16 / 9));
+    width:max(100dvw,calc(78dvh * 16 / 9));
+    margin-top:11vh;margin-top:11dvh;flex:none;
+    box-shadow:none;
+  }
+  .scene-backdrop{filter:blur(24px) brightness(.5) saturate(1)}
+}
