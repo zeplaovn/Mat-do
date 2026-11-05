@@ -442,6 +442,34 @@ const initialState = () => ({
 });
 let state=initialState();
 let dialogueOpen=false;let modalType=null;let modalReturnFocus=null;let toastTimer=null;
+/* Thành tựu tồn tại qua nhiều lần chơi, riêng với bản lưu của từng cuộc điều tra. */
+const ACHIEVEMENT_KEY='loi-nguyen-rung-thieng-achievements-v1';
+const ACHIEVEMENTS=[
+ {id:'shrine',title:'Qua gốc đa',detail:'Tìm đến miếu ven rừng.',earned:s=>s.visited.includes('BG05')},
+ {id:'folk',title:'Dấu miếu',detail:'Mở cơ cấu ở cột mốc bằng manh mối từ miếu.',earned:s=>!!s.flags.folkMarkerDone},
+ {id:'gate',title:'Cánh cổng Vân Hòa',detail:'Mở cổng biệt thự.',earned:s=>!!s.flags.gateOpened},
+ {id:'relic',title:'Dấu vết còn lại',detail:'Tìm được một di vật.',earned:s=>s.relics.length>0},
+ {id:'all_relics',title:'Năm dấu vết',detail:'Tìm đủ năm di vật.',earned:s=>s.relics.length>=5},
+ {id:'memory',title:'Lắng nghe ký ức',detail:'Chứng kiến một ký ức của di vật.',earned:s=>Array.isArray(s.flags.memoriesSeen)&&s.flags.memoriesSeen.length>0},
+ {id:'books',title:'Người đọc dấu xưa',detail:'Giải năm câu đố từ tư liệu.',earned:s=>Array.isArray(s.flags.researchSolved)&&s.flags.researchSolved.length>=5},
+ {id:'sixth',title:'Một cái tên được gọi',detail:'Tìm lại tên của em bé.',earned:s=>!!s.flags.sixthDone},
+ {id:'past',title:'Đêm không bị quên',detail:'Đi qua ký ức năm 1988.',earned:s=>!!s.flags.flashDone},
+ {id:'names',title:'Gọi đủ năm tên',detail:'Trả lại tên cho năm người.',earned:s=>!!s.flags.namesDone},
+ {id:'ending',title:'Một con đường trở về',detail:'Hoàn thành một kết thúc.',earned:(s,p)=>p.endings.length>0},
+ {id:'endings',title:'Bốn ngả đường',detail:'Khám phá đủ bốn kết thúc.',earned:(s,p)=>p.endings.length>=4}
+];
+function readAchievements(){
+ try{const p=JSON.parse(localStorage.getItem(ACHIEVEMENT_KEY)||'{}'),ids=new Set(ACHIEVEMENTS.map(a=>a.id));return {unlocked:Array.isArray(p.unlocked)?[...new Set(p.unlocked.filter(x=>ids.has(x)))]:[],endings:Array.isArray(p.endings)?[...new Set(p.endings.filter(x=>['bad','normal','good','true'].includes(x)))]:[]}}catch(_){return {unlocked:[],endings:[]}}
+}
+let achievementProfile=readAchievements(),achievementTimer=0;
+function syncAchievements(announce=true,progress=state){
+ const before=achievementProfile.endings.length;
+ achievementProfile.endings=[...new Set([...achievementProfile.endings,...progress.endingsSeen.filter(x=>['bad','normal','good','true'].includes(x))])];
+ const added=[];for(const a of ACHIEVEMENTS)if(!achievementProfile.unlocked.includes(a.id)&&a.earned(progress,achievementProfile)){achievementProfile.unlocked.push(a.id);added.push(a)}
+ if(added.length||before!==achievementProfile.endings.length){try{localStorage.setItem(ACHIEVEMENT_KEY,JSON.stringify(achievementProfile))}catch(_){}}
+ const pop=$('achievement-pop');if(announce&&added.length&&pop){pop.textContent='Thành tựu: '+added[0].title+(added.length>1?' · +'+(added.length-1):'');pop.classList.add('visible');clearTimeout(achievementTimer);achievementTimer=setTimeout(()=>pop.classList.remove('visible'),4000)}
+ return added;
+}
 /* ================= ÂM THANH =================
    Quy tắc: mỗi âm thanh chỉ phát ở nơi nó thật sự có thể vang lên trong cảnh đó. */
 const SOUND={door:'creaking-door.mp3',slam:'door-slam.mp3',knock:'knock-on-the-door.mp3',steps:'tieng_buoc_chan.mp3',page:'pageturn.mp3',camera:'Chup_anh.mp3',lighter:'lighter.mp3',switch:'light-switch.mp3',
@@ -492,7 +520,7 @@ function geckoTick(){if(document.hidden||!state.sound||!$('title-screen').hidden
 /* Lưu tiến trình có chữ ký: sửa tay localStorage (đổi cảnh, thêm vật phẩm, nhảy qua câu đố) sẽ bị phát hiện và bản lưu bị bỏ qua.
    Đây là lớp chặn sửa đơn giản, không phải mã hóa: game chạy hoàn toàn trên máy người chơi. */
 function sig(str){const s=SAVE_SALT+str;let h1=0xdeadbeef,h2=0x41c6ce57;for(let i=0;i<s.length;i++){const c=s.charCodeAt(i);h1=Math.imul(h1^c,2654435761);h2=Math.imul(h2^c,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return (4294967296*(2097151&h2)+(h1>>>0)).toString(36)}
-function save(){try{const d=JSON.stringify(state);localStorage.setItem(SAVE_KEY,JSON.stringify({d,h:sig(d)}))}catch(_){}}
+function save(){try{const d=JSON.stringify(state);localStorage.setItem(SAVE_KEY,JSON.stringify({d,h:sig(d)}))}catch(_){}syncAchievements()}
 function load(){try{const raw=localStorage.getItem(SAVE_KEY);if(!raw)return null;const o=JSON.parse(raw);if(!o||typeof o.d!=='string'||o.h!==sig(o.d))return null;
  const s=JSON.parse(o.d);if(!s||typeof s!=='object'||!SCENES[s.scene]||!Array.isArray(s.items)||!Array.isArray(s.relics))return null;
  const base=initialState(),list=(v,ok)=>Array.isArray(v)?v.filter(ok):[],item=x=>typeof x==='string'&&!!ITEMS[x],str=x=>typeof x==='string';
@@ -648,6 +676,7 @@ function renderSidebar(){$('inventory-grid').replaceChildren(...state.items.map(
  if(!sel){box.textContent='';return}
  const targets=USE_ON[state.selectedItem],here=targets&&SCENES[state.scene].spots.some(h=>targets.includes(h.action)&&(!h.req||state.flags[h.req]));
  box.textContent='';const n=document.createElement('strong');n.textContent=sel.name;box.append(n,' — '+sel.description);
+ const closeAction={toyDoll:'takeDoll',comb:'comb'}[state.selectedItem];if(closeAction){const near=document.createElement('button');near.type='button';near.className='dock-closeup';near.textContent='Xem gần';near.setAttribute('aria-label','Xem gần: '+sel.name);near.addEventListener('click',()=>showSpotCloseup(closeAction,{action:closeAction,label:sel.name}));box.appendChild(near)}
  if(targets){const hint=document.createElement('em');hint.className='dock-hint';hint.textContent=here?'◆ Chạm vào điểm sáng vàng trong cảnh để dùng.':'◇ Chưa có chỗ dùng ở cảnh này.';box.appendChild(hint);box.classList.toggle('has-target',here)}}
 function getObjective(){
  const f=state.flags;
@@ -663,8 +692,8 @@ function getObjective(){
 }
 
 function selectItem(id){if(BOOKS[id]){openResearchBook(id);return}if(id==='flashlight'){state.flashlight=!state.flashlight;toast(state.flashlight?'Đèn pin: BẬT':'Đèn pin: TẮT');playSound('switch',.19);render();save();return}else if(id==='notebook'){showJournal();return}else if(READ_ITEMS[id]){showDoc(READ_ITEMS[id]);return}else if(id==='camera'){}else if(id==='lighter'){toast('Chiếc bật lửa cũ vẫn còn gas.')}state.selectedItem=state.selectedItem===id?null:id;render();save();if(id==='camera'&&state.selectedItem==='camera')toast('Máy ảnh: '+CAM_MODES[state.camMode].label+' · nhấn V để đổi chế độ')}
-function act(action){if(modalType)return;clearDialogue();playSound('steps',.5,0,action.startsWith('travel:')?2.4:1.6);if(nameClueAt(action)){renderSidebar();return}if(action.startsWith('travel:')){const to=action.slice(7);if(to==='BG06'&&!has('incense')&&!state.used.includes('incense')){say('Tuyết','Khoan đã... tớ thấy bất an lắm. Mình xem kỹ chỗ này trước khi vào rừng đã.');return}go(to);return}
- if(action.startsWith('inspect:')){inspect(action.slice(8));return}
+function act(action){if(modalType)return;clearDialogue();playSound('steps',.5,0,action.startsWith('travel:')?2.4:1.6);if(nameClueAt(action)){renderSidebar();if(action==='kidDrawing')showSpotCloseup(action);return}if(action.startsWith('travel:')){const to=action.slice(7);if(to==='BG06'&&!has('incense')&&!state.used.includes('incense')){say('Tuyết','Khoan đã... tớ thấy bất an lắm. Mình xem kỹ chỗ này trước khi vào rừng đã.');return}go(to);return}
+ if(action.startsWith('inspect:')){inspect(action.slice(8));if(!modalType)showSpotCloseup(action);return}
  if(action.startsWith('researchBook:')){collectResearchBook(action.slice(13));return}
  if(action.startsWith('researchPuzzle:')){openResearchPuzzle(action.slice(15));return}
  switch(action){
@@ -747,7 +776,26 @@ case 'exitForest':if(!state.visited.includes('BG11')){say('Đông','Mới tới 
   case 'forestAltar':forestAltar();break;
   default:toast('Chưa có tương tác ở vị trí này.');
  }
- renderSidebar();save();}
+ renderSidebar();save();if((action==='takeDoll'||action==='comb')&&!modalType)showSpotCloseup(action);}
+const SPECIAL_CLOSEUPS={
+ kidDrawing:{file:'Mo_Tranh_Sap.webp',caption:'Dưới chân người phụ nữ có dòng chữ trẻ con: “cô Lụa”.',drawing:true},
+ takeDoll:{file:'Mo_Bup_Be.webp',caption:'Búp bê vải được khâu và vá bằng tay.'},
+ comb:{file:'Mo_Tram_Go.webp',caption:'Chiếc trâm gỗ gãy nằm trong chiếc nôi cũ.'}
+};
+function closeupInfo(h){
+ const special=SPECIAL_CLOSEUPS[h.action];if(special)return {special};
+ /* Phóng từ nền cảnh, giữ tâm vùng tương tác trong khung và không vượt mép ảnh. */
+ const zoom=Math.max(1.35,Math.min(3,70/Math.max(h.w,h.h))),position=(center)=>Math.max(0,Math.min(100,(center*zoom-.5)/(zoom-1)*100));
+ return {zoom,x:position((h.x+h.w/2)/100),y:position((h.y+h.h/2)/100)};
+}
+function showSpotCloseup(action,spot){
+ const scene=SCENES[state.scene],h=spot||scene.spots.find(x=>x.action===action);if(!h)return;
+ const info=closeupInfo(h),label=escapeHTML(h.label);let art,caption;
+ if(info.special){const s=info.special;art=`<div class="prop-view"><div class="detail-art"><img src="${ROOT}props/${s.file}" alt="${label}" draggable="false">${s.drawing?'<span class="drawing-label" aria-hidden="true">cô Lụa</span>':''}</div></div>`;caption=s.caption}
+ else{const bg=BG(scene.bg||state.scene);art=`<div class="scene-closeup" role="img" aria-label="${label}" style="background-image:url('${bg}');background-size:${info.zoom*100}% auto;background-position:${info.x}% ${info.y}%"></div>`;caption=''}
+ showModal(`<h2>${label}</h2>${art}${caption?`<p class="modal-note">${escapeHTML(caption)}</p>`:''}<div id="closeup-actions" class="modal-buttons"></div>`,'QUAN SÁT GẦN','closeup');
+ $('closeup-actions').appendChild(modalButton('Đóng',hideModal));
+}
 function inspect(k){if(k==='lamPortrait'&&!modalType){showPicture('prop_family_picture.webp','Ảnh gia đình ông Bá Lâm','Năm khuôn mặt đều bị cào xước đến không còn nhận ra.','QUAN SÁT',()=>inspect2('lamPortrait'));return}return inspect2(k)}
 function inspect2(k){const texts={
  teaset:["Tuyết","Bộ ấm chén vỡ vụn... mà nước trà vẫn còn ấm. Như thể ai đó vừa ngồi uống rồi bỏ đi giữa chừng. Tớ nổi hết da gà."],
@@ -779,6 +827,7 @@ function showModal(html,kicker='HỒ SƠ ĐIỀU TRA',type='generic'){
  win.classList.toggle('is-research-archive',type==='research-archive');
  if(type!=='research-book'&&type!=='research-clips'&&researchReaderActions){researchReaderActions.cancel();researchReaderActions=null;}
  $('modal-body').innerHTML=html;$('modal-kicker').textContent=kicker;$('modal-backdrop').hidden=false;modalType=type;
+ if(['menu','points','closeup','achievements'].includes(type)){win.scrollTop=0;if(!opening)requestAnimationFrame(()=>{if(modalType===type)$('modal-close').focus({preventScroll:true})})}
  if(opening)requestAnimationFrame(()=>{if(!$('modal-backdrop').hidden&&!win.contains(document.activeElement)){const target=[...win.querySelectorAll('button,input,[href]')].find(el=>!el.disabled&&el.getClientRects().length);if(target)target.focus({preventScroll:true})}});
 }
 function hideModal(){
@@ -863,6 +912,12 @@ function showHint(){
  showModal(`<h2>Gợi ý</h2><p>${escapeHTML(ob[1])}</p><p class="modal-note">Hãy đọc lại nhật ký và các tư liệu đã thu thập.</p><div id="hint-actions" class="modal-buttons"></div>`,'GỢI Ý','hint');
  $('hint-actions').appendChild(modalButton('Đóng',hideModal));
 }
+function showAchievements(){
+ syncAchievements(false);const count=achievementProfile.unlocked.length;
+ const cards=ACHIEVEMENTS.map(a=>{const unlocked=achievementProfile.unlocked.includes(a.id);return `<article class="achievement-card${unlocked?'':' is-locked'}"><strong><span class="achievement-mark" aria-hidden="true">${unlocked?'✦':'◇'}</span>${unlocked?escapeHTML(a.title):'Thành tựu bí ẩn'}</strong><p>${unlocked?escapeHTML(a.detail):'Tiếp tục hành trình để khám phá.'}</p></article>`}).join('');
+ showModal(`<h2>Thành tựu</h2><p>Đã mở <strong>${count} / ${ACHIEVEMENTS.length}</strong> thành tựu.</p><p class="modal-note">Thành tựu được lưu trên thiết bị này và giữ lại khi bắt đầu lượt chơi mới.</p><div class="achievement-list">${cards}</div><div id="achievement-actions" class="modal-buttons"></div>`,'HÀNH TRÌNH ĐỒNG CHAY','achievements');
+ $('achievement-actions').appendChild(modalButton('Quay lại menu',showMenu));
+}
 
 function showMenu(){const ob=getObjective(),rc=state.relics.length;
  showModal(`<h2>Tạm dừng</h2>
@@ -870,7 +925,7 @@ function showMenu(){const ob=getObjective(),rc=state.relics.length;
  <div class="menu-grid" id="menu-actions"></div>
  <p class="modal-note">Tiến trình được tự động lưu. Đặt lại sẽ xóa tiến trình hiện tại. Nếu máy giật, hãy hạ Hiệu ứng hình ảnh xuống Vừa hoặc Thấp.</p>`,'MENU','menu');
  const w=$('menu-actions'),add=(label,fn,opt={})=>{const b=modalButton(label,fn);if(opt.cls)b.classList.add(opt.cls);if(opt.disabled)b.disabled=true;w.appendChild(b)};
- add('Cách chơi',showGuide);add('Gợi ý',showHint);add('Sách và câu đố',showResearchArchive);add('Tư liệu quanh đây',showNearbyResearch);add('Ký ức di vật',showMemories);
+ add('Cách chơi',showGuide);add('Gợi ý',showHint);add('Sách và câu đố',showResearchArchive);add('Tư liệu quanh đây',showNearbyResearch);add('Ký ức di vật',showMemories);add('Thành tựu ('+achievementProfile.unlocked.length+'/'+ACHIEVEMENTS.length+')',showAchievements);
  add(state.sound?'Âm thanh: BẬT':'Âm thanh: TẮT',()=>{toggleSound();showMenu()});
  if(window.WeatherFX)add(WeatherFX.enabled?'Đèn và chớp: BẬT':'Đèn và chớp: TẮT',()=>{WeatherFX.setEnabled(!WeatherFX.enabled);showMenu()});
  if(window.Perf){const N={auto:'Tự động',high:'Cao',medium:'Vừa',low:'Thấp'};add('Hiệu ứng hình ảnh: '+N[Perf.pref]+(Perf.pref==='auto'?' ('+N[Perf.level]+')':''),()=>{Perf.cycle();showMenu()})}
@@ -913,9 +968,10 @@ function researchActiveSpots(){
 }
 function showScenePoints(){
  const points=SCENES[state.scene].spots.filter(h=>!h.req||state.flags[h.req]);
- const extra=researchCandidates().map(item=>({label:(item.kind==='book'?'Đọc: ':'Xem: ')+item.title,action:(item.kind==='book'?'researchBook:':'researchPuzzle:')+item.id}));
+ const positions=researchActiveSpots();
+ const extra=researchCandidates().map(item=>{const action=(item.kind==='book'?'researchBook:':'researchPuzzle:')+item.id;return {...positions.find(h=>h.action===action),label:(item.kind==='book'?'Đọc: ':'Xem: ')+item.title,action}});
  showModal('<h2>Điểm tương tác</h2><p>Chọn nơi bạn muốn xem trong cảnh hiện tại.</p><div id="point-actions" class="modal-buttons point-actions"></div>','KHÁM PHÁ','points');
- const box=$('point-actions');for(const h of [...points,...extra])box.appendChild(modalButton(h.label,()=>{hideModal();act(h.action)}));
+ const box=$('point-actions');for(const h of [...points,...extra]){const row=document.createElement('div');row.className='point-row';row.appendChild(modalButton(h.label,()=>{hideModal();act(h.action)}));if(Number.isFinite(h.x)&&Number.isFinite(h.y)&&Number.isFinite(h.w)&&Number.isFinite(h.h)){const near=modalButton('Xem gần',()=>showSpotCloseup(h.action,h));near.classList.add('point-near');near.setAttribute('aria-label','Xem gần: '+h.label);row.appendChild(near)}box.appendChild(row)}
  box.appendChild(modalButton('Đóng',hideModal));
 }
 function showNearbyResearch(){
@@ -1697,9 +1753,9 @@ function showEnding(which){
 }
 function escapeHTML(t){return String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function toggleSound(){state.sound=!state.sound;if(!state.sound)stopAmbience();else setAmbience();$('btn-audio').textContent=state.sound?'♪':'♪̸';$('btn-audio').setAttribute('aria-pressed',state.sound?'true':'false');save()}
-function updateContinue(){const existing=load();$('btn-continue').hidden=!existing;}
+function updateContinue(){const existing=load();if(existing)syncAchievements(false,existing);$('btn-continue').hidden=!existing;}
 function newGame(){pendingMemories=[];state=initialState();geckoClock=GECKO_FIRST;chatScene=null;stopAmbience();hideModal();clearDialogue();$('title-screen').hidden=true;render();talk(introOf('BG01'));save()}
-function continueGame(){pendingMemories=[];state=load()||initialState();geckoClock=GECKO_FIRST;chatScene=null;$('title-screen').hidden=true;hideModal();clearDialogue();render();if(state.flags.ending){state.flags.ending=null;save()}talk([["Người kể chuyện","Hành trình tiếp tục. Những trang nhật ký vẫn còn lưu các manh mối bạn đã tìm thấy."],["Nguyệt","Tớ đã ghi lại hết rồi. Mình đi tiếp thôi, nhưng đừng ai tách nhóm."]]);}
+function continueGame(){pendingMemories=[];state=load()||initialState();syncAchievements(false);geckoClock=GECKO_FIRST;chatScene=null;$('title-screen').hidden=true;hideModal();clearDialogue();render();if(state.flags.ending){state.flags.ending=null;save()}talk([["Người kể chuyện","Hành trình tiếp tục. Những trang nhật ký vẫn còn lưu các manh mối bạn đã tìm thấy."],["Nguyệt","Tớ đã ghi lại hết rồi. Mình đi tiếp thôi, nhưng đừng ai tách nhóm."]]);}
 function mount(){$('btn-new-game').onclick=newGame;$('btn-continue').onclick=continueGame;$('btn-points').onclick=showScenePoints;$('btn-audio').onclick=toggleSound;$('btn-menu').onclick=showMenu;$('btn-journal').onclick=showJournal;$('modal-close').onclick=hideModal;$('dialogue-next').onclick=nextLine;
  $('modal-backdrop').addEventListener('click',e=>{if(e.target===$('modal-backdrop')&&modalType!=='ending')hideModal()});
  let torchRaf=0,torchEv=null;$('scene-stage').addEventListener('pointermove',e=>{torchEv=e;if(torchRaf)return;torchRaf=requestAnimationFrame(()=>{torchRaf=0;if(!$('scene-stage').classList.contains('torch-on'))return;const box=$('scene-stage').getBoundingClientRect();const x=Math.max(0,Math.min(100,(torchEv.clientX-box.left)/box.width*100));const y=Math.max(0,Math.min(100,(torchEv.clientY-box.top)/box.height*100));$('scene-stage').style.setProperty('--torch-x',x.toFixed(1)+'%');$('scene-stage').style.setProperty('--torch-y',y.toFixed(1)+'%')})});
