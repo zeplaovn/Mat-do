@@ -20,6 +20,9 @@ const running = () => title.hidden && !busy();                   // đang chơi 
 const audioOn = () => $('btn-audio').getAttribute('aria-pressed') !== 'false';
 let dread = .15, lastScare = 0, bt = 0;
 const sceneNo = () => parseInt(($('scene-index').textContent.match(/BG(\d+)/) || [0, 1])[1], 10);
+/* Chỉ những khu vực căng thẳng mới có hiệu ứng ngẫu nhiên. Số ảnh không phải thứ tự cốt truyện. */
+const FLICKER_SCENES = new Set([6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,32,34,35,36,37,38,39,42,43,44]);
+const RANDOM_SCARE_SCENES = new Set([...FLICKER_SCENES].filter(n=>n>=9));
 
 /* ---------- Lớp hiệu ứng (thứ tự = thứ tự chồng) ---------- */
 const mk = (tag, cls) => { const e = document.createElement(tag); e.className = 'fx ' + cls; e.setAttribute('aria-hidden', 'true'); stage.insertBefore(e, hot); return e; };
@@ -105,7 +108,7 @@ function scare(big) {
   playAsset('door-slam.mp3', .8, 3.7);   // cú đập cửa thay cho tiếng "sting" tạo bằng code
 }
 function onScene() {
-  const n = sceneNo(); dread = Math.min(1, .1 + (n - 1) * .0475);
+  const n = sceneNo(); dread = FLICKER_SCENES.has(n) ? Math.min(1, .1 + (n - 1) * .0475) : .1;
   stage.style.setProperty('--dread', dread.toFixed(2));
   stage.classList.toggle('dread-high', dread > .8);
 }
@@ -114,8 +117,8 @@ onScene();
 setInterval(() => {
   if (!running() || document.hidden || !$('modal-backdrop').hidden) return;
   const n = sceneNo();
-  if (n >= 6 && !RM() && lighting() && Math.random() < .2 + dread * .25) pulse(stage, 'flick', 460);   // chớp đèn
-  if (n >= 9 && Math.random() < dread * .07) scare(false);
+  if (FLICKER_SCENES.has(n) && !RM() && lighting() && Math.random() < .2 + dread * .25) pulse(stage, 'flick', 460);   // chớp đèn
+  if (RANDOM_SCARE_SCENES.has(n) && Math.random() < dread * .07) scare(false);
 }, 4000);
 
 /* ---------- Đèn pin mềm bám con trỏ + parallax nhẹ (gộp theo khung hình) ---------- */

@@ -522,9 +522,14 @@ function playSound(name,volume=.25,from=0,dur=0){if(!state.sound)return;const fi
 const AMB_GAIN=.9; /* hệ số âm nền chung: .9 = giảm 10% so với bảng AMBIENCE */
 const ambient={};
 function fadeTo(e,to,ms,done){clearInterval(e.fade);const a=e.a,from=a.volume,steps=Math.max(1,Math.round(ms/50));let i=0;e.fade=setInterval(()=>{i++;a.volume=Math.max(0,Math.min(1,from+(to-from)*i/steps));if(i>=steps){clearInterval(e.fade);if(done)done()}},50)}
-function setAmbience(){
+function sceneAmbience(){
  let want=(state.sound&&$('title-screen').hidden)?(AMBIENCE[state.scene]||{}):{};
+ if(state.sound&&$('title-screen').hidden&&quietVillageAtNight())want=state.scene==='BG03'?{water:.5,frogsNight:.35,crickets:.2}:{crickets:.25,frogsNight:.15};
  if(state.flags.sixthDone&&want.musicbox){want={...want};delete want.musicbox}
+ return want;
+}
+function setAmbience(){
+ const want=sceneAmbience();
  for(const name of Object.keys(ambient)){if(!(name in want)){const e=ambient[name];delete ambient[name];fadeTo(e,0,900,()=>e.a.pause())}}
  for(const [name,vol] of Object.entries(want)){
   const e=ambient[name];
@@ -620,7 +625,7 @@ $('dialogue-speaker').textContent=who;$('dialogue-text').textContent=text;
  $('chatter').classList.remove('on');
  $('dialogue').hidden=false;dialogueOpen=true;setDialogueMode(true)}
 function resetSceneScroll(){for(const id of ['app-shell','scene-stage']){const el=$(id);if(el){el.scrollTop=0;el.scrollLeft=0}}}
-function clearInteractionView(){interactionViewToken++;const prior=activeInteractionView,pan=interactionPan;activeInteractionView=null;interactionPan=null;const view=$('interaction-view'),shell=$('app-shell'),backdrop=$('scene-backdrop'),column=document.querySelector&&document.querySelector('.game-column');if(view){view.hidden=true;view.onload=null;view.onerror=null}if(shell)shell.classList.remove('interaction-active');if(backdrop&&SCENES[state.scene])backdrop.style.backgroundImage=`url("${BG(SCENES[state.scene].bg||state.scene)}")`;resetSceneScroll();if(column&&prior&&prior.scene===state.scene&&Number.isFinite(pan))column.scrollLeft=pan}
+function clearInteractionView(){interactionViewToken++;const prior=activeInteractionView,pan=interactionPan;activeInteractionView=null;interactionPan=null;const view=$('interaction-view'),shell=$('app-shell'),backdrop=$('scene-backdrop'),column=document.querySelector&&document.querySelector('.game-column');if(view){view.hidden=true;view.onload=null;view.onerror=null}if(shell)shell.classList.remove('interaction-active');if(backdrop&&SCENES[state.scene])backdrop.style.backgroundImage=`url("${sceneBackground(state.scene)}")`;resetSceneScroll();if(column&&prior&&prior.scene===state.scene&&Number.isFinite(pan))column.scrollLeft=pan}
 function showSceneView(shot,scene){
  const view=$('interaction-view'),shell=$('app-shell');
  if(!shot||!view||!shell||!dialogueOpen||modalType||shot.scene!==scene||state.scene!==scene)return;
@@ -661,7 +666,7 @@ const OVERHEARD={
  ]
 };
 let chatTimer=0,chatHide=0,chatScene=null;const chatSeen=new Set();
-const chatBusy=()=>!$('title-screen').hidden||dialogueOpen||!!modalType||document.hidden||document.documentElement.classList.contains('is-busy');
+const chatBusy=()=>!$('title-screen').hidden||dialogueOpen||!!modalType||document.hidden||document.documentElement.classList.contains('is-busy')||quietVillageAtNight();
 function chatClear(){clearTimeout(chatTimer);clearTimeout(chatHide);const c=$('chatter');c.classList.remove('on')}
 function chatSchedule(ms){clearTimeout(chatTimer);chatTimer=setTimeout(chatRun,ms)}
 function chatRun(){const sid=state.scene,list=OVERHEARD[sid];if(!list)return;if(chatBusy()){chatSchedule(3000);return}
@@ -670,7 +675,7 @@ function chatRun(){const sid=state.scene,list=OVERHEARD[sid];if(!list)return;if(
 function chatPlay(ex,k,sid){if(state.scene!==sid)return;if(chatBusy()){chatSchedule(k?9000:3000);return}
  const c=$('chatter'),[who,text]=ex[k],w=document.createElement('b'),t=document.createElement('span');w.textContent=who;t.textContent=text;c.replaceChildren(w,t);void c.offsetWidth;c.classList.add('on');
  chatHide=setTimeout(()=>{c.classList.remove('on');if(k+1<ex.length)chatTimer=setTimeout(()=>chatPlay(ex,k+1,sid),800);else chatSchedule(20000+Math.random()*16000)},2800+text.length*60)}
-function chatEnter(){chatClear();if(OVERHEARD[state.scene])chatSchedule(3500)}
+function chatEnter(){chatClear();if(OVERHEARD[state.scene]&&!quietVillageAtNight())chatSchedule(3500)}
 
 /* ---- Thông báo nhận vật phẩm ---- */
 let popQueue=[],popBusy=false;
@@ -726,11 +731,32 @@ function centerScene(){
 if(typeof window.addEventListener==='function')window.addEventListener('resize',()=>{if($('title-screen').hidden)centerScene()});
 const FLASHBACK_SCENES=new Set(['BG34','BG35','BG36','BG37','BG38','BG39']);
 function storyMinute(id){const s=SCENES[id],m=s&&/^(\d{2}):(\d{2})$/.exec(s.time);if(!m||FLASHBACK_SCENES.has(id))return null;const h=Number(m[1]);return h*60+Number(m[2])+((h<7||id==='BG48'||id==='BG49')?1440:0)}
+function presentStoryMinute(){const values=[storyMinute(state.scene),...(state.visited||[]).map(storyMinute),Number(state.flags.storyMinute)].filter(v=>Number.isFinite(v)&&v>0);return Math.max(0,...values)}
+function storyPeriod(minutes){if(!Number.isFinite(minutes)||minutes<=0)return 'day';const m=minutes%1440;if(m<300||m>=1140)return 'night';if(m<390)return 'dawn';if(m<990)return 'day';return 'dusk'}
+/* Ảnh làng, ruộng, cầu và chùa có phiên bản đêm; đường về từ biệt thự có ảnh buổi sớm. */
+const NIGHT_SCENE_FILES={BG01:'BG01-night.webp',BG02:'BG02-night.webp',BG03:'BG03-night.webp',BG04:'BG04-night.webp',BG45:'BG45-night.webp'};
+const MORNING_SCENE_FILES={BG05:'BG05-morning.webp',BG06:'BG06-morning.webp',BG07:'BG07-morning.webp',BG08:'BG08-morning.webp',BG09:'BG09-morning.webp',BG10:'BG10-morning.webp'};
+const NIGHT_OUTDOORS=new Set(['BG05','BG06','BG07','BG08','BG09','BG10','BG25','BG29','BG31','BG42','BG44','BG46']);
+const QUIET_VILLAGE=new Set(['BG01','BG02','BG03']);
+function quietVillageAtNight(){return !state.flags.mo&&QUIET_VILLAGE.has(state.scene)&&['night','dawn'].includes(storyPeriod(presentStoryMinute()))}
+function sceneBackground(id){const s=SCENES[id];if(!s)return BG(id);const minutes=presentStoryMinute(),phase=state.flags.mo?'memory':storyPeriod(minutes);if(NIGHT_SCENE_FILES[id]&&(phase==='night'||phase==='dawn'))return `${ROOT}background/variants/${NIGHT_SCENE_FILES[id]}`;if(MORNING_SCENE_FILES[id]&&minutes>=1440&&(phase==='dawn'||phase==='day'))return `${ROOT}background/variants/${MORNING_SCENE_FILES[id]}`;return BG(s.bg||id)}
+function sceneTimeGrade(id){
+ if(state.flags.mo||FLASHBACK_SCENES.has(id))return '';
+ const minutes=presentStoryMinute(),phase=storyPeriod(minutes);
+ if(NIGHT_SCENE_FILES[id]){
+  if(phase==='night')return 'night-art';
+  if(phase==='dawn')return 'dawn-art';
+  if(phase==='dusk'&&id!=='BG04')return 'dusk';
+  if(phase==='day'&&id==='BG04'&&minutes>=1440)return 'morning-bridge';
+ }
+ if(MORNING_SCENE_FILES[id]&&minutes>=1440){if(phase==='dawn')return 'dawn-morning-art';if(phase==='day')return 'morning-art'}
+ if(NIGHT_OUTDOORS.has(id)&&minutes>=1440){if(phase==='dawn')return 'dawn-night';if(phase==='day')return 'day-night'}
+ return '';
+}
 function displayStoryTime(){if(state.flags.mo)return SCENES[state.scene].time;
- const values=[storyMinute(state.scene),...(state.visited||[]).map(storyMinute),Number(state.flags.storyMinute)].filter(v=>Number.isFinite(v)&&v>0);
- const minutes=Math.max(0,...values);state.flags.storyMinute=minutes;const dayMinute=minutes%1440;return String(Math.floor(dayMinute/60)).padStart(2,'0')+':'+String(dayMinute%60).padStart(2,'0')}
-function render(){centerScene();const s=SCENES[state.scene],bg=BG(s.bg||state.scene),image=$('scene-image');if(image.getAttribute('src')!==bg)image.src=bg;image.alt='Cảnh '+state.scene+': '+s.name;$('scene-backdrop').style.backgroundImage=`url("${activeInteractionView?ROOT+'props/'+activeInteractionView.file:bg}")`;
- $('scene-title').textContent=s.name;$('scene-stage').dataset.tint=s.tint||'';$('clock-label').textContent=displayStoryTime();$('chapter-label').textContent=state.flags.mo?'CHƯƠNG 9 · ĐÊM 17/3/1988':(s.chapter==='CHƯƠNG 10 · NĂM CÁI TÊN'&&arcOn())?'CHƯƠNG 9 · BÁT CƠM NÓNG':(questOn()&&/^CHƯƠNG 10/.test(s.chapter)?'CHƯƠNG 10 · NĂM CÁI TÊN':s.chapter);$('scene-index').textContent=`${state.scene} / ${Object.keys(SCENES).length}`;refreshMemoryUI();
+ const minutes=presentStoryMinute();state.flags.storyMinute=minutes;const dayMinute=minutes%1440;return String(Math.floor(dayMinute/60)).padStart(2,'0')+':'+String(dayMinute%60).padStart(2,'0')}
+function render(){centerScene();const s=SCENES[state.scene],clock=displayStoryTime(),bg=sceneBackground(state.scene),grade=sceneTimeGrade(state.scene),image=$('scene-image');if(image.getAttribute('src')!==bg)image.src=bg;image.alt='Cảnh '+state.scene+': '+s.name;$('scene-backdrop').style.backgroundImage=`url("${activeInteractionView?ROOT+'props/'+activeInteractionView.file:bg}")`;
+ $('scene-title').textContent=s.name;$('scene-stage').dataset.tint=s.tint||'';$('scene-stage').dataset.timeGrade=grade;$('app-shell').dataset.timeGrade=grade;$('clock-label').textContent=clock;$('chapter-label').textContent=state.flags.mo?'CHƯƠNG 9 · ĐÊM 17/3/1988':(s.chapter==='CHƯƠNG 10 · NĂM CÁI TÊN'&&arcOn())?'CHƯƠNG 9 · BÁT CƠM NÓNG':(questOn()&&/^CHƯƠNG 10/.test(s.chapter)?'CHƯƠNG 10 · NĂM CÁI TÊN':s.chapter);$('scene-index').textContent=`${state.scene} / ${Object.keys(SCENES).length}`;refreshMemoryUI();
  $('hotspots').replaceChildren(...[...s.spots.filter(h=>!h.req||state.flags[h.req]),...researchActiveSpots()].map(makeHotspot));
  $('scene-stage').classList.toggle('torch-on',state.flashlight&&parseInt(state.scene.slice(2))>=18);$('scene-stage').classList.toggle('has-selection',!!state.selectedItem);
  $('btn-audio').textContent=state.sound?'♪':'♪̸';$('btn-audio').setAttribute('aria-pressed',state.sound?'true':'false');
@@ -862,7 +888,7 @@ function showSpotCloseup(action,spot){
  const scene=SCENES[state.scene],h=spot||scene.spots.find(x=>x.action===action);if(!h)return;
  const info=closeupInfo(h),label=escapeHTML(h.label);let art,caption;
  if(info.special){const s=info.special;art=`<div class="prop-view"><div class="detail-art"><img src="${ROOT}props/${s.file}" alt="${label}" draggable="false">${s.drawing?'<span class="drawing-label" aria-hidden="true">cô Lụa</span>':''}</div></div>`;caption=s.caption||''}
- else{const bg=BG(scene.bg||state.scene);art=`<div class="scene-closeup" role="img" aria-label="${label}" style="background-image:url('${bg}');background-size:${info.zoom*100}% auto;background-position:${info.x}% ${info.y}%"></div>`;caption=''}
+ else{const bg=sceneBackground(state.scene);art=`<div class="scene-closeup" role="img" aria-label="${label}" style="background-image:url('${bg}');background-size:${info.zoom*100}% auto;background-position:${info.x}% ${info.y}%"></div>`;caption=''}
  showModal(`<h2>${label}</h2>${art}${caption?`<p class="modal-note">${escapeHTML(caption)}</p>`:''}<div id="closeup-actions" class="modal-buttons"></div>`,'QUAN SÁT GẦN','closeup');
  $('closeup-actions').appendChild(modalButton('Đóng',hideModal));
 }
@@ -887,7 +913,7 @@ function inspect2(k){const texts={
  lamp:["Nguyệt","Đèn bàn bằng đồng không còn hoạt động, bóng đèn nứt từ lâu."],
  sacks:["Nam","Bao vữa khô cứng, vẫn còn dấu niêm phong của kho vật tư. Có người đã bịt hầm bằng chính số vật liệu này... tớ rùng mình."],
  belongings:["Nguyệt","Năm cụm đồ nằm sát tường. Không phải vật quý giá, nhưng là dấu vết của những con người thật. Từng người một."]
-};Object.assign(texts,INSPECT2);const [who,text]=texts[k]||['Người kể chuyện',SCENES[state.scene].look];talk([[who,text],...(MORE[k]||[])])}
+};Object.assign(texts,INSPECT2);if(k==='pagoda'&&['night','dawn'].includes(storyPeriod(presentStoryMinute())))texts.pagoda=['Ánh','Chùa làng nhỏ, mái ngói phủ rêu. Hai ngọn đèn lồng soi nhẹ khoảng sân vắng.'];const [who,text]=texts[k]||['Người kể chuyện',SCENES[state.scene].look];talk([[who,text],...(MORE[k]||[])])}
 function showModal(html,kicker='HỒ SƠ ĐIỀU TRA',type='generic'){
  const opening=$('modal-backdrop').hidden;if(opening)modalReturnFocus=document.activeElement;
  $('chatter').classList.remove('on');
@@ -1293,7 +1319,7 @@ const RESEARCH_PUZZLE_ART={
  pz_so_sanh_nguon:'props/Closeup02_Papers.webp'
 };
 function researchPuzzleArt(p){
- const src=RESEARCH_PUZZLE_ART[p.id]?ROOT+RESEARCH_PUZZLE_ART[p.id]:BG(p.scene);
+ const src=RESEARCH_PUZZLE_ART[p.id]?ROOT+RESEARCH_PUZZLE_ART[p.id]:(p.scene===state.scene?sceneBackground(p.scene):BG(p.scene));
  return `<img class="research-puzzle-art" src="${escapeHTML(src)}" alt="" loading="lazy" draggable="false">`;
 }
 function puzzleContextArt(src,alt){return `<img class="puzzle-context-art" src="${escapeHTML(src)}" alt="${escapeHTML(alt)}" loading="lazy" draggable="false">`}
