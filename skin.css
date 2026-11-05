@@ -193,3 +193,7 @@
 .title-buttons .secondary-btn:hover,.title-buttons .secondary-btn:focus-visible{color:var(--jade);background:none}
 @media(min-width:900px){.title-content{max-width:760px}.title-content h1.title-logo{margin-top:8vh}}
 @media(max-height:560px){.title-content h1.title-logo{margin-top:2vh}.title-content .title-logo img{max-height:26vh}.title-content .title-description{display:none}}
+
+/* ---------- Màn hình chính: nút chỉ là chữ phát sáng, không gạch chân, không khung (theo Demo_UI) ---------- */
+.title-screen .title-buttons .primary-btn,.title-screen .title-buttons .primary-btn:hover,.title-screen .title-buttons .primary-btn:focus,.title-screen .title-buttons .primary-btn:focus-visible,.title-screen .title-buttons .primary-btn:active{text-decoration:none!important;border:0;outline:0;box-shadow:none}
+.title-screen .title-buttons .secondary-btn,.title-screen .title-buttons .secondary-btn:hover,.title-screen .title-buttons .secondary-btn:focus-visible{border:0;background:none;box-shadow:none;outline:0;text-decoration:none!important}
