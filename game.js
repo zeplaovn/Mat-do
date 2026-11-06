@@ -510,7 +510,7 @@ function syncAchievements(announce=true,progress=state){
 }
 /* ================= ÂM THANH =================
    Quy tắc: mỗi âm thanh chỉ phát ở nơi nó thật sự có thể vang lên trong cảnh đó. */
-const SOUND={door:'creaking-door.mp3',slam:'door-slam.mp3',knock:'knock-on-the-door.mp3',steps:'tieng_buoc_chan.mp3',page:'pageturn.mp3',camera:'Chup_anh.mp3',lighter:'lighter.mp3',switch:'light-switch.mp3',
+const SOUND={howl:'tieng_hu.mp3',door:'creaking-door.mp3',slam:'door-slam.mp3',knock:'knock-on-the-door.mp3',steps:'tieng_buoc_chan.mp3',page:'pageturn.mp3',camera:'Chup_anh.mp3',lighter:'lighter.mp3',switch:'light-switch.mp3',
  market:'tieng_on_ao_o_cho.mp3',water:'nuoc_chay.mp3',frogs:'community-frogs.mp3',frogsNight:'frogs-croaking-at-night.mp3',gecko:'than_lan_keu_3s.mp3',crickets:'tieng_de_keu.mp3',musicbox:'music_box.mp3',rain:'rain.mp3',forest:'nature_forest.mp3',house:'ambient_house.mp3',crow:'crow.mp3',pick:'pick.mp3'};
 const SLAM_LEAD=3.3;                         /* door-slam.mp3: cú đập nằm ở ~4,0 s; bắt đầu phát từ 3,3 s để nó vang ngay sau tiếng kẽo kẹt */
 /* Tương tác = nhân vật bước tới chỗ đó: dùng tieng_buoc_chan.mp3 (3 bước khi đi sang cảnh khác, 2 bước khi xem/nhặt đồ). */
@@ -559,6 +559,9 @@ function geckoBurst(){stopGecko();try{const a=new Audio(ROOT+'sound/'+SOUND.geck
 const CROW_SCENES=['BG01','BG02','BG05','BG06','BG08','BG09','BG10','BG25','BG29','BG40','BG41'];
 let crowClock=40+Math.random()*30;
 function crowTick(){if(document.hidden||!state.sound||!$('title-screen').hidden||!CROW_SCENES.includes(state.scene)||modalType)return;if(--crowClock<=0){crowClock=45+Math.random()*55;playSound('crow',.18)}}
+const HOWL_SCENES=['BG05','BG06','BG08','BG09','BG10','BG25','BG29','BG40'];
+let howlClock=90+Math.random()*60;
+function howlTick(){if(document.hidden||!state.sound||!$('title-screen').hidden||!HOWL_SCENES.includes(state.scene)||modalType)return;if(--howlClock<=0){howlClock=120+Math.random()*120;playSound('howl',.2)}}
 function geckoTick(){if(document.hidden||!state.sound||!$('title-screen').hidden||!VILLA_ROOMS.includes(state.scene))return;if(++geckoClock>=GECKO_EVERY){geckoClock=0;geckoBurst()}}
 /* Lưu tiến trình có chữ ký: sửa tay localStorage (đổi cảnh, thêm vật phẩm, nhảy qua câu đố) sẽ bị phát hiện và bản lưu bị bỏ qua.
    Đây là lớp chặn sửa đơn giản, không phải mã hóa: game chạy hoàn toàn trên máy người chơi. */
@@ -2015,6 +2018,6 @@ function mount(){$('btn-new-game').onclick=newGame;$('btn-continue').onclick=con
  let torchRaf=0,torchEv=null;$('scene-stage').addEventListener('pointermove',e=>{torchEv=e;if(torchRaf)return;torchRaf=requestAnimationFrame(()=>{torchRaf=0;if(!$('scene-stage').classList.contains('torch-on'))return;const box=$('scene-stage').getBoundingClientRect();const x=Math.max(0,Math.min(100,(torchEv.clientX-box.left)/box.width*100));const y=Math.max(0,Math.min(100,(torchEv.clientY-box.top)/box.height*100));$('scene-stage').style.setProperty('--torch-x',x.toFixed(1)+'%');$('scene-stage').style.setProperty('--torch-y',y.toFixed(1)+'%')})});
  $('scene-stage').addEventListener('click',e=>{if(e.target===$('scene-stage')||e.target===$('hotspots')){if(!dialogueOpen)toast(sceneLook())}});
  document.addEventListener('keydown',e=>{if(window.EndingCinematic&&window.EndingCinematic.isActive&&window.EndingCinematic.isActive())return;if($('title-screen').hidden===false)return;if(e.key==='Tab'&&modalType){const win=$('modal-body').closest('.modal-window'),focusable=[...win.querySelectorAll('button:not(:disabled),input:not(:disabled),[href],[tabindex="0"]')].filter(el=>el.getClientRects().length);if(focusable.length){const i=focusable.indexOf(document.activeElement);if(e.shiftKey&&i<=0){e.preventDefault();focusable[focusable.length-1].focus()}else if(!e.shiftKey&&(i<0||i===focusable.length-1)){e.preventDefault();focusable[0].focus()}}}if(e.key==='Escape'){if(modalType&&modalType!=='ending')hideModal();else{clearDialogue();setTimeout(drainMemories,0)}return}if(modalType==='journal'){if(e.key==='ArrowRight')bookTurn(1);else if(e.key==='ArrowLeft')bookTurn(-1);return}if(modalType==='research-book'){if(e.key==='ArrowRight'){e.preventDefault();researchReaderActions?.next()}else if(e.key==='ArrowLeft'){e.preventDefault();researchReaderActions?.prev()}return}if(modalType||['INPUT','TEXTAREA'].includes(document.activeElement.tagName))return;if(dialogueOpen&&(e.key==='Enter'||e.key===' ')){e.preventDefault();nextLine();return}const k=e.key.toLowerCase();if(k==='h')showHint();if(k==='f'&&has('flashlight'))selectItem('flashlight');if(k==='v')cycleCam();if(k==='j')showJournal()});
- updateContinue();render();setInterval(()=>{geckoTick();crowTick()},1000);}
+ updateContinue();render();setInterval(()=>{geckoTick();crowTick();howlTick()},1000);}
 mount();
 })();

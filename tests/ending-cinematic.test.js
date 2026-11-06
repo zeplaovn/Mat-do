@@ -35,12 +35,12 @@ for(const name of ['normal','good','true']){
  nowMs+=1000;document.hidden=true;for(const fn of listeners.visibilitychange)fn();assert.equal(timers.size,0);assert.equal(audio.paused,true);assert.ok(nodes['ending-cinematic'].classList.contains('is-paused'));document.hidden=false;for(const fn of listeners.visibilitychange)fn();assert.equal(audio.paused,false);assert.equal(timers.size,1);assert.ok(!nodes['ending-cinematic'].classList.contains('is-paused'));
  for(let i=2;i<=6;i++){assert.equal(runTimer(),i===2?7200:8200);assert.match(nodes['ending-cinematic-image'].src,new RegExp(name+'_0'+i+'\\.webp$'));}
  assert.equal(nodes['ending-cinematic-next'].textContent,'Xem kết thúc');assert.equal(nodes['ending-cinematic-image'].style['--frame-duration'],'12000ms');
- if(name==='true'){assert.equal(audio.volume,.22);assert.equal(runTimer(),11000,'TRUE ends with one second of silence');assert.equal(audio.paused,true)}
+ if(name==='true'){assert.equal(audio.volume,.55);assert.equal(runTimer(),11000,'TRUE ends with one second of silence');assert.equal(audio.paused,true)}
  assert.equal(runTimer(),12000,'the last frame should linger');assert.equal(calls,1);assert.equal(audio.paused,true);assert.equal(timers.size,0);
 }
 let complete=0;play('true',{riceGift:false,onFinish:()=>complete++});assert.match(preloads.at(-1),/true_02\.webp$/);runTimer();assert.match(nodes['ending-cinematic-image'].src,/true_02\.webp$/);nodes['ending-cinematic-skip'].onclick();
 play('true',{riceGift:true,onFinish:()=>complete++});assert.match(preloads.at(-1),/true_02_rice\.webp$/);runTimer();assert.match(nodes['ending-cinematic-image'].src,/true_02_rice\.webp$/);assert.match(nodes['ending-cinematic-image'].alt,/bát cơm/);nodes['ending-cinematic-skip'].onclick();assert.equal(complete,2);
-play('bad',{soundOn:true});const badSound=audios.slice(-2);assert.match(badSound[0].src,/ambient_house/);assert.match(badSound[1].src,/nuoc_chay/);assert.ok(badSound.every(a=>!a.paused));nodes['ending-cinematic-pause'].onclick();assert.ok(badSound.every(a=>a.paused));nodes['ending-cinematic-skip'].onclick();
+play('bad',{soundOn:true});const badSound=audios.slice(-1);assert.match(badSound[0].src,/bad_ending/);assert.ok(badSound.every(a=>!a.paused));nodes['ending-cinematic-pause'].onclick();assert.ok(badSound.every(a=>a.paused));nodes['ending-cinematic-skip'].onclick();
 let fallback=0;play('true',{onFinish:()=>fallback++});nodes['ending-cinematic-image'].onerror();assert.match(nodes['ending-cinematic-image'].src,/BG40\.webp$/);nodes['ending-cinematic-skip'].onclick();assert.equal(fallback,1);
 for(const ending of ['bad','normal','good','true'])for(let i=1;i<=6;i++)assert.ok(fs.existsSync(path.join(root,'assets/background/endings-v2',ending+'_0'+i+'.webp')));
 assert.match(fs.readFileSync(path.join(root,'ending-cinematic.css'),'utf8'),/prefers-reduced-motion:reduce/);

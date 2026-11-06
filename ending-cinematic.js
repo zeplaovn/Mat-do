@@ -38,7 +38,7 @@ const FRAMES={
   {file:'true_06.webp',motion:'pullFade',alt:'Người mẹ, con gái và con trai đứng bên nhau trước ngôi nhà cũ.',text:'Mai được trở về bên mẹ và em. Không ai buộc cô phải tha thứ hay lãng quên.'}
  ]
 };
-const SOUND={bad:'ambient_house.mp3',normal:'nature_forest.mp3',good:'music_box.mp3',true:'music_box.mp3'};
+const SOUND={bad:'bad_ending.mp3',normal:'nature_forest.mp3',good:'music_box.mp3',true:'true_ending.mp3'};
 let active=null;
 const el=id=>document.getElementById(id);
 function play(which,options={}){
@@ -52,7 +52,7 @@ function play(which,options={}){
  function clear(){if(state.timer!==null){clearTimeout(state.timer);state.timer=null}if(state.silenceTimer!==null){clearTimeout(state.silenceTimer);state.silenceTimer=null}}
  function soundPlay(){if(state.paused||document.hidden)return;for(const audio of [state.audio,state.waterAudio])if(audio){const p=audio.play();if(p&&typeof p.catch==='function')p.catch(()=>{})}}
  function soundPause(){for(const audio of [state.audio,state.waterAudio])if(audio)audio.pause()}
- if(options.soundOn){try{state.audio=new Audio('assets/sound/'+SOUND[which]);state.audio.loop=true;state.audio.volume=.17;if(which==='bad'){state.waterAudio=new Audio('assets/sound/nuoc_chay.mp3');state.waterAudio.loop=true;state.waterAudio.volume=.055}soundPlay()}catch(_){state.audio=null;state.waterAudio=null}}
+ if(options.soundOn){try{state.audio=new Audio('assets/sound/'+SOUND[which]);state.audio.loop=which!=='bad'&&which!=='true';state.audio.volume=which==='bad'||which==='true'?.45:.17;soundPlay()}catch(_){state.audio=null;state.waterAudio=null}}
  function finish(){
   if(state.done)return;state.done=true;clear();soundPause();for(const audio of [state.audio,state.waterAudio])if(audio){try{audio.currentTime=0}catch(_){}}state.preload=null;
   document.removeEventListener('keydown',keys,true);document.removeEventListener('visibilitychange',visibility);
@@ -69,7 +69,7 @@ function play(which,options={}){
  function schedule(reset=false){clear();if(reset)state.remaining=state.index===frames.length-1?LAST_FRAME_MS:FRAME_MS;if(state.paused||document.hidden)return;state.startedAt=now();state.timer=setTimeout(next,state.remaining);if(which==='true'&&state.index===frames.length-1&&state.audio){if(state.remaining<=1000)state.audio.pause();else state.silenceTimer=setTimeout(()=>{state.audio.pause();state.silenceTimer=null},state.remaining-1000)}}
  function draw(){
   if(state.done)return;const frame=frames[state.index];
-  caption.textContent=frame.text;image.alt=state.riceGift&&frame.altRice?frame.altRice:frame.alt;image.dataset.motion=frame.motion;image.style.setProperty('--frame-duration',(state.index===frames.length-1?LAST_FRAME_MS:FRAME_MS)+'ms');if(state.audio)state.audio.volume=which==='true'&&state.index>=4?.22:.17;
+  caption.textContent=frame.text;image.alt=state.riceGift&&frame.altRice?frame.altRice:frame.alt;image.dataset.motion=frame.motion;image.style.setProperty('--frame-duration',(state.index===frames.length-1?LAST_FRAME_MS:FRAME_MS)+'ms');if(state.audio)state.audio.volume=which==='true'?(state.index>=4?.55:.45):which==='bad'?.45:.17;
   image.onerror=()=>{image.onerror=null;image.src='assets/background/'+({bad:'BG42',normal:'BG33',good:'BG33',true:'BG40'}[which])+'.webp'};
   image.src=ROOT+fileAt(state.index);preloadNext();
   image.classList.remove('ending-cinematic-image--enter');void image.offsetWidth;image.classList.add('ending-cinematic-image--enter');
