@@ -21,7 +21,7 @@ const s=q.initialState();Object.assign(s.flags,{ritualDone:true,sixthDone:true,f
 s.evidence=['ledger','confession','archive','scrollProof'];s.items.push('simLetter','familyRecord');q.setState(s);
 assert.equal(q.endingEligibility().canGood,true);assert.equal(q.endingEligibility().canTrue,false);
 q.huuTalk();choose('Chưa nhận');assert.ok(!s.items.includes('phongThuyBook'));q.huuTalk();choose('Nhận cuốn sách');assert.ok(s.items.includes('phongThuyBook'),'the book may be accepted after refusal');
-q.wellSealed();choose('Soi trang trắng');assert.ok(s.flags.waterBookSeen);q.wellSealed();choose('Quan sát dấu');assert.ok(s.flags.reverseSealSeen);assert.ok(!s.flags.sealRecovered,'inspection must not remove the main seal');
+q.wellSealed();choose('Soi trang trắng');assert.ok(s.flags.waterBookSeen);assert.ok(!s.items.includes('phongThuyBook'),'used grimoire must disappear from inventory');assert.ok(s.used.includes('phongThuyBook'));q.wellSealed();choose('Quan sát dấu');assert.ok(s.flags.reverseSealSeen);assert.ok(!s.flags.sealRecovered,'inspection must not remove the main seal');
 q.returnNames();assert.ok(!s.flags.returnNamesDone,'missing visions block the ritual');
 for(const part of ['dam','banyan','well','altar'])q.seeMaiTrace(part);
 for(const item of ['lanhComb','phucScarf','maiShirt'])assert.ok(s.items.includes(item),item);
