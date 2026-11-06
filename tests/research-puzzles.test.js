@@ -23,7 +23,7 @@ vm.runInContext(fs.readFileSync(path.join(root,'assets/dialogue/reviewed.js'),'u
 let game=fs.readFileSync(path.join(root,'game.js'),'utf8');
 game=game.replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
 showModal=window.showModalStub;hideModal=()=>{};render=()=>{};talk=()=>{};say=()=>{};toast=()=>{};playSound=()=>{};save=()=>{};
-window.qa={BOOKS,RESEARCH_PUZZLES,initialState,openResearchPuzzle,researchCandidates,setState:s=>{state=s},getState:()=>state};
+window.qa={BOOKS,RESEARCH_PUZZLES,initialState,openResearchPuzzle,researchCandidates,retireCompletedResearchBooks,setState:s=>{state=s},getState:()=>state};
 })();`);
 assert.ok(game.includes('window.qa='),'game entry point not found');vm.runInContext(game,context);
 const qa=window.qa;
@@ -56,7 +56,43 @@ for(const p of Object.values(qa.RESEARCH_PUZZLES)){
  submit(p,correct);assert.ok(state.flags.researchSolved.includes(p.id),`${p.id}: did not accept the correct answer`);
  assert.ok(state.notes.some(n=>n.id==='researchSolved_'+p.id),`${p.id}: missing saved clue`);
  if(p.rewardEvidence)assert.ok(state.evidence.includes(p.rewardEvidence),`${p.id}: missing evidence`);
+ for(const id of p.requires){
+  const remaining=Object.values(qa.RESEARCH_PUZZLES).some(other=>other.id!==p.id&&other.requires.includes(id));
+  const gated=qa.BOOKS[id].protectedFinalFlag&&!state.flags[qa.BOOKS[id].protectedFinalFlag];
+  if(!remaining&&!gated){
+   assert.ok(!state.items.includes(id),`${p.id}: completed book ${id} should leave the inventory`);
+   assert.ok(state.used.includes(id),`${p.id}: used book ${id} must not respawn`);
+   assert.ok(state.notes.some(n=>n.id==='researchArchived_'+id),`${p.id}: archived text of ${id} is missing`);
+  }else{
+   assert.ok(state.items.includes(id),`${p.id}: ${id} is still needed for another puzzle or hidden page`);
+  }
+ }
 }
+// A shared source only retires when its last dependent puzzle is solved.
+const shared=qa.initialState();shared.scene='BG05';shared.items.push('book_mieu');qa.setState(shared);
+const mieuDependencies=Object.values(qa.RESEARCH_PUZZLES).filter(p=>p.requires.includes('book_mieu')).map(p=>p.id);
+shared.flags.researchSolved=mieuDependencies.slice(0,-1);
+assert.equal(qa.retireCompletedResearchBooks(shared).length,0,'shared book must stay until all puzzles finish');
+assert.ok(shared.items.includes('book_mieu'));
+shared.flags.researchSolved.push(mieuDependencies.at(-1));
+assert.deepEqual(Array.from(qa.retireCompletedResearchBooks(shared)),['book_mieu']);
+assert.ok(!shared.items.includes('book_mieu'));
+assert.ok(shared.used.includes('book_mieu'));
+assert.ok(shared.notes.some(n=>n.id==='researchArchived_book_mieu'&&n.body.includes('Rừng')));
+assert.ok(!qa.researchCandidates().some(c=>c.id==='book_mieu'),'retired books cannot be collected a second time');
+assert.equal(qa.retireCompletedResearchBooks(shared).length,0,'retirement must be idempotent');
+// The hidden final diary page is not lost before the flashback.
+const protectedDiary=qa.initialState();protectedDiary.items.push('book_lua');
+protectedDiary.flags.researchSolved=['pz_chu_lua'];
+assert.equal(qa.retireCompletedResearchBooks(protectedDiary).length,0);
+protectedDiary.flags.flashDone=true;
+assert.deepEqual(Array.from(qa.retireCompletedResearchBooks(protectedDiary)),['book_lua']);
+assert.ok(protectedDiary.notes.some(n=>n.id==='researchArchived_book_lua'));
+// Older saves with the reflective page solved should not keep the grimoire.
+const oldGrimoire=qa.initialState();oldGrimoire.items.push('phongThuyBook');
+oldGrimoire.flags.waterBookSeen=true;
+assert.deepEqual(Array.from(qa.retireCompletedResearchBooks(oldGrimoire)),['phongThuyBook']);
+assert.ok(oldGrimoire.used.includes('phongThuyBook'));
 const yearPages=qa.BOOKS.book_balam.pages.map(p=>p.join(' ')).join(' ');
 assert.match(yearPages,/1988/,'the 1988 code must be discoverable in Bá Lâm’s diary');
 const lua=qa.initialState();lua.scene='BG43';lua.items.push('book_lua');lua.flags.flashDone=true;qa.setState(lua);qa.openResearchPuzzle('pz_chu_lua');

@@ -23,7 +23,7 @@ const PORTRAITS = {
 };
 const ITEMS = {
   familyRecord:{name:'Bản sao gia phả cũ',image:'30_So_Tu_Lieu_128x128.webp',description:'Ghi chép bà Cúc chép lại từ sổ hộ cũ và lời kể của người trong làng.'},
-  phongThuyBook:{name:'Cuốn sách phong thủy cũ',image:'30_So_Tu_Lieu_128x128.webp',description:'Sách thầy Nguyên đưa. Một trang giấy trắng khác thường.'},
+  phongThuyBook:{name:'Huyền Ấn Bí Lục – Trấn Âm Đồ',image:'30_So_Tu_Lieu_128x128.webp',description:'Bí lục cũ thầy Nguyên trao, lưu đồ trấn ấn và một trang trắng chỉ hiện chữ qua mặt nước.'},
   lanhComb:{name:'Lược gỗ cũ',image:'09_Tram_Go_128x128.webp',description:'Chiếc lược tìm gần bờ đập, gói trong vải có nét chữ đã phai.'},
   phucScarf:{name:'Khăn thêu cũ',image:'07_Khan_Vai_128x128.webp',description:'Mảnh khăn tìm gần gốc đa, còn nét chỉ vụng về.'},
   maiShirt:{name:'Mảnh áo trắng',image:'19_Khan_Cham_128x128.webp',description:'Mảnh vải mắc trong khe đá ở nền tế cũ.'},
@@ -67,6 +67,7 @@ const reviewed=id=>(DIALOGUE[id]||[]).map(([who,line])=>[who==='Thầy Nguyên'?
 const RESEARCH=window.LNRT_RESEARCH||{books:{},puzzles:{}};
 const BOOKS=RESEARCH.books||{};
 const RESEARCH_PUZZLES=RESEARCH.puzzles||{};
+const BOOK_PUZZLES=Object.fromEntries(Object.keys(BOOKS).map(id=>[id,Object.values(RESEARCH_PUZZLES).filter(p=>(p.requires||[]).includes(id)).map(p=>p.id)]));
 for(const [id,b] of Object.entries(BOOKS)){
  if(!ITEMS[id])ITEMS[id]={name:b.title,image:'30_So_Tu_Lieu_128x128.webp',description:b.summary,emoji:'📖'};
 }
@@ -568,15 +569,44 @@ function geckoTick(){if(document.hidden||!state.sound||!$('title-screen').hidden
    Đây là lớp chặn sửa đơn giản, không phải mã hóa: game chạy hoàn toàn trên máy người chơi. */
 function sig(str){const s=SAVE_SALT+str;let h1=0xdeadbeef,h2=0x41c6ce57;for(let i=0;i<s.length;i++){const c=s.charCodeAt(i);h1=Math.imul(h1^c,2654435761);h2=Math.imul(h2^c,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return (4294967296*(2097151&h2)+(h1>>>0)).toString(36)}
 function save(){try{const d=JSON.stringify(state);localStorage.setItem(SAVE_KEY,JSON.stringify({d,h:sig(d)}))}catch(_){}syncAchievements()}
+/* Cất sách đã dùng vào Nhật ký rồi rút khỏi túi đồ, chỉ khi TẤT CẢ câu đố cần sách đã giải.
+   Lưu bản ghi đầy đủ để người chơi không mất tư liệu đã tìm, kể cả khi tiếp tục từ save cũ. */
+function retireCompletedResearchBooks(progress){
+ const solved=new Set(progress.flags.researchSolved||[]),retired=[];
+ for(const book of Object.values(BOOKS)){
+  if(!progress.items.includes(book.id))continue;
+  const puzzles=BOOK_PUZZLES[book.id]||[];
+  if(!puzzles.length||puzzles.some(id=>!solved.has(id)))continue;
+  if(book.protectedFinalFlag&&!progress.flags[book.protectedFinalFlag])continue;
+  progress.items=progress.items.filter(id=>id!==book.id);
+  if(!progress.used.includes(book.id))progress.used.push(book.id);
+  if(progress.selectedItem===book.id)progress.selectedItem=null;
+  const archiveId='researchArchived_'+book.id;
+  if(!progress.notes.some(n=>n.id===archiveId)){
+   progress.notes.push({id:archiveId,title:'Lưu trữ: '+book.title,
+    body:book.pages.map(([heading,content])=>heading+'\n'+content).join('\n\n')});
+  }
+  retired.push(book.id);
+ }
+ // Đồng bộ các bản lưu cũ từng soi trang bí mật nhưng chưa thu hồi bí lục.
+ if(progress.flags.waterBookSeen&&progress.items.includes('phongThuyBook')){
+  progress.items=progress.items.filter(id=>id!=='phongThuyBook');
+  if(!progress.used.includes('phongThuyBook'))progress.used.push('phongThuyBook');
+  if(progress.selectedItem==='phongThuyBook')progress.selectedItem=null;
+  retired.push('phongThuyBook');
+ }
+ return retired;
+}
 function load(){try{const raw=localStorage.getItem(SAVE_KEY);if(!raw)return null;const o=JSON.parse(raw);if(!o||typeof o.d!=='string'||o.h!==sig(o.d))return null;
  const s=JSON.parse(o.d);if(!s||typeof s!=='object'||!SCENES[s.scene]||!Array.isArray(s.items)||!Array.isArray(s.relics))return null;
  const base=initialState(),list=(v,ok)=>Array.isArray(v)?v.filter(ok):[],item=x=>typeof x==='string'&&!!ITEMS[x],str=x=>typeof x==='string';
- return {...base,...s,
+ const restored={...base,...s,
   items:list(s.items,item),relics:list(s.relics,item),used:list(s.used,item),ritualProgress:list(s.ritualProgress,item),
   evidence:list(s.evidence,str),endingsSeen:list(s.endingsSeen,x=>['bad','normal','good','true'].includes(x)),visited:list(s.visited,x=>!!SCENES[x]),
   notes:list(s.notes,n=>n&&str(n.id)&&str(n.title)&&str(n.body)).map(n=>n.id==='simStory'?{...n,body:n.body.replace('sinh năm 1962','sinh năm 1971')}:n.id==='birth'?{...n,body:n.body.replace('con gái út ông Hưng','được ghi là con của vợ chồng Hưng')}:n.id==='testimony'&&n.body.includes('bế cháu Nhài về phía giếng')?{...n,body:'Bà Tám viết: đêm 17/3/1988 bà nghe tiếng cầu cứu từ hầm nhưng sợ hãi, không dám lên tiếng. Bà giữ lại lời khai để sự thật không bị chôn vùi.'}:n),
   flags:{...base.flags,...(s.flags&&typeof s.flags==='object'&&!Array.isArray(s.flags)?s.flags:{}),legacyEndingsSeen:[...new Set([...list(s.flags&&s.flags.legacyEndingsSeen,str),...list(s.endingsSeen,x=>x==='forgive')])]},
   selectedItem:item(s.selectedItem)?s.selectedItem:null,camMode:CAM_MODES[s.camMode]?s.camMode:'night',sound:s.sound!==false,flashlight:!!s.flashlight};
+ retireCompletedResearchBooks(restored);return restored;
  }catch(_){return null}}
 function has(id){return state.items.includes(id)}
 function clue(id){if(!Array.isArray(state.flags.clues))state.flags.clues=[];if(!state.flags.clues.includes(id)){state.flags.clues.push(id);save();return true}return false}
@@ -1085,7 +1115,7 @@ function researchBookAvailable(b){
 }
 function researchCandidates(){
  const result=[];
- for(const b of Object.values(BOOKS))if(b.scene===state.scene&&researchBookAvailable(b)&&!has(b.id))result.push({id:b.id,title:b.title,kind:'book',spot:b.spot});
+ for(const b of Object.values(BOOKS))if(b.scene===state.scene&&researchBookAvailable(b)&&!has(b.id)&&!state.used.includes(b.id))result.push({id:b.id,title:b.title,kind:'book',spot:b.spot});
  for(const p of Object.values(RESEARCH_PUZZLES))if(p.scene===state.scene&&(!p.requiresFlag||state.flags[p.requiresFlag])&&!researchSolved(p.id))result.push({id:p.id,title:p.title,kind:'puzzle',spot:p.spot});
  return result;
 }
@@ -1127,7 +1157,7 @@ function showNearbyResearch(){
 }
 
 function collectResearchBook(id){
- const b=BOOKS[id];if(!b||!researchBookAvailable(b))return;
+ const b=BOOKS[id];if(!b||!researchBookAvailable(b)||state.used.includes(id))return;
  if(!has(id)){
   gain(id);
   note('research_'+id,b.title,b.summary+' Mở cuốn sách trong túi đồ để xem từng trang.');
@@ -1338,6 +1368,7 @@ function showResearchArchive(){
  const found=Object.values(BOOKS).filter(b=>has(b.id));
  const solved=Object.values(RESEARCH_PUZZLES).filter(p=>researchSolved(p.id));
  const all=Object.keys(BOOKS).length;
+ const retired=Object.keys(BOOKS).filter(id=>state.used.includes(id)).length;
  const cards=found.map(b=>{
   const seen=researchPagesRead(b.id).length;
   const complete=(state.flags.researchRead||[]).includes(b.id);
@@ -1345,7 +1376,7 @@ function showResearchArchive(){
   return `<button type="button" class="research-archive-card theme-${researchBookTheme(b)}" data-book="${escapeHTML(b.id)}">
     <span class="research-archive-cover" aria-hidden="true"></span><span class="research-archive-detail"><small>${escapeHTML(researchBookType(b))} · ${seen}/${b.pages.length} TRANG</small><strong>${escapeHTML(b.title)}</strong><em>${complete?'ĐÃ ĐỌC HẾT':marks?'ĐÃ LƯU '+marks+' GHI CHÚ':'CHƯA ĐỌC HẾT'}</em></span><span class="research-archive-arrow">›</span></button>`;
  }).join('');
- const panel=`<div class="research-archive-ui"><div class="research-archive-heading"><span class="research-section-label">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class="research-archive-stats"><span><strong>${found.length}</strong> / ${all} tài liệu</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class="research-archive-grid">${cards||'<p class="research-archive-empty">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>'}</div><div class="research-archive-bottom"><span>Chọn bìa sách để đọc hoặc mở lại.</span><button id="research-archive-close" class="modal-option">Đóng thư viện</button></div></div>`;
+ const panel=`<div class="research-archive-ui"><div class="research-archive-heading"><span class="research-section-label">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class="research-archive-stats"><span><strong>${found.length}</strong> đang giữ · <strong>${retired}</strong> đã lưu / ${all}</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class="research-archive-grid">${cards||(retired?'<p class="research-archive-empty">Sách đã dùng xong được lưu vào Nhật ký (J).</p>':'<p class="research-archive-empty">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>')}</div><div class="research-archive-bottom"><span>Sách dùng xong chuyển sang Nhật ký (J); sách còn giữ có thể đọc lại.</span><button id="research-archive-close" class="modal-option">Đóng thư viện</button></div></div>`;
  showModal(panel,'THƯ VIỆN · ĐỒNG CHAY','research-archive');
  $('research-archive-close').onclick=hideModal;
  document.querySelectorAll('[data-book]').forEach(el=>el.onclick=()=>openResearchBook(el.dataset.book));
@@ -1386,7 +1417,7 @@ function openResearchPuzzle(id){
   return;
  }
  if(id==='pz_chu_lua'&&has('book_lua')&&!researchPagesRead('book_lua').includes(BOOKS.book_lua.pages.length-1)){showModal('<h2>Trang cuối nhật ký</h2><p>Hãy mở lại trang cuối của nhật ký sau khi trở về từ ký ức.</p>','TƯ LIỆU','research-need');return}
- const missing=p.requires.filter(x=>!has(x));
+ const missing=p.requires.filter(x=>!has(x)&&!state.used.includes(x));
  if(missing.length){
   showModal(researchPuzzleArt(p)+'<h2>'+escapeHTML(p.title)+'</h2><p>'+escapeHTML(p.prompt)+'</p><p class="modal-note">Các ký hiệu ở đây chưa đủ rõ để kết luận. Có thể có sách hoặc ghi chép trong những phòng khác giúp đối chiếu.</p>','CÂU ĐỐ · CHƯA ĐỦ DỮ KIỆN','research-need');
   return;
@@ -1413,6 +1444,7 @@ function openResearchPuzzle(id){
   if(!state.flags.researchSolved.includes(id))state.flags.researchSolved.push(id);
   if(p.rewardEvidence)evidence(p.rewardEvidence);
   note('researchSolved_'+id,p.title,p.clue);
+  retireCompletedResearchBooks(state);
   save();playSound('page',.3);hideModal();render();
   toast('ĐÃ GIẢI · '+p.title);
   talk([['Khôi','Khoan, chỗ này khớp rồi.'],['Vy',p.clue]]);
@@ -1570,9 +1602,10 @@ function fbLock(){
 function huuTalk(){
  const f=state.flags;
  const offer=()=>{
-  if(has('phongThuyBook')){say('Thầy Nguyên','Trong sách có điều cần nhìn kỹ. Chớ nóng vội với thứ bị giữ dưới giếng.');return}
-  chooseModal('Cuốn sách cũ','Thầy Nguyên chìa một cuốn sách phong thủy đã sờn. Một trang gần cuối trắng khác thường.',[
-   ['Nhận cuốn sách',()=>{gain('phongThuyBook');f.huuDone=true;note('huu','Cuốn sách của thầy Nguyên','Thầy Nguyên đưa một cuốn sách cũ. Ông dặn đừng vội tin một câu chuyện chỉ vì nó đã được kể lâu.');save();talk([['Thầy Nguyên','Các cháu cứ giữ lấy. Khi cần, hãy nhìn cho kỹ trang giấy trắng.']])}],
+  if(has('phongThuyBook')){say('Thầy Nguyên','Trong Huyền Ấn Bí Lục có điều cần nhìn kỹ. Chớ nóng vội với thứ bị giữ dưới giếng.');return}
+  if(state.used.includes('phongThuyBook')||f.waterBookSeen){say('Thầy Nguyên','Các cháu đã đọc được trang ẩn của Huyền Ấn Bí Lục. Hãy xem lại ghi chép trong Nhật ký.');return}
+  chooseModal('Huyền Ấn Bí Lục – Trấn Âm Đồ','Thầy Nguyên chìa một cuốn bí lục đã sờn. Một trang gần cuối trắng khác thường.',[
+   ['Nhận cuốn sách',()=>{gain('phongThuyBook');f.huuDone=true;note('huu','Huyền Ấn Bí Lục – Trấn Âm Đồ','Thầy Nguyên đưa một cuốn bí lục cũ. Ông dặn đừng vội tin một câu chuyện chỉ vì nó đã được kể lâu.');save();talk([['Thầy Nguyên','Các cháu cứ giữ lấy. Khi cần, hãy nhìn cho kỹ trang giấy trắng.']])}],
    ['Chưa nhận sách',()=>{f.huuOffered=true;save();say('Thầy Nguyên','Không sao. Nếu đổi ý, các cháu cứ quay lại.')}]
   ],'LỰA CHỌN · CUỐN SÁCH');
  };
@@ -1586,8 +1619,8 @@ function confrontNguyen(){
  ],'ĐỐI CHẤT · THẦY NGUYÊN');
 }
 function showOldBook(){
- chooseModal('Cuốn sách phong thủy','Phần xem đất có hình dùng móc kéo một vật khỏi khe giếng; sách không giải thích điều gì xảy ra sau đó. Một trang gần cuối trắng tinh, mép giấy nhăn như từng bị thấm ướt.',[
-  ['Cầm sách để đối chiếu',()=>{state.selectedItem='phongThuyBook';hideModal();render();toast('Đang cầm cuốn sách cũ.');save()}],
+ chooseModal('Huyền Ấn Bí Lục – Trấn Âm Đồ','Một đồ hình trấn ấn vẽ cách dùng móc kéo vật khỏi khe giếng, nhưng không giải thích hậu quả. Trang gần cuối trắng tinh, mép giấy nhăn như từng thấm nước.',[
+  ['Cầm sách để đối chiếu',()=>{state.selectedItem='phongThuyBook';hideModal();render();toast('Đang cầm Huyền Ấn Bí Lục.');save()}],
   ['Cất sách',()=>{state.selectedItem=null;hideModal();render();save()}]
  ],'TƯ LIỆU · SÁCH CŨ');
 }
@@ -1631,7 +1664,7 @@ function wellSealed(){
  if(!f.wellFlowers){f.wellFlowers=true;save();talk([['Nhài','Cha em vẫn mang hoa ra giếng. Em không biết ông có nhớ em không.'],['Vy','Nắp giếng đã bịt, nhưng ở khe đá có mặt nước phản chiếu.']]);return}
  if(!f.flashDone){say('Khôi','Mình chưa biết bên dưới có gì. Đừng phá bừa.');return}
  if(state.selectedItem==='phongThuyBook'&&has('phongThuyBook')&&!f.waterBookSeen){
-  f.waterBookSeen=true;state.selectedItem=null;note('waterBook','Chữ hiện trên mặt nước','Trang trắng phản chiếu: “Tìm người mẹ bên dòng nước bị chặn, đứa trẻ dưới gốc đa và người con ở khe đá. Gọi đúng tên trước khi tháo vật giữ.”');save();
+  f.waterBookSeen=true;note('waterBook','Chữ hiện trên mặt nước · Huyền Ấn Bí Lục','Trang trắng phản chiếu: “Tìm người mẹ bên dòng nước bị chặn, đứa trẻ dưới gốc đa và người con ở khe đá. Gọi đúng tên trước khi tháo vật giữ.”');consume('phongThuyBook',true);
   talk([['Chi','Trong sách vẫn là trang trắng, nhưng trên mặt nước có chữ.'],['Vy','Mẹ bên dòng nước bị chặn, đứa trẻ ở gốc đa, người con ở khe đá... Mình phải tìm bằng chứng, không chỉ đoán.']]);return;
  }
  const opts=[];

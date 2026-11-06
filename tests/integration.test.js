@@ -76,4 +76,15 @@ state=g.initialState();state.relics.push('comb');g.setState(state);assert.equal(
 state=g.initialState();state.scene='BG13';state.items.push('spoon');state.relics.push('spoon');state.flags.customProgress=true;state.endingsSeen=['forgive'];
 const data=JSON.stringify(state);storage.set(g.SAVE_KEY,JSON.stringify({d:data,h:g.sig(data)}));const restored=g.load();
 assert.equal(restored.scene,'BG13');assert.ok(restored.items.includes('spoon'));assert.equal(restored.flags.customProgress,true);assert.equal(restored.endingsSeen.length,0);assert.ok(restored.flags.legacyEndingsSeen.includes('forgive'));
+// Older signed saves automatically discard books whose entire puzzle chain is finished.
+const legacy=g.initialState();legacy.items.push('book_duong','book_mieu','phongThuyBook');
+legacy.flags.researchSolved=['pz_duong_lang','pz_bia_cau','pz_danh_xung'];
+legacy.flags.waterBookSeen=true;
+const oldData=JSON.stringify(legacy);storage.set(g.SAVE_KEY,JSON.stringify({d:oldData,h:g.sig(oldData)}));
+const migrated=g.load();
+assert.ok(!migrated.items.includes('book_duong'));
+assert.ok(!migrated.items.includes('phongThuyBook'));
+assert.ok(migrated.items.includes('book_mieu'),'book_mieu has further puzzles');
+assert.ok(migrated.used.includes('book_duong')&&migrated.used.includes('phongThuyBook'));
+assert.ok(migrated.notes.some(n=>n.id==='researchArchived_book_duong'));
 console.log(`OK: ${books.length} books, ${puzzles.length} puzzles, ${Object.keys(g.SCENES).length} scenes, memory and ending gates, current-save compatibility.`);

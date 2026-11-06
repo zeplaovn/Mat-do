@@ -3,7 +3,7 @@ window.LNRT_RESEARCH = {
   "books": {
     "book_mieu": {
       "id": "book_mieu",
-      "title": "Sổ Miếu Đồng Chay",
+      "title": "Miếu Lục Đồng Chay – Lễ Tạ Sơn Lâm",
       "scene": "BG05",
       "spot": [
         10,
@@ -15,7 +15,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Trang bìa",
-          "SỔ MIẾU ĐỒNG CHAY\nGhi lễ tạ rừng, năm đi đường và việc chăm nguồn nước.\nNgười ghi trước nhắn người ghi sau: lấy điều lành mà dạy, không mượn chuyện thần linh để dọa người."
+          "MIẾU LỤC ĐỒNG CHAY – LỄ TẠ SƠN LÂM\nGhi lễ tạ rừng, năm đi đường và việc chăm nguồn nước.\nNgười ghi trước nhắn người ghi sau: lấy điều lành mà dạy, không mượn chuyện thần linh để dọa người."
         ],
         [
           "Lời mở",
@@ -37,7 +37,7 @@ window.LNRT_RESEARCH = {
     },
     "book_que": {
       "id": "book_que",
-      "title": "Sổ Quẻ Cũ của Nguyên",
+      "title": "Tam Tiền Vấn Sự – Sổ Quẻ Thầy Nguyên",
       "scene": "BG45",
       "spot": [
         14,
@@ -49,7 +49,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Trang ngoài",
-          "SỔ QUẺ CŨ\nChỉ để nhớ lời đã nói với người ta. Gieo quẻ không thay được việc phải làm."
+          "TAM TIỀN VẤN SỰ – SỔ QUẺ THẦY NGUYÊN\nChỉ để nhớ lời đã nói với người ta. Gieo quẻ không thay được việc phải làm."
         ],
         [
           "Ba đồng xu",
@@ -67,7 +67,7 @@ window.LNRT_RESEARCH = {
     },
     "book_duong": {
       "id": "book_duong",
-      "title": "Sổ Đường Làng Xưa",
+      "title": "Cổ Lộ Đồ – Đường Về Đồng Chay",
       "scene": "BG01",
       "spot": [
         42,
@@ -79,7 +79,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Trang bìa",
-          "SỔ ĐƯỜNG LÀNG XƯA\nGhi năm 1987, sau được người làng thêm chú thích bằng bút chì. Đường làng đổi nhiều, nhưng cầu gỗ còn đúng chỗ."
+          "CỔ LỘ ĐỒ – ĐƯỜNG VỀ ĐỒNG CHAY\nGhi năm 1987, sau được người làng thêm chú thích bằng bút chì. Đường làng đổi nhiều, nhưng cầu gỗ còn đúng chỗ."
         ],
         [
           "Cổng và ngõ",
@@ -101,7 +101,7 @@ window.LNRT_RESEARCH = {
     },
     "book_bia_cau": {
       "id": "book_bia_cau",
-      "title": "Tập Dập Chữ Bia Cầu",
+      "title": "Thạch Văn Tàn Bản – Dấu Khắc Bên Cầu",
       "scene": "BG04",
       "spot": [
         31,
@@ -113,7 +113,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "TẬP DẬP CHỮ BIA CẦU\nCó vài chữ còn đọc được, phần dưới bị rêu lấp kín."
+          "THẠCH VĂN TÀN BẢN – DẤU KHẮC BÊN CẦU\nCó vài chữ còn đọc được, phần dưới bị rêu lấp kín."
         ],
         [
           "Dấu rẽ",
@@ -135,7 +135,7 @@ window.LNRT_RESEARCH = {
     },
     "book_gieng": {
       "id": "book_gieng",
-      "title": "Sổ Sửa Giếng của Bình",
+      "title": "Thủy Tỉnh Ký – Giếng Đá Năm Xưa",
       "scene": "BG09",
       "spot": [
         75,
@@ -147,7 +147,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "SỔ SỬA GIẾNG\nBình — trông sân, nước và dụng cụ.\nĐồ hỏng phải sửa ngay, không để đấy dọa người."
+          "THỦY TỈNH KÝ – GIẾNG ĐÁ NĂM XƯA\nBình — trông sân, nước và dụng cụ.\nĐồ hỏng phải sửa ngay, không để đấy dọa người."
         ],
         [
           "Dây gầu",
@@ -169,7 +169,7 @@ window.LNRT_RESEARCH = {
     },
     "book_bep": {
       "id": "book_bep",
-      "title": "Sổ Bếp của Nụ",
+      "title": "Bát Cơm Không Tên – Sổ Bếp Của Nụ",
       "scene": "BG13",
       "spot": [
         23,
@@ -181,7 +181,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "SỔ BẾP CỦA NỤ\nNgày nào cũng phải đủ phần cho người làm; đừng lấy cơm của người này bù cho người khác."
+          "BÁT CƠM KHÔNG TÊN – SỔ BẾP CỦA NỤ\nNgày nào cũng phải đủ phần cho người làm; đừng lấy cơm của người này bù cho người khác."
         ],
         [
           "Những phần cơm",
@@ -203,7 +203,7 @@ window.LNRT_RESEARCH = {
     },
     "book_anh": {
       "id": "book_anh",
-      "title": "Sổ Ảnh Nhỏ",
+      "title": "Ảnh Trung Tàng Ảnh – Những Bóng Mờ",
       "scene": "BG16",
       "spot": [
         10,
@@ -215,7 +215,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Trang đầu",
-          "SỔ ẢNH NHỎ\nẢnh cũ không biết nói, nhưng cũng không tự nhiên đúng hết."
+          "ẢNH TRUNG TÀNG ẢNH – NHỮNG BÓNG MỜ\nẢnh cũ không biết nói, nhưng cũng không tự nhiên đúng hết."
         ],
         [
           "Cửa sổ và gương",
@@ -237,7 +237,7 @@ window.LNRT_RESEARCH = {
     },
     "book_hoc": {
       "id": "book_hoc",
-      "title": "Tập Học Chữ của Giáp",
+      "title": "Nét Phấn Cuối – Vở Học Của Giáp",
       "scene": "BG28",
       "spot": [
         16,
@@ -249,7 +249,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "TẬP HỌC CHỮ\nThầy Giáp chép cho Nhài.\nHọc xong thì cất bút, không vẽ bậy lên bàn."
+          "NÉT PHẤN CUỐI – VỞ HỌC CỦA GIÁP\nThầy Giáp chép cho Nhài.\nHọc xong thì cất bút, không vẽ bậy lên bàn."
         ],
         [
           "Bài một",
@@ -271,7 +271,7 @@ window.LNRT_RESEARCH = {
     },
     "book_kyhieu": {
       "id": "book_kyhieu",
-      "title": "Bảng Ký Hiệu Người Làm Công",
+      "title": "Mật Tự Người Cũ – Bảng Ký Hiệu",
       "scene": "BG28",
       "spot": [
         66,
@@ -283,7 +283,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Trang đầu",
-          "BẢNG KÝ HIỆU\nĐể người đi vắng vẫn biết ai đã ghi, chúng tôi mỗi người dùng một dấu riêng ở cuối trang."
+          "MẬT TỰ NGƯỜI CŨ – BẢNG KÝ HIỆU\nĐể người đi vắng vẫn biết ai đã ghi, chúng tôi mỗi người dùng một dấu riêng ở cuối trang."
         ],
         [
           "Dấu một",
@@ -305,7 +305,7 @@ window.LNRT_RESEARCH = {
     },
     "book_vattu": {
       "id": "book_vattu",
-      "title": "Sổ Cấp Vật Tư của Thành",
+      "title": "Mực Đỏ Trên Sổ – Nhật Trình Vật Tư",
       "scene": "BG26",
       "spot": [
         41,
@@ -317,7 +317,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "SỔ CẤP VẬT TƯ\nThành giữ kho, ai lấy gì phải ghi rõ dùng ở đâu."
+          "MỰC ĐỎ TRÊN SỔ – NHẬT TRÌNH VẬT TƯ\nThành giữ kho, ai lấy gì phải ghi rõ dùng ở đâu."
         ],
         [
           "Ngày 14/3",
@@ -339,7 +339,7 @@ window.LNRT_RESEARCH = {
     },
     "book_cua": {
       "id": "book_cua",
-      "title": "Tập Kiểm Tra Cửa Hầm",
+      "title": "Then Khóa Trong Đêm – Bản Kiểm Cửa Hầm",
       "scene": "BG19",
       "spot": [
         55,
@@ -351,7 +351,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "TẬP KIỂM TRA CỬA HẦM\nLập khi thợ đo lại hành lang."
+          "THEN KHÓA TRONG ĐÊM – BẢN KIỂM CỬA HẦM\nLập khi thợ đo lại hành lang."
         ],
         [
           "Về then",
@@ -373,7 +373,7 @@ window.LNRT_RESEARCH = {
     },
     "book_mant": {
       "id": "book_mant",
-      "title": "Sổ Ghi Thầm của Bà Tám",
+      "title": "Lời Không Dám Nói – Sổ Tay Bà Tám",
       "scene": "BG24",
       "spot": [
         22,
@@ -385,7 +385,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "TÔI GHI CHO MÌNH\nNếu mai quên thì đọc lại. Nếu không dám đọc thì cứ cất."
+          "LỜI KHÔNG DÁM NÓI – SỔ TAY BÀ TÁM\nTÔI GHI CHO MÌNH\nNếu mai quên thì đọc lại. Nếu không dám đọc thì cứ cất."
         ],
         [
           "Đêm trước lễ",
@@ -407,7 +407,7 @@ window.LNRT_RESEARCH = {
     },
     "book_balam": {
       "id": "book_balam",
-      "title": "Nhật Ký Khóa Ngăn của Hưng",
+      "title": "Đêm Không Mở Cửa – Nhật Ký Ông Hưng",
       "scene": "BG27",
       "spot": [
         51,
@@ -419,7 +419,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Trang đầu",
-          "Tôi không muốn ai đọc cuốn này. Nhưng đã giấu ở đây thì hẳn tôi vẫn mong một người tìm được."
+          "ĐÊM KHÔNG MỞ CỬA – NHẬT KÝ ÔNG HƯNG\nTôi không muốn ai đọc cuốn này. Nhưng đã giấu ở đây thì hẳn tôi vẫn mong một người tìm được."
         ],
         [
           "Trước đêm lễ",
@@ -441,7 +441,7 @@ window.LNRT_RESEARCH = {
     },
     "book_lua": {
       "id": "book_lua",
-      "title": "Nhật Ký của Quyên",
+      "title": "Lời Ru Bị Giấu – Nhật Ký Quyên",
       "scene": "BG43",
       "spot": [
         55,
@@ -453,7 +453,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "Tập sổ của Quyên.\nNhững trang đầu chỉ ghi việc chăm trẻ, thuốc ho và quần áo mới."
+          "LỜI RU BỊ GIẤU – NHẬT KÝ QUYÊN\nTập sổ của Quyên.\nNhững trang đầu chỉ ghi việc chăm trẻ, thuốc ho và quần áo mới."
         ],
         [
           "Năm 1984",
@@ -477,7 +477,7 @@ window.LNRT_RESEARCH = {
     },
     "book_mogio": {
       "id": "book_mogio",
-      "title": "Sổ Vườn Mộ Gió",
+      "title": "Sương Trên Mộ Gió – Sổ Vườn Sau",
       "scene": "BG29",
       "spot": [
         16,
@@ -489,7 +489,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Lời ghi",
-          "Tôi dựng năm nấm mộ gió để người sống có chỗ thắp nhang, dù không tìm được hài cốt."
+          "SƯƠNG TRÊN MỘ GIÓ – SỔ VƯỜN SAU\nTôi dựng năm nấm mộ gió để người sống có chỗ thắp nhang, dù không tìm được hài cốt."
         ],
         [
           "Bình",
@@ -511,7 +511,7 @@ window.LNRT_RESEARCH = {
     },
     "book_ngutran": {
       "id": "book_ngutran",
-      "title": "Tập Chép Ngũ Vị",
+      "title": "Ngũ Vị Trấn Đàn – Bản Chép Khả Nghi",
       "scene": "BG32",
       "spot": [
         10,
@@ -523,7 +523,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "TẬP CHÉP NGŨ VỊ\n“Làm đủ năm vị, cửa dữ tự khép.”\nGiấy bìa ám khói, bên trong có nhiều mảnh giấy mới hơn."
+          "NGŨ VỊ TRẤN ĐÀN – BẢN CHÉP KHẢ NGHI\n“Làm đủ năm vị, cửa dữ tự khép.”\nGiấy bìa ám khói, bên trong có nhiều mảnh giấy mới hơn."
         ],
         [
           "Phần một",
@@ -549,7 +549,7 @@ window.LNRT_RESEARCH = {
     },
     "book_sogoc": {
       "id": "book_sogoc",
-      "title": "Bản Chép Lễ Tạ Rừng",
+      "title": "Sơn Lâm Tạ Lễ – Bản Chép Nguyên Văn",
       "scene": "BG49",
       "spot": [
         15,
@@ -561,7 +561,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Trang một",
-          "LỄ TẠ RỪNG ĐỒNG CHAY\nKính Huyền Lâm Thánh Quân, đức bảo hộ cây rừng và nguồn nước."
+          "SƠN LÂM TẠ LỄ – BẢN CHÉP NGUYÊN VĂN\nKính Huyền Lâm Thánh Quân, đức bảo hộ cây rừng và nguồn nước."
         ],
         [
           "Đồ lễ",
@@ -584,7 +584,7 @@ window.LNRT_RESEARCH = {
     },
     "book_sim": {
       "id": "book_sim",
-      "title": "Thư Quế Gửi Em Trai",
+      "title": "Thư Trong Đêm Gió – Lời Quế Gửi Tùng",
       "scene": "BG49",
       "spot": [
         63,
@@ -596,7 +596,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Gửi Tùng",
-          "Tùng à, chị viết vội. Nếu không về kịp, em nhớ đưa những tờ này lên xã. Đừng chỉ nghe lời người ta kể về chị."
+          "THƯ TRONG ĐÊM GIÓ – LỜI QUẾ GỬI TÙNG\nTùng à, chị viết vội. Nếu không về kịp, em nhớ đưa những tờ này lên xã. Đừng chỉ nghe lời người ta kể về chị."
         ],
         [
           "Điều chị nhìn thấy",
@@ -701,7 +701,7 @@ window.LNRT_RESEARCH = {
       ],
       "clue": "Lối đi về phía biệt thự ngày xưa bắt đầu từ ngõ làng, không phải từ rừng sâu.",
       "hints": [
-        "Xem trang “Ghi mép giấy” của Sổ Đường Làng Xưa.",
+        "Xem trang “Ghi mép giấy” của Cổ Lộ Đồ – Đường Về Đồng Chay.",
         "Thứ tự đi từ cổng, qua ruộng và cầu.",
         "Cổng làng → Đường ruộng → Cầu gỗ → Miếu cây đa."
       ],
@@ -768,7 +768,7 @@ window.LNRT_RESEARCH = {
       ],
       "clue": "Mâm tạ rừng nguyên bản là lễ vật thường ngày; những đồ trấn về sau được thêm vào.",
       "hints": [
-        "Mở trang “Ba phần lễ” trong Sổ Miếu Đồng Chay.",
+        "Mở trang “Ba phần lễ” trong Miếu Lục Đồng Chay – Lễ Tạ Sơn Lâm.",
         "Ba thứ dùng để dâng lời tạ và chăm giữ rừng.",
         "Chọn Cơm, Nước sạch và Hoa."
       ],
@@ -1154,7 +1154,7 @@ window.LNRT_RESEARCH = {
         "book_mieu"
       ],
       "kind": "multi",
-      "prompt": "Chọn BA điểm đáng ngờ trong Tập Chép Ngũ Vị.",
+      "prompt": "Chọn BA điểm đáng ngờ trong Ngũ Vị Trấn Đàn – Bản Chép Khả Nghi.",
       "answer": [
         "Giấy chắp mới",
         "Lời khấn nhận máu",
@@ -1190,7 +1190,7 @@ window.LNRT_RESEARCH = {
         "book_hoc"
       ],
       "kind": "choice",
-      "prompt": "Đâu là nguy cơ lớn nhất ở bước cuối của Tập Chép Ngũ Vị?",
+      "prompt": "Đâu là nguy cơ lớn nhất ở bước cuối của Ngũ Vị Trấn Đàn – Bản Chép Khả Nghi?",
       "answer": "Đưa người sống vào vòng thay cho các nạn nhân",
       "options": [
         "Thắp hương để tưởng niệm",
