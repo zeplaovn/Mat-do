@@ -26,12 +26,14 @@
   <link rel="stylesheet" href="ui-plus.css">
   <link rel="stylesheet" href="hotspots.css">
   <link rel="stylesheet" href="ending-cinematic.css">
+  <link rel="stylesheet" href="ending-credits.css">
   <link rel="preload" as="image" href="assets/logo.webp">
   <script src="guard.js"></script>
   <script src="perf.js"></script>
   <script src="assets/research/books-data.js" defer></script>
   <script src="assets/dialogue/reviewed.js" defer></script>
   <script src="ending-cinematic.js" defer></script>
+  <script src="ending-credits.js" defer></script>
   <script src="game.js" defer></script>
   <script src="horror.js" defer></script>
   <script src="weather.js" defer></script>
@@ -178,6 +180,20 @@
     <button id="ending-cinematic-pause" type="button" aria-pressed="false">Tạm dừng</button>
     <button id="ending-cinematic-next" type="button">Cảnh tiếp</button>
   </div>
+</section>
+
+<!-- Màn credit xuất hiện sau phim của mọi ending, trước bảng tổng kết. -->
+<section id="ending-credits" class="ending-credits" hidden role="dialog" aria-modal="true" aria-labelledby="ending-credits-title">
+  <div class="ending-credits-content">
+    <p class="ending-credits-kicker">Một trò chơi của</p>
+    <p class="ending-credits-studio">MẮT ĐỎ STUDIO</p>
+    <div class="ending-credits-rule" aria-hidden="true"></div>
+    <h2 id="ending-credits-title" class="ending-credits-title">LỜI NGUYỀN RỪNG THIÊNG</h2>
+    <p class="ending-credits-label">Sản xuất và phát triển</p>
+    <p class="ending-credits-name">Mắt Đỏ Studio</p>
+    <p class="ending-credits-thanks">Cảm ơn bạn đã trải nghiệm câu chuyện.</p>
+  </div>
+  <button id="ending-credits-continue" class="ending-credits-continue" type="button">Xem tổng kết ›</button>
 </section>
 
 <div id="chapter-card" class="chapter-card" aria-hidden="true"><span id="chapter-card-no"></span><strong id="chapter-card-name"></strong></div>
