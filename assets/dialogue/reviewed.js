@@ -1,5 +1,281 @@
 /* Hội thoại chính của Lời Nguyền Rừng Thiêng. */
 window.LNRT_DIALOGUE = {
+  "N01": [
+    [
+      "Người kể chuyện",
+      "Đồng Chay, một buổi sáng ẩm sau mưa. Nhóm sinh viên xuống xe ở đầu làng, ba lô trên vai và một xấp giấy photo kẹp trong cặp hồ sơ."
+    ],
+    [
+      "Khôi",
+      "Mình điểm lại lần cuối nhé. Đề tài của nhóm là chuyện năm xưa của biệt thự Vân Hòa, và thứ duy nhất mình có là những gì báo chí thời ấy để lại."
+    ],
+    [
+      "Hà",
+      "Ba bài thôi. Tớ ngồi ở thư viện tỉnh cả tuần mới tìm đủ. Giấy giòn, chữ nhòe, có chỗ rách mất cả dòng."
+    ],
+    [
+      "Chi",
+      "Tớ chụp lại từng trang rồi. Nhưng tờ nào cũng viết một kiểu khác nhau, đọc xong tớ còn rối hơn lúc chưa đọc."
+    ],
+    [
+      "Vũ",
+      "Báo hồi đó viết cẩn thận lắm. Cẩn thận đến mức việc chính thì không chịu nói thẳng ra."
+    ],
+    [
+      "Hà",
+      "Bài đầu là năm 1986, một mẩu tin ngắn về lễ cầu mưa. Bài năm 1988 còn ngắn hơn. Bài thứ ba là năm 1989, viết về một ngôi nhà bỏ hoang trên đồi."
+    ],
+    [
+      "Vy",
+      "Cả ba bài đều nhắc ông Hưng ở biệt thự Vân Hòa. Nhưng không bài nào nói trong nhà đã xảy ra chuyện gì."
+    ],
+    [
+      "Khôi",
+      "Vì thế mình mới phải đến tận nơi. Bài báo cho mình ngày tháng và tên người; còn sự thật thì phải hỏi người làng, rồi đối chiếu. Hỏi đường trước đã, đừng ai tự ý đi sâu vào rừng."
+    ],
+    [
+      "Chi",
+      "Máy ảnh của tớ sẵn sàng rồi."
+    ],
+    [
+      "Vy",
+      "Bà ngoại tớ từng sống ở vùng này. Đó là lý do tớ rủ các cậu chọn đề tài này."
+    ],
+    [
+      "Hà",
+      "Cậu chưa kể kỹ chuyện đó bao giờ."
+    ],
+    [
+      "Vy",
+      "Ừ... tới nơi rồi mình nói tiếp nhé."
+    ]
+  ],
+  "N03": [
+    [
+      "Người kể chuyện",
+      "Trong ngõ, lũ trẻ đuổi nhau ầm ĩ. Một bà gánh rau đang cãi giá với khách; tiếng còi xe máy chen vào giữa câu chuyện."
+    ],
+    [
+      "Cậu bé",
+      "Chị ơi, máy của chị chụp được chim bay không?"
+    ],
+    [
+      "Chi",
+      "Được, nhưng phải nhanh tay lắm."
+    ],
+    [
+      "Cậu bé",
+      "Thế chị chụp con gà nhà em đi. Nó chạy nhanh hơn cả chim!"
+    ],
+    [
+      "Vũ",
+      "Nhìn nó kìa. Tớ có cảm giác nó đang tìm người để đánh nhau."
+    ],
+    [
+      "Hà",
+      "Cậu đừng có gây sự với cả con gà."
+    ],
+    [
+      "Bà gánh rau",
+      "Đi ra đồng nhớ mang nước đấy. Trưa ở đấy nắng lắm."
+    ],
+    [
+      "Khôi",
+      "Dạ, cháu cảm ơn bà."
+    ],
+    [
+      "Hà",
+      "Cậu để ý không? Lúc nãy mình vừa nhắc tới biệt thự Vân Hòa, bà ấy quay đi như không nghe thấy."
+    ],
+    [
+      "Khôi",
+      "Bài năm 1986 viết là bà con cùng góp sức lo lễ cầu mưa. Người nào hồi ấy có mặt chắc vẫn còn nhớ. Mình hỏi thêm ở đoạn sau."
+    ],
+    [
+      "Vy",
+      "Trong ảnh của bà tớ, chỗ này còn có cái cổng gỗ."
+    ],
+    [
+      "Chi",
+      "Cậu mang cả ảnh cũ theo thật à? Cho tớ xem với."
+    ],
+    [
+      "Vy",
+      "Để lúc khác. Giấy giòn lắm."
+    ]
+  ],
+  "N06": [
+    [
+      "Người kể chuyện",
+      "Gần trưa. Con đường đồng vẫn ướt, mương nước chảy xuôi dưới bờ cỏ."
+    ],
+    [
+      "Khôi",
+      "Bài năm 1989 viết: ngôi nhà trên đồi đã bỏ hoang, đường vào mất dấu. Nếu báo nói đúng thì đây chỉ còn là lối cũ."
+    ],
+    [
+      "Hà",
+      "Tớ đọc bài đó ba lần. Người viết không ghi tên ai đã kể chuyện cho họ."
+    ],
+    [
+      "Chi",
+      "Tức là không biết nguồn tin là ai. Nghe hơi thiếu chắc chắn nhỉ."
+    ],
+    [
+      "Khôi",
+      "Nên mình mới đối chiếu, không tin một tờ nào hết. Qua cầu rồi tìm người hỏi tiếp."
+    ]
+  ],
+  "N07": [
+    [
+      "Người kể chuyện",
+      "Cầu gỗ bắc qua mương chỉ dài vài bước chân. Nhưng sang đến bên kia, cả nhóm mới nhận ra nắng đã ngả hẳn về chiều."
+    ],
+    [
+      "Vũ",
+      "Khoan, điện thoại tớ vừa nhảy mất gần hai tiếng. Của các cậu có thế không?"
+    ],
+    [
+      "Chi",
+      "Máy tớ có đoạn video toàn tiếng nước. Mười phút liền. Tớ không nhớ mình quay đoạn ấy."
+    ],
+    [
+      "Hà",
+      "Lúc nãy mình có ngồi nghỉ dưới cây bàng không nhỉ?"
+    ],
+    [
+      "Khôi",
+      "Giờ máy tớ cũng lệch. Hay điện thoại tự đổi múi giờ?"
+    ],
+    [
+      "Vy",
+      "Trên bản đồ bà tớ vẽ, từ đây chỉ có một đường đến miếu."
+    ],
+    [
+      "Khôi",
+      "Giờ này vào rừng thì không hợp lý. Mình quay về nhà nghỉ, sáng mai đi sớm. Ai đồng ý?"
+    ],
+    [
+      "Chi",
+      "Cầu qua rồi, miếu chắc cũng gần thôi. Mình tới miếu xem một cái rồi về, chẳng mất bao lâu."
+    ],
+    [
+      "Hà",
+      "Chỉ tới miếu thôi nhé. Không vào rừng."
+    ],
+    [
+      "Khôi",
+      "Chốt vậy. Tới miếu, chụp ảnh, ghi chép rồi quay lại. Ai thấy không ổn thì nói ngay, không ai bị cười."
+    ]
+  ],
+  "N08": [
+    [
+      "Người kể chuyện",
+      "Trên bàn miếu còn nước mới và chân đèn vừa được sửa. Có tiếng người nói vọng lại từ phía rễ đa."
+    ],
+    [
+      "Giọng người giữ miếu",
+      "Ai qua rừng thì giữ đường sạch, đừng chặn dòng nước."
+    ],
+    [
+      "Vy",
+      "Bà tớ cũng dặn như thế."
+    ],
+    [
+      "Hà",
+      "Bài năm 1986 có nhắc miếu này: nơi bà con gửi lời cầu mưa. Hóa ra có thật."
+    ],
+    [
+      "Khôi",
+      "Vậy là một chi tiết trong báo khớp với ngoài đời. Nhưng một chi tiết thì chưa đủ để tin cả bài."
+    ]
+  ],
+  "N10": [
+    [
+      "Người kể chuyện",
+      "Qua khỏi miếu, tiếng nói cười trong làng tắt dần. Đường đá cũ chỗ lộ chỗ chìm dưới rễ tre."
+    ],
+    [
+      "Vũ",
+      "Có dấu bánh xe này. Hồi trước đường rộng hơn bây giờ nhiều."
+    ],
+    [
+      "Khôi",
+      "Đúng là đường xe cũ thật. Vy nhớ đúng chỗ rồi."
+    ],
+    [
+      "Hà",
+      "Khôi, cậu nói chỉ tới miếu thôi mà."
+    ],
+    [
+      "Khôi",
+      "Tớ biết. Nhưng đường xe còn rõ thế này, đi thêm một đoạn xem sao. Thấy bất ổn là quay về, và phải đi sát nhau."
+    ]
+  ],
+  "N11": [
+    [
+      "Khôi",
+      "Bài năm 1989 viết mái ngói thấp thoáng sau rừng. Đúng chỗ này."
+    ],
+    [
+      "Chi",
+      "Trong ảnh cũ chỗ này có biển chỉ đường. Giờ rêu phủ gần kín rồi."
+    ]
+  ],
+  "N12": [
+    [
+      "Người kể chuyện",
+      "Trời tối khi cả nhóm tới cổng biệt thự Vân Hòa. Ổ khóa cũ vẫn mắc trên dây xích."
+    ],
+    [
+      "Vy",
+      "Bài năm 1988 viết gia chủ khóa cổng rồi rời đi. Cái khóa này giống như lúc ấy chưa ai mở."
+    ],
+    [
+      "Hà",
+      "Nhưng không bài nào nói họ đi đâu, hay vì sao."
+    ],
+    [
+      "Vũ",
+      "Đến tận đây rồi... mọi người còn muốn vào không?"
+    ],
+    [
+      "Khôi",
+      "Cứ đi cùng nhau. Thấy không an toàn thì quay lại."
+    ]
+  ],
+  "N15": [
+    [
+      "Chi",
+      "Bài năm 1986 có một tấm ảnh mặt tiền, mờ lắm. Để tớ chụp cùng góc, lát đối chiếu."
+    ],
+    [
+      "Khôi",
+      "Bậc thềm còn chắc, nhưng cái mái bên trái võng xuống rồi. Đi né bên này nhé."
+    ],
+    [
+      "Hà",
+      "Nhà to thế này mà bỏ không mấy chục năm... phí thật."
+    ],
+    [
+      "Vũ",
+      "Nếu có người ở chắc tớ phải lau nhà cả tháng mất."
+    ]
+  ],
+  "N17": [
+    [
+      "Hà",
+      "Khung ảnh thờ sạch bụi hơn mặt bàn. Có ai lau chỗ này thường xuyên."
+    ],
+    [
+      "Vy",
+      "Đây là bài vị người trong nhà, khác với bài vị ở miếu."
+    ],
+    [
+      "Hà",
+      "Bài năm 1986 chỉ viết gia đình ông Hưng thờ cúng chu đáo. Không nói thờ những ai."
+    ]
+  ],
   "M00": [
     [
       "Người kể chuyện",

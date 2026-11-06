@@ -148,7 +148,7 @@ window.isTyping = () => typing;   // hội thoại: chỉ chuyển câu khi ch�
 new MutationObserver(() => {
   const full = dt.textContent; if (!full || full === lastSet) return;
   clearInterval(ti); let i = 0; setT(''); setTyping(true); curFull = full;
-  ti = setInterval(() => { i += 1; setT(full.slice(0, i)); if (i >= full.length) { clearInterval(ti); setTyping(false); } }, 24);
+  ti = setInterval(() => { i += 1; setT(full.slice(0, i)); if (i >= full.length) { clearInterval(ti); setTyping(false); } }, 32);
 }).observe(dt, { childList: true, characterData: true, subtree: true });
 
 /* ---------- Kết thúc xấu = scare lớn ---------- */

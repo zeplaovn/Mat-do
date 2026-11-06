@@ -27,7 +27,7 @@ const g=context.window.testGame;
 const puzzles=Object.values(g.RESEARCH_PUZZLES), books=Object.values(g.BOOKS);
 assert.equal(books.length,18);
 assert.equal(puzzles.length,25);
-assert.equal(Object.keys(context.window.LNRT_DIALOGUE).length,92);
+assert.equal(Object.keys(context.window.LNRT_DIALOGUE).length,102);
 for(const b of books){
   assert.ok(g.SCENES[b.scene],`${b.id}: missing scene`);
   assert.ok(b.pages.length>1,`${b.id}: no pages`);

@@ -75,7 +75,7 @@ const USE_ON={phongThuyBook:['wellSealed'],camera:['mirror'],bell:['cradle'],mus
 const RELIC_ORDER = ['scarf','spoon','comb','petition','sandals'];
 const RITUAL_SHOW = ['petition','scarf','sandals','spoon','comb']; /* thứ tự hiển thị khác thứ tự đúng, để câu đố không lộ đáp án */
 const SCENES = {
- BG01:{name:'Cổng làng Đồng Chay',time:'07:30',chapter:'CHƯƠNG 1 · ĐỒNG CHAY',mood:'BUỔI SÁNG · ĐỒNG CHAY',caption:'Khởi đầu của một chuyến đi tưởng như bình thường.',intro:['Người kể chuyện','Thôn Đồng Chay, vùng chân núi Ba Vì. Một nhóm sinh viên tới đây để ghi lại những truyền thuyết dân gian.'],look:'Những vết rêu bám trên cổng làng. Không có gì báo trước màn đêm sắp tới.',spots:[H('warning','Bà bán nước',4,53,16,25),H('travel:BG02','Đi vào ngõ làng',42,34,16,28),H('inspect:village','Nhìn cổng làng',28,10,26,20),H('travel:BG45','Đường sang chùa làng',62,70,22,28)]},
+ BG01:{name:'Cổng làng Đồng Chay',time:'07:30',chapter:'CHƯƠNG 1 · ĐỒNG CHAY',mood:'BUỔI SÁNG · ĐỒNG CHAY',caption:'Khởi đầu của một chuyến đi tưởng như bình thường.',intro:['Người kể chuyện','Thôn Đồng Chay, vùng chân núi Ba Vì. Một nhóm sinh viên tới đây để lần theo những bài báo cũ về biệt thự Vân Hòa.'],look:'Những vết rêu bám trên cổng làng. Không có gì báo trước màn đêm sắp tới.',spots:[H('warning','Bà bán nước',4,53,16,25),H('travel:BG02','Đi vào ngõ làng',42,34,16,28),H('inspect:village','Nhìn cổng làng',28,10,26,20),H('travel:BG45','Đường sang chùa làng',62,70,22,28)]},
  BG02:{name:'Ngõ làng',time:'08:00',chapter:'CHƯƠNG 1 · ĐỒNG CHAY',mood:'BUỔI SÁNG · NGÕ LÀNG',caption:'Lối đi vẫn còn dấu bánh xe và hơi ẩm từ đêm trước.',intro:['Khôi','Chúng ta đi qua ruộng, rồi tìm cây đa cạnh miếu. Người làng bảo con đường ấy dẫn tới rừng.'],look:'Những ngôi nhà mái ngói cũ nằm im sau hàng rào tre.',spots:[H('inspect:jar','Chum nước ven đường',90,48,9,21),H('travel:BG03','Ra phía cánh đồng',47,29,17,38),H('travel:BG01','Trở về cổng làng',6,76,22,20)]},
  BG03:{name:'Con đường giữa cánh đồng',time:'11:30',chapter:'CHƯƠNG 1 · ĐỒNG CHAY',mood:'BAN NGÀY · CÁNH ĐỒNG',caption:'Con đường đất đỏ kéo dài về phía cây cầu gỗ.',intro:['Hà','Đường này ít người đi. Bà tớ từng kể rằng qua cây cầu kia là lối vào rừng thiêng.'],look:'Lúa và cỏ ướt rì rào. Một con mương nhỏ chạy song song với đường.',spots:[H('travel:BG04','Bước đến cầu gỗ',45,34,20,30),H('inspect:canal','Quan sát mương',67,65,18,18),H('travel:BG02','Quay lại ngõ làng',7,80,25,17)]},
  BG04:{name:'Cầu gỗ qua mương',time:'17:30',chapter:'CHƯƠNG 1 · ĐỒNG CHAY',mood:'CHIỀU MUỘN · BỜ MƯƠNG',caption:'Cầu ọp ẹp trong gió. Trời sẫm dần khi cả nhóm quay lại.',intro:['Vũ','Trời tối nhanh quá. Nếu quyết vào rừng thì giờ là lúc phải đi thôi.'],look:'Một tấm ván cầu lệch khỏi hàng, lộ mặt nước tối bên dưới.',spots:[H('inspect:bridge','Ván cầu mục',22,46,28,20),H('travel:BG05','Đi đến cây đa và miếu',67,30,19,33),H('travel:BG03','Quay lại đường ruộng',6,77,23,19)]},
@@ -225,7 +225,7 @@ const CONVO={
   ["Chi","Phòng trẻ bên trái, phòng làm việc bên phải... Mà cái gương ở cuối lối đi kia nhìn lạ quá."],
   ["Vũ","Gương nào? Cuối hành lang chỉ có cửa sổ thôi mà."],
   ["Chi","...Chắc tớ nhầm với cái gương trong phòng trẻ. Nhưng tớ có cảm giác nó cứ nhìn theo mình."],
-  ["Vy","Phòng làm việc bên phải là của ông Hưng, chủ cũ của ngôi nhà này."],
+  ["Vy","Theo bài báo năm 1986, ông Hưng là chủ ngôi nhà này. Phòng làm việc bên phải chắc là của ông."],
   ["Hà","Mọi người nghe không? Có tiếng ai đi lại ngay trên trần nhà. ...Chuột thôi nhỉ? Nói là chuột đi."]],
  BG16:[
   ["Chi","Lúc nãy tớ thấy một bé gái trong ảnh chụp... Nhưng trong phòng chẳng có ai cả. Tớ không hoa mắt, đúng không?"],
@@ -279,9 +279,9 @@ const CONVO={
 };
 /* Những nhịp vào cảnh dùng bản thoại mới; lời sau khi chạm vật chứng vẫn chờ đúng tương tác. */
 const REVIEWED_INTROS={
- BG01:['S01',0,7],BG02:['S03',0,8],BG03:['S06',0,5],BG04:['S07',0,6],
- BG05:['S08',0,3],BG06:['S10',0,3],BG07:['S11',0,1],BG08:['S12',0,4],BG09:['S14',1,3],BG10:['S15',0,3],
- BG12:['S17',0,2],BG13:['S18',0,2],BG14:['S19',0,4],BG18:['S23',0,2],BG23:['S28',0,2],
+ BG01:['N01',0,99],BG02:['N03',0,99],BG03:['N06',0,99],BG04:['N07',0,99],
+ BG05:['N08',0,99],BG06:['N10',0,99],BG07:['N11',0,99],BG08:['N12',0,99],BG09:['S14',1,3],BG10:['N15',0,99],
+ BG12:['N17',0,99],BG13:['S18',0,2],BG14:['S19',0,4],BG18:['S23',0,2],BG23:['S28',0,2],
  BG27:['S32',0,2],BG28:['S33',0,5],BG29:['S34',0,4],BG30:['S35',0,1],BG43:['S39',0,2]
 };
 function introOf(id){const spec=REVIEWED_INTROS[id],lines=spec&&reviewed(spec[0]).slice(spec[1],spec[2]);return lines&&lines.length?lines:(CONVO[id]||(SCENES[id].intro?[SCENES[id].intro]:[]))}
@@ -454,7 +454,7 @@ Object.assign(INSPECT2,{
 });
 const initialState = () => ({
   scene:'BG01',items:['camera','flashlight','notebook','lighter'],relics:[],evidence:[],
-  visited:['BG01'],notes:[{id:'start',title:'Chuyến đi năm 2026',body:'Khôi, Vũ, Hà, Chi và Vy đến Đồng Chay để ghi lại truyền thuyết về biệt thự Vân Hòa.'}],
+  visited:['BG01'],notes:[{id:'start',title:'Chuyến đi năm 2026',body:'Khôi, Vũ, Hà, Chi và Vy đến Đồng Chay để tìm hiểu chuyện năm xưa của biệt thự Vân Hòa qua các bài báo thời ấy.'},{id:'clippings',title:'Ba bài báo cũ (1986, 1988, 1989)',body:'Tin ngắn về lễ cầu mưa ở Đồng Chay (1986) có nhắc ông Hưng ở biệt thự Vân Hòa. Bài năm 1988 nói gia chủ khóa cổng rồi rời đi. Bài năm 1989 viết về ngôi nhà bỏ hoang trên đồi. Không bài nào nêu rõ chuyện gì đã xảy ra; người viết cũng không ghi nguồn tin.'}],
   flags:{gateOpened:false,frontOpened:false,wallOpened:false,clockSeen:false,safeOpened:false,ritualDone:false,mirrorPhoto:false,forgedRiteRejected:false,forgedRiteAccepted:false,sealRecovered:false,ending:null},
   ritualProgress:[],used:[],camMode:'night',selectedItem:null,sound:true,flashlight:false,endingsSeen:[]
 });
