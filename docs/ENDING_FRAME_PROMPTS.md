@@ -97,7 +97,7 @@ Gợi ý nhịp phát trong game: 7–9 giây mỗi frame, frame cuối giữ 11
 
 **normal_05 — Ngoái lại**
 > STYLE + From the far end of the lane, over the shoulder of a still, dark foreground figure's silhouette (backs only), the villa on the hill barely visible through trees and mist, a single glimmer in one upper window. Long lens, shallow depth, desaturated. PALETTE. Guilt and unanswered questions.
-> *Phía sau hàng cây, ánh sáng nhỏ ấy vẫn chưa tắt.*
+> *Ngoái lại lần cuối, ô cửa sổ ấy vẫn còn sáng.*
 
 **normal_06 — Câu hỏi còn lại**
 > STYLE + Empty muddy lane, wet leaves, a single abandoned jasmine sprig on the ground in the foreground, the villa a faint shape at the far end under thin morning mist. No people. Stillness, the lower third fading to dark. PALETTE.
@@ -127,9 +127,10 @@ Gợi ý nhịp phát trong game: 7–9 giây mỗi frame, frame cuối giữ 11
 > STYLE + Extreme close-up of an old woman's weathered hands (no face) trembling slightly as they touch the edge of a faded photograph, light from a doorway across her knuckles, a cup of cooling tea nearby. Shallow depth of field, creamy amber background. PALETTE. Grief finally allowed.
 > *Bao nhiêu năm, bà mới được cầm lại gương mặt ấy.*
 
-**good_03 — Cái tên được gọi**
-> STYLE + The modest house's front yard at dawn, an elderly woman and two neighbors (backs only, distant) standing before a small hastily arranged altar table with a bowl of rice, three sticks of incense, a picture of a smiling young woman, jasmine petals scattered. Mist behind. Wide, calm. PALETTE. The relief of being named.
+**good_03 — Cái tên được gọi** (bản cận cảnh, thay cho bản nhiều người nhỏ)
+> STYLE + Medium close-up at dawn in a rural Vietnamese front yard. In the sharp foreground, a small memorial table draped in white cloth: a faded black-and-white portrait photograph in a simple wooden frame (face soft, indistinct, no recognizable features), a brass incense bowl with one freshly lit stick whose thin smoke rises into a shaft of warm light, a small porcelain cup, a bowl of plain rice, scattered white jasmine petals. Just behind the table, slightly out of focus, an elderly woman in a dark headscarf seen from behind and in three-quarter profile, one weathered hand raised holding the incense, her head bowed. Two neighbors are only soft dark shapes far in the background. Shallow depth of field (85mm, f/1.8), warm amber sunrise rim light, cool blue-gray shadows, damp ground reflecting the glow. PALETTE (GOOD). One bright point: the lit incense tip. Solemn relief after thirty-eight years, no ghosts, no halos, no text.
 > *Một cái tên được gọi, sau gần bốn mươi năm.*
+> Chuyển động CSS: `panUp` chậm theo làn khói. Nếu ảnh ra nhiều người rõ mặt, thêm: "no other faces visible, background figures only as blurred silhouettes".
 
 **good_04 — Nhài bên mẹ**
 > STYLE + In a traditional Vietnamese house at dawn, the soft backlit silhouettes of a young mother (CAST Quyên) and a little girl of about seven (CAST Nhài) embracing in an open doorway, faces turned away, old white cloth hanging softly nearby, first golden light in the yard. Intimate, melancholy yet hopeful. No halos, no ornament. PALETTE.
