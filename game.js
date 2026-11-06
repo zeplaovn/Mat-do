@@ -1987,7 +1987,7 @@ function showEnding(which){
 function playEndingCinematic(which,checkpoint){
  const finish=()=>showEndingCard(which,checkpoint);
  if(window.EndingCinematic&&typeof window.EndingCinematic.play==='function'){
-  try{if(window.EndingCinematic.play(which,{soundOn:state.sound,onFinish:finish}))return}catch(_){}
+  try{if(window.EndingCinematic.play(which,{soundOn:state.sound,riceGift:!!state.flags.riceGift,onFinish:finish}))return}catch(_){}
  }
  finish();
 }

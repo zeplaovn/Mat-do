@@ -1,7 +1,15 @@
 /* Ending stills fill the screen; controls remain secondary to the image. */
 .ending-cinematic{position:fixed;inset:0;z-index:10000;background:#050706;color:#f2eee4;overflow:hidden;isolation:isolate}
 .ending-cinematic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1}
-.ending-cinematic img.ending-cinematic-image--enter{animation:ending-frame 8.2s ease-out both}
+.ending-cinematic img.ending-cinematic-image--enter{animation:ending-frame var(--frame-duration,8200ms) ease-out both}
+.ending-cinematic img.ending-cinematic-image--enter[data-motion="pan"]{animation-name:ending-pan}
+.ending-cinematic img.ending-cinematic-image--enter[data-motion="panLeft"]{animation-name:ending-pan-left}
+.ending-cinematic img.ending-cinematic-image--enter[data-motion="panUp"]{animation-name:ending-pan-up}
+.ending-cinematic img.ending-cinematic-image--enter[data-motion="pullFade"]{animation-name:ending-pull-fade}
+.ending-cinematic img.ending-cinematic-image--enter[data-motion="panDown"]{animation-name:ending-pan-down}
+.ending-cinematic img.ending-cinematic-image--enter[data-motion="pull"]{animation-name:ending-pull}
+.ending-cinematic img.ending-cinematic-image--enter[data-motion="tremble"]{animation-name:ending-tremble}
+.ending-cinematic img.ending-cinematic-image--enter[data-motion="still"]{animation-name:ending-still}
 .ending-cinematic:before,.ending-cinematic:after{content:'';position:absolute;inset:0;pointer-events:none;z-index:1}
 .ending-cinematic:before{background:linear-gradient(180deg,rgba(0,0,0,.56),transparent 28%,transparent 52%,rgba(0,0,0,.84))}
 .ending-cinematic:after{box-shadow:inset 0 0 13vw #0009}
@@ -14,5 +22,13 @@
 .ending-cinematic-skip{position:absolute;z-index:4;top:max(20px,env(safe-area-inset-top));right:max(20px,env(safe-area-inset-right))}
 .ending-cinematic.is-paused img.ending-cinematic-image--enter{animation-play-state:paused}
 @keyframes ending-frame{0%{opacity:0;transform:scale(1.015)}12%{opacity:1}100%{opacity:1;transform:scale(1.065)}}
+@keyframes ending-pan{0%{opacity:0;transform:scale(1.075) translateX(-1%)}12%{opacity:1}100%{opacity:1;transform:scale(1.075) translateX(1%)}}
+@keyframes ending-pan-left{0%{opacity:0;transform:scale(1.075) translateX(1%)}12%{opacity:1}100%{opacity:1;transform:scale(1.075) translateX(-1%)}}
+@keyframes ending-pan-up{0%{opacity:0;transform:scale(1.075) translateY(1%)}12%{opacity:1}100%{opacity:1;transform:scale(1.075) translateY(-1%)}}
+@keyframes ending-pull-fade{0%{opacity:0;transform:scale(1.065)}12%,90%{opacity:1}100%{opacity:.32;transform:scale(1.015)}}
+@keyframes ending-pan-down{0%{opacity:0;transform:scale(1.075) translateY(-1%)}12%{opacity:1}100%{opacity:1;transform:scale(1.075) translateY(1%)}}
+@keyframes ending-pull{0%{opacity:0;transform:scale(1.065)}12%{opacity:1}100%{opacity:1;transform:scale(1.015)}}
+@keyframes ending-tremble{0%{opacity:0;transform:scale(1.045)}12%{opacity:1;transform:scale(1.045)}15%{transform:scale(1.045) translateX(-.2%)}18%{transform:scale(1.045) translateX(.2%)}21%{transform:scale(1.045) translateX(-.1%)}25%,100%{opacity:1;transform:scale(1.045)}}
+@keyframes ending-still{0%{opacity:0}12%,90%{opacity:1}100%{opacity:.32}}
 @media(max-width:600px){.ending-cinematic-caption{font-size:18px;line-height:1.5}.ending-cinematic-controls{left:10px;right:10px;gap:6px}.ending-cinematic-controls button{padding:9px 11px;font-size:12px}.ending-cinematic-copy{bottom:max(116px,calc(env(safe-area-inset-bottom) + 100px))}.ending-cinematic-skip{top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right))}}
-@media(prefers-reduced-motion:reduce){.ending-cinematic img.ending-cinematic-image--enter{animation:none;transform:none}}
+@media(prefers-reduced-motion:reduce){.ending-cinematic img.ending-cinematic-image--enter{animation:none!important;transform:none!important}}

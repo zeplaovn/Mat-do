@@ -1,17 +1,23 @@
 # Bộ ảnh cinematic cho bốn ending
 
-Bộ ảnh gồm 12 cảnh tĩnh, mỗi ending có ba cảnh theo thứ tự phát trong game. Ảnh được tạo riêng bằng công cụ ImageGen tích hợp, rồi chuyển sang WebP chất lượng 90 để dùng trong game; kích thước được giữ nguyên 1672 × 941 pixel. Các file nằm trong `assets/background/endings/`.
+Phiên bản hiện hành gồm 24 cảnh chính: sáu cảnh cho mỗi ending. Ảnh nằm trong `assets/background/endings-v2/`; bộ 12 ảnh trước đó vẫn được giữ tại `assets/background/endings/`. Các ảnh được tạo bằng ImageGen tích hợp, chuyển sang WebP chất lượng 90 và giữ kích thước 1672 × 941 pixel.
 
-| Ending | Cảnh 1 | Cảnh 2 | Cảnh 3 |
-| --- | --- | --- | --- |
-| BAD | Ấn bị kéo khỏi giếng | Cánh cửa hầm | Bóng người lạc trong rừng |
-| NORMAL | Rời cổng biệt thự | Cầu gỗ về làng | Biệt thự khuất sau rừng |
-| GOOD | Hồ sơ trở về gia đình | Nhài bên mẹ | Giếng vẫn bị bịt |
-| TRUE | Di vật tại nền tế | Ấn được tháo | Gia đình Mai đoàn tụ |
+| Ending | Nhịp sáu cảnh |
+| --- | --- |
+| BAD | Giếng và ấn · đồ vật rơi · cửa hầm · hành lang · những bóng người · rừng mờ |
+| NORMAL | Cổng biệt thự · bước chân · cầu gỗ · làng sớm · ngoái nhìn · cành nhài |
+| GOOD | Hồ sơ · tấm ảnh cũ · lễ tưởng niệm · Nhài bên mẹ · nhang · giếng còn bịt |
+| TRUE | Di vật · gọi tên · lời thầy Nguyên · tháo ấn · mặt nước · gia đình Mai |
 
-Các cảnh là ảnh tĩnh có chuyển động máy quay nhẹ và chuyển cảnh bằng CSS, không phải video quay hoặc hoạt hình nhân vật. Người chơi có thể tạm dừng, xem cảnh trước, chuyển tiếp, bỏ qua, hoặc xem lại ở màn kết thúc. Phim tuân theo lựa chọn bật/tắt âm thanh, tạm dừng khi tab ẩn và tắt hiệu ứng chuyển động khi hệ thống bật chế độ giảm chuyển động.
+Cảnh thường dài 8,2 giây, cảnh cuối 12 giây. Ảnh kế tiếp được nạp trước; chuyển động máy và độ mờ khác nhau theo từng cảnh. Các hiệu ứng tắt khi bật chế độ giảm chuyển động. Phim có thể tạm dừng, chuyển cảnh, bỏ qua và xem lại; thời gian đã xem được giữ khi tạm dừng hoặc chuyển tab. Âm thanh tôn trọng chế độ tắt tiếng của game. Riêng TRUE tăng nhẹ nhạc ở hai cảnh cuối và yên lặng một giây trước màn kết.
 
-## Bộ prompt tạo ảnh
+**Chi tiết theo cốt truyện:** `true_02.webp` không có bát cơm; `true_02_rice.webp` chỉ xuất hiện nếu người chơi đã chọn đặt bát cơm. Cảnh thầy Nguyên ở hiên chùa, đúng địa điểm đối thoại trong game. Các hình nhìn thấy ký ức chỉ là cách kể bằng hình ảnh, không thay đổi điều kiện kết thúc hoặc chứng cứ.
+
+## Prompt cho phiên bản hiện hành
+
+Bản thiết kế và prompt của người dùng: [ENDING_FRAME_PROMPTS.md](ENDING_FRAME_PROMPTS.md). Những ảnh cũ được giữ lại khi phù hợp; các ảnh bổ sung tạo theo bảng màu và phong cách của tài liệu, dùng ảnh cùng nhánh làm tham chiếu. Ảnh nhóm tại nền tế và cảnh thầy Nguyên được chỉnh để có đúng nhóm nhân vật. Riêng cảnh gọi tên có hai biến thể để giữ lựa chọn bát cơm là tùy chọn.
+
+## Prompt của 12 ảnh phiên bản trước
 
 Bốn cảnh đầu dùng tiền tố chung:
 
