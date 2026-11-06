@@ -18,7 +18,7 @@ const FRAMES={
   {file:'normal_02.webp',motion:'pan',alt:'Những bước chân lặng lẽ đi trên con đường lầy.',text:'Không ai nói gì. Họ chỉ bước.'},
   {file:'normal_03.webp',motion:'still',alt:'Cả nhóm đi qua cầu gỗ về phía làng.',text:'Con đường qua rừng đưa họ trở về làng.'},
   {file:'normal_04.webp',motion:'push',alt:'Ngõ làng, cánh đồng và ánh đèn nhà trong sương sớm.',text:'Làng vẫn dậy sớm như chưa có chuyện gì.'},
-  {file:'normal_05.webp',motion:'panLeft',alt:'Một người ngoái nhìn biệt thự phía xa.',text:'Phía sau hàng cây, ánh sáng nhỏ ấy vẫn chưa tắt.'},
+  {file:'normal_05.webp',motion:'panLeft',alt:'Một người ngoái nhìn biệt thự phía xa.',text:'Ngoái lại lần cuối, ô cửa sổ ấy vẫn còn sáng.'},
   {file:'normal_06.webp',motion:'still',alt:'Cành hoa nhài nằm trên con đường vắng.',text:'Phía sau hàng cây, những câu hỏi vẫn chưa có lời đáp.'}
  ],
  good:[
