@@ -588,6 +588,13 @@ function retireCompletedResearchBooks(progress){
   }
   retired.push(book.id);
  }
+ // Đồng bộ các bản lưu cũ từng soi trang bí mật nhưng chưa thu hồi bí lục.
+ if(progress.flags.waterBookSeen&&progress.items.includes('phongThuyBook')){
+  progress.items=progress.items.filter(id=>id!=='phongThuyBook');
+  if(!progress.used.includes('phongThuyBook'))progress.used.push('phongThuyBook');
+  if(progress.selectedItem==='phongThuyBook')progress.selectedItem=null;
+  retired.push('phongThuyBook');
+ }
  return retired;
 }
 function load(){try{const raw=localStorage.getItem(SAVE_KEY);if(!raw)return null;const o=JSON.parse(raw);if(!o||typeof o.d!=='string'||o.h!==sig(o.d))return null;
