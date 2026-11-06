@@ -202,10 +202,10 @@ new MutationObserver(() => { if (!title.hidden) musicStart(); else if (!playing)
    2) INTRO
    =================================================================== */
 const BEATS = [
-  { bg: 0,  line: 'Năm 1988...', sub: 'Tại biệt thự Vân Hòa,sâu trong chân núi Ba Vì.', dur: 4200 },
-  { bg: 8,  line: 'Một đêm bị lãng quên.', sub: 'Không ai chịu kể lại chuyện gì đã xảy ra.', dur: 4600 },
-  { bg: 1,  line: '2026', sub: 'Một nhóm sinh viên tìm về thôn Đồng Chay để ghi lại một truyền thuyết.', dur: 4800 },
-  { bg: 5,  line: 'Dân làng dặn nhóm bạn: đừng vào rừng khi trời về tối.', dur: 4200 },
+  { bg: 0,  line: 'Năm 1988...', sub: 'Biệt thự Vân Hòa, chân núi Ba Vì, đóng cửa sau một đêm không ai kể lại.', dur: 4600 },
+  { bg: 8,  line: 'Báo chí chỉ để lại vài dòng.', sub: 'Một mẩu tin ngắn. Một ngôi nhà bỏ hoang. Không một lời giải thích.', dur: 5000 },
+  { bg: 1,  line: '2026', sub: 'Một nhóm sinh viên tìm lại ba bài báo cũ, rồi lần theo chúng về thôn Đồng Chay.', dur: 5000 },
+  { bg: 5,  line: 'Dân làng dặn: đừng vào rừng khi trời về tối.', dur: 4200 },
   { bg: 7,  line: 'Nhưng ... Họ vẫn đi.', dur: 3000, flick: true },
   { bg: 0,  line: 'Nếu "ai đó" gọi tên bạn…', sub: 'Tốt nhất đừng trả lời.', dur: 5200, creak: true, slamAt: 2000, knockAt: 3900 }
 ];
