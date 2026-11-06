@@ -1368,6 +1368,7 @@ function showResearchArchive(){
  const found=Object.values(BOOKS).filter(b=>has(b.id));
  const solved=Object.values(RESEARCH_PUZZLES).filter(p=>researchSolved(p.id));
  const all=Object.keys(BOOKS).length;
+ const retired=Object.keys(BOOKS).filter(id=>state.used.includes(id)).length;
  const cards=found.map(b=>{
   const seen=researchPagesRead(b.id).length;
   const complete=(state.flags.researchRead||[]).includes(b.id);
@@ -1375,7 +1376,7 @@ function showResearchArchive(){
   return `<button type="button" class="research-archive-card theme-${researchBookTheme(b)}" data-book="${escapeHTML(b.id)}">
     <span class="research-archive-cover" aria-hidden="true"></span><span class="research-archive-detail"><small>${escapeHTML(researchBookType(b))} · ${seen}/${b.pages.length} TRANG</small><strong>${escapeHTML(b.title)}</strong><em>${complete?'ĐÃ ĐỌC HẾT':marks?'ĐÃ LƯU '+marks+' GHI CHÚ':'CHƯA ĐỌC HẾT'}</em></span><span class="research-archive-arrow">›</span></button>`;
  }).join('');
- const panel=`<div class="research-archive-ui"><div class="research-archive-heading"><span class="research-section-label">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class="research-archive-stats"><span><strong>${found.length}</strong> / ${all} tài liệu</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class="research-archive-grid">${cards||'<p class="research-archive-empty">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>'}</div><div class="research-archive-bottom"><span>Chọn bìa sách để đọc hoặc mở lại.</span><button id="research-archive-close" class="modal-option">Đóng thư viện</button></div></div>`;
+ const panel=`<div class="research-archive-ui"><div class="research-archive-heading"><span class="research-section-label">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class="research-archive-stats"><span><strong>${found.length}</strong> đang giữ · <strong>${retired}</strong> đã lưu / ${all}</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class="research-archive-grid">${cards||(retired?'<p class="research-archive-empty">Sách đã dùng xong được lưu vào Nhật ký (J).</p>':'<p class="research-archive-empty">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>')}</div><div class="research-archive-bottom"><span>Sách dùng xong chuyển sang Nhật ký (J); sách còn giữ có thể đọc lại.</span><button id="research-archive-close" class="modal-option">Đóng thư viện</button></div></div>`;
  showModal(panel,'THƯ VIỆN · ĐỒNG CHAY','research-archive');
  $('research-archive-close').onclick=hideModal;
  document.querySelectorAll('[data-book]').forEach(el=>el.onclick=()=>openResearchBook(el.dataset.book));
