@@ -529,7 +529,8 @@ const AMBIENCE={
  BG21:{musicbox:.5},                        /* bên kia gương: hộp nhạc đang phát sáng, giai điệu ru (Für Elise) */
  BG22:{musicbox:.32}                        /* đáy giếng: nhạc vọng xuống nhỏ hơn; tắt sau khi gọi tên Nhài */
 };
-function playSound(name,volume=.25,from=0,dur=0){if(!state.sound)return;const file=SOUND[name];if(!file)return;try{const a=new Audio(ROOT+'sound/'+file);a.volume=Math.min(1,volume*2.2);const start=()=>{try{if(from)a.currentTime=from}catch(_){}a.play().catch(()=>{});if(dur)setTimeout(()=>{const v=a.volume,t=setInterval(()=>{a.volume=Math.max(0,a.volume-v/6);if(a.volume<=.001){clearInterval(t);a.pause()}},40)},dur*1000)};(from&&a.readyState<1)?a.addEventListener('loadedmetadata',start,{once:true}):start()}catch(_){}}
+const sfxCache={};
+function playSound(name,volume=.25,from=0,dur=0){if(!state.sound)return;const file=SOUND[name];if(!file)return;try{const src=ROOT+'sound/'+file,base=sfxCache[file]||(sfxCache[file]=new Audio(src)),a=typeof base.cloneNode==='function'?base.cloneNode():new Audio(src);a.volume=Math.min(1,volume*2.2);const start=()=>{try{if(from)a.currentTime=from}catch(_){}a.play().catch(()=>{});if(dur)setTimeout(()=>{const v=a.volume,t=setInterval(()=>{a.volume=Math.max(0,a.volume-v/6);if(a.volume<=.001){clearInterval(t);a.pause()}},40)},dur*1000)};(from&&a.readyState<1)?a.addEventListener('loadedmetadata',start,{once:true}):start()}catch(_){}}
 /* Âm thanh nền theo cảnh: nhiều lớp phát cùng lúc, lớp nào không còn thuộc cảnh mới thì tắt dần */
 const AMB_GAIN=.9; /* hệ số âm nền chung: .9 = giảm 10% so với bảng AMBIENCE */
 const ambient={};

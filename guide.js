@@ -86,5 +86,13 @@ document.addEventListener('keydown', e => { if (shown) { e.preventDefault(); e.s
 /* Chơi mới thì hướng dẫn chạy lại từ đầu */
 const ng = $('btn-new-game');
 if (ng) ng.addEventListener('click', () => { try { localStorage.removeItem(TAP_KEY); localStorage.removeItem(ITEM_KEY); } catch (_) {} }, true);
-setInterval(tick, 700);
+const tutDone = () => !!store.get(TAP_KEY) && !!store.get(ITEM_KEY);
+let tutTimer = 0;
+function pollTutorial() {
+  if (tutTimer) return;
+  tutTimer = setInterval(() => { if (tutDone() && !shown) { clearInterval(tutTimer); tutTimer = 0; return; } tick(); }, 700);
+}
+pollTutorial();
+/* Chơi mới: hướng dẫn chạy lại nên bật lại vòng kiểm tra (vòng này tự dừng khi người chơi đã hoàn thành hướng dẫn). */
+if (ng) ng.addEventListener('click', () => setTimeout(pollTutorial, 0), false);
 })();

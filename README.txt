@@ -5,6 +5,28 @@ BẢN GAME WEB POINT-AND-CLICK CÓ THỂ CHƠI (2026)
 CỐT TRUYỆN HIỆN HÀNH: docs/COT_TRUYEN_MAI_2026.md
 Các mục cập nhật bên dưới là lịch sử, có thể nhắc tới tên và cốt truyện cũ.
 
+CẬP NHẬT 07/11/2026 — GIAO DIỆN, ÂM THANH, MỞ ĐẦU, TỐI ƯU
+- Giao diện: skin "Ngọc Bích" (skin.css, ui-plus.css, hotspots.css, title-screen.css): thanh trên mỏng, túi đồ 5 ô,
+  hộp thoại phẳng, nút Gợi ý, thẻ tiêu đề chương, màn Lưu ý (notice.js) và màn hình chính căn giữa. Icon điểm đặc biệt là
+  marker ghim (assets/ui/hotspots/marker.svg); icon hướng đi đặt ở chân lối đi.
+- Hộp thoại: không còn nút Tiếp/Bỏ qua; chữ chạy xong (32 ms/ký tự) rồi chạm khung để sang câu sau.
+- Nhật ký và sách nhặt được hiện bìa trước, chạm để mở.
+- Khóa nhẹ: cửa hầm chỉ mở sau khi đã xem tầng hai (hoặc phòng trẻ và phòng làm việc).
+- Hướng dẫn đầu game bắt buộc (guide.js): chạm một biểu tượng sáng, rồi chạm một ô vật phẩm. Trong lúc chữ + bàn tay đang
+  hiện, mọi thao tác và phím tắt khác bị chặn; "Chơi ngay" chạy lại hướng dẫn. Vòng kiểm tra tự dừng khi đã xong.
+- Máy ảnh chỉ còn một chế độ (Night Vision); bỏ nút và phím V.
+- Âm thanh mới: bad_ending.mp3 và true_ending.mp3 cho hai cinematic ending; tieng_hu.mp3 là tiếng hú xa thưa thớt (2-4 phút
+  một lần) ở các cảnh rừng/ngoài trời, ngắt khi tắt tiếng hoặc mở bảng.
+- VFX kinh dị theo --dread (vfx.js, vfx.css): viền thở, nhịp tim, bóng bò, mắt hiếm, sương dày. Vạch scanline giảm còn 0,2.
+- Mở đầu viết lại: nhóm sinh viên lần theo ba bài báo cũ (1986, 1988, 1989) về biệt thự Vân Hòa. Intro (intro.js) và
+  hội thoại BG01-BG15 (assets/dialogue/reviewed.js, mã N01-N17, bảng REVIEWED_INTROS trong game.js) khớp ý này; nhật ký đầu game
+  có mục "Ba bài báo cũ". Quy tắc: không lời thoại công khai số người làm công (tests/mystery-dialogue.test.js kiểm tra cả
+  chữ "Năm" dễ bị hiểu thành số).
+- Tối ưu: đốm sáng VFX vẽ từ ảnh dựng sẵn thay vì tạo gradient cho từng hạt mỗi khung hình; âm thanh hiệu ứng nhân bản từ
+  một Audio đã tải (cloneNode) thay vì tạo mới; vòng kiểm tra hướng dẫn dừng sau khi hoàn tất.
+- Lưu trò chơi dùng khóa loi-nguyen-rung-thieng-v2-mai; bản lưu cũ không tự chuyển.
+- Chạy kiểm tra: for f in tests/*.test.js; do node "$f"; done
+
 CINEMATIC ENDING
 - Mỗi ending có sáu ảnh nền riêng, phát cùng lời dẫn và âm thanh nền trong game.
 - Có thể tạm dừng, xem cảnh trước, chuyển tiếp, bỏ qua hoặc xem lại sau ending.
