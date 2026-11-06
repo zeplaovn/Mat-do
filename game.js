@@ -1988,9 +1988,16 @@ function showEnding(which){
  playEndingCinematic(which,checkpoint);
 }
 function playEndingCinematic(which,checkpoint){
- const finish=()=>showEndingCard(which,checkpoint);
+ const finish=()=>playEndingCredits(which,checkpoint);
  if(window.EndingCinematic&&typeof window.EndingCinematic.play==='function'){
   try{if(window.EndingCinematic.play(which,{soundOn:state.sound,riceGift:!!state.flags.riceGift,onFinish:finish}))return}catch(_){}
+ }
+ finish();
+}
+function playEndingCredits(which,checkpoint){
+ const finish=()=>showEndingCard(which,checkpoint);
+ if(window.EndingCredits&&typeof window.EndingCredits.play==='function'){
+  try{if(window.EndingCredits.play({onFinish:finish}))return}catch(_){}
  }
  finish();
 }
