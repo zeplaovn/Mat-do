@@ -1,3 +1,5 @@
+> **Lưu trữ — cốt truyện cũ:** Tài liệu dưới đây không còn là chuẩn hiện hành. Xem [Cốt truyện Mai 2026](COT_TRUYEN_MAI_2026.md).
+
 # LỜI NGUYỀN RỪNG THIÊNG
 ## BÍ MẬT BIỆT THỰ VÂN HÒA
 ### TÀI LIỆU CỐT TRUYỆN VÀ THIẾT KẾ GAME CHÍNH THỨC

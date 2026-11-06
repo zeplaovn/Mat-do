@@ -62,15 +62,18 @@ for(const scene of Object.keys(g.SCENES)){
 }
 // GOOD and TRUE must stay locked until their evidence and cross-document puzzles are complete.
 let state=g.initialState();state.flags={...state.flags,ritualDone:true,sixthDone:true,flashDone:true,lamDone:true,namesDone:true,scrollCompared:true,sealRecovered:true,datTrust:true};
-state.evidence=['ledger','confession','archive','scrollProof'];state.items.push('simLetter');
+state.evidence=['ledger','confession','archive','scrollProof'];state.items.push('simLetter','familyRecord');
 state.flags.researchSolved=['pz_thong_gio','pz_ta_so'];g.setState(state);
 assert.equal(g.endingEligibility().canGood,false,'Lụa confirmation must not be skipped');
 state.flags.researchSolved.push('pz_chu_lua');assert.equal(g.endingEligibility().canGood,true);assert.equal(g.endingEligibility().canTrue,false);
-state.flags.researchSolved.push('pz_loi_khan','pz_thu_sim','pz_dau_an');assert.equal(g.endingEligibility().canTrue,true);
+state.flags.researchSolved.push('pz_dau_an');assert.equal(g.endingEligibility().canTrue,false,'the new story still needs its hidden evidence');
+const trueFlags=['waterBookSeen','reverseSealSeen','visionDam','visionBanyan','visionWell','visionAltar','relicsVerified','returnNamesDone','truthBoardDone','nguyenConfessed'];
+for(const flag of trueFlags){state.flags[flag]=true;assert.equal(g.endingEligibility().canTrue,flag==='nguyenConfessed',flag+' must be required');}
+for(const flag of trueFlags){state.flags[flag]=false;assert.equal(g.endingEligibility().canTrue,false,flag+' must not be skippable');state.flags[flag]=true;}
 // Camera observation is needed before the trâm memory, even if its relic was already picked up.
 state=g.initialState();state.relics.push('comb');g.setState(state);assert.equal(g.memoryReady('comb'),false);state.flags.mirrorPhoto=true;assert.equal(g.memoryReady('comb'),true);
-// A signed save from the previous version loads without losing scene, items or flags.
+// A signed save from the current story loads without losing scene, items or flags.
 state=g.initialState();state.scene='BG13';state.items.push('spoon');state.relics.push('spoon');state.flags.customProgress=true;state.endingsSeen=['forgive'];
 const data=JSON.stringify(state);storage.set(g.SAVE_KEY,JSON.stringify({d:data,h:g.sig(data)}));const restored=g.load();
 assert.equal(restored.scene,'BG13');assert.ok(restored.items.includes('spoon'));assert.equal(restored.flags.customProgress,true);assert.equal(restored.endingsSeen.length,0);assert.ok(restored.flags.legacyEndingsSeen.includes('forgive'));
-console.log(`OK: ${books.length} books, ${puzzles.length} puzzles, ${Object.keys(g.SCENES).length} scenes, memory and ending gates, existing-save compatibility.`);
+console.log(`OK: ${books.length} books, ${puzzles.length} puzzles, ${Object.keys(g.SCENES).length} scenes, memory and ending gates, current-save compatibility.`);

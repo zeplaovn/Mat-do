@@ -45,3 +45,11 @@ html[data-fx=low] .hotspot:before{animation:none}
 .hotspot--special.is-target:before,.hide-hotspots .hotspot--special.is-target:before{width:32px;height:32px}
 .hotspot--special .hotspot-label{bottom:calc(50% + 12px)}
 .hotspot--travel .hotspot-label{bottom:calc(16% + 36px)}
+
+/* Dấu vết khuất chỉ hiện ánh nhẹ; vẫn có nhãn khi dùng bàn phím. */
+.hotspot--subtle:before,.hotspot--subtle:hover:before,.hotspot--subtle:focus-visible:before{
+ width:10px;height:10px;border-radius:50%;background:rgba(215,225,207,.28);
+ box-shadow:0 0 9px rgba(216,226,211,.35);animation:none;filter:none;
+}
+.hotspot--subtle:hover:before,.hotspot--subtle:focus-visible:before{background:rgba(238,235,210,.85);box-shadow:0 0 12px rgba(238,235,210,.7)}
+.hotspot--subtle .hotspot-label{bottom:calc(50% + 8px)}

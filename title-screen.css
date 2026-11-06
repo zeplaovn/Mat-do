@@ -128,3 +128,5 @@
   .notice-confirm { transition: none; }
   .title-logo img { animation: none; }
 }
+
+.legacy-save-notice{max-width:34rem;margin:14px auto 0;color:#e4d5c0;font:500 12px/1.5 var(--sans,system-ui,sans-serif);letter-spacing:.01em;text-shadow:0 2px 5px #000}

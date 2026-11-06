@@ -1,3 +1,5 @@
+> **Lưu trữ — cốt truyện cũ:** Không áp dụng cho bản hiện hành. Xem [Cốt truyện Mai 2026](docs/COT_TRUYEN_MAI_2026.md).
+
 # KỊCH BẢN CHƯƠNG MỚI · LỜI NGUYỀN RỪNG THIÊNG
 
 Mục tiêu: kéo game lên khoảng 1 giờ, đẩy cảm xúc người chơi bằng những mẩu chuyện bi ai, nỗi đau thầm kín và con người có hai mặt. Không ai là kẻ ác thuần túy.

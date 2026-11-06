@@ -1,6 +1,6 @@
 # Cốt truyện mở rộng — bản phác thảo cũ (không còn áp dụng)
 
-> Tài liệu này được giữ làm lịch sử sáng tác. Các chi tiết và tuyến truyện bên dưới đã được thay thế; bản hiện hành là [KỊCH BẢN CHÍNH THỨC](KICH_BAN_CHINH_THUC.md).
+> Tài liệu này được giữ làm lịch sử sáng tác. Các chi tiết và tuyến truyện bên dưới đã được thay thế; bản hiện hành là [Cốt truyện Mai 2026](COT_TRUYEN_MAI_2026.md).
 
 Giữ nguyên mọi sự kiện đã có (chương 1–9). Phần mới chỉ **bổ sung chiều sâu**: nỗi đau giấu kín, hai mặt của từng người. Kể qua đồ vật, nhật ký, giấc mơ nhập vai; không giải thích dài dòng.
 

@@ -1,4 +1,4 @@
-/* Dữ liệu sách và câu đố hư cấu trong game Đồng Chay. UTF-8. */
+/* Sách và câu đố hư cấu, được đối chiếu với cốt truyện. */
 window.LNRT_RESEARCH = {
   "books": {
     "book_mieu": {
@@ -31,13 +31,13 @@ window.LNRT_RESEARCH = {
         ],
         [
           "Ghi chú mép giấy",
-          "Nếu gặp bản văn nào nói Đức Ngài nhận máu người thì phải xem lại tên thần, triện và giấy chắp. Có lần thầy đồ trong làng đã cảnh cáo chuyện sửa chữ ở bản chép."
+          "Nếu gặp bản văn nói Đức Ngài nhận máu người, hãy so danh xưng, triện và giấy chắp. Có trang sách cũ chỉ hiện chữ khi soi vào nước lặng."
         ]
       ]
     },
     "book_que": {
       "id": "book_que",
-      "title": "Sổ Quẻ Cũ của Hựu",
+      "title": "Sổ Quẻ Cũ của Nguyên",
       "scene": "BG45",
       "spot": [
         14,
@@ -45,7 +45,7 @@ window.LNRT_RESEARCH = {
         17,
         13
       ],
-      "summary": "Sổ ghi kết quả xem quẻ và những chuyện ông Hựu nghe từ khách.",
+      "summary": "Sổ ghi kết quả xem quẻ và những chuyện thầy Nguyên nghe từ khách.",
       "pages": [
         [
           "Trang ngoài",
@@ -135,7 +135,7 @@ window.LNRT_RESEARCH = {
     },
     "book_gieng": {
       "id": "book_gieng",
-      "title": "Sổ Sửa Giếng của Hải",
+      "title": "Sổ Sửa Giếng của Bình",
       "scene": "BG09",
       "spot": [
         75,
@@ -147,7 +147,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "SỔ SỬA GIẾNG\nHải — trông sân, nước và dụng cụ.\nGhi cái gì hỏng thì sửa ngay, không để đấy dọa người."
+          "SỔ SỬA GIẾNG\nBình — trông sân, nước và dụng cụ.\nĐồ hỏng phải sửa ngay, không để đấy dọa người."
         ],
         [
           "Dây gầu",
@@ -158,18 +158,18 @@ window.LNRT_RESEARCH = {
           "Nắp giếng bản lề lệch về phía cây gạo. Trời mưa phải gài chốt sắt. Nếu để hở, chạy qua sân ban đêm có thể trượt chân."
         ],
         [
-          "Một dòng bị gạch",
-          "Tôi đã nhắc ông Lâm thay nắp. Thợ tới đo rồi lại được bảo làm việc khác. Nắp ấy chưa sửa."
+          "Chốt đồng",
+          "Tôi tháo chiếc chốt đồng ở ngoài thành giếng để sửa gầu. Bên dưới còn vật khác gắn sâu trong đá; tôi không tháo nó. Sau đó Nhài thường nhìn xuống giếng rồi khóc."
         ],
         [
           "Ghi chú cuối",
-          "Thứ rơi xuống giếng có thể móc lên bằng gầu và móc sắt ở kho. Chưa rõ đáy có gì, không được bắt ai trèo xuống."
+          "Nắp giếng chưa được sửa. Trời mưa, nếu không gài chốt thì người chạy ngang có thể trượt chân."
         ]
       ]
     },
     "book_bep": {
       "id": "book_bep",
-      "title": "Sổ Bếp của Sen",
+      "title": "Sổ Bếp của Nụ",
       "scene": "BG13",
       "spot": [
         23,
@@ -177,11 +177,11 @@ window.LNRT_RESEARCH = {
         22,
         15
       ],
-      "summary": "Những trang ghi số người ăn, mâm cơm và một chiếc bát chưa từng thuộc về ai.",
+      "summary": "Những trang ghi phần cơm, mâm bát và một phần dành riêng cho trẻ nhỏ.",
       "pages": [
         [
           "Bìa",
-          "SỔ BẾP CỦA SEN\nNgày nào cũng phải đủ phần cho người làm; đừng lấy cơm của người này bù cho người khác."
+          "SỔ BẾP CỦA NỤ\nNgày nào cũng phải đủ phần cho người làm; đừng lấy cơm của người này bù cho người khác."
         ],
         [
           "Những phần cơm",
@@ -189,15 +189,15 @@ window.LNRT_RESEARCH = {
         ],
         [
           "Bữa cơm đêm",
-          "Trên bàn hầm hôm ấy có sáu chiếc bát. Năm bát lớn được xếp thành vòng; chiếc thứ sáu nhỏ hơn, đặt lệch khỏi vòng.\nTôi hỏi ai ăn phần đó, không ai trả lời."
+          "Tôi chuẩn bị sáu chiếc bát: năm bát lớn cho chúng tôi, một bát nhỏ cho Nhài. Không ai nói với chúng tôi chuyện sẽ xảy ra dưới hầm."
         ],
         [
-          "Vết than sau trang",
-          "Nếu ai bảo chiếc bát thứ sáu là cho người đến ăn, phải hỏi tên người ấy. Không ai trong năm người làm nhận chiếc bát đó."
+          "Dòng nhắc trong sổ",
+          "Bình để khăn gần giếng, tôi cất muôi trong bếp; Quyên đánh rơi trâm ở nôi, Thành giữ thư trong sổ, Giáp để dép ngoài cửa hầm. Tôi nhớ theo thứ tự ấy."
         ],
         [
-          "Lời của Sen",
-          "Tôi bỏ bát thứ sáu sang một bên, vậy mà khi quay lại, nó ở ngay chính giữa. Có lẽ có người muốn chúng tôi tưởng mình đã làm đúng lễ."
+          "Mảnh giấy",
+          "Trước khi xuống hầm, chúng tôi đã chia lá thư tố cáo thành ba mảnh và giấu riêng. Chúng tôi ghi điều mình nghi ngờ, mong có người tìm ra nếu xảy ra chuyện."
         ]
       ]
     },
@@ -237,7 +237,7 @@ window.LNRT_RESEARCH = {
     },
     "book_hoc": {
       "id": "book_hoc",
-      "title": "Tập Học Chữ của Khoa",
+      "title": "Tập Học Chữ của Giáp",
       "scene": "BG28",
       "spot": [
         16,
@@ -245,11 +245,11 @@ window.LNRT_RESEARCH = {
         21,
         13
       ],
-      "summary": "Bài học của thầy Khoa và dấu ghi về ngày cuối cùng.",
+      "summary": "Bài học của thầy Giáp và dấu ghi về ngày cuối cùng.",
       "pages": [
         [
           "Bìa",
-          "TẬP HỌC CHỮ\nThầy Khoa chép cho Mơ.\nHọc xong thì cất bút, không vẽ bậy lên bàn."
+          "TẬP HỌC CHỮ\nThầy Giáp chép cho Nhài.\nHọc xong thì cất bút, không vẽ bậy lên bàn."
         ],
         [
           "Bài một",
@@ -265,7 +265,7 @@ window.LNRT_RESEARCH = {
         ],
         [
           "Trang nhỏ cuối",
-          "03 giờ 17 phút không phải lúc cả năm người cùng qua đời. Đó là giờ chiếc đồng hồ ngoài sảnh dừng sau chuyện ở sân giếng."
+          "Giáp nhắc Nhài: lúc trời mưa, đừng chạy qua sân khi nắp giếng chưa gài chốt."
         ]
       ]
     },
@@ -287,15 +287,15 @@ window.LNRT_RESEARCH = {
         ],
         [
           "Dấu một",
-          "Hải — sóng nước. Anh trông giếng và biết dây gầu.\nSen — ngọn lửa. Chị trông bếp."
+          "Bình — sóng nước. Anh trông giếng và biết dây gầu.\nNụ — ngọn lửa. Chị trông bếp."
         ],
         [
           "Dấu hai",
-          "Lụa — nốt nhạc. Cô dạy Mơ hát khi trời mưa.\nTâm — cái cân. Anh giữ sổ và cân đồ."
+          "Quyên — nốt nhạc. Cô dạy Nhài hát khi trời mưa.\nThành — cái cân. Anh giữ sổ và cân đồ."
         ],
         [
           "Dấu ba",
-          "Khoa — cây bút. Thầy dạy chữ.\nỞ sau ảnh tập thể có thứ tự đứng ký. Không phải thứ tự được ép đứng trong nghi lễ."
+          "Giáp — cây bút. Thầy dạy chữ.\nỞ sau ảnh tập thể có thứ tự đứng ký. Không phải thứ tự được ép đứng trong nghi lễ."
         ],
         [
           "Nhắc lại",
@@ -305,7 +305,7 @@ window.LNRT_RESEARCH = {
     },
     "book_vattu": {
       "id": "book_vattu",
-      "title": "Sổ Cấp Vật Tư của Tâm",
+      "title": "Sổ Cấp Vật Tư của Thành",
       "scene": "BG26",
       "spot": [
         41,
@@ -317,7 +317,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "SỔ CẤP VẬT TƯ\nTâm giữ kho, ai lấy gì phải ghi rõ dùng ở đâu."
+          "SỔ CẤP VẬT TƯ\nThành giữ kho, ai lấy gì phải ghi rõ dùng ở đâu."
         ],
         [
           "Ngày 14/3",
@@ -325,14 +325,14 @@ window.LNRT_RESEARCH = {
         ],
         [
           "Ngày 16/3",
-          "Một phiếu ghi “vải bịt ô gió” được thêm sau dòng cấp than. Chữ nghiêng khác nét của tôi. Người ký nhận là thầy Tịnh; người cho xuất là ông Bá Lâm."
+          "Một phiếu ghi “vải bịt ô gió” được thêm sau dòng cấp than. Chữ nghiêng khác nét của tôi. Người ký nhận là thầy Chân; người cho xuất là ông Hưng."
         ],
         [
           "Trang so sánh",
           "Số lượng than phải đối với bếp; vải phải đối với cửa sổ thông gió. Hai mục ấy không nên xuất cùng một việc khi gian hầm đang có người."
         ],
         [
-          "Lời Tâm để lại",
+          "Lời Thành để lại",
           "Tôi chép phiếu này sang trang khác. Nếu có chuyện, xin nhìn dòng đã thêm bằng mực mới. Chúng tôi không tự khóa cửa nhốt nhau."
         ]
       ]
@@ -373,7 +373,7 @@ window.LNRT_RESEARCH = {
     },
     "book_mant": {
       "id": "book_mant",
-      "title": "Sổ Ghi Thầm của Bà Mận",
+      "title": "Sổ Ghi Thầm của Bà Tám",
       "scene": "BG24",
       "spot": [
         22,
@@ -393,11 +393,11 @@ window.LNRT_RESEARCH = {
         ],
         [
           "Đêm 17/3",
-          "Thầy Tịnh dặn phải đóng cửa. Ông Lâm đến, chạm then rồi buông tay. Tôi nghe tiếng đập mà sợ quá, chỉ đứng im."
+          "Thầy Chân dặn phải đóng cửa. Ông Hưng đến, chạm then rồi buông tay. Tôi nghe tiếng đập mà sợ quá, chỉ đứng im."
         ],
         [
-          "Sáng sau",
-          "Trong vườn, tôi dựng năm nấm mộ gió. Chỉ là chỗ nhớ người, không có hài cốt ở đấy. Mỗi lần cắm nhang, tôi lại nghe tên họ trong đầu."
+          "Những năm về sau",
+          "Trong vườn, tôi dựng mộ gió để tưởng nhớ những người không trở về. Không có hài cốt ở đó. Tôi thắp nhang và cố ghi lại tên họ."
         ],
         [
           "Trang cuối",
@@ -407,7 +407,7 @@ window.LNRT_RESEARCH = {
     },
     "book_balam": {
       "id": "book_balam",
-      "title": "Nhật Ký Khóa Ngăn của Bá Lâm",
+      "title": "Nhật Ký Khóa Ngăn của Hưng",
       "scene": "BG27",
       "spot": [
         51,
@@ -423,15 +423,15 @@ window.LNRT_RESEARCH = {
         ],
         [
           "Trước đêm lễ",
-          "Tịnh nói chỉ có cách giữ năm vị trí thì Mơ mới qua khỏi. Tôi chẳng hiểu vì sao lại là năm người làm công. Tôi không hỏi tiếp."
+          "Chân nói chỉ có cách giữ năm vị trí thì Nhài mới qua khỏi. Tôi chẳng hiểu vì sao lại là năm người làm công. Tôi không hỏi tiếp."
         ],
         [
           "Đêm 17/3/1988",
-          "Tôi tới cửa hầm. Có người gọi tên tôi. Tôi đặt tay lên then, rồi bỏ xuống. Lúc đó tôi tin lời Tịnh hơn tiếng người dưới cửa."
+          "Chân cài then lúc 02:45. Tôi đã đồng ý giữ họ đến sáng. Khoảng 03:05 tôi nghe tiếng kêu, đặt tay lên then nhưng buông xuống. 05:10 tôi mới mở."
         ],
         [
           "Sáng hôm sau",
-          "Tôi tìm Mơ đến khi trời sáng. Người ta nói em rơi xuống giếng. Tôi không biết phải nói gì với Lụa."
+          "Nhài rơi xuống giếng lúc tôi chạy tới. Tôi tìm thấy con, chôn con gần gốc cây và để người ta ghi em mất vì bệnh."
         ],
         [
           "Năm tháng sau",
@@ -441,7 +441,7 @@ window.LNRT_RESEARCH = {
     },
     "book_lua": {
       "id": "book_lua",
-      "title": "Nhật Ký của Lụa",
+      "title": "Nhật Ký của Quyên",
       "scene": "BG43",
       "spot": [
         55,
@@ -453,23 +453,23 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "Tập sổ của Lụa.\nNhững trang đầu chỉ ghi việc chăm trẻ, thuốc ho và quần áo mới."
+          "Tập sổ của Quyên.\nNhững trang đầu chỉ ghi việc chăm trẻ, thuốc ho và quần áo mới."
         ],
         [
           "Năm 1984",
-          "Mơ hôm nay đọc được cả một đoạn truyện. Em cứ ngước lên hỏi tôi có giỏi không. Tôi bảo giỏi lắm, rồi quay đi lau nước mắt."
+          "Nhài tập gọi tên đồ vật. Em chỉ vào con búp bê tôi khâu rồi cười, đòi nghe hát thêm một lần nữa."
         ],
         [
           "Năm 1986",
-          "Ông chủ muốn tôi đừng nói chuyện cũ. Tôi vẫn được ở cạnh Mơ, nên đành im. Có những điều im lâu quá, nói ra còn sợ hơn."
+          "Ông chủ muốn tôi đừng nói chuyện cũ. Tôi vẫn được ở cạnh Nhài, nên đành im. Có những điều im lâu quá, nói ra còn sợ hơn."
         ],
         [
-          "Đêm 17/3/1988",
-          "Ngoài cửa có tiếng dép bé chạy tới. Tôi gọi em tránh xa chỗ làm lễ. Mơ gọi “cô Lụa ơi”, tôi nghe mà lòng như đứt."
+          "Trước đêm 17/3/1988",
+          "Tôi sợ lời đồn về buổi lễ. Chúng tôi viết những điều nghi ngờ rồi giấu thư. Nếu có chuyện, mong ai tìm được sẽ mang tới cho người nhà."
         ],
         [
           "Trang gấp kín",
-          "Mơ là con ruột của tôi. Người ta bảo nếu thương em thì cứ để em làm con ông Lâm. Tôi đã làm như thế bảy năm. Đêm ấy tôi chỉ muốn mở cửa ra ôm con một lần."
+          "Nhài là con ruột của tôi. Người ta bảo nếu thương em thì cứ để em làm con ông Hưng. Tôi đã im lặng suốt những năm ấy, nhưng chưa ngày nào thôi thương con."
         ]
       ],
       "protectedFinalFlag": "flashDone",
@@ -492,16 +492,16 @@ window.LNRT_RESEARCH = {
           "Tôi dựng năm nấm mộ gió để người sống có chỗ thắp nhang, dù không tìm được hài cốt."
         ],
         [
-          "Hải",
+          "Bình",
           "Người trông giếng. Chiếc khăn có mùi xà phòng và nước mưa."
         ],
         [
-          "Sen",
+          "Nụ",
           "Người nấu bếp. Chị giữ phần ăn của người ốm cho tới lúc cuối."
         ],
         [
-          "Lụa, Tâm, Khoa",
-          "Một người chăm bé Mơ, một người giữ sổ, một người dạy chữ. Không ai trong số họ ký giấy đồng ý làm vật trấn."
+          "Quyên, Thành, Giáp",
+          "Một người chăm bé Nhài, một người giữ sổ, một người dạy chữ. Không ai trong số họ ký giấy đồng ý làm vật trấn."
         ],
         [
           "Dòng cuối",
@@ -519,7 +519,7 @@ window.LNRT_RESEARCH = {
         20,
         14
       ],
-      "summary": "Tập hướng dẫn nghi lễ do thầy Tịnh để lại; nhiều trang có dấu sửa.",
+      "summary": "Tập hướng dẫn nghi lễ do thầy Chân để lại; nhiều trang có dấu sửa.",
       "pages": [
         [
           "Bìa",
@@ -531,11 +531,11 @@ window.LNRT_RESEARCH = {
         ],
         [
           "Phần hai",
-          "Đọc tên năm người từng giữ vị. Nếu bát hương nhận nhang, dấu phấn sẽ nổi lên. Người làm lễ chớ để thiếu tên."
+          "Đoạn chép bảo phải gọi tên những người từng sống trong nhà. Không có gì ở đây chứng minh rằng gọi tên sẽ giải được lời nguyền."
         ],
         [
           "Phần ba — mực mới",
-          "Để khép việc cũ, phải có năm người sống đứng vào năm dấu. Khi đủ năm, cửa sẽ mở và linh hồn được đưa ra khỏi nhà.\nĐoạn này nét chữ đậm hơn, mép giấy không ăn khớp với gáy."
+          "Một bàn tay khác viết rằng người sống phải đứng thế vào các dấu. Mép giấy được dán thêm; chưa có căn cứ để tin chỉ dẫn này."
         ],
         [
           "Lời khấn bị chắp",
@@ -543,7 +543,7 @@ window.LNRT_RESEARCH = {
         ],
         [
           "Dòng gần như bị cạo",
-          "Có người dùng than quệt lên dòng cũ. Chỉ còn vài chữ: “...chớ lấy người sống...”\nKhông rõ đây là lời cảnh báo hay người viết đã đổi ý."
+          "Có người quệt than lên dòng cũ. Chỉ còn vài chữ: “...chớ lấy người sống...”"
         ]
       ]
     },
@@ -557,7 +557,7 @@ window.LNRT_RESEARCH = {
         23,
         13
       ],
-      "summary": "Bản chép cũ do gia đình Sim giữ lại, ghi rõ danh xưng vị thần.",
+      "summary": "Bản chép cũ do gia đình Quế giữ lại, ghi rõ danh xưng vị thần.",
       "pages": [
         [
           "Trang một",
@@ -573,7 +573,7 @@ window.LNRT_RESEARCH = {
         ],
         [
           "Dấu triện",
-          "Dấu triện trên bản này nằm lệch trái, không có vòng đồng khắc năm móc như bản thầy Tịnh."
+          "Dấu triện trên bản này nằm lệch trái, không có vòng đồng khắc năm móc như bản thầy Chân."
         ],
         [
           "Lời dặn",
@@ -584,7 +584,7 @@ window.LNRT_RESEARCH = {
     },
     "book_sim": {
       "id": "book_sim",
-      "title": "Thư Sim Gửi Em Trai",
+      "title": "Thư Quế Gửi Em Trai",
       "scene": "BG49",
       "spot": [
         63,
@@ -595,12 +595,12 @@ window.LNRT_RESEARCH = {
       "summary": "Lá thư gấp tư, buộc bằng dải khăn chàm.",
       "pages": [
         [
-          "Gửi Đạt",
-          "Đạt à, chị viết vội. Nếu không về kịp, em nhớ đưa những tờ này lên xã. Đừng chỉ nghe lời người ta kể về chị."
+          "Gửi Tùng",
+          "Tùng à, chị viết vội. Nếu không về kịp, em nhớ đưa những tờ này lên xã. Đừng chỉ nghe lời người ta kể về chị."
         ],
         [
           "Điều chị nhìn thấy",
-          "Tờ thầy Tịnh cầm không phải tờ bà ngoại dạy. Có đoạn giấy mới dán lên giấy cũ. Danh xưng Đức Ngài cũng bị đổi."
+          "Tờ thầy Chân cầm không phải tờ bà ngoại dạy. Có đoạn giấy mới dán lên giấy cũ. Danh xưng Đức Ngài cũng bị đổi."
         ],
         [
           "Điều chị sợ",
@@ -612,7 +612,7 @@ window.LNRT_RESEARCH = {
         ],
         [
           "Dòng cuối",
-          "Đạt, có chuyện gì thì sống cho tử tế. Đừng để người ta lấy tên chị ra mà dọa trẻ con. Chị Sim."
+          "Tùng, có chuyện gì thì sống cho tử tế. Đừng để người ta lấy tên chị ra mà dọa trẻ con. Chị Quế."
         ]
       ],
       "requiresFlag": "datBoxDone"
@@ -638,10 +638,10 @@ window.LNRT_RESEARCH = {
       "options": [
         "Huyền Lâm Thánh Quân",
         "Huyền Lâm Tôn Thần",
-        "Thầy Tịnh",
+        "Thầy Chân",
         "Ngũ Trấn Đại Vương"
       ],
-      "clue": "Danh xưng gốc khác với danh xưng trong sớ của Tịnh.",
+      "clue": "Danh xưng gốc khác với danh xưng trong sớ của Chân.",
       "hints": [
         "Đọc trang mở đầu sổ miếu.",
         "Tên của Đức Ngài có bốn tiếng.",
@@ -663,7 +663,7 @@ window.LNRT_RESEARCH = {
         "book_que"
       ],
       "kind": "sequence",
-      "prompt": "Ông Hựu ghi thứ tự đặt ba đồng xu trên đĩa.",
+      "prompt": "Thầy Nguyên ghi thứ tự đặt ba đồng xu trên đĩa.",
       "answer": "trái|giữa|phải",
       "options": [
         "phải",
@@ -672,7 +672,7 @@ window.LNRT_RESEARCH = {
       ],
       "clue": "Gieo quẻ ở đây là việc quan sát, không phải phép đoán số phận.",
       "hints": [
-        "Thầy Hựu ghi thứ tự đặt từ trái sang phải.",
+        "Thầy Nguyên ghi thứ tự đặt từ trái sang phải.",
         "Đồng đầu ở mép trái; đồng giữa đứng thứ hai.",
         "Trái, giữa, phải."
       ]
@@ -799,7 +799,7 @@ window.LNRT_RESEARCH = {
       "clue": "Nắp giếng hỏng từ trước đêm 17/3/1988.",
       "hints": [
         "Mở phần “Nắp gỗ”.",
-        "Hải đã báo về bộ phận lệch gần cây gạo.",
+        "Bình đã báo về bộ phận lệch gần cây gạo.",
         "Đó là chốt sắt của nắp gỗ."
       ],
       "rewardEvidence": "wellCoverWarn"
@@ -826,10 +826,10 @@ window.LNRT_RESEARCH = {
         "Sáu bát",
         "Không có bát nào"
       ],
-      "clue": "Bát thứ sáu không đại diện cho người làm công nào.",
+      "clue": "Bát nhỏ được để riêng cho Nhài; không tính vào các bát lớn của người làm công.",
       "hints": [
         "Xem “Bữa cơm đêm”.",
-        "Sen ghi năm bát lớn, một bát nhỏ.",
+        "Nụ ghi năm bát lớn, một bát nhỏ.",
         "Có năm bát dành cho năm người làm."
       ],
       "rewardEvidence": "extraBowl"
@@ -921,7 +921,7 @@ window.LNRT_RESEARCH = {
       ],
       "clue": "Phiếu xuất kho và dấu vết tại hầm khớp nhau.",
       "hints": [
-        "Đối chiếu sổ Tâm với tập kiểm tra cửa.",
+        "Đối chiếu sổ Thành với tập kiểm tra cửa.",
         "Tìm một dòng vật tư và một dấu vết vật lý.",
         "Phiếu xuất vải bịt ô gió + muội than."
       ],
@@ -953,7 +953,7 @@ window.LNRT_RESEARCH = {
       "clue": "Những người làm công từng ký đơn cùng nhau phản đối nghi thức.",
       "hints": [
         "Tập ký hiệu liệt kê nghề và dấu.",
-        "Đổi tên thành dấu: Khoa→bút, Tâm→cân.",
+        "Đổi tên thành dấu: Giáp→bút, Thành→cân.",
         "Bút, cân, nhạc, lửa, sóng."
       ]
     },
@@ -984,9 +984,9 @@ window.LNRT_RESEARCH = {
         "Phiếu được thêm sau mục than",
         "Giấy dày hơn ở bìa"
       ],
-      "clue": "Tâm đã chép lại một phần sổ vì không tin trang bị sửa.",
+      "clue": "Thành đã chép lại một phần sổ vì không tin trang bị sửa.",
       "hints": [
-        "Xem ngày 16/3 trong sổ Tâm.",
+        "Xem ngày 16/3 trong sổ Thành.",
         "Cần chọn nội dung, nét chữ, vị trí chèn.",
         "Dòng vải + chữ khác nét + phiếu chèn sau than."
       ],
@@ -994,7 +994,7 @@ window.LNRT_RESEARCH = {
     },
     "pz_ma_hop": {
       "id": "pz_ma_hop",
-      "title": "Mã ngăn kéo ông Lâm",
+      "title": "Mã ngăn kéo ông Hưng",
       "scene": "BG27",
       "spot": [
         75,
@@ -1006,13 +1006,13 @@ window.LNRT_RESEARCH = {
         "book_balam"
       ],
       "kind": "code",
-      "prompt": "Ngày nào được ông Lâm ghi đi ghi lại trong nhật ký? Nhập bốn chữ số năm xảy ra bi kịch.",
+      "prompt": "Ngày nào được ông Hưng ghi đi ghi lại trong nhật ký? Nhập bốn chữ số năm xảy ra bi kịch.",
       "answer": "1988",
       "options": [],
-      "clue": "Ông Lâm không dám rời khỏi năm ấy.",
+      "clue": "Ông Hưng không dám rời khỏi năm ấy.",
       "hints": [
         "Đọc lại trang về đêm lễ.",
-        "Năm Mơ lên bảy.",
+        "Năm Nhài lên bảy.",
         "Nhập 1988."
       ]
     },
@@ -1036,12 +1036,12 @@ window.LNRT_RESEARCH = {
       "options": [
         "Mộ chứa hài cốt của những người mất tích",
         "Mộ gió tưởng niệm",
-        "Nơi chôn Sim",
+        "Nơi chôn Quế",
         "Cửa vào giếng"
       ],
       "clue": "Những nấm mộ là nơi tưởng niệm; căn hầm mới chứa dấu tích cần điều tra.",
       "hints": [
-        "Đọc sổ bà Mận.",
+        "Đọc sổ bà Tám.",
         "Bà ghi rõ chúng không có hài cốt.",
         "Chọn mộ gió tưởng niệm."
       ],
@@ -1061,15 +1061,15 @@ window.LNRT_RESEARCH = {
         "book_mant"
       ],
       "kind": "choice",
-      "prompt": "Điều nào bà Mận tự nhận đã làm đêm đó?",
+      "prompt": "Điều nào bà Tám tự nhận đã làm đêm đó?",
       "answer": "Đã đứng im khi nghe tiếng đập",
       "options": [
-        "Đã đẩy Mơ xuống giếng",
+        "Đã đẩy Nhài xuống giếng",
         "Đã đứng im khi nghe tiếng đập",
-        "Đã giết Sim",
+        "Đã giết Quế",
         "Đã giấu ấn đồng"
       ],
-      "clue": "Bà Mận có phần trách nhiệm vì sự im lặng, nhưng không phải thủ phạm tất cả biến cố.",
+      "clue": "Bà Tám có phần trách nhiệm vì sự im lặng, nhưng không phải thủ phạm tất cả biến cố.",
       "hints": [
         "Đọc trang “Đêm 17/3”.",
         "Đây là một quyết định bên cửa hầm.",
@@ -1092,7 +1092,7 @@ window.LNRT_RESEARCH = {
         "book_cua"
       ],
       "kind": "choice",
-      "prompt": "Khi nghe tiếng kêu trong hầm, Bá Lâm đã làm gì?",
+      "prompt": "Khi nghe tiếng kêu trong hầm, Hưng đã làm gì?",
       "answer": "Đặt tay lên then rồi bỏ xuống",
       "options": [
         "Mở cửa ngay",
@@ -1100,9 +1100,9 @@ window.LNRT_RESEARCH = {
         "Tự chui xuống giếng",
         "Chạy lên xã báo"
       ],
-      "clue": "Bá Lâm có cơ hội mở cửa và đã lựa chọn không mở.",
+      "clue": "Hưng có cơ hội mở cửa và đã lựa chọn không mở.",
       "hints": [
-        "Nhật ký ông Lâm ghi rất rõ một cử chỉ.",
+        "Nhật ký ông Hưng ghi rất rõ một cử chỉ.",
         "Một bàn tay đã chạm vào thanh then.",
         "Ông đặt tay lên then rồi bỏ xuống."
       ],
@@ -1122,7 +1122,7 @@ window.LNRT_RESEARCH = {
         "book_lua"
       ],
       "kind": "choice",
-      "prompt": "Cô Lụa có quan hệ gì với Mơ?",
+      "prompt": "Cô Quyên có quan hệ gì với Nhài?",
       "answer": "Mẹ ruột",
       "options": [
         "Cô giáo dạy chữ",
@@ -1130,11 +1130,11 @@ window.LNRT_RESEARCH = {
         "Mẹ ruột",
         "Chị họ"
       ],
-      "clue": "Bí mật về mẹ ruột của Mơ được xác nhận sau hồi tưởng đêm 1988.",
+      "clue": "Bí mật về mẹ ruột của Nhài được xác nhận sau hồi tưởng đêm 1988.",
       "hints": [
         "Chỉ đọc được trang cuối sau hồi tưởng.",
-        "Cô Lụa đã gọi em là con trong trang gấp.",
-        "Lụa là mẹ ruột của Mơ."
+        "Cô Quyên đã gọi em là con trong trang gấp.",
+        "Quyên là mẹ ruột của Nhài."
       ],
       "requiresFlag": "flashDone",
       "rewardEvidence": "luaMother"
@@ -1200,7 +1200,7 @@ window.LNRT_RESEARCH = {
       ],
       "clue": "Điều mà tập chép gọi là “hoàn tất” có thể chính là một lần trấn mới.",
       "hints": [
-        "So phần ba tập chép với lời Khoa.",
+        "So phần ba tập chép với lời Giáp.",
         "Người sống được yêu cầu đứng đúng vị trí từng giam nạn nhân.",
         "Đáp án là đưa người sống đứng vào vòng."
       ],
@@ -1238,7 +1238,7 @@ window.LNRT_RESEARCH = {
     },
     "pz_thu_sim": {
       "id": "pz_thu_sim",
-      "title": "Việc Sim giao cho Đạt",
+      "title": "Việc Quế giao cho Tùng",
       "scene": "BG49",
       "spot": [
         78,
@@ -1250,25 +1250,25 @@ window.LNRT_RESEARCH = {
         "book_sim"
       ],
       "kind": "choice",
-      "prompt": "Sim nhờ Đạt làm gì trước khi lễ ở nền đá bắt đầu?",
+      "prompt": "Quế nhờ Tùng làm gì trước khi lễ ở nền đá bắt đầu?",
       "answer": "Đem thư và sớ gốc lên xã",
       "options": [
         "Giấu thư xuống giếng",
         "Đem thư và sớ gốc lên xã",
-        "Tìm thầy Hựu xem quẻ",
+        "Tìm thầy Nguyên xem quẻ",
         "Về nhà chờ tới sáng"
       ],
-      "clue": "Sim đã cố báo cho người có trách nhiệm ngăn vụ tế người năm 1986.",
+      "clue": "Quế đã cố báo cho người có trách nhiệm ngăn vụ tế người năm 1986.",
       "hints": [
         "Đọc trang “Việc phải làm”.",
-        "Sim cần người ngoài tới nền tế.",
-        "Đạt phải đem thư và sớ gốc lên xã."
+        "Quế cần người ngoài tới nền tế.",
+        "Tùng phải đem thư và sớ gốc lên xã."
       ],
       "rewardEvidence": "simAppeal"
     },
     "pz_dau_an": {
       "id": "pz_dau_an",
-      "title": "Đối chiếu ấn đồng",
+      "title": "Đối chiếu dấu dưới ấn",
       "scene": "BG42",
       "spot": [
         63,
@@ -1281,22 +1281,124 @@ window.LNRT_RESEARCH = {
         "book_sogoc"
       ],
       "kind": "choice",
-      "prompt": "Dấu trên ấn đồng khớp với tài liệu nào?",
-      "answer": "Dấu triện bị chắp trên sớ của Tịnh",
+      "prompt": "Đã thấy dấu dưới ấn qua mặt nước. Có thể kết luận gì khi so với các bản sớ?",
+      "answer": "Chưa đủ cơ sở đồng nhất ấn cổ với triện của Chân",
       "options": [
-        "Triện trên sớ gốc",
-        "Dấu triện bị chắp trên sớ của Tịnh",
-        "Chữ viết trong sổ bếp",
-        "Dấu trên quẻ của Hựu"
+        "Ấn cổ chắc chắn do Chân đúc",
+        "Chưa đủ cơ sở đồng nhất ấn cổ với triện của Chân",
+        "Ấn là bằng chứng thần rừng đòi mạng người",
+        "Phải nhổ ấn trước khi đọc được dấu"
       ],
-      "clue": "Ấn đồng thuộc hệ thống trấn do Tịnh sử dụng, không phải biểu tượng của Đức Ngài.",
+      "clue": "Ấn cổ có trước bản sớ giả. Các tài liệu về nghi lễ không đủ để coi chúng là cùng một vật.",
       "hints": [
-        "Xem mép triện trên hai bản sớ.",
-        "Bản gốc không có vòng đồng khắc móc.",
-        "Dấu ấn khớp với sớ của Tịnh."
+        "So thời điểm và xuất xứ của vật chứng.",
+        "Bản sớ của Chân không chứng minh ông ta tạo ra chiếc ấn cổ.",
+        "Không đủ cơ sở đồng nhất ấn cổ với triện của Chân."
       ],
-      "requiresFlag": "sealRecovered",
+      "requiresFlag": "reverseSealSeen",
       "rewardEvidence": "sealLink"
+    },
+    "pz_ho_so_dem_le": {
+      "id": "pz_ho_so_dem_le",
+      "title": "Hồ sơ đêm lễ",
+      "scene": "BG24",
+      "spot": [
+        38,
+        56,
+        12,
+        12
+      ],
+      "requires": [
+        "book_cua",
+        "book_vattu",
+        "book_mant"
+      ],
+      "kind": "multi",
+      "prompt": "Chọn BA nhận định được các nguồn độc lập trong hồ sơ ủng hộ. Đừng nhầm dấu vết vật lý với lời suy đoán.",
+      "options": [
+        "Then cửa phải mở từ hành lang",
+        "Có phiếu xuất vải bịt ô gió",
+        "Bà Tám thừa nhận đã đứng im khi nghe tiếng đập",
+        "Trong hầm có lối ngầm ra giếng",
+        "Các mộ gió chứa hài cốt",
+        "Thành tự khóa tất cả mọi người ở trong"
+      ],
+      "answer": [
+        "Then cửa phải mở từ hành lang",
+        "Có phiếu xuất vải bịt ô gió",
+        "Bà Tám thừa nhận đã đứng im khi nghe tiếng đập"
+      ],
+      "clue": "Phiếu vật tư, kết cấu cửa và lời khai là ba loại nguồn riêng cần được giữ cùng nhau.",
+      "hints": [
+        "Đối chiếu một ghi chép vật tư, một bản kiểm tra cửa và một lời khai."
+      ],
+      "rewardEvidence": "crossNight"
+    },
+    "pz_nien_bieu_vat_tu": {
+      "id": "pz_nien_bieu_vat_tu",
+      "title": "Bốn mảnh niên biểu",
+      "scene": "BG26",
+      "spot": [
+        48,
+        76,
+        12,
+        12
+      ],
+      "requires": [
+        "book_vattu",
+        "book_mant"
+      ],
+      "kind": "sequence",
+      "prompt": "Sắp các dấu vết theo thời gian, từ sớm nhất đến muộn nhất. Hãy tìm ngày tháng trong cả hai cuốn sổ.",
+      "options": [
+        "Những nấm mộ gió được dựng",
+        "Phiếu vải bịt gió được thêm",
+        "Gỗ sửa cửa và đèn được ghi nhận",
+        "Bà Tám nghe tiếng đập"
+      ],
+      "answer": "Gỗ sửa cửa và đèn được ghi nhận|Phiếu vải bịt gió được thêm|Bà Tám nghe tiếng đập|Những nấm mộ gió được dựng",
+      "clue": "Hai cuốn sổ đặt việc cấp vật tư trước đêm lễ; những nấm mộ gió xuất hiện sau đó.",
+      "hints": [
+        "Tìm hai ngày trong sổ vật tư, rồi đối chiếu đêm lễ và sáng hôm sau."
+      ],
+      "rewardEvidence": "timeline1988"
+    },
+    "pz_so_sanh_nguon": {
+      "id": "pz_so_sanh_nguon",
+      "title": "Hai bản sớ và một lá thư",
+      "scene": "BG49",
+      "spot": [
+        55,
+        70,
+        12,
+        12
+      ],
+      "requires": [
+        "book_mieu",
+        "book_ngutran",
+        "book_sogoc",
+        "book_sim"
+      ],
+      "kind": "multi",
+      "prompt": "Chọn BA điều có thể đối chiếu được giữa các nguồn. Một chi tiết đáng sợ chưa tự nó là bằng chứng.",
+      "options": [
+        "Một đoạn giấy được chắp thêm",
+        "Lời khấn về việc giữ rừng bị thay",
+        "Dấu triện ở hai bản không giống nhau",
+        "Mọi câu chuyện trong gương đều là sự thật",
+        "Thần bảo hộ yêu cầu lấy mạng người",
+        "Thư Quế nói phải giấu sớ gốc dưới giếng"
+      ],
+      "answer": [
+        "Một đoạn giấy được chắp thêm",
+        "Lời khấn về việc giữ rừng bị thay",
+        "Dấu triện ở hai bản không giống nhau"
+      ],
+      "clue": "Giấy chắp, nội dung lời khấn và dấu triện cùng cho thấy hai bản không thể coi là một.",
+      "hints": [
+        "Đối chiếu chất giấy, câu khấn và dấu triện; dùng thư để kiểm tra người giữ sớ."
+      ],
+      "rewardEvidence": "crossScrolls"
     }
   },
   "counts": {
@@ -1304,34 +1406,3 @@ window.LNRT_RESEARCH = {
     "newPuzzles": 22
   }
 };
-
-/* Hồ sơ đối chiếu bổ sung: mỗi lời giải cần nối thông tin từ nhiều cuốn sách. */
-Object.assign(window.LNRT_RESEARCH.puzzles, {
-  pz_ho_so_dem_le:{
-    id:'pz_ho_so_dem_le',title:'Hồ sơ đêm lễ',scene:'BG24',spot:[38,56,12,12],
-    requires:['book_cua','book_vattu','book_mant'],kind:'multi',
-    prompt:'Chọn BA nhận định được các nguồn độc lập trong hồ sơ ủng hộ. Đừng nhầm dấu vết vật lý với lời suy đoán.',
-    options:['Then cửa phải mở từ hành lang','Có phiếu xuất vải bịt ô gió','Bà Mận thừa nhận đã đứng im khi nghe tiếng đập','Trong hầm có lối ngầm ra giếng','Các mộ gió chứa hài cốt','Tâm tự khóa tất cả mọi người ở trong'],
-    answer:['Then cửa phải mở từ hành lang','Có phiếu xuất vải bịt ô gió','Bà Mận thừa nhận đã đứng im khi nghe tiếng đập'],
-    clue:'Phiếu vật tư, kết cấu cửa và lời khai là ba loại nguồn riêng cần được giữ cùng nhau.',
-    hints:['Đối chiếu một ghi chép vật tư, một bản kiểm tra cửa và một lời khai.'],rewardEvidence:'crossNight'
-  },
-  pz_nien_bieu_vat_tu:{
-    id:'pz_nien_bieu_vat_tu',title:'Bốn mảnh niên biểu',scene:'BG26',spot:[48,76,12,12],
-    requires:['book_vattu','book_mant'],kind:'sequence',
-    prompt:'Sắp các dấu vết theo thời gian, từ sớm nhất đến muộn nhất. Hãy tìm ngày tháng trong cả hai cuốn sổ.',
-    options:['Những nấm mộ gió được dựng','Phiếu vải bịt gió được thêm','Gỗ sửa cửa và đèn được ghi nhận','Bà Mận nghe tiếng đập'],
-    answer:'Gỗ sửa cửa và đèn được ghi nhận|Phiếu vải bịt gió được thêm|Bà Mận nghe tiếng đập|Những nấm mộ gió được dựng',
-    clue:'Hai cuốn sổ đặt việc cấp vật tư trước đêm lễ; những nấm mộ gió xuất hiện sau đó.',
-    hints:['Tìm hai ngày trong sổ vật tư, rồi đối chiếu đêm lễ và sáng hôm sau.'],rewardEvidence:'timeline1988'
-  },
-  pz_so_sanh_nguon:{
-    id:'pz_so_sanh_nguon',title:'Hai bản sớ và một lá thư',scene:'BG49',spot:[55,70,12,12],
-    requires:['book_mieu','book_ngutran','book_sogoc','book_sim'],kind:'multi',
-    prompt:'Chọn BA điều có thể đối chiếu được giữa các nguồn. Một chi tiết đáng sợ chưa tự nó là bằng chứng.',
-    options:['Một đoạn giấy được chắp thêm','Lời khấn về việc giữ rừng bị thay','Dấu triện ở hai bản không giống nhau','Mọi câu chuyện trong gương đều là sự thật','Thần bảo hộ yêu cầu lấy mạng người','Thư Sim nói phải giấu sớ gốc dưới giếng'],
-    answer:['Một đoạn giấy được chắp thêm','Lời khấn về việc giữ rừng bị thay','Dấu triện ở hai bản không giống nhau'],
-    clue:'Giấy chắp, nội dung lời khấn và dấu triện cùng cho thấy hai bản không thể coi là một.',
-    hints:['Đối chiếu chất giấy, câu khấn và dấu triện; dùng thư để kiểm tra người giữ sớ.'],rewardEvidence:'crossScrolls'
-  }
-});

@@ -34,7 +34,7 @@ for(const [id,lines] of Object.entries(g.INSPECT2))walk(`INSPECT2.${id}`,lines);
 for(const [id,lines] of Object.entries(g.OVERHEARD))walk(`OVERHEARD.${id}`,lines);
 for(const [id,clue] of Object.entries(g.QNAMES))walk(`QNAMES.${id}`,clue.lines);
 // Inline dialogue also appears in interaction handlers, outside the scene tables.
-const speakers=new Set(['Mơ','Ánh','Nguyệt','Tuyết','Nam','Đông','Người kể chuyện','Ông Bá Lâm','Ông Đạt','Sim','Thầy Tịnh','Bà Mận','Ông Hựu','Giọng trẻ con','Bà bán nước']);
+const speakers=new Set(['Nhài','Chi','Vy','Hà','Vũ','Khôi','Người kể chuyện','Ông Hưng','Ông Tùng','Quế','Thầy Chân','Bà Tám','Thầy Nguyên','Giọng trẻ con','Bà bán nước']);
 for(const pattern of [/\[\s*(['"])([^'"]{1,30})\1\s*,\s*(['"])((?:\\.|(?!\3)[^\r\n])*?)\3/g,
  /\bsay\(\s*(['"])([^'"]{1,30})\1\s*,\s*(['"])((?:\\.|(?!\3)[^\r\n])*?)\3/g]){
  for(const match of game.matchAll(pattern))if(speakers.has(match[2]))check(`inline: ${match[2]}`,match[4]);
@@ -44,7 +44,7 @@ for(const item of g.ACHIEVEMENTS){check('achievement',item.title);check('achieve
 for(const [id,item] of Object.entries(g.MEMORY_VIEWS)){check(`memory.${id}`,item.title);check(`memory.${id}`,item.alt)}
 for(const [id,item] of Object.entries(g.ENDINGS)){check(`ending.${id}`,item.title);check(`ending.${id}`,item.text)}
 for(const [id,lines] of Object.entries(context.window.LNRT_DIALOGUE))for(const [who,text] of lines){
- const victimMemory=/^(F0[1-5]|M88[A-F])$/.test(id)&&['Hải','Sen','Lụa','Tâm','Khoa','Mơ'].includes(who);
+ const victimMemory=/^(F0[1-5]|M88[A-F])$/.test(id)&&['Bình','Nụ','Quyên','Thành','Giáp','Nhài'].includes(who);
  if(!victimMemory)check(`${id}: ${who}`,text);
 }
 for(const [id,p] of Object.entries(g.RESEARCH_PUZZLES)){
@@ -56,9 +56,9 @@ for(const flags of [{},{gateOpened:true},{gateOpened:true,lamDone:true,flashDone
  const state=g.initialState();Object.assign(state.flags,flags);state.relics=['scarf','spoon','comb','petition','sandals'];g.setState(state);
  walk('objective',g.getObjective());
 }
-assert.match(g.BOOKS.book_bep.pages[2][1],/Năm bát/,'the kitchen diary should retain the actual clue');
+assert.match(g.BOOKS.book_bep.pages[2][1],/năm bát/i,'the kitchen diary should retain the actual clue');
 assert.match(g.PETITION[0],/năm người/,'the victims’ written testimony should retain the actual clue');
-assert.ok(context.window.LNRT_DIALOGUE.F02.some(([who,text])=>who==='Sen'&&/năm phần/.test(text)),
+assert.ok(context.window.LNRT_DIALOGUE.F02.some(([who,text])=>who==='Nụ'&&/Bình, Nụ, Quyên, Thành, Giáp/.test(text)),
  'a victim’s own memory may reveal the count');
 assert.doesNotMatch(game,/Năm khuôn mặt đều bị cào xước/i,'photo captions must not give away a count');
 for(const file of ['intro.js','trailer.js','trailer.html'])check(file,fs.readFileSync(path.join(root,file),'utf8'));

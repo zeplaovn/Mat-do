@@ -31,11 +31,11 @@ assert.equal(nodes['dialogue'].hidden,false);assert.match(view.src,/POV_Ba_Ban_N
 assert.equal(shell.scrollTop,0);assert.equal(nodes['scene-stage'].scrollTop,0);assert.match(nodes['scene-backdrop'].style.backgroundImage,/POV_Ba_Ban_Nuoc/);
 column.scrollLeft=0;g.nextLine();assert.equal(view.hidden,true);assert.ok(!shell.classList.contains('interaction-active'),'closing dialogue restores the scene');assert.match(nodes['scene-backdrop'].style.backgroundImage,/BG01-fixed/);assert.equal(column.scrollLeft,310,'closing the view restores the player’s horizontal position');
 g.act('warning');const late=view.onload;g.clearDialogue();late();assert.equal(view.hidden,true,'late image load must not reopen a closed view');
-s=g.initialState();s.scene='BG45';s.flags.huuDone=true;g.setState(s);g.act('huu');assert.match(view.src,/POV_Ong_Huu/);view.onload();
+s=g.initialState();s.scene='BG45';s.flags.huuDone=true;s.items.push('phongThuyBook');g.setState(s);g.act('huu');assert.match(view.src,/POV_Ong_Huu/);view.onload();
 assert.equal(nodes['dialogue-portrait-wrap'].hidden,true,'the person in the view must not be covered by a duplicate portrait');
-g.nextLine();g.showLine('Ông Hựu','Xin chào');assert.equal(nodes['dialogue-portrait-wrap'].hidden,false,'normal dialogue still displays the portrait');g.clearDialogue();
+g.nextLine();g.showLine('Thầy Nguyên','Xin chào');assert.equal(nodes['dialogue-portrait-wrap'].hidden,false,'normal dialogue still displays the portrait');g.clearDialogue();
 for(const [scene,action,file,flag] of [['BG01','warning','POV_Ba_Ban_Nuoc-night.webp','oldwomanTalked'],['BG45','huu','POV_Ong_Huu-night.webp','huuDone']]){
- s=g.initialState();s.scene=scene;s.visited.push('BG05');s.flags[flag]=true;g.setState(s);g.act(action);
+ s=g.initialState();s.scene=scene;s.visited.push('BG05');s.flags[flag]=true;if(action==='huu')s.items.push('phongThuyBook');g.setState(s);g.act(action);
  assert.ok(view.src.endsWith(file),`${action} uses the night close-up after sunset`);view.onload();assert.ok(view.classList.contains('native-night'));assert.match(nodes['scene-backdrop'].style.backgroundImage,new RegExp(file.replace('.','\\.')));
  g.clearDialogue();assert.ok(!view.classList.contains('native-night'),'closing dialogue clears the night lighting override');
  s.flags.mo=true;g.setState(s);g.act(action);assert.ok(!view.src.endsWith(file),'flashback lighting must not use a present-day night variant');g.clearDialogue();

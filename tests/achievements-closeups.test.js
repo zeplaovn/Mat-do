@@ -41,7 +41,7 @@ g.showAchievements();assert.match(lastModal,/12<\/strong>|\/ 12/);assert.match(l
 for(const scene of Object.values(g.SCENES))for(const h of scene.spots){const c=g.closeupInfo(h);if(c.special)assert.ok(fs.existsSync(path.join(root,'assets/props',c.special.file)));else{assert.ok(c.zoom>=1.35&&c.zoom<=3);assert.ok(c.x>=0&&c.x<=100&&c.y>=0&&c.y<=100)}}
 // Looking at the drawing still records the story clue, and taking the doll still awards it.
 s=g.initialState();s.scene='BG28';s.flags.lamDone=true;s.flags.flashDone=true;g.setState(s);g.act('kidDrawing');
-assert.ok(s.flags.names.includes('lua'));assert.match(lastModal,/Mo_Tranh_Sap\.webp/);assert.match(lastModal,/cô Lụa/);
+assert.ok(s.flags.names.includes('lua'));assert.match(lastModal,/Mo_Tranh_Sap\.webp/);assert.match(lastModal,/cô Quyên/);
 s=g.initialState();s.scene='BG43';g.setState(s);g.act('takeDoll');assert.ok(s.items.includes('toyDoll'));assert.match(lastModal,/Mo_Bup_Be\.webp/);
 s=g.initialState();s.scene='BG16';g.setState(s);g.act('comb');assert.ok(s.relics.includes('comb'));assert.match(lastModal,/Mo_Tram_Go\.webp/);
 s=g.initialState();s.scene='BG02';g.setState(s);g.act('inspect:jar');assert.match(lastModal,/BG02\.webp/);assert.match(lastModal,/scene-closeup/);
