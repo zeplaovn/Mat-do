@@ -1,7 +1,7 @@
 /* Dấu chỉ đường, hội thoại và điểm cần khám phá trên ảnh cảnh. */
 .hotspot--travel{--spot-image:url('assets/ui/hotspots/direction.png');--spot-rotation:0deg}
 .hotspot--conversation{--spot-image:url('assets/ui/hotspots/conversation.png');--spot-rotation:0deg}
-.hotspot--special{--spot-image:url('assets/ui/hotspots/special.png');--spot-rotation:0deg}
+.hotspot--special{--spot-image:url('assets/ui/hotspots/marker.svg');--spot-rotation:0deg}
 .hotspot--up{--spot-rotation:180deg}
 .hotspot--left{--spot-rotation:90deg}
 .hotspot--right{--spot-rotation:-90deg}

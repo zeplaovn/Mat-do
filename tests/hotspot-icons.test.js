@@ -45,5 +45,5 @@ assert.equal(stopped,true);assert.deepEqual(Array.from(context.window.actions),[
 assert.ok(button.className.includes('hotspot--travel'));assert.ok(!button.className.includes('is-target'));
 const datDoor=spot('BG48','datDoor');assert.ok(classes(datDoor).includes('hotspot--conversation'));
 state.flags.datTrust=true;assert.ok(classes(datDoor).includes('hotspot--travel'));
-for(const file of ['direction.png','conversation.png','special.png'])assert.ok(fs.statSync(path.join(root,'assets/ui/hotspots',file)).size>0);
+for(const file of ['direction.png','conversation.png','marker.svg'])assert.ok(fs.statSync(path.join(root,'assets/ui/hotspots',file)).size>0);
 console.log('OK: hotspot icon categories, four directions, changing story state, item target and click behavior.');
