@@ -25,11 +25,13 @@
   <link rel="stylesheet" href="vfx.css">
   <link rel="stylesheet" href="ui-plus.css">
   <link rel="stylesheet" href="hotspots.css">
+  <link rel="stylesheet" href="ending-cinematic.css">
   <link rel="preload" as="image" href="assets/logo.webp">
   <script src="guard.js"></script>
   <script src="perf.js"></script>
   <script src="assets/research/books-data.js" defer></script>
   <script src="assets/dialogue/reviewed.js" defer></script>
+  <script src="ending-cinematic.js" defer></script>
   <script src="game.js" defer></script>
   <script src="horror.js" defer></script>
   <script src="weather.js" defer></script>
@@ -166,6 +168,17 @@
   <button id="intro-skip" class="intro-skip" type="button">Bỏ qua ›</button>
   <div class="intro-hint">Chạm hoặc nhấn Space để chuyển nhanh · Esc để bỏ qua</div>
 </div>
+
+<section id="ending-cinematic" class="ending-cinematic" hidden role="dialog" aria-modal="true" aria-label="Phim kết thúc">
+  <img id="ending-cinematic-image" alt="" draggable="false">
+  <button id="ending-cinematic-skip" class="ending-cinematic-skip" type="button">Bỏ qua</button>
+  <div class="ending-cinematic-copy"><p id="ending-cinematic-caption" class="ending-cinematic-caption" aria-live="polite"></p></div>
+  <div class="ending-cinematic-controls" aria-label="Điều khiển phim kết thúc">
+    <button id="ending-cinematic-back" type="button">Cảnh trước</button>
+    <button id="ending-cinematic-pause" type="button" aria-pressed="false">Tạm dừng</button>
+    <button id="ending-cinematic-next" type="button">Cảnh tiếp</button>
+  </div>
+</section>
 
 <div id="chapter-card" class="chapter-card" aria-hidden="true"><span id="chapter-card-no"></span><strong id="chapter-card-name"></strong></div>
 <div id="tut-text" class="tut-text" aria-hidden="true" hidden></div>
