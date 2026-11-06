@@ -49,7 +49,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Trang ngoài",
-          "TAM TIỀN VẤN SỰ – SỔ QUẺ THẦY NGUYÊN\nSỔ QUẺ CŨ\nChỉ để nhớ lời đã nói với người ta. Gieo quẻ không thay được việc phải làm."
+          "TAM TIỀN VẤN SỰ – SỔ QUẺ THẦY NGUYÊN\nChỉ để nhớ lời đã nói với người ta. Gieo quẻ không thay được việc phải làm."
         ],
         [
           "Ba đồng xu",
@@ -147,7 +147,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "THỦY TỈNH KÝ – GIẾNG ĐÁ NĂM XƯA\nSỔ SỬA GIẾNG\nBình — trông sân, nước và dụng cụ.\nĐồ hỏng phải sửa ngay, không để đấy dọa người."
+          "THỦY TỈNH KÝ – GIẾNG ĐÁ NĂM XƯA\nBình — trông sân, nước và dụng cụ.\nĐồ hỏng phải sửa ngay, không để đấy dọa người."
         ],
         [
           "Dây gầu",
@@ -249,7 +249,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "NÉT PHẤN CUỐI – VỞ HỌC CỦA GIÁP\nTẬP HỌC CHỮ\nThầy Giáp chép cho Nhài.\nHọc xong thì cất bút, không vẽ bậy lên bàn."
+          "NÉT PHẤN CUỐI – VỞ HỌC CỦA GIÁP\nThầy Giáp chép cho Nhài.\nHọc xong thì cất bút, không vẽ bậy lên bàn."
         ],
         [
           "Bài một",
@@ -283,7 +283,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Trang đầu",
-          "MẬT TỰ NGƯỜI CŨ – BẢNG KÝ HIỆU\nBẢNG KÝ HIỆU\nĐể người đi vắng vẫn biết ai đã ghi, chúng tôi mỗi người dùng một dấu riêng ở cuối trang."
+          "MẬT TỰ NGƯỜI CŨ – BẢNG KÝ HIỆU\nĐể người đi vắng vẫn biết ai đã ghi, chúng tôi mỗi người dùng một dấu riêng ở cuối trang."
         ],
         [
           "Dấu một",
@@ -317,7 +317,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Bìa",
-          "MỰC ĐỎ TRÊN SỔ – NHẬT TRÌNH VẬT TƯ\nSỔ CẤP VẬT TƯ\nThành giữ kho, ai lấy gì phải ghi rõ dùng ở đâu."
+          "MỰC ĐỎ TRÊN SỔ – NHẬT TRÌNH VẬT TƯ\nThành giữ kho, ai lấy gì phải ghi rõ dùng ở đâu."
         ],
         [
           "Ngày 14/3",
@@ -561,7 +561,7 @@ window.LNRT_RESEARCH = {
       "pages": [
         [
           "Trang một",
-          "SƠN LÂM TẠ LỄ – BẢN CHÉP NGUYÊN VĂN\nLỄ TẠ RỪNG ĐỒNG CHAY\nKính Huyền Lâm Thánh Quân, đức bảo hộ cây rừng và nguồn nước."
+          "SƠN LÂM TẠ LỄ – BẢN CHÉP NGUYÊN VĂN\nKính Huyền Lâm Thánh Quân, đức bảo hộ cây rừng và nguồn nước."
         ],
         [
           "Đồ lễ",
