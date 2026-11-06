@@ -18,7 +18,7 @@ const lvl = () => Perf.level;
 const busy = () => root.classList.contains('is-busy');            // đang loading / intro
 const running = () => title.hidden && !busy();                   // đang chơi thật
 const audioOn = () => $('btn-audio').getAttribute('aria-pressed') !== 'false';
-let dread = .15, lastScare = 0, bt = 0;
+let dread = .15, lastScare = 0, lastDistantScream = 0, bt = 0;
 const sceneNo = () => parseInt(($('scene-index').textContent.match(/BG(\d+)/) || [0, 1])[1], 10);
 /* Chỉ những khu vực căng thẳng mới có hiệu ứng ngẫu nhiên. Số ảnh không phải thứ tự cốt truyện. */
 const FLICKER_SCENES = new Set([6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,32,34,35,36,37,38,39,42,43,44]);
@@ -105,7 +105,7 @@ function scare(big) {
   lastScare = Date.now();
   shadow.style.left = Math.random() < .5 ? '5%' : '72%';
   pulse(shadow, 'show', 750); if(lighting())pulse(flash, 'on', 560); pulse(stage, 'shake', 520);
-  playAsset('door-slam.mp3', .8, 3.7);   // cú đập cửa thay cho tiếng "sting" tạo bằng code
+  playAsset('jumpscare_sound.mp3', big ? .8 : .55); // tiếng hét mạnh hơn khi kết thúc xấu
 }
 function onScene() {
   const n = sceneNo(); dread = FLICKER_SCENES.has(n) ? Math.min(1, .1 + (n - 1) * .0475) : .1;
@@ -118,7 +118,15 @@ setInterval(() => {
   if (!running() || document.hidden || !$('modal-backdrop').hidden) return;
   const n = sceneNo();
   if (FLICKER_SCENES.has(n) && !RM() && lighting() && Math.random() < .2 + dread * .25) pulse(stage, 'flick', 460);   // chớp đèn
-  if (RANDOM_SCARE_SCENES.has(n) && Math.random() < dread * .07) scare(false);
+  if (RANDOM_SCARE_SCENES.has(n)) {
+    if (Math.random() < dread * .07) scare(false);
+    // Tiếng hét vọng xa thỉnh thoảng xuất hiện ở các khu vực căng thẳng.
+    // Không phát chồng với jumpscare, không lặp liên tục hoặc phát khi tắt âm thanh.
+    else if (Date.now() - lastDistantScream > 75000 && Math.random() < .045) {
+      lastDistantScream = Date.now();
+      playAsset('far_scream_sound.mp3', .75);
+    }
+  }
 }, 4000);
 
 /* ---------- Đèn pin mềm bám con trỏ + parallax nhẹ (gộp theo khung hình) ---------- */
