@@ -10,13 +10,13 @@ function play(options={}){
  const screen=byId('ending-credits'),shell=byId('app-shell'),continueButton=byId('ending-credits-continue');
  if(active||!screen||!shell||!continueButton)return false;
  const state={
-  timer:null,remaining:DURATION_MS,startedAt:null,pausedByVisibility:false,done:false,
+  timer:null,remaining:DURATION_MS,startedAt:null,pausedByVisibility:document.hidden,done:false,
   oldInert:shell.inert,returnFocus:document.activeElement,onFinish:options.onFinish
  };
  active=state;
  shell.inert=true;
  screen.hidden=false;
- screen.classList.remove('is-paused');
+ screen.classList.toggle('is-paused',document.hidden);
  function stopClock(){
   if(state.startedAt!==null){
    state.remaining=Math.max(0,state.remaining-(now()-state.startedAt));
