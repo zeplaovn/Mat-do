@@ -213,3 +213,7 @@
 .bk.cover-wait.closed ~ .bk-nav{visibility:hidden}
 .bk.cover-wait.closed .bk-cover:after{content:"Chạm để mở";position:absolute;left:0;right:0;bottom:9%;text-align:center;font:600 12px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,235,220,.75);animation:coverHint 1.8s ease-in-out infinite}
 @keyframes coverHint{50%{opacity:.35}}
+
+/* Sửa VFX: vạch kẻ ngang mờ hơn; hộp thoại nền không đè nút Gợi ý */
+.fx-scan{opacity:.2!important}
+.chatter{max-width:min(460px,calc(100vw - 112px))}

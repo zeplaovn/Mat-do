@@ -130,3 +130,9 @@
 }
 
 .legacy-save-notice{max-width:34rem;margin:14px auto 0;color:#e4d5c0;font:500 12px/1.5 var(--sans,system-ui,sans-serif);letter-spacing:.01em;text-shadow:0 2px 5px #000}
+
+/* Căn giữa toàn bộ màn hình chính trên desktop */
+.title-screen .title-content{grid-template-columns:minmax(0,1fr);justify-content:center;margin-left:auto;margin-right:auto;align-items:center;text-align:center}
+.title-screen .title-heading,.title-screen .title-bottom{margin-left:auto;margin-right:auto;text-align:center;align-items:center}
+.title-screen .title-heading{display:flex;flex-direction:column}
+.title-screen .title-buttons,.title-screen .title-secondary-actions{align-items:center;justify-content:center}
