@@ -23,7 +23,7 @@ const SOUNDS = coarse ? [] : ['community-frogs.mp3', 'tieng_on_ao_o_cho.mp3', 'k
 const TIPS = [
   'Đừng trả lời khi bóng tối gọi tên bạn.',
   'Đeo tai nghe. Có những thứ chỉ nghe được khi xung quanh im lặng.',
-  'Phím F bật tắt đèn pin · V đổi chế độ máy ảnh · J nhật ký · H gợi ý.',
+  'Phím F bật tắt đèn pin · J nhật ký · H gợi ý.',
   'Ghi chép mọi thứ. Có những cái tên chỉ xuất hiện một lần.'
 ];
 const MIN_MS = 2400, MAX_MS = 15000;

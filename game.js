@@ -722,8 +722,8 @@ function hotspotDirection(h){
 function hotspotClass(h){const kind=hotspotKind(h);return 'hotspot hotspot--'+(h.subtle?'subtle':kind)+(kind==='travel'?' hotspot--'+hotspotDirection(h):'')+(isTarget(h)?' is-target':'')}
 function makeHotspot(h){const b=document.createElement('button');b.type='button';b.className=hotspotClass(h);b.setAttribute('aria-label',h.label);b.title=h.label;b.style.left=h.x+'%';b.style.top=h.y+'%';b.style.width=h.w+'%';b.style.height=h.h+'%';const span=document.createElement('span');span.className='hotspot-label';span.textContent=h.label;b.appendChild(span);b.addEventListener('click',event=>{event.stopPropagation();const selected=state.selectedItem;act(h.action);b.className=hotspotClass(h);const stage=$('scene-stage');if(stage&&selected!==state.selectedItem)stage.classList.toggle('has-selection',!!state.selectedItem)});return b}
 /* ================= MÁY ẢNH / MÁY QUAY: bộ lọc nhìn đêm (camera.css) ================= */
-const CAM_MODES={night:{label:'NIGHT VISION',sub:'NV · IR ILLUMINATOR ON'},ir:{label:'INFRARED',sub:'IR 850 nm · MONO'},thermal:{label:'THERMAL',sub:'HEAT MAP · AUTO GAIN'},vhs:{label:'CAMCORDER',sub:'VHS · LP · TRACKING'}};
-const CAM_ORDER=['night','ir','thermal','vhs'];
+const CAM_MODES={night:{label:'NIGHT VISION',sub:'NV · IR ILLUMINATOR ON'}};
+const CAM_ORDER=['night'];
 let camHud=null,camTimer=0,camSecs=0;
 function buildCamHud(){
  if(camHud)return;
@@ -735,10 +735,9 @@ function buildCamHud(){
   +'<div class="cam-tr-info"><span id="cam-name"></span><span class="cam-batt"><i></i><i></i><i></i></span></div>'
   +'<div class="cam-bl-info"><span id="cam-sub"></span><span class="cam-temp" id="cam-temp"></span></div>'
   +'<div class="cam-br-info"><span id="cam-time"></span></div>'
-  +'<button class="cam-mode-btn" id="cam-mode" type="button">⟳ ĐỔI CHẾ ĐỘ [V]</button><div class="cam-flash" id="cam-flash"></div>';
+  +'<div class="cam-flash" id="cam-flash"></div>';
  for(const part of h.children)if(part.id!=='cam-mode')part.setAttribute('aria-hidden','true');
  st.appendChild(h);camHud=h;
- $('cam-mode').addEventListener('click',e=>{e.stopPropagation();cycleCam()});
  if(!document.getElementById('cam-thermal'))document.body.insertAdjacentHTML('beforeend','<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="cam-thermal" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values=".33 .33 .33 0 0  .33 .33 .33 0 0  .33 .33 .33 0 0  0 0 0 1 0"/><feComponentTransfer><feFuncR type="table" tableValues="0 .1 .45 .85 1 1"/><feFuncG type="table" tableValues="0 0 .05 .3 .75 1"/><feFuncB type="table" tableValues=".15 .45 .55 .25 0 .6"/></feComponentTransfer></filter></svg>');
 }
 function camTick(){
@@ -753,7 +752,7 @@ function updateCam(){
  buildCamHud();const m=CAM_MODES[state.camMode];
  $('cam-name').textContent=m.label;$('cam-sub').textContent=m.sub;$('cam-time').textContent=$('clock-label').textContent+'  ·  '+state.scene;
  if(!camTimer){camSecs=0;camTick();camTimer=setInterval(camTick,1000)}}
-function cycleCam(){if(state.selectedItem!=='camera')return;state.camMode=CAM_ORDER[(CAM_ORDER.indexOf(state.camMode)+1)%CAM_ORDER.length];save();updateCam();toast('Máy ảnh: '+CAM_MODES[state.camMode].label)}
+function cycleCam(){/* chỉ còn một chế độ ngắm: Night Vision */}
 function camFlash(){buildCamHud();const f=$('cam-flash');if(!f)return;f.classList.remove('on');void f.offsetWidth;f.classList.add('on')}
 function centerScene(){
  const g=document.querySelector&&document.querySelector('.game-column');if(!g||!(g.scrollWidth>g.clientWidth+4))return;
@@ -975,7 +974,7 @@ function hideModal(){
  modalType=null;if(wasOpen&&modalReturnFocus&&modalReturnFocus.isConnected){modalReturnFocus.focus({preventScroll:true});modalReturnFocus=null}
 }
 function modalButton(text,fn){const b=document.createElement('button');b.type='button';b.className='modal-option';b.textContent=text;b.addEventListener('click',fn);return b}
-function showGuide(){showModal(`<h2>Cách chơi</h2><p>Chạm hoặc nhấp các dấu trên cảnh để quan sát, trò chuyện và di chuyển. Chọn vật phẩm trong thanh bên dưới rồi chạm nơi muốn sử dụng.</p><p>Nhật ký giữ lại những gì đã tìm thấy. Hãy đọc và đối chiếu tài liệu; một số chi tiết có thể không đáng tin.</p><p><strong>Phím tắt:</strong> J mở nhật ký · H xem gợi ý nhẹ · F bật đèn pin · V đổi chế độ máy ảnh · Esc đóng bảng · Enter hoặc Space tiếp lời thoại.</p><div class="modal-buttons" id="guide-actions"></div>`,'HƯỚNG DẪN','guide');$('guide-actions').appendChild(modalButton('Tiếp tục',hideModal))}
+function showGuide(){showModal(`<h2>Cách chơi</h2><p>Chạm hoặc nhấp các dấu trên cảnh để quan sát, trò chuyện và di chuyển. Chọn vật phẩm trong thanh bên dưới rồi chạm nơi muốn sử dụng.</p><p>Nhật ký giữ lại những gì đã tìm thấy. Hãy đọc và đối chiếu tài liệu; một số chi tiết có thể không đáng tin.</p><p><strong>Phím tắt:</strong> J mở nhật ký · H xem gợi ý nhẹ · F bật đèn pin · Esc đóng bảng · Enter hoặc Space tiếp lời thoại.</p><div class="modal-buttons" id="guide-actions"></div>`,'HƯỚNG DẪN','guide');$('guide-actions').appendChild(modalButton('Tiếp tục',hideModal))}
 
 /* ================= NHẬT KÝ: cuốn sổ có bìa, lật trang ================= */
 let book=null;

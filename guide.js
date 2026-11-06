@@ -73,5 +73,18 @@ document.addEventListener('click', e => {
   if (t.closest('.hotspot') && !store.get(TAP_KEY)) { store.set(TAP_KEY, '1'); hide(); }
   else if (t.closest('.dock-slot') && store.get(TAP_KEY) && !store.get(ITEM_KEY)) { store.set(ITEM_KEY, '1'); hide(); }
 }, true);
+/* Hướng dẫn đầu game bắt buộc: khi chữ + bàn tay đang hiện, chỉ chạm đúng mục được chỉ (hotspot, rồi ô vật phẩm) mới có tác dụng. */
+function lockOut(e) {
+  if (!shown) return;
+  const t = e.target && e.target.closest ? e.target : null;
+  const ok = t && (shown === 'tap' ? t.closest('#hotspots .hotspot') : t.closest('#inventory-grid .dock-slot'));
+  if (ok) return;
+  e.preventDefault(); e.stopImmediatePropagation();
+}
+['click', 'pointerdown', 'mousedown', 'touchstart'].forEach(n => document.addEventListener(n, lockOut, true));
+document.addEventListener('keydown', e => { if (shown) { e.preventDefault(); e.stopImmediatePropagation(); } }, true);
+/* Chơi mới thì hướng dẫn chạy lại từ đầu */
+const ng = $('btn-new-game');
+if (ng) ng.addEventListener('click', () => { try { localStorage.removeItem(TAP_KEY); localStorage.removeItem(ITEM_KEY); } catch (_) {} }, true);
 setInterval(tick, 700);
 })();

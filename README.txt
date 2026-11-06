@@ -69,7 +69,7 @@ GitHub Pages hoặc Netlify, chỉ cần giữ nguyên các tệp/thư mục.
 - Click/chạm hình thoi mờ trong cảnh để quan sát, lấy đồ, đi tiếp.
 - Click/chạm vào đồ trong túi để chọn hoặc sử dụng.
 - Nhật ký ghi lại manh mối.
-- Phím H: gợi ý; F: bật/tắt đèn pin; J: nhật ký; V: đổi chế độ máy ảnh.
+- Phím H: gợi ý; F: bật/tắt đèn pin; J: nhật ký.
 - Phím Esc: đóng cửa sổ hoặc hội thoại.
 - Góc trên phải: biểu tượng cuốn sổ = Nhật ký, biểu tượng 3 gạch = Menu.
 - Menu: nhiệm vụ hiện tại, cách chơi, gợi ý, bật/tắt âm thanh, bắt đầu lại, về màn hình chính.
@@ -238,8 +238,8 @@ Nút Gợi ý (H) vẫn có nhưng chỉ nhắc hướng đi, không đọc đá
   Cú giật mình (scare) dùng cú đập của door-slam.mp3. Nhịp tim chỉ còn hiệu ứng hình (viền máu đập).
 - Tương tác = bước chân (tieng_buoc_chan.mp3): bấm điểm đi sang cảnh khác -> 3 bước; bấm xem/nhặt đồ -> 2 bước.
   Đã bỏ tiếng gõ cửa dùng làm phản hồi câu đố (dấu tay, sai mã, sai thứ tự). Tiếng gõ chỉ còn là sự kiện truyện ở BG18/BG19.
-- Máy ảnh: chọn "Máy ảnh" trong túi đồ để bật khung ngắm. Phím V (hoặc nút "Đổi chế độ") chuyển 4 chế độ:
-  NIGHT VISION (xanh lá) · INFRARED (đen trắng) · THERMAL (bản đồ nhiệt) · CAMCORDER (băng VHS).
+- Máy ảnh: chọn "Máy ảnh" trong túi đồ để bật khung ngắm. Chỉ còn một chế độ duy nhất:
+  NIGHT VISION (xanh lá).
   Khung ngắm có REC, đồng hồ chạy, pin, giờ trong game, nhiễu hạt, vạch quét và dải nhiễu. Chụp gương phòng trẻ có chớp sáng.
   Mã: camera.css + khối "MÁY ẢNH" trong game.js. Mức hiệu ứng Thấp tự tắt hoạt ảnh của khung ngắm.
 
