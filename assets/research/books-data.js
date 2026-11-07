@@ -647,7 +647,13 @@ window.LNRT_RESEARCH = {
         "Tên của Đức Ngài có bốn tiếng.",
         "Chọn Huyền Lâm Thánh Quân."
       ],
-      "rewardEvidence": "originalTitle"
+      "rewardEvidence": "originalTitle",
+      "evidence": [
+        {
+          "book": "book_mieu",
+          "page": 1
+        }
+      ]
     },
     "pz_ba_dong_xu": {
       "id": "pz_ba_dong_xu",
@@ -675,6 +681,12 @@ window.LNRT_RESEARCH = {
         "Thầy Nguyên ghi thứ tự đặt từ trái sang phải.",
         "Đồng đầu ở mép trái; đồng giữa đứng thứ hai.",
         "Trái, giữa, phải."
+      ],
+      "evidence": [
+        {
+          "book": "book_que",
+          "page": 1
+        }
       ]
     },
     "pz_duong_lang": {
@@ -705,7 +717,17 @@ window.LNRT_RESEARCH = {
         "Thứ tự đi từ cổng, qua ruộng và cầu.",
         "Cổng làng → Đường ruộng → Cầu gỗ → Miếu cây đa."
       ],
-      "rewardEvidence": "oldRoad"
+      "rewardEvidence": "oldRoad",
+      "evidence": [
+        {
+          "book": "book_duong",
+          "page": 1
+        },
+        {
+          "book": "book_duong",
+          "page": 4
+        }
+      ]
     },
     "pz_bia_cau": {
       "id": "pz_bia_cau",
@@ -736,7 +758,17 @@ window.LNRT_RESEARCH = {
         "Đường lên miếu nằm ở phía bờ cao, không đi xuống mương.",
         "Dấu lá cây trên mặt bắc."
       ],
-      "rewardEvidence": "stoneRoadMark"
+      "rewardEvidence": "stoneRoadMark",
+      "evidence": [
+        {
+          "book": "book_bia_cau",
+          "page": 1
+        },
+        {
+          "book": "book_bia_cau",
+          "page": 4
+        }
+      ]
     },
     "pz_mam_le": {
       "id": "pz_mam_le",
@@ -772,7 +804,13 @@ window.LNRT_RESEARCH = {
         "Ba thứ dùng để dâng lời tạ và chăm giữ rừng.",
         "Chọn Cơm, Nước sạch và Hoa."
       ],
-      "rewardEvidence": "originalOfferings"
+      "rewardEvidence": "originalOfferings",
+      "evidence": [
+        {
+          "book": "book_mieu",
+          "page": 2
+        }
+      ]
     },
     "pz_nap_gieng": {
       "id": "pz_nap_gieng",
@@ -802,7 +840,13 @@ window.LNRT_RESEARCH = {
         "Bình đã báo về bộ phận lệch gần cây gạo.",
         "Đó là chốt sắt của nắp gỗ."
       ],
-      "rewardEvidence": "wellCoverWarn"
+      "rewardEvidence": "wellCoverWarn",
+      "evidence": [
+        {
+          "book": "book_gieng",
+          "page": 2
+        }
+      ]
     },
     "pz_sau_bat": {
       "id": "pz_sau_bat",
@@ -832,7 +876,17 @@ window.LNRT_RESEARCH = {
         "Nụ ghi năm bát lớn, một bát nhỏ.",
         "Có năm bát dành cho năm người làm."
       ],
-      "rewardEvidence": "extraBowl"
+      "rewardEvidence": "extraBowl",
+      "evidence": [
+        {
+          "book": "book_bep",
+          "page": 1
+        },
+        {
+          "book": "book_bep",
+          "page": 2
+        }
+      ]
     },
     "pz_soi_anh": {
       "id": "pz_soi_anh",
@@ -860,6 +914,12 @@ window.LNRT_RESEARCH = {
         "Sổ ảnh có đúng ba bước.",
         "Đầu tiên kiểm tra bằng mắt.",
         "Nhìn trực tiếp → Chụp ảnh → So với vật chứng."
+      ],
+      "evidence": [
+        {
+          "book": "book_anh",
+          "page": 2
+        }
       ]
     },
     "pz_then_cua": {
@@ -890,7 +950,17 @@ window.LNRT_RESEARCH = {
         "Vị trí đầu then không nằm trong tầm với người ở trong.",
         "Người đứng ngoài hành lang mới nhấc then được."
       ],
-      "rewardEvidence": "outerLatch"
+      "rewardEvidence": "outerLatch",
+      "evidence": [
+        {
+          "book": "book_cua",
+          "page": 1
+        },
+        {
+          "book": "book_cua",
+          "page": 2
+        }
+      ]
     },
     "pz_thong_gio": {
       "id": "pz_thong_gio",
@@ -925,7 +995,17 @@ window.LNRT_RESEARCH = {
         "Tìm một dòng vật tư và một dấu vết vật lý.",
         "Phiếu xuất vải bịt ô gió + muội than."
       ],
-      "rewardEvidence": "ventBlocked"
+      "rewardEvidence": "ventBlocked",
+      "evidence": [
+        {
+          "book": "book_vattu",
+          "page": 2
+        },
+        {
+          "book": "book_cua",
+          "page": 3
+        }
+      ]
     },
     "pz_nam_ky_hieu": {
       "id": "pz_nam_ky_hieu",
@@ -955,6 +1035,20 @@ window.LNRT_RESEARCH = {
         "Tập ký hiệu liệt kê nghề và dấu.",
         "Đổi tên thành dấu: Giáp→bút, Thành→cân.",
         "Bút, cân, nhạc, lửa, sóng."
+      ],
+      "evidence": [
+        {
+          "book": "book_kyhieu",
+          "page": 1
+        },
+        {
+          "book": "book_kyhieu",
+          "page": 2
+        },
+        {
+          "book": "book_kyhieu",
+          "page": 3
+        }
       ]
     },
     "pz_tam_but": {
@@ -990,7 +1084,17 @@ window.LNRT_RESEARCH = {
         "Cần chọn nội dung, nét chữ, vị trí chèn.",
         "Dòng vải + chữ khác nét + phiếu chèn sau than."
       ],
-      "rewardEvidence": "tamAltered"
+      "rewardEvidence": "tamAltered",
+      "evidence": [
+        {
+          "book": "book_vattu",
+          "page": 2
+        },
+        {
+          "book": "book_vattu",
+          "page": 4
+        }
+      ]
     },
     "pz_ma_hop": {
       "id": "pz_ma_hop",
@@ -1014,6 +1118,12 @@ window.LNRT_RESEARCH = {
         "Đọc lại trang về đêm lễ.",
         "Năm Nhài lên bảy.",
         "Nhập 1988."
+      ],
+      "evidence": [
+        {
+          "book": "book_balam",
+          "page": 2
+        }
       ]
     },
     "pz_mo_gio": {
@@ -1045,7 +1155,17 @@ window.LNRT_RESEARCH = {
         "Bà ghi rõ chúng không có hài cốt.",
         "Chọn mộ gió tưởng niệm."
       ],
-      "rewardEvidence": "windGraves"
+      "rewardEvidence": "windGraves",
+      "evidence": [
+        {
+          "book": "book_mogio",
+          "page": 0
+        },
+        {
+          "book": "book_mant",
+          "page": 3
+        }
+      ]
     },
     "pz_loi_mant": {
       "id": "pz_loi_mant",
@@ -1075,7 +1195,13 @@ window.LNRT_RESEARCH = {
         "Đây là một quyết định bên cửa hầm.",
         "Bà nghe tiếng đập nhưng đứng im vì sợ."
       ],
-      "rewardEvidence": "mantSilence"
+      "rewardEvidence": "mantSilence",
+      "evidence": [
+        {
+          "book": "book_mant",
+          "page": 2
+        }
+      ]
     },
     "pz_balam": {
       "id": "pz_balam",
@@ -1106,7 +1232,13 @@ window.LNRT_RESEARCH = {
         "Một bàn tay đã chạm vào thanh then.",
         "Ông đặt tay lên then rồi bỏ xuống."
       ],
-      "rewardEvidence": "lamRefusal"
+      "rewardEvidence": "lamRefusal",
+      "evidence": [
+        {
+          "book": "book_balam",
+          "page": 2
+        }
+      ]
     },
     "pz_chu_lua": {
       "id": "pz_chu_lua",
@@ -1137,7 +1269,13 @@ window.LNRT_RESEARCH = {
         "Quyên là mẹ ruột của Nhài."
       ],
       "requiresFlag": "flashDone",
-      "rewardEvidence": "luaMother"
+      "rewardEvidence": "luaMother",
+      "evidence": [
+        {
+          "book": "book_lua",
+          "page": 4
+        }
+      ]
     },
     "pz_ta_so": {
       "id": "pz_ta_so",
@@ -1173,7 +1311,17 @@ window.LNRT_RESEARCH = {
         "Tìm dấu giấy chắp, nội dung lời khấn và triện.",
         "Chọn ba dấu sửa ấy."
       ],
-      "rewardEvidence": "forgeryClues"
+      "rewardEvidence": "forgeryClues",
+      "evidence": [
+        {
+          "book": "book_ngutran",
+          "page": 3
+        },
+        {
+          "book": "book_ngutran",
+          "page": 4
+        }
+      ]
     },
     "pz_vong_phan": {
       "id": "pz_vong_phan",
@@ -1204,7 +1352,17 @@ window.LNRT_RESEARCH = {
         "Người sống được yêu cầu đứng đúng vị trí từng giam nạn nhân.",
         "Đáp án là đưa người sống đứng vào vòng."
       ],
-      "rewardEvidence": "fiveAnchorDoubt"
+      "rewardEvidence": "fiveAnchorDoubt",
+      "evidence": [
+        {
+          "book": "book_ngutran",
+          "page": 3
+        },
+        {
+          "book": "book_ngutran",
+          "page": 5
+        }
+      ]
     },
     "pz_loi_khan": {
       "id": "pz_loi_khan",
@@ -1234,7 +1392,17 @@ window.LNRT_RESEARCH = {
         "Vế đầu nói rừng nuôi ai, vế cuối nói người làm gì.",
         "Rừng nuôi → người sống → người giữ rừng xanh."
       ],
-      "rewardEvidence": "originalPrayer"
+      "rewardEvidence": "originalPrayer",
+      "evidence": [
+        {
+          "book": "book_mieu",
+          "page": 3
+        },
+        {
+          "book": "book_sogoc",
+          "page": 2
+        }
+      ]
     },
     "pz_thu_sim": {
       "id": "pz_thu_sim",
@@ -1264,7 +1432,13 @@ window.LNRT_RESEARCH = {
         "Quế cần người ngoài tới nền tế.",
         "Tùng phải đem thư và sớ gốc lên xã."
       ],
-      "rewardEvidence": "simAppeal"
+      "rewardEvidence": "simAppeal",
+      "evidence": [
+        {
+          "book": "book_sim",
+          "page": 3
+        }
+      ]
     },
     "pz_dau_an": {
       "id": "pz_dau_an",
@@ -1296,7 +1470,17 @@ window.LNRT_RESEARCH = {
         "Không đủ cơ sở đồng nhất ấn cổ với triện của Chân."
       ],
       "requiresFlag": "reverseSealSeen",
-      "rewardEvidence": "sealLink"
+      "rewardEvidence": "sealLink",
+      "evidence": [
+        {
+          "book": "book_sogoc",
+          "page": 3
+        },
+        {
+          "book": "book_ngutran",
+          "page": 4
+        }
+      ]
     },
     "pz_ho_so_dem_le": {
       "id": "pz_ho_so_dem_le",
@@ -1332,7 +1516,21 @@ window.LNRT_RESEARCH = {
       "hints": [
         "Đối chiếu một ghi chép vật tư, một bản kiểm tra cửa và một lời khai."
       ],
-      "rewardEvidence": "crossNight"
+      "rewardEvidence": "crossNight",
+      "evidence": [
+        {
+          "book": "book_cua",
+          "page": 1
+        },
+        {
+          "book": "book_vattu",
+          "page": 2
+        },
+        {
+          "book": "book_mant",
+          "page": 2
+        }
+      ]
     },
     "pz_nien_bieu_vat_tu": {
       "id": "pz_nien_bieu_vat_tu",
@@ -1361,7 +1559,21 @@ window.LNRT_RESEARCH = {
       "hints": [
         "Tìm hai ngày trong sổ vật tư, rồi đối chiếu đêm lễ và sáng hôm sau."
       ],
-      "rewardEvidence": "timeline1988"
+      "rewardEvidence": "timeline1988",
+      "evidence": [
+        {
+          "book": "book_vattu",
+          "page": 2
+        },
+        {
+          "book": "book_mant",
+          "page": 2
+        },
+        {
+          "book": "book_mant",
+          "page": 3
+        }
+      ]
     },
     "pz_so_sanh_nguon": {
       "id": "pz_so_sanh_nguon",
@@ -1398,7 +1610,21 @@ window.LNRT_RESEARCH = {
       "hints": [
         "Đối chiếu chất giấy, câu khấn và dấu triện; dùng thư để kiểm tra người giữ sớ."
       ],
-      "rewardEvidence": "crossScrolls"
+      "rewardEvidence": "crossScrolls",
+      "evidence": [
+        {
+          "book": "book_ngutran",
+          "page": 4
+        },
+        {
+          "book": "book_sogoc",
+          "page": 2
+        },
+        {
+          "book": "book_sogoc",
+          "page": 3
+        }
+      ]
     }
   },
   "counts": {

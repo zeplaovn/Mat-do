@@ -29,7 +29,7 @@ const ITEMS = {
   maiShirt:{name:'Mảnh áo trắng',image:'19_Khan_Cham_128x128.webp',description:'Mảnh vải mắc trong khe đá ở nền tế cũ.'},
   camera:{name:'Máy ảnh của Chi',description:'Chiếc máy ảnh cũ của Chi. Nó hay chụp được những thứ mắt thường không thấy.',image:'01_May_Quay_128x128.webp'},
   flashlight:{name:'Đèn pin của Vũ',description:'Đèn pin của Vũ. Chạm vào để bật/tắt, hoặc nhấn phím F.',image:'02_Den_Pin_128x128.webp'},
-  notebook:{name:'Sổ tay của Vy',description:'Ghi lại bí mật của biệt thự. Nhấp “Nhật ký” để đọc những gì đã biết.',image:'03_So_Tay_128x128.webp'},
+  notebook:{name:'Sổ tay của Vy',description:'Ghi lại bí mật của biệt thự. Nhấp “Hồ sơ” để đọc những gì đã biết.',image:'03_So_Tay_128x128.webp'},
   lighter:{name:'Bật lửa cũ',description:'Chiếc bật lửa mạ đồng, còn gas.',image:'01_Bat_Lua_Chua_Bat_128x128.webp'},
   incense:{name:'Nhang chưa đốt',description:'Nhang nhặt ở miếu cây đa, chưa đốt.',image:'05_Nhang_Chua_Dot_128x128.webp'},
   key:{name:'Chìa khóa sắt rỉ',description:'Chìa khóa sắt rỉ tìm thấy ở cột mốc đá.',image:'04_Chia_Khoa_128x128.webp'},
@@ -610,7 +610,10 @@ function load(){try{const raw=localStorage.getItem(SAVE_KEY);if(!raw)return null
  }catch(_){return null}}
 function has(id){return state.items.includes(id)}
 function clue(id){if(!Array.isArray(state.flags.clues))state.flags.clues=[];if(!state.flags.clues.includes(id)){state.flags.clues.push(id);save();return true}return false}
-function note(id,title,body){if(!state.notes.some(n=>n.id===id)){state.notes.push({id,title,body});const b=$('btn-journal');if(b)b.classList.add('has-new')}save()}
+/* Ghi chú phụ (nhặt đồ, mở khóa, cảnh dẫn truyện) vẫn được lưu cho logic cốt truyện nhưng không chiếm chỗ trong hồ sơ:
+   hồ sơ chỉ giữ manh mối, chứng cứ và kết luận then chốt để người chơi khỏi lạc giữa hàng chục mục. */
+const MINOR_NOTES=new Set(['oldwoman','shrine','bell','scarf','spoon','comb','sandals','front','gate','store','storekey','wall','marker','crowbar','incense5','rice','riceGift','lamp6','awake','ritual','red','memory_sim','simLead']);
+function note(id,title,body){if(!state.notes.some(n=>n.id===id)){state.notes.push({id,title,body});const b=$('btn-journal');if(b&&!MINOR_NOTES.has(id))b.classList.add('has-new')}save()}
 function gain(id){if(!ITEMS[id]||has(id)||state.used.includes(id))return false;state.items.push(id);if(ITEMS[id].relic&&!state.relics.includes(id))state.relics.push(id);if(PAPER_ITEMS.includes(id))playSound('page',.22);else playSound('pick',.5);itemPop(id);queueMemory(id);save();renderSidebar();return true}
 /* Vật phẩm dùng xong thì bị xóa khỏi túi đồ và không nhặt lại được (state.used). quiet=true: không hiện thông báo. */
 function consume(id,quiet){if(!state.used.includes(id))state.used.push(id);const had=has(id);state.items=state.items.filter(x=>x!==id);if(state.selectedItem===id)state.selectedItem=null;if(had&&!quiet&&ITEMS[id])toast('Đã dùng hết: '+ITEMS[id].name);renderSidebar();save()}
@@ -1036,7 +1039,7 @@ function hideModal(){
  modalType=null;if(wasOpen&&modalReturnFocus&&modalReturnFocus.isConnected){modalReturnFocus.focus({preventScroll:true});modalReturnFocus=null}
 }
 function modalButton(text,fn){const b=document.createElement('button');b.type='button';b.className='modal-option';b.textContent=text;b.addEventListener('click',fn);return b}
-function showGuide(){showModal(`<h2>Cách chơi</h2><p>Chạm hoặc nhấp các dấu trên cảnh để quan sát, trò chuyện và di chuyển. Chọn vật phẩm trong thanh bên dưới rồi chạm nơi muốn sử dụng.</p><p>Nhật ký giữ lại những gì đã tìm thấy. Hãy đọc và đối chiếu tài liệu; một số chi tiết có thể không đáng tin.</p><p><strong>Phím tắt:</strong> J mở nhật ký · H xem gợi ý nhẹ · F bật đèn pin · Esc đóng bảng · Enter hoặc Space tiếp lời thoại.</p><div class="modal-buttons" id="guide-actions"></div>`,'HƯỚNG DẪN','guide');$('guide-actions').appendChild(modalButton('Tiếp tục',hideModal))}
+function showGuide(){showModal(`<h2>Cách chơi</h2><p>Chạm hoặc nhấp các dấu trên cảnh để quan sát, trò chuyện và di chuyển. Chọn vật phẩm trong thanh bên dưới rồi chạm nơi muốn sử dụng.</p><p>Hồ sơ giữ lại những gì đã tìm thấy. Hãy đọc và đối chiếu tài liệu; một số chi tiết có thể không đáng tin.</p><p><strong>Phím tắt:</strong> J mở hồ sơ · H xem gợi ý nhẹ · F bật đèn pin · Esc đóng bảng · Enter hoặc Space tiếp lời thoại.</p><div class="modal-buttons" id="guide-actions"></div>`,'HƯỚNG DẪN','guide');$('guide-actions').appendChild(modalButton('Tiếp tục',hideModal))}
 
 /* ================= NHẬT KÝ: cuốn sổ có bìa, lật trang ================= */
 let book=null;
@@ -1092,7 +1095,7 @@ function bookTurn(dir){
 function showJournal(){
  const jb=$('btn-journal');if(jb)jb.classList.remove('has-new');
  const per=window.matchMedia('(max-width:700px)').matches?1:2;
- const notes=state.notes.map((n,i)=>({...n,no:i+1}));
+ const notes=state.notes.filter(n=>!MINOR_NOTES.has(n.id)).map((n,i)=>({...n,no:i+1}));
  book={per,pages:null,cur:0,busy:false};
  book.pages=bookPaginate(notes,per);
  const n=book.pages.length;
@@ -1103,10 +1106,10 @@ function showJournal(){
    <div class="bk-base"></div>
    <div class="bk-pages"><div class="bk-page left" id="bk-left"></div><div class="bk-page right" id="bk-right"></div></div>
    <div class="bk-ribbon" aria-hidden="true"></div>
-   <div class="bk-cover" id="bk-cover" aria-hidden="true"><div class="bk-cover-frame"><span class="bk-cover-sigil">◈</span><div class="bk-cover-title">NHẬT KÝ</div><div class="bk-cover-sub">Vy · Đồng Chay 2026</div></div></div>
+   <div class="bk-cover" id="bk-cover" aria-hidden="true"><div class="bk-cover-frame"><span class="bk-cover-sigil">◈</span><div class="bk-cover-title">HỒ SƠ</div><div class="bk-cover-sub">Vy · Đồng Chay 2026</div></div></div>
   </div>
   <div class="bk-nav"><button class="bk-btn" id="bk-prev" type="button">‹ Trang trước</button><span class="bk-count" id="bk-count"></span><button class="bk-btn" id="bk-next" type="button">Trang sau ›</button></div>
- </div>`,'NHẬT KÝ ĐIỀU TRA','journal');
+ </div>`,'HỒ SƠ ĐIỀU TRA','journal');
  $('bk-left').innerHTML=bookPageHTML(book.cur);$('bk-right').innerHTML=bookPageHTML(per===2?book.cur+1:book.cur);
  bookCount();
  $('bk-close').onclick=hideModal;$('bk-prev').onclick=()=>{if(!$('bk').classList.contains('closed'))bookTurn(-1)};$('bk-next').onclick=()=>{if(!$('bk').classList.contains('closed'))bookTurn(1)};
@@ -1179,8 +1182,8 @@ function researchActiveSpots(){
 }
 function showHint(){
  const ob=getObjective();
- showModal(`<h2>Gợi ý</h2><div class="menu-status"><div class="menu-kick">VIỆC CẦN LÀM</div><div class="menu-ob-title">${escapeHTML(ob[0])}</div><div class="menu-ob-text">${escapeHTML(ob[1])}</div></div><p class="modal-note">Vẫn bí? Mở "Điểm tương tác" để xem mọi chỗ chạm được trong cảnh này, hoặc đọc lại Nhật ký.</p><div id="hint-actions" class="modal-buttons"></div>`,'GỢI Ý','hint');
- const box=$('hint-actions');box.appendChild(modalButton('Điểm tương tác',()=>{hideModal();showScenePoints()}));box.appendChild(modalButton('Nhật ký',()=>{hideModal();showJournal()}));box.appendChild(modalButton('Đóng',hideModal));
+ showModal(`<h2>Gợi ý</h2><div class="menu-status"><div class="menu-kick">VIỆC CẦN LÀM</div><div class="menu-ob-title">${escapeHTML(ob[0])}</div><div class="menu-ob-text">${escapeHTML(ob[1])}</div></div><p class="modal-note">Vẫn bí? Mở "Điểm tương tác" để xem mọi chỗ chạm được trong cảnh này, hoặc đọc lại Hồ sơ.</p><div id="hint-actions" class="modal-buttons"></div>`,'GỢI Ý','hint');
+ const box=$('hint-actions');box.appendChild(modalButton('Điểm tương tác',()=>{hideModal();showScenePoints()}));box.appendChild(modalButton('Hồ sơ',()=>{hideModal();showJournal()}));box.appendChild(modalButton('Đóng',hideModal));
 }
 function showScenePoints(){
  const points=SCENES[state.scene].spots.filter(h=>!h.req||state.flags[h.req]);
@@ -1413,7 +1416,7 @@ function showResearchArchive(){
   return `<button type="button" class="research-archive-card theme-${researchBookTheme(b)}" data-book="${escapeHTML(b.id)}">
     <span class="research-archive-cover" aria-hidden="true"></span><span class="research-archive-detail"><small>${escapeHTML(researchBookType(b))} · ${seen}/${b.pages.length} TRANG</small><strong>${escapeHTML(b.title)}</strong><em>${complete?'ĐÃ ĐỌC HẾT':marks?'ĐÃ LƯU '+marks+' GHI CHÚ':'CHƯA ĐỌC HẾT'}</em></span><span class="research-archive-arrow">›</span></button>`;
  }).join('');
- const panel=`<div class="research-archive-ui"><div class="research-archive-heading"><span class="research-section-label">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class="research-archive-stats"><span><strong>${found.length}</strong> đang giữ · <strong>${retired}</strong> đã lưu / ${all}</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class="research-archive-grid">${cards||(retired?'<p class="research-archive-empty">Sách đã dùng xong được lưu vào Nhật ký (J).</p>':'<p class="research-archive-empty">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>')}</div><div class="research-archive-bottom"><span>Sách dùng xong chuyển sang Nhật ký (J); sách còn giữ có thể đọc lại.</span><button id="research-archive-close" class="modal-option">Đóng thư viện</button></div></div>`;
+ const panel=`<div class="research-archive-ui"><div class="research-archive-heading"><span class="research-section-label">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class="research-archive-stats"><span><strong>${found.length}</strong> đang giữ · <strong>${retired}</strong> đã lưu / ${all}</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class="research-archive-grid">${cards||(retired?'<p class="research-archive-empty">Sách đã dùng xong được lưu vào Hồ sơ (J).</p>':'<p class="research-archive-empty">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>')}</div><div class="research-archive-bottom"><span>Sách dùng xong chuyển sang Hồ sơ (J); sách còn giữ có thể đọc lại.</span><button id="research-archive-close" class="modal-option">Đóng thư viện</button></div></div>`;
  showModal(panel,'THƯ VIỆN · ĐỒNG CHAY','research-archive');
  $('research-archive-close').onclick=hideModal;
  document.querySelectorAll('[data-book]').forEach(el=>el.onclick=()=>openResearchBook(el.dataset.book));
@@ -1443,6 +1446,12 @@ function researchPuzzleArt(p){
 }
 function puzzleContextArt(src,alt){return `<img class="puzzle-context-art" src="${escapeHTML(src)}" alt="${escapeHTML(alt)}" loading="lazy" draggable="false">`}
 
+/* Chứng cứ cụ thể của câu đố: danh sách trang sách người chơi phải đã đọc, và được trích lại khi đối chiếu. */
+function puzzleEvidence(p){return (p.evidence||[]).map(e=>{const b=BOOKS[e.book],pg=b&&b.pages[e.page];return pg?{book:b.id,bookTitle:b.title,page:e.page,pageTitle:pg[0],text:pg[1]}:null}).filter(Boolean)}
+function puzzleEvidenceHTML(list){
+ if(!list.length)return '';
+ return '<div class="research-evidence"><h3>CHỨNG CỨ ĐỐI CHIẾU</h3>'+list.map(e=>'<figure><figcaption>'+escapeHTML(e.bookTitle)+' · '+escapeHTML(e.pageTitle)+'</figcaption><blockquote>'+escapeHTML(e.text).replace(/\n/g,'<br>')+'</blockquote></figure>').join('')+'</div>';
+}
 function openResearchPuzzle(id){
  const p=RESEARCH_PUZZLES[id];if(!p)return;
  if(p.requiresFlag&&!state.flags[p.requiresFlag]){
@@ -1459,8 +1468,12 @@ function openResearchPuzzle(id){
   showModal(researchPuzzleArt(p)+'<h2>'+escapeHTML(p.title)+'</h2><p>'+escapeHTML(p.prompt)+'</p><p class="modal-note">Các ký hiệu ở đây chưa đủ rõ để kết luận. Có thể có sách hoặc ghi chép trong những phòng khác giúp đối chiếu.</p>','CÂU ĐỐ · CHƯA ĐỦ DỮ KIỆN','research-need');
   return;
  }
- if(id==='pz_sau_bat'&&!researchPagesRead('book_bep').includes(2)){
-  showModal('<h2>Chiếc bát không người nhận</h2><p>Hãy đọc trang “Bữa cơm đêm” trong sổ bếp trước khi đối chiếu.</p>','TƯ LIỆU','research-need');return;
+ const proof=puzzleEvidence(p),unread=proof.filter(e=>!researchPagesRead(e.book).includes(e.page));
+ if(unread.length){
+  const first=unread[0];
+  showModal(researchPuzzleArt(p)+'<h2>'+escapeHTML(p.title)+'</h2><p>Chưa đủ chứng cứ để kết luận. Hãy đọc kỹ những trang sau rồi quay lại đối chiếu:</p><ul class="research-need-list">'+unread.map(e=>'<li><strong>'+escapeHTML(e.bookTitle)+'</strong> · trang “'+escapeHTML(e.pageTitle)+'”</li>').join('')+'</ul><div id="research-need-actions" class="modal-actions"></div>','CÂU ĐỐ · CẦN ĐỌC THÊM','research-need');
+  const a=$('research-need-actions');if(a){a.appendChild(modalButton('Mở '+first.bookTitle,()=>{hideModal();openResearchBook(first.book)}));a.appendChild(modalButton('Đóng',hideModal))}
+  return;
  }
  let selected=[],hints=0,errors=0;
  const isRight=()=>{
@@ -1480,7 +1493,7 @@ function openResearchPuzzle(id){
   state.flags.researchSolved=state.flags.researchSolved||[];
   if(!state.flags.researchSolved.includes(id))state.flags.researchSolved.push(id);
   if(p.rewardEvidence)evidence(p.rewardEvidence);
-  note('researchSolved_'+id,p.title,p.clue);
+  note('researchSolved_'+id,p.title,p.clue+(proof.length?' Căn cứ: '+proof.map(e=>e.bookTitle+' · '+e.pageTitle).join('; ')+'.':''));
   retireCompletedResearchBooks(state);
   save();playSound('page',.3);hideModal();render();
   toast('ĐÃ GIẢI · '+p.title);
@@ -1489,7 +1502,7 @@ function openResearchPuzzle(id){
  const renderPuzzle=()=>{
   const hadFocus=!!(document.activeElement&&document.activeElement.closest('.research-puzzle-ui'));
   const options=p.options||[];
-  const task='<div class="research-puzzle-ui"><div class="research-puzzle-top"><span>HỒ SƠ / ĐỐI CHIẾU</span><span>✥</span></div>'+researchPuzzleArt(p)+'<h2>'+escapeHTML(p.title)+'</h2><div class="research-puzzle-prompt"><p>'+escapeHTML(p.prompt)+'</p></div><div id="research-puzzle-options" class="research-choice-list"></div><p id="research-puzzle-status" class="modal-note">'+(p.kind==='sequence'?'Chọn từng mục theo thứ tự đúng.':p.kind==='multi'?'Chọn đúng '+p.answer.length+' mục rồi kiểm tra.':'Hãy đọc các trang đã tìm được trước khi chọn.')+'</p><div id="research-puzzle-actions" class="research-controls"></div><div id="research-puzzle-hint" class="research-hints"></div></div>';
+  const task='<div class="research-puzzle-ui"><div class="research-puzzle-top"><span>HỒ SƠ / ĐỐI CHIẾU</span><span>✥</span></div>'+researchPuzzleArt(p)+'<h2>'+escapeHTML(p.title)+'</h2><div class="research-puzzle-prompt"><p>'+escapeHTML(p.prompt)+'</p></div>'+puzzleEvidenceHTML(proof)+'<div id="research-puzzle-options" class="research-choice-list"></div><p id="research-puzzle-status" class="modal-note">'+(p.kind==='sequence'?'Chọn từng mục theo thứ tự đúng.':p.kind==='multi'?'Chọn đúng '+p.answer.length+' mục rồi kiểm tra.':'Hãy đọc các trang đã tìm được trước khi chọn.')+'</p><div id="research-puzzle-actions" class="research-controls"></div><div id="research-puzzle-hint" class="research-hints"></div></div>';
   showModal(task,'CÂU ĐỐ · TÀI LIỆU','research-puzzle');
   const opt=$('research-puzzle-options'),acts=$('research-puzzle-actions');
   if(p.kind==='code'){
@@ -2093,7 +2106,7 @@ function escapeHTML(t){return String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':
 function toggleSound(){state.sound=!state.sound;if(!state.sound)stopAmbience();else setAmbience();$('btn-audio').textContent=state.sound?'♪':'♪̸';$('btn-audio').setAttribute('aria-pressed',state.sound?'true':'false');save()}
 function updateContinue(){const existing=load();if(existing)syncAchievements(false,existing);$('btn-continue').hidden=!existing;const msg=$('legacy-save-notice');if(msg)msg.hidden=!localStorage.getItem('loi-nguyen-rung-thieng-v1');}
 function newGame(){pendingMemories=[];state=initialState();geckoClock=GECKO_FIRST;chatScene=null;stopAmbience();hideModal();clearDialogue();$('title-screen').hidden=true;render();talk(introOf('BG01'));save()}
-function continueGame(){pendingMemories=[];state=load()||initialState();syncAchievements(false);geckoClock=GECKO_FIRST;chatScene=null;$('title-screen').hidden=true;hideModal();clearDialogue();render();if(state.flags.ending&&ENDINGS[state.flags.ending]){const ending=state.flags.ending;state.flags.ending=null;showEnding(ending);return}talk(state.flags.mo?[["Người kể chuyện","Ký ức năm 1988 tiếp tục. Nhài vẫn ở trong đêm hôm ấy."],["Nhài","Con nhớ rồi... mình đang tìm cách giúp mọi người."]]:[["Người kể chuyện","Hành trình tiếp tục. Những trang nhật ký vẫn còn lưu các manh mối bạn đã tìm thấy."],["Vy","Tớ đã ghi lại hết rồi. Mình đi tiếp thôi, nhưng đừng ai tách nhóm."]]);}
+function continueGame(){pendingMemories=[];state=load()||initialState();syncAchievements(false);geckoClock=GECKO_FIRST;chatScene=null;$('title-screen').hidden=true;hideModal();clearDialogue();render();if(state.flags.ending&&ENDINGS[state.flags.ending]){const ending=state.flags.ending;state.flags.ending=null;showEnding(ending);return}talk(state.flags.mo?[["Người kể chuyện","Ký ức năm 1988 tiếp tục. Nhài vẫn ở trong đêm hôm ấy."],["Nhài","Con nhớ rồi... mình đang tìm cách giúp mọi người."]]:[["Người kể chuyện","Hành trình tiếp tục. Những trang hồ sơ vẫn còn lưu các manh mối bạn đã tìm thấy."],["Vy","Tớ đã ghi lại hết rồi. Mình đi tiếp thôi, nhưng đừng ai tách nhóm."]]);}
 function mount(){$('btn-new-game').onclick=newGame;$('btn-continue').onclick=continueGame;$('btn-points').onclick=showScenePoints;{const bh=$('btn-hint');if(bh)bh.onclick=showHint}$('btn-audio').onclick=toggleSound;$('btn-menu').onclick=showMenu;$('btn-journal').onclick=showJournal;$('modal-close').onclick=hideModal;$('dialogue-next').onclick=nextLine;
  $('modal-backdrop').addEventListener('click',e=>{if(e.target===$('modal-backdrop')&&modalType!=='ending')hideModal()});
  let torchRaf=0,torchEv=null;$('scene-stage').addEventListener('pointermove',e=>{torchEv=e;if(torchRaf)return;torchRaf=requestAnimationFrame(()=>{torchRaf=0;if(!$('scene-stage').classList.contains('torch-on'))return;const box=$('scene-stage').getBoundingClientRect();const x=Math.max(0,Math.min(100,(torchEv.clientX-box.left)/box.width*100));const y=Math.max(0,Math.min(100,(torchEv.clientY-box.top)/box.height*100));$('scene-stage').style.setProperty('--torch-x',x.toFixed(1)+'%');$('scene-stage').style.setProperty('--torch-y',y.toFixed(1)+'%')})});

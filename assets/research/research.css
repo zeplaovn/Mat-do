@@ -247,3 +247,12 @@
  .research-journal .bk.single{--bw:min(520px,90vw,calc((100vh - 165px) * .72))}
  .research-journal-tools .bk-btn{min-height:34px;padding:5px 10px}
 }
+
+/* Chứng cứ trích từ tư liệu ngay trong khung câu đố */
+.research-evidence{margin:0 0 13px;padding:10px 14px;background:#2a1f18cc;border:1px solid #8a6a4a66;border-radius:4px}
+.research-evidence h3{margin:0 0 8px;font:700 11px/1 system-ui,sans-serif;letter-spacing:.14em;color:#d3b27a}
+.research-evidence figure{margin:0 0 9px}
+.research-evidence figure:last-child{margin-bottom:0}
+.research-evidence figcaption{font:600 12px/1.4 system-ui,sans-serif;color:#e8d5b0}
+.research-evidence blockquote{margin:3px 0 0;padding-left:10px;border-left:3px solid #aa603f;color:#d9c9a8;font:italic clamp(12.5px,1.05vw,15px)/1.55 Georgia,serif}
+.research-need-list{margin:8px 0 12px;padding-left:20px;color:#e8d5b0;line-height:1.6}

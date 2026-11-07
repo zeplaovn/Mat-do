@@ -42,7 +42,14 @@ for(const p of Object.values(qa.RESEARCH_PUZZLES)){
  const missing=p.requires[0];state.items=state.items.filter(x=>x!==missing);qa.openResearchPuzzle(p.id);
  assert.equal(modal.type,'research-need',`${p.id}: missing source must block the puzzle`);
  assert.ok(!(state.flags.researchSolved||[]).includes(p.id));state.items.push(missing);
+ /* Chứng cứ cụ thể: chưa đọc các trang trích dẫn thì chưa được đối chiếu */
+ assert.ok(Array.isArray(p.evidence)&&p.evidence.length>=1,`${p.id}: needs concrete evidence pages`);
+ for(const e of p.evidence){assert.ok(p.requires.includes(e.book),`${p.id}: evidence book must be a required source`);assert.ok(qa.BOOKS[e.book].pages[e.page],`${p.id}: evidence page must exist`)}
+ const keepViews=state.flags.researchPageViews;state.flags.researchPageViews={};
+ modal=null;qa.openResearchPuzzle(p.id);assert.equal(modal.type,'research-need',`${p.id}: unread evidence pages must block the puzzle`);
+ const views={book_lua:keepViews.book_lua,book_bep:keepViews.book_bep};for(const e of p.evidence){views[e.book]=[...(views[e.book]||[]),e.page]}state.flags.researchPageViews=views;
  qa.openResearchPuzzle(p.id);assert.equal(modal.type,'research-puzzle',`${p.id}: should open with its sources`);
+ assert.ok(/CHỨNG CỨ ĐỐI CHIẾU/.test(modal.html||modal.body||JSON.stringify(modal)),`${p.id}: evidence quotes must be shown`);
  const art=modal.html.match(/class="research-puzzle-art" src="([^"]+)"/);
  assert.ok(art&&fs.existsSync(path.join(root,art[1])),`${p.id}: the puzzle image must exist`);
  let wrong;
@@ -100,6 +107,6 @@ assert.equal(modal.type,'research-need','Lụa’s protected page must be read a
 const bowl=qa.initialState();bowl.scene='BG13';bowl.items.push('book_bep');qa.setState(bowl);qa.openResearchPuzzle('pz_sau_bat');
 assert.equal(modal.type,'research-need','the bowl puzzle must not reveal the count before the kitchen diary is read');
 assert.doesNotMatch(modal.html,/năm người|năm bát|5 người|5 bát/i);
-bowl.flags.researchPageViews={book_bep:[2]};qa.openResearchPuzzle('pz_sau_bat');
+bowl.flags.researchPageViews={book_bep:[1,2]};qa.openResearchPuzzle('pz_sau_bat');
 assert.equal(modal.type,'research-puzzle','the bowl puzzle should open after the relevant diary page is read');
 console.log(`OK: all ${Object.keys(qa.RESEARCH_PUZZLES).length} document puzzles reject missing/wrong answers, accept correct answers and save their rewards.`);
