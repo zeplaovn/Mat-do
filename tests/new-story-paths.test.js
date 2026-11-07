@@ -17,9 +17,11 @@ window.qa={initialState,setState:s=>{state=s},huuTalk,wellSealed,seeMaiTrace,ret
 assert.ok(source.includes('window.qa='));vm.runInContext(source,context);
 const q=context.window.qa,w=context.window;
 function choose(label){const choice=w.modal.choices.find(c=>c[0].includes(label));assert.ok(choice,`${label} missing in ${w.modal.title}`);choice[1]();}
-const s=q.initialState();Object.assign(s.flags,{ritualDone:true,sixthDone:true,flashDone:true,lamDone:true,namesDone:true,datTrust:true,scrollCompared:true,wellPhotoSeen:true,wellFlowers:true,researchSolved:['pz_thong_gio','pz_ta_so','pz_chu_lua']});
+const s=q.initialState();Object.assign(s.flags,{ritualDone:true,sixthDone:true,flashDone:true,lamDone:true,namesDone:true,datTrust:true,scrollCompared:true,wellPhotoSeen:true,wellFlowers:true,researchSolved:['pz_thong_gio','pz_ta_so','pz_chu_lua','pz_ba_dong_xu']});
 s.evidence=['ledger','confession','archive','scrollProof'];s.items.push('simLetter','familyRecord');q.setState(s);
+{const early=q.initialState();q.setState(early);w.modal=null;q.huuTalk();q.huuTalk();assert.ok(!w.modal,'no book offer before the coin reading is solved');assert.ok(!early.items.includes('phongThuyBook'));q.setState(s);}
 assert.equal(q.endingEligibility().canGood,true);assert.equal(q.endingEligibility().canTrue,false);
+q.huuTalk();assert.ok(!w.modal||w.modal.title!=='Huyền Ấn Bí Lục – Trấn Âm Đồ','the first meeting must not offer the book');
 q.huuTalk();choose('Chưa nhận');assert.ok(!s.items.includes('phongThuyBook'));q.huuTalk();choose('Nhận cuốn sách');assert.ok(s.items.includes('phongThuyBook'),'the book may be accepted after refusal');
 q.wellSealed();choose('Soi trang trắng');assert.ok(s.flags.waterBookSeen);assert.ok(!s.items.includes('phongThuyBook'),'used grimoire must disappear from inventory');assert.ok(s.used.includes('phongThuyBook'));q.wellSealed();choose('Quan sát dấu');assert.ok(s.flags.reverseSealSeen);assert.ok(!s.flags.sealRecovered,'inspection must not remove the main seal');
 q.returnNames();assert.ok(!s.flags.returnNamesDone,'missing visions block the ritual');

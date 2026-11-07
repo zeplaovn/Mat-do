@@ -1610,7 +1610,11 @@ function huuTalk(){
   ],'LỰA CHỌN · CUỐN SÁCH');
  };
  if(f.truthBoardDone&&!f.nguyenConfessed){confrontNguyen();return}
- if(f.huuOffered||f.huuDone){offer();return}f.huuOffered=true;save();talk(reviewed('S04'),offer);
+ if(f.huuDone||has('phongThuyBook')||state.used.includes('phongThuyBook')||f.waterBookSeen){offer();return}
+  if(!f.huuOffered){f.huuOffered=true;save();talk(reviewed('S04'));return}
+  if(!researchSolved('pz_ba_dong_xu')){say('Thầy Nguyên','Quẻ trước đã. Không gấp.');return}
+  if(!f.huuQueTalked){f.huuQueTalked=true;save();talk(reviewed('S04B'),offer);return}
+  offer();
 }
 function confrontNguyen(){
  chooseModal('Chữ ký Lục Táng','Ghi chép ở nền tế có bút tích Lục Táng giống lời ghi trong cuốn sách thầy Nguyên đưa. Cả nhóm hỏi ông về người viết và chiếc ấn.',[

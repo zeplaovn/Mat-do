@@ -424,20 +424,68 @@ window.LNRT_DIALOGUE = {
   ],
   "S02": [
     [
-      "Bà bán nước",
-      "Các cháu từ dưới xuôi lên à? Đường vào rừng qua cầu gỗ, đến miếu thì hỏi người trong làng."
-    ],
-    [
-      "Vy",
-      "Bà có biết bà Cúc không ạ? Cháu là cháu ngoại bà."
+      "Khôi",
+      "Bà ơi, cho bọn cháu hỏi đường lên Vân Hòa với ạ."
     ],
     [
       "Bà bán nước",
-      "Cúc à... Lâu rồi không còn ai gọi tên bà ấy ở đây. Có chuyện gì thì hỏi thầy Nguyên ở chùa."
+      "Lên đâu?"
     ],
     [
       "Khôi",
-      "Chúng cháu cảm ơn bà."
+      "Vân Hòa ấy bà, cái biệt thự trên đồi."
+    ],
+    [
+      "Người kể chuyện",
+      "Bà ngừng lau chén. Chén còn chưa khô."
+    ],
+    [
+      "Bà bán nước",
+      "Ai bảo cháu chỗ ấy?"
+    ],
+    [
+      "Khôi",
+      "Dạ, báo cũ ạ. Bọn cháu làm đề—"
+    ],
+    [
+      "Bà bán nước",
+      "Uống nước không? Chè xanh, năm nghìn."
+    ],
+    [
+      "Hà",
+      "Dạ, bọn cháu chỉ hỏi đường thôi bà…"
+    ],
+    [
+      "Bà bán nước",
+      "Bà bán nước chứ có bán đường đâu."
+    ],
+    [
+      "Vy",
+      "Bà ơi, bà có biết bà Cúc không ạ? Bà ngoại cháu đấy."
+    ],
+    [
+      "Người kể chuyện",
+      "Bà nhìn Vy, lần đầu nhìn kỹ."
+    ],
+    [
+      "Bà bán nước",
+      "…Cúc nào?"
+    ],
+    [
+      "Vy",
+      "Bà Cúc ở xóm trên ngày xưa ạ."
+    ],
+    [
+      "Bà bán nước",
+      "Lâu lắm rồi không ai gọi cái tên ấy. Muốn hỏi thì lên chùa, tìm thầy Nguyên. Bà không nói gì đâu đấy."
+    ],
+    [
+      "Khôi",
+      "Dạ, bọn cháu cảm ơn bà."
+    ],
+    [
+      "Bà bán nước",
+      "Cảm ơn gì. Uống đi kẻo nguội."
     ]
   ],
   "S03": [
@@ -489,15 +537,43 @@ window.LNRT_DIALOGUE = {
   "S04": [
     [
       "Thầy Nguyên",
-      "Các cháu tìm đường lên khu nhà cũ? Qua cầu rồi theo lối xe ở phía miếu."
+      "Ngồi đi các cháu. Xem quẻ không? Không linh thì không lấy tiền."
     ],
     [
-      "Vy",
-      "Bà ngoại cháu từng nhắc nơi đó. Cháu muốn biết chuyện gì đã xảy ra."
+      "Vũ",
+      "Thế linh thì lấy bao nhiêu hả thầy?"
     ],
     [
       "Thầy Nguyên",
-      "Chuyện kể lâu ngày thường lẫn phần thật với phần người ta sợ. Cứ giữ những gì các cháu nhìn thấy."
+      "Linh thì tùy tâm. Mà chưa ai dám bảo là linh."
+    ],
+    [
+      "Khôi",
+      "Dạ, bà bán nước dưới kia bảo bọn cháu lên hỏi thầy ạ."
+    ],
+    [
+      "Thầy Nguyên",
+      "Bà ấy bảo thế à. Hỏi chuyện gì?"
+    ],
+    [
+      "Khôi",
+      "Chuyện Vân Hòa ạ."
+    ],
+    [
+      "Người kể chuyện",
+      "Tay thầy khựng lại trên đồng xu. Ông xếp lại cho ngay, thở dài."
+    ],
+    [
+      "Thầy Nguyên",
+      "Lâu lắm tôi không nghe ai nói cái tên ấy ở sân này. Thôi, gieo một quẻ đã."
+    ],
+    [
+      "Vy",
+      "Quẻ thì liên quan gì ạ?"
+    ],
+    [
+      "Thầy Nguyên",
+      "Chẳng liên quan. Nhưng tôi muốn xem các cháu đến đây với cái bụng thế nào. Gieo đi, nhẹ tay, đồng xu chứ không phải hòn đá."
     ]
   ],
   "S05": [
@@ -518,12 +594,32 @@ window.LNRT_DIALOGUE = {
       "Vy chụp tấm bia này giúp tớ. Có cả mốc năm ở góc kia."
     ],
     [
+      "Hà",
+      "Bác ơi, làng mình có ai còn nhớ chuyện năm tám sáu không ạ?"
+    ],
+    [
       "Người trông chùa",
-      "Muốn hỏi chuyện cũ thì các cháu thử tìm ông Tùng ở xóm Đông. Ông ấy giữ được ít giấy tờ từ ngày xưa."
+      "Năm nào?"
+    ],
+    [
+      "Hà",
+      "Tám sáu ạ, hồi có lễ cầu mưa."
+    ],
+    [
+      "Người kể chuyện",
+      "Bác quét vài nhát chổi, nhìn quanh sân."
+    ],
+    [
+      "Người trông chùa",
+      "Lâu quá bác nhớ gì. …Muốn nghe thì ra xóm Đông hỏi ông Tùng."
     ],
     [
       "Vy",
-      "Dạ, chúng cháu cảm ơn bác."
+      "Ông Tùng ạ?"
+    ],
+    [
+      "Người trông chùa",
+      "Ừ. Mà bác không nói đấy nhé. Chuyện ấy ở làng người ta không thích nhắc."
     ]
   ],
   "S06": [
@@ -744,6 +840,18 @@ window.LNRT_DIALOGUE = {
     [
       "Người làng",
       "Nghe người ta nói thế thôi, chứ có ai thấy tận mắt đâu."
+    ],
+    [
+      "Người làng",
+      "Ơ, mấy đứa lạ kia. Hỏi đường à?"
+    ],
+    [
+      "Bác nông dân",
+      "Hỏi đi đâu thì hỏi, trời sắp mưa rồi, về đi."
+    ],
+    [
+      "Bà gánh rau",
+      "Nhà nào có trẻ con nhớ gọi về sớm."
     ],
     [
       "Người kể chuyện",
@@ -1615,7 +1723,7 @@ window.LNRT_DIALOGUE = {
     ],
     [
       "Ông Tùng",
-      "Có. Chị tôi đưa tôi giữ trước hôm người ta bắt chị đi."
+      "Có. Chị tôi đưa tôi giữ ngay hôm ấy, trước khi người ta giữ chị lại."
     ],
     [
       "Ông Tùng",
@@ -1925,7 +2033,7 @@ window.LNRT_DIALOGUE = {
     ],
     [
       "Ông Tùng",
-      "Đây, bản này. Chị tôi chép lại rồi đưa tôi giữ trước hôm bị bắt."
+      "Đây, bản này. Chị tôi chép lại rồi đưa tôi giữ ngay hôm ấy."
     ],
     [
       "Vũ",
@@ -2866,6 +2974,80 @@ window.LNRT_DIALOGUE = {
     [
       "Ông Tùng",
       "Muốn hiểu chuyện của chị Quế, các cháu xem những gì chị ấy viết trước đã."
+    ]
+  ],
+  "S04B": [
+    [
+      "Người kể chuyện",
+      "Thầy nhìn ba đồng xu rất lâu, rồi thở dài."
+    ],
+    [
+      "Thầy Nguyên",
+      "Hừ… quẻ Kiển."
+    ],
+    [
+      "Hà",
+      "Kiển là sao hả thầy?"
+    ],
+    [
+      "Thầy Nguyên",
+      "Là đường khó đi. Cứ hình dung thế này: trên núi có nước đổ xuống. Núi đã dốc, nước lại chảy, đường trơn như bờ mương hôm mưa. Ai bước cũng phải chậm."
+    ],
+    [
+      "Chi",
+      "Nghe đáng sợ thế."
+    ],
+    [
+      "Thầy Nguyên",
+      "Chưa chắc. Cổ nhân bảo gặp chỗ hiểm thì dừng chân, nhìn lại, tìm người đi trước mà hỏi. Không bảo thôi đi, bảo là đừng liều."
+    ],
+    [
+      "Vũ",
+      "Tức là thầy bảo bọn cháu đừng đi."
+    ],
+    [
+      "Thầy Nguyên",
+      "Tôi bảo thì các cháu nghe chắc? Quẻ chỉ nói quẻ. Đi hay không là việc các cháu."
+    ],
+    [
+      "Khôi",
+      "Thầy biết gì về chỗ ấy ạ?"
+    ],
+    [
+      "Thầy Nguyên",
+      "Biết nửa vời. Đêm rằm năm 2014, tôi thấy đèn trong nhà ấy sáng. Sang gõ cửa thì không ai mở. Sáng ra có dấu chân trước hiên. Cả dấu chân trẻ con."
+    ],
+    [
+      "Hà",
+      "Trẻ con ạ?"
+    ],
+    [
+      "Thầy Nguyên",
+      "Chuyện đó tôi chỉ dám nói đến đấy. Nói nhiều, các cháu lại tự mò đi, hại."
+    ],
+    [
+      "Vy",
+      "Thầy ơi…"
+    ],
+    [
+      "Thầy Nguyên",
+      "Nghe tôi một câu: chuyện trong nhà ấy là người làm sai với người. Ai bảo thần phạt thánh giận thì đừng tin vội."
+    ],
+    [
+      "Người kể chuyện",
+      "Thầy lục túi vải, đặt lên bàn một cuốn sách bìa sờn."
+    ],
+    [
+      "Thầy Nguyên",
+      "Cầm lấy. Tôi giữ cũng chẳng để làm gì. Chỗ nào lạ thì lật trang trắng ra, soi xuống nước mà đọc."
+    ],
+    [
+      "Vũ",
+      "Nước nào ạ?"
+    ],
+    [
+      "Thầy Nguyên",
+      "Gặp rồi sẽ biết."
     ]
   ]
 };
