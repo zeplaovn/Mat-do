@@ -35,7 +35,7 @@ const reducedMotion=typeof matchMedia==='function'&&matchMedia('(prefers-reduced
 let softFx=reducedMotion;
 function renderFx(){
  stage.classList.toggle('soft-fx',softFx);
- if(fxBtn){fxBtn.setAttribute('aria-pressed',String(softFx));fxBtn.setAttribute('aria-label',softFx?'Bật hiệu ứng chớp':'Giảm hiệu ứng chớp');fxBtn.textContent=softFx?'NHÁY: TẮT':'GIẢM NHÁY'}
+ if(fxBtn){fxBtn.setAttribute('aria-pressed',String(softFx));fxBtn.setAttribute('aria-label',softFx?'Bật hiệu ứng chớp':'Giảm hiệu ứng chớp');fxBtn.textContent=softFx?'Nháy: Tắt':'Giảm nháy'}
 }
 renderFx();
 const time=s=>`${String(Math.floor(s/60)).padStart(2,'0')}:${String(Math.floor(s%60)).padStart(2,'0')}`;
@@ -45,14 +45,8 @@ if(chapterMarkers)for(const chapter of chapters.slice(1)){
  marker.style.setProperty('--at',(chapter.from/duration*100).toFixed(2)+'%');chapterMarkers.appendChild(marker);
 }
 /* Tách chữ theo từ rồi theo ký tự để hiện lần lượt (từ mờ, nhỏ, lệch xuống sang nét). */
-function splitText(el,text,cls){
- let n=0;const big=/\bbig\b/.test(cls||''),step=big?55:26;
- text.split(' ').forEach((word,wi,all)=>{
-  const w=document.createElement('span');w.className='w';
-  for(const ch of word){const c=document.createElement('span');c.className='c';c.textContent=ch;c.style.setProperty('--i',String(n++));c.style.setProperty('--step',step+'ms');w.appendChild(c)}
-  el.appendChild(w);if(wi<all.length-1){const sp=document.createElement('span');sp.className='sp';sp.textContent=' ';el.appendChild(sp);n++}
- });
-}
+/* Chữ là một khối biên tập điện ảnh, không tách từng ký tự. */
+function splitText(el,text){el.textContent=text}
 function setShot(index,elapsed){
  shown=index;const shot=shots[index],next=1-front,layer=layers[next],image=layer.firstElementChild;
  layer.className='shot '+(shot.tone||'')+(shot.tr?' tr-'+shot.tr:'')+(shot.gp?' gp':'');
@@ -79,7 +73,7 @@ function sfxInit(){
 }
 function setSfxLevel(){
  if(!master||!actx)return;
- const level=muted||!playing?0:(softFx?.45:.65);
+ const level=muted||!playing?0:(softFx?.12:.27);
  try{const t=actx.currentTime;master.gain.cancelScheduledValues(t);master.gain.setTargetAtTime(level,t,.035)}
  catch(_){master.gain.value=level}
 }
@@ -95,9 +89,9 @@ const cues=[[35.95,()=>sfx.riser(2.5)],[36.15,()=>sfx.heart(.7)],[36.6,()=>sfx.h
 function playCues(from,to){if(!actx||muted||!playing)return;for(const [t,fn] of cues)if(t>from&&t<=to){try{fn()}catch(_){}}}
 let lastPos=0,punchTimer=0;
 function punch(power){
- if(softFx)return;
+ if(softFx||!playing)return;
  if(stage.classList){stage.classList.remove('punch1','punch2','punch3');void stage.offsetWidth;stage.classList.add('punch'+power)}
- const f=$('flash');if(f&&!(shots[shown]&&shots[shown].flash&&position-shots[shown].start<.5))f.style.opacity=String(.04+power*.05);
+ const f=$('flash');if(f&&!(shots[shown]&&shots[shown].flash&&position-shots[shown].start<.5))f.style.opacity=String(.012+power*.025);
  if(typeof setTimeout==='function'){clearTimeout(punchTimer);punchTimer=setTimeout(()=>{if(stage.classList)stage.classList.remove('punch1','punch2','punch3')},520)}
 }
 function beat(){
@@ -114,15 +108,26 @@ function draw(force=false){
  const local=Math.max(0,position-shots[index].start);
  if(actLabel){let chapter=chapters[0];for(const c of chapters)if(position>=c.from)chapter=c;if(actLabel.textContent!==chapter.label)actLabel.textContent=chapter.label}
  if(index!==shown||force)setShot(index,local);
- $('flash').style.opacity=softFx?'0':shots[index].flash&&local<.5?String((1-local/.5)*.6):$('flash').style.opacity>.001&&!force&&position-lastPos<.3?String(Math.max(0,$("flash").style.opacity-(position-lastPos)*.55)):'0';
+ $('flash').style.opacity=softFx?'0':shots[index].flash&&local<.22?String((1-local/.22)*.12):$('flash').style.opacity>.001&&!force&&position-lastPos<.3?String(Math.max(0,$("flash").style.opacity-(position-lastPos)*.55)):'0';
  beat();
  const leaving=local>shots[index].d-.7;
  const sh=shots[index];
  if(cursorEl){const c=sh.cursor,show=c&&local>=c.at-.15&&local<sh.d-.35;if(show){const t=Math.min(1,Math.max(0,(local-c.at)/c.dur)),e=t*t*(3-2*t);cursorEl.style.left=(c.from[0]+(c.to[0]-c.from[0])*e)+'%';cursorEl.style.top=(c.from[1]+(c.to[1]-c.from[1])*e)+'%';cursorEl.style.opacity='1';const clicking=local>=c.click&&local<c.click+.45;if(cursorEl.classList.contains('click')!==clicking)cursorEl.classList.toggle('click',clicking)}else cursorEl.style.opacity='0'}
- if(sh.scare&&!softFx){const fl=$('flash');if(local>1.58&&local<1.67){fl.style.background='#fff';fl.style.opacity='.8'}else if(local>=1.74){fl.style.background='#000';fl.style.opacity='1'}else{fl.style.background='';}}else if($('flash').style.background)$('flash').style.background='';
+ if(sh.scare&&!softFx){const fl=$('flash');if(local>1.58&&local<1.67){fl.style.background='#d2c9be';fl.style.opacity='.16'}else if(local>=1.74){fl.style.background='#000';fl.style.opacity='.68'}else{fl.style.background='';}}else if($('flash').style.background)$('flash').style.background='';
  if(slateNode){const on=local>=1&&!leaving;if(on!==slateNode.classList.contains('show'))slateNode.classList.toggle('show',on)}
  if(streak)streak.style.opacity=softFx?'0':shots[index].flash&&local<.9?String(Math.max(0,1-local/.9)*.5):'0';
- for(const node of [...capNodes,...faceNodes]){const visible=local>=node.at&&!leaving;if(visible===node.visible)continue;node.visible=visible;node.el.classList.toggle('show',visible);node.el.setAttribute('aria-hidden',String(!visible))}
+ // Không xếp hai lời dẫn cùng lúc.
+ for(let i=0;i<capNodes.length;i++){
+  const node=capNodes[i],next=capNodes[i+1];
+  const visible=local>=node.at&&local<(next?next.at:sh.d-.65)&&!leaving;
+  if(visible===node.visible)continue;
+  node.visible=visible;node.el.classList.toggle('show',visible);node.el.setAttribute('aria-hidden',String(!visible))
+ }
+ for(const node of faceNodes){
+  const visible=local>=node.at&&!leaving;
+  if(visible===node.visible)continue;
+  node.visible=visible;node.el.classList.toggle('show',visible);node.el.setAttribute('aria-hidden',String(!visible))
+ }
 }
 /* Bụi và tàn tro bay chậm: nhẹ, tự giảm số hạt trên điện thoại, tắt khi giảm chuyển động. */
 const dctx=dust&&dust.getContext?dust.getContext('2d'):null,noMotion=reducedMotion;
@@ -153,7 +158,7 @@ function start(){sfxInit();lastPos=0;stage.classList.remove('cine');void stage.o
 function finish(){if(cursorEl)cursorEl.style.opacity='0';stage.classList.remove('cine');if(slate){slate.replaceChildren();slateNode=null}if(streak)streak.style.opacity='0';if(dctx)dctx.clearRect(0,0,dw,dh);pause();if(actLabel)actLabel.textContent='';position=duration;player.hidden=true;hud.hidden=true;caps.replaceChildren();capNodes=[];faceNodes=[];endCard.hidden=false;$('flash').style.opacity='0';$('btn-replay').focus({preventScroll:true})}
 $('btn-play').addEventListener('click',start);$('btn-replay').addEventListener('click',start);$('btn-skip').addEventListener('click',finish);
 $('btn-pause').addEventListener('click',()=>playing?pause():resume());
-$('btn-mute').addEventListener('click',()=>{muted=!muted;audio.muted=muted;$('btn-mute').textContent=muted?'🔇':'🔊';$('btn-mute').setAttribute('aria-label',muted?'Bật tiếng':'Tắt tiếng');$('btn-mute').setAttribute('aria-pressed',String(muted));setSfxLevel()});
+$('btn-mute').addEventListener('click',()=>{muted=!muted;audio.muted=muted;$('btn-mute').textContent=muted?'Âm thanh: Tắt':'Âm thanh: Bật';$('btn-mute').setAttribute('aria-label',muted?'Bật tiếng':'Tắt tiếng');$('btn-mute').setAttribute('aria-pressed',String(muted));setSfxLevel()});
 if(fxBtn)fxBtn.addEventListener('click',()=>{softFx=!softFx;renderFx();setSfxLevel();draw(true)});
 seek.addEventListener('input',()=>{position=Math.max(0,Math.min(duration,Number(seek.value)));syncAudio();lastPos=position;draw(true);if(position>=duration)finish()});
 audio.addEventListener('loadedmetadata',()=>{if(!player.hidden)syncAudio()});

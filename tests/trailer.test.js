@@ -48,3 +48,11 @@ assert.match(ids['act-label'].textContent,/SỰ THẬT BỊ CHÔN GIẤU/,'act t
 ids['btn-skip'].dispatch('click');assert.equal(ids.end.hidden,false);assert.equal(ids.player.hidden,true);assert.equal(ids.caps.children.length,0,'ended trailer should not expose old captions');
 ids['btn-replay'].dispatch('click');assert.equal(ids.end.hidden,true);assert.equal(ids.seek.value,'0');
 console.log('OK: trailer shots incl. gameplay frames, images, seeking, audio, portraits, skip and replay.');
+
+/* Giữ contract trailer gốc, kiểm tra hướng art direction mới. */
+const newHtml=fs.readFileSync(path.join(__dirname,'..','trailer.html'),'utf8');
+const newCss=fs.readFileSync(path.join(__dirname,'..','trailer.css'),'utf8');
+assert.match(newHtml,/class="poster-heading"/);
+assert.match(newHtml,/class="frame-index"/);
+assert.match(newCss,/\.shot\.on \.bg\.in/);
+assert.doesNotMatch(newCss,/@keyframes\s+(charGlitch|glitchIn|leakDrift)/);
