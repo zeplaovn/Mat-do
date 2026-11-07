@@ -32,7 +32,8 @@ class Element{
 }
 const idNames=['stage','start','end','player','hud','audio','seek','narrative','speaker','line','artifact',
  'intertitle','final-title','cut-flash','shot-counter','btn-play','btn-replay','btn-skip','btn-pause','btn-mute',
- 'btn-fx','btn-share','player-time','player-duration','chapter-markers','load-status'];
+ 'btn-fx','btn-share','player-time','player-duration','chapter-markers','load-status',
+ 'sigil-layer','mist-layer','ritual-glow','ember-layer'];
 const ids=Object.fromEntries(idNames.map(id=>[id,new Element()]));
 ids.end.hidden=true;ids.player.hidden=true;ids.hud.hidden=true;
 ids.audio.paused=true;ids.audio.readyState=0;ids.audio.currentTime=0;
@@ -113,4 +114,30 @@ assert.equal(ids.player.hidden,true);
 ids['btn-replay'].dispatch('click');
 assert.equal(ids.end.hidden,true);
 assert.equal(ids.seek.value,'0');
-console.log('OK: new story arc, asset evidence, gameplay mockups, choices, seek, pause, mute, replay.');
+
+// Ritual visuals belong to the seal and well, not to ordinary investigation.
+// Previous playback test enabled reduced motion; restore full motion to inspect ritual frames.
+ids['btn-fx'].dispatch('click');
+assert.ok(!ids.stage.classList.contains('soft-fx'),'full ritual motion can be restored');
+for(const id of ['mist-layer','ritual-glow','ember-layer','sigil-layer'])
+ assert.match(html,new RegExp('id="'+id+'"|class="'+id+'"'),'missing atmospheric layer '+id);
+assert.match(css,/backdrop-filter:blur\(14px\)/,'frosted evidence panel is required');
+assert.match(css,/ritualBreath/,'subtle seal pulse is required');
+assert.match(css,/\.stage\.soft-fx \.sigil-layer/,'reduced-motion toggle must suppress sigil');
+assert.match(css,/\.stage:not\(\.is-playing\) \.mist-layer/,'pause must suspend mist');
+assert.match(js,/ritual:'seal'/,'seal ritual cue required');
+assert.match(js,/ritual:'well'/,'well ritual cue required');
+ids.seek.value='36.3';ids.seek.dispatch('input');flush();
+assert.ok(!ids.stage.classList.contains('ritualized'),'document review must remain un-cursed');
+ids.seek.value='62.5';ids.seek.dispatch('input');flush();
+assert.ok(ids.stage.classList.contains('ritual-seal'),'seal shot must enable ritual motif');
+assert.ok(Number(ids['sigil-layer'].style.opacity)>0,'sigil must show on seal close-up');
+ids.seek.value='65.2';ids.seek.dispatch('input');flush();
+assert.ok(ids.stage.classList.contains('ritual-well'),'well decision must retain seal motif');
+assert.ok(Number(ids['sigil-layer'].style.opacity)>0,'sigil must show near well');
+ids['btn-fx'].dispatch('click');
+assert.equal(ids['sigil-layer'].style.opacity,'0','reduced motion must remove animated sigil');
+ids.seek.value='36.3';ids.seek.dispatch('input');flush();
+assert.ok(!ids.stage.classList.contains('ritualized'),'seeking away must clear ritual state');
+
+console.log('OK: story, gameplay, controls, soft glass, ritual scene timing, accessibility.');

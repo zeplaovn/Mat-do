@@ -181,3 +181,113 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
  .end h2{font-size:clamp(46px,7vw,80px)}.end-logo{max-height:14vh;margin-top:7px}.end-actions{margin-top:10px}.end-sub{margin-top:6px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.plate-art{transform:none!important}.cursor-dot,.hover-dot,.cut-flash{display:none!important}}
+
+/* ===== ATMOSPHERIC RITUAL PASS / NOV 2026 =====
+   No new external assets. All layers are behind story captions and controls. */
+.mist-layer,.ritual-glow,.ember-layer,.sigil-layer{position:absolute;inset:0;pointer-events:none}
+.mist-layer{z-index:3;inset:-9%;opacity:.24;filter:blur(24px);
+ background:
+ radial-gradient(ellipse 52% 19% at 18% 64%,rgba(184,203,189,.16),transparent 83%),
+ radial-gradient(ellipse 45% 20% at 76% 44%,rgba(204,213,190,.11),transparent 85%),
+ radial-gradient(ellipse 57% 20% at 59% 91%,rgba(139,171,155,.18),transparent 79%);
+ animation:trailerMist 21s ease-in-out infinite alternate}
+@keyframes trailerMist{
+ 0%{transform:translate3d(-2%,1%,0) scale(1.01)}
+ 100%{transform:translate3d(2.3%,-2%,0) scale(1.07)}
+}
+.stage.gameplay .mist-layer{opacity:.12}
+.stage.photo .mist-layer{opacity:.17}
+.ritual-glow{z-index:3;opacity:0;
+ background:
+ radial-gradient(ellipse 35% 44% at 48% 53%,rgba(157,55,42,.14),transparent 78%),
+ radial-gradient(ellipse 40% 37% at 51% 55%,rgba(207,151,94,.1),transparent 80%);
+ mix-blend-mode:screen;transition:opacity .85s ease}
+.stage.ritualized .ritual-glow{opacity:.52}
+.stage.ritual-incense .ritual-glow{opacity:.18}
+.ember-layer{z-index:3;opacity:0;
+ background-image:
+ radial-gradient(circle,rgba(222,182,130,.62) 0 1px,transparent 1.7px),
+ radial-gradient(circle,rgba(213,215,190,.37) 0 .65px,transparent 1.45px),
+ radial-gradient(circle,rgba(164,83,55,.36) 0 1px,transparent 1.7px);
+ background-size:211px 237px,307px 279px,367px 341px;
+ background-position:18px 35px,82px 109px,35px 223px;
+ filter:blur(.35px);
+ animation:ritualAsh 24s linear infinite;transition:opacity .7s}
+.stage.ritualized .ember-layer{opacity:.17}
+.stage.ritual-incense .ember-layer{opacity:.09}
+@keyframes ritualAsh{
+ from{transform:translate3d(0,3%,0)}
+ to{transform:translate3d(1.2%,-5%,0)}
+}
+.sigil-layer{z-index:5;opacity:0;display:grid;place-items:center;
+ transition:opacity .55s ease}
+.sigil-halo{position:absolute;left:50%;top:50%;
+ width:clamp(185px,31vw,430px);aspect-ratio:1;transform:translate(-50%,-50%);
+ color:#b46d5f;filter:drop-shadow(0 0 18px rgba(152,61,44,.22));
+ animation:ritualBreath 4.2s ease-in-out infinite}
+.sigil-halo:before,.sigil-halo:after{
+ content:"";position:absolute;inset:9%;border-radius:50%;
+ border:1px solid rgba(178,89,63,.22);box-shadow:0 0 26px rgba(131,51,41,.12),inset 0 0 21px rgba(159,95,69,.11)}
+.sigil-halo:after{inset:22%;border-color:rgba(213,170,124,.2);box-shadow:inset 0 0 19px rgba(213,170,124,.08)}
+.sigil-mark{width:100%;height:100%;display:block}
+.stage.ritual-well .sigil-halo{left:34%;top:53%;width:clamp(180px,28vw,350px)}
+.stage.ritual-seal .sigil-halo{left:50%;top:52%}
+@keyframes ritualBreath{
+ 0%,100%{filter:drop-shadow(0 0 10px rgba(152,61,44,.17));transform:translate(-50%,-50%) scale(.97)}
+ 50%{filter:drop-shadow(0 0 23px rgba(152,61,44,.36));transform:translate(-50%,-50%) scale(1.025)}
+}
+/* Softly lit, fogged glass panels instead of app-like hard rectangles. */
+.evidence-board,.choice-panel,.timeline-board,.inspect-label,.game-hud{
+ background:linear-gradient(155deg,rgba(18,28,25,.78),rgba(5,12,11,.86) 74%);
+ border:1px solid rgba(211,194,158,.18);
+ border-radius:15px;
+ -webkit-backdrop-filter:blur(14px) saturate(.72);
+ backdrop-filter:blur(14px) saturate(.72);
+ box-shadow:0 18px 56px rgba(0,0,0,.49),inset 0 1px 0 rgba(245,234,205,.065),inset 0 0 30px rgba(153,103,76,.045)}
+.inspect-label{border-left:2px solid rgba(207,177,125,.7);border-radius:3px 13px 13px 3px}
+.game-hud{border-radius:13px}
+.evidence-board,.choice-panel{overflow:hidden;isolation:isolate}
+.evidence-board:before,.choice-panel:before{
+ content:"";position:absolute;inset:-15% -8%;pointer-events:none;z-index:-1;
+ background:
+ radial-gradient(ellipse 27% 30% at 29% 76%,rgba(213,213,195,.13),transparent 88%),
+ radial-gradient(ellipse 36% 35% at 75% 27%,rgba(168,132,105,.12),transparent 90%);
+ filter:blur(19px);opacity:.75;animation:incenseCurl 10s ease-in-out infinite alternate}
+@keyframes incenseCurl{
+ 0%{transform:translate3d(-2%,2%,0);opacity:.39}
+ 100%{transform:translate3d(2%,-3%,0);opacity:.71}
+}
+.evidence-board .proof-line,.timeline-board .timeline-card{
+ border-color:rgba(211,201,167,.17)}
+.fake-choice{border-radius:10px;background:linear-gradient(100deg,rgba(11,23,19,.76),rgba(9,16,15,.44));border-color:rgba(221,210,184,.19)}
+.fake-choice.danger{border-color:rgba(176,72,61,.36);box-shadow:inset 2px 0 0 rgba(176,72,61,.32)}
+.narrative{filter:blur(7px);
+ transition:opacity .75s cubic-bezier(.18,.65,.22,1),transform .95s cubic-bezier(.18,.65,.22,1),filter .85s ease}
+.narrative.visible{filter:blur(0)}
+.line{text-shadow:0 3px 19px rgba(0,0,0,.78),0 0 40px rgba(0,0,0,.63),0 0 14px rgba(195,176,128,.06)}
+/* Pause must freeze every decorative animation as well as the film itself. */
+.stage:not(.is-playing) .mist-layer,
+.stage:not(.is-playing) .ember-layer,
+.stage:not(.is-playing) .sigil-halo,
+.stage:not(.is-playing) .evidence-board:before,
+.stage:not(.is-playing) .choice-panel:before{animation-play-state:paused}
+/* The accessible motion toggle leaves a subtle static atmosphere but no pulse, sparks or blur-reveal. */
+.stage.soft-fx .mist-layer{opacity:.12!important;animation:none!important;transform:none!important}
+.stage.soft-fx .ember-layer,.stage.soft-fx .sigil-layer{opacity:0!important;animation:none!important}
+.stage.soft-fx .sigil-halo,.stage.soft-fx .evidence-board:before,.stage.soft-fx .choice-panel:before{animation:none!important}
+.stage.soft-fx .ritual-glow{opacity:.08!important;transition:none!important}
+.stage.soft-fx .narrative{filter:none!important;transition:none!important}
+@media(max-width:650px) and (orientation:portrait){
+ .mist-layer{filter:blur(18px);opacity:.14}
+ .stage.gameplay .mist-layer{opacity:.075}
+ .stage.ritual-well .sigil-halo{left:50%;top:38%;width:min(68vw,285px)}
+ .stage.ritual-seal .sigil-halo{top:43%;width:min(62vw,275px)}
+ .evidence-board,.choice-panel,.timeline-board,.game-hud{-webkit-backdrop-filter:blur(9px) saturate(.73);backdrop-filter:blur(9px) saturate(.73);border-radius:12px}
+ .narrative{filter:blur(4px)}
+}
+@media(prefers-reduced-motion:reduce){
+ .mist-layer,.ember-layer,.sigil-layer{animation:none!important;opacity:0!important}
+ .ritual-glow{opacity:.08!important;transition:none!important}
+ .evidence-board:before,.choice-panel:before{animation:none!important}
+ .narrative{filter:none!important}
+}

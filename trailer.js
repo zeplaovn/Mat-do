@@ -23,7 +23,7 @@ const shots=[
  {d:2.4,img:gp('gp2'),tone:'gameplay',copy:'03:17. Vì sao đồng hồ dừng ở đó?',speaker:'QUAN SÁT',zoom:1.03,focus:'50% 46%'},
  {d:2.7,img:bg('BG16'),tone:'gameplay',ui:'explore',copy:'Tìm thứ người khác bỏ sót.',speaker:'TƯƠNG TÁC',focus:'65% 47%',zoom:1.07},
  {d:2.6,img:prop('POV_Guong_Phong_Tre'),tone:'photo',ui:'viewfinder',copy:'Một bức ảnh chưa nói được toàn bộ sự thật.',speaker:'CHI',sfx:'camera',focus:'56% 45%'},
- {d:2.8,img:bg('BG32'),tone:'gameplay',ui:'exploreBasement',copy:'Manh mối nằm trong cả bóng tối.',speaker:'DÙNG VẬT PHẨM',focus:'58% 50%'},
+ {d:2.8,img:bg('BG32'),tone:'gameplay',ui:'exploreBasement',ritual:'incense',copy:'Manh mối nằm trong cả bóng tối.',speaker:'DÙNG VẬT PHẨM',focus:'58% 50%'},
  {d:2.8,img:prop('Closeup02_Papers'),tone:'memory',ui:'compare',copy:'Hai bản sớ. Hai cách kể.',speaker:'ĐỐI CHIẾU',sfx:'page',focus:'50% 48%'},
  {d:2.9,img:prop('Closeup02_Papers'),tone:'memory',ui:'proof',copy:'Một nét mực khác. Vì sao?',speaker:'PHÁT HIỆN MANH MỐI',cut:'hard',focus:'48% 54%',zoom:1.15},
  {d:2.3,img:prop('Hoi_Uc_Sim_1986'),tone:'memory',copy:'Năm 1986, có người đã lên tiếng.',focus:'52% 43%',zoom:1.07},
@@ -33,9 +33,9 @@ const shots=[
  {d:2.8,img:prop('Hoi_Uc_Phong_Tre_1988'),tone:'memory',copy:'Có một đứa trẻ chỉ muốn giúp mọi người.',focus:'57% 43%',zoom:1.08},
  {d:2.6,img:bg('BG42'),tone:'low-key',copy:'Đêm đó, em đã không trở về.',sfx:'water',focus:'58% 48%'},
  {d:2.6,img:bg('BG29'),tone:'low-key',copy:'Những cái tên còn bị giữ lại.',focus:'50% 58%',zoom:1.06},
- {d:2.7,img:bg('BG40'),copy:'Không thể giải lời nguyền chỉ bằng tin đồn.',focus:'42% 49%'},
- {d:2.5,img:prop('Closeup03_SquareSeal'),tone:'memory',copy:'Chiếc ấn này đang giữ điều gì?',focus:'48% 48%',zoom:1.15},
- {d:3.4,img:prop('POV_Gieng_Tram'),tone:'low-key',ui:'choice',copy:'Bạn dám lựa chọn khi chưa chắc mình đúng?',speaker:'QUYẾT ĐỊNH',focus:'48% 54%',zoom:1.1},
+ {d:2.7,img:bg('BG40'),ritual:'incense',copy:'Không thể giải lời nguyền chỉ bằng tin đồn.',focus:'42% 49%'},
+ {d:2.5,img:prop('Closeup03_SquareSeal'),tone:'memory',ritual:'seal',copy:'Chiếc ấn này đang giữ điều gì?',focus:'48% 48%',zoom:1.15},
+ {d:3.4,img:prop('POV_Gieng_Tram'),tone:'low-key',ui:'choice',ritual:'well',copy:'Bạn dám lựa chọn khi chưa chắc mình đúng?',speaker:'QUYẾT ĐỊNH',focus:'48% 54%',zoom:1.1},
  {d:2,img:null,tone:'black',title:'Nếu sai thì sao?',cut:'hard'},
  {d:3.0,img:bg('BG09'),tone:'wide',final:true,focus:'50% 48%',zoom:1.07}
 ];
@@ -44,7 +44,7 @@ const stage=$('stage'),layers=[...document.querySelectorAll('.plate')],audio=$('
 const start=$('start'),end=$('end'),player=$('player'),hud=$('hud'),seek=$('seek');
 const narrative=$('narrative'),speaker=$('speaker'),line=$('line'),artifact=$('artifact');
 const intertitle=$('intertitle'),finalTitle=$('final-title'),cutFlash=$('cut-flash'),counter=$('shot-counter');
-const share=$('btn-share'),fxBtn=$('btn-fx');
+const share=$('btn-share'),fxBtn=$('btn-fx'),sigilLayer=$('sigil-layer');
 let playing=false,muted=false;
 let softFx=typeof matchMedia==='function'&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 let position=0,shown=-1,front=0,raf=0,last=0,loadDone=0,fxCues=[];
@@ -129,7 +129,7 @@ function renderShot(index,elapsed,withCue=false){
  image.style.setProperty('--drift',index%2?'1.4%':'-1.1%');
  image.style.setProperty('--rise',index%3===0?'-.6%':'.5%');
  inc.classList.add('on');out.classList.remove('on');front=next;shown=index;
- stage.className='stage '+(playing?'is-playing ':'')+(softFx?'soft-fx ':'')+(shot.tone||'')+' '+(shot.center?'centered ':'')+(shot.title?'typewriter ':'')+(shot.ui==='choice'?'has-choice':'');
+ stage.className='stage '+(playing?'is-playing ':'')+(softFx?'soft-fx ':'')+(shot.tone||'')+' '+(shot.center?'centered ':'')+(shot.title?'typewriter ':'')+(shot.ui==='choice'?'has-choice ':'')+(shot.ritual?'ritualized ritual-'+shot.ritual:'');
  speaker.textContent=shot.speaker||'';
  line.textContent=shot.copy||'';
  narrative.classList.toggle('visible',!!shot.copy);
@@ -154,6 +154,11 @@ function draw(force=false,withCue=false){
  intertitle.classList.toggle('visible',!!shot.title&&elapsed>=.2);
  finalTitle.classList.toggle('visible',!!shot.final&&elapsed>.36);
  artifact.style.opacity=elapsed>.2&&elapsed<shot.d-.28?'1':'0';
+ // Ritual appears only around the original seal and well shots, never on unrelated evidence.
+ // Scrubbing calculates the same state without playing sound or restarting effects elsewhere.
+ const sigilShot=shot.ritual==='seal'||shot.ritual==='well';
+ const envelope=Math.max(0,Math.min(1,elapsed/.55,(shot.d-elapsed)/.65));
+ sigilLayer.style.opacity=sigilShot&&!softFx?String(envelope*(shot.ritual==='well'?.28:.4)):'0';
  cutFlash.style.opacity=softFx?'0':shot.sfx==='camera'&&elapsed<.09?String(.22*(1-elapsed/.09)):'0';
  const fadeIn=Math.min(1,position/2.5),fadeOut=Math.min(1,(duration-position)/3.7);
  audio.volume=Math.max(0,Math.min(.58,.58*fadeIn*fadeOut));
@@ -167,6 +172,7 @@ function pause(){
 function finish(){
  pause();position=duration;end.hidden=false;start.hidden=true;player.hidden=true;hud.hidden=true;
  narrative.classList.remove('visible');intertitle.classList.remove('visible');artifact.replaceChildren();
+ sigilLayer.style.opacity='0';stage.classList.remove('ritualized','ritual-seal','ritual-well','ritual-incense');
  $('btn-replay').focus({preventScroll:true});
 }
 function tick(t){
