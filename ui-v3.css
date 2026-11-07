@@ -67,3 +67,24 @@ html[data-fx=low] .dlg .dlg-box{backdrop-filter:none}
 .hotspot:hover:before,.hotspot:focus-visible:before{filter:hue-rotate(227deg) brightness(1.2) drop-shadow(0 0 5px rgba(226,177,88,.7))}
 .hotspot--special:before{filter:hue-rotate(185deg) saturate(1.5) drop-shadow(0 2px 3px rgba(0,0,0,.8))}
 .hotspot--special:hover:before,.hotspot--special:focus-visible:before{filter:hue-rotate(185deg) saturate(1.5) brightness(1.2) drop-shadow(0 0 5px rgba(226,90,60,.7))}
+
+/* ---------- Khung chat kiểu Áo Cưới Giấy ----------
+   Tấm kính mờ nhám phủ lên cảnh, chữ trắng, thẻ tên ở góc phải, nhân vật đứng bên phải đè lên khung.
+   Gỡ khối này để quay lại khung viền kép ở trên. */
+.dlg .dlg-box{
+  align-items:center;min-height:clamp(172px,26vh,250px);padding:22px 20px;
+  border:0;border-radius:6px;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .86 0 0 0 0 .66 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E"),
+    radial-gradient(130% 120% at 0% 0%,rgba(168,42,31,.28),transparent 60%),
+    linear-gradient(180deg,rgba(70,26,18,.66),rgba(34,12,9,.74));
+  backdrop-filter:blur(3px);
+  box-shadow:inset 0 0 0 1px rgba(255,222,160,.16),inset 0 0 28px rgba(0,0,0,.35),0 10px 28px rgba(0,0,0,.5);
+}
+.dlg .dlg-text{min-height:0;color:#fff;font-size:clamp(16px,4.3vw,20px);line-height:1.7;text-shadow:0 1px 4px rgba(0,0,0,.6)}
+.dlg .dlg-name{left:auto;right:14px;top:-17px;padding:6px 16px;border-radius:4px;
+  background:linear-gradient(180deg,rgba(120,34,24,.92),rgba(70,18,12,.94));border:1px solid rgba(226,177,88,.7)}
+.dlg.has-portrait .dlg-name{left:auto;right:14px}
+.dlg-top{justify-content:flex-end}
+.dlg-portrait-wrap{margin:0 10px -22px 0}
+html[data-fx=low] .dlg .dlg-box{background:linear-gradient(180deg,rgba(60,22,15,.88),rgba(30,11,8,.92))}
