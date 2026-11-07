@@ -1,181 +1,231 @@
+/* STORY-FIRST TRAILER / Mai 2026
+ * Asset-based cinematic sequence. Gameplay inserts are editorial recreations
+ * of mechanics already in game.js, not screen-recorded footage.
+ * Each beat must answer: why would the viewer want to play? */
 (() => {
 'use strict';
 const $=id=>document.getElementById(id);
-// Thứ tự cảnh, lời dẫn và ảnh của trailer gốc trên GitHub.
+const A='assets/';
+const bg=n=>A+'background/'+n+'.webp';
+const prop=n=>A+'props/'+n+'.webp';
+const gp=n=>A+'trailer/'+n+'.webp';
 const shots=[
- {d:1.6,bg:'01',motion:'out',caps:[[.18,'ĐỪNG TRẢ LỜI.','red']]},
- {d:6.5,bg:'01',loc:'ĐỒNG CHAY · THÁNG 3, 2026',tone:'cold',o:'30% 62%',motion:'in',caps:[[.6,'Tháng Ba, năm 2026.','small'],[2.6,'Một nhóm bạn lên Đồng Chay để ghi lại một truyền thuyết.','']]},
- {d:6.5,bg:'09',loc:'BIỆT THỰ VÂN HÒA · SÂN NHÀ',tone:'cold',motion:'pan',caps:[[.4,'Biệt thự Vân Hòa.','big'],[2.8,'Bị bỏ hoang từ năm 1988.','small']]},
- {d:5.5,bg:'11',loc:'ĐẠI SẢNH',tone:'cold',o:'50% 70%',tr:'dip',motion:'in',caps:[[.6,'Không ai trong làng dám nhắc tên nó.','']]},
- {d:5,bg:'12',loc:'PHÒNG THỜ',tone:'cold',o:'60% 40%',tr:'flash',motion:'in',flash:true,caps:[[.5,'Và cánh cổng vừa khép lại sau lưng họ.','red']]},
- {d:6,faces:true,bg:'11',tone:'cold',tr:'whip',motion:'out',caps:[[.5,'Một chuyến đi. Một đêm. Một bí mật.','small']]},
- {d:5.5,bg:'16',loc:'PHÒNG TRẺ',o:'45% 55%',tr:'glitch',motion:'in',tone:'red',caps:[[.5,'Trong bóng tối, có một đứa trẻ vẫn đang chờ.','red']]},
- {d:1.88,bg:'16',tone:'dread',scare:true,o:'50% 58%',tr:'dip',motion:'in',caps:[[.25,'Đừng trả lời khi bóng tối gọi tên bạn.','red small']]},
- {d:3.2,img:'gp1',pos:'72% 50%',gp:true,tr:'flash',flash:true,motion:'gp',cursor:{from:[30,18],to:[87,68],at:.5,dur:1.2,click:1.85},caps:[[.25,'KHÁM PHÁ','big']]},
- {d:3.2,img:'gp2',pos:'50% 50%',gp:true,tr:'whip',motion:'gp',cursor:{from:[78,75],to:[52.5,35.5],at:.4,dur:1,click:1.5},caps:[[.25,'GIẢI MÃ','big']]},
- {d:3.2,img:'gp3',pos:'30% 50%',gp:true,tr:'whip',motion:'gp',cursor:{from:[40,60],to:[62,92],at:.5,dur:1.1,click:1.9},caps:[[.25,'TÌM SỰ THẬT','big']]},
- {d:3.2,img:'gp4',pos:'50% 55%',gp:true,tr:'glitch',flash:true,tone:'shake',motion:'gp',scream:true,caps:[[.2,'SỐNG SÓT','big red glitch']]},
- {d:3.2,img:'gp5',pos:'30% 50%',gp:true,tr:'dip',motion:'gp',cursor:{from:[60,50],to:[90,92],at:.8,dur:1,click:2.1},caps:[[.25,'LẮNG NGHE','big']]},
- {d:6,bg:'29',loc:'VƯỜN SAU · NHỮNG NẤM MỘ',tr:'dip',motion:'pan',caps:[[.5,'Những nấm mộ không bia. Những cái tên bị xóa.','']]},
- {d:5.5,bg:'32',loc:'HẦM DƯỚI BIỆT THỰ',o:'50% 60%',tr:'dip',motion:'in',tone:'red',caps:[[.5,'Sự thật nằm dưới lòng đất.','red']]},
- {d:1.2,bg:'32',tr:'glitch',motion:'in',tone:'red shake',flash:true,caps:[]},
- {d:5.5,bg:'33',o:'50% 45%',tr:'dip',motion:'out',caps:[[.8,'Họ không muốn bị lãng quên.','']]}
+ {d:2.7,img:bg('BG42'),tone:'low-key',copy:'Không ai đứng bên giếng.',sfx:'water',focus:'54% 48%',zoom:1.11},
+ {d:2.9,img:prop('Anh_Gieng_Hai_Bong'),tone:'photo',ui:'photo',copy:'Nhưng tấm ảnh lại có hai bóng người.',speaker:'ẢNH CHỤP CỦA CHI',sfx:'camera',cut:'hard',focus:'56% 45%',zoom:1.08},
+ {d:1.8,img:prop('Anh_Gieng_Hai_Bong'),tone:'photo',copy:'Họ là ai?',cut:'hard',center:true,zoom:1.18},
+ {d:2.8,img:bg('BG01'),copy:'Bà ngoại tớ từng sống ở vùng này.',speaker:'Vy',focus:'44% 58%'},
+ {d:2.6,img:prop('POV_Ba_Ban_Nuoc'),copy:'Bà ơi, bà có biết bà Cúc không ạ?',speaker:'Vy',focus:'36% 48%',zoom:1.13},
+ {d:2.3,img:prop('POV_Ba_Ban_Nuoc'),copy:'Lâu lắm rồi không ai gọi cái tên ấy.',speaker:'Bà bán nước',cut:'hard',focus:'41% 44%',zoom:1.19},
+ {d:2.4,img:bg('BG06'),copy:'Một chuyến đi tìm lời giải.',focus:'60% 50%'},
+ {d:2.5,img:bg('BG08'),copy:'Một ngôi nhà không ai muốn nhắc tới.',sfx:'door',focus:'50% 53%',zoom:1.12},
+ {d:2.7,img:bg('BG09'),copy:'Có ai vừa kéo cổng không?',speaker:'Vũ',cut:'hard',focus:'53% 48%',zoom:1.1},
+ {d:2.3,img:gp('gp1'),tone:'gameplay',copy:'Bạn sẽ tự bước vào.',speaker:'TRẢI NGHIỆM TRONG GAME',zoom:1.025},
+ {d:2.4,img:gp('gp2'),tone:'gameplay',copy:'03:17. Vì sao đồng hồ dừng ở đó?',speaker:'QUAN SÁT',zoom:1.03,focus:'50% 46%'},
+ {d:2.7,img:bg('BG16'),tone:'gameplay',ui:'explore',copy:'Tìm thứ người khác bỏ sót.',speaker:'TƯƠNG TÁC',focus:'65% 47%',zoom:1.07},
+ {d:2.6,img:prop('POV_Guong_Phong_Tre'),tone:'photo',ui:'viewfinder',copy:'Một bức ảnh chưa nói được toàn bộ sự thật.',speaker:'CHI',sfx:'camera',focus:'56% 45%'},
+ {d:2.8,img:bg('BG32'),tone:'gameplay',ui:'exploreBasement',copy:'Manh mối nằm trong cả bóng tối.',speaker:'DÙNG VẬT PHẨM',focus:'58% 50%'},
+ {d:2.8,img:prop('Closeup02_Papers'),tone:'memory',ui:'compare',copy:'Hai bản sớ. Hai cách kể.',speaker:'ĐỐI CHIẾU',sfx:'page',focus:'50% 48%'},
+ {d:2.9,img:prop('Closeup02_Papers'),tone:'memory',ui:'proof',copy:'Một nét mực khác. Vì sao?',speaker:'PHÁT HIỆN MANH MỐI',cut:'hard',focus:'48% 54%',zoom:1.15},
+ {d:2.3,img:prop('Hoi_Uc_Sim_1986'),tone:'memory',copy:'Năm 1986, có người đã lên tiếng.',focus:'52% 43%',zoom:1.07},
+ {d:2.4,img:bg('BG19'),tone:'low-key',copy:'Nhưng bí mật không dừng lại ở đó.',focus:'50% 56%'},
+ {d:2.4,img:prop('Hoi_Uc_Can_Ham_1988'),tone:'memory',copy:'Năm 1988, tiếng kêu cứu vang lên từ hầm.',sfx:'knock',focus:'59% 46%',zoom:1.1},
+ {d:2.8,img:prop('Hoi_Uc_So_Sach_1988'),tone:'memory',ui:'timeline',copy:'Ai đã biết? Ai đã im lặng?',focus:'49% 44%'},
+ {d:2.8,img:prop('Hoi_Uc_Phong_Tre_1988'),tone:'memory',copy:'Có một đứa trẻ chỉ muốn giúp mọi người.',focus:'57% 43%',zoom:1.08},
+ {d:2.6,img:bg('BG42'),tone:'low-key',copy:'Đêm đó, em đã không trở về.',sfx:'water',focus:'58% 48%'},
+ {d:2.6,img:bg('BG29'),tone:'low-key',copy:'Những cái tên còn bị giữ lại.',focus:'50% 58%',zoom:1.06},
+ {d:2.7,img:bg('BG40'),copy:'Không thể giải lời nguyền chỉ bằng tin đồn.',focus:'42% 49%'},
+ {d:2.5,img:prop('Closeup03_SquareSeal'),tone:'memory',copy:'Chiếc ấn này đang giữ điều gì?',focus:'48% 48%',zoom:1.15},
+ {d:3.4,img:prop('POV_Gieng_Tram'),tone:'low-key',ui:'choice',copy:'Bạn dám lựa chọn khi chưa chắc mình đúng?',speaker:'QUYẾT ĐỊNH',focus:'48% 54%',zoom:1.1},
+ {d:2,img:null,tone:'black',title:'Nếu sai thì sao?',cut:'hard'},
+ {d:3.0,img:bg('BG09'),tone:'wide',final:true,focus:'50% 48%',zoom:1.07}
 ];
-/* Nhịp mạnh của nhạc (phân tích từ trailer.mp3): mỗi nhịp tạo một cú giật hình + nháy sáng. Số thứ hai là độ mạnh 1-3. */
-const hits=[[6.52,1],[8.12,2],[12.88,3],[19.28,1],[22.48,2],[25.68,2],[28.88,1],[32.12,2],[35.28,1],[38.48,3],[41.68,2],[44.88,2],[48.08,3],[51.3,2],[54.5,2],[57.7,2],[60.9,2],[64.1,2],[67.3,1]];
-const faces=[['01_Dong','KHÔI'],['02_Nam','VŨ'],['03_Tuyet','HÀ'],['04_Anh','CHI'],['05_Nguyet','VY']];
-const bg=id=>`assets/background/${id==='01'?'BG01-fixed':`BG${id}`}.webp`;
-let duration=0;shots.forEach(shot=>{shot.start=duration;duration+=shot.d});
-// Ba hồi của trailer: giữ nguyên chuỗi cảnh/âm nhạc, bổ sung định hướng xem.
-const chapters=[{from:0,label:'I · LỜI ĐỒN'},{from:shots[8].start,label:'II · LẦN THEO DẤU VẾT'},{from:shots[13].start,label:'III · SỰ THẬT BỊ CHÔN GIẤU'}];
-const stage=$('stage'),startCard=$('start'),endCard=$('end'),player=$('player'),hud=$('hud'),audio=$('audio'),seek=$('seek'),caps=$('caps'),layers=[...document.querySelectorAll('.shot')];
-const cursorEl=$('cursor'),slate=$('slate'),streak=$('streak'),dust=$('dust'),loadStatus=$('load-status'),shareBtn=$('btn-share'),actLabel=$('act-label'),fxBtn=$('btn-fx'),chapterMarkers=$('chapter-markers');
-let playing=false,position=0,last=0,frame=0,shown=-1,front=0,muted=false,capNodes=[],faceNodes=[],transition=0,slateNode=null;
-const reducedMotion=typeof matchMedia==='function'&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-let softFx=reducedMotion;
-function renderFx(){
+const duration=shots.reduce((sum,shot)=>{shot.start=sum;return sum+shot.d},0);
+const stage=$('stage'),layers=[...document.querySelectorAll('.plate')],audio=$('audio');
+const start=$('start'),end=$('end'),player=$('player'),hud=$('hud'),seek=$('seek');
+const narrative=$('narrative'),speaker=$('speaker'),line=$('line'),artifact=$('artifact');
+const intertitle=$('intertitle'),finalTitle=$('final-title'),cutFlash=$('cut-flash'),counter=$('shot-counter');
+const share=$('btn-share'),fxBtn=$('btn-fx');
+let playing=false,muted=false;
+let softFx=typeof matchMedia==='function'&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+let position=0,shown=-1,front=0,raf=0,last=0,loadDone=0,fxCues=[];
+const format=t=>String(Math.floor(t/60)).padStart(2,'0')+':'+String(Math.floor(t%60)).padStart(2,'0');
+seek.max=String(duration);$('player-duration').textContent=format(duration);
+[9,14,22,25].forEach(index=>{
+ const m=document.createElement('i');m.className='chapter-marker';
+ m.style.setProperty('--at',(100*shots[index].start/duration).toFixed(2)+'%');
+ $('chapter-markers').appendChild(m)
+});
+function updateFX(){
  stage.classList.toggle('soft-fx',softFx);
- if(fxBtn){fxBtn.setAttribute('aria-pressed',String(softFx));fxBtn.setAttribute('aria-label',softFx?'Bật hiệu ứng chớp':'Giảm hiệu ứng chớp');fxBtn.textContent=softFx?'Nháy: Tắt':'Giảm nháy'}
+ fxBtn.setAttribute('aria-pressed',String(softFx));
+ fxBtn.textContent=softFx?'Chuyển động: Giảm':'Giảm chuyển động';
+ fxBtn.setAttribute('aria-label',softFx?'Bật chuyển động':'Giảm chuyển động');
 }
-renderFx();
-const time=s=>`${String(Math.floor(s/60)).padStart(2,'0')}:${String(Math.floor(s%60)).padStart(2,'0')}`;
-seek.max=String(duration);$('player-duration').textContent=time(duration);
-if(chapterMarkers)for(const chapter of chapters.slice(1)){
- const marker=document.createElement('i');marker.className='chapter-marker';marker.title=chapter.label;
- marker.style.setProperty('--at',(chapter.from/duration*100).toFixed(2)+'%');chapterMarkers.appendChild(marker);
+updateFX();
+const assets=[...new Set(shots.filter(x=>x.img).map(x=>x.img)),A+'logo.webp'];
+function preload(){
+ const first=assets.slice(0,6);
+ first.forEach(src=>{
+  if(typeof Image!=='function')return;
+  const img=new Image(),done=()=>{
+   loadDone++;
+   $('load-status').textContent=loadDone>=first.length?'Sẵn sàng phát':'Đang chuẩn bị cảnh phim '+Math.round(loadDone/first.length*100)+'%'
+  };
+  img.onload=img.onerror=done;img.src=src;
+ });
+ if(typeof Image==='function'&&typeof setTimeout==='function')setTimeout(()=>{
+  assets.slice(6).forEach(src=>{const i=new Image();i.src=src});
+ },300);
 }
-/* Tách chữ theo từ rồi theo ký tự để hiện lần lượt (từ mờ, nhỏ, lệch xuống sang nét). */
-/* Chữ là một khối biên tập điện ảnh, không tách từng ký tự. */
-function splitText(el,text){el.textContent=text}
-function setShot(index,elapsed){
- shown=index;const shot=shots[index],next=1-front,layer=layers[next],image=layer.firstElementChild;
- layer.className='shot '+(shot.tone||'')+(shot.tr?' tr-'+shot.tr:'')+(shot.gp?' gp':'');
- if(stage.classList){stage.classList.toggle('gp',!!shot.gp);stage.classList.toggle('scare',!!shot.scare)}image.className='bg '+shot.motion;
- const seed=Math.sin((index+1)*12.9898)*43758.5453,rnd=seed-Math.floor(seed);image.style.setProperty('--rot',((rnd-.5)*1.4).toFixed(2)+'deg');image.style.setProperty('--dx',((rnd-.5)*4).toFixed(2)+'%');image.style.setProperty('--dy',(((rnd*7)%1-.5)*3).toFixed(2)+'%');
- image.style.backgroundImage=`url("${shot.img?`assets/trailer/${shot.img}.webp`:bg(shot.bg)}")`;image.style.transformOrigin=shot.o||'50% 50%';image.style.backgroundPosition=shot.pos||'center';image.style.setProperty('--d',(shot.d+1.2)+'s');image.style.setProperty('--elapsed',-Math.max(0,elapsed)+'s');
- const prior=front;front=next;const ticket=++transition;
- requestAnimationFrame(()=>{if(ticket!==transition)return;layers[prior].classList.remove('on');layer.classList.add('on')});
- caps.replaceChildren();capNodes=[];faceNodes=[];
- if(slate){slate.replaceChildren();slateNode=null;if(shot.loc){const el=document.createElement('div');el.className='slate-in';el.textContent=shot.loc;el.setAttribute('aria-hidden','true');slate.appendChild(el);slateNode=el}}
- for(const [at,text,cls] of shot.caps){const el=document.createElement('div');el.className='cap '+cls;el.setAttribute('aria-hidden','true');el.setAttribute('aria-label',text);splitText(el,text,cls);caps.appendChild(el);capNodes.push({el,at,visible:false})}
- if(shot.faces){
-  const row=document.createElement('div');row.className='faces';caps.appendChild(row);
-  faces.forEach(([file,name],i)=>{const person=document.createElement('div');person.className='face';person.setAttribute('aria-hidden','true');const img=document.createElement('img');img.src=`assets/portraits/${file}_portrait.webp`;img.alt='';const label=document.createElement('span');label.textContent=name;person.append(img,label);row.appendChild(person);faceNodes.push({el:person,at:.5+i*.65,visible:false})});
+preload();
+const sfxMap={camera:'Chup_anh.mp3',page:'pageturn.mp3',door:'door-slam.mp3',knock:'knock-on-the-door.mp3',water:'nuoc_chay.mp3'};
+const sfxVolume={camera:.38,page:.22,door:.3,knock:.34,water:.14};
+function cue(name){
+ if(muted||!playing||!name||typeof Audio!=='function')return;
+ const file=sfxMap[name];if(!file)return;
+ try{
+  const a=new Audio(A+'sound/'+file);a.volume=sfxVolume[name]||.2;
+  const p=a.play();if(p&&p.catch)p.catch(()=>{});
+  fxCues.push(a);
+  fxCues=fxCues.filter(x=>!x.ended&&x.currentTime<5);
+ }catch(_){}
+}
+function stopCues(){
+ fxCues.forEach(a=>{try{a.pause();a.currentTime=0}catch(_){}});
+ fxCues=[]
+}
+function artifactFor(type){
+ if(!type)return '';
+ const icon=(file,active)=>'<img '+(active?'class="active" ':'')+'src="'+A+'items/'+file+'" alt="">';
+ switch(type){
+ case 'photo':
+  return '<div class="photo-stamp"><strong>CHI / ẢNH CHỤP</strong><span>THỨ MẮT THƯỜNG KHÔNG THẤY</span></div>';
+ case 'viewfinder':
+  return '<div class="photo-frame"></div><div class="photo-rec"><b></b> MÁY ẢNH / CHẾ ĐỘ NGẮM</div><div class="cursor-dot" style="--x:51%;--y:48%"></div>';
+ case 'explore':
+  return '<div class="cursor-dot" style="--x:89%;--y:35%"></div><div class="inspect-label"><span>ĐIỂM TƯƠNG TÁC</span>Gương trong phòng trẻ</div><div class="game-hud">'+icon('01_May_Quay_128x128.webp',true)+icon('02_Den_Pin_128x128.webp',false)+icon('03_So_Tay_128x128.webp',false)+'</div>';
+ case 'exploreBasement':
+  return '<div class="cursor-dot" style="--x:70%;--y:47%"></div><div class="inspect-label"><span>TÌM DẤU VẾT</span>Kho đồ lễ dưới hầm</div><div class="game-hud">'+icon('01_May_Quay_128x128.webp',true)+icon('02_Den_Pin_128x128.webp',false)+icon('03_So_Tay_128x128.webp',false)+'</div>';
+ case 'compare':
+  return '<div class="evidence-board"><small>HỒ SƠ / ĐỐI CHIẾU</small><strong>Cùng một lời khấn?</strong><p>Hai nguồn ghi chép không hoàn toàn giống nhau. Bạn sẽ tin nguồn nào?</p><span class="proof-line"><i></i>Danh hiệu trên bài vị</span><span class="proof-line"><i></i>Nét chữ và mực</span></div>';
+ case 'proof':
+  return '<div class="evidence-board"><small>PHÁT HIỆN / TÀI LIỆU</small><strong>Một chỗ bị sửa.</strong><p>Phải có người đã thay đổi lời khấn. Nhưng vì sao?</p><span class="proof-line marked"><i></i>Vết nối giấy khác màu</span><span class="found">✓ GHI VÀO HỒ SƠ</span></div>';
+ case 'timeline':
+  return '<div class="timeline-board"><div class="timeline-card"><b>1986</b><span>Một lời cảnh báo</span></div><div class="timeline-card"><b>1988</b><span>Căn hầm bị khóa</span></div><div class="timeline-card"><b>2026</b><span>Bạn đối chiếu chứng cứ</span></div></div>';
+ case 'choice':
+  return '<div class="choice-panel"><small>QUYẾT ĐỊNH / MIỆNG GIẾNG</small><h3>Nhổ ấn?</h3><p>Bạn vẫn chưa biết thứ gì đang bị giữ bên dưới.</p><div class="fake-choice danger">Vẫn kéo ấn ra</div><div class="fake-choice">Dừng lại và điều tra tiếp</div><div class="hover-dot"></div></div>';
+ default:return '';
  }
 }
-/* Âm thanh dọa tự tổng hợp bằng Web Audio (không cần tệp): tim đập, nhạc dâng, nổ, tiếng rít. */
-let actx=null,master=null;
-function sfxInit(){
- if(actx){if(actx.resume)actx.resume();return}
- const AC=typeof AudioContext!=='undefined'?AudioContext:(typeof webkitAudioContext!=='undefined'?webkitAudioContext:null);
- if(!AC)return;
- try{actx=new AC();master=actx.createGain();master.gain.value=0;master.connect(actx.destination)}catch(_){actx=null}
+function renderShot(index,elapsed,withCue=false){
+ const shot=shots[index],next=1-front,inc=layers[next],out=layers[front],image=inc.firstElementChild;
+ inc.className='plate '+(shot.cut==='hard'?'hard-cut':'slow-cut');
+ image.style.backgroundImage=shot.img?'url("'+shot.img+'")':'none';
+ image.style.setProperty('--duration',(shot.d+.6).toFixed(2)+'s');
+ image.style.setProperty('--elapsed',(-elapsed).toFixed(2)+'s');
+ image.style.setProperty('--focus',shot.focus||'50% 50%');
+ image.style.setProperty('--to',String(shot.zoom||1.1));
+ image.style.setProperty('--from',String(shot.zoom?Math.max(1.01,shot.zoom-.07):1.02));
+ image.style.setProperty('--drift',index%2?'1.4%':'-1.1%');
+ image.style.setProperty('--rise',index%3===0?'-.6%':'.5%');
+ inc.classList.add('on');out.classList.remove('on');front=next;shown=index;
+ stage.className='stage '+(playing?'is-playing ':'')+(softFx?'soft-fx ':'')+(shot.tone||'')+' '+(shot.center?'centered ':'')+(shot.title?'typewriter ':'')+(shot.ui==='choice'?'has-choice':'');
+ speaker.textContent=shot.speaker||'';
+ line.textContent=shot.copy||'';
+ narrative.classList.toggle('visible',!!shot.copy);
+ intertitle.textContent=shot.title||'';
+ intertitle.classList.toggle('visible',!!shot.title);
+ finalTitle.classList.toggle('visible',!!shot.final);
+ artifact.innerHTML=artifactFor(shot.ui);
+ counter.textContent=shot.title||shot.final?'':String(index+1).padStart(2,'0')+' / '+String(shots.length).padStart(2,'0');
+ cutFlash.style.opacity='0';
+ if(withCue)cue(shot.sfx);
 }
-function setSfxLevel(){
- if(!master||!actx)return;
- const level=muted||!playing?0:(softFx?.12:.27);
- try{const t=actx.currentTime;master.gain.cancelScheduledValues(t);master.gain.setTargetAtTime(level,t,.035)}
- catch(_){master.gain.value=level}
+function draw(force=false,withCue=false){
+ seek.value=String(position);
+ seek.setAttribute('aria-valuetext',format(position)+' / '+format(duration));
+ $('player-time').textContent=format(position);
+ let index=shots.length-1;
+ for(let i=0;i<shots.length;i++)if(position<shots[i].start+shots[i].d){index=i;break}
+ const shot=shots[index],elapsed=Math.max(0,position-shot.start);
+ if(index!==shown||force)renderShot(index,elapsed,withCue);
+ const captionOn=elapsed>=.28&&elapsed<shot.d-.38;
+ narrative.classList.toggle('visible',!!shot.copy&&captionOn);
+ intertitle.classList.toggle('visible',!!shot.title&&elapsed>=.2);
+ finalTitle.classList.toggle('visible',!!shot.final&&elapsed>.36);
+ artifact.style.opacity=elapsed>.2&&elapsed<shot.d-.28?'1':'0';
+ cutFlash.style.opacity=softFx?'0':shot.sfx==='camera'&&elapsed<.09?String(.22*(1-elapsed/.09)):'0';
+ const fadeIn=Math.min(1,position/2.5),fadeOut=Math.min(1,(duration-position)/3.7);
+ audio.volume=Math.max(0,Math.min(.58,.58*fadeIn*fadeOut));
 }
-function noiseBuf(sec){const n=Math.floor(actx.sampleRate*sec),b=actx.createBuffer(1,n,actx.sampleRate),d=b.getChannelData(0);for(let i=0;i<n;i++)d[i]=Math.random()*2-1;return b}
-function envOsc(type,f0,f1,dur,peak,when=0){const o=actx.createOscillator(),g=actx.createGain(),t=actx.currentTime+when;o.type=type;o.frequency.setValueAtTime(f0,t);o.frequency.exponentialRampToValueAtTime(Math.max(1,f1),t+dur);g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(peak,t+.02);g.gain.exponentialRampToValueAtTime(0.0001,t+dur);o.connect(g);g.connect(master);o.start(t);o.stop(t+dur+.05)}
-const sfx={
- heart(k){envOsc('sine',72,40,.2,.95*k);envOsc('sine',64,36,.2,.6*k,.15)},
- boom(k){envOsc('sine',95,28,1.1,1*k);const src=actx.createBufferSource(),f=actx.createBiquadFilter(),g=actx.createGain(),t=actx.currentTime;src.buffer=noiseBuf(.9);f.type='lowpass';f.frequency.setValueAtTime(2400,t);f.frequency.exponentialRampToValueAtTime(120,t+.8);g.gain.setValueAtTime(.55*k,t);g.gain.exponentialRampToValueAtTime(.001,t+.85);src.connect(f);f.connect(g);g.connect(master);src.start(t)},
- screech(){envOsc('sawtooth',2100,380,.7,.22);envOsc('square',1500,260,.6,.1,.04)},
- riser(dur){const src=actx.createBufferSource(),f=actx.createBiquadFilter(),g=actx.createGain(),t=actx.currentTime;src.buffer=noiseBuf(dur+.2);f.type='bandpass';f.Q.value=2.5;f.frequency.setValueAtTime(180,t);f.frequency.exponentialRampToValueAtTime(3800,t+dur);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.5,t+dur);g.gain.linearRampToValueAtTime(.0001,t+dur+.1);src.connect(f);f.connect(g);g.connect(master);src.start(t)}
-};
-const cues=[[35.95,()=>sfx.riser(2.5)],[36.15,()=>sfx.heart(.7)],[36.6,()=>sfx.heart(.75)],[37.0,()=>sfx.heart(.85)],[37.35,()=>sfx.heart(.9)],[37.65,()=>sfx.heart(1)],[37.9,()=>sfx.heart(1)],[38.12,()=>sfx.heart(1)],[38.3,()=>sfx.heart(1)],[38.48,()=>sfx.boom(1)],[48.08,()=>{sfx.boom(1);sfx.screech()}]];
-function playCues(from,to){if(!actx||muted||!playing)return;for(const [t,fn] of cues)if(t>from&&t<=to){try{fn()}catch(_){}}}
-let lastPos=0,punchTimer=0;
-function punch(power){
- if(softFx||!playing)return;
- if(stage.classList){stage.classList.remove('punch1','punch2','punch3');void stage.offsetWidth;stage.classList.add('punch'+power)}
- const f=$('flash');if(f&&!(shots[shown]&&shots[shown].flash&&position-shots[shown].start<.5))f.style.opacity=String(.012+power*.025);
- if(typeof setTimeout==='function'){clearTimeout(punchTimer);punchTimer=setTimeout(()=>{if(stage.classList)stage.classList.remove('punch1','punch2','punch3')},520)}
+function pause(){
+ if(raf)cancelAnimationFrame(raf);
+ raf=0;playing=false;stage.classList.remove('is-playing');
+ audio.pause();stopCues();
+ $('btn-pause').textContent='▶';$('btn-pause').setAttribute('aria-label','Tiếp tục phát');
 }
-function beat(){
- if(position>lastPos&&position-lastPos<.3)for(const [t,power] of hits)if(t>lastPos&&t<=position){punch(power);break}
- if(!(position>lastPos&&position-lastPos<.3))lastPos=position;
- playCues(lastPos,position);
- lastPos=position;
+function finish(){
+ pause();position=duration;end.hidden=false;start.hidden=true;player.hidden=true;hud.hidden=true;
+ narrative.classList.remove('visible');intertitle.classList.remove('visible');artifact.replaceChildren();
+ $('btn-replay').focus({preventScroll:true});
 }
-function draw(force=false){
- seek.value=String(position);seek.setAttribute('aria-valuetext',`${time(position)} trên ${time(duration)}`);$('player-time').textContent=time(position);
- const duck=position>=35.9&&position<38.46?(position<36.3?1-(position-35.9)/.4*.9:.1):1;
- audio.volume=Math.max(0,Math.min(.6,position/2.5*.6,(duration-position)/4*.6))*duck;
- let index=shots.length-1;for(let i=0;i<shots.length;i++){if(position<shots[i].start+shots[i].d){index=i;break}}
- const local=Math.max(0,position-shots[index].start);
- if(actLabel){let chapter=chapters[0];for(const c of chapters)if(position>=c.from)chapter=c;if(actLabel.textContent!==chapter.label)actLabel.textContent=chapter.label}
- if(index!==shown||force)setShot(index,local);
- $('flash').style.opacity=softFx?'0':shots[index].flash&&local<.22?String((1-local/.22)*.12):$('flash').style.opacity>.001&&!force&&position-lastPos<.3?String(Math.max(0,$("flash").style.opacity-(position-lastPos)*.55)):'0';
- beat();
- const leaving=local>shots[index].d-.7;
- const sh=shots[index];
- if(cursorEl){const c=sh.cursor,show=c&&local>=c.at-.15&&local<sh.d-.35;if(show){const t=Math.min(1,Math.max(0,(local-c.at)/c.dur)),e=t*t*(3-2*t);cursorEl.style.left=(c.from[0]+(c.to[0]-c.from[0])*e)+'%';cursorEl.style.top=(c.from[1]+(c.to[1]-c.from[1])*e)+'%';cursorEl.style.opacity='1';const clicking=local>=c.click&&local<c.click+.45;if(cursorEl.classList.contains('click')!==clicking)cursorEl.classList.toggle('click',clicking)}else cursorEl.style.opacity='0'}
- if(sh.scare&&!softFx){const fl=$('flash');if(local>1.58&&local<1.67){fl.style.background='#d2c9be';fl.style.opacity='.16'}else if(local>=1.74){fl.style.background='#000';fl.style.opacity='.68'}else{fl.style.background='';}}else if($('flash').style.background)$('flash').style.background='';
- if(slateNode){const on=local>=1&&!leaving;if(on!==slateNode.classList.contains('show'))slateNode.classList.toggle('show',on)}
- if(streak)streak.style.opacity=softFx?'0':shots[index].flash&&local<.9?String(Math.max(0,1-local/.9)*.5):'0';
- // Không xếp hai lời dẫn cùng lúc.
- for(let i=0;i<capNodes.length;i++){
-  const node=capNodes[i],next=capNodes[i+1];
-  const visible=local>=node.at&&local<(next?next.at:sh.d-.65)&&!leaving;
-  if(visible===node.visible)continue;
-  node.visible=visible;node.el.classList.toggle('show',visible);node.el.setAttribute('aria-hidden',String(!visible))
- }
- for(const node of faceNodes){
-  const visible=local>=node.at&&!leaving;
-  if(visible===node.visible)continue;
-  node.visible=visible;node.el.classList.toggle('show',visible);node.el.setAttribute('aria-hidden',String(!visible))
- }
-}
-/* Bụi và tàn tro bay chậm: nhẹ, tự giảm số hạt trên điện thoại, tắt khi giảm chuyển động. */
-const dctx=dust&&dust.getContext?dust.getContext('2d'):null,noMotion=reducedMotion;
-let motes=[],dw=0,dh=0;
-function sizeDust(){if(!dctx)return;dw=dust.width=Math.max(1,Math.round(stage.clientWidth||1280));dh=dust.height=Math.max(1,Math.round(stage.clientHeight||720));const n=dw<700?16:38;motes=Array.from({length:n},()=>({x:Math.random()*dw,y:Math.random()*dh,r:.5+Math.random()*1.7,v:6+Math.random()*16,dx:(Math.random()-.5)*10,a:.12+Math.random()*.38,ph:Math.random()*6.3}))}
-function stepDust(dt){if(!dctx||noMotion)return;dctx.clearRect(0,0,dw,dh);for(const m of motes){m.y-=m.v*dt;m.x+=(m.dx+Math.sin(m.ph+=dt*.8)*6)*dt;if(m.y<-4){m.y=dh+4;m.x=Math.random()*dw}if(m.x<-4)m.x=dw+4;if(m.x>dw+4)m.x=-4;dctx.globalAlpha=m.a*(.6+.4*Math.sin(m.ph*1.7));dctx.fillStyle='#e8c89a';dctx.beginPath();dctx.arc(m.x,m.y,m.r,0,6.283);dctx.fill()}dctx.globalAlpha=1}
-if(typeof addEventListener==='function')addEventListener('resize',sizeDust);
-function pause(){if(!playing)return;playing=false;cancelAnimationFrame(frame);audio.pause();setSfxLevel();$('btn-pause').textContent='▶';$('btn-pause').setAttribute('aria-label','Tiếp tục phát');stage.classList.remove('playing')}
-function tick(now){
+function tick(t){
  if(!playing)return;
- const dt=Math.min(.1,Math.max(0,(now-last)/1000));
- // Dùng nhạc làm đồng hồ khi phát được; nếu autoplay bị chặn thì trailer vẫn chạy.
- const audioTime=Number(audio.currentTime);
- const synced=audio.readyState>=2&&!audio.paused&&!audio.ended&&Number.isFinite(audioTime)&&Math.abs(audioTime-position)<.7;
- position=Math.min(duration,synced?Math.max(position,audioTime):position+dt);
- last=now;stepDust(dt);draw();
- if(position>=duration){finish();return}frame=requestAnimationFrame(tick)
+ const dt=Math.min(.15,Math.max(0,(t-last)/1000));last=t;
+ let next=Math.min(duration,position+dt);
+ if(audio.readyState>=2&&!audio.paused&&!audio.ended&&Number.isFinite(audio.currentTime)&&Math.abs(audio.currentTime-next)<.6)
+  next=Math.max(next,audio.currentTime);
+ const old=shown;position=next;draw(false,false);
+ if(shown!==old&&dt<.25)cue(shots[shown].sfx);
+ if(position>=duration){finish();return}
+ raf=requestAnimationFrame(tick);
 }
-function syncAudio(){try{audio.currentTime=position}catch(_){}audio.muted=muted}
-function resume(){
+function play(){
  if(playing)return;
- playing=true;last=performance.now();$('btn-pause').textContent='Ⅱ';$('btn-pause').setAttribute('aria-label','Tạm dừng');stage.classList.add('playing');
- if(actx&&actx.state==='suspended'&&actx.resume){const resumed=actx.resume();if(resumed&&resumed.catch)resumed.catch(()=>{})}
- syncAudio();const p=audio.play();if(p&&p.catch)p.catch(()=>{});setSfxLevel();
- frame=requestAnimationFrame(tick)
+ playing=true;stage.classList.add('is-playing');last=performance.now();
+ try{audio.currentTime=position}catch(_){}
+ audio.muted=muted;
+ const p=audio.play();if(p&&p.catch)p.catch(()=>{});
+ $('btn-pause').textContent='Ⅱ';$('btn-pause').setAttribute('aria-label','Tạm dừng');
+ raf=requestAnimationFrame(tick);
 }
-function start(){sfxInit();lastPos=0;stage.classList.remove('cine');void stage.offsetWidth;stage.classList.add('cine');sizeDust();startCard.hidden=true;endCard.hidden=true;player.hidden=false;hud.hidden=false;position=0;shown=-1;draw();resume();$('btn-pause').focus({preventScroll:true})}
-function finish(){if(cursorEl)cursorEl.style.opacity='0';stage.classList.remove('cine');if(slate){slate.replaceChildren();slateNode=null}if(streak)streak.style.opacity='0';if(dctx)dctx.clearRect(0,0,dw,dh);pause();if(actLabel)actLabel.textContent='';position=duration;player.hidden=true;hud.hidden=true;caps.replaceChildren();capNodes=[];faceNodes=[];endCard.hidden=false;$('flash').style.opacity='0';$('btn-replay').focus({preventScroll:true})}
-$('btn-play').addEventListener('click',start);$('btn-replay').addEventListener('click',start);$('btn-skip').addEventListener('click',finish);
-$('btn-pause').addEventListener('click',()=>playing?pause():resume());
-$('btn-mute').addEventListener('click',()=>{muted=!muted;audio.muted=muted;$('btn-mute').textContent=muted?'Âm thanh: Tắt':'Âm thanh: Bật';$('btn-mute').setAttribute('aria-label',muted?'Bật tiếng':'Tắt tiếng');$('btn-mute').setAttribute('aria-pressed',String(muted));setSfxLevel()});
-if(fxBtn)fxBtn.addEventListener('click',()=>{softFx=!softFx;renderFx();setSfxLevel();draw(true)});
-seek.addEventListener('input',()=>{position=Math.max(0,Math.min(duration,Number(seek.value)));syncAudio();lastPos=position;draw(true);if(position>=duration)finish()});
-audio.addEventListener('loadedmetadata',()=>{if(!player.hidden)syncAudio()});
+function begin(){
+ pause();start.hidden=true;end.hidden=true;hud.hidden=false;player.hidden=false;
+ position=0;shown=-1;draw(true,false);play();cue(shots[0].sfx);
+ $('btn-pause').focus({preventScroll:true});
+}
+$('btn-play').addEventListener('click',begin);
+$('btn-replay').addEventListener('click',begin);
+$('btn-skip').addEventListener('click',finish);
+$('btn-pause').addEventListener('click',()=>playing?pause():play());
+$('btn-mute').addEventListener('click',()=>{
+ muted=!muted;audio.muted=muted;if(muted)stopCues();
+ $('btn-mute').textContent=muted?'Âm thanh: Tắt':'Âm thanh: Bật';
+ $('btn-mute').setAttribute('aria-pressed',String(muted));
+ $('btn-mute').setAttribute('aria-label',muted?'Bật tiếng':'Tắt tiếng')
+});
+fxBtn.addEventListener('click',()=>{softFx=!softFx;updateFX();draw(true,false)});
+function jump(to){
+ position=Math.max(0,Math.min(duration,to));stopCues();
+ try{audio.currentTime=position}catch(_){}
+ draw(true,false);if(position>=duration)finish();
+}
+seek.addEventListener('input',()=>jump(Number(seek.value)));
 document.addEventListener('visibilitychange',()=>{if(document.hidden)pause()});
 document.addEventListener('keydown',e=>{
  if(player.hidden)return;
  if(e.key==='Escape')finish();
- else if(e.key===' '||e.key==='k'||e.key==='K'){e.preventDefault&&e.preventDefault();playing?pause():resume()}
- else if(e.key==='m'||e.key==='M'){const mb=$('btn-mute');if(mb&&mb.click)mb.click()}
- else if(e.key==='ArrowRight'||e.key==='ArrowLeft'){position=Math.max(0,Math.min(duration,position+(e.key==='ArrowRight'?5:-5)));e.preventDefault&&e.preventDefault();syncAudio();lastPos=position;draw(true);if(position>=duration)finish()}
+ else if(e.key===' '||e.key==='k'||e.key==='K'){e.preventDefault&&e.preventDefault();playing?pause():play()}
+ else if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault&&e.preventDefault();jump(position+(e.key==='ArrowRight'?5:-5))}
+ else if(e.key==='m'||e.key==='M')$('btn-mute').click()
 });
-const assets=[...new Set(shots.map(s=>s.img?`assets/trailer/${s.img}.webp`:bg(s.bg))),...faces.map(f=>`assets/portraits/${f[0]}_portrait.webp`),'assets/logo.webp'];
-let loaded=0,ready=false;const playBtn=$('btn-play');
-function markReady(){if(ready)return;ready=true;if(playBtn)playBtn.disabled=false;if(loadStatus)loadStatus.textContent=''}
-function bump(){loaded++;if(loadStatus&&!ready)loadStatus.textContent=`Đang tải cảnh phim ${Math.round(loaded/assets.length*100)}%`;if(loaded>=assets.length)markReady()}
-if(playBtn&&typeof setTimeout==='function'){playBtn.disabled=true;setTimeout(markReady,9000)}
-assets.forEach(src=>{const img=new Image();img.onload=img.onerror=bump;img.src=src;if(img.decode)img.decode().catch(()=>{})});
-if(audio&&audio.load)audio.preload='auto';
-if(shareBtn&&typeof navigator!=='undefined'&&(navigator.share||navigator.clipboard)){shareBtn.hidden=false;shareBtn.addEventListener('click',async()=>{const url=location.href.split('#')[0],data={title:'Lời Nguyền Rừng Thiêng',text:'Một nhóm bạn, một đêm, một bí mật trong biệt thự Vân Hòa.',url};try{if(navigator.share)await navigator.share(data);else{await navigator.clipboard.writeText(url);shareBtn.textContent='✓ Đã chép liên kết'}}catch(_){}})}
+if(share&&typeof navigator!=='undefined'&&(navigator.share||navigator.clipboard)){
+ share.hidden=false;share.addEventListener('click',async()=>{
+  const url=location.href.split('#')[0];
+  try{
+   if(navigator.share)await navigator.share({title:'Lời Nguyền Rừng Thiêng',url});
+   else{await navigator.clipboard.writeText(url);share.textContent='Đã chép liên kết'}
+  }catch(_){}
+ })
+}
 })();

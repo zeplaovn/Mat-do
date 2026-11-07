@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#000000">
-<meta name="description" content="Trailer giới thiệu game kinh dị điều tra Lời Nguyền Rừng Thiêng — Bí Mật Biệt Thự Vân Hòa.">
-<title>Trailer · Lời Nguyền Rừng Thiêng</title>
+<meta name="theme-color" content="#030706">
+<meta name="description" content="Trailer Lời Nguyền Rừng Thiêng – quan sát, đối chiếu chứng cứ và tự quyết định.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Trailer · Lời Nguyền Rừng Thiêng">
-<meta property="og:description" content="Một nhóm bạn, một đêm, một bí mật trong biệt thự Vân Hòa. Game kinh dị điều tra chơi ngay trên trình duyệt.">
+<meta property="og:title" content="Lời Nguyền Rừng Thiêng – Trailer">
+<meta property="og:description" content="Trong ảnh có hai người. Nhưng không ai đứng bên giếng. Bạn sẽ tin điều gì?">
 <meta property="og:image" content="assets/title_bg.webp">
+<title>Trailer | Lời Nguyền Rừng Thiêng</title>
 <link rel="icon" href="assets/logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,57 +18,70 @@
 <script src="trailer.js" defer></script>
 </head>
 <body>
-<main id="stage" class="stage" aria-label="Trailer game Lời Nguyền Rừng Thiêng">
-  <div id="shots" class="shots" aria-hidden="true">
-    <div class="shot"><div class="bg"></div></div><div class="shot"><div class="bg"></div></div>
+<main id="stage" class="stage" aria-label="Trailer Lời Nguyền Rừng Thiêng">
+  <div class="picture" aria-hidden="true">
+    <div class="plate"><div class="plate-art"></div></div>
+    <div class="plate"><div class="plate-art"></div></div>
   </div>
-  <canvas id="dust" class="dust" aria-hidden="true"></canvas><div class="vignette" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div><div class="flare" aria-hidden="true"></div><div class="leak" aria-hidden="true"></div><div id="streak" class="streak" aria-hidden="true"></div><div id="flash" class="flash" aria-hidden="true"></div><div class="film-grade" aria-hidden="true"></div>
-  <div class="bar bar-top" aria-hidden="true"></div><div class="bar bar-bot" aria-hidden="true"></div>
-  <div id="cursor" class="cursor" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M4 2l15 9-6.5 1.6L9.8 19z" fill="#fff" stroke="#000" stroke-width="1.3" stroke-linejoin="round"/></svg><i></i></div>
-  <div id="slate" class="slate" aria-hidden="true"></div><div class="frame-index" aria-hidden="true">VÂN HÒA <span></span> HỒ SƠ 1988</div>
-  <div id="act-label" class="act-label" aria-hidden="true"></div>
-  <div id="caps" class="caps" aria-live="polite"></div>
+  <div class="grade" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="widescreen" aria-hidden="true"></div>
+  <div id="cut-flash" class="cut-flash" aria-hidden="true"></div>
+  <div class="film-edge" aria-hidden="true"><span>LỜI NGUYỀN RỪNG THIÊNG</span><span>VÂN HÒA / 2026</span></div>
+  <div id="shot-counter" class="shot-counter" aria-hidden="true"></div>
+  <div id="artifact" class="artifact" aria-hidden="true"></div>
+  <div id="narrative" class="narrative" aria-live="polite" aria-atomic="true">
+    <p id="speaker" class="speaker"></p>
+    <p id="line" class="line"></p>
+  </div>
+  <div id="intertitle" class="intertitle" aria-hidden="true"></div>
+  <div id="final-title" class="final-title" aria-hidden="true">
+    <img src="assets/logo.webp" alt=""><p>Tự tìm ra sự thật.</p>
+  </div>
 
   <section id="start" class="start" aria-labelledby="poster-heading">
     <div class="poster-content">
-      <p class="poster-index">Hồ sơ Vân Hòa / Năm 1988</p>
-      <img class="start-logo" src="assets/logo.webp" alt="Lời Nguyền Rừng Thiêng — Bí Mật Biệt Thự Vân Hòa">
-      <h1 id="poster-heading" class="poster-heading">Có những cái tên <em>không nên được gọi.</em></h1>
-      <p class="poster-copy">Một câu chuyện kinh dị dân gian Việt Nam. Một biệt thự bị lãng quên. Và những người chưa từng rời khỏi đó.</p>
+      <p class="poster-kicker"><span></span> Đồng Chay, 2026</p>
+      <h1 id="poster-heading">Trong ảnh có<br><em>hai người.</em><br>Nhưng bên giếng<br>không có ai.</h1>
+      <p class="poster-copy">Một câu chuyện kinh dị dân gian về những lời kể bị che giấu. Mỗi dấu vết đều có thể thay đổi điều bạn tin.</p>
       <div class="poster-actions">
-        <button id="btn-play" class="btn btn-primary" type="button">Xem trailer <span aria-hidden="true">↗</span></button>
-        <a class="return-link" href="index.html">Về trò chơi</a>
+        <button id="btn-play" class="play-main" type="button">Xem trailer <span aria-hidden="true">↗</span></button>
+        <a class="back-link" href="index.html">Về trò chơi</a>
       </div>
-      <p id="load-status" class="start-load" aria-live="polite">Đang chuẩn bị thước phim…</p>
-      <p class="start-hint">Có yếu tố kinh dị và âm thanh lớn. Nên dùng tai nghe.</p>
+      <p id="load-status" class="preload-status" aria-live="polite">Đang chuẩn bị cảnh phim…</p>
+      <p class="content-warning">Có yếu tố kinh dị và âm thanh lớn. Có thể tắt tiếng hoặc giảm chuyển động khi xem.</p>
     </div>
-    <p class="poster-footnote" aria-hidden="true">Lời kể có thể sai. Những dấu vết thì không.</p>
+    <span class="poster-number" aria-hidden="true">1986 / 1988 / 2026</span>
   </section>
 
   <section id="end" class="end" hidden aria-label="Kết thúc trailer">
     <div class="end-content">
-      <p class="end-index">Câu chuyện chưa kết thúc</p>
-      <p class="end-quote">Có những người<br><em>không muốn bị lãng quên.</em></p>
+      <p class="end-kicker">Một bí mật không tự biến mất.</p>
+      <h2>Bạn sẽ tin<br><em>vào ai?</em></h2>
       <img class="end-logo" src="assets/logo.webp" alt="Lời Nguyền Rừng Thiêng">
-      <p class="end-tag">Bí mật biệt thự Vân Hòa vẫn đang chờ bạn.</p>
-      <p class="end-meta">Miễn phí · Chơi trên trình duyệt · Máy tính và điện thoại</p>
-      <div class="end-btns">
-        <a class="btn btn-primary" href="index.html">Bước vào Vân Hòa <span aria-hidden="true">↗</span></a>
-        <button id="btn-replay" class="btn btn-secondary" type="button">Xem lại</button>
-        <button id="btn-share" class="btn btn-secondary" type="button" hidden>Chia sẻ</button>
+      <p class="end-sub">Quan sát. Đối chiếu. Quyết định. <span>Chơi miễn phí trên trình duyệt.</span></p>
+      <div class="end-actions">
+        <a class="play-main" href="index.html">Bắt đầu điều tra <span aria-hidden="true">↗</span></a>
+        <button id="btn-replay" class="ghost-button" type="button">Xem lại</button>
+        <button id="btn-share" class="ghost-button" type="button" hidden>Chia sẻ</button>
       </div>
-      <p class="end-warn">Nội dung có yếu tố kinh dị</p>
     </div>
   </section>
 
-  <div class="hud" id="hud" hidden>
-    <button id="btn-mute" class="hud-btn" type="button" aria-label="Tắt tiếng" aria-pressed="false">Âm thanh: Bật</button><button id="btn-fx" class="hud-btn fx-btn" type="button" aria-label="Giảm hiệu ứng chớp" aria-pressed="false">Giảm nháy</button><button id="btn-skip" class="hud-btn" type="button">Bỏ qua</button>
+  <div id="hud" class="hud" hidden>
+    <button id="btn-mute" class="hud-button" type="button" aria-label="Tắt tiếng" aria-pressed="false">Âm thanh: Bật</button>
+    <button id="btn-fx" class="hud-button" type="button" aria-label="Giảm chuyển động" aria-pressed="false">Giảm chuyển động</button>
+    <button id="btn-skip" class="hud-button" type="button">Bỏ qua</button>
   </div>
   <nav id="player" class="player" aria-label="Điều khiển trailer" hidden>
-    <button id="btn-pause" class="hud-btn" type="button" aria-label="Tạm dừng">Ⅱ</button>
-    <span id="player-time">00:00</span><div class="seek-wrap"><input id="seek" type="range" min="0" max="70" step="0.1" value="0" aria-label="Tiến trình trailer"><div id="chapter-markers" class="chapter-markers" aria-hidden="true"></div></div><span id="player-duration"></span>
+    <button id="btn-pause" type="button" aria-label="Tạm dừng">Ⅱ</button>
+    <span id="player-time" class="timecode">00:00</span>
+    <div class="seek-wrap">
+      <input id="seek" type="range" min="0" max="75" step="0.1" value="0" aria-label="Tiến trình trailer">
+      <div id="chapter-markers" class="chapter-markers" aria-hidden="true"></div>
+    </div>
+    <span id="player-duration" class="timecode">01:15</span>
   </nav>
   <audio id="audio" src="assets/sound/trailer.mp3" preload="metadata"></audio>
 </main>
-</body>
-</html>
+</body></html>
