@@ -1468,13 +1468,39 @@ const JOURNAL_VOICE={
  "simStory": "Ông Tùng kể chị Quế sinh năm 1971, hay hái thuốc và đưa người lạc ra khỏi rừng. Năm 1986, chị phát hiện bản sớ thầy Chân dùng đã bị sửa. Tớ muốn kiểm tra lời kể bằng thư và bản sớ còn lại.",
  "truthBoard": "Đến đây, chứng cứ cho thấy vụ Quế năm 1986 và vụ giam người năm 1988 là hai chuyện khác nhau, cùng dính đến việc con người che giấu sai trái. Chỗ nào chưa rõ, tớ sẽ để trống chứ không đoán.",
  "returnNames": "Bọn mình đã gọi tên Lành, Phúc và Mai ở nền đá. Tớ không muốn nhớ họ chỉ bằng cách họ chết. Trước hết họ từng là một gia đình, từng có những bữa cơm bình thường.",
- "bronzeSeal": "Sau khi đối chiếu chứng cứ và hoàn tất việc trả tên, bọn mình mới tháo chiếc ấn khỏi khe đá. Tớ không muốn ai chạm vào nó chỉ vì tò mò."
+ "bronzeSeal": "Sau khi đối chiếu chứng cứ và hoàn tất việc trả tên, bọn mình mới tháo chiếc ấn khỏi khe đá. Tớ không muốn ai chạm vào nó chỉ vì tò mò.",
+ "store": "Cuối cùng chìa kho cũng tra vừa ổ khóa. Cửa kêu ken két. Vũ lập tức lùi ra phía sau tớ, rồi lại giả vờ là muốn nhường đường. Trong kho có thể còn giấy tờ năm ấy.",
+ "storekey": "Dưới đệm ghế bập bênh có chìa đồng, đúng chỗ ông Hưng chỉ trong nhật ký. Nhìn ra làng từ đây thật xa. Ông đã ngồi bao đêm ở chỗ này mà không dám mở kho?",
+ "incense5": "Bà Tám để dành nhang mới cho những người chưa được gọi đúng tên. Nhài kể vậy. Tớ cầm bó nhang mà thấy nặng hơn cả mấy tập hồ sơ.",
+ "clockKitchen": "Trong ngăn đồng hồ có mẩu giấy nhắc xem kẽ tủ gian bếp nếu muốn tìm phần thư còn lại. Tớ đọc to cho cả nhóm nghe, rồi cất cẩn thận. Ít nhất lần này có một chỉ dẫn cụ thể.",
+ "huu": "Thầy Nguyên trao cho bọn mình cuốn Huyền Ấn Bí Lục – Trấn Âm Đồ. Ông bảo đừng tin một câu chuyện chỉ vì nó được kể lâu. Tớ nhớ mãi lời ấy, nhất là khi những lời đồn ở Đồng Chay cứ mâu thuẫn nhau.",
+ "nguyenTruth": "Thầy Nguyên thừa nhận bút danh Lục Táng là của ông. Ông đã giữ tài liệu của Huyền Tĩnh và im lặng về chuyện người thầy nhận tiền để giam Mai. Lần này ông hứa công bố tất cả. Tớ muốn nhìn thấy ông làm thật.",
+ "lamp6": "Ngay trước bàn lễ, ngọn đèn đang tắt bỗng bén lửa. Không ai trong nhóm chạm vào nó. Vũ đứng bất động một lúc, không pha trò nữa. Tớ ghi chuyện ấy lại vì cả năm đứa đều thấy.",
+ "waterBook": "Khi soi trang trắng của bí lục qua mặt nước, chữ hiện lên: “Tìm người mẹ bên dòng nước bị chặn, đứa trẻ dưới gốc đa và người con ở khe đá. Gọi đúng tên trước khi tháo vật giữ.” Tớ chép nguyên văn; một chữ cũng không dám sửa.",
+ "reverseSeal": "Nhìn qua mặt nước thấy dưới ấn có nét chỉ về nền đá cũ. Chúng tớ chưa nhổ ấn lên. Sau những gì đã chứng kiến, tớ không muốn động vào thứ mình chưa hiểu.",
+ "red": "Trên cây có dải vải đỏ thêu tên bà ngoại. Bà đã đến đây thật. Tớ đứng rất lâu trước nút buộc ấy; bỗng hiểu có những lời xin lỗi người ta không nói thành tiếng.",
+ "familyRecord": "Bà Cúc đưa bản chép gia phả: bà Lành có hai con Mai và Phúc. Phúc từng tập thêu “Chị Mai” lên khăn; bà Lành dùng chiếc lược gỗ bị gãy. Tớ khoanh hai chi tiết ấy để đối chiếu với di vật, chưa dám kết luận.",
+ "simLead": "Tờ giấy bà ngoại để lại bảo chuyện năm 1986 là có thật và Quế bị vu oan. Bà dặn tìm ông Tùng, em trai Quế, ở cuối xóm Đông; từ rừng đi theo lối rẽ bên phải. Nếu bà biết, vì sao bà không kể thẳng với tớ?",
+ "memory_sim": "Ông Tùng nhớ lại lần chị Quế đưa giấy tờ cho mình, giục chạy đi gọi người lớn năm 1986. Tớ nghe ông kể mà nhớ đến cách mình vẫn gọi nhau mỗi khi sợ. Chỉ khác là hôm ấy Tùng đã phải chạy một mình.",
+ "maiRelics": "Lược gỗ của Lành, khăn của Phúc, mảnh áo của Mai: các dấu chữ và ký ức tìm được có chỗ khớp nhau. Tớ đã đặt chúng cạnh nhau. Còn chuyện ai đưa tiền giam Mai, phải tiếp tục đối chiếu chữ ký và ghi chép.",
+ "riceGift": "Bọn mình đặt một bát cơm trắng cạnh di vật ở nền đá. Không phải để gọi phép màu gì cả; tớ chỉ muốn gia đình ấy có một bữa cơm được nhắc đến bằng sự tử tế.",
+ "timelineTruth": "Cuối cùng cũng tách được hai mốc: vụ Quế năm 1986 và chuyện giam người năm 1988. Tớ từng gom tất cả vào một nỗi sợ mơ hồ. Giờ ít nhất đã biết chúng là hai sự việc khác nhau.",
+ "folkPrint": "Dưới mâm gỗ ở miếu có mảnh giấy dó in bốn dấu. Góc giấy vẽ cột mốc giữa rừng, kèm câu “Tìm đường về từ hơi ấm đến bóng cây.” Tớ không hiểu ngay, nhưng cảm giác mình đã bỏ sót một thứ trước mắt.",
+ "folkStone": "Các dấu trên cột đá khớp với mảnh giấy dó. Khi đặt đúng, một khe nhỏ lộ ra. Vũ vừa reo lên vừa giật tay lại vì giật mình. Hiếm khi tớ thấy cậu ấy vui và sợ cùng lúc.",
+ "marker": "Chìa khóa sắt rỉ nằm trong khe cột mốc, phía hướng về cổng Vân Hòa. Tớ giữ riêng trong túi áo, không muốn nó bị lẫn với những thứ nhặt trong rừng.",
+ "ritual": "Đặt các di vật đúng chỗ, tiếng gõ dưới hầm lặng đi. Hà bật khóc, còn tớ chỉ thấy mệt rã rời. Không thể từ sự im lặng ấy mà kết luận mọi người đã được giải thoát.",
+ "awake": "Tiếng gõ vừa dứt thì từ tầng trên vang xuống tiếng một đứa trẻ khóc. Mình vẫn còn bỏ sót ai đó. Tớ đã sợ đến mức muốn chạy, nhưng không thể giả như mình không nghe.",
+ "sixth": "Tên em là Nhài. Em mới bảy tuổi khi biến mất năm 1988, được vợ chồng ông Hưng nhận nuôi. Cuối cùng bọn mình cũng gọi đúng tên em. Lần đầu trong đêm, tớ thấy một tiếng gọi có thể dịu dàng đến thế.",
+ "lam": "Hồ sơ cấp vật tư, ghi chép của ông Hưng và lời bà Tám khớp nhau ở việc che giấu sự thật. Ông nói mình sợ nên không mở cửa. Tớ cũng sợ từ khi bước vào nhà, nhưng nỗi sợ không thể thay lời giải thích.",
+ "forgedRefused": "Bọn mình giữ lại bản sớ đáng ngờ để so với bản gốc, không làm theo những vòng phấn chỉ vì có người viết như vậy. Lần này tớ muốn hiểu mình đang làm gì trước khi làm."
 };
 function journalBody(n){
  if(JOURNAL_VOICE[n.id])return JOURNAL_VOICE[n.id];
  if(n.id.startsWith('visit_'))return n.body;
  if(n.id.startsWith('memory_'))return 'Tớ vừa thấy một ký ức gắn với di vật này. Mọi thứ rõ đến mức khó tin, nhưng tớ vẫn muốn tìm giấy tờ và người có thể xác nhận trước khi viết nó thành sự thật.';
  if(n.id.startsWith('name_'))return 'Cuối cùng cũng có một cái tên để gọi. '+n.body+' Tớ sẽ đối chiếu lại, không muốn một lần nữa ghi sai người.';
+ if(n.id.startsWith('toy_'))return 'Tớ nhặt được món đồ chơi này trong nhà: '+n.body+' Tớ sẽ giữ cẩn thận, biết đâu có ngày trả lại được cho đúng người.';
+ if(n.id.startsWith('mai_'))return 'Ở nơi này, tớ đã nhìn thấy một dấu vết: '+n.body+' Tớ sẽ tìm vật chứng để kiểm tra điều mình vừa thấy.';
  if(n.id.startsWith('researchSolved_'))return 'Đọc kỹ và so lại các trang, tớ ghi được điều này: '+n.body;
  if(n.id.startsWith('research_')&&!n.id.startsWith('researchArchived_'))return 'Tớ đã tìm được cuốn sách này. '+n.body;
  return n.body;
