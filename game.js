@@ -1059,6 +1059,17 @@ function bookCount(){
  if(!book)return;const n=book.pages.length,c=book.cur,per=book.per;
  $('bk-count').textContent=per===2?`Trang ${c+1}–${c+2} / ${n}`:`Trang ${c+1} / ${n}`;
  $('bk-prev').disabled=c<=0;$('bk-next').disabled=c+per>=n}
+/* Lật trang bằng cách bấm vào sách: nửa trái = lùi, nửa phải = tới (trang đơn trên điện thoại: 35% bên trái = lùi).
+   Bỏ qua nút/liên kết, bìa đang đóng và lúc đang bôi đen chữ (để còn lưu đoạn trích). Dùng cho nhật ký và mọi sách tư liệu. */
+function bindBookTap(bk,turn,single){
+ if(!bk)return;
+ bk.addEventListener('click',e=>{
+  if(bk.classList.contains('closed')||e.target.closest('button,a,input,textarea,select,.bk-cover'))return;
+  const sel=window.getSelection&&window.getSelection();if(sel&&!sel.isCollapsed)return;
+  const r=bk.getBoundingClientRect();if(!r.width)return;
+  turn((e.clientX-r.left)/r.width<(single()?.35:.5)?-1:1);
+ });
+}
 function bookTurn(dir){
  if(!book||book.busy||!$('bk'))return;
  const per=book.per,n=book.pages.length,target=book.cur+dir*per;
@@ -1099,7 +1110,7 @@ function showJournal(){
  $('bk-left').innerHTML=bookPageHTML(book.cur);$('bk-right').innerHTML=bookPageHTML(per===2?book.cur+1:book.cur);
  bookCount();
  $('bk-close').onclick=hideModal;$('bk-prev').onclick=()=>{if(!$('bk').classList.contains('closed'))bookTurn(-1)};$('bk-next').onclick=()=>{if(!$('bk').classList.contains('closed'))bookTurn(1)};
- $('bk-left').onclick=()=>{if(!$('bk').classList.contains('closed'))bookTurn(-1)};$('bk-right').onclick=()=>{if(!$('bk').classList.contains('closed'))bookTurn(1)};
+ bindBookTap($('bk'),bookTurn,()=>book&&book.per===1);
  playSound('page',.28);
  const bk=$('bk'),rm=window.Perf&&Perf.RM;
  const openBook=()=>{if(!book||!bk.classList.contains('closed'))return;bk.classList.remove('closed');playSound('page',.28);setTimeout(()=>{if(book)bk.classList.add('opened')},rm?0:1300)};
@@ -1307,13 +1318,8 @@ function openResearchBook(id){
   const left=$('research-left'),right=$('research-right');
   const bindPage=(el,i,dir)=>{
    el.addEventListener('pointerdown',()=>updateActive(i));
-   el.addEventListener('click',e=>{
-    const selection=window.getSelection&&window.getSelection();
-    if(e.target.closest('.research-page-content')||(selection&&!selection.isCollapsed))return;
-    if($('research-book').classList.contains('closed'))return;
-    turn(dir);
-   });
   };
+  bindBookTap($('research-book'),turn,()=>mobile);
   if(!mobile)bindPage(left,current,-1);
   if(mobile||current+1<pageCount)bindPage(right,mobile?current:current+1,1);
   updateActive(active);
