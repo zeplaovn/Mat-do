@@ -26,6 +26,8 @@ CẬP NHẬT 07/11/2026 — GIAO DIỆN, ÂM THANH, MỞ ĐẦU, TỐI ƯU
   một Audio đã tải (cloneNode) thay vì tạo mới; vòng kiểm tra hướng dẫn dừng sau khi hoàn tất.
 - Màn hình chính có mưa chữ kiểu Matrix màu vàng kim: chữ Phạn (Devanagari) và chữ Nôm cổ (title-matrix.js, title-screen.css).
   Chỉ chạy khi màn hình chính hiện; tắt khi hiệu ứng thấp, giảm chuyển động hoặc tab ẩn; dùng phông hệ thống của máy.
+- Không gian u ám hơn (gloom.css, nạp cuối cùng): nhuộm lạnh xám kể cả cảnh ban ngày, viền tối nặng hơn, sương dày hơn;
+  màn hình chính tối hơn, có sương trôi và ánh đỏ sẫm ở chân. Chỉnh độ u ám bằng các giá trị opacity trong gloom.css.
 - Lưu trò chơi dùng khóa loi-nguyen-rung-thieng-v2-mai; bản lưu cũ không tự chuyển.
 - Chạy kiểm tra: for f in tests/*.test.js; do node "$f"; done
 
