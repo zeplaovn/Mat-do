@@ -234,7 +234,7 @@ html[data-fx=low] .hotspot:before{animation:none!important}
 .dock-selected:not([hidden]):before{border-color:var(--jade-dim);background-color:rgba(18,119,139,.24)}
 .dock-hint{color:#95c9cb}
 #app-shell.in-dialogue .dock{
-  opacity:.48;visibility:visible;transform:none;pointer-events:none;
+  opacity:0;visibility:hidden;transform:translateY(12px);pointer-events:none;
 }
 @keyframes refSelectedPulse{
   0%,100%{box-shadow:0 0 0 2px rgba(25,178,204,.25),0 0 11px rgba(22,194,219,.48)}
@@ -312,16 +312,10 @@ html[data-fx=low] .hotspot:before{animation:none!important}
 .notice-confirm{border-color:rgba(96,191,204,.52);background:rgba(0,43,52,.2);color:#e7faff}
 .notice-confirm:hover,.notice-confirm:focus-visible{border-color:var(--jade);background:rgba(8,91,106,.43)}
 
-/* Điện thoại dọc: phủ trọn chiều cao viewport thực tế (không tính thanh địa chỉ
-   của Chrome). Khung cảnh luôn giữ tỉ lệ 16:9; tâm hotspot vẫn theo % của ảnh.
-   Bỏ hai khoảng đen 11dvh phía trên/dưới từ bản tham khảo cũ. */
+/* Điện thoại dọc: dùng lại bố cục panorama 78dvh đã hoạt động trước đây.
+   layout.css quản lý chiều rộng 16:9 và cho phép vuốt ngang khám phá.
+   Không kéo scene-stage thành 100dvh: gây thu nhỏ toàn bộ giao diện trên Chrome Android. */
 @media(max-width:700px) and (orientation:portrait){
-  #app-shell .scene-stage{
-    width:max(100vw,calc(100vh * 16 / 9));
-    width:max(100dvw,calc(100dvh * 16 / 9));
-    aspect-ratio:16/9;
-    margin-top:0;
-  }
   .scene-backdrop{filter:blur(24px) brightness(.16) saturate(.6)}
   .hud:before{height:18dvh}
   .hud-actions{top:max(8.5dvh,var(--safe-t,0px));left:max(8px,var(--safe-l,0px));right:max(8px,var(--safe-r,0px))}
