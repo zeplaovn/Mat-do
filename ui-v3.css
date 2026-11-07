@@ -1,0 +1,36 @@
+/* ui-v3 — Hội thoại dạng kính xanh, chân dung hòa vào cảnh, lời dẫn truyện không khung.
+   Nạp sau cùng nên ghi đè layout.css / skin.css / ui-plus.css; gỡ file này là về giao diện cũ. */
+.dlg{--pw:clamp(118px,25vh,184px);padding:0 10px max(10px,var(--safe-b,0px))}
+.dlg .dlg-box{
+  margin:0;padding:24px 18px 16px;border:1px solid rgba(95,227,221,.24);border-radius:16px;
+  background:linear-gradient(180deg,rgba(7,26,30,.8),rgba(2,11,13,.92));
+  backdrop-filter:blur(8px) saturate(1.1);
+  box-shadow:0 12px 34px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.05);
+}
+.dlg .dlg-box:before{display:none}
+.dlg .dlg-name{position:absolute;top:-14px;left:16px;margin:0;padding:4px 13px;gap:7px;border-radius:999px;
+  background:rgba(3,30,34,.97);border:1px solid var(--jade-dim);box-shadow:0 4px 12px rgba(0,0,0,.5)}
+.dlg .dlg-name strong{padding:0;border:0;background:none;font-size:13px;letter-spacing:.05em}
+.dlg .dlg-text{margin:0;font-size:clamp(15px,4.1vw,19px);line-height:1.65;color:#f2f6f5}
+
+/* Chân dung: bỏ khung vuông, mờ dần ở chân, đứng cạnh thẻ tên */
+.dlg-portrait-wrap{margin:0 0 -16px 6px;position:relative;z-index:0}
+.dlg-portrait{
+  width:var(--pw);height:var(--pw);border:0;border-radius:0;box-shadow:none;object-fit:contain;
+  -webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 72%,transparent 100%);
+  filter:drop-shadow(0 8px 16px rgba(0,0,0,.7)) saturate(.85) contrast(1.05);
+}
+.dlg.has-portrait .dlg-name{left:calc(var(--pw) + 18px)}
+.dlg .dlg-box{position:relative;z-index:1}
+
+/* Lời dẫn truyện: chữ trực tiếp trên nền tối, không khung, không thẻ tên */
+.dlg.is-narrator{padding:0}
+.dlg.is-narrator .dlg-box{
+  border:0;border-radius:0;backdrop-filter:none;box-shadow:none;text-align:center;
+  padding:40px 24px max(18px,var(--safe-b,0px));
+  background:linear-gradient(0deg,rgba(0,0,0,.92) 0,rgba(0,0,0,.62) 66%,rgba(0,0,0,0) 100%);
+}
+.dlg.is-narrator .dlg-name{display:none}
+.dlg.is-narrator .dlg-text{font-size:clamp(15px,4.2vw,19px);color:#eef3f2;text-shadow:0 1px 8px #000}
+html[data-fx=low] .dlg .dlg-box{backdrop-filter:none;background:rgba(2,11,13,.94)}
+@media(prefers-reduced-motion:reduce){.dlg .dlg-box{backdrop-filter:none}}
