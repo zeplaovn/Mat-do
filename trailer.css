@@ -192,3 +192,40 @@ button,a,input{touch-action:manipulation}button:focus-visible,a:focus-visible,in
 @media(max-width:700px) and (orientation:portrait){
  .stage.gp .caps{padding-top:16%}
 }
+
+/* ===== Bản dựng điện ảnh: ba hồi, nhịp dựng rõ và điều khiển thân thiện ===== */
+.start-kicker{margin:0;color:#d4b896;font:600 clamp(10px,1.15vw,14px)/1.5 Arial,sans-serif;letter-spacing:.26em;text-align:center;text-shadow:0 2px 12px #000}
+.act-label{position:absolute;z-index:7;top:12%;left:5%;max-width:65%;display:flex;align-items:center;gap:.85em;pointer-events:none;color:rgba(233,214,181,.82);font:600 clamp(9px,1vw,13px)/1.5 Arial,sans-serif;letter-spacing:.23em;text-shadow:0 2px 9px #000}
+.act-label::before{content:"";display:block;width:22px;height:1px;flex:none;background:#b64b48;box-shadow:0 0 10px rgba(182,75,72,.7)}
+.stage.gp .act-label{color:rgba(255,249,232,.9);top:5%;left:3%;font-size:clamp(9px,.85vw,12px)}
+.seek-wrap{position:relative;display:flex;align-items:center;flex:1;min-width:48px;height:32px}
+.seek-wrap #seek{position:relative;z-index:2;width:100%;min-width:0;margin:0;cursor:pointer}
+.chapter-markers{position:absolute;inset:0 9px;z-index:3;pointer-events:none}
+.chapter-marker{position:absolute;left:var(--at);top:50%;width:2px;height:14px;background:#f0d2a0;box-shadow:0 0 8px #000;transform:translate(-50%,-50%)}
+.fx-btn{font-size:clamp(9px,.95vw,12px);white-space:nowrap}
+.fx-btn[aria-pressed="true"]{border-color:#bc9d72;color:#f6e5c9;background:rgba(78,47,32,.72)}
+.cap{max-width:92%;text-wrap:balance}
+.cap.small{line-height:1.6}
+/* Tạm dừng đồng thời chuyển động nền; các hiệu ứng đã vẽ không còn chạy vô hạn. */
+.stage:not(.playing) .leak,.stage:not(.playing) .flare,.stage:not(.playing) .grain,
+.stage:not(.playing) .face.show img,.stage:not(.playing) .cursor.click svg,
+.stage:not(.playing) .cursor.click i,.stage:not(.playing) .cap.glitch .c{animation-play-state:paused}
+/* Cho phép xem trailer mà không có chớp sáng, rung máy hay chuyển cảnh giật. */
+.stage.soft-fx .flash,.stage.soft-fx .flare,.stage.soft-fx .leak,.stage.soft-fx .streak{display:none!important}
+.stage.soft-fx .grain{opacity:.035;animation:none!important}
+.stage.soft-fx .shot.on.tr-glitch,.stage.soft-fx .shot.on.tr-flash,
+.stage.soft-fx .shot.on.tr-whip{animation:none!important;filter:none;transform:none}
+.stage.soft-fx .shot.on.shake .bg,.stage.soft-fx .shot.gp.shake .bg,
+.stage.soft-fx.scare .shot.on .bg{animation:none!important;transform:none}
+.stage.soft-fx.scare .vignette{animation:none!important;opacity:.75}
+.stage.soft-fx .cap.glitch,.stage.soft-fx .cap.glitch .c{animation:none!important}
+.stage.soft-fx.punch1 .shots,.stage.soft-fx.punch2 .shots,.stage.soft-fx.punch3 .shots{animation:none!important}
+@media(max-width:700px) and (orientation:portrait){
+ .start-kicker{font-size:10px;letter-spacing:.16em;padding:0 5%}
+ .act-label{top:max(7%,env(safe-area-inset-top));left:6%;max-width:52%;font-size:9px;letter-spacing:.09em;gap:.5em}
+ .act-label::before{width:12px}
+ .stage.gp .act-label{top:max(7%,env(safe-area-inset-top));left:6%;max-width:48%;font-size:9px}
+ .hud{gap:5px}.fx-btn{font-size:9px;padding:.5em .6em;max-width:110px;white-space:normal}
+ .player{gap:6px}.player span{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){.act-label::before{box-shadow:none}.cap .c{transition:none!important}}
