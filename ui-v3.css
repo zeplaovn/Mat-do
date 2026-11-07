@@ -394,3 +394,14 @@ html[data-fx=low] .hotspot:before{animation:none!important}
 /* Vùng chạm tối thiểu 44px cho nút đóng bảng và nút trailer ở mọi nền tảng */
 .modal-close,#modal-close{min-width:44px;min-height:44px}
 #btn-trailer{min-height:44px}
+
+/* ===== Ô hội thoại cố định: cùng vị trí, cùng kích thước ở mọi câu thoại ===== */
+.dlg .dlg-box,.dlg.is-narrator .dlg-box{box-sizing:border-box;height:clamp(140px,23dvh,200px);min-height:0;max-height:none;align-content:start;overflow:visible}
+.dlg .dlg-text{max-height:100%;overflow-y:auto;scrollbar-width:none;overscroll-behavior:contain}
+.dlg .dlg-text::-webkit-scrollbar{display:none}
+@media(max-width:1100px) and (orientation:portrait){
+  .dlg .dlg-box,.dlg.is-narrator .dlg-box{height:clamp(132px,21dvh,190px)}
+}
+@media(max-height:520px) and (orientation:landscape){
+  .dlg .dlg-box,.dlg.is-narrator .dlg-box{height:clamp(96px,32dvh,128px)}
+}
