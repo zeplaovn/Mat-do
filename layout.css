@@ -531,7 +531,7 @@ html[data-fx=low] .chatter{backdrop-filter:none}
 
 /* ---------- Điện thoại dọc: cảnh phủ gần hết màn hình, vuốt ngang để nhìn quanh ----------
    Trước đây khung 16:9 chỉ là một dải mỏng giữa màn hình đen nên sương, mưa, vignette đều bị cắt gọn trong dải đó. */
-@media(max-width:700px) and (orientation:portrait){
+@media(max-width:1100px) and (orientation:portrait){
   #app-shell .game-column{display:block;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   #app-shell .game-column::-webkit-scrollbar{display:none}
   #app-shell .scene-stage{
@@ -574,7 +574,7 @@ html[data-fx=low] .chatter{backdrop-filter:none}
 /* Thông báo không đè lên khung máy ảnh */
 .scene-stage.cam-on ~ .toast,body:has(.scene-stage.cam-on) .toast{bottom:auto;top:calc(max(14px,var(--safe-t)) + 74px)}
 /* Điện thoại dọc: khung máy ảnh bám theo màn hình (không bám theo khung cảnh rộng hơn màn hình) */
-@media(max-width:700px) and (orientation:portrait){
+@media(max-width:1100px) and (orientation:portrait){
   .scene-stage.cam-on .cam-hud{position:fixed;inset:0}
 }
-@media(max-width:700px) and (orientation:portrait){.cam-mode-btn{bottom:36%}}
+@media(max-width:1100px) and (orientation:portrait){.cam-mode-btn{bottom:36%}}
