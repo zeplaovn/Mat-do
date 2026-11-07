@@ -278,6 +278,421 @@ const CONVO={
   ["Hà","Mọi thứ ngăn nắp quá... Tớ không dám chạm vào. Như thể bước vào phòng riêng của ai đó vậy."],
   ["Vy","Người ở đây đủ lâu để giữ lại một điều gì đó. Mình xem kỹ từng góc nhé. Nhẹ tay thôi."]]
 };
+/* Nhịp vào nhà hoang: ưu tiên phản ứng người thật trước khi nhắc tới manh mối.
+   Các lời thoại chứa vật chứng/chọn lựa vẫn do tương tác gốc xử lý. */
+const HOUSE_INTROS={
+ "BG08": [
+  [
+   "Người kể chuyện",
+   "Biệt thự Vân Hòa hiện ra sau những thanh sắt rỉ. Trên tầng hai, một ô cửa chớp khẽ rung rồi đứng im."
+  ],
+  [
+   "Vũ",
+   "Tớ đã định nói là trông nó cũng bình thường... Thôi, tớ rút lại. Ai mang theo chìa thì mở nhanh, đứng đây tớ khó thở quá."
+  ],
+  [
+   "Chi",
+   "Tớ giơ máy lên mà tay cứ rung. Cái cửa sổ trên kia... lúc nãy có phải vừa động đậy không?"
+  ],
+  [
+   "Hà",
+   "Chân tớ lạnh ngắt. Mình vẫn có thể quay về mà, đúng không?"
+  ],
+  [
+   "Vy",
+   "Bà ngoại chỉ cần nghe hai chữ Vân Hòa là im bặt. Giờ tớ hiểu vì sao bà không muốn tớ tới đây. Nhưng tớ vẫn muốn biết chuyện gì đã xảy ra."
+  ],
+  [
+   "Khôi",
+   "Muốn vào thì đi cùng nhau. Một người bảo dừng là cả nhóm dừng. Không ai phải tỏ ra gan dạ cả."
+  ]
+ ],
+ "BG09": [
+  [
+   "Người kể chuyện",
+   "Vừa qua cổng, tiếng xích sắt giật mạnh phía sau. Tiếng vang lăn qua sân rồi tắt giữa những ô cửa tối."
+  ],
+  [
+   "Vũ",
+   "Khoan! Ai đóng cổng? Tớ còn chưa bỏ tay khỏi song sắt... Sao lạnh thế này?"
+  ],
+  [
+   "Khôi",
+   "Để tớ xem. Cánh cổng vẫn mở được, chỉ có bản lề kẹt. Nhưng... tớ không hề đẩy nó."
+  ],
+  [
+   "Chi",
+   "Đừng đứng tản ra nữa. Cứ nhìn lên nhà là tớ có cảm giác có người đang nhìn xuống."
+  ],
+  [
+   "Hà",
+   "Nếu sợ quá mình ra cổng ngay nhé. Tớ không muốn ai bị bỏ lại ngoài sân."
+  ],
+  [
+   "Vy",
+   "Tớ cũng muốn chạy. Nhưng cái giếng và căn nhà này là những thứ còn lại trong ảnh bà ngoại giữ. Mình xem một chút thôi."
+  ]
+ ],
+ "BG10": [
+  [
+   "Người kể chuyện",
+   "Mái hiên thấp khiến tiếng gió ngoài sân nghe xa hẳn. Bụi rơi lả tả mỗi khi có người đặt chân lên bậc đá."
+  ],
+  [
+   "Chi",
+   "Đợi đã. Tớ vừa nghe tiếng chân trong nhà. Một bước thôi, ngay phía sau cửa."
+  ],
+  [
+   "Vũ",
+   "Chắc gỗ nở vì ẩm. Tớ biết nghe không thuyết phục, nhưng làm ơn cho tớ tin như thế đi."
+  ],
+  [
+   "Vy",
+   "Cửa không khóa. Đấy mới là điều tớ không thích. Cứ như nó đang đợi người đẩy vào."
+  ],
+  [
+   "Khôi",
+   "Tớ mở cửa. Vũ soi đèn, Chi đứng sau Hà. Bất cứ ai không ổn cứ nói, mình quay ra sân."
+  ]
+ ],
+ "BG11": [
+  [
+   "Người kể chuyện",
+   "Cánh cửa gỗ rên một tiếng dài. Luồng khí ẩm, mùi vải mục và nhang cũ tràn ra; ánh đèn pin chỉ soi được một khoảng sàn đầy bụi."
+  ],
+  [
+   "Vũ",
+   "Úi! ...Xin lỗi, cái bóng của tay vịn thôi. Tớ tưởng có người đứng sát cửa."
+  ],
+  [
+   "Chi",
+   "Đừng cười Vũ. Tớ cũng giật mình. Tớ nghe rõ tiếng ai thở ở ngay cạnh tai."
+  ],
+  [
+   "Khôi",
+   "Có thể là tiếng gió qua khe cửa. Nhưng không ai đi riêng nữa, nghe chưa? Tớ không muốn phải tìm người trong cái nhà này."
+  ],
+  [
+   "Vy",
+   "Đồng hồ dừng rồi. Và mấy khung ảnh kia... sao kính lại sạch hơn cả mặt bàn? Tớ sẽ ghi lại, nhưng hiện giờ tay tớ không viết thẳng nổi."
+  ],
+  [
+   "Hà",
+   "Mình xem phòng thờ trước nhé. Ở giữa sảnh thế này, tớ cứ thấy sau lưng có khoảng trống rất lớn."
+  ]
+ ],
+ "BG12": [
+  [
+   "Người kể chuyện",
+   "Trước bàn thờ, mùi tro lạnh hăng lên mỗi khi đèn pin lia qua. Không có ngọn nhang nào cháy, nhưng chiếc bát gần mép bàn vẫn lấp lánh hạt tro mới."
+  ],
+  [
+   "Hà",
+   "Khoan. Đừng chạm vào bát hương. Tớ nghe tiếng sột soạt ngay phía sau bài vị... Tớ biết có thể là chuột, nhưng tay tớ nổi hết gai."
+  ],
+  [
+   "Vũ",
+   "Các cậu có nghe ai vừa ho không? Tớ đứng ngay cửa, chỗ này không có người khác mà."
+  ],
+  [
+   "Vy",
+   "Đừng vội kết luận. Những bát hương này có thể là dấu vết của người từng sống ở đây. Mình cần biết họ là ai."
+  ],
+  [
+   "Khôi",
+   "Hà đứng cạnh tớ. Muốn ra ngoài hít thở thì ra, không cần xin phép."
+  ]
+ ],
+ "BG13": [
+  [
+   "Người kể chuyện",
+   "Bếp nguội ngắt. Trên chạn, mấy chiếc bát úp thành hàng; một tiếng va rất nhỏ vang lên khi cả nhóm vừa bước qua ngưỡng."
+  ],
+  [
+   "Vũ",
+   "Không ai đụng vào cái bát ấy đúng không? ...Không à? Thế thì đừng bảo tớ kiểm tra lại."
+  ],
+  [
+   "Hà",
+   "Một căn bếp từng có người nấu cơm mỗi ngày mà giờ lạnh thế này... Tớ không biết sao mình vừa thấy thương, vừa muốn chạy."
+  ],
+  [
+   "Chi",
+   "Phía sau chạn có cánh cửa xuống hầm. Tớ vừa chĩa máy xuống, màn hình tối om dù đèn vẫn sáng."
+  ],
+  [
+   "Khôi",
+   "Để tầng hầm sau. Mình xem hai phòng trên lầu trước. Không ai xuống một mình."
+  ],
+  [
+   "Vy",
+   "Tớ ghi vị trí cửa hầm. Có thứ gì đó từng xảy ra ở đây, nhưng đừng tự biến cảm giác của mình thành bằng chứng."
+  ]
+ ],
+ "BG14": [
+  [
+   "Người kể chuyện",
+   "Bậc thang thứ tư lún xuống dưới chân Khôi. Tiếng gỗ kêu răng rắc vọng lên tầng trên như có ai đáp lại."
+  ],
+  [
+   "Chi",
+   "Đứng lại! Tớ nghe một bước chân phía trên. Không phải tiếng bậc mình vừa dẫm đâu."
+  ],
+  [
+   "Khôi",
+   "Vũ soi đèn lên trước. Tớ kiểm tra từng bậc; ai thấy chóng mặt thì bám tay vịn."
+  ],
+  [
+   "Vũ",
+   "Tớ đang soi đây. Nhưng nếu đèn chiếu trúng cái gì biết nhìn lại thì... tớ có thể la đấy."
+  ],
+  [
+   "Vy",
+   "Những bức ảnh dọc tường đều quay mặt về phía cầu thang. Tớ cố không nhìn, nhưng cứ nghĩ đến người đã đứng ở đây trước mình."
+  ]
+ ],
+ "BG15": [
+  [
+   "Người kể chuyện",
+   "Hành lang tầng hai hẹp hơn nhìn từ dưới. Đèn pin quét qua hai cánh cửa; ở cuối hành lang có tiếng lạch cạch từ ô cửa chớp."
+  ],
+  [
+   "Hà",
+   "Có mùi phấn viết bảng... Trong một căn nhà bỏ hoang từng ấy năm?"
+  ],
+  [
+   "Chi",
+   "Tớ thấy thứ gì như mặt gương ở cuối hành lang. Chớp mắt lại thì chỉ còn cửa sổ. Tớ không dám đi trước nữa."
+  ],
+  [
+   "Vũ",
+   "Cứ đi sát tường đi. Đừng để khoảng trống sau lưng. Tớ ghét nhất cái khoảng trống đấy."
+  ],
+  [
+   "Khôi",
+   "Bên trái phòng trẻ, bên phải phòng làm việc. Mỗi lần vào một phòng, cả nhóm cùng vào."
+  ],
+  [
+   "Vy",
+   "Một cánh cửa nhỏ đến thế này mà làm tớ sợ hơn cả cổng sắt lúc nãy."
+  ]
+ ],
+ "BG16": [
+  [
+   "Người kể chuyện",
+   "Một chiếc nôi nằm cạnh giường. Trong không khí ẩm, mùi vải cũ phảng phất như mùi áo trẻ con mới phơi chưa khô."
+  ],
+  [
+   "Chi",
+   "Không... không được. Trong ảnh chụp lúc nãy có một bé gái đứng cạnh giường. Giờ ở đấy chẳng có ai. Tớ không tự bịa ra đâu!"
+  ],
+  [
+   "Vũ",
+   "Đưa máy đây. ...Tớ không muốn nhìn nữa. Chi, ra gần cửa với tớ."
+  ],
+  [
+   "Hà",
+   "Có đứa trẻ từng ngủ ở đây. Nhìn con búp bê được vá đi vá lại kìa. Nhưng... ai vừa hát vậy?"
+  ],
+  [
+   "Vy",
+   "Tớ nghe thấy, chỉ một nốt thôi. Mình chưa biết em là ai. Đừng gọi bừa tên em."
+  ],
+  [
+   "Khôi",
+   "Ai muốn ra hành lang cứ nói. Tớ sẽ đi cùng. Chúng ta không cần cố chịu đựng để chứng tỏ điều gì."
+  ]
+ ],
+ "BG17": [
+  [
+   "Người kể chuyện",
+   "Phòng làm việc ngột ngạt mùi giấy ẩm. Những ngăn kéo im lìm khiến tiếng bước chân của cả nhóm nghe rõ đến khó chịu."
+  ],
+  [
+   "Vy",
+   "Chữ ký của ông Hưng có trong các bài báo. Tớ muốn nhìn thấy giấy tờ gốc... nhưng thật sự tớ không muốn lục thêm bất cứ thứ gì ở đây."
+  ],
+  [
+   "Vũ",
+   "Tớ đứng canh cửa. Đừng hỏi vì sao, tớ chỉ không thích quay lưng lại hành lang."
+  ],
+  [
+   "Chi",
+   "Máy ảnh cứ tự lấy nét vào chiếc ghế trống. Tớ tắt nó rồi, không chụp nữa."
+  ],
+  [
+   "Khôi",
+   "Xem sổ sách trước. Đừng mở hộp sắt khi chưa biết nó chứa gì. Mình cần chứng cứ, không cần mạo hiểm vô ích."
+  ]
+ ],
+ "BG18": [
+  [
+   "Người kể chuyện",
+   "Hơi lạnh bốc lên từ những bậc đá ướt. Ánh đèn pin chạm đến chiếu nghỉ rồi bị bóng tối nuốt mất."
+  ],
+  [
+   "Vũ",
+   "Tớ đổi pin mới lúc ngoài sân. Sao đèn cứ chớp thế này? ...Các cậu đừng bước tiếp vội."
+  ],
+  [
+   "Hà",
+   "Có tiếng gõ ở dưới. Ba tiếng... rồi im. Tớ đã nghe từ gian bếp rồi. Không thể lần nào cũng là tiếng ống nước được."
+  ],
+  [
+   "Chi",
+   "Tớ sợ đến mức không cầm chắc máy nữa. Khôi, cậu còn ở sau tớ chứ?"
+  ],
+  [
+   "Khôi",
+   "Tớ đây. Nắm tay vịn, từng người một. Nếu có ai mắc kẹt dưới đó, mình phải biết; nếu nguy hiểm, quay lên ngay."
+  ],
+  [
+   "Vy",
+   "Tớ từng nghĩ tìm sự thật chỉ là đọc đủ giấy tờ. Giờ tớ mới biết mình đã nghĩ quá đơn giản."
+  ]
+ ],
+ "BG19": [
+  [
+   "Người kể chuyện",
+   "Cuối hành lang, mảng gạch có màu khác hẳn phần tường cũ. Mùi vữa ẩm lẫn với một thứ mùi rất khó gọi tên."
+  ],
+  [
+   "Vũ",
+   "Đừng soi đèn vào đó nữa... Có những vệt dài trên vữa. Người ta đã bịt thứ gì lại đây?"
+  ],
+  [
+   "Hà",
+   "Tớ nghe tiếng cào. Không, thật đấy, vừa sát bên kia tường. Tớ muốn lên trên, nhưng chân không nhúc nhích nổi."
+  ],
+  [
+   "Khôi",
+   "Hà, nhìn tớ này. Thở chậm thôi. Mình chưa biết phía sau có gì, nên đừng ai chạm vào tường vội."
+  ],
+  [
+   "Chi",
+   "Tay tớ run quá, ảnh chụp mờ hết. Nhưng màu gạch khác, đúng là có người xây chèn sau."
+  ],
+  [
+   "Vy",
+   "Tớ ghi điều mình thấy, không ghi điều mình sợ. Cứu người và tìm chứng cứ là hai việc khác nhau; cả hai đều cần tỉnh táo."
+  ]
+ ],
+ "BG20": [
+  [
+   "Người kể chuyện",
+   "Lớp gạch được cạy ra. Phía sau là cửa gỗ cũ và những đồ dùng bỏ lại quá vội: một đôi dép, một chiếc bát, mảnh vải gấp dở."
+  ],
+  [
+   "Vũ",
+   "Đừng bắt tớ soi đèn sâu hơn. Tớ... tớ không chịu được. Ở đây từng có người thật."
+  ],
+  [
+   "Chi",
+   "Tớ vừa giơ máy lên rồi lại hạ xuống. Không phải thứ gì cũng nên chụp như một chuyện lạ để khoe."
+  ],
+  [
+   "Hà",
+   "Có ai nắm tay tớ một chút được không? Tớ cứ tưởng tượng những người ở đây đã đợi tiếng bước chân ngoài cửa như thế nào."
+  ],
+  [
+   "Vy",
+   "Tớ muốn khóc. Nhưng trước khi khóc, mình phải tìm được tên họ và mang những gì còn lại ra ngoài."
+  ],
+  [
+   "Khôi",
+   "Mọi người lùi về phía cửa cho dễ thở. Mình sẽ làm từng việc một. Không ai phải ở lại đây một mình."
+  ]
+ ],
+ "BG21": [
+  [
+   "Người kể chuyện",
+   "Căn phòng sau cánh cửa nhỏ giống phòng trẻ vừa đi qua, chỉ có đồ vật và cả nét chữ đều bị đảo ngược."
+  ],
+  [
+   "Chi",
+   "Tớ nhìn thấy tay mình trong gương... nó không làm theo. Không, tớ không nhìn nữa!"
+  ],
+  [
+   "Hà",
+   "Có tiếng ru gần lắm. Ai đang hát cho em vậy? Tớ không thấy miệng ai động cả."
+  ],
+  [
+   "Vũ",
+   "Đèn vẫn sáng mà bóng bọn mình đổ sai hướng. Khôi, nói gì đi, đừng im thế."
+  ],
+  [
+   "Vy",
+   "Có một em bé đang cố nói với mình. Nếu em sợ, mình càng không được dọa em bằng những câu hỏi vội vàng."
+  ],
+  [
+   "Khôi",
+   "Đi sát nhau. Nếu không chịu nổi thì nhìn vào vai người phía trước, đừng nhìn xuống nền."
+  ]
+ ],
+ "BG22": [
+  [
+   "Người kể chuyện",
+   "Trong khoảng tối phía sau cánh cửa, có một chiếc áo nhỏ và những vết xước rất thấp trên gỗ."
+  ],
+  [
+   "Chi",
+   "Vết xước nhỏ thế này... Tớ không chụp nữa. Tớ không làm được."
+  ],
+  [
+   "Hà",
+   "Tớ cứ nghĩ em đã ngồi khóc một mình. Nghĩ đến đấy... tớ không thở nổi."
+  ],
+  [
+   "Vy",
+   "Mình vẫn chưa biết mọi chuyện. Nhưng có ai đó đã cố để em biến mất khỏi giấy tờ. Tớ sẽ tìm ra tên thật của em."
+  ],
+  [
+   "Khôi",
+   "Ra khỏi đây một lát nếu cần. Không ai phải đứng nhìn mãi những thứ này."
+  ]
+ ],
+ "BG23": [
+  [
+   "Người kể chuyện",
+   "Đại sảnh đỏ quạch. Bóng người trên nền gạch kéo dài, dù ngay chỗ đáng lẽ có người đứng lại trống không."
+  ],
+  [
+   "Vũ",
+   "Tớ kéo cửa rồi. Không nhúc nhích! Tớ vừa ở đây mà, cửa còn mở được!"
+  ],
+  [
+   "Chi",
+   "Đừng đứng giữa phòng. Cái bóng ấy đang dài thêm... các cậu thấy chứ?"
+  ],
+  [
+   "Hà",
+   "Tớ vẫn sợ. Tớ sợ đến phát khóc. Nhưng nếu cứ im lặng thì mọi chuyện lại bị giấu đi."
+  ],
+  [
+   "Vy",
+   "Ông Hưng, nếu ông còn nghe thấy, chúng tôi có bằng chứng. Đừng ép chúng tôi im lặng như những người năm ấy."
+  ],
+  [
+   "Khôi",
+   "Nhìn Vy, đừng nhìn cái bóng. Mình trả lời bằng chứng cứ, không bằng cơn sợ."
+  ]
+ ]
+};
+const HOUSE_DIARY={
+ "BG08": "Đã đến Vân Hòa. Nhìn qua cổng, tớ thấy mình bé xíu. Bà ngoại chưa bao giờ kể hết chuyện ở đây. Tớ muốn hỏi bà ngay lúc này, nhưng chỉ có sóng điện thoại chập chờn và một ổ khóa rỉ trước mặt.",
+ "BG09": "Cổng giật sập sau lưng làm Vũ gần như hét lên. Khôi bảo bản lề kẹt, nhưng chính cậu ấy cũng không chắc. Tớ viết những dòng này sát bên Hà; không ai muốn đứng cách nhau quá vài bước.",
+ "BG10": "Cánh cửa gỗ không khóa. Đứng trước ngưỡng nhà, bọn mình nghe một tiếng động ngắn ở bên trong. Có thể là gỗ cũ. Tớ đã cầm sẵn đèn pin rồi mà vẫn không dám đưa tay đẩy cửa.",
+ "BG11": "Bước vào đại sảnh, tớ cứ nhìn xuống sàn để tránh những khung ảnh. Vũ giật mình vì bóng tay vịn; tớ cũng vậy nhưng không dám nhận. Mặt kính vài khung ảnh sạch hơn mặt bàn. Ai đã lau chúng?",
+ "BG12": "Phòng thờ lạnh ngắt. Hà giữ tay tớ lại trước khi tớ chạm bát hương. Tớ không biết ở đây thờ những ai, cũng không muốn đoán bừa. Chỉ mong đừng có ai phải chờ một cái tên mãi.",
+ "BG13": "Trong bếp vẫn còn bát đũa xếp ngay ngắn. Một tiếng chạm rất khẽ làm cả đám quay phắt lại. Sau chạn là cửa xuống hầm; Khôi muốn xem hết tầng trên trước. Tớ nhẹ cả người vì quyết định ấy.",
+ "BG14": "Bậc thang kêu quá to. Chi nghe thấy tiếng chân trên cao; không ai trả lời được tiếng ấy từ đâu ra. Tớ sợ đến mức đếm từng bậc để khỏi nghĩ đến những bức ảnh dọc tường.",
+ "BG15": "Tầng hai chỉ có một hành lang và những cánh cửa đóng. Chi nói đã thoáng thấy một mặt gương ở cuối lối đi, rồi không thấy nữa. Có lẽ bọn mình mệt, nhưng không ai dám đi một mình.",
+ "BG16": "Trong phòng trẻ có một chiếc nôi và con búp bê được vá cẩn thận. Chi quả quyết máy ảnh đã chụp được một bé gái. Tớ muốn tin do ánh sáng, nhưng vừa rồi chính tớ cũng nghe một nốt ru. Em là ai?",
+ "BG17": "Phòng ông Hưng vẫn còn sổ và hộp sắt. Tớ nhìn những ngăn kéo mà nghĩ đến bao thứ người ta có thể giấu bằng vài ổ khóa. Tớ phải tìm bằng chứng, nhưng tay cứ ướt mồ hôi.",
+ "BG18": "Xuống hầm, đèn của Vũ chớp liên tục. Có tiếng gõ từ dưới sâu; Hà nghe thấy trước cả bọn. Tớ đã suýt bảo quay lại. Nếu có người từng kêu cứu ở đây, mình phải tìm cho rõ.",
+ "BG19": "Mảng tường cuối hầm có lớp vữa khác màu. Hà nói nghe tiếng cào, Chi thì run đến mức không chụp nổi ảnh rõ. Tớ ghi lại màu gạch và vị trí lớp vữa. Những điều còn lại hiện giờ chỉ là nỗi sợ.",
+ "BG20": "Sau tường là đồ dùng của những người từng ở đây. Chi cất máy ảnh. Hà nắm chặt tay tớ. Chưa biết hết họ đã trải qua gì, nhưng đồ vật này là của người thật, không phải đạo cụ trong một câu chuyện ma."
+};
 /* Những nhịp vào cảnh dùng bản thoại mới; lời sau khi chạm vật chứng vẫn chờ đúng tương tác. */
 const REVIEWED_INTROS={
  BG01:['N01',0,99],BG02:['N03',0,99],BG03:['N06',0,99],BG04:['N07',0,99],
@@ -285,7 +700,7 @@ const REVIEWED_INTROS={
  BG12:['N17',0,99],BG13:['S18',0,2],BG14:['S19',0,4],BG18:['S23',0,2],BG23:['S28',0,2],
  BG27:['S32',0,2],BG28:['S33',0,5],BG29:['S34',0,4],BG30:['S35',0,1],BG43:['S39',0,2]
 };
-function introOf(id){const spec=REVIEWED_INTROS[id],lines=spec&&reviewed(spec[0]).slice(spec[1],spec[2]);return lines&&lines.length?lines:(CONVO[id]||(SCENES[id].intro?[SCENES[id].intro]:[]))}
+function introOf(id){if(HOUSE_INTROS[id])return HOUSE_INTROS[id];const spec=REVIEWED_INTROS[id],lines=spec&&reviewed(spec[0]).slice(spec[1],spec[2]);return lines&&lines.length?lines:(CONVO[id]||(SCENES[id].intro?[SCENES[id].intro]:[]))}
 /* Câu thoại phụ khi quan sát một vật (nối sau câu chính) */
 const MORE={
  village:[["Vy","Tớ chụp thêm một tấm cổng làng nữa. Lỡ sau này không còn như bây giờ thì sao."]],
@@ -732,7 +1147,7 @@ function nextPop(){const id=popQueue.shift();if(!id){popBusy=false;return}popBus
  const n=document.createElement('strong');n.textContent=info.name;const d=document.createElement('span');d.textContent=info.description;t.append(k,n,d);card.appendChild(t);
  $('item-pop').appendChild(card);requestAnimationFrame(()=>card.classList.add('in'));
  setTimeout(()=>{card.classList.remove('in');card.classList.add('out');setTimeout(()=>{card.remove();nextPop()},420)},3300)}
-function go(target){pendingMemories=[];if(target==='BG11'&&state.flags.lamAwake&&!state.flags.lamDone)target='BG23';if(!SCENES[target])return;const from=state.scene,first=!state.visited.includes(target);state.scene=target;if(first)state.visited.push(target);clearDialogue();hideModal();render();if(first&&(SCENES[target].intro||REVIEWED_INTROS[target]))talk(introOf(target));if(first&&(target==='BG18'||target==='BG19'))setTimeout(()=>playSound('knock',.13),2600);else if((from==='BG11'||from==='BG23')&&target==='BG10')playSound('door',.22);if(target==='BG44')setTimeout(()=>{if(state.scene==='BG44'&&!dialogueOpen&&!modalType)campTalk()},600);save();}
+function go(target){pendingMemories=[];if(target==='BG11'&&state.flags.lamAwake&&!state.flags.lamDone)target='BG23';if(!SCENES[target])return;const from=state.scene,first=!state.visited.includes(target);state.scene=target;if(first)state.visited.push(target);clearDialogue();hideModal();render();if(first&&HOUSE_DIARY[target])note('visit_'+target,SCENES[target].name,HOUSE_DIARY[target]);if(first&&(SCENES[target].intro||REVIEWED_INTROS[target]||HOUSE_INTROS[target]))talk(introOf(target));if(first&&(target==='BG18'||target==='BG19'))setTimeout(()=>playSound('knock',.13),2600);else if((from==='BG11'||from==='BG23')&&target==='BG10')playSound('door',.22);if(target==='BG44')setTimeout(()=>{if(state.scene==='BG44'&&!dialogueOpen&&!modalType)campTalk()},600);save();}
 function isTarget(h){const sel=state.selectedItem;return !!(sel&&USE_ON[sel]&&USE_ON[sel].includes(h.action))}
 /* Các biểu tượng chỉ mô tả loại tương tác; vùng chạm và hành động vẫn lấy từ dữ liệu cảnh. */
 const CONVERSATION_SPOTS=new Set(['warning','huu','fbMan','fbLua','campfire']);
@@ -1007,6 +1422,63 @@ function hideModal(){
 function modalButton(text,fn){const b=document.createElement('button');b.type='button';b.className='modal-option';b.textContent=text;b.addEventListener('click',fn);return b}
 function showGuide(){showModal(`<h2>Cách chơi</h2><p>Chạm hoặc nhấp các dấu trên cảnh để quan sát, trò chuyện và di chuyển. Chọn vật phẩm trong thanh bên dưới rồi chạm nơi muốn sử dụng.</p><p>Nhật ký giữ lại những gì đã tìm thấy. Hãy đọc và đối chiếu tài liệu; một số chi tiết có thể không đáng tin.</p><p><strong>Phím tắt:</strong> J mở nhật ký · H xem gợi ý nhẹ · F bật đèn pin · Esc đóng bảng · Enter hoặc Space tiếp lời thoại.</p><div class="modal-buttons" id="guide-actions"></div>`,'HƯỚNG DẪN','guide');$('guide-actions').appendChild(modalButton('Tiếp tục',hideModal))}
 
+/* Giọng kể của Vy trong sổ. Ghi chép chứng cứ gốc vẫn nằm trong state.notes;
+   thay nội dung trình bày để cả những save cũ được đọc tự nhiên hơn. */
+const JOURNAL_VOICE={
+ "start": "Sáng nay bọn mình đến Đồng Chay: Khôi, Vũ, Hà, Chi và tớ. Vũ vẫn nói cười như đi dã ngoại. Tớ cũng cố vui, nhưng cái tên Vân Hòa làm tớ nhớ đến vẻ mặt bà ngoại lúc nghe mình hỏi chuyện.",
+ "clippings": "Tớ mang theo ba mẩu báo: năm 1986 nhắc đến lễ cầu mưa và ông Hưng; năm 1988 nói chủ nhà Vân Hòa khóa cổng bỏ đi; năm 1989 gọi đó là nhà hoang. Không bài nào cho biết nguồn tin. Càng đọc càng thấy thiếu.",
+ "oldwoman": "Bà bán nước chỉ đường qua miếu, rồi nhìn bọn mình rất lâu khi nhắc đến căn nhà trên đồi. Tớ không biết bà sợ điều gì. Giá mà lúc ấy mình hỏi thêm.",
+ "shrine": "Ở miếu ven rừng, tớ nhặt được mấy nén nhang chưa đốt. Mảnh giấy dưới bát hương còn đọc được: “Năm hồn giữ cửa, một bóng giữ nhà.” Chẳng hiểu là lời cảnh báo hay câu đố. Hà nghe xong tái mặt.",
+ "gate": "Chìa sắt vừa khít ổ khóa. Lúc cả nhóm bước qua, cổng bỗng khép mạnh. Khôi nói do bản lề; Vũ quả quyết không ai chạm vào. Tớ chưa biết tin bên nào, chỉ biết mình giật bắn người.",
+ "front": "Cửa chính không khóa. Khi đẩy, nó kêu dài như một người vừa thở ra. Tớ tự nhủ nhà cũ nào cũng thế, nhưng đến khi vào trong vẫn cứ ngoái nhìn cửa.",
+ "clock": "Đồng hồ quả lắc trong sảnh dừng ở 03:17. Tớ viết thật to để khỏi nhầm: 03 giờ 17 phút. Không biết hỏng tự nhiên hay ai đã đặt kim ở đó.",
+ "photo": "Trong ảnh gia đình ông Hưng, một số khuôn mặt bị cào xóa. Chi nhìn rất lâu rồi không muốn chụp thêm. Chuyện năm 1988 có liên quan không? Chưa đủ chứng cứ để nói, nhưng ai đó đã không muốn giữ nguyên tấm ảnh.",
+ "scarf": "Chiếc khăn vải mắc cạnh nắp giếng, cũ mà chưa rã hết. Hà cho rằng có thể của người làm công. Tớ gói lại cẩn thận; khi chưa biết chủ nhân là ai, mình không nên gọi nó là đồ vô chủ.",
+ "spoon": "Chiếc muôi gãy cán nằm trong tro nguội. Tớ cứ nghĩ đến người từng đứng bếp và gọi mọi người ăn cơm. Không biết tên người ấy; tớ sẽ tìm.",
+ "crowbar": "Vũ nhặt một thanh sắt cong dưới bếp. Cậu ấy cứ nắm chặt lấy nó như thể có thứ gì trong tay thì sẽ đỡ sợ hơn. Khôi dặn chỉ dùng khi thật cần thiết.",
+ "fragA": "Một mảnh thư bị nhét sâu trong kẽ tủ bếp. Nét chữ run và phần còn lại đã bị xé mất. Tớ cất riêng, mong tìm được những mảnh kia.",
+ "fragB": "Sau khung ảnh có mảnh giấy thứ hai, giấu dưới dòng chữ mã hóa. Tớ giữ lại. Có người đã phải giấu lời mình muốn nói kỹ đến thế.",
+ "fragC": "Mảnh giấy thứ ba kẹp trong sổ vật tư của ông Hưng. Cuối cùng tớ cũng có cơ hội ghép xem người viết muốn nhắn điều gì.",
+ "ledger": "Sổ vật tư năm 1988 có chữ ký ông Hưng: nến, giấy sớ và vải che ô thông gió được cấp cho thầy Chân. Còn một mảnh đơn bị xé kẹp ở giữa. Tớ chép nguyên những mục này; không muốn nhớ sai một chữ.",
+ "petition": "Ghép được ba mảnh đơn. Người viết nghi thầy Chân sửa sớ và ông Hưng che giấu việc cấp vật tư. Họ đã nhờ người tìm thấy thư chuyển cho gia đình. Tớ đọc lại mấy lần mà cứ nghẹn ở cổ.",
+ "comb": "Trong nôi có chiếc trâm gỗ gãy. Hà bảo có lẽ người lớn từng dùng nó khi ru em bé ngủ. Tớ không biết chắc. Chỉ thấy có ai đó đã để lại món đồ của mình cạnh đứa trẻ.",
+ "mirror": "Chi chụp gương, trong ảnh hiện một bóng trắng cạnh giường; mắt thường không thấy ai. Tớ vừa lạnh cả lưng vừa sợ mình đang ép mọi thứ thành chuyện ma. Giữ ảnh lại để đối chiếu.",
+ "cradle": "Chiếc nôi tự khẽ đưa dù cửa không mở. Trong đó có mảnh vải thêu dở: “Nh…”. Tớ nghe tiếng khóc rất nhỏ. Tớ chỉ dám ghi đúng hai chữ đầu, không tự đặt tên cho em.",
+ "birth": "Giấy khai sinh ghi Nhài sinh năm 1981, là con của vợ chồng ông Hưng; dòng ghi mất tích đêm 17/3/1988 đã bị gạch bỏ. Em mới bảy tuổi. Tớ nhìn con số ấy lâu hơn mọi con số khác.",
+ "sandals": "Một đôi dép vải nằm lại trong căn phòng bị bịt kín. Hà không nói gì, chỉ ngồi xuống thật lâu. Tớ muốn mang đồ vật ra ánh sáng cùng câu chuyện của người đã đi nó.",
+ "archive": "Dưới hầm có hộp giấy tờ cấp đồ lễ mang chữ ký ông Hưng. Cuối cùng cũng có thứ không chỉ là lời kể hay cảm giác. Nhìn bản gốc mà tay tớ vẫn run.",
+ "testimony": "Bà Tám viết rằng đêm 17/3/1988 bà nghe tiếng kêu cứu từ tầng hầm nhưng quá sợ để lên tiếng. Bà đã giữ lại lời khai. Tớ không biết nếu là mình đêm ấy, mình có đủ can đảm không.",
+ "bell": "Trong xô giếng có chiếc chuông đồng nhỏ buộc dây đỏ, loại thường buộc cho trẻ con khỏi lạc. Hà cầm nó rất lâu. Không ai biết nó đã ở dưới đó bao lâu.",
+ "rhyme": "Tớ chép lại đúng thứ tự bài đồng dao cô Quyên dạy: búp bê, hạc giấy, xe gỗ, phấn trắng. Cứ nghĩ đến một người lớn kiên nhẫn dạy trẻ học bằng mấy món đồ nhỏ, tớ lại khó chịu trong lòng.",
+ "legend": "Tờ giấy cô Quyên để lại ghép năm ký hiệu với tên người làm công: Giáp — bút, Thành — cân, Quyên — nốt nhạc, Nụ — lửa, Bình — sóng. Có lẽ bà muốn Nhài nhớ mặt chữ bằng những hình dễ thuộc.",
+ "photoBack": "Mặt sau ảnh có lời cô Quyên: người ký đơn đứng theo thứ tự Giáp, Thành, Quyên, Nụ, Bình. Câu “năm người như năm ngón tay” làm tớ thấy họ gần gũi đến đau lòng.",
+ "wall": "Đằng sau lớp gạch là cửa gỗ cũ. Then cài phía ngoài, mặt trong có nhiều vết cào. Tớ không thể biết chỉ từ vết ấy ai đã ở đây bao lâu. Nhưng ai đó đã cố mở cửa.",
+ "confession": "Trong hộp sắt là lời ông Hưng viết về Quế và đêm 17/3/1988. Phải đối chiếu giờ khóa cửa, lúc ông nghe chuyện và những giấy tờ khác. Tớ muốn gọi đây là lời thú tội, nhưng vẫn phải đọc từng dòng cho kỹ.",
+ "lamdiary": "Nhật ký ông Hưng ghi ông giấu chìa kho ở chỗ thường ngồi hóng gió, nhìn xuống làng. Ông viết mình không dám mở. Tớ không hiểu làm sao người ta biết một chuyện sai mà vẫn sống tiếp từng ấy năm.",
+ "lua": "Nhật ký cô Quyên ghi những chuyện nhỏ của Nhài: bữa ăn, thuốc, lần em sốt. Những trang cuối đã bị xé. Chỉ vài dòng chăm em cũng đủ khiến căn nhà này bớt giống một chuyện ma.",
+ "rice": "Một bát cơm vẫn ấm trong phòng thờ, dưới nền có dấu chân rất nhỏ dẫn về bếp. Tớ biết điều này vô lý. Nhưng Hà đã thấy hơi nóng, và Chi cũng nhìn thấy dấu chân.",
+ "flash": "Trong ký ức về đêm 17/3/1988, Nhài nghe tiếng kêu cứu từ hầm rồi chạy đi tìm người. Em cầm một vật bằng đồng, chạy trong mưa; chiếc chuông rơi xuống giếng. Tớ cần đối chiếu phần còn lại với giấy tờ.",
+ "wellPhoto": "Ảnh Chi chụp ở giếng có hai bóng người, một cao một thấp. Tớ không dám gọi tên họ khi chưa biết chắc. Bọn mình còn phải tìm thêm chứng cứ.",
+ "name_binh": "Có lẽ cuối cùng mình đã tìm được tên người gắn với di vật này. Tớ sẽ ghi cẩn thận và đối chiếu với giấy tờ.",
+ "namesDone": "Bình, Nụ, Quyên, Thành, Giáp. Khi từng cái tên được đọc lên, nhang bén lửa và cổng sắt mở. Tớ không còn biết gọi đó là gì, chỉ thấy nhẹ lòng vì mình đã gọi đúng tên họ.",
+ "scrollOrig": "Bản sớ tạ rừng cũ ghi Huyền Lâm Thánh Quân và câu “Rừng nuôi người sống, người giữ rừng xanh.” Nét chữ, dấu triện đều cũ. Tớ muốn nhớ đúng câu ấy.",
+ "scrollFake": "Bản sớ kia có giấy mới chắp vào giấy cũ và một dòng mực đậm hơn, danh hiệu lại ghi Huyền Lâm Tôn Thần. Có người đã sửa, nhưng ai và để làm gì?",
+ "scrollProof": "So hai bản sớ: danh hiệu đổi từ Thánh Quân sang Tôn Thần; giấy mới dán chồng, nét mực khác; câu “Rừng nhận máu người” bị thêm vào. Đây là điều nhìn thấy trên giấy, không phải lời đồn.",
+ "simLetter": "Thư Quế gửi Tùng vạch rõ chuyện bản sớ bị thay và bảo em chạy lên xã. Đọc câu chị dặn đừng quay lại, tớ phải đặt giấy xuống một lúc. Có lẽ Quế đã biết mình gặp nguy hiểm.",
+ "simStory": "Ông Tùng kể chị Quế sinh năm 1971, hay hái thuốc và đưa người lạc ra khỏi rừng. Năm 1986, chị phát hiện bản sớ thầy Chân dùng đã bị sửa. Tớ muốn kiểm tra lời kể bằng thư và bản sớ còn lại.",
+ "truthBoard": "Đến đây, chứng cứ cho thấy vụ Quế năm 1986 và vụ giam người năm 1988 là hai chuyện khác nhau, cùng dính đến việc con người che giấu sai trái. Chỗ nào chưa rõ, tớ sẽ để trống chứ không đoán.",
+ "returnNames": "Bọn mình đã gọi tên Lành, Phúc và Mai ở nền đá. Tớ không muốn nhớ họ chỉ bằng cách họ chết. Trước hết họ từng là một gia đình, từng có những bữa cơm bình thường.",
+ "bronzeSeal": "Sau khi đối chiếu chứng cứ và hoàn tất việc trả tên, bọn mình mới tháo chiếc ấn khỏi khe đá. Tớ không muốn ai chạm vào nó chỉ vì tò mò."
+};
+function journalBody(n){
+ if(JOURNAL_VOICE[n.id])return JOURNAL_VOICE[n.id];
+ if(n.id.startsWith('visit_'))return n.body;
+ if(n.id.startsWith('memory_'))return 'Tớ vừa thấy một ký ức gắn với di vật này. Mọi thứ rõ đến mức khó tin, nhưng tớ vẫn muốn tìm giấy tờ và người có thể xác nhận trước khi viết nó thành sự thật.';
+ if(n.id.startsWith('name_'))return 'Cuối cùng cũng có một cái tên để gọi. '+n.body+' Tớ sẽ đối chiếu lại, không muốn một lần nữa ghi sai người.';
+ if(n.id.startsWith('researchSolved_'))return 'Đọc kỹ và so lại các trang, tớ ghi được điều này: '+n.body;
+ if(n.id.startsWith('research_')&&!n.id.startsWith('researchArchived_'))return 'Tớ đã tìm được cuốn sách này. '+n.body;
+ return n.body;
+}
 /* ================= NHẬT KÝ: cuốn sổ có bìa, lật trang ================= */
 let book=null;
 const BOOK_BUDGET=300,BOOK_MAX_ENTRIES=2;
@@ -1023,7 +1495,7 @@ function bookPageHTML(i){
  const p=book.pages[i];
  if(p===null)return `<div class="bk-blank"><span class="bk-fleuron">◈</span></div><div class="bk-folio">${i+1}</div>`;
  if(!p.length)return `<div class="bk-empty"><div class="bk-title">Chưa có ghi chép</div><div class="bk-body">Trang giấy vẫn còn trắng. Khi tìm thấy manh mối, Vy sẽ ghi lại ở đây…</div></div><div class="bk-folio">${i+1}</div>`;
- return p.map(e=>`<div class="bk-entry"><div class="bk-no">Mục ${String(e.no).padStart(2,'0')}</div><div class="bk-title">${escapeHTML(e.title)}</div><div class="bk-body">${escapeHTML(e.body)}</div></div>`).join('')+`<div class="bk-folio">${i+1}</div>`}
+ return p.map(e=>`<div class="bk-entry"><div class="bk-no">Ghi chép ${String(e.no).padStart(2,'0')}</div><div class="bk-title">${escapeHTML(e.title)}</div><div class="bk-body">${escapeHTML(e.body)}</div></div>`).join('')+`<div class="bk-folio">${i+1}</div>`}
 function bookCount(){
  if(!book)return;const n=book.pages.length,c=book.cur,per=book.per;
  $('bk-count').textContent=per===2?`Trang ${c+1}–${c+2} / ${n}`:`Trang ${c+1} / ${n}`;
@@ -1050,7 +1522,7 @@ function bookTurn(dir){
 function showJournal(){
  const jb=$('btn-journal');if(jb)jb.classList.remove('has-new');
  const per=window.matchMedia('(max-width:700px)').matches?1:2;
- const notes=state.notes.map((n,i)=>({...n,no:i+1}));
+ const notes=state.notes.map((n,i)=>({...n,body:journalBody(n),no:i+1}));
  book={per,pages:null,cur:0,busy:false};
  book.pages=bookPaginate(notes,per);
  const n=book.pages.length;
@@ -1061,10 +1533,10 @@ function showJournal(){
    <div class="bk-base"></div>
    <div class="bk-pages"><div class="bk-page left" id="bk-left"></div><div class="bk-page right" id="bk-right"></div></div>
    <div class="bk-ribbon" aria-hidden="true"></div>
-   <div class="bk-cover" id="bk-cover" aria-hidden="true"><div class="bk-cover-frame"><span class="bk-cover-sigil">◈</span><div class="bk-cover-title">NHẬT KÝ</div><div class="bk-cover-sub">Vy · Đồng Chay 2026</div></div></div>
+   <div class="bk-cover" id="bk-cover" aria-hidden="true"><div class="bk-cover-frame"><span class="bk-cover-sigil">◈</span><div class="bk-cover-title">SỔ TAY CỦA VY</div><div class="bk-cover-sub">Đồng Chay · những điều chưa thể quên</div></div></div>
   </div>
   <div class="bk-nav"><button class="bk-btn" id="bk-prev" type="button">‹ Trang trước</button><span class="bk-count" id="bk-count"></span><button class="bk-btn" id="bk-next" type="button">Trang sau ›</button></div>
- </div>`,'NHẬT KÝ ĐIỀU TRA','journal');
+ </div>`,'SỔ TAY CỦA VY','journal');
  $('bk-left').innerHTML=bookPageHTML(book.cur);$('bk-right').innerHTML=bookPageHTML(per===2?book.cur+1:book.cur);
  bookCount();
  $('bk-close').onclick=hideModal;$('bk-prev').onclick=()=>{if(!$('bk').classList.contains('closed'))bookTurn(-1)};$('bk-next').onclick=()=>{if(!$('bk').classList.contains('closed'))bookTurn(1)};
