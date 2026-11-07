@@ -1,36 +1,69 @@
-/* ui-v3 — Hội thoại dạng kính xanh, chân dung hòa vào cảnh, lời dẫn truyện không khung.
-   Nạp sau cùng nên ghi đè layout.css / skin.css / ui-plus.css; gỡ file này là về giao diện cũ. */
+/* ui-v3 — Bảng màu "Sơn mài Việt": nền đen nâu sơn mài, đỏ son, vàng đồng, giấy dó.
+   Hội thoại cao hơn, lời dẫn không khung, chân dung không khung.
+   Nạp sau cùng nên ghi đè skin.css / ui-plus.css / hotspots.css; gỡ file này là về giao diện cũ. */
+:root{
+  --jade:#e2b158;--jade-2:#b98a3e;--jade-dim:rgba(226,177,88,.42);--jade-glow:rgba(226,150,60,.5);--jade-soft:rgba(226,177,88,.14);
+  --vn-red:#a82a1f;--vn-red-dk:#6b1710;--vn-lacquer:#150807;--vn-paper:#f6ecd2;
+}
+
+/* ---------- Hội thoại ---------- */
 .dlg{--pw:clamp(118px,25vh,184px);padding:0 10px max(10px,var(--safe-b,0px))}
 .dlg .dlg-box{
-  margin:0;padding:24px 18px 16px;border:1px solid rgba(95,227,221,.24);border-radius:16px;
-  background:linear-gradient(180deg,rgba(7,26,30,.8),rgba(2,11,13,.92));
-  backdrop-filter:blur(8px) saturate(1.1);
-  box-shadow:0 12px 34px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.05);
+  position:relative;z-index:1;margin:0;align-items:start;
+  min-height:clamp(168px,25vh,240px);padding:30px 20px 22px;
+  border:1px solid rgba(226,177,88,.5);border-top:2px solid var(--vn-red);border-radius:12px;
+  background:
+    radial-gradient(120% 90% at 50% 0%,rgba(168,42,31,.16),transparent 60%),
+    linear-gradient(180deg,rgba(38,14,10,.93),rgba(16,6,5,.97));
+  backdrop-filter:blur(6px);
+  box-shadow:0 14px 36px rgba(0,0,0,.65),inset 0 0 0 3px rgba(16,6,5,.92),inset 0 0 0 4px rgba(226,177,88,.2);
 }
 .dlg .dlg-box:before{display:none}
-.dlg .dlg-name{position:absolute;top:-14px;left:16px;margin:0;padding:4px 13px;gap:7px;border-radius:999px;
-  background:rgba(3,30,34,.97);border:1px solid var(--jade-dim);box-shadow:0 4px 12px rgba(0,0,0,.5)}
-.dlg .dlg-name strong{padding:0;border:0;background:none;font-size:13px;letter-spacing:.05em}
-.dlg .dlg-text{margin:0;font-size:clamp(15px,4.1vw,19px);line-height:1.65;color:#f2f6f5}
+.dlg .dlg-name{position:absolute;top:-15px;left:16px;margin:0;padding:5px 15px;gap:7px;border-radius:999px;
+  background:linear-gradient(180deg,#a82a1f,#6b1710);border:1px solid var(--jade);box-shadow:0 4px 12px rgba(0,0,0,.55)}
+.dlg .dlg-name strong{padding:0;border:0;background:none;font-size:13.5px;letter-spacing:.05em;color:#ffe9b8;text-shadow:none}
+.dlg .dlg-symbol{color:#ffe9b8;text-shadow:none}
+.dlg .dlg-text{margin:0;min-height:4.9em;font-size:clamp(15px,4.1vw,19px);line-height:1.7;color:var(--vn-paper)}
 
-/* Chân dung: bỏ khung vuông, mờ dần ở chân, đứng cạnh thẻ tên */
-.dlg-portrait-wrap{margin:0 0 -16px 6px;position:relative;z-index:0}
+/* Chân dung: không khung, mờ dần ở chân, đứng cạnh thẻ tên */
+.dlg-portrait-wrap{margin:0 0 -16px 6px;position:relative;z-index:0;border:0;background:none}
 .dlg-portrait{
-  width:var(--pw);height:var(--pw);border:0;border-radius:0;box-shadow:none;object-fit:contain;
+  width:var(--pw);height:var(--pw);border:0;border-radius:0;box-shadow:none;background:none;object-fit:contain;
   -webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 72%,transparent 100%);
-  filter:drop-shadow(0 8px 16px rgba(0,0,0,.7)) saturate(.85) contrast(1.05);
+  filter:drop-shadow(0 8px 16px rgba(0,0,0,.7)) saturate(.9) contrast(1.05);
 }
 .dlg.has-portrait .dlg-name{left:calc(var(--pw) + 18px)}
-.dlg .dlg-box{position:relative;z-index:1}
 
 /* Lời dẫn truyện: chữ trực tiếp trên nền tối, không khung, không thẻ tên */
 .dlg.is-narrator{padding:0}
 .dlg.is-narrator .dlg-box{
-  border:0;border-radius:0;backdrop-filter:none;box-shadow:none;text-align:center;
-  padding:40px 24px max(18px,var(--safe-b,0px));
-  background:linear-gradient(0deg,rgba(0,0,0,.92) 0,rgba(0,0,0,.62) 66%,rgba(0,0,0,0) 100%);
+  min-height:clamp(150px,22vh,210px);border:0;border-radius:0;backdrop-filter:none;text-align:center;
+  padding:56px 24px max(22px,var(--safe-b,0px));align-items:start;
+  box-shadow:none;background:linear-gradient(0deg,rgba(14,5,4,.95) 0,rgba(14,5,4,.7) 62%,rgba(14,5,4,0) 100%);
 }
 .dlg.is-narrator .dlg-name{display:none}
-.dlg.is-narrator .dlg-text{font-size:clamp(15px,4.2vw,19px);color:#eef3f2;text-shadow:0 1px 8px #000}
-html[data-fx=low] .dlg .dlg-box{backdrop-filter:none;background:rgba(2,11,13,.94)}
+.dlg.is-narrator .dlg-text{min-height:3.4em;color:var(--vn-paper);text-shadow:0 1px 8px #000}
+html[data-fx=low] .dlg .dlg-box{backdrop-filter:none}
 @media(prefers-reduced-motion:reduce){.dlg .dlg-box{backdrop-filter:none}}
+
+/* ---------- Bảng tông màu cho các thành phần còn lại ---------- */
+.hotspot-label,.toast,.pop-card,.chatter{background:rgba(24,9,7,.94);color:var(--vn-paper);border-color:var(--jade-dim)}
+.pop-text strong{color:#ffe9b8}
+.tut-text{background:linear-gradient(180deg,rgba(40,14,10,.9),rgba(20,8,6,.92));color:var(--vn-paper)}
+.chapter-card{background:linear-gradient(90deg,transparent,rgba(24,9,7,.86) 18%,rgba(24,9,7,.86) 82%,transparent)}
+.dock-slot,.dock-empty{background:rgba(20,8,6,.8)}
+.dock-slot.selected{background:linear-gradient(160deg,rgba(82,30,18,.85),rgba(20,8,6,.94))}
+.dock-slot.is-on{box-shadow:0 0 0 2px rgba(226,177,88,.28),0 0 18px rgba(226,177,88,.4)}
+.hint-btn svg{background:radial-gradient(circle at 50% 35%,rgba(226,177,88,.2),rgba(20,8,6,.78));box-shadow:inset 0 0 8px rgba(0,0,0,.7),0 0 10px rgba(226,150,60,.25);fill:rgba(226,177,88,.12)}
+.hud-btn:hover,.hud-btn:focus-visible,.hud-btn:active{background:rgba(226,177,88,.12);color:#fff1cc}
+.modal-x{background:rgba(226,177,88,.1)}
+.modal-x:hover{background:rgba(226,177,88,.24)}
+.vfx-tap{border-color:rgba(236,190,100,.9);box-shadow:0 0 12px rgba(226,160,60,.6)}
+@keyframes jadePing{0%{box-shadow:0 0 0 0 rgba(226,177,88,.5),0 0 12px var(--jade-glow)}70%,100%{box-shadow:0 0 0 12px rgba(226,177,88,0),0 0 12px var(--jade-glow)}}
+@keyframes jadePulse{0%,100%{box-shadow:0 0 0 1px rgba(226,177,88,.5),0 0 14px rgba(226,177,88,.4)}50%{box-shadow:0 0 0 3px rgba(226,177,88,.2),0 0 26px rgba(226,177,88,.75)}}
+
+/* Biểu tượng điểm tương tác: đi lại/hội thoại = vàng đồng, điểm đặc biệt = đỏ son */
+.hotspot:before{filter:hue-rotate(227deg) saturate(1.1) drop-shadow(0 2px 3px rgba(0,0,0,.8))}
+.hotspot:hover:before,.hotspot:focus-visible:before{filter:hue-rotate(227deg) brightness(1.2) drop-shadow(0 0 5px rgba(226,177,88,.7))}
+.hotspot--special:before{filter:hue-rotate(185deg) saturate(1.5) drop-shadow(0 2px 3px rgba(0,0,0,.8))}
+.hotspot--special:hover:before,.hotspot--special:focus-visible:before{filter:hue-rotate(185deg) saturate(1.5) brightness(1.2) drop-shadow(0 0 5px rgba(226,90,60,.7))}
