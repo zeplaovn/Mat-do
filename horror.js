@@ -140,10 +140,10 @@ stage.addEventListener('pointermove', e => {
     const mx = (px - b.left) / b.width, my = (py - b.top) / b.height;
     stage.style.setProperty('--fx-x', (mx * 100).toFixed(1) + '%');
     stage.style.setProperty('--fx-y', (my * 100).toFixed(1) + '%');
-    if (lvl() === 'high') img.style.transform = `scale(1.05) translate(${((mx - .5) * -10).toFixed(1)}px,${((my - .5) * -6).toFixed(1)}px)`;
+    if (lvl() === 'high') { const t = `scale(1.05) translate(${((mx - .5) * -10).toFixed(1)}px,${((my - .5) * -6).toFixed(1)}px)`; img.style.transform = t; hot.style.transform = t; } /* điểm tương tác đi cùng ảnh để luôn khớp vật thể */
   });
 });
-Perf.onChange(l => { if (l !== 'high') img.style.transform = ''; kick(); });
+Perf.onChange(l => { if (l !== 'high') { img.style.transform = ''; hot.style.transform = ''; } kick(); });
 
 /* ---------- Hội thoại gõ từng chữ ---------- */
 const dt = $('dialogue-text'); let lastSet = '', ti = 0;

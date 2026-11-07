@@ -444,3 +444,6 @@ html[data-fx=low] .hotspot:before{animation:none!important}
 html[data-fx=medium] .modal-backdrop,html[data-fx=low] .modal-backdrop,html[data-fx=low] .music-btn{
   -webkit-backdrop-filter:none;backdrop-filter:none;
 }
+
+/* Điểm tương tác phóng 5% và dịch theo ảnh cảnh (horror.css/horror.js) để khung luôn trùng vật thể trong ảnh. */
+.scene-stage .hotspot-layer{transform:scale(1.05);transition:transform .35s ease-out}
