@@ -24,6 +24,8 @@ CẬP NHẬT 07/11/2026 — GIAO DIỆN, ÂM THANH, MỞ ĐẦU, TỐI ƯU
   chữ "Năm" dễ bị hiểu thành số).
 - Tối ưu: đốm sáng VFX vẽ từ ảnh dựng sẵn thay vì tạo gradient cho từng hạt mỗi khung hình; âm thanh hiệu ứng nhân bản từ
   một Audio đã tải (cloneNode) thay vì tạo mới; vòng kiểm tra hướng dẫn dừng sau khi hoàn tất.
+- Màn hình chính có mưa chữ kiểu Matrix màu vàng kim: chữ Phạn (Devanagari) và chữ Nôm cổ (title-matrix.js, title-screen.css).
+  Chỉ chạy khi màn hình chính hiện; tắt khi hiệu ứng thấp, giảm chuyển động hoặc tab ẩn; dùng phông hệ thống của máy.
 - Lưu trò chơi dùng khóa loi-nguyen-rung-thieng-v2-mai; bản lưu cũ không tự chuyển.
 - Chạy kiểm tra: for f in tests/*.test.js; do node "$f"; done
 

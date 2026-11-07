@@ -136,3 +136,8 @@
 .title-screen .title-heading,.title-screen .title-bottom{margin-left:auto;margin-right:auto;text-align:center;align-items:center}
 .title-screen .title-heading{display:flex;flex-direction:column}
 .title-screen .title-buttons,.title-screen .title-secondary-actions{align-items:center;justify-content:center}
+
+/* Mưa chữ Phạn và Nôm vàng kim sau logo; mờ dần ở giữa để logo và nút vẫn rõ */
+.title-screen .title-matrix{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:1;
+  -webkit-mask-image:radial-gradient(ellipse 46% 52% at 50% 50%,rgba(0,0,0,.18) 0,#000 100%);mask-image:radial-gradient(ellipse 46% 52% at 50% 50%,rgba(0,0,0,.18) 0,#000 100%)}
+.title-screen .title-content{position:relative;z-index:1}
