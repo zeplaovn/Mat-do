@@ -435,3 +435,8 @@ html[data-fx=low] .hotspot:before{animation:none!important}
 }
 #app-shell .hotspot.is-done:hover:before,#app-shell .hotspot.is-done:focus-visible:before{opacity:.6}
 #app-shell .hotspot--subtle.is-done:before,#app-shell .hotspot--subtle.is-done:hover:before{background:rgba(215,225,207,.1);box-shadow:none}
+
+/* Nút toàn màn hình: đổi biểu tượng theo trạng thái */
+#btn-fullscreen .fs-exit,#btn-fullscreen.is-full .fs-enter{display:none}
+#btn-fullscreen.is-full .fs-exit{display:block}
+#btn-fullscreen[hidden]{display:none}

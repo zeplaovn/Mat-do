@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="hotspots.css">
   <link rel="stylesheet" href="ending-cinematic.css">
   <link rel="stylesheet" href="ending-credits.css">
-  <link rel="stylesheet" href="ui-v3.css?v=20261107-spot-done">
+  <link rel="stylesheet" href="ui-v3.css?v=20261107-fullscreen">
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="books-type.css">
   <link rel="stylesheet" href="gloom.css">
@@ -46,6 +46,7 @@
   <script src="guide.js" defer></script>
   <script src="vfx.js" defer></script>
   <script src="ui-v3.js" defer></script>
+  <script src="fullscreen.js" defer></script>
   <script src="title-matrix.js" defer></script>
 </head>
 <body>
@@ -95,6 +96,10 @@
       <button id="btn-journal" class="hud-btn" type="button" aria-label="Mở nhật ký (J)" title="Nhật ký (J)">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.2c2.6-.9 5.3-.8 8 .9 2.7-1.7 5.4-1.8 8-.9v13.1c-2.6-.9-5.3-.8-8 .9-2.7-1.7-5.4-1.8-8-.9z"/><path d="M12 6.1v13.1"/></svg>
         <i class="hud-dot" aria-hidden="true"></i>
+      </button>
+      <button id="btn-fullscreen" class="hud-btn" type="button" aria-label="Toàn màn hình" title="Toàn màn hình" aria-pressed="false">
+        <svg class="fs-enter" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+        <svg class="fs-exit" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>
       </button>
       <button id="btn-menu" class="hud-btn" type="button" aria-label="Menu" title="Menu">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l1.6 1.1 1.9-.5.9 1.8 1.9.6v2.2l1.4 1.3-1 1.8.4 1.9-1.9.9-.6 1.9h-2.2L12 18l-1.7-1.4H8.1l-.6-1.9-1.9-.9.4-1.9-1-1.8 1.4-1.3V6.2l1.9-.6.9-1.8 1.9.5z" transform="translate(0 1.5)"/><circle cx="12" cy="11.6" r="3"/></svg>
