@@ -825,7 +825,10 @@ function render(){centerScene();const s=SCENES[state.scene],clock=displayStoryTi
  $('btn-audio').textContent=state.sound?'♪':'♪̸';$('btn-audio').setAttribute('aria-pressed',state.sound?'true':'false');
  renderSidebar();updateCam();setAmbience();if(chatScene!==state.scene){chatScene=state.scene;chatEnter()}}
 /* Thanh vật phẩm ở đáy màn hình */
-function renderSidebar(){$('inventory-grid').replaceChildren(...state.items.map(id=>{
+/* Hàng vật phẩm cuộn ngang: lăn chuột = cuộn ngang, mờ mép báo còn ô ẩn */
+function dockFade(){const d=$('inventory-grid');if(!d)return;const m=d.scrollWidth-d.clientWidth-1;d.classList.toggle('can-left',d.scrollLeft>1);d.classList.toggle('can-right',d.scrollLeft<m)}
+function dockFadeSoon(){const d=$('inventory-grid');if(d&&!d._scrollInit){d._scrollInit=true;d.addEventListener('scroll',dockFade,{passive:true});window.addEventListener('resize',dockFade);d.addEventListener('wheel',e=>{if(d.scrollWidth<=d.clientWidth||Math.abs(e.deltaY)<=Math.abs(e.deltaX))return;d.scrollLeft+=e.deltaY;e.preventDefault()},{passive:false})}requestAnimationFrame(()=>{const d=$('inventory-grid');const s=d&&d.querySelector('.dock-slot.selected');if(s&&d.scrollWidth>d.clientWidth)s.scrollIntoView({block:'nearest',inline:'nearest'});dockFade()})}
+function renderSidebar(){dockFadeSoon();$('inventory-grid').replaceChildren(...state.items.map(id=>{
  const info=ITEMS[id],b=document.createElement('button');b.className='dock-slot'+(state.selectedItem===id?' selected':'')+(id==='flashlight'&&state.flashlight?' is-on':'');b.type='button';b.setAttribute('aria-label',info.name);b.setAttribute('aria-pressed',state.selectedItem===id?'true':'false');
  b.appendChild(itemArt(id,'dock-art'));if(info.relic){const dot=document.createElement('span');dot.className='dock-dot';b.appendChild(dot)}
  const fragment={fragA:'1',fragB:'2',fragC:'3'}[id];if(fragment){const badge=document.createElement('span');badge.className='dock-fragment';badge.textContent=fragment;badge.setAttribute('aria-hidden','true');b.appendChild(badge)}

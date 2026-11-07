@@ -409,3 +409,22 @@ html[data-fx=low] .hotspot:before{animation:none!important}
 /* Dải item dưới cùng: bỏ nền đen, chỉ giữ các ô vật phẩm */
 .dock,#app-shell .dock{background:none!important;box-shadow:none}
 .dock-selected{text-shadow:0 1px 4px #000,0 0 10px rgba(0,0,0,.8)}
+
+
+/* Hàng vật phẩm: cuộn ngang khi quá 5 ô (vuốt/kéo/lăn chuột), không cắt ô đang chọn */
+.dock-slots{
+  justify-content:flex-start;overflow-x:auto;overflow-y:hidden;
+  padding:8px 6px 6px;margin-top:-8px;
+  scroll-snap-type:x proximity;scroll-padding:0 12px;overscroll-behavior-x:contain;
+  -webkit-overflow-scrolling:touch;touch-action:pan-x;
+  scrollbar-width:thin;scrollbar-color:rgba(114,91,64,.8) transparent;
+}
+.dock-slots::-webkit-scrollbar{display:block;height:4px}
+.dock-slots::-webkit-scrollbar-thumb{background:rgba(114,91,64,.8);border-radius:2px}
+.dock-slots::-webkit-scrollbar-track{background:transparent}
+.dock-slots>:first-child{margin-left:auto}
+.dock-slots>:last-child{margin-right:auto}
+.dock-slot,.dock-empty{scroll-snap-align:center}
+.dock-slots.can-left{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 28px);mask-image:linear-gradient(90deg,transparent 0,#000 28px)}
+.dock-slots.can-right{-webkit-mask-image:linear-gradient(270deg,transparent 0,#000 28px);mask-image:linear-gradient(270deg,transparent 0,#000 28px)}
+.dock-slots.can-left.can-right{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 28px,#000 calc(100% - 28px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 28px,#000 calc(100% - 28px),transparent 100%)}
