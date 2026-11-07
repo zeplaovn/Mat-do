@@ -405,3 +405,7 @@ html[data-fx=low] .hotspot:before{animation:none!important}
 @media(max-height:520px) and (orientation:landscape){
   .dlg .dlg-box,.dlg.is-narrator .dlg-box{height:clamp(96px,32dvh,128px)}
 }
+
+/* Dải item dưới cùng: bỏ nền đen, chỉ giữ các ô vật phẩm */
+.dock,#app-shell .dock{background:none!important;box-shadow:none}
+.dock-selected{text-shadow:0 1px 4px #000,0 0 10px rgba(0,0,0,.8)}
