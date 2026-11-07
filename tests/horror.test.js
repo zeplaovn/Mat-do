@@ -19,9 +19,11 @@ const ids={'scene-stage':stage,'scene-image':new Element(),hotspots:hot,'title-s
 ids['modal-backdrop'].hidden=true;
 const perf={level:'low',onChange(){}};
 const math=Object.create(Math);math.random=()=>0;
+const played=[];
+class AudioMock { constructor(src){this.src=src;this.volume=1;this.readyState=1;this.currentTime=0;played.push(src)} play(){return Promise.resolve()} addEventListener(){} }
 const context={document:{documentElement:root,hidden:false,body:{insertAdjacentHTML(){}},getElementById:id=>ids[id],createElement:()=>new Element(),querySelector:()=>null,addEventListener(){}},
  window:{Perf:perf,addEventListener:(type,fn)=>{windowEvents[type]=fn}},Perf:perf,
- Math:math,
+ Math:math,Audio:AudioMock,
  matchMedia:()=>({matches:false,addEventListener(){}}),localStorage:{getItem:()=>null},ResizeObserver:undefined,
  MutationObserver:class{constructor(fn){this.fn=fn}observe(el){if(!observers.has(el))observers.set(el,[]);observers.get(el).push(this.fn)}},
  requestAnimationFrame:fn=>{callbacks.push(fn);return ++rafId},setTimeout:()=>1,clearTimeout(){},setInterval:(fn,ms)=>{if(ms===4000)intervals.push(fn);return 1},clearInterval(){},console};
@@ -41,6 +43,12 @@ idx.textContent='BG09 / 47';for(const fn of observers.get(idx)||[])fn();
 assert.equal(stage.style.values['--dread'],'0.48','scene changes should still update the atmosphere');
 assert.ok(!stage.classList.contains('fadein')&&!stage.classList.contains('glitching'),'scene changes should not flash or glitch');
 randomTick();assert.ok(shadow.classList.contains('show'),'the scary areas should retain their random scare');
+assert.ok(played.some(src=>src.endsWith('/jumpscare_sound.mp3')),'jumpscares should play the uploaded scream');
+const sequence=[1,1,0]; math.random=()=>sequence.shift()??.5;
+randomTick();assert.ok(played.some(src=>src.endsWith('/far_scream_sound.mp3')),'tense scenes should occasionally play a distant scream');
+ids['btn-audio'].getAttribute=()=> 'false';
+const count=played.length;context.window.HorrorFX.scare(true);
+assert.equal(played.length,count,'mute should prevent horror sound playback');
 for(const fn of observers.get(title)||[])fn();
 if(!noCanvas){assert.ok(callbacks.length,'low-performance mode should start the dust loop');callbacks.shift()(100);assert.ok(fills>=14,'low-performance dust should draw');}
 else assert.equal(callbacks.length,0,'effects should remain available when canvas is missing');
