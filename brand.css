@@ -2,8 +2,7 @@
 
 /* ---------- Logo ---------- */
 .title-logo{margin:6px auto 4px;line-height:0;animation:none}
-.title-logo img{display:block;width:auto;max-width:min(86vw,560px);max-height:31vh;height:auto;margin:0 auto;user-select:none;pointer-events:none;
-  filter:drop-shadow(0 0 26px rgba(190,20,20,.55)) drop-shadow(0 6px 18px #000);animation:logoBreath 5.2s ease-in-out infinite}
+.title-logo img{display:block;width:auto;max-width:min(86vw,560px);margin:0 auto;user-select:none;pointer-events:none;animation:logoBreath 5.2s ease-in-out infinite}
 .title-content h1.title-logo{font-size:0;filter:url(#fx-rer)}
 html[data-fx=low] .title-content h1.title-logo{filter:none}
 .title-content h1.title-logo:before,.title-content h1.title-logo:after{display:none}
@@ -16,11 +15,9 @@ html[data-fx=low] .title-content h1.title-logo{filter:none}
 .intro-card.show .intro-logo{animation:cardshake .5s steps(1,end) 1}
 
 /* ---------- Cảnh báo kinh dị: nổi bật, chập chờn ---------- */
-.title-warn{position:relative;display:flex;align-items:center;gap:14px;max-width:min(92vw,640px);margin:10px auto 26px;padding:14px 20px;
+.title-warn{position:relative;display:flex;align-items:center;max-width:min(92vw,640px);margin:10px auto 26px;
   text-align:left;text-transform:none;letter-spacing:.03em;font:500 clamp(13px,1.3vw,16px)/1.5 var(--sans,system-ui,sans-serif);color:#ffe2da;
-  border:1px solid rgba(255,70,60,.7);border-radius:14px;overflow:hidden;
-  background:linear-gradient(180deg,rgba(60,4,6,.78),rgba(22,2,4,.82));
-  box-shadow:0 0 0 1px rgba(0,0,0,.6) inset,0 0 26px rgba(220,30,30,.38),0 0 70px rgba(150,10,10,.28);
+  border:1px solid rgba(255,70,60,.7);overflow:hidden;
   animation:warnBlink 6.1s linear infinite}
 .title-warn:before{content:"";position:absolute;inset:-60% -20%;pointer-events:none;
   background:radial-gradient(40% 70% at 50% 50%,rgba(255,60,50,.34),transparent 70%);animation:warnLight 3.7s ease-in-out infinite}
@@ -59,10 +56,10 @@ html[data-fx=low] .title-warn:before,html[data-fx=low] .title-warn:after{animati
 /* Giữ vừa một màn hình: thu gọn khoảng cách màn hình chính để logo + cảnh báo + nút đều thấy được */
 .title-content{padding-top:max(14px,2.4vh);padding-bottom:max(14px,2.4vh)}
 .title-content .title-sigil{font-size:clamp(34px,6vh,60px);margin-top:clamp(2px,1vh,12px)}
-.title-content .title-description{margin:clamp(12px,3vh,30px) 0 clamp(8px,2vh,18px);font-size:clamp(14px,2.3vh,17px)}
+.title-content .title-description{font-size:clamp(14px,2.3vh,17px)}
 .title-content .title-subtitle{margin:0}
 .title-content .title-footer{margin-top:clamp(18px,4vh,46px)}
-.title-warn{margin:clamp(4px,1vh,10px) auto clamp(14px,3vh,26px);padding:clamp(9px,1.6vh,14px) 20px}
+.title-warn{margin:clamp(4px,1vh,10px) auto clamp(14px,3vh,26px)}
 
 /* ===== Xem ảnh / khóa số bấm để nhảy số ===== */
 .prop-view{display:flex;justify-content:center;margin:.4rem 0 .6rem}
@@ -132,7 +129,7 @@ html[data-fx=low] .title-warn:before,html[data-fx=low] .title-warn:after{animati
 .asm-strips{display:flex;flex-direction:column;gap:8px;margin:.6rem 0}
 .asm-strip{text-align:left;padding:.9em 1em;background:linear-gradient(#cdbd96,#b6a37a);color:#2a1d12;border:1px solid #6a553a;font:600 15px/1.45 Georgia,serif;clip-path:polygon(0 8%,3% 0,9% 6%,15% 0,22% 5%,30% 0,40% 6%,52% 0,64% 5%,78% 0,90% 6%,100% 0,100% 92%,96% 100%,88% 94%,76% 100%,62% 95%,48% 100%,34% 94%,20% 100%,8% 95%,0 100%)}
 .asm-strip.sel{outline:2px solid #d85a55;filter:brightness(1.12)}
-.hint-block{margin-top:14px;padding-top:12px;border-top:1px solid #3a3030}.hint-btn{min-height:34px;padding:6px 12px}
+.hint-block{margin-top:14px;padding-top:12px;border-top:1px solid #3a3030}.hint-btn{min-height:34px}
 
 /* Câu đố nhịp thở */
 .breath-bar{position:relative;height:34px;margin:1rem 0 .6rem;background:#0a0807;border:1px solid #4d3a2c;border-radius:3px;overflow:hidden}

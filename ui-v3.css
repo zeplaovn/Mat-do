@@ -199,8 +199,8 @@ html[data-fx=low] .hotspot:before{animation:none!important}
   background:linear-gradient(0deg,rgba(0,0,0,.97),rgba(0,0,0,.83) 67%,transparent);
 }
 .dock-slots{
-  display:flex;justify-content:center;gap:clamp(5px,1.6vw,10px);
-  width:100%;max-width:100%;padding:0;border:0;border-radius:0;
+  display:flex;gap:clamp(5px,1.6vw,10px);
+  width:100%;max-width:100%;border:0;border-radius:0;
   background:none;box-shadow:none;backdrop-filter:none;
 }
 .dock-slots:empty{display:flex}
@@ -281,7 +281,6 @@ html[data-fx=low] .hotspot:before{animation:none!important}
   background:
     linear-gradient(180deg,rgba(0,15,21,.30) 0%,rgba(0,7,11,.08) 33%,rgba(0,13,18,.18) 57%,rgba(0,4,8,.75) 100%),
     url('assets/title_bg.webp') center/cover no-repeat;
-  filter:saturate(.83) contrast(1.06);
 }
 .title-screen .title-heading{align-self:center;padding:20px 0}
 .title-screen .title-logo img{max-height:min(32dvh,320px);filter:drop-shadow(0 4px 5px #000) drop-shadow(0 0 15px rgba(206,17,35,.37))}

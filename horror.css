@@ -5,18 +5,15 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:40;ba
 ::selection{background:#7a1515;color:#fff}
 
 /* ---------- Khung & thanh trên ---------- */
-.topbar{border-bottom:1px solid #3a161680;box-shadow:0 1px 24px #5a0e0e30}
+.topbar{border-bottom:1px solid #3a161680}
 .brand-mark{color:var(--blood);text-shadow:0 0 14px #c0202088;animation:flick 5.5s infinite}
 .brand-title span{color:#b02524;text-shadow:0 0 10px #8a141488}
-.icon-button{background:#0d0f12;border-color:#3a2222}
-.icon-button:hover,.icon-button[aria-pressed=true]{border-color:#a02a2a;background:#3a1012;box-shadow:0 0 12px #8a141466}
+.icon-button{border-color:#3a2222}
 .scene-bar h1{text-shadow:0 0 18px #7a141455,0 2px 2px #000;letter-spacing:.02em}
-.scene-index{color:#a04a42}
-.ghost-btn{background:#0b0d10;border-color:#2c1a1a}
-.ghost-btn:hover{background:#2a0e10;border-color:#a02a2a;box-shadow:0 0 14px #8a141455}
+.ghost-btn{border-color:#2c1a1a}
 
 /* ---------- Sân khấu cảnh ---------- */
-.scene-stage{border-color:#4a1d1d;box-shadow:0 20px 70px #000,0 0 0 6px #0a0b0d,0 0 40px #5a0e0e40,inset 0 0 80px #000}
+.scene-stage{border-color:#4a1d1d}
 .scene-image{filter:contrast(1.1) saturate(calc(1 - var(--dread,.2)*.5)) brightness(calc(1 - var(--dread,.2)*.2)) hue-rotate(-6deg);transition:transform .35s ease-out,filter 1s;transform:scale(1.05)}
 html[data-fx=high] .scene-image{will-change:transform}
 .fx{position:absolute;inset:0;pointer-events:none}
@@ -36,7 +33,7 @@ html[data-fx=low] .fx-grain:before{animation-duration:1.6s}
 html[data-fx=low] .fx-blood{mix-blend-mode:normal}
 .fx-vignette{background:radial-gradient(ellipse 72% 72% at var(--fx-x,50%) var(--fx-y,50%),transparent 18%,rgb(0 0 0/calc(.4 + var(--dread,.3)*.5)) 100%)}
 html[data-fx=low] .fx-vignette{background:radial-gradient(ellipse 72% 72% at 50% 50%,transparent 18%,rgb(0 0 0/calc(.45 + var(--dread,.3)*.5)) 100%)}
-.fx-scan{background:repeating-linear-gradient(0deg,#0000 0 2px,#0000002e 2px 3px);mix-blend-mode:multiply;opacity:.55}
+.fx-scan{background:repeating-linear-gradient(0deg,#0000 0 2px,#0000002e 2px 3px);mix-blend-mode:multiply}
 html[data-fx=low] .fx-scan{display:none}
 .fx-flash{background:#fff;opacity:0}
 .fx-flash.on{animation:flash .55s ease-out}
@@ -46,36 +43,27 @@ html[data-fx=low] .fx-scan{display:none}
 .fx-shadow:before,.fx-shadow:after{content:"";position:absolute;top:7%;width:6%;height:1.8%;background:#ff2a2a;border-radius:50%;box-shadow:0 0 8px 2px #ff1010}
 .fx-shadow:before{left:42%}.fx-shadow:after{left:53%}
 .fx-shadow.show{animation:lurk .7s ease-out}
-.scene-top-label{color:#c9a9a0b0}
 .live-dot{background:#c01818;box-shadow:0 0 12px #ff2a2a;animation:throb 1.4s infinite}
-.scene-caption{border-left-color:#8a1414;background:#06080cc4;font-style:italic;text-shadow:0 1px 4px #000}
+.scene-caption{border-left-color:#8a1414}
 .torch-shade{background:radial-gradient(circle 170px at var(--torch-x,50%) var(--torch-y,45%),transparent 0%,#0000 30%,#000b 72%,#000 100%)}
 
 /* ---------- Điểm tương tác ---------- */
-.hotspot:before{border-color:#b83a34;background:#2a0808bb;box-shadow:0 0 0 6px #7a1b1b30,0 0 22px #a0201f99;animation:throb 2.6s ease-in-out infinite}
-.hotspot:hover:before,.hotspot:focus-visible:before{background:#c01818;box-shadow:0 0 0 10px #a0202040,0 0 34px #ff2a2a}
-.hotspot-label{background:#0a0506f2;border-color:#8a1414;color:#e8c9c0;font-family:var(--serif);font-style:italic;text-shadow:0 0 8px #a0201f}
+.hotspot:before{border-color:#b83a34}
 
 /* ---------- Hội thoại ---------- */
-.dialogue{background:linear-gradient(112deg,#070406f7,#0c0709ee);border:1px solid #5a1c1c;border-left:3px solid #a02020;box-shadow:0 7px 40px #000,0 0 24px #5a0e0e44;animation:dlgin .35s ease-out}
-.dialogue-portrait{border-color:#8a2a2a;filter:saturate(.5) contrast(1.1) brightness(.9);box-shadow:0 0 14px #5a0e0e}
+.dialogue{border-left:3px solid #a02020;animation:dlgin .35s ease-out}
+.dialogue-portrait{border-color:#8a2a2a;filter:saturate(.5) contrast(1.1) brightness(.9)}
 .dialogue-symbol{color:#a02020;text-shadow:0 0 12px #c01818;animation:flick 4s infinite}
-.dialogue-content strong{color:#c98b78;text-shadow:0 0 8px #7a1414}
-.dialogue-content p{min-height:3.1em}
-.dialogue-next{background:#3a0f12;border-color:#8a2a2a}
-.dialogue-next:hover{background:#6a1a1c}
+.dialogue-content strong{text-shadow:0 0 8px #7a1414}
+.dialogue-next{border-color:#8a2a2a}
 .scene-stage.dread-high .dialogue-content p{animation:tremble .18s infinite alternate}
 
 /* ---------- Thanh bên ---------- */
 .sidebar{border-left-color:#3a1818}
-.objective-card{background:linear-gradient(160deg,#1a0d0f,#08090b);border-color:#4a1d1d;box-shadow:inset 3px 0 #8a1414,0 0 30px #50101026}
 .objective-card h2{text-shadow:0 0 12px #7a141466}
-.progress-track{background:#1c1212}
 .progress-track span{background:linear-gradient(90deg,#4a0d0d,#c02a28);box-shadow:0 0 10px #c02a28}
 .progress-top strong{color:#d0554a}
-.item-slot{background:linear-gradient(140deg,#150e10,#08090b);border-color:#2c1a1a}
-.item-slot:hover{border-color:#b02a2a;box-shadow:0 0 12px #8a141466}
-.item-slot.selected{border-color:#d03a34;background:#3a1012;box-shadow:0 0 16px #a0202088}
+.item-slot{border-color:#2c1a1a}
 .item-slot .item-dot{background:#ff2a2a;box-shadow:0 0 6px #ff2a2a;animation:throb 1.6s infinite}
 .journal-preview article{border-left-color:#7a1c1c}
 .journal-preview article small{color:#c0453c}
@@ -85,27 +73,24 @@ html[data-fx=low] .fx-scan{display:none}
 .save-dot{background:#7a2a2a}
 
 /* ---------- Cửa sổ & thông báo ---------- */
-.modal-backdrop{background:#020304ea;backdrop-filter:blur(2px)}
-.modal-window{background:linear-gradient(150deg,#150c0e,#050607);border-color:#6a1f1f;box-shadow:0 35px 100px #000,0 0 50px #5a0e0e55,inset 0 0 60px #000;animation:modalin .4s ease-out}
-.modal-x{background:#2a0e10;border-color:#7a2a2a}
-.modal-option{background:#100a0c;border-color:#5a2222}
-.modal-option:hover{background:#4a1214;border-color:#c0352f;box-shadow:0 0 14px #8a141477}
-.ritual-option{border-color:#5a2222;background:#0f0a0c}
+.modal-window{border-color:#6a1f1f;animation:modalin .4s ease-out}
+.modal-x{border-color:#7a2a2a}
+.modal-option{border-color:#5a2222}
+.modal-option:hover{background:#4a1214}
+.ritual-option{border-color:#5a2222}
 .ritual-option:hover{background:#4a1214}
 .map-node.current{background:#4a1214;border-color:#d0453c}
 .map-node.discovered{border-color:#7a2a2a}
 .ending-number{color:#d0453c;text-shadow:0 0 10px #a02020}
 .code-input{background:#030405;border-color:#8a2a2a;color:#ff9a8a;text-shadow:0 0 8px #c01818}
-.toast{background:#150a0cf2;border-color:#8a1c1c;box-shadow:0 8px 30px #000,0 0 20px #5a0e0e66}
 
 /* ---------- Màn hình tiêu đề ---------- */
-.title-bg{background:linear-gradient(90deg,#030304d8 0%,#060405b0 45%,#080506a0 100%),linear-gradient(0deg,#1a0000 0%,transparent 60%),url('assets/title_bg.webp') center/cover;will-change:transform;animation:creep 38s ease-in-out infinite alternate}
-.title-sigil{color:#8a1414;text-shadow:0 0 40px #ff1a1a88;animation:sigil 3.2s ease-in-out infinite}
-.title-content h1{color:#d8ccb6;text-shadow:0 0 30px #00000,0 4px 24px #000;animation:tglitch 7s infinite}
+.title-bg{will-change:transform}
+.title-sigil{color:#8a1414;text-shadow:0 0 40px #ff1a1a88}
+.title-content h1{color:#d8ccb6;text-shadow:0 0 30px #00000,0 4px 24px #000}
 .title-content h1 em{color:#b01f1f;text-shadow:0 0 22px #ff1a1a77,0 0 2px #ff6a5a;animation:flick 6s infinite}
-.title-warn{margin:-8px auto 26px;font-size:11px;letter-spacing:.2em;color:#a05a52;text-transform:uppercase}
-.primary-btn{background:#5a1517;border-color:#b02a2a;box-shadow:0 0 22px #8a141466;animation:throb 3s infinite}
-.primary-btn:hover{background:#8a1c1e;box-shadow:0 0 34px #ff2a2a88}
+.primary-btn{background:#5a1517;border-color:#b02a2a;animation:throb 3s infinite}
+.primary-btn:hover{background:#8a1c1e}
 .drip{position:absolute;top:0;width:3px;height:var(--len,120px);background:linear-gradient(#6a0808,#b01818);border-radius:0 0 3px 3px;opacity:0;transform:translateY(-100%);will-change:transform;animation:drip 9s ease-in infinite}
 .drip:after{content:"";position:absolute;bottom:-4px;left:-2px;width:7px;height:9px;border-radius:50%;background:#b01818}
 
@@ -149,39 +134,26 @@ html[data-fx=low] .title-content h1,html[data-fx=low] .brand-title,html[data-fx=
 /* ============ CHỮ TO, DỄ ĐỌC ============ */
 body{font-size:16px;line-height:1.55}
 .brand-kicker{font-size:11px}.brand-title{font-size:21px}.topbar-meta{font-size:14px}
-.icon-button{width:44px;height:44px;font-size:18px}
+.icon-button{font-size:18px}
 .label-caps{font-size:12px;color:#a09b90}
-.scene-bar h1{font-size:36px;color:#efe9db}.scene-index{font-size:13px}
-.scene-top-label{font-size:12px;color:#e3dccd}
-.scene-caption{font-size:16px;font-style:normal;color:#efe9db;line-height:1.5;padding:9px 14px}
-.hotspot-label{font-size:15px;font-style:normal;padding:7px 12px;color:#fff3e2}
-.dialogue{min-height:136px;max-height:50%;overflow:auto;gap:18px;padding:16px 18px}
-.dialogue-portrait{width:104px;height:104px}.dialogue-symbol{width:100px;font-size:56px}
+.scene-bar h1{font-size:36px}
 .dialogue-content strong{font-size:23px;margin-bottom:7px;color:#e6a98f}
-.dialogue-content p{font-size:clamp(17px,1.55vw,21px);line-height:1.6;color:#f4efe4;min-height:3.2em}
-.dialogue-next{font-size:13px;padding:11px 14px}
-.ghost-btn{font-size:15px;padding:11px 18px}.action-right{font-size:13px}.game-disclaimer{font-size:13px;color:#8a9091}
-.objective-card h2{font-size:23px}.objective-card p{font-size:15px;color:#c3c0b8}
+.dialogue-content p{font-size:clamp(17px,1.55vw,21px);color:#f4efe4}
+.dialogue-next{font-size:13px}.game-disclaimer{font-size:13px;color:#8a9091}.objective-card p{font-size:15px;color:#c3c0b8}
 .progress-top{font-size:11px}.progress-top strong{font-size:15px}
 .section-heading h2{font-size:14px}.section-heading small,.mini-link{font-size:12px}
-.selected-item{font-size:14px;color:#b3b2a9;min-height:44px}
+.selected-item{font-size:14px;color:#b3b2a9}
 .journal-preview article small{font-size:12px}.journal-preview article p{font-size:14px;color:#c4c3bc}
-.team-section p{font-size:12px}.save-note{font-size:12px}
-.modal-window{width:min(700px,100%);padding:26px 30px 32px}
+.team-section p{font-size:12px}
+.modal-window{width:min(700px,100%)}
 #modal-body h2,.modal-body h2{font-size:33px}#modal-body p{font-size:16px;line-height:1.75;color:#d2d0c7}
 .modal-note{font-size:14px!important}.ending-text{font-size:19px!important}.ending-number{font-size:13px}
 .modal-option,.ritual-option{font-size:16px;min-height:48px;padding:12px 16px}
 .code-input{font-size:22px}.map-node{font-size:14px}.journal-entry small{font-size:12px}
-.toast{font-size:16px;padding:13px 22px;min-width:200px}
-.eyebrow-line{font-size:12px}.title-subtitle{font-size:15px}.title-description{font-size:21px;color:#e0d6c8}
-.title-warn{font-size:13px}.title-footer{font-size:12px}.primary-btn{font-size:16px;padding:16px 30px}.secondary-btn{font-size:14px}
-@media(max-width:1120px){.scene-bar h1{font-size:30px}.dialogue-portrait{width:84px;height:84px}.dialogue-symbol{width:80px;font-size:46px}}
+.toast{font-size:16px;min-width:200px}
+.eyebrow-line{font-size:12px}.title-subtitle{font-size:15px}.title-description{font-size:21px;color:#e0d6c8}.title-footer{font-size:12px}.primary-btn{font-size:16px;padding:16px 30px}.secondary-btn{font-size:14px}
+@media(max-width:1120px){.dialogue-portrait{width:84px;height:84px}.dialogue-symbol{width:80px}}
 @media(max-width:520px){
- .brand-title{font-size:13px}.icon-button{width:36px;height:38px}.scene-bar h1{font-size:23px}
- .scene-caption{font-size:12px}.hotspot-label{font-size:12px}
- .dialogue{min-height:90px;max-height:none;padding:10px;gap:10px}.dialogue-portrait{width:56px;height:56px}.dialogue-symbol{width:44px;font-size:30px}
- .dialogue-content strong{font-size:16px}.dialogue-content p{font-size:15px;line-height:1.45;min-height:0}.dialogue-next{font-size:11px;padding:7px 9px}
- .ghost-btn{font-size:13px;padding:10px 11px}#modal-body h2{font-size:25px}#modal-body p{font-size:15px}
+ .dialogue{max-height:none}.dialogue-portrait{width:56px;height:56px}.dialogue-symbol{width:44px}#modal-body h2{font-size:25px}#modal-body p{font-size:15px}
  .title-description{font-size:17px}.title-content h1{font-size:clamp(40px,12vw,60px)}.title-footer{font-size:10px}
- .scene-top-label{font-size:9px}.toast{font-size:14px}
 }

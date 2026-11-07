@@ -51,7 +51,7 @@ html[data-fx=low] .intro-bg img.zoom{transform:scale(1.02)}
 .intro-card h2 em{display:block;font-style:normal;color:#b01f1f}
 .intro-card.show h2{animation:cardshake .5s steps(1,end) 1}
 @keyframes cardshake{0%{transform:translateX(-8px)}25%{transform:translateX(7px)}50%{transform:translateX(-4px)}75%{transform:translateX(3px)}100%{transform:none}}
-.intro-skip{position:absolute;right:max(18px,env(safe-area-inset-right));top:max(18px,env(safe-area-inset-top));z-index:2;min-height:44px;padding:10px 18px;background:#0008;border:1px solid #ffffff2e;color:#cfc6b6;font:15px var(--sans,system-ui,sans-serif);cursor:pointer;opacity:.75;transition:.2s}
+.intro-skip{position:absolute;right:max(18px,env(safe-area-inset-right));top:max(18px,env(safe-area-inset-top));z-index:2;color:#cfc6b6;font:15px var(--sans,system-ui,sans-serif);cursor:pointer;opacity:.75}
 .intro-skip:hover,.intro-skip:focus-visible{opacity:1;border-color:#b02a2a;color:#fff}
 .intro-hint{position:absolute;left:0;right:0;bottom:max(20px,env(safe-area-inset-bottom));text-align:center;font:13px var(--sans,system-ui,sans-serif);color:#8e877b;letter-spacing:.04em}
 @media(prefers-reduced-motion:reduce){.intro-bg img,.intro-text,.loader,.intro{transition:none!important}.intro-text.flick,.intro-card.show h2{animation:none}}

@@ -7,13 +7,11 @@
   place-items: center;
   overflow-y: auto;
   padding: max(32px, env(safe-area-inset-top)) max(26px, env(safe-area-inset-right)) max(32px, env(safe-area-inset-bottom)) max(26px, env(safe-area-inset-left));
-  background: #050607;
-  color: #e7e5df;
   font-family: var(--sans, system-ui, sans-serif);
 }
 .notice-content { width: min(100%, 510px); margin: auto; text-align: center; }
 .notice-kicker { margin: 0 0 28px; color: #8a8983; font-size: 10px; font-weight: 600; letter-spacing: .22em; line-height: 1.6; }
-.notice-content h2 { margin: 0 0 28px; color: #c73e38; font: 500 clamp(32px, 7vw, 46px)/1.15 var(--serif, Georgia, serif); }
+.notice-content h2 { margin: 0 0 28px; font: 500 clamp(32px, 7vw, 46px)/1.15 var(--serif, Georgia, serif); }
 .notice-copy { color: #d0d0cb; text-align: left; font-size: clamp(15px, 3.8vw, 17px); line-height: 1.8; }
 .notice-copy p { margin: 0 0 1em; }
 .notice-confirm {
@@ -23,14 +21,10 @@
   padding: 12px 24px;
   border: 1px solid rgba(167, 202, 202, .5);
   border-radius: 2px;
-  background: rgba(21, 47, 49, .24);
-  color: #e7f3ef;
   font: 600 14px/1.2 var(--sans, system-ui, sans-serif);
   letter-spacing: .12em;
   cursor: pointer;
-  transition: background .2s, border-color .2s;
 }
-.notice-confirm:hover, .notice-confirm:focus-visible { border-color: #b3eeeb; background: rgba(46, 112, 112, .35); }
 .notice-confirm:focus-visible, .title-screen button:focus-visible, .title-screen a:focus-visible { outline: 2px solid #c8f5f2; outline-offset: 4px; }
 
 .title-screen { display: block; overflow-y: auto; background: #05090b; }
@@ -67,17 +61,11 @@
   min-width: min(260px, 80vw);
   min-height: 64px;
   padding: 10px 26px;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-  color: #e3f8f7;
   font: 600 clamp(28px, 5vw, 38px)/1.1 var(--serif, Georgia, serif);
   letter-spacing: .015em;
-  text-shadow: 0 0 13px #66ced9, 0 2px 8px #00191f;
   cursor: pointer;
 }
-.title-screen .primary-btn:hover, .title-screen .primary-btn:focus-visible { transform: none; background-color: transparent; box-shadow: none; color: #fff; text-shadow: 0 0 20px #a1f6fa, 0 2px 8px #00191f; }
+.title-screen .primary-btn:hover, .title-screen .primary-btn:focus-visible { transform: none; background-color: transparent; }
 .title-screen .primary-btn:focus-visible { outline: none; text-decoration: underline; text-decoration-color: #c8f5f2; text-underline-offset: 7px; }
 .title-secondary-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
 .title-screen .secondary-btn {
@@ -88,9 +76,7 @@
   padding: 9px 17px;
   border: 1px solid rgba(177, 209, 207, .36);
   border-radius: 2px;
-  background: rgba(1, 15, 17, .64);
   box-shadow: none;
-  color: #d0e2df;
   font: 600 11px/1.3 var(--sans, system-ui, sans-serif);
   letter-spacing: .12em;
   text-decoration: none;

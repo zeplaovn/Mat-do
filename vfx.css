@@ -18,19 +18,14 @@ html[data-fx=low] .vfx-glow{mix-blend-mode:normal;opacity:.5;animation:none}
 .vfx-fog{overflow:hidden;opacity:0;transition:opacity 1.6s ease}
 .vfx-fog.on{opacity:1}
 .vfx-fog:before,.vfx-fog:after{
-  content:"";position:absolute;left:-30%;right:-30%;bottom:-4%;height:52%;will-change:transform;
-  background:
-    radial-gradient(ellipse 28% 60% at 20% 70%,rgba(120,140,155,.34),transparent 70%),
-    radial-gradient(ellipse 34% 50% at 55% 60%,rgba(110,130,148,.28),transparent 70%),
-    radial-gradient(ellipse 26% 55% at 85% 72%,rgba(120,140,155,.3),transparent 70%);
+  content:"";position:absolute;left:-30%;right:-30%;bottom:-4%;will-change:transform;
   animation:fogDrift 48s linear infinite;
 }
-.vfx-fog:after{height:30%;opacity:.7;animation-duration:70s;animation-direction:reverse}
+.vfx-fog:after{animation-duration:70s;animation-direction:reverse}
 @keyframes fogDrift{from{transform:translate3d(-9%,0,0)}to{transform:translate3d(9%,0,0)}}
-.vfx-fog.day:before,.vfx-fog.day:after{filter:brightness(1.7);opacity:.55}
 
 /* Gợn chạm */
-.vfx-tap{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;pointer-events:none;border:1.5px solid rgba(95,227,221,.9);box-shadow:0 0 12px rgba(95,227,221,.6);animation:vfxTap .65s ease-out forwards}
+.vfx-tap{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;pointer-events:none;border:1.5px solid rgba(95,227,221,.9);animation:vfxTap .65s ease-out forwards}
 @keyframes vfxTap{from{opacity:.95;transform:scale(.4)}to{opacity:0;transform:scale(4.4)}}
 
 /* Chuyển cảnh: tối dần rồi sáng lại, có chút mờ */
@@ -57,9 +52,8 @@ html[data-light-effects="off"] .vfx-glows,html[data-light-effects="off"] .vfx-mo
 #app-shell.interaction-active .vfx-motes,#app-shell.interaction-active .vfx-glows,#app-shell.interaction-active .vfx-fog{opacity:0}
 
 /* ================= NGỘT NGẠT: lớp kinh dị (cường độ theo --dread của cảnh) ================= */
-.vfx-cold{background:#0d1a24;mix-blend-mode:multiply;opacity:calc(.06 + var(--dread,.2)*.16)}
+.vfx-cold{mix-blend-mode:multiply}
 .vfx-press{
-  background:radial-gradient(ellipse 80% 76% at 50% 52%,transparent 38%,rgba(0,0,0,.34) 70%,rgba(0,0,0,.82) 100%);
   opacity:calc(.55 + var(--dread,.2)*.4);transform-origin:50% 52%;animation:vfxBreathe var(--breath,6s) ease-in-out infinite;
 }
 @keyframes vfxBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.16)}}

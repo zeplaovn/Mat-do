@@ -451,7 +451,6 @@
   place-items:center;
   width:38px;
   height:38px;
-  border-radius:50%;
   font-size:20px;
   line-height:1;
   transition:transform .2s ease,border-color .2s,background .2s,box-shadow .2s;
@@ -459,7 +458,6 @@
 .modal-x:hover{
   transform:rotate(90deg);
   border-color:rgba(220,90,78,.6);
-  background:#4a1214;
   box-shadow:0 0 18px rgba(160,32,32,.25);
 }
 .modal-buttons{gap:10px}
@@ -505,10 +503,7 @@
 .journal-entry{padding:14px 4px;border-bottom-color:rgba(224,190,170,.1)}
 .toast{
   padding:12px 22px;
-  border-radius:var(--ui-pill);
   border-color:rgba(160,60,52,.42);
-  background:linear-gradient(180deg,rgba(33,20,24,.96),rgba(15,9,12,.96));
-  box-shadow:0 14px 40px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.055),0 0 24px rgba(90,14,14,.18);
   backdrop-filter:blur(10px);
 }
 
@@ -543,7 +538,7 @@
   transition:transform .2s ease,opacity .2s,border-color .2s,color .2s,box-shadow .2s;
 }
 .intro-skip:hover,.intro-skip:focus-visible{transform:translateY(-1px);box-shadow:0 0 20px rgba(160,32,32,.2)}
-.hotspot-label{border-radius:var(--ui-pill);border-color:rgba(196,90,78,.35);background:rgba(7,5,6,.92);box-shadow:0 8px 22px rgba(0,0,0,.35)}
+.hotspot-label{border-color:rgba(196,90,78,.35)}
 
 /* Thanh cuộn mảnh, bo tròn */
 *{scrollbar-width:thin;scrollbar-color:rgba(160,58,50,.48) transparent}

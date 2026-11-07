@@ -8,48 +8,21 @@
 
 .hotspot:before,
 .hotspot:hover:before,
-.hotspot:focus-visible:before{
-  content:"";position:absolute;left:50%;top:50%;width:86px;height:86px;margin:0;
-  border:0;border-radius:0;background:var(--spot-image) center / contain no-repeat;
-  box-shadow:none;animation:none;pointer-events:none;
-  transform:translate(-50%,-50%) rotate(var(--spot-rotation,0deg));
-  filter:drop-shadow(0 2px 3px rgba(0,0,0,.8));
-  transition:filter .2s,opacity .2s,transform .2s;
+.hotspot:focus-visible:before{background:var(--spot-image) center / contain no-repeat;
 }
-.hotspot:hover:before,.hotspot:focus-visible:before{
-  filter:brightness(1.2) drop-shadow(0 0 5px rgba(95,227,221,.65));
-}
-.hotspot:active:before{transform:translate(-50%,-50%) rotate(var(--spot-rotation,0deg)) scale(.9)}
-.hotspot:after{content:none}
 .hotspot-label{bottom:calc(50% + 29px)}
 
 /* Khi chọn vật phẩm, điểm có thể dùng vẫn sáng vàng kể cả lúc ẩn dấu. */
 .hotspot.is-target:before,.hide-hotspots .hotspot.is-target:before{
-  width:86px;height:86px;opacity:1;border:0;background:var(--spot-image) center / contain no-repeat;
-  box-shadow:none;animation:none;
-  filter:sepia(1) saturate(3.2) hue-rotate(338deg) brightness(1.35) drop-shadow(0 0 7px #ffd48a);
+  width:86px;height:86px;background:var(--spot-image) center / contain no-repeat;animation:none;
 }
-@media(prefers-reduced-motion:reduce){.hotspot:before{transition:none}}
 
 /* Biểu tượng nhấp nhô nhẹ để dễ thấy, tự tắt khi giảm chuyển động hoặc hiệu ứng thấp */
 @keyframes spotFloat{0%,100%{translate:0 0}50%{translate:0 -4px}}
 .hotspot:before{animation:spotFloat 2.6s ease-in-out infinite}
 .hotspot:nth-child(2n):before{animation-delay:-.9s}.hotspot:nth-child(3n):before{animation-delay:-1.7s}
-html[data-fx=low] .hotspot:before{animation:none}
-@media(prefers-reduced-motion:reduce){.hotspot:before{animation:none}}
-.hotspot:hover:before,.hotspot:focus-visible:before{animation-play-state:paused}
 
 /* Mũi tên chỉ hướng nằm sát chân vùng bấm (trên mặt đường); dấu chấm than nhỏ hơn */
-.hotspot--travel:before,.hotspot--travel:hover:before,.hotspot--travel:focus-visible:before{top:84%}
-.hotspot--special:before,.hotspot--special:hover:before,.hotspot--special:focus-visible:before{width:32px;height:32px}
-.hotspot--special.is-target:before,.hide-hotspots .hotspot--special.is-target:before{width:32px;height:32px}
-.hotspot--special .hotspot-label{bottom:calc(50% + 12px)}
-.hotspot--travel .hotspot-label{bottom:calc(16% + 36px)}
 
 /* Dấu vết khuất chỉ hiện ánh nhẹ; vẫn có nhãn khi dùng bàn phím. */
-.hotspot--subtle:before,.hotspot--subtle:hover:before,.hotspot--subtle:focus-visible:before{
- width:10px;height:10px;border-radius:50%;background:rgba(215,225,207,.28);
- box-shadow:0 0 9px rgba(216,226,211,.35);animation:none;filter:none;
-}
-.hotspot--subtle:hover:before,.hotspot--subtle:focus-visible:before{background:rgba(238,235,210,.85);box-shadow:0 0 12px rgba(238,235,210,.7)}
 .hotspot--subtle .hotspot-label{bottom:calc(50% + 8px)}
