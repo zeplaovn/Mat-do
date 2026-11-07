@@ -439,3 +439,8 @@ html[data-fx=low] .hotspot:before{animation:none!important}
 #btn-fullscreen .fs-exit,#btn-fullscreen.is-full .fs-enter{display:none}
 #btn-fullscreen.is-full .fs-exit{display:block}
 #btn-fullscreen[hidden]{display:none}
+
+/* Giảm tải GPU: lớp phủ modal đã gần đặc (85%) nên làm mờ nền chỉ tốn máy; nút nhạc nhỏ cũng bỏ mờ ở mức thấp. */
+html[data-fx=medium] .modal-backdrop,html[data-fx=low] .modal-backdrop,html[data-fx=low] .music-btn{
+  -webkit-backdrop-filter:none;backdrop-filter:none;
+}
