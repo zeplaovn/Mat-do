@@ -1009,7 +1009,7 @@ function showGuide(){showModal(`<h2>Cách chơi</h2><p>Chạm hoặc nhấp các
 
 /* ================= NHẬT KÝ: cuốn sổ có bìa, lật trang ================= */
 let book=null;
-const BOOK_BUDGET=340,BOOK_MAX_ENTRIES=2;
+const BOOK_BUDGET=300,BOOK_MAX_ENTRIES=2;
 function bookCleanup(){book=null}
 function bookPaginate(notes,per){
  const pages=[];let cur=[],sum=0;

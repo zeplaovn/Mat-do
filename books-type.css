@@ -1,0 +1,29 @@
+/* Chữ cho sách và nhật ký: Lora (đọc dài) + Playfair Display (tiêu đề), cỡ lớn hơn, dòng thoáng hơn. Nạp cuối cùng. */
+:root{--book-serif:'Lora','Palatino Linotype','Book Antiqua',Palatino,Georgia,'Times New Roman',serif;--book-title:'Playfair Display','Lora',Georgia,serif}
+
+/* Nhật ký */
+.bk-page,.bk-face{font-family:var(--book-serif);font-size:clamp(15px,1.6vw,21px);line-height:1.75;letter-spacing:.005em}
+.bk.single .bk-page,.bk.single .bk-face{font-size:clamp(16px,4.3vw,19px)}
+.bk-title{font-family:var(--book-title);font-weight:600;font-variant-numeric:lining-nums;font-size:1.2em;letter-spacing:.01em}
+.bk-body{font-size:1em;line-height:1.78}
+.bk-no{font-size:.66em}
+.bk-folio,.bk-count{font-size:max(.8em,12px)}
+
+/* Sách tư liệu (reader) */
+.research-page-content{font-family:var(--book-serif);font-size:clamp(15px,1.4vw,20px);line-height:1.85;letter-spacing:0;color:#2f2318}
+.research-first-page .research-page-content{font-style:italic;font-size:clamp(15px,1.3vw,18px);line-height:1.8}
+.research-page-heading{font-family:var(--book-title);font-weight:600;font-size:clamp(21px,1.9vw,29px);letter-spacing:.01em}
+.research-cover-title{font-family:var(--book-title);font-weight:600;font-size:clamp(25px,2.3vw,35px)}
+.research-title-group h2,.research-archive-heading h2,.research-clip-list h2{font-family:var(--book-title);font-weight:600}
+.research-title-group h2{font-size:clamp(22px,2.3vw,31px)}
+.research-archive-detail strong,.research-clip span,.research-mini-cover strong{font-family:var(--book-serif)}
+.research-archive-detail strong{font-size:17px}
+.research-clip span{font-size:16px}
+.research-summary{font-size:13px;line-height:1.6}
+.research-page-top,.research-page-foot{font-size:11px}
+.research-page-nav button{font-size:14px}
+.research-folio-counter,.research-section-label,.research-sidebar-title{font-size:12px}
+.research-bookmark-btn,.research-related button{font-size:13px}
+.research-footer-actions,.research-archive-detail small,.research-archive-detail em{font-size:11px}
+.research-footer-actions button{font-size:12px}
+.research-page-heading,.research-cover-title,.research-title-group h2{font-variant-numeric:lining-nums}
