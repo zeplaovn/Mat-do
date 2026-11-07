@@ -750,7 +750,35 @@ function hotspotDirection(h){
  if(x>67)return 'right';
  return y>=78?'down':'up';
 }
-function hotspotClass(h){const kind=hotspotKind(h);return 'hotspot hotspot--'+(h.subtle?'subtle':kind)+(kind==='travel'?' hotspot--'+hotspotDirection(h):'')+(isTarget(h)?' is-target':'')}
+/* Điểm đã giải xong (đã nhặt/mở/đọc hết): không còn nhấp nhô hay phát sáng. Lối đi không bao giờ bị mờ. */
+function spotDone(h){
+ const f=state.flags,own=id=>has(id)||state.used.includes(id),cl=id=>(f.clues||[]).includes(id),ev=id=>state.evidence.includes(id);
+ const a=h.action;
+ if(a.startsWith('researchPuzzle:'))return researchSolved(a.slice(15));
+ switch(a){
+  case 'warning':return !!f.oldwomanTalked;
+  case 'shrine':return own('incense');
+  case 'marker':return !!f.folkMarkerDone;
+  case 'folkOffering':return !!f.folkOfferingDone;
+  case 'clock':return !!f.clockSeen;
+  case 'safe':return !!f.safeOpened;
+  case 'lamSafe':return !!f.lamSafeOpen;
+  case 'mirror':return !!f.mirrorPhoto;
+  case 'spoon':case 'comb':case 'sandals':case 'crowbar':case 'musicbox':return own(a);
+  case 'letterKitchen':return own('fragA');
+  case 'testimony':return own('testimony');
+  case 'chair':return own('storekey');
+  case 'incenseFive':return own('incense5');
+  case 'takeDoll':return own('toyDoll');
+  case 'takeCrane':return own('paperCrane');
+  case 'takeCart':return own('toyCart');
+  case 'ledger':case 'archive':return ev(a);
+  case 'cradle':case 'birth':return cl(a);
+  case 'shirt':case 'smalldoor':return !!f.sixthDone;
+  default:return false;
+ }
+}
+function hotspotClass(h){const kind=hotspotKind(h),target=isTarget(h);return 'hotspot hotspot--'+(h.subtle?'subtle':kind)+(kind==='travel'?' hotspot--'+hotspotDirection(h):'')+(target?' is-target':'')+(!target&&kind!=='travel'&&spotDone(h)?' is-done':'')}
 function makeHotspot(h){const b=document.createElement('button');b.type='button';b.className=hotspotClass(h);b.setAttribute('aria-label',h.label);b.title=h.label;b.style.left=h.x+'%';b.style.top=h.y+'%';b.style.width=h.w+'%';b.style.height=h.h+'%';const span=document.createElement('span');span.className='hotspot-label';span.textContent=h.label;b.appendChild(span);b.addEventListener('click',event=>{event.stopPropagation();const selected=state.selectedItem;act(h.action);b.className=hotspotClass(h);const stage=$('scene-stage');if(stage&&selected!==state.selectedItem)stage.classList.toggle('has-selection',!!state.selectedItem)});return b}
 /* ================= MÁY ẢNH / MÁY QUAY: bộ lọc nhìn đêm (camera.css) ================= */
 const CAM_MODES={night:{label:'NIGHT VISION',sub:'NV · IR ILLUMINATOR ON'}};
