@@ -73,7 +73,7 @@ const game=fs.readFileSync(path.join(root,'game.js'),'utf8');
 assert.match(html,/id="ending-credits"/);
 assert.match(html,/MẮT ĐỎ STUDIO/);
 assert.match(html,/ending-credits\.js/);
-assert.match(html,/ending-credits\.css/);
+assert.match(fs.readFileSync(path.join(root,'tools','build-css.js'),'utf8'),/ending-credits\.css/);assert.match(html,/game\.min\.css/);
 assert.match(game,/function playEndingCredits\(which,checkpoint\)/);
 assert.match(game,/const finish=\(\)=>playEndingCredits\(which,checkpoint\)/);
 assert.match(game,/window\.EndingCredits\.isActive/);

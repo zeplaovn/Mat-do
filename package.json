@@ -1,0 +1,9 @@
+{
+  "name": "mat-do",
+  "private": true,
+  "scripts": {
+    "build:css": "node tools/build-css.js",
+    "test": "for f in tests/*.test.js; do node \"$f\" || exit 1; done"
+  },
+  "devDependencies": { "esbuild": "^0.25.0" }
+}

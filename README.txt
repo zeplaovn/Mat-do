@@ -31,6 +31,11 @@ CẬP NHẬT 07/11/2026 — GIAO DIỆN, ÂM THANH, MỞ ĐẦU, TỐI ƯU
 - Lưu trò chơi dùng khóa loi-nguyen-rung-thieng-v2-mai; bản lưu cũ không tự chuyển.
 - Chạy kiểm tra: for f in tests/*.test.js; do node "$f"; done
 
+CSS (BUILD)
+- index.html chỉ nạp game.min.css (gộp + nén 23 file CSS; thứ tự cascade nằm trong tools/build-css.js).
+- Sửa CSS nguồn (ui-v3.css, skin.css, ...) rồi chạy: npm install (một lần) && npm run build:css. Lệnh tự cập nhật ?v=hash trong index.html.
+- trailer.html vẫn dùng trailer.css riêng.
+
 CINEMATIC ENDING
 - Mỗi ending có sáu ảnh nền riêng, phát cùng lời dẫn và âm thanh nền trong game.
 - Có thể tạm dừng, xem cảnh trước, chuyển tiếp, bỏ qua hoặc xem lại sau ending.
