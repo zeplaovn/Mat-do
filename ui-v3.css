@@ -67,43 +67,59 @@ html,body,#app-shell{background:#000}
 .hint-btn:hover svg,.hint-btn:focus-visible svg{box-shadow:0 0 16px rgba(39,189,209,.35);border-color:var(--jade)}
 #app-shell.in-dialogue .hint-btn{opacity:0;pointer-events:none}
 
-/* Hotspot: vòng đỏ hồng trong ảnh tham khảo, giữ nguyên vùng click thực tế. */
-.hotspot:not(.hotspot--travel):not(.hotspot--subtle):before,
-.hotspot:not(.hotspot--travel):not(.hotspot--subtle):hover:before,
-.hotspot:not(.hotspot--travel):not(.hotspot--subtle):focus-visible:before{
-  top:50%;width:42px;height:42px;
-  border:3px solid rgba(205,40,81,.8);border-radius:50%;
-  background:rgba(70,4,26,.035);box-shadow:
-    0 0 0 3px rgba(184,35,78,.13),
-    0 0 12px 3px rgba(222,34,82,.57),
-    inset 0 0 10px rgba(213,39,84,.22);
-  transform:translate(-50%,-50%);
-  filter:none;animation:refSpotBreath 2.8s ease-in-out infinite;
+/* Khôi phục bộ icon theo commit 2974c89: direction / conversation / marker.
+   Ảnh có nền trong suốt, giữ --spot-rotation cho mũi tên bốn hướng.
+   Chỉ sửa ::before, không thay đổi vùng button/hotspot hay tọa độ click. */
+.hotspot:before,.hotspot:hover:before,.hotspot:focus-visible:before{
+  content:"";position:absolute;left:50%;top:50%;width:86px;height:86px;margin:0;
+  border:0;border-radius:0;background:var(--spot-image) center/contain no-repeat;
+  box-shadow:none;filter:drop-shadow(0 2px 3px rgba(0,0,0,.85));
+  transform:translate(-50%,-50%) rotate(var(--spot-rotation,0deg));
+  animation:spotFloat 2.6s ease-in-out infinite;pointer-events:none;
+  transition:filter .2s ease,opacity .2s ease,transform .2s ease;
 }
-.hotspot:not(.hotspot--travel):not(.hotspot--subtle):hover:before,
-.hotspot:not(.hotspot--travel):not(.hotspot--subtle):focus-visible:before{
-  border-color:#ff678c;box-shadow:0 0 0 5px rgba(224,41,90,.13),0 0 22px rgba(255,59,112,.8);
+.hotspot:hover:before,.hotspot:focus-visible:before{
+  filter:brightness(1.18) drop-shadow(0 0 7px rgba(53,217,240,.72));
+  animation-play-state:paused;
 }
-.hotspot:not(.hotspot--travel):not(.hotspot--subtle):active:before{transform:translate(-50%,-50%) scale(.9)}
-.hotspot.is-target:not(.hotspot--travel):not(.hotspot--subtle):before{
-  border-color:#64f0fd;background:rgba(24,142,164,.11);
-  box-shadow:0 0 0 3px rgba(33,195,222,.2),0 0 21px rgba(44,217,242,.7);
-}
+.hotspot:active:before{transform:translate(-50%,-50%) rotate(var(--spot-rotation,0deg)) scale(.9)}
+.hotspot:after{content:none}
 .hotspot--travel:before,.hotspot--travel:hover:before,.hotspot--travel:focus-visible:before{
-  border:0;border-radius:0;background:var(--spot-image) center/contain no-repeat;box-shadow:none;
-  filter:brightness(1.5) sepia(1) saturate(5) hue-rotate(139deg) drop-shadow(0 0 5px rgba(40,211,236,.55));
+  top:84%;width:86px;height:86px;
+  background:var(--spot-image) center/contain no-repeat;
 }
-.hotspot--subtle:before{border:1px solid rgba(184,221,223,.42);background:rgba(190,227,227,.28)}
+.hotspot--special:before,.hotspot--special:hover:before,.hotspot--special:focus-visible:before{
+  width:32px;height:32px;background:var(--spot-image) center/contain no-repeat;
+}
+.hotspot--subtle:before,.hotspot--subtle:hover:before,.hotspot--subtle:focus-visible:before{
+  top:50%;width:10px;height:10px;border:0;border-radius:50%;
+  background:rgba(215,225,207,.28);box-shadow:0 0 9px rgba(216,226,211,.35);
+  filter:none;animation:none;transform:translate(-50%,-50%);
+}
+.hotspot--subtle:hover:before,.hotspot--subtle:focus-visible:before{
+  background:rgba(238,235,210,.85);box-shadow:0 0 12px rgba(238,235,210,.7);
+}
+.hotspot.is-target:before,.hide-hotspots .hotspot.is-target:before{
+  opacity:1;border:0;background:var(--spot-image) center/contain no-repeat;
+  box-shadow:none;filter:sepia(1) saturate(3) hue-rotate(325deg) brightness(1.25) drop-shadow(0 0 7px #a1eff7);
+}
+.hotspot--special.is-target:before,.hide-hotspots .hotspot--special.is-target:before{width:32px;height:32px}
+.hotspot--travel.is-target:before,.hide-hotspots .hotspot--travel.is-target:before{top:84%;width:86px;height:86px}
+.hotspot.is-target .hotspot-label{border-color:var(--jade);color:#defbff;background:rgba(0,30,37,.92)}
+.hotspot--special .hotspot-label{bottom:calc(50% + 12px)}
+.hotspot--travel .hotspot-label{bottom:calc(16% + 36px)}
 .hotspot-label{
   padding:7px 11px;border:1px solid var(--jade-dim);border-radius:2px;
   background:rgba(0,23,30,.88);color:#dffaff;font:500 12px/1.4 var(--sans);
   text-shadow:0 1px 3px #000;box-shadow:0 4px 20px rgba(0,0,0,.5);
 }
-@keyframes refSpotBreath{0%,100%{opacity:.7}50%{opacity:1}}
 html[data-fx=low] .hotspot:before{animation:none!important}
+@media(prefers-reduced-motion:reduce){.hotspot:before{animation:none!important;transition:none}}
+
+/* Hình icon là tài sản gốc của game, không thay bằng vòng tròn CSS. */
 
 /* Lời thoại: mảng sương xanh không viền, nhân vật nổi trên cảnh. */
-.dlg{--portrait-size:clamp(140px,31dvh,320px);padding:0;bottom:0}
+.dlg{--portrait-size:clamp(120px,23dvh,240px);padding:0;bottom:0}
 .dlg-inner{position:relative;width:min(100%,1040px)}
 .dlg-top{
   display:flex;justify-content:flex-end;align-items:flex-end;
@@ -122,8 +138,8 @@ html[data-fx=low] .hotspot:before{animation:none!important}
 }
 .dlg .dlg-box{
   position:relative;z-index:1;display:grid;grid-template-columns:1fr;
-  align-content:end;gap:12px;min-height:clamp(155px,23dvh,238px);
-  padding:40px clamp(20px,4vw,48px) 12px;margin:0;overflow:visible;
+  align-content:end;gap:3px;min-height:0;
+  padding:20px clamp(18px,3vw,36px) 3px;margin:0;overflow:visible;
   border:0;border-radius:0;box-shadow:none;
   background:
     radial-gradient(120% 80% at 74% 75%,rgba(11,113,130,.26),transparent 65%),
@@ -145,13 +161,13 @@ html[data-fx=low] .hotspot:before{animation:none!important}
 }
 .dlg .dlg-symbol{color:var(--jade);font-size:14px;text-shadow:0 0 7px var(--jade-glow);animation:none}
 .dlg .dlg-text{
-  grid-column:1;margin:0;min-height:2.6em;color:#edf7f8;
+  grid-column:1;margin:0;min-height:0;color:#edf7f8;
   font:400 clamp(16px,1.85vw,22px)/1.65 var(--sans);
   text-align:left;text-shadow:0 1px 6px rgba(0,0,0,.94);
   overflow-wrap:break-word;
 }
 .dlg .dlg-next{
-  grid-column:1;justify-self:center;min-width:160px;min-height:44px;
+  grid-column:1;justify-self:center;min-width:160px;min-height:34px;
   margin:0;padding:7px 20px;border:0;border-radius:0;
   background:rgba(0,13,19,.18);box-shadow:none;
   color:rgba(217,240,241,.8);font:500 13px/1.4 var(--sans);
@@ -167,12 +183,12 @@ html[data-fx=low] .hotspot:before{animation:none!important}
 .dlg.is-narrator .dlg-top{display:none}
 .dlg.is-narrator .dlg-name{display:none}
 .dlg.is-narrator .dlg-box{
-  min-height:clamp(150px,22dvh,224px);padding:40px 22px 10px;
+  min-height:0;padding:20px 22px 3px;
   align-content:end;text-align:center;
   background:linear-gradient(0deg,rgba(0,2,5,.94),rgba(0,4,7,.45) 60%,transparent);
 }
 .dlg.is-narrator .dlg-text{
-  max-width:780px;margin:0 auto;min-height:2.7em;
+  max-width:780px;margin:0 auto;min-height:0;
   color:#f3f6f6;text-align:center;font-weight:400;line-height:1.65;
 }
 
@@ -307,15 +323,15 @@ html[data-fx=low] .hotspot:before{animation:none!important}
   .dock-slot,.dock-empty{width:min(17.1vw,68px)}
   .dock-selected{padding:5px 8px 3px;font-size:12px}
   .dlg{bottom:11dvh;padding:0}
-  .dlg .dlg-box{min-height:20dvh;padding:32px 16px 5px;gap:5px}
-  .dlg .dlg-text{font-size:clamp(15px,4.15vw,19px);line-height:1.56;min-height:2.8em}
-  .dlg .dlg-next{min-height:42px;font-size:12px}
-  .dlg-portrait-wrap{margin:0 4vw -18px 0}
-  .dlg-portrait{width:clamp(155px,48vw,265px);height:clamp(190px,34dvh,350px)}
+  .dlg .dlg-box{min-height:0;padding:15px 16px 2px;gap:2px}
+  .dlg .dlg-text{font-size:clamp(15px,3.9vw,18px);line-height:1.46;min-height:0}
+  .dlg .dlg-next{min-height:34px;font-size:12px}
+  .dlg-portrait-wrap{margin:0 4vw -12px 0}
+  .dlg-portrait{width:clamp(132px,41vw,220px);height:clamp(155px,24dvh,260px)}
   .dlg .dlg-name{right:12px;top:-16px;padding:5px 11px}
   .dlg .dlg-name strong{font-size:clamp(12px,3.5vw,15px)}
-  .dlg.is-narrator .dlg-box{min-height:19dvh;padding:35px 18px 5px;background:linear-gradient(0deg,rgba(0,2,5,.88),rgba(0,4,7,.32) 65%,transparent)}
-  .dlg.is-narrator .dlg-text{font-size:clamp(15px,4vw,19px);min-height:2.6em}
+  .dlg.is-narrator .dlg-box{min-height:0;padding:18px 18px 2px;background:linear-gradient(0deg,rgba(0,2,5,.88),rgba(0,4,7,.32) 65%,transparent)}
+  .dlg.is-narrator .dlg-text{font-size:clamp(15px,3.9vw,18px);min-height:0}
   .pop-stack{top:22dvh;width:min(90vw,390px)}
   .toast{bottom:calc(13dvh + 84px)}
   .chapter-card{top:35%;max-width:92vw;padding:14px 22px}
@@ -331,14 +347,14 @@ html[data-fx=low] .hotspot:before{animation:none!important}
   .hud-place{top:max(6px,var(--safe-t,0px));max-width:42vw}
   .hint-btn{top:46px}
   .dlg{bottom:0}
-  .dlg .dlg-box{min-height:0;padding:19px 18px 3px;gap:2px}
+  .dlg .dlg-box{min-height:0;padding:12px 18px 2px;gap:2px}
   .dlg .dlg-text{font-size:14px;min-height:0}
   .dlg .dlg-next{min-height:32px}
   .dlg-portrait{width:clamp(80px,26dvh,132px);height:clamp(80px,26dvh,132px)}
   .dlg-portrait-wrap{margin-bottom:-12px}
   .dock{bottom:0;padding:12px 7px max(5px,var(--safe-b,0px))}
   .dock-slot,.dock-empty{width:clamp(38px,11dvh,58px)}
-  .dlg.is-narrator .dlg-box{min-height:0;padding:20px 18px 3px}
+  .dlg.is-narrator .dlg-box{min-height:0;padding:12px 18px 2px}
 }
 @media(prefers-reduced-motion:reduce){
   .hotspot:before,.dock-slot.selected,.dlg .dlg-next span{animation:none!important}
