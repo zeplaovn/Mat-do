@@ -41,6 +41,7 @@ for(const [bg,duration] of original){
 assert.ok(Math.abs(Number(ids.seek.max)-start)<.001,'duration should match the shot sequence');
 ids.seek.value='28.5';ids.seek.dispatch('input');flush();
 assert.equal(ids.caps.children.at(-1).children.length,5,'five original portraits should be present');
+assert.deepEqual(ids.caps.children.at(-1).children.map(face=>face.children[1].textContent),['KHÔI','VŨ','HÀ','CHI','VY'],'trailer must show the current Mai 2026 protagonists');
 ids.seek.value='40';ids.seek.dispatch('input');flush();
 assert.match(ids['act-label'].textContent,/LẦN THEO DẤU VẾT/,'act two label should follow the gameplay section');
 ids.seek.value='60';ids.seek.dispatch('input');flush();

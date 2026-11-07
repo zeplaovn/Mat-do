@@ -23,7 +23,7 @@ const shots=[
 ];
 /* Nhịp mạnh của nhạc (phân tích từ trailer.mp3): mỗi nhịp tạo một cú giật hình + nháy sáng. Số thứ hai là độ mạnh 1-3. */
 const hits=[[6.52,1],[8.12,2],[12.88,3],[19.28,1],[22.48,2],[25.68,2],[28.88,1],[32.12,2],[35.28,1],[38.48,3],[41.68,2],[44.88,2],[48.08,3],[51.3,2],[54.5,2],[57.7,2],[60.9,2],[64.1,2],[67.3,1]];
-const faces=[['01_Dong','ĐÔNG'],['02_Nam','NAM'],['03_Tuyet','TUYẾT'],['04_Anh','ÁNH'],['05_Nguyet','NGUYỆT']];
+const faces=[['01_Dong','KHÔI'],['02_Nam','VŨ'],['03_Tuyet','HÀ'],['04_Anh','CHI'],['05_Nguyet','VY']];
 const bg=id=>`assets/background/${id==='01'?'BG01-fixed':`BG${id}`}.webp`;
 let duration=0;shots.forEach(shot=>{shot.start=duration;duration+=shot.d});
 // Ba hồi của trailer: giữ nguyên chuỗi cảnh/âm nhạc, bổ sung định hướng xem.
