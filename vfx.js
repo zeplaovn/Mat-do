@@ -192,5 +192,7 @@ new MutationObserver(() => { schedule(); }).observe(root, { attributes: true, at
 if (title) new MutationObserver(schedule).observe(title, { attributes: true, attributeFilter: ['hidden'] });
 if (shell) new MutationObserver(schedule).observe(shell, { attributes: true, attributeFilter: ['class'] });
 RM.addEventListener && RM.addEventListener('change', () => { setup(); schedule(); });
+/* Đổi mức hiệu ứng trong Menu (hoặc tự hạ mức): dựng lại lớp VFX ngay, không đợi tới lần đổi cảnh sau. */
+if (window.Perf && Perf.onChange) Perf.onChange(() => { setup(); schedule(); });
 window.VFX = { get mode() { return mode; }, refresh: setup };
 })();
