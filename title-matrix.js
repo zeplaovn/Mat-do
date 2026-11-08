@@ -42,7 +42,8 @@
     raf = 0;
     if (!allowed()) { stop(); return; }
     raf = requestAnimationFrame(frame);
-    if (t - last < 1000 / 30) return;
+    const hi = document.documentElement.getAttribute('data-fx') === 'high';
+    if (t - last < 1000 / (hi ? 30 : 20)) return;
     const dt = Math.min(100, t - last); last = t;
     ctx.globalCompositeOperation = 'destination-out';
     ctx.fillStyle = 'rgba(0,0,0,.07)'; ctx.fillRect(0, 0, W, H);
@@ -57,7 +58,7 @@
       if (c.row >= 0 && y < H + ch) {
         /* làm dịu chữ đầu cũ thành vàng sẫm rồi vẽ chữ đầu mới sáng */
         ctx.shadowBlur = 0; ctx.fillStyle = 'rgba(0,0,0,0)';
-        ctx.shadowColor = 'rgba(255,190,70,.9)'; ctx.shadowBlur = 9;
+        if (hi) { ctx.shadowColor = 'rgba(255,190,70,.9)'; ctx.shadowBlur = 9; }   /* shadowBlur rất tốn: chỉ ở mức Cao */
         ctx.fillStyle = 'rgba(255,238,175,.96)';
         ctx.fillText(GLYPHS[Math.random() * GLYPHS.length | 0], c.x, y);
         ctx.shadowBlur = 0;
