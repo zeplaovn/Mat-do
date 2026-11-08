@@ -40,6 +40,10 @@ html[data-fx=low] .vfx-glow{mix-blend-mode:normal;opacity:.5;animation:none}
 .scene-stage.vfx-settle .scene-image{animation:vfxSettle .7s var(--ease-out,ease-out) both}
 @keyframes vfxSettle{from{filter:blur(5px) brightness(1.25);transform:scale(1.025)}to{filter:none;transform:none}}
 
+/* Mức Vừa/Thấp: chuyển cảnh chỉ phóng nhẹ, không làm mờ + đổi sáng ảnh lớn mỗi khung hình (rất tốn GPU) */
+@keyframes vfxSettleLite{from{transform:scale(1.025)}to{transform:none}}
+html:not([data-fx=high]) .scene-stage.vfx-settle .scene-image{animation-name:vfxSettleLite}
+
 /* Tia sáng nhặt đồ */
 .vfx-spark{
   position:fixed;z-index:12;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;pointer-events:none;
