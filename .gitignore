@@ -1,2 +1,5 @@
+# local release builds
+build/
+
 # local QA harnesses
 qa-*.html
