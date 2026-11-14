@@ -5,7 +5,7 @@
 ## 0. Căn cứ nội dung — ĐỌC TRƯỚC KHI DỰNG
 
 - **Chuẩn hiện hành:** `docs/COT_TRUYEN_MAI_2026.md`; đối chiếu hành động đã triển khai bằng `game.js`, lời thoại `assets/dialogue/reviewed.js`, sách/câu đố `assets/research/books-data.js`.
-- **Không dùng làm canon:** `docs/KICH_BAN_CHINH_THUC.md`, `docs/CỐT_TRUYỆN_MỞ_RỘNG.md`, `KICH_BAN_CHUONG_MOI.md`. Các tài liệu này đều tự ghi đã lưu trữ.
+- **Không dùng làm canon:** `docs/KICH_BAN_CHINH_THUC.md`, `docs/CỐT_TRUYỆN_MỞ_RỘNG.md`, `docs/archive/KICH_BAN_CHUONG_MOI.md`. Các tài liệu này đều tự ghi đã lưu trữ.
 - **Nhóm hiện tại:** Khôi, Vũ, Hà, Chi, Vy. **Không dùng tên Đông, Nam, Tuyết, Ánh, Nguyệt** trên caption/chân dung trailer. File ảnh chân dung vẫn có tên kỹ thuật cũ; dữ liệu nhân vật chính trong `game.js` đã đổi.
 - **Ba lớp quá khứ cần phân biệt:** bi kịch của Mai (không ấn định năm nếu tài liệu chưa xác nhận); vụ Quế năm **1986**; vụ hầm/giếng liên quan Nhài năm **1988**. Mỗi lớp có nhân chứng và chứng cứ riêng.
 - **Lời hứa gameplay có thật:** point-and-click, chụp/soi dấu lạ, đọc và đánh dấu tư liệu, đối chiếu sớ gốc–sớ sửa, giải câu đố chứng cứ, lần theo hồi tưởng, và chọn hành động cuối trước chiếc ấn. Game có BAD / NORMAL / GOOD / TRUE; không khẳng định mọi hành động nhỏ đều tạo nhánh cốt truyện.

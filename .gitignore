@@ -1,0 +1,6 @@
+# itch.io build artifacts
+itch/build/
+itch/*.zip
+
+# local QA harnesses
+qa-*.html

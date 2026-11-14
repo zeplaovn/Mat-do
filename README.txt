@@ -315,7 +315,7 @@ Bảo mật (guard.js, guard.css, Content-Security-Policy trong index.html):
   chọn có đánh thức bà Mận hay không, giữ nhịp thở lấy chìa của cha, mở gian giam, ngã xuống giếng, sắp lại ba việc em đã làm.
 - Xong thì về giếng bị bịt BG42, rồi mới tới Chương 9 (năm cái tên). Đêm trại BG44 (hiên BG10) có ba đoạn hội thoại: Tuyết, Nam với Đông, Nguyệt.
 - Sau khi gọi đủ năm tên: ra cổng sẽ vào rừng thiêng BG40 → dải vải đỏ → nhà bà ngoại BG41 → bàn thờ đá để chọn "Công khai" hoặc "Tha thứ" (kết thúc 4).
-- Kịch bản gốc: KICH_BAN_CHUONG_MOI.md.
+- Kịch bản gốc: docs/archive/KICH_BAN_CHUONG_MOI.md.
 
 20. CÂU ĐỐ MỚI: GHÉP HÌNH · KÝ HIỆU RIÊNG · SẮP ĐỒ · TÀI LIỆU · MƯA VÀ SƯƠNG
 - Ghép hình (BG43): mảnh ảnh giấu dưới gối, 12 mảnh, bấm hai mảnh để đổi chỗ, giữ nút "Xem ảnh mẫu" để so. Ghép xong có "Mặt sau tấm ảnh": thứ tự đứng ký đơn.
