@@ -113,6 +113,28 @@ Made by **Mắt Đỏ Studio**.
 
 - **Ảnh bìa:** 630 × 500 px, dùng ảnh biệt thự Vân Hòa trong sương, chừa khoảng trống cho logo.
 - **Ảnh chụp:** 4–6 ảnh, ưu tiên cảnh làng Đồng Chay, hành lang biệt thự, bàn thờ, gương phòng trẻ; thêm một GIF cảnh chuyển cảnh mờ dần.
-- **Upload:** đóng gói toàn bộ thư mục game thành ZIP, giữ nguyên `index.html` và `assets/`. Nếu chọn HTML5 trên itch.io, đặt `index.html` ở gốc gói và bật “This file will be played in the browser”.
+- **Upload:** đóng gói bản chạy thành ZIP, giữ `index.html` ở gốc cùng `css/`, `js/`, `assets/`, `i18n/`. Nếu chọn HTML5 trên itch.io, bật “This file will be played in the browser”.
 - **Demo:** nếu muốn bản thử, cắt sau Chương 3 và ghi rõ “Demo kết thúc ở Chương 3”.
 - **Giá:** bản miễn phí nên để “No payments”; bản trả phí dùng “Pay what you want” với mức gợi ý 3–5 USD.
+
+---
+
+## 6. Giao diện trang (CSS + hiệu ứng)
+
+Ba tệp đi kèm, không phải một phần của bản chạy game:
+
+| Tệp | Dùng để |
+| --- | --- |
+| `docs/itch-description.html` | Dán vào ô **Description** ở chế độ HTML |
+| `docs/itch-theme.css` | Dán vào **Edit theme → CSS** của trang game |
+| `docs/itch-preview.html` | Xem trước tại máy; sinh lại bằng `node tools/build-itch-page.js` |
+
+**Cách gắn:**
+
+1. Vào trang game → **Edit game** → mục **Theme** → **Edit theme** → dán toàn bộ `docs/itch-theme.css` vào ô CSS → Save.
+2. Quay lại **Description**, chuyển sang chế độ HTML, dán `docs/itch-description.html`.
+3. Mở `docs/itch-preview.html` bằng trình duyệt để đối chiếu trước khi lưu.
+
+**Hiệu ứng đã có:** tiêu đề chuyển sắc vàng–đỏ, gạch chân chạy vào khi tải trang, chữ cái đầu phóng to, thẻ tính năng nổi lên khi rê chuột, dải số liệu, khung trích đoạn, đường kẻ trang trí có viên kim cương, viền ảnh sáng lên khi hover, và chuyển động giảm khi hệ điều hành bật “giảm chuyển động”.
+
+**Lưu ý:** toàn bộ CSS được giới hạn trong `.formatted_description` nên không làm hỏng phần còn lại của trang itch.io. Nếu itch.io lọc mất class tuỳ chỉnh, các quy tắc dự phòng cho `h1`, `h2`, `blockquote`, `hr`, `img` vẫn giữ được phần lớn giao diện.

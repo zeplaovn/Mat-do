@@ -3,3 +3,6 @@ build/
 
 # local QA harnesses
 qa-*.html
+
+# generated itch.io preview
+docs/itch-preview.html
