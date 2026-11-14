@@ -1,0 +1,575 @@
+{
+ "batch": 3,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Tài liệu. Chạm để đọc. Dòng chữ viết tay ở mặt sau.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tài liệu. Chạm để đọc. Dòng chữ viết tay ở mặt sau."
+  },
+  {
+   "k": "Mảnh giấy dó dập dấu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh giấy dó dập dấu"
+  },
+  {
+   "k": "Mảnh giấy dập bốn hình ở miếu. Chạm để xem hoặc cầm đối chiếu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh giấy dập bốn hình ở miếu. Chạm để xem hoặc cầm đối chiếu."
+  },
+  {
+   "k": "Mảnh đơn 1/3",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh đơn 1/3"
+  },
+  {
+   "k": "Mảnh giấy rách giấu trong gian bếp. Một đoạn chữ viết tay vội vã.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh giấy rách giấu trong gian bếp. Một đoạn chữ viết tay vội vã."
+  },
+  {
+   "k": "Mảnh đơn 2/3",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh đơn 2/3"
+  },
+  {
+   "k": "Mảnh giấy rách dán sau khung ảnh gia đình, được giấu bằng mật mã chữ cái.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh giấy rách dán sau khung ảnh gia đình, được giấu bằng mật mã chữ cái."
+  },
+  {
+   "k": "Mảnh đơn 3/3",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh đơn 3/3"
+  },
+  {
+   "k": "Mảnh giấy rách kẹp trong sổ vật tư trên bàn ông Hưng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh giấy rách kẹp trong sổ vật tư trên bàn ông Hưng."
+  },
+  {
+   "k": "Lời khai của bà Tám",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lời khai của bà Tám"
+  },
+  {
+   "k": "Tờ giấy bà Tám viết trước khi mất, giấu trong hòm tre trên gác mái.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tờ giấy bà Tám viết trước khi mất, giấu trong hòm tre trên gác mái."
+  },
+  {
+   "k": "Hưng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hưng"
+  },
+  {
+   "k": "CHƯƠNG 1 · ĐỒNG CHAY",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CHƯƠNG 1 · ĐỒNG CHAY"
+  },
+  {
+   "k": "BUỔI SÁNG · ĐỒNG CHAY",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "BUỔI SÁNG · ĐỒNG CHAY"
+  },
+  {
+   "k": "Khởi đầu của một chuyến đi tưởng như bình thường.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khởi đầu của một chuyến đi tưởng như bình thường."
+  },
+  {
+   "k": "Thôn Đồng Chay, vùng chân núi Ba Vì. Một nhóm sinh viên tới đây để lần theo những bài báo cũ về biệt thự Vân Hòa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thôn Đồng Chay, vùng chân núi Ba Vì. Một nhóm sinh viên tới đây để lần theo những bài báo cũ về biệt thự Vân Hòa."
+  },
+  {
+   "k": "Những vết rêu bám trên cổng làng. Không có gì báo trước màn đêm sắp tới.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những vết rêu bám trên cổng làng. Không có gì báo trước màn đêm sắp tới."
+  },
+  {
+   "k": "Bà bán nước",
+   "files": [
+    "game.js",
+    "trailer.js",
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bà bán nước"
+  },
+  {
+   "k": "Đi vào ngõ làng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đi vào ngõ làng"
+  },
+  {
+   "k": "Nhìn cổng làng",
+   "files": [
+    "game.js",
+    "ui-v3.js"
+   ],
+   "ctx": "Nhìn cổng làng"
+  },
+  {
+   "k": "Đường sang chùa làng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đường sang chùa làng"
+  },
+  {
+   "k": "Ngõ làng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngõ làng"
+  },
+  {
+   "k": "BUỔI SÁNG · NGÕ LÀNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "BUỔI SÁNG · NGÕ LÀNG"
+  },
+  {
+   "k": "Lối đi vẫn còn dấu bánh xe và hơi ẩm từ đêm trước.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lối đi vẫn còn dấu bánh xe và hơi ẩm từ đêm trước."
+  },
+  {
+   "k": "Chúng ta đi qua ruộng, rồi tìm cây đa cạnh miếu. Người làng bảo con đường ấy dẫn tới rừng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chúng ta đi qua ruộng, rồi tìm cây đa cạnh miếu. Người làng bảo con đường ấy dẫn tới rừng."
+  },
+  {
+   "k": "Những ngôi nhà mái ngói cũ nằm im sau hàng rào tre.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những ngôi nhà mái ngói cũ nằm im sau hàng rào tre."
+  },
+  {
+   "k": "Chum nước ven đường",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chum nước ven đường"
+  },
+  {
+   "k": "Ra phía cánh đồng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ra phía cánh đồng"
+  },
+  {
+   "k": "Trở về cổng làng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trở về cổng làng"
+  },
+  {
+   "k": "Con đường giữa cánh đồng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con đường giữa cánh đồng"
+  },
+  {
+   "k": "BAN NGÀY · CÁNH ĐỒNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "BAN NGÀY · CÁNH ĐỒNG"
+  },
+  {
+   "k": "Con đường đất đỏ kéo dài về phía cây cầu gỗ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con đường đất đỏ kéo dài về phía cây cầu gỗ."
+  },
+  {
+   "k": "Đường này ít người đi. Bà tớ từng kể rằng qua cây cầu kia là lối vào rừng thiêng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đường này ít người đi. Bà tớ từng kể rằng qua cây cầu kia là lối vào rừng thiêng."
+  },
+  {
+   "k": "Lúa và cỏ ướt rì rào. Một con mương nhỏ chạy song song với đường.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lúa và cỏ ướt rì rào. Một con mương nhỏ chạy song song với đường."
+  },
+  {
+   "k": "Bước đến cầu gỗ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bước đến cầu gỗ"
+  },
+  {
+   "k": "Quan sát mương",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quan sát mương"
+  },
+  {
+   "k": "Quay lại ngõ làng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quay lại ngõ làng"
+  },
+  {
+   "k": "Cầu gỗ qua mương",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cầu gỗ qua mương"
+  },
+  {
+   "k": "CHIỀU MUỘN · BỜ MƯƠNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CHIỀU MUỘN · BỜ MƯƠNG"
+  },
+  {
+   "k": "Cầu ọp ẹp trong gió. Trời sẫm dần khi cả nhóm quay lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cầu ọp ẹp trong gió. Trời sẫm dần khi cả nhóm quay lại."
+  },
+  {
+   "k": "Trời tối nhanh quá. Nếu quyết vào rừng thì giờ là lúc phải đi thôi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trời tối nhanh quá. Nếu quyết vào rừng thì giờ là lúc phải đi thôi."
+  },
+  {
+   "k": "Một tấm ván cầu lệch khỏi hàng, lộ mặt nước tối bên dưới.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một tấm ván cầu lệch khỏi hàng, lộ mặt nước tối bên dưới."
+  },
+  {
+   "k": "Ván cầu mục",
+   "files": [
+    "game.js",
+    "ui-v3.js"
+   ],
+   "ctx": "Ván cầu mục"
+  },
+  {
+   "k": "Đi đến cây đa và miếu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đi đến cây đa và miếu"
+  },
+  {
+   "k": "Quay lại đường ruộng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quay lại đường ruộng"
+  },
+  {
+   "k": "Cây đa và miếu cổ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cây đa và miếu cổ"
+  },
+  {
+   "k": "CHƯƠNG 1 · LỐI VÀO RỪNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CHƯƠNG 1 · LỐI VÀO RỪNG"
+  },
+  {
+   "k": "ĐÊM · VEN RỪNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐÊM · VEN RỪNG"
+  },
+  {
+   "k": "Hương tàn đã lạnh. Đêm phủ xuống những rễ cây đa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hương tàn đã lạnh. Đêm phủ xuống những rễ cây đa."
+  },
+  {
+   "k": "Miếu này không có người trông coi... Có thứ gì đó đã bị bỏ quên ở đây.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Miếu này không có người trông coi... Có thứ gì đó đã bị bỏ quên ở đây."
+  },
+  {
+   "k": "Không thấy ánh sáng nào phía rừng. Hương cũ và gió luồn qua rễ đa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Không thấy ánh sáng nào phía rừng. Hương cũ và gió luồn qua rễ đa."
+  },
+  {
+   "k": "Bát hương trong miếu",
+   "files": [
+    "game.js",
+    "ui-v3.js"
+   ],
+   "ctx": "Bát hương trong miếu"
+  },
+  {
+   "k": "Bước vào rừng tre",
+   "files": [
+    "game.js",
+    "ui-v3.js"
+   ],
+   "ctx": "Bước vào rừng tre"
+  },
+  {
+   "k": "Bàn lễ trước miếu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bàn lễ trước miếu"
+  },
+  {
+   "k": "Quay về cầu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quay về cầu"
+  },
+  {
+   "k": "Lối mòn xuyên rừng tre",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lối mòn xuyên rừng tre"
+  },
+  {
+   "k": "CHƯƠNG 2 · RỪNG THIÊNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CHƯƠNG 2 · RỪNG THIÊNG"
+  },
+  {
+   "k": "RỪNG TRE · 20:50",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "RỪNG TRE · 20:50"
+  },
+  {
+   "k": "Tiếng lá tre va nhau. Con đường đất uốn như một vệt tối.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếng lá tre va nhau. Con đường đất uốn như một vệt tối."
+  },
+  {
+   "k": "Tớ vừa nghe thấy ai gọi tên Vũ. Nhưng từ nãy giờ chẳng có ai phía sau.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ vừa nghe thấy ai gọi tên Vũ. Nhưng từ nãy giờ chẳng có ai phía sau."
+  },
+  {
+   "k": "Bóng tre đổ dày đặc. Chỉ có bùn ướt bắt ánh trăng yếu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bóng tre đổ dày đặc. Chỉ có bùn ướt bắt ánh trăng yếu."
+  },
+  {
+   "k": "Dải vải đỏ buộc trên tre",
+   "files": [
+    "game.js",
+    "ui-v3.js"
+   ],
+   "ctx": "Dải vải đỏ buộc trên tre"
+  },
+  {
+   "k": "Đi sâu vào rừng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đi sâu vào rừng"
+  },
+  {
+   "k": "Trở lại miếu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trở lại miếu"
+  },
+  {
+   "k": "Rừng sâu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Rừng sâu"
+  },
+  {
+   "k": "RỪNG SÂU · 21:05",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "RỪNG SÂU · 21:05"
+  },
+  {
+   "k": "Qua kẽ lá, một mảnh mái ngói cũ thoáng hiện.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Qua kẽ lá, một mảnh mái ngói cũ thoáng hiện."
+  },
+  {
+   "k": "Có nhà thật. Nhưng cổng ở đâu? Mình chưa thấy lối nào dẫn tới đó.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Có nhà thật. Nhưng cổng ở đâu? Mình chưa thấy lối nào dẫn tới đó."
+  },
+  {
+   "k": "Giữa những tán cây chỉ có một mảng mái ngói tối, không hề thấy đèn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giữa những tán cây chỉ có một mảng mái ngói tối, không hề thấy đèn."
+  },
+  {
+   "k": "Cột mốc đá cũ",
+   "files": [
+    "game.js",
+    "ui-v3.js"
+   ],
+   "ctx": "Cột mốc đá cũ"
+  },
+  {
+   "k": "Đi về phía mái biệt thự",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đi về phía mái biệt thự"
+  },
+  {
+   "k": "Quay về rừng tre",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quay về rừng tre"
+  },
+  {
+   "k": "Cổng biệt thự Vân Hòa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cổng biệt thự Vân Hòa"
+  },
+  {
+   "k": "CHƯƠNG 2 · BIỆT THỰ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CHƯƠNG 2 · BIỆT THỰ"
+  },
+  {
+   "k": "BIỆT THỰ · 21:20",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "BIỆT THỰ · 21:20"
+  },
+  {
+   "k": "Cổng sắt buộc xích. Sau song sắt là ngôi nhà bỏ hoang.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cổng sắt buộc xích. Sau song sắt là ngôi nhà bỏ hoang."
+  },
+  {
+   "k": "Biệt thự Vân Hòa... Bà ngoại tớ chưa bao giờ muốn nhắc tới nơi này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Biệt thự Vân Hòa... Bà ngoại tớ chưa bao giờ muốn nhắc tới nơi này."
+  },
+  {
+   "k": "Ổ khóa rỉ sét còn nguyên. Mọi ô cửa tối đen như những hốc mắt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ổ khóa rỉ sét còn nguyên. Mọi ô cửa tối đen như những hốc mắt."
+  },
+  {
+   "k": "Xích và khóa cổng",
+   "files": [
+    "game.js",
+    "ui-v3.js"
+   ],
+   "ctx": "Xích và khóa cổng"
+  },
+  {
+   "k": "Rời khu rừng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Rời khu rừng"
+  }
+ ]
+}

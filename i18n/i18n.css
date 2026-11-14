@@ -1,0 +1,91 @@
+/* i18n — bảng chọn ngôn ngữ + điều chỉnh chữ cho EN / ZH. */
+
+/* ---------- Bảng chọn ngôn ngữ ---------- */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid rgba(171, 216, 214, .28);
+  border-radius: 2px;
+  background: rgba(3, 12, 14, .55);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+  pointer-events: auto;
+}
+.lang-switch button {
+  min-width: 40px;
+  min-height: 28px;
+  padding: 4px 9px;
+  border: 0;
+  border-radius: 1px;
+  background: transparent;
+  color: #9fb6b2;
+  font: 700 10px/1 var(--sans, system-ui, sans-serif);
+  letter-spacing: .1em;
+  cursor: pointer;
+  transition: background .18s, color .18s;
+}
+.lang-switch button:hover,
+.lang-switch button:focus-visible {
+  color: #e7f3ef;
+  background: rgba(46, 112, 112, .35);
+}
+.lang-switch button[aria-pressed="true"] {
+  color: #06110f;
+  background: rgba(179, 238, 235, .92);
+  box-shadow: 0 0 10px rgba(179, 238, 235, .25);
+}
+.lang-switch button:focus-visible {
+  outline: 2px solid #c8f5f2;
+  outline-offset: 2px;
+}
+.title-bottom .lang-switch {
+  display: flex;
+  width: max-content;
+  margin: 0 auto 14px;
+}
+.lang-switch--notice {
+  display: flex;
+  width: max-content;
+  margin: 18px auto 0;
+}
+
+/* ---------- Chữ sinh bởi CSS (không dịch được bằng DOM) ---------- */
+html[lang="en"] .bk.cover-wait.closed .bk-cover:after { content: "Tap to open"; }
+html[lang="zh-Hans"] .bk.cover-wait.closed .bk-cover:after { content: "轻触翻开"; }
+
+/* ---------- Chữ Hán: dùng font hệ thống có glyph CJK ---------- */
+html[lang="zh-Hans"] {
+  --serif: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "STSong", SimSun, "Noto Serif SC", serif;
+  --sans: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+}
+html[lang="zh-Hans"] .dlg-text,
+html[lang="zh-Hans"] .hotspot-label,
+html[lang="zh-Hans"] .modal-note,
+html[lang="zh-Hans"] .toast {
+  letter-spacing: .01em;
+}
+html[lang="zh-Hans"] .title-kicker,
+html[lang="zh-Hans"] .title-footer {
+  letter-spacing: .22em;
+}
+
+/* ---------- Tiếng Anh: câu dài hơn, cho phép xuống dòng ---------- */
+html[lang="en"] .hotspot-label {
+  white-space: normal;
+  width: max-content;
+  max-width: 230px;
+  text-align: center;
+  line-height: 1.35;
+}
+html[lang="en"] .dlg-text {
+  font-size: clamp(12px, 1.05vw, 14px);
+  line-height: 1.6;
+}
+html[lang="en"] .menu-ob-title {
+  font-size: 18px;
+}
+html[lang="en"] .point-row .modal-option,
+html[lang="en"] .menu-grid .modal-option {
+  line-height: 1.35;
+}

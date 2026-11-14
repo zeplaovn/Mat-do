@@ -1,0 +1,566 @@
+{
+ "batch": 39,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Thế về có ai mua bánh cho tớ không? Chuyến đi này tớ đói gần chết.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Thế về có ai mua bánh cho tớ không? Chuyến đi này tớ đói gần chết."
+  },
+  {
+   "k": "Cậu tự mua đi. Tớ hết tiền nuôi cậu rồi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cậu tự mua đi. Tớ hết tiền nuôi cậu rồi."
+  },
+  {
+   "k": "Nào, đừng nói nữa. Một... hai... ba!",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nào, đừng nói nữa. Một... hai... ba!"
+  },
+  {
+   "k": "Nắng bắt đầu lên trên con đường rừng cũ. Sau lưng cả nhóm, lần này không còn tiếng ai gọi theo.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nắng bắt đầu lên trên con đường rừng cũ. Sau lưng cả nhóm, lần này không còn tiếng ai gọi theo."
+  },
+  {
+   "k": "Những điều nhóm tận mắt thấy đã nằm trong nhật ký; phần còn thiếu vẫn phải được xác minh bằng người sống và giấy tờ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Những điều nhóm tận mắt thấy đã nằm trong nhật ký; phần còn thiếu vẫn phải được xác minh bằng người sống và giấy tờ."
+  },
+  {
+   "k": "Nếu còn quay lại, không đứa nào được đi một mình đâu đấy.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nếu còn quay lại, không đứa nào được đi một mình đâu đấy."
+  },
+  {
+   "k": "Ừ. Lần tới bắt đầu từ chuyện ông Tùng kể và mấy tờ giấy mình có.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ừ. Lần tới bắt đầu từ chuyện ông Tùng kể và mấy tờ giấy mình có."
+  },
+  {
+   "k": "Cậu thử xem cái chốt mở từ phía nào đã.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cậu thử xem cái chốt mở từ phía nào đã."
+  },
+  {
+   "k": "Này, đừng cố bẻ. Xem nó vướng ở đâu rồi tính.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Này, đừng cố bẻ. Xem nó vướng ở đâu rồi tính."
+  },
+  {
+   "k": "Trong mấy món đồ thường ngày này, có thứ gì bị đặt lạc chỗ không nhỉ?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Trong mấy món đồ thường ngày này, có thứ gì bị đặt lạc chỗ không nhỉ?"
+  },
+  {
+   "k": "Thử chụp từ góc khác đi. Có khi trên ảnh lại thấy rõ hơn.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Thử chụp từ góc khác đi. Có khi trên ảnh lại thấy rõ hơn."
+  },
+  {
+   "k": "Cậu so ngày tháng với chữ ký xem. Hai tờ có gì không khớp không?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cậu so ngày tháng với chữ ký xem. Hai tờ có gì không khớp không?"
+  },
+  {
+   "k": "Em nhớ người ta để đồ ở góc đó. Nhưng em quên là ai rồi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Em nhớ người ta để đồ ở góc đó. Nhưng em quên là ai rồi."
+  },
+  {
+   "k": "Cháu thử soi hai bản sớ dưới cùng một ngọn đèn xem. Có chỗ nét mực khác hẳn đấy.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cháu thử soi hai bản sớ dưới cùng một ngọn đèn xem. Có chỗ nét mực khác hẳn đấy."
+  },
+  {
+   "k": "Muốn hiểu chuyện của chị Quế, các cháu xem những gì chị ấy viết trước đã.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Muốn hiểu chuyện của chị Quế, các cháu xem những gì chị ấy viết trước đã."
+  },
+  {
+   "k": "Thầy nhìn ba đồng xu rất lâu, rồi thở dài.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Thầy nhìn ba đồng xu rất lâu, rồi thở dài."
+  },
+  {
+   "k": "Hừ… quẻ Kiển.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Hừ… quẻ Kiển."
+  },
+  {
+   "k": "Kiển là sao hả thầy?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Kiển là sao hả thầy?"
+  },
+  {
+   "k": "Là đường khó đi. Cứ hình dung thế này: trên núi có nước đổ xuống. Núi đã dốc, nước lại chảy, đường trơn như bờ mương hôm mưa. Ai bước cũng phải chậm.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Là đường khó đi. Cứ hình dung thế này: trên núi có nước đổ xuống. Núi đã dốc, nước lại chảy, đường trơn như bờ mương hôm mưa. Ai bước cũng phải chậm."
+  },
+  {
+   "k": "Nghe đáng sợ thế.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nghe đáng sợ thế."
+  },
+  {
+   "k": "Chưa chắc. Cổ nhân bảo gặp chỗ hiểm thì dừng chân, nhìn lại, tìm người đi trước mà hỏi. Không bảo thôi đi, bảo là đừng liều.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Chưa chắc. Cổ nhân bảo gặp chỗ hiểm thì dừng chân, nhìn lại, tìm người đi trước mà hỏi. Không bảo thôi đi, bảo là đừng liều."
+  },
+  {
+   "k": "Tức là thầy bảo bọn cháu đừng đi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tức là thầy bảo bọn cháu đừng đi."
+  },
+  {
+   "k": "Tôi bảo thì các cháu nghe chắc? Quẻ chỉ nói quẻ. Đi hay không là việc các cháu.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tôi bảo thì các cháu nghe chắc? Quẻ chỉ nói quẻ. Đi hay không là việc các cháu."
+  },
+  {
+   "k": "Thầy biết gì về chỗ ấy ạ?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Thầy biết gì về chỗ ấy ạ?"
+  },
+  {
+   "k": "Biết nửa vời. Đêm rằm năm 2014, tôi thấy đèn trong nhà ấy sáng. Sang gõ cửa thì không ai mở. Sáng ra có dấu chân trước hiên. Cả dấu chân trẻ con.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Biết nửa vời. Đêm rằm năm 2014, tôi thấy đèn trong nhà ấy sáng. Sang gõ cửa thì không ai mở. Sáng ra có dấu chân trước hiên. Cả dấu chân trẻ con."
+  },
+  {
+   "k": "Trẻ con ạ?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Trẻ con ạ?"
+  },
+  {
+   "k": "Chuyện đó tôi chỉ dám nói đến đấy. Nói nhiều, các cháu lại tự mò đi, hại.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Chuyện đó tôi chỉ dám nói đến đấy. Nói nhiều, các cháu lại tự mò đi, hại."
+  },
+  {
+   "k": "Thầy ơi…",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Thầy ơi…"
+  },
+  {
+   "k": "Nghe tôi một câu: chuyện trong nhà ấy là người làm sai với người. Ai bảo thần phạt thánh giận thì đừng tin vội.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nghe tôi một câu: chuyện trong nhà ấy là người làm sai với người. Ai bảo thần phạt thánh giận thì đừng tin vội."
+  },
+  {
+   "k": "Thầy lục túi vải, đặt lên bàn một cuốn sách bìa sờn.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Thầy lục túi vải, đặt lên bàn một cuốn sách bìa sờn."
+  },
+  {
+   "k": "Cầm lấy. Tôi giữ cũng chẳng để làm gì. Chỗ nào lạ thì lật trang trắng ra, soi xuống nước mà đọc.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cầm lấy. Tôi giữ cũng chẳng để làm gì. Chỗ nào lạ thì lật trang trắng ra, soi xuống nước mà đọc."
+  },
+  {
+   "k": "Nước nào ạ?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nước nào ạ?"
+  },
+  {
+   "k": "Gặp rồi sẽ biết.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Gặp rồi sẽ biết."
+  },
+  {
+   "k": "Miếu Lục Đồng Chay – Lễ Tạ Sơn Lâm",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Miếu Lục Đồng Chay – Lễ Tạ Sơn Lâm"
+  },
+  {
+   "k": "Bản ghi chép lễ tạ rừng truyền lại qua nhiều đời, chữ đã phai.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bản ghi chép lễ tạ rừng truyền lại qua nhiều đời, chữ đã phai."
+  },
+  {
+   "k": "Trang bìa",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Trang bìa"
+  },
+  {
+   "k": "MIẾU LỤC ĐỒNG CHAY – LỄ TẠ SƠN LÂM",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "MIẾU LỤC ĐỒNG CHAY – LỄ TẠ SƠN LÂM\nGhi lễ tạ rừng, năm đi đường và việc chăm nguồn nước.\nNgười ghi trước nhắn người ghi sau: lấy điều lành mà dạy, không mượn chuyện thần linh để dọa người."
+  },
+  {
+   "k": "Ghi lễ tạ rừng, năm đi đường và việc chăm nguồn nước.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "MIẾU LỤC ĐỒNG CHAY – LỄ TẠ SƠN LÂM\nGhi lễ tạ rừng, năm đi đường và việc chăm nguồn nước.\nNgười ghi trước nhắn người ghi sau: lấy điều lành mà dạy, không mượn chuyện thần linh để dọa người."
+  },
+  {
+   "k": "Người ghi trước nhắn người ghi sau: lấy điều lành mà dạy, không mượn chuyện thần linh để dọa người.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "MIẾU LỤC ĐỒNG CHAY – LỄ TẠ SƠN LÂM\nGhi lễ tạ rừng, năm đi đường và việc chăm nguồn nước.\nNgười ghi trước nhắn người ghi sau: lấy điều lành mà dạy, không mượn chuyện thần linh để dọa người."
+  },
+  {
+   "k": "Lời mở",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Lời mở"
+  },
+  {
+   "k": "Miếu thờ Huyền Lâm Thánh Quân, dân làng quen gọi Đức Ngài. Người vào rừng xin bình an, khi trở về phải dọn chỗ đốt lửa, giữ cây non, không chặn suối.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Miếu thờ Huyền Lâm Thánh Quân, dân làng quen gọi Đức Ngài. Người vào rừng xin bình an, khi trở về phải dọn chỗ đốt lửa, giữ cây non, không chặn suối.\nKhông có lễ giết người trong sổ này."
+  },
+  {
+   "k": "Không có lễ giết người trong sổ này.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Miếu thờ Huyền Lâm Thánh Quân, dân làng quen gọi Đức Ngài. Người vào rừng xin bình an, khi trở về phải dọn chỗ đốt lửa, giữ cây non, không chặn suối.\nKhông có lễ giết người trong sổ này."
+  },
+  {
+   "k": "Ba phần lễ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ba phần lễ"
+  },
+  {
+   "k": "Trên bàn tạ rừng là cơm, nước sạch và hoa. Đèn thắp để soi đường về; người đứng khấn không phải người đem thân mình thay lễ vật.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Trên bàn tạ rừng là cơm, nước sạch và hoa. Đèn thắp để soi đường về; người đứng khấn không phải người đem thân mình thay lễ vật.\nNgười giữ miếu ghi riêng về mâm gỗ: bát nước nằm giữa bát cơm và cành hoa; ngọn đèn ở một đầu. Hãy nhìn từ phía lối vào.\nLễ xong, dập than, rửa bát và mang đồ về."
+  },
+  {
+   "k": "Người giữ miếu ghi riêng về mâm gỗ: bát nước nằm giữa bát cơm và cành hoa; ngọn đèn ở một đầu. Hãy nhìn từ phía lối vào.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Trên bàn tạ rừng là cơm, nước sạch và hoa. Đèn thắp để soi đường về; người đứng khấn không phải người đem thân mình thay lễ vật.\nNgười giữ miếu ghi riêng về mâm gỗ: bát nước nằm giữa bát cơm và cành hoa; ngọn đèn ở một đầu. Hãy nhìn từ phía lối vào.\nLễ xong, dập than, rửa bát và mang đồ về."
+  },
+  {
+   "k": "Lễ xong, dập than, rửa bát và mang đồ về.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Trên bàn tạ rừng là cơm, nước sạch và hoa. Đèn thắp để soi đường về; người đứng khấn không phải người đem thân mình thay lễ vật.\nNgười giữ miếu ghi riêng về mâm gỗ: bát nước nằm giữa bát cơm và cành hoa; ngọn đèn ở một đầu. Hãy nhìn từ phía lối vào.\nLễ xong, dập than, rửa bát và mang đồ về."
+  },
+  {
+   "k": "Lời khấn",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Lời khấn"
+  },
+  {
+   "k": "Chữ “sống” đã được đồ mực hai lần ở bản cũ, như sợ đời sau chép thiếu.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "“Rừng nuôi người sống, người giữ rừng xanh.”\nChữ “sống” đã được đồ mực hai lần ở bản cũ, như sợ đời sau chép thiếu."
+  },
+  {
+   "k": "Ghi chú mép giấy",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ghi chú mép giấy"
+  },
+  {
+   "k": "Nếu gặp bản văn nói Đức Ngài nhận máu người, hãy so danh xưng, triện và giấy chắp. Có trang sách cũ chỉ hiện chữ khi soi vào nước lặng.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nếu gặp bản văn nói Đức Ngài nhận máu người, hãy so danh xưng, triện và giấy chắp. Có trang sách cũ chỉ hiện chữ khi soi vào nước lặng."
+  },
+  {
+   "k": "Tam Tiền Vấn Sự – Sổ Quẻ Thầy Nguyên",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tam Tiền Vấn Sự – Sổ Quẻ Thầy Nguyên"
+  },
+  {
+   "k": "Sổ ghi kết quả xem quẻ và những chuyện thầy Nguyên nghe từ khách.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Sổ ghi kết quả xem quẻ và những chuyện thầy Nguyên nghe từ khách."
+  },
+  {
+   "k": "Trang ngoài",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Trang ngoài"
+  },
+  {
+   "k": "TAM TIỀN VẤN SỰ – SỔ QUẺ THẦY NGUYÊN",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "TAM TIỀN VẤN SỰ – SỔ QUẺ THẦY NGUYÊN\nChỉ để nhớ lời đã nói với người ta. Gieo quẻ không thay được việc phải làm."
+  },
+  {
+   "k": "Chỉ để nhớ lời đã nói với người ta. Gieo quẻ không thay được việc phải làm.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "TAM TIỀN VẤN SỰ – SỔ QUẺ THẦY NGUYÊN\nChỉ để nhớ lời đã nói với người ta. Gieo quẻ không thay được việc phải làm."
+  },
+  {
+   "k": "Ba đồng xu",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ba đồng xu"
+  },
+  {
+   "k": "Ông dặn học trò: trước khi nói chuyện có quẻ, cứ hỏi người ta muốn tìm gì; đừng nhìn mặt khách rồi kể chuyện đáng sợ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ông dặn học trò: trước khi nói chuyện có quẻ, cứ hỏi người ta muốn tìm gì; đừng nhìn mặt khách rồi kể chuyện đáng sợ.\nBa đồng xu đặt lên đĩa phải giữ nguyên thứ tự rơi: trái, giữa, phải."
+  },
+  {
+   "k": "Ba đồng xu đặt lên đĩa phải giữ nguyên thứ tự rơi: trái, giữa, phải.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ông dặn học trò: trước khi nói chuyện có quẻ, cứ hỏi người ta muốn tìm gì; đừng nhìn mặt khách rồi kể chuyện đáng sợ.\nBa đồng xu đặt lên đĩa phải giữ nguyên thứ tự rơi: trái, giữa, phải."
+  },
+  {
+   "k": "Ghi năm 2014",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ghi năm 2014"
+  },
+  {
+   "k": "Đêm rằm, tôi thấy đèn trong căn nhà kia lại sáng. Tôi sang hỏi thăm, họ không mở. Sáng hôm sau dấu chân có cả người lớn lẫn trẻ con, dù không ai nói đã tới.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đêm rằm, tôi thấy đèn trong căn nhà kia lại sáng. Tôi sang hỏi thăm, họ không mở. Sáng hôm sau dấu chân có cả người lớn lẫn trẻ con, dù không ai nói đã tới."
+  },
+  {
+   "k": "Trang cuối",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Trang cuối"
+  },
+  {
+   "k": "Tôi sợ nói hết khiến bọn trẻ tự tìm cách đi. Nhưng nói nửa chừng cũng dễ hại người. Nếu còn dịp gặp lại, phải nói cho rõ đó là chuyện của người làm sai, không phải thần đòi nợ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tôi sợ nói hết khiến bọn trẻ tự tìm cách đi. Nhưng nói nửa chừng cũng dễ hại người. Nếu còn dịp gặp lại, phải nói cho rõ đó là chuyện của người làm sai, không phải thần đòi nợ."
+  },
+  {
+   "k": "Cổ Lộ Đồ – Đường Về Đồng Chay",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cổ Lộ Đồ – Đường Về Đồng Chay"
+  },
+  {
+   "k": "Bản chép tay về những lối đi ở Đồng Chay trước khi đường lên đồi mọc kín.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bản chép tay về những lối đi ở Đồng Chay trước khi đường lên đồi mọc kín."
+  },
+  {
+   "k": "CỔ LỘ ĐỒ – ĐƯỜNG VỀ ĐỒNG CHAY",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "CỔ LỘ ĐỒ – ĐƯỜNG VỀ ĐỒNG CHAY\nGhi năm 1987, sau được người làng thêm chú thích bằng bút chì. Đường làng đổi nhiều, nhưng cầu gỗ còn đúng chỗ."
+  },
+  {
+   "k": "Ghi năm 1987, sau được người làng thêm chú thích bằng bút chì. Đường làng đổi nhiều, nhưng cầu gỗ còn đúng chỗ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "CỔ LỘ ĐỒ – ĐƯỜNG VỀ ĐỒNG CHAY\nGhi năm 1987, sau được người làng thêm chú thích bằng bút chì. Đường làng đổi nhiều, nhưng cầu gỗ còn đúng chỗ."
+  },
+  {
+   "k": "Cổng và ngõ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cổng và ngõ"
+  },
+  {
+   "k": "Từ cổng làng qua ngõ gạch. Đi hết hàng rào tre cũ mới đến đường ruộng. Bên trái có lối sang chùa; người đi biệt thự không cần rẽ vào chùa.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Từ cổng làng qua ngõ gạch. Đi hết hàng rào tre cũ mới đến đường ruộng. Bên trái có lối sang chùa; người đi biệt thự không cần rẽ vào chùa."
+  },
+  {
+   "k": "Ruộng và cầu",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ruộng và cầu"
+  },
+  {
+   "k": "Qua ruộng nhìn thấy chiếc cầu bắc qua mương. Đừng đi theo bờ mương xuống phía tây vì lối ấy dẫn sang ruộng thấp.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Qua ruộng nhìn thấy chiếc cầu bắc qua mương. Đừng đi theo bờ mương xuống phía tây vì lối ấy dẫn sang ruộng thấp."
+  },
+  {
+   "k": "Miếu cây đa",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Miếu cây đa"
+  },
+  {
+   "k": "Qua cầu, men đường đất đi tới cây đa. Trước miếu có cột đá khắc dấu chỉ đường cũ, nhìn rõ nhất dưới ánh nghiêng buổi chiều.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Qua cầu, men đường đất đi tới cây đa. Trước miếu có cột đá khắc dấu chỉ đường cũ, nhìn rõ nhất dưới ánh nghiêng buổi chiều."
+  },
+  {
+   "k": "Ghi mép giấy",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ghi mép giấy"
+  },
+  {
+   "k": "Bốn mốc của lối xe cũ theo đúng thứ tự: cổng làng, đường ruộng, cầu gỗ, miếu cây đa. Tới miếu rồi mới hỏi đường lên Vân Hòa.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bốn mốc của lối xe cũ theo đúng thứ tự: cổng làng, đường ruộng, cầu gỗ, miếu cây đa. Tới miếu rồi mới hỏi đường lên Vân Hòa."
+  },
+  {
+   "k": "Thạch Văn Tàn Bản – Dấu Khắc Bên Cầu",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Thạch Văn Tàn Bản – Dấu Khắc Bên Cầu"
+  },
+  {
+   "k": "Tờ giấy dó in dấu các chữ trên cột đá gần cầu gỗ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tờ giấy dó in dấu các chữ trên cột đá gần cầu gỗ."
+  },
+  {
+   "k": "Bìa",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bìa"
+  },
+  {
+   "k": "THẠCH VĂN TÀN BẢN – DẤU KHẮC BÊN CẦU",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "THẠCH VĂN TÀN BẢN – DẤU KHẮC BÊN CẦU\nCó vài chữ còn đọc được, phần dưới bị rêu lấp kín."
+  },
+  {
+   "k": "Có vài chữ còn đọc được, phần dưới bị rêu lấp kín.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "THẠCH VĂN TÀN BẢN – DẤU KHẮC BÊN CẦU\nCó vài chữ còn đọc được, phần dưới bị rêu lấp kín."
+  },
+  {
+   "k": "Dấu rẽ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dấu rẽ"
+  }
+ ]
+}

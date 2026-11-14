@@ -1,0 +1,566 @@
+{
+ "batch": 21,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Chết thật, chiều rồi à? Tớ tưởng mới trưa thôi. Cứ như có ai rút mất mấy tiếng của mình vậy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chết thật, chiều rồi à? Tớ tưởng mới trưa thôi. Cứ như có ai rút mất mấy tiếng của mình vậy."
+  },
+  {
+   "k": "Tớ hỏi lần cuối, và tớ hỏi nghiêm túc. Ai muốn quay về nhà trọ thì cứ nói. Không ai bị ép, không ai bị cười.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ hỏi lần cuối, và tớ hỏi nghiêm túc. Ai muốn quay về nhà trọ thì cứ nói. Không ai bị ép, không ai bị cười."
+  },
+  {
+   "k": "Đi nửa đường rồi bỏ thì tiếc lắm. Với lại cả nhóm đều ở đây cơ mà, sợ gì!",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đi nửa đường rồi bỏ thì tiếc lắm. Với lại cả nhóm đều ở đây cơ mà, sợ gì!"
+  },
+  {
+   "k": "Ừ... nhưng đi sát nhau nhé. Tớ không thích cái cầu này. Nhìn nó mỏng manh như sắp gãy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ừ... nhưng đi sát nhau nhé. Tớ không thích cái cầu này. Nhìn nó mỏng manh như sắp gãy."
+  },
+  {
+   "k": "Ếch dưới mương đột nhiên kêu rộ lên... Nghe cứ như chúng đang báo tin cho cả khu rừng biết mình tới.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ếch dưới mương đột nhiên kêu rộ lên... Nghe cứ như chúng đang báo tin cho cả khu rừng biết mình tới."
+  },
+  {
+   "k": "Cây đa này to quá... Rễ nó như một bàn tay khổng lồ bấu xuống đất. Còn cái miếu kia, không có ai trông coi sao?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cây đa này to quá... Rễ nó như một bàn tay khổng lồ bấu xuống đất. Còn cái miếu kia, không có ai trông coi sao?"
+  },
+  {
+   "k": "Bát hương đầy tàn mà không còn chân hương nào. Như có người thắp xong rồi vội vàng nhổ đi, sợ để lại dấu vết.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bát hương đầy tàn mà không còn chân hương nào. Như có người thắp xong rồi vội vàng nhổ đi, sợ để lại dấu vết."
+  },
+  {
+   "k": "Tớ không thích chỗ này tí nào. Từ nãy tới giờ tớ cứ có cảm giác cây đa đang nghiêng xuống nhìn mình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ không thích chỗ này tí nào. Từ nãy tới giờ tớ cứ có cảm giác cây đa đang nghiêng xuống nhìn mình."
+  },
+  {
+   "k": "Này... đừng dọa nhau nữa mà. Tớ còn phải đi tiếp đấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Này... đừng dọa nhau nữa mà. Tớ còn phải đi tiếp đấy."
+  },
+  {
+   "k": "Miếu thế này đáng lẽ phải có người hương khói mỗi ngày. Vậy mà trống không. ...Mình xem kỹ xung quanh rồi hẵng quyết định có vào rừng không.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Miếu thế này đáng lẽ phải có người hương khói mỗi ngày. Vậy mà trống không. ...Mình xem kỹ xung quanh rồi hẵng quyết định có vào rừng không."
+  },
+  {
+   "k": "Khoan... Mọi người có nghe không? Vừa có ai gọi tên Vũ. Tớ nghe rõ lắm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khoan... Mọi người có nghe không? Vừa có ai gọi tên Vũ. Tớ nghe rõ lắm."
+  },
+  {
+   "k": "Hả? Tớ có nghe gì đâu. Cậu... cậu chắc chứ? Đừng đùa kiểu đó, không vui đâu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hả? Tớ có nghe gì đâu. Cậu... cậu chắc chứ? Đừng đùa kiểu đó, không vui đâu."
+  },
+  {
+   "k": "Đừng quay lại. Cũng đừng trả lời. Bà tớ dặn thế... Tớ xin cậu đấy, Vũ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đừng quay lại. Cũng đừng trả lời. Bà tớ dặn thế... Tớ xin cậu đấy, Vũ."
+  },
+  {
+   "k": "Cứ đi tiếp, đi gần đủ để nắm được tay nhau. Có chuyện gì thì nói ngay, đừng giấu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cứ đi tiếp, đi gần đủ để nắm được tay nhau. Có chuyện gì thì nói ngay, đừng giấu."
+  },
+  {
+   "k": "Những dải vải đỏ buộc dọc lối đi... Không biết người ta đánh dấu để khỏi lạc, hay để ngăn người khác bước tiếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những dải vải đỏ buộc dọc lối đi... Không biết người ta đánh dấu để khỏi lạc, hay để ngăn người khác bước tiếp."
+  },
+  {
+   "k": "Kia... là mái nhà. Có nhà thật! Nhưng cổng ở đâu? Mình chưa thấy lối nào dẫn tới đó.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Kia... là mái nhà. Có nhà thật! Nhưng cổng ở đâu? Mình chưa thấy lối nào dẫn tới đó."
+  },
+  {
+   "k": "Mái ngói kia đúng là biệt thự Vân Hòa. Hồi nhỏ tớ chỉ thấy nó trong một tấm ảnh cũ của bà ngoại. Không ngờ... nó có thật.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mái ngói kia đúng là biệt thự Vân Hòa. Hồi nhỏ tớ chỉ thấy nó trong một tấm ảnh cũ của bà ngoại. Không ngờ... nó có thật."
+  },
+  {
+   "k": "Khoan đã. Mọi người có thấy lạ không? Mới nãy dế còn kêu rộ lên, giờ im phăng phắc. Một tiếng côn trùng cũng không.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khoan đã. Mọi người có thấy lạ không? Mới nãy dế còn kêu rộ lên, giờ im phăng phắc. Một tiếng côn trùng cũng không."
+  },
+  {
+   "k": "Đừng nói thế... Tớ nổi hết da gà rồi. Đi chậm thôi, tớ không thích bước vào chỗ mình không nhìn rõ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đừng nói thế... Tớ nổi hết da gà rồi. Đi chậm thôi, tớ không thích bước vào chỗ mình không nhìn rõ."
+  },
+  {
+   "k": "Biệt thự Vân Hòa... Đứng trước cổng rồi mà tớ vẫn không tin nổi. Bà ngoại chưa bao giờ muốn nhắc tới nơi này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Biệt thự Vân Hòa... Đứng trước cổng rồi mà tớ vẫn không tin nổi. Bà ngoại chưa bao giờ muốn nhắc tới nơi này."
+  },
+  {
+   "k": "Vy, cậu ổn chứ? Nếu cậu không muốn vào thì mình quay lại ngay. Tớ không đùa đâu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vy, cậu ổn chứ? Nếu cậu không muốn vào thì mình quay lại ngay. Tớ không đùa đâu."
+  },
+  {
+   "k": "Tớ ổn... Chính vì bà không chịu nói, nên tớ mới phải biết.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ ổn... Chính vì bà không chịu nói, nên tớ mới phải biết."
+  },
+  {
+   "k": "Cổng buộc xích, khóa to bằng nắm tay. Không có chìa thì đến ma cũng chẳng vào nổi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cổng buộc xích, khóa to bằng nắm tay. Không có chìa thì đến ma cũng chẳng vào nổi."
+  },
+  {
+   "k": "Vũ! ...Thôi. Vy, mình sẽ vào cùng cậu. Đừng tự gánh một mình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vũ! ...Thôi. Vy, mình sẽ vào cùng cậu. Đừng tự gánh một mình."
+  },
+  {
+   "k": "Cổng vừa khép lại sau lưng. Tớ không thích cái tiếng khóa sắt đó... chút nào.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cổng vừa khép lại sau lưng. Tớ không thích cái tiếng khóa sắt đó... chút nào."
+  },
+  {
+   "k": "Đừng hoảng. Cổng cũ nặng nên tự khép thôi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đừng hoảng. Cổng cũ nặng nên tự khép thôi."
+  },
+  {
+   "k": "Nhưng nó khép đúng lúc mình bước qua, Khôi ạ. Như có ai vừa đẩy nhẹ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhưng nó khép đúng lúc mình bước qua, Khôi ạ. Như có ai vừa đẩy nhẹ."
+  },
+  {
+   "k": "Sân rộng thế mà không một dấu chân nào ngoài của bọn mình. Cây gạo kia to thật... to đến mức rờn rợn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sân rộng thế mà không một dấu chân nào ngoài của bọn mình. Cây gạo kia to thật... to đến mức rờn rợn."
+  },
+  {
+   "k": "Cái giếng bên phải có nắp gỗ. Ở quê bà tớ cũng đậy nắp giếng như thế, để “người dưới” khỏi lên.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cái giếng bên phải có nắp gỗ. Ở quê bà tớ cũng đậy nắp giếng như thế, để “người dưới” khỏi lên."
+  },
+  {
+   "k": "Thôi! Đừng đoán mò nữa. Xem nhà trước đã.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thôi! Đừng đoán mò nữa. Xem nhà trước đã."
+  },
+  {
+   "k": "Cánh cửa này chưa khóa hẳn. Đi cùng nhau, đừng ai tự tách nhóm. Nhắc lại lần nữa cho chắc: đừng ai tự tách nhóm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cánh cửa này chưa khóa hẳn. Đi cùng nhau, đừng ai tự tách nhóm. Nhắc lại lần nữa cho chắc: đừng ai tự tách nhóm."
+  },
+  {
+   "k": "Bên trong tối đen... Cũng không nghe tiếng gì. Im đến mức nghe được cả tim mình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bên trong tối đen... Cũng không nghe tiếng gì. Im đến mức nghe được cả tim mình."
+  },
+  {
+   "k": "Đèn pin sẵn sàng. Có chuyện gì cứ hét lên, tớ chạy tới liền. ...Hoặc tớ hét, mấy cậu chạy tới cũng được.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đèn pin sẵn sàng. Có chuyện gì cứ hét lên, tớ chạy tới liền. ...Hoặc tớ hét, mấy cậu chạy tới cũng được."
+  },
+  {
+   "k": "Để tớ chụp vài tấm trước. Mai còn đem đối chiếu với ảnh cũ của bà Vy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Để tớ chụp vài tấm trước. Mai còn đem đối chiếu với ảnh cũ của bà Vy."
+  },
+  {
+   "k": "Đồng hồ dừng ở một giờ rất lạ... Tớ ghi vào sổ ngay. Có gì đó không ổn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đồng hồ dừng ở một giờ rất lạ... Tớ ghi vào sổ ngay. Có gì đó không ổn."
+  },
+  {
+   "k": "Bụi dày thế này mà mặt kính các khung ảnh lại sạch bong. Hình như có ai thường xuyên tới lau chúng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bụi dày thế này mà mặt kính các khung ảnh lại sạch bong. Hình như có ai thường xuyên tới lau chúng."
+  },
+  {
+   "k": "Vài khuôn mặt trong ảnh bị cào xước tới tận lớp giấy... Cả nhà này nhìn nghiêm khắc quá. Tớ không thích bị họ nhìn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vài khuôn mặt trong ảnh bị cào xước tới tận lớp giấy... Cả nhà này nhìn nghiêm khắc quá. Tớ không thích bị họ nhìn."
+  },
+  {
+   "k": "Có mùi nhang cũ. Phòng thờ chắc ở phía bên trái. ...Tớ thấy chân mình cứ muốn quay ra cửa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Có mùi nhang cũ. Phòng thờ chắc ở phía bên trái. ...Tớ thấy chân mình cứ muốn quay ra cửa."
+  },
+  {
+   "k": "Mình chia nhau xem phòng thờ, bếp rồi lên tầng hai. Nhưng nhớ: đừng ai đi một mình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình chia nhau xem phòng thờ, bếp rồi lên tầng hai. Nhưng nhớ: đừng ai đi một mình."
+  },
+  {
+   "k": "Những bát hương này... Đừng chạm vào vội. Mỗi bát là một người, tớ có cảm giác thế.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những bát hương này... Đừng chạm vào vội. Mỗi bát là một người, tớ có cảm giác thế."
+  },
+  {
+   "k": "Những bát hương này có liên quan đến người mất tích bà bán nước nhắc tới không?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những bát hương này có liên quan đến người mất tích bà bán nước nhắc tới không?"
+  },
+  {
+   "k": "Ý cậu là họ từng bị giữ lại ở đây? Ngay trong căn nhà này?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ý cậu là họ từng bị giữ lại ở đây? Ngay trong căn nhà này?"
+  },
+  {
+   "k": "Tớ thấy như vừa có ai thắp rồi tắt đi. Cứ như họ đang chờ... chờ ai đó gọi tên mình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ thấy như vừa có ai thắp rồi tắt đi. Cứ như họ đang chờ... chờ ai đó gọi tên mình."
+  },
+  {
+   "k": "Mỗi bát hương là một người. Muốn biết họ là ai thì phải lần theo dấu vết trong nhà. Mình sẽ làm cho đến nơi đến chốn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mỗi bát hương là một người. Muốn biết họ là ai thì phải lần theo dấu vết trong nhà. Mình sẽ làm cho đến nơi đến chốn."
+  },
+  {
+   "k": "Gian bếp... Bỏ lại giữa chừng, như thể mọi người vừa chạy khỏi đây. Phía sau bên phải còn có cánh cửa dẫn xuống hầm nữa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Gian bếp... Bỏ lại giữa chừng, như thể mọi người vừa chạy khỏi đây. Phía sau bên phải còn có cánh cửa dẫn xuống hầm nữa."
+  },
+  {
+   "k": "Bếp này nấu cho rất đông người. Chum, nồi, bát đũa... nhiều hơn một gia đình. Ai ăn hết ngần ấy nhỉ?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bếp này nấu cho rất đông người. Chum, nồi, bát đũa... nhiều hơn một gia đình. Ai ăn hết ngần ấy nhỉ?"
+  },
+  {
+   "k": "Hay đúng hơn là... nhà này từng tổ chức một buổi lễ mà cả làng không dám nhắc tới.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hay đúng hơn là... nhà này từng tổ chức một buổi lễ mà cả làng không dám nhắc tới."
+  },
+  {
+   "k": "Cửa hầm có xích nhưng mục cả rồi. Dưới đó tối đen. Tớ không muốn xuống đâu, thật lòng đấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa hầm có xích nhưng mục cả rồi. Dưới đó tối đen. Tớ không muốn xuống đâu, thật lòng đấy."
+  },
+  {
+   "k": "Tớ vừa nghe dưới đó như có tiếng gõ. ...Hoặc chỉ là ống nước. Chắc là ống nước.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ vừa nghe dưới đó như có tiếng gõ. ...Hoặc chỉ là ống nước. Chắc là ống nước."
+  },
+  {
+   "k": "Tớ chụp vài tấm trước khi lên nhé. Đừng đứng xa nhau quá.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ chụp vài tấm trước khi lên nhé. Đừng đứng xa nhau quá."
+  },
+  {
+   "k": "Ván cầu thang kêu to quá. Bước sát tường đi, đừng dồn hết sức vào giữa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ván cầu thang kêu to quá. Bước sát tường đi, đừng dồn hết sức vào giữa."
+  },
+  {
+   "k": "Khoan đã! Trong bức ảnh gia đình này có một bé gái đứng ở hàng sau cùng, mờ hẳn đi. Ở những tấm khác thì không có em.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khoan đã! Trong bức ảnh gia đình này có một bé gái đứng ở hàng sau cùng, mờ hẳn đi. Ở những tấm khác thì không có em."
+  },
+  {
+   "k": "Tớ ghi lại. Thêm một người không có trong lời kể của dân làng... Tại sao họ lại giấu em?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ ghi lại. Thêm một người không có trong lời kể của dân làng... Tại sao họ lại giấu em?"
+  },
+  {
+   "k": "Phòng trẻ bên trái, phòng làm việc bên phải... Mà cái gương ở cuối lối đi kia nhìn lạ quá.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phòng trẻ bên trái, phòng làm việc bên phải... Mà cái gương ở cuối lối đi kia nhìn lạ quá."
+  },
+  {
+   "k": "Gương nào? Cuối hành lang chỉ có cửa sổ thôi mà.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Gương nào? Cuối hành lang chỉ có cửa sổ thôi mà."
+  },
+  {
+   "k": "...Chắc tớ nhầm với cái gương trong phòng trẻ. Nhưng tớ có cảm giác nó cứ nhìn theo mình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "...Chắc tớ nhầm với cái gương trong phòng trẻ. Nhưng tớ có cảm giác nó cứ nhìn theo mình."
+  },
+  {
+   "k": "Theo bài báo năm 1986, ông Hưng là chủ ngôi nhà này. Phòng làm việc bên phải chắc là của ông.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Theo bài báo năm 1986, ông Hưng là chủ ngôi nhà này. Phòng làm việc bên phải chắc là của ông."
+  },
+  {
+   "k": "Mọi người nghe không? Có tiếng ai đi lại ngay trên trần nhà. ...Chuột thôi nhỉ? Nói là chuột đi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mọi người nghe không? Có tiếng ai đi lại ngay trên trần nhà. ...Chuột thôi nhỉ? Nói là chuột đi."
+  },
+  {
+   "k": "Lúc nãy tớ thấy một bé gái trong ảnh chụp... Nhưng trong phòng chẳng có ai cả. Tớ không hoa mắt, đúng không?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lúc nãy tớ thấy một bé gái trong ảnh chụp... Nhưng trong phòng chẳng có ai cả. Tớ không hoa mắt, đúng không?"
+  },
+  {
+   "k": "Đồ cũ lắm rồi, nhưng nệm giường vẫn còn nếp gấp, như vừa có người nằm. Tớ thấy thương em quá.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đồ cũ lắm rồi, nhưng nệm giường vẫn còn nếp gấp, như vừa có người nằm. Tớ thấy thương em quá."
+  },
+  {
+   "k": "Cái gương kia nhìn mình chằm chằm. Tớ không thích nó. Ai che nó lại giúp tớ với.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cái gương kia nhìn mình chằm chằm. Tớ không thích nó. Ai che nó lại giúp tớ với."
+  },
+  {
+   "k": "Ừ... Cậu đứng gần tớ nhé. Gần hơn nữa. Tớ sợ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ừ... Cậu đứng gần tớ nhé. Gần hơn nữa. Tớ sợ."
+  },
+  {
+   "k": "Phòng làm việc của ông Hưng. Mọi thứ vẫn nằm đúng chỗ ông ấy bỏ lại, như thể ông chỉ vừa bước ra ngoài.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phòng làm việc của ông Hưng. Mọi thứ vẫn nằm đúng chỗ ông ấy bỏ lại, như thể ông chỉ vừa bước ra ngoài."
+  },
+  {
+   "k": "Hộp sắt góc phải có khóa số. Chắc cần mật mã.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hộp sắt góc phải có khóa số. Chắc cần mật mã."
+  },
+  {
+   "k": "Khóa bốn chữ số. Ông ấy giấu gì trong đó mà phải cẩn thận đến thế?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khóa bốn chữ số. Ông ấy giấu gì trong đó mà phải cẩn thận đến thế?"
+  },
+  {
+   "k": "Người giữ sổ sách mà giấu kỹ thế này thì chắc chắn có điều muốn che đậy. Tớ ghét kiểu người này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Người giữ sổ sách mà giấu kỹ thế này thì chắc chắn có điều muốn che đậy. Tớ ghét kiểu người này."
+  },
+  {
+   "k": "Xuống đây nhớ dùng đèn pin nhé. ...Khoan. Tớ nghe như có người gõ ở cuối hành lang.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xuống đây nhớ dùng đèn pin nhé. ...Khoan. Tớ nghe như có người gõ ở cuối hành lang."
+  },
+  {
+   "k": "Tớ cũng nghe. Ba tiếng, rồi hai tiếng. Rồi im bặt. Giống như... người ta đang gõ để cầu cứu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ cũng nghe. Ba tiếng, rồi hai tiếng. Rồi im bặt. Giống như... người ta đang gõ để cầu cứu."
+  },
+  {
+   "k": "Muốn bật đèn pin thì chạm vào nó trong túi đồ, hoặc nhấn phím F. Tớ nói thế thôi, không phải vì tớ sợ đâu nhé.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Muốn bật đèn pin thì chạm vào nó trong túi đồ, hoặc nhấn phím F. Tớ nói thế thôi, không phải vì tớ sợ đâu nhé."
+  },
+  {
+   "k": "Đi chậm thôi. Nếu ai thấy không ổn thì nói, mình quay lên ngay. Tớ không ép ai.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đi chậm thôi. Nếu ai thấy không ổn thì nói, mình quay lên ngay. Tớ không ép ai."
+  },
+  {
+   "k": "Nhìn kìa... Mảng gạch này mới hơn phần còn lại. Sau nó có gì vậy?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhìn kìa... Mảng gạch này mới hơn phần còn lại. Sau nó có gì vậy?"
+  },
+  {
+   "k": "Những người mất tích đêm mười bảy tháng Ba... Có phải họ ở ngay dưới chân mình suốt bao năm nay?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những người mất tích đêm mười bảy tháng Ba... Có phải họ ở ngay dưới chân mình suốt bao năm nay?"
+  },
+  {
+   "k": "Lớp vữa mới hơn hẳn gạch bên cạnh. Người ta xây bịt sau, và xây rất vội. Tởm thật.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lớp vữa mới hơn hẳn gạch bên cạnh. Người ta xây bịt sau, và xây rất vội. Tởm thật."
+  },
+  {
+   "k": "Tớ thấy có luồng khí lạnh ở mép tường. Mình kiểm tra kỹ đã.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ thấy có luồng khí lạnh ở mép tường. Mình kiểm tra kỹ đã."
+  },
+  {
+   "k": "Phải có cách nào đó để mở bức tường này ra. Họ đã chờ quá lâu rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phải có cách nào đó để mở bức tường này ra. Họ đã chờ quá lâu rồi."
+  },
+  {
+   "k": "Trời ơi... Đồ đạc vẫn còn nguyên. Họ bị bỏ lại ở đây thật sao? Suốt từng ấy năm?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trời ơi... Đồ đạc vẫn còn nguyên. Họ bị bỏ lại ở đây thật sao? Suốt từng ấy năm?"
+  },
+  {
+   "k": "Dép, bát, một cuốn sổ nhỏ... Mỗi người để lại một thứ. Tớ không chịu nổi nữa. Tớ muốn khóc.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dép, bát, một cuốn sổ nhỏ... Mỗi người để lại một thứ. Tớ không chịu nổi nữa. Tớ muốn khóc."
+  },
+  {
+   "k": "Bà Tám... Con sẽ mang tên của mọi người ra khỏi nơi này. Con hứa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà Tám... Con sẽ mang tên của mọi người ra khỏi nơi này. Con hứa."
+  },
+  {
+   "k": "Mình sẽ mang hết ra ngoài. Cả đồ đạc lẫn sự thật. Không ai bị quên thêm lần nào nữa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình sẽ mang hết ra ngoài. Cả đồ đạc lẫn sự thật. Không ai bị quên thêm lần nào nữa."
+  },
+  {
+   "k": "Phòng này giống hệt phòng trẻ, nhưng mọi thứ bị lật ngược. Tớ nghe tiếng ai đang hát khe khẽ... Mọi người có nghe không?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phòng này giống hệt phòng trẻ, nhưng mọi thứ bị lật ngược. Tớ nghe tiếng ai đang hát khe khẽ... Mọi người có nghe không?"
+  }
+ ]
+}

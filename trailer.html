@@ -15,9 +15,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="trailer.css">
+<link rel="stylesheet" href="i18n/i18n.css">
+<script src="i18n/en.js" defer></script>
+<script src="i18n/zh.js" defer></script>
+<script src="i18n/i18n.js" defer></script>
 <script src="trailer.js" defer></script>
 </head>
-<body>
+<body data-doc="trailer">
 <main id="stage" class="stage" aria-label="Trailer Lời Nguyền Rừng Thiêng">
   <div class="picture" aria-hidden="true">
     <div class="plate"><div class="plate-art"></div></div>
@@ -64,6 +68,11 @@
         <a class="back-link" href="index.html">Về trò chơi</a>
       </div>
       <p id="load-status" class="preload-status" aria-live="polite">Đang chuẩn bị cảnh phim…</p>
+      <div class="lang-switch lang-switch--notice" role="group" aria-label="Ngôn ngữ" data-i18n-skip>
+        <button type="button" data-lang-set="vi" aria-pressed="true">VI</button>
+        <button type="button" data-lang-set="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang-set="zh" aria-pressed="false">中文</button>
+      </div>
       <p class="content-warning">Có yếu tố kinh dị và âm thanh lớn. Có thể tắt tiếng hoặc giảm chuyển động khi xem.</p>
     </div>
     <span class="poster-number" aria-hidden="true">1986 / 1988 / 2026</span>

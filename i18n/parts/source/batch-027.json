@@ -1,0 +1,566 @@
+{
+ "batch": 27,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Trong nôi có chiếc trâm gỗ gãy. Hà bảo có lẽ người lớn từng dùng nó khi ru em bé ngủ. Tớ không biết chắc. Chỉ thấy có ai đó đã để lại món đồ của mình cạnh đứa trẻ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong nôi có chiếc trâm gỗ gãy. Hà bảo có lẽ người lớn từng dùng nó khi ru em bé ngủ. Tớ không biết chắc. Chỉ thấy có ai đó đã để lại món đồ của mình cạnh đứa trẻ."
+  },
+  {
+   "k": "Chi chụp gương, trong ảnh hiện một bóng trắng cạnh giường; mắt thường không thấy ai. Tớ vừa lạnh cả lưng vừa sợ mình đang ép mọi thứ thành chuyện ma. Giữ ảnh lại để đối chiếu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chi chụp gương, trong ảnh hiện một bóng trắng cạnh giường; mắt thường không thấy ai. Tớ vừa lạnh cả lưng vừa sợ mình đang ép mọi thứ thành chuyện ma. Giữ ảnh lại để đối chiếu."
+  },
+  {
+   "k": "Chiếc nôi tự khẽ đưa dù cửa không mở. Trong đó có mảnh vải thêu dở: “Nh…”. Tớ nghe tiếng khóc rất nhỏ. Tớ chỉ dám ghi đúng hai chữ đầu, không tự đặt tên cho em.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc nôi tự khẽ đưa dù cửa không mở. Trong đó có mảnh vải thêu dở: “Nh…”. Tớ nghe tiếng khóc rất nhỏ. Tớ chỉ dám ghi đúng hai chữ đầu, không tự đặt tên cho em."
+  },
+  {
+   "k": "Giấy khai sinh ghi Nhài sinh năm 1981, là con của vợ chồng ông Hưng; dòng ghi mất tích đêm 17/3/1988 đã bị gạch bỏ. Em mới bảy tuổi. Tớ nhìn con số ấy lâu hơn mọi con số khác.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giấy khai sinh ghi Nhài sinh năm 1981, là con của vợ chồng ông Hưng; dòng ghi mất tích đêm 17/3/1988 đã bị gạch bỏ. Em mới bảy tuổi. Tớ nhìn con số ấy lâu hơn mọi con số khác."
+  },
+  {
+   "k": "Một đôi dép vải nằm lại trong căn phòng bị bịt kín. Hà không nói gì, chỉ ngồi xuống thật lâu. Tớ muốn mang đồ vật ra ánh sáng cùng câu chuyện của người đã đi nó.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một đôi dép vải nằm lại trong căn phòng bị bịt kín. Hà không nói gì, chỉ ngồi xuống thật lâu. Tớ muốn mang đồ vật ra ánh sáng cùng câu chuyện của người đã đi nó."
+  },
+  {
+   "k": "Dưới hầm có hộp giấy tờ cấp đồ lễ mang chữ ký ông Hưng. Cuối cùng cũng có thứ không chỉ là lời kể hay cảm giác. Nhìn bản gốc mà tay tớ vẫn run.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dưới hầm có hộp giấy tờ cấp đồ lễ mang chữ ký ông Hưng. Cuối cùng cũng có thứ không chỉ là lời kể hay cảm giác. Nhìn bản gốc mà tay tớ vẫn run."
+  },
+  {
+   "k": "Bà Tám viết rằng đêm 17/3/1988 bà nghe tiếng kêu cứu từ tầng hầm nhưng quá sợ để lên tiếng. Bà đã giữ lại lời khai. Tớ không biết nếu là mình đêm ấy, mình có đủ can đảm không.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà Tám viết rằng đêm 17/3/1988 bà nghe tiếng kêu cứu từ tầng hầm nhưng quá sợ để lên tiếng. Bà đã giữ lại lời khai. Tớ không biết nếu là mình đêm ấy, mình có đủ can đảm không."
+  },
+  {
+   "k": "Trong xô giếng có chiếc chuông đồng nhỏ buộc dây đỏ, loại thường buộc cho trẻ con khỏi lạc. Hà cầm nó rất lâu. Không ai biết nó đã ở dưới đó bao lâu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong xô giếng có chiếc chuông đồng nhỏ buộc dây đỏ, loại thường buộc cho trẻ con khỏi lạc. Hà cầm nó rất lâu. Không ai biết nó đã ở dưới đó bao lâu."
+  },
+  {
+   "k": "Tớ chép lại đúng thứ tự bài đồng dao cô Quyên dạy: búp bê, hạc giấy, xe gỗ, phấn trắng. Cứ nghĩ đến một người lớn kiên nhẫn dạy trẻ học bằng mấy món đồ nhỏ, tớ lại khó chịu trong lòng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ chép lại đúng thứ tự bài đồng dao cô Quyên dạy: búp bê, hạc giấy, xe gỗ, phấn trắng. Cứ nghĩ đến một người lớn kiên nhẫn dạy trẻ học bằng mấy món đồ nhỏ, tớ lại khó chịu trong lòng."
+  },
+  {
+   "k": "Tờ giấy cô Quyên để lại ghép năm ký hiệu với tên người làm công: Giáp — bút, Thành — cân, Quyên — nốt nhạc, Nụ — lửa, Bình — sóng. Có lẽ bà muốn Nhài nhớ mặt chữ bằng những hình dễ thuộc.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tờ giấy cô Quyên để lại ghép năm ký hiệu với tên người làm công: Giáp — bút, Thành — cân, Quyên — nốt nhạc, Nụ — lửa, Bình — sóng. Có lẽ bà muốn Nhài nhớ mặt chữ bằng những hình dễ thuộc."
+  },
+  {
+   "k": "Mặt sau ảnh có lời cô Quyên: người ký đơn đứng theo thứ tự Giáp, Thành, Quyên, Nụ, Bình. Câu “năm người như năm ngón tay” làm tớ thấy họ gần gũi đến đau lòng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mặt sau ảnh có lời cô Quyên: người ký đơn đứng theo thứ tự Giáp, Thành, Quyên, Nụ, Bình. Câu “năm người như năm ngón tay” làm tớ thấy họ gần gũi đến đau lòng."
+  },
+  {
+   "k": "Đằng sau lớp gạch là cửa gỗ cũ. Then cài phía ngoài, mặt trong có nhiều vết cào. Tớ không thể biết chỉ từ vết ấy ai đã ở đây bao lâu. Nhưng ai đó đã cố mở cửa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đằng sau lớp gạch là cửa gỗ cũ. Then cài phía ngoài, mặt trong có nhiều vết cào. Tớ không thể biết chỉ từ vết ấy ai đã ở đây bao lâu. Nhưng ai đó đã cố mở cửa."
+  },
+  {
+   "k": "Trong hộp sắt là lời ông Hưng viết về Quế và đêm 17/3/1988. Phải đối chiếu giờ khóa cửa, lúc ông nghe chuyện và những giấy tờ khác. Tớ muốn gọi đây là lời thú tội, nhưng vẫn phải đọc từng dòng cho kỹ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong hộp sắt là lời ông Hưng viết về Quế và đêm 17/3/1988. Phải đối chiếu giờ khóa cửa, lúc ông nghe chuyện và những giấy tờ khác. Tớ muốn gọi đây là lời thú tội, nhưng vẫn phải đọc từng dòng cho kỹ."
+  },
+  {
+   "k": "Nhật ký ông Hưng ghi ông giấu chìa kho ở chỗ thường ngồi hóng gió, nhìn xuống làng. Ông viết mình không dám mở. Tớ không hiểu làm sao người ta biết một chuyện sai mà vẫn sống tiếp từng ấy năm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhật ký ông Hưng ghi ông giấu chìa kho ở chỗ thường ngồi hóng gió, nhìn xuống làng. Ông viết mình không dám mở. Tớ không hiểu làm sao người ta biết một chuyện sai mà vẫn sống tiếp từng ấy năm."
+  },
+  {
+   "k": "Nhật ký cô Quyên ghi những chuyện nhỏ của Nhài: bữa ăn, thuốc, lần em sốt. Những trang cuối đã bị xé. Chỉ vài dòng chăm em cũng đủ khiến căn nhà này bớt giống một chuyện ma.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhật ký cô Quyên ghi những chuyện nhỏ của Nhài: bữa ăn, thuốc, lần em sốt. Những trang cuối đã bị xé. Chỉ vài dòng chăm em cũng đủ khiến căn nhà này bớt giống một chuyện ma."
+  },
+  {
+   "k": "Một bát cơm vẫn ấm trong phòng thờ, dưới nền có dấu chân rất nhỏ dẫn về bếp. Tớ biết điều này vô lý. Nhưng Hà đã thấy hơi nóng, và Chi cũng nhìn thấy dấu chân.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một bát cơm vẫn ấm trong phòng thờ, dưới nền có dấu chân rất nhỏ dẫn về bếp. Tớ biết điều này vô lý. Nhưng Hà đã thấy hơi nóng, và Chi cũng nhìn thấy dấu chân."
+  },
+  {
+   "k": "Trong ký ức về đêm 17/3/1988, Nhài nghe tiếng kêu cứu từ hầm rồi chạy đi tìm người. Em cầm một vật bằng đồng, chạy trong mưa; chiếc chuông rơi xuống giếng. Tớ cần đối chiếu phần còn lại với giấy tờ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong ký ức về đêm 17/3/1988, Nhài nghe tiếng kêu cứu từ hầm rồi chạy đi tìm người. Em cầm một vật bằng đồng, chạy trong mưa; chiếc chuông rơi xuống giếng. Tớ cần đối chiếu phần còn lại với giấy tờ."
+  },
+  {
+   "k": "Ảnh Chi chụp ở giếng có hai bóng người, một cao một thấp. Tớ không dám gọi tên họ khi chưa biết chắc. Bọn mình còn phải tìm thêm chứng cứ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ảnh Chi chụp ở giếng có hai bóng người, một cao một thấp. Tớ không dám gọi tên họ khi chưa biết chắc. Bọn mình còn phải tìm thêm chứng cứ."
+  },
+  {
+   "k": "Có lẽ cuối cùng mình đã tìm được tên người gắn với di vật này. Tớ sẽ ghi cẩn thận và đối chiếu với giấy tờ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Có lẽ cuối cùng mình đã tìm được tên người gắn với di vật này. Tớ sẽ ghi cẩn thận và đối chiếu với giấy tờ."
+  },
+  {
+   "k": "Bình, Nụ, Quyên, Thành, Giáp. Khi từng cái tên được đọc lên, nhang bén lửa và cổng sắt mở. Tớ không còn biết gọi đó là gì, chỉ thấy nhẹ lòng vì mình đã gọi đúng tên họ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bình, Nụ, Quyên, Thành, Giáp. Khi từng cái tên được đọc lên, nhang bén lửa và cổng sắt mở. Tớ không còn biết gọi đó là gì, chỉ thấy nhẹ lòng vì mình đã gọi đúng tên họ."
+  },
+  {
+   "k": "Bản sớ tạ rừng cũ ghi Huyền Lâm Thánh Quân và câu “Rừng nuôi người sống, người giữ rừng xanh.” Nét chữ, dấu triện đều cũ. Tớ muốn nhớ đúng câu ấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bản sớ tạ rừng cũ ghi Huyền Lâm Thánh Quân và câu “Rừng nuôi người sống, người giữ rừng xanh.” Nét chữ, dấu triện đều cũ. Tớ muốn nhớ đúng câu ấy."
+  },
+  {
+   "k": "Bản sớ kia có giấy mới chắp vào giấy cũ và một dòng mực đậm hơn, danh hiệu lại ghi Huyền Lâm Tôn Thần. Có người đã sửa, nhưng ai và để làm gì?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bản sớ kia có giấy mới chắp vào giấy cũ và một dòng mực đậm hơn, danh hiệu lại ghi Huyền Lâm Tôn Thần. Có người đã sửa, nhưng ai và để làm gì?"
+  },
+  {
+   "k": "So hai bản sớ: danh hiệu đổi từ Thánh Quân sang Tôn Thần; giấy mới dán chồng, nét mực khác; câu “Rừng nhận máu người” bị thêm vào. Đây là điều nhìn thấy trên giấy, không phải lời đồn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "So hai bản sớ: danh hiệu đổi từ Thánh Quân sang Tôn Thần; giấy mới dán chồng, nét mực khác; câu “Rừng nhận máu người” bị thêm vào. Đây là điều nhìn thấy trên giấy, không phải lời đồn."
+  },
+  {
+   "k": "Thư Quế gửi Tùng vạch rõ chuyện bản sớ bị thay và bảo em chạy lên xã. Đọc câu chị dặn đừng quay lại, tớ phải đặt giấy xuống một lúc. Có lẽ Quế đã biết mình gặp nguy hiểm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thư Quế gửi Tùng vạch rõ chuyện bản sớ bị thay và bảo em chạy lên xã. Đọc câu chị dặn đừng quay lại, tớ phải đặt giấy xuống một lúc. Có lẽ Quế đã biết mình gặp nguy hiểm."
+  },
+  {
+   "k": "Ông Tùng kể chị Quế sinh năm 1971, hay hái thuốc và đưa người lạc ra khỏi rừng. Năm 1986, chị phát hiện bản sớ thầy Chân dùng đã bị sửa. Tớ muốn kiểm tra lời kể bằng thư và bản sớ còn lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ông Tùng kể chị Quế sinh năm 1971, hay hái thuốc và đưa người lạc ra khỏi rừng. Năm 1986, chị phát hiện bản sớ thầy Chân dùng đã bị sửa. Tớ muốn kiểm tra lời kể bằng thư và bản sớ còn lại."
+  },
+  {
+   "k": "Đến đây, chứng cứ cho thấy vụ Quế năm 1986 và vụ giam người năm 1988 là hai chuyện khác nhau, cùng dính đến việc con người che giấu sai trái. Chỗ nào chưa rõ, tớ sẽ để trống chứ không đoán.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đến đây, chứng cứ cho thấy vụ Quế năm 1986 và vụ giam người năm 1988 là hai chuyện khác nhau, cùng dính đến việc con người che giấu sai trái. Chỗ nào chưa rõ, tớ sẽ để trống chứ không đoán."
+  },
+  {
+   "k": "Bọn mình đã gọi tên Lành, Phúc và Mai ở nền đá. Tớ không muốn nhớ họ chỉ bằng cách họ chết. Trước hết họ từng là một gia đình, từng có những bữa cơm bình thường.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bọn mình đã gọi tên Lành, Phúc và Mai ở nền đá. Tớ không muốn nhớ họ chỉ bằng cách họ chết. Trước hết họ từng là một gia đình, từng có những bữa cơm bình thường."
+  },
+  {
+   "k": "Sau khi đối chiếu chứng cứ và hoàn tất việc trả tên, bọn mình mới tháo chiếc ấn khỏi khe đá. Tớ không muốn ai chạm vào nó chỉ vì tò mò.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sau khi đối chiếu chứng cứ và hoàn tất việc trả tên, bọn mình mới tháo chiếc ấn khỏi khe đá. Tớ không muốn ai chạm vào nó chỉ vì tò mò."
+  },
+  {
+   "k": "Cuối cùng chìa kho cũng tra vừa ổ khóa. Cửa kêu ken két. Vũ lập tức lùi ra phía sau tớ, rồi lại giả vờ là muốn nhường đường. Trong kho có thể còn giấy tờ năm ấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cuối cùng chìa kho cũng tra vừa ổ khóa. Cửa kêu ken két. Vũ lập tức lùi ra phía sau tớ, rồi lại giả vờ là muốn nhường đường. Trong kho có thể còn giấy tờ năm ấy."
+  },
+  {
+   "k": "Dưới đệm ghế bập bênh có chìa đồng, đúng chỗ ông Hưng chỉ trong nhật ký. Nhìn ra làng từ đây thật xa. Ông đã ngồi bao đêm ở chỗ này mà không dám mở kho?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dưới đệm ghế bập bênh có chìa đồng, đúng chỗ ông Hưng chỉ trong nhật ký. Nhìn ra làng từ đây thật xa. Ông đã ngồi bao đêm ở chỗ này mà không dám mở kho?"
+  },
+  {
+   "k": "Bà Tám để dành nhang mới cho những người chưa được gọi đúng tên. Nhài kể vậy. Tớ cầm bó nhang mà thấy nặng hơn cả mấy tập hồ sơ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà Tám để dành nhang mới cho những người chưa được gọi đúng tên. Nhài kể vậy. Tớ cầm bó nhang mà thấy nặng hơn cả mấy tập hồ sơ."
+  },
+  {
+   "k": "Trong ngăn đồng hồ có mẩu giấy nhắc xem kẽ tủ gian bếp nếu muốn tìm phần thư còn lại. Tớ đọc to cho cả nhóm nghe, rồi cất cẩn thận. Ít nhất lần này có một chỉ dẫn cụ thể.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong ngăn đồng hồ có mẩu giấy nhắc xem kẽ tủ gian bếp nếu muốn tìm phần thư còn lại. Tớ đọc to cho cả nhóm nghe, rồi cất cẩn thận. Ít nhất lần này có một chỉ dẫn cụ thể."
+  },
+  {
+   "k": "Thầy Nguyên trao cho bọn mình cuốn Huyền Ấn Bí Lục – Trấn Âm Đồ. Ông bảo đừng tin một câu chuyện chỉ vì nó được kể lâu. Tớ nhớ mãi lời ấy, nhất là khi những lời đồn ở Đồng Chay cứ mâu thuẫn nhau.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thầy Nguyên trao cho bọn mình cuốn Huyền Ấn Bí Lục – Trấn Âm Đồ. Ông bảo đừng tin một câu chuyện chỉ vì nó được kể lâu. Tớ nhớ mãi lời ấy, nhất là khi những lời đồn ở Đồng Chay cứ mâu thuẫn nhau."
+  },
+  {
+   "k": "Thầy Nguyên thừa nhận bút danh Lục Táng là của ông. Ông đã giữ tài liệu của Huyền Tĩnh và im lặng về chuyện người thầy nhận tiền để giam Mai. Lần này ông hứa công bố tất cả. Tớ muốn nhìn thấy ông làm thật.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thầy Nguyên thừa nhận bút danh Lục Táng là của ông. Ông đã giữ tài liệu của Huyền Tĩnh và im lặng về chuyện người thầy nhận tiền để giam Mai. Lần này ông hứa công bố tất cả. Tớ muốn nhìn thấy ông làm thật."
+  },
+  {
+   "k": "Ngay trước bàn lễ, ngọn đèn đang tắt bỗng bén lửa. Không ai trong nhóm chạm vào nó. Vũ đứng bất động một lúc, không pha trò nữa. Tớ ghi chuyện ấy lại vì cả năm đứa đều thấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngay trước bàn lễ, ngọn đèn đang tắt bỗng bén lửa. Không ai trong nhóm chạm vào nó. Vũ đứng bất động một lúc, không pha trò nữa. Tớ ghi chuyện ấy lại vì cả năm đứa đều thấy."
+  },
+  {
+   "k": "Khi soi trang trắng của bí lục qua mặt nước, chữ hiện lên: “Tìm người mẹ bên dòng nước bị chặn, đứa trẻ dưới gốc đa và người con ở khe đá. Gọi đúng tên trước khi tháo vật giữ.” Tớ chép nguyên văn; một chữ cũng không dám sửa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khi soi trang trắng của bí lục qua mặt nước, chữ hiện lên: “Tìm người mẹ bên dòng nước bị chặn, đứa trẻ dưới gốc đa và người con ở khe đá. Gọi đúng tên trước khi tháo vật giữ.” Tớ chép nguyên văn; một chữ cũng không dám sửa."
+  },
+  {
+   "k": "Nhìn qua mặt nước thấy dưới ấn có nét chỉ về nền đá cũ. Chúng tớ chưa nhổ ấn lên. Sau những gì đã chứng kiến, tớ không muốn động vào thứ mình chưa hiểu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhìn qua mặt nước thấy dưới ấn có nét chỉ về nền đá cũ. Chúng tớ chưa nhổ ấn lên. Sau những gì đã chứng kiến, tớ không muốn động vào thứ mình chưa hiểu."
+  },
+  {
+   "k": "Trên cây có dải vải đỏ thêu tên bà ngoại. Bà đã đến đây thật. Tớ đứng rất lâu trước nút buộc ấy; bỗng hiểu có những lời xin lỗi người ta không nói thành tiếng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trên cây có dải vải đỏ thêu tên bà ngoại. Bà đã đến đây thật. Tớ đứng rất lâu trước nút buộc ấy; bỗng hiểu có những lời xin lỗi người ta không nói thành tiếng."
+  },
+  {
+   "k": "Bà Cúc đưa bản chép gia phả: bà Lành có hai con Mai và Phúc. Phúc từng tập thêu “Chị Mai” lên khăn; bà Lành dùng chiếc lược gỗ bị gãy. Tớ khoanh hai chi tiết ấy để đối chiếu với di vật, chưa dám kết luận.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà Cúc đưa bản chép gia phả: bà Lành có hai con Mai và Phúc. Phúc từng tập thêu “Chị Mai” lên khăn; bà Lành dùng chiếc lược gỗ bị gãy. Tớ khoanh hai chi tiết ấy để đối chiếu với di vật, chưa dám kết luận."
+  },
+  {
+   "k": "Tờ giấy bà ngoại để lại bảo chuyện năm 1986 là có thật và Quế bị vu oan. Bà dặn tìm ông Tùng, em trai Quế, ở cuối xóm Đông; từ rừng đi theo lối rẽ bên phải. Nếu bà biết, vì sao bà không kể thẳng với tớ?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tờ giấy bà ngoại để lại bảo chuyện năm 1986 là có thật và Quế bị vu oan. Bà dặn tìm ông Tùng, em trai Quế, ở cuối xóm Đông; từ rừng đi theo lối rẽ bên phải. Nếu bà biết, vì sao bà không kể thẳng với tớ?"
+  },
+  {
+   "k": "Ông Tùng nhớ lại lần chị Quế đưa giấy tờ cho mình, giục chạy đi gọi người lớn năm 1986. Tớ nghe ông kể mà nhớ đến cách mình vẫn gọi nhau mỗi khi sợ. Chỉ khác là hôm ấy Tùng đã phải chạy một mình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ông Tùng nhớ lại lần chị Quế đưa giấy tờ cho mình, giục chạy đi gọi người lớn năm 1986. Tớ nghe ông kể mà nhớ đến cách mình vẫn gọi nhau mỗi khi sợ. Chỉ khác là hôm ấy Tùng đã phải chạy một mình."
+  },
+  {
+   "k": "Lược gỗ của Lành, khăn của Phúc, mảnh áo của Mai: các dấu chữ và ký ức tìm được có chỗ khớp nhau. Tớ đã đặt chúng cạnh nhau. Còn chuyện ai đưa tiền giam Mai, phải tiếp tục đối chiếu chữ ký và ghi chép.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lược gỗ của Lành, khăn của Phúc, mảnh áo của Mai: các dấu chữ và ký ức tìm được có chỗ khớp nhau. Tớ đã đặt chúng cạnh nhau. Còn chuyện ai đưa tiền giam Mai, phải tiếp tục đối chiếu chữ ký và ghi chép."
+  },
+  {
+   "k": "Bọn mình đặt một bát cơm trắng cạnh di vật ở nền đá. Không phải để gọi phép màu gì cả; tớ chỉ muốn gia đình ấy có một bữa cơm được nhắc đến bằng sự tử tế.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bọn mình đặt một bát cơm trắng cạnh di vật ở nền đá. Không phải để gọi phép màu gì cả; tớ chỉ muốn gia đình ấy có một bữa cơm được nhắc đến bằng sự tử tế."
+  },
+  {
+   "k": "Cuối cùng cũng tách được hai mốc: vụ Quế năm 1986 và chuyện giam người năm 1988. Tớ từng gom tất cả vào một nỗi sợ mơ hồ. Giờ ít nhất đã biết chúng là hai sự việc khác nhau.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cuối cùng cũng tách được hai mốc: vụ Quế năm 1986 và chuyện giam người năm 1988. Tớ từng gom tất cả vào một nỗi sợ mơ hồ. Giờ ít nhất đã biết chúng là hai sự việc khác nhau."
+  },
+  {
+   "k": "Dưới mâm gỗ ở miếu có mảnh giấy dó in bốn dấu. Góc giấy vẽ cột mốc giữa rừng, kèm câu “Tìm đường về từ hơi ấm đến bóng cây.” Tớ không hiểu ngay, nhưng cảm giác mình đã bỏ sót một thứ trước mắt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dưới mâm gỗ ở miếu có mảnh giấy dó in bốn dấu. Góc giấy vẽ cột mốc giữa rừng, kèm câu “Tìm đường về từ hơi ấm đến bóng cây.” Tớ không hiểu ngay, nhưng cảm giác mình đã bỏ sót một thứ trước mắt."
+  },
+  {
+   "k": "Các dấu trên cột đá khớp với mảnh giấy dó. Khi đặt đúng, một khe nhỏ lộ ra. Vũ vừa reo lên vừa giật tay lại vì giật mình. Hiếm khi tớ thấy cậu ấy vui và sợ cùng lúc.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Các dấu trên cột đá khớp với mảnh giấy dó. Khi đặt đúng, một khe nhỏ lộ ra. Vũ vừa reo lên vừa giật tay lại vì giật mình. Hiếm khi tớ thấy cậu ấy vui và sợ cùng lúc."
+  },
+  {
+   "k": "Chìa khóa sắt rỉ nằm trong khe cột mốc, phía hướng về cổng Vân Hòa. Tớ giữ riêng trong túi áo, không muốn nó bị lẫn với những thứ nhặt trong rừng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chìa khóa sắt rỉ nằm trong khe cột mốc, phía hướng về cổng Vân Hòa. Tớ giữ riêng trong túi áo, không muốn nó bị lẫn với những thứ nhặt trong rừng."
+  },
+  {
+   "k": "Đặt các di vật đúng chỗ, tiếng gõ dưới hầm lặng đi. Hà bật khóc, còn tớ chỉ thấy mệt rã rời. Không thể từ sự im lặng ấy mà kết luận mọi người đã được giải thoát.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đặt các di vật đúng chỗ, tiếng gõ dưới hầm lặng đi. Hà bật khóc, còn tớ chỉ thấy mệt rã rời. Không thể từ sự im lặng ấy mà kết luận mọi người đã được giải thoát."
+  },
+  {
+   "k": "Tiếng gõ vừa dứt thì từ tầng trên vang xuống tiếng một đứa trẻ khóc. Mình vẫn còn bỏ sót ai đó. Tớ đã sợ đến mức muốn chạy, nhưng không thể giả như mình không nghe.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếng gõ vừa dứt thì từ tầng trên vang xuống tiếng một đứa trẻ khóc. Mình vẫn còn bỏ sót ai đó. Tớ đã sợ đến mức muốn chạy, nhưng không thể giả như mình không nghe."
+  },
+  {
+   "k": "Tên em là Nhài. Em mới bảy tuổi khi biến mất năm 1988, được vợ chồng ông Hưng nhận nuôi. Cuối cùng bọn mình cũng gọi đúng tên em. Lần đầu trong đêm, tớ thấy một tiếng gọi có thể dịu dàng đến thế.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tên em là Nhài. Em mới bảy tuổi khi biến mất năm 1988, được vợ chồng ông Hưng nhận nuôi. Cuối cùng bọn mình cũng gọi đúng tên em. Lần đầu trong đêm, tớ thấy một tiếng gọi có thể dịu dàng đến thế."
+  },
+  {
+   "k": "Hồ sơ cấp vật tư, ghi chép của ông Hưng và lời bà Tám khớp nhau ở việc che giấu sự thật. Ông nói mình sợ nên không mở cửa. Tớ cũng sợ từ khi bước vào nhà, nhưng nỗi sợ không thể thay lời giải thích.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hồ sơ cấp vật tư, ghi chép của ông Hưng và lời bà Tám khớp nhau ở việc che giấu sự thật. Ông nói mình sợ nên không mở cửa. Tớ cũng sợ từ khi bước vào nhà, nhưng nỗi sợ không thể thay lời giải thích."
+  },
+  {
+   "k": "Bọn mình giữ lại bản sớ đáng ngờ để so với bản gốc, không làm theo những vòng phấn chỉ vì có người viết như vậy. Lần này tớ muốn hiểu mình đang làm gì trước khi làm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bọn mình giữ lại bản sớ đáng ngờ để so với bản gốc, không làm theo những vòng phấn chỉ vì có người viết như vậy. Lần này tớ muốn hiểu mình đang làm gì trước khi làm."
+  },
+  {
+   "k": "Đóng nhật ký",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đóng nhật ký"
+  },
+  {
+   "k": "Đóng sách",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đóng sách"
+  },
+  {
+   "k": "Trang trước",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trang trước"
+  },
+  {
+   "k": "Mặt sau khung ảnh và bánh giải mã",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mặt sau khung ảnh và bánh giải mã"
+  },
+  {
+   "k": "Xoay bánh giải mã sang trái",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xoay bánh giải mã sang trái"
+  },
+  {
+   "k": "Xoay bánh giải mã sang phải",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xoay bánh giải mã sang phải"
+  },
+  {
+   "k": "Bộ máy đồng hồ cũ với mặt đồng hồ điều chỉnh được",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bộ máy đồng hồ cũ với mặt đồng hồ điều chỉnh được"
+  },
+  {
+   "k": "Giảm giờ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giảm giờ"
+  },
+  {
+   "k": "Tăng giờ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tăng giờ"
+  },
+  {
+   "k": "Giảm phút",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giảm phút"
+  },
+  {
+   "k": "Tăng phút",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tăng phút"
+  },
+  {
+   "k": "Cạch... Trong khe có một chiếc chìa sắt. Có lẽ vừa ổ khóa ở cổng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cạch... Trong khe có một chiếc chìa sắt. Có lẽ vừa ổ khóa ở cổng."
+  },
+  {
+   "k": "Có người giấu nó kỹ thật. Mảnh giấy ở miếu đã dẫn chúng ta tới đây.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Có người giấu nó kỹ thật. Mảnh giấy ở miếu đã dẫn chúng ta tới đây."
+  },
+  {
+   "k": "Khe đá đã mở. Mảnh giấy ở miếu và cột mốc quả thật liên quan tới nhau.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khe đá đã mở. Mảnh giấy ở miếu và cột mốc quả thật liên quan tới nhau."
+  },
+  {
+   "k": "Tiếng gõ đã lặng... Nhưng ai đang khóc trên tầng hai? Là một đứa trẻ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếng gõ đã lặng... Nhưng ai đang khóc trên tầng hai? Là một đứa trẻ."
+  },
+  {
+   "k": "Tiếng gõ đã lặng. Nhưng còn một người nữa chưa ai gọi tên. Tớ nghe rõ lắm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếng gõ đã lặng. Nhưng còn một người nữa chưa ai gọi tên. Tớ nghe rõ lắm."
+  },
+  {
+   "k": "Phòng trẻ. Mình lên đó, nhưng đi cùng nhau. Không ai ở lại một mình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phòng trẻ. Mình lên đó, nhưng đi cùng nhau. Không ai ở lại một mình."
+  },
+  {
+   "k": "Tên em",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tên em"
+  },
+  {
+   "k": "Cảm ơn chị đã gọi tên em... Nhưng cha em đang đợi ở đại sảnh. Ông ấy không để ai mang sự thật ra khỏi nhà.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cảm ơn chị đã gọi tên em... Nhưng cha em đang đợi ở đại sảnh. Ông ấy không để ai mang sự thật ra khỏi nhà."
+  },
+  {
+   "k": "Chị đừng sợ. Bà vẫn luôn ở trong ngôi nhà này, chưa bao giờ rời đi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chị đừng sợ. Bà vẫn luôn ở trong ngôi nhà này, chưa bao giờ rời đi."
+  },
+  {
+   "k": "Chị hứa. Em cứ yên tâm. Lần này sẽ có người nhớ em.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chị hứa. Em cứ yên tâm. Lần này sẽ có người nhớ em."
+  },
+  {
+   "k": "Ký ức năm 1988 tiếp tục. Nhài vẫn ở trong đêm hôm ấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ký ức năm 1988 tiếp tục. Nhài vẫn ở trong đêm hôm ấy."
+  },
+  {
+   "k": "Con nhớ rồi... mình đang tìm cách giúp mọi người.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con nhớ rồi... mình đang tìm cách giúp mọi người."
+  },
+  {
+   "k": "Hành trình tiếp tục. Những trang nhật ký vẫn còn lưu các manh mối bạn đã tìm thấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hành trình tiếp tục. Những trang nhật ký vẫn còn lưu các manh mối bạn đã tìm thấy."
+  },
+  {
+   "k": "Tớ đã ghi lại hết rồi. Mình đi tiếp thôi, nhưng đừng ai tách nhóm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ đã ghi lại hết rồi. Mình đi tiếp thôi, nhưng đừng ai tách nhóm."
+  },
+  {
+   "k": "Mỗi nấm mộ đang chờ một cái tên. Hãy tiếp tục tìm trong vật chứng và ghi chép.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Những nấm mộ không bia</h2><p>Mỗi nấm mộ đang chờ một cái tên. Hãy tiếp tục tìm trong vật chứng và ghi chép.</p><p class=\"modal-note\">Các vật chứng và trang sổ đã tìm được có thể giúp gọi lại những cái tên.</p><div id=\"names-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Các vật chứng và trang sổ đã tìm được có thể giúp gọi lại những cái tên.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Những nấm mộ không bia</h2><p>Mỗi nấm mộ đang chờ một cái tên. Hãy tiếp tục tìm trong vật chứng và ghi chép.</p><p class=\"modal-note\">Các vật chứng và trang sổ đã tìm được có thể giúp gọi lại những cái tên.</p><div id=\"names-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "${puzzleContextArt(BG('BG29'),'Vườn mộ sau biệt thự')}",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(BG('BG29'),'Vườn mộ sau biệt thự')}<h2>Khấn tên người đã khuất</h2><p><strong>Chọn tên cho người được tưởng nhớ</strong></p><p>Nấm mộ này là của <strong>${escapeHTML(cur.role)}</strong>. Hãy đọc đúng tên người ấy.</p><div id=\"name-options\" class=\"ritual-list\"></div><p class=\"modal-note\">Hãy đọc lại nhật ký nếu chưa nhớ.</p>"
+  }
+ ]
+}

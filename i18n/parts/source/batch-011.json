@@ -1,0 +1,567 @@
+{
+ "batch": 11,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Trong ngăn có mẩu giấy: “Nếu cần tìm phần thư còn lại, xem kẽ tủ ở gian bếp.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong ngăn có mẩu giấy: “Nếu cần tìm phần thư còn lại, xem kẽ tủ ở gian bếp.”"
+  },
+  {
+   "k": "Ngăn nhỏ bật ra. Có một mẩu giấy nhắc tới kẽ tủ bếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngăn nhỏ bật ra. Có một mẩu giấy nhắc tới kẽ tủ bếp."
+  },
+  {
+   "k": "Mình sẽ xem khi trở lại gian bếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình sẽ xem khi trở lại gian bếp."
+  },
+  {
+   "k": "Kim đồng hồ chưa khớp. Ngăn vẫn khóa chặt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Kim đồng hồ chưa khớp. Ngăn vẫn khóa chặt."
+  },
+  {
+   "k": "Có một dòng chữ viết sau khung ảnh gia đình trong đại sảnh này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Có một dòng chữ viết sau khung ảnh gia đình trong đại sảnh này."
+  },
+  {
+   "k": "Hãy lật mặt sau khung ảnh và giải mã dòng chữ ấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hãy lật mặt sau khung ảnh và giải mã dòng chữ ấy."
+  },
+  {
+   "k": "Giờ cần chỉnh là 11 giờ 45 phút.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giờ cần chỉnh là 11 giờ 45 phút."
+  },
+  {
+   "k": "Chúng tôi, năm người làm công nhà ông Hưng, viết thư này trước buổi lễ:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chúng tôi, năm người làm công nhà ông Hưng, viết thư này trước buổi lễ:"
+  },
+  {
+   "k": "chúng tôi nghi thầy Chân sửa lời sớ và ông Hưng đang che giấu việc cấp đồ lễ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "chúng tôi nghi thầy Chân sửa lời sớ và ông Hưng đang che giấu việc cấp đồ lễ."
+  },
+  {
+   "k": "Nếu có chuyện, xin đem thư đến người nhà và kiểm tra sổ vật tư.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nếu có chuyện, xin đem thư đến người nhà và kiểm tra sổ vật tư."
+  },
+  {
+   "k": "Ba mảnh thư viết trước buổi lễ: những người làm công nghi thầy Chân sửa sớ và ông Hưng che giấu việc cấp vật tư. Họ nhờ người tìm thấy mang thư đến gia đình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ba mảnh thư viết trước buổi lễ: những người làm công nghi thầy Chân sửa sớ và ông Hưng che giấu việc cấp vật tư. Họ nhờ người tìm thấy mang thư đến gia đình."
+  },
+  {
+   "k": "Họ viết thư trước buổi lễ, khi mới nghi ngờ chuyện sớ và vật tư.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Họ viết thư trước buổi lễ, khi mới nghi ngờ chuyện sớ và vật tư."
+  },
+  {
+   "k": "Những điều xảy ra sau đó cần được chứng minh bằng chứng cứ khác.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những điều xảy ra sau đó cần được chứng minh bằng chứng cứ khác."
+  },
+  {
+   "k": "CÂU ĐỐ · GHÉP GIẤY",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · GHÉP GIẤY"
+  },
+  {
+   "k": "LỰA CHỌN",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "LỰA CHỌN"
+  },
+  {
+   "k": "Khung cảnh trong ký ức",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khung cảnh trong ký ức"
+  },
+  {
+   "k": "CÂU ĐỐ · NHỊP THỞ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · NHỊP THỞ"
+  },
+  {
+   "k": "THỞ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "THỞ"
+  },
+  {
+   "k": "Cha ho khẽ. Đứng yên... rồi thở lại. 0 / 3",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cha ho khẽ. Đứng yên... rồi thở lại. 0 / 3"
+  },
+  {
+   "k": "Tiếp tục theo nhịp chậm",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếp tục theo nhịp chậm"
+  },
+  {
+   "k": "Bát cơm vẫn nóng. Dấu chân nhỏ dẫn xuống bếp, ra phía sau.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bát cơm vẫn nóng. Dấu chân nhỏ dẫn xuống bếp, ra phía sau."
+  },
+  {
+   "k": "Trên bàn thờ có một bát cơm đầy, hơi nóng còn bốc lên dù không ai thắp lửa. Có dấu chân rất nhỏ in trên sàn, dẫn xuống bếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trên bàn thờ có một bát cơm đầy, hơi nóng còn bốc lên dù không ai thắp lửa. Có dấu chân rất nhỏ in trên sàn, dẫn xuống bếp."
+  },
+  {
+   "k": "Bát cơm đầy, còn nóng. Hơi bốc lên như vừa mới múc ra.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bát cơm đầy, còn nóng. Hơi bốc lên như vừa mới múc ra."
+  },
+  {
+   "k": "Cơm nóng thật. Có ai đó đã đặt nó ở đây chưa đầy một giờ trước.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cơm nóng thật. Có ai đó đã đặt nó ở đây chưa đầy một giờ trước."
+  },
+  {
+   "k": "Bà Tám mất rồi. Nhài thì không ăn được. Vậy ai nấu?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà Tám mất rồi. Nhài thì không ăn được. Vậy ai nấu?"
+  },
+  {
+   "k": "Em đặt nó đấy. Mỗi đêm. Em chỉ không nhớ... em đặt cho ai.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Em đặt nó đấy. Mỗi đêm. Em chỉ không nhớ... em đặt cho ai."
+  },
+  {
+   "k": "Nhìn kìa, trên sàn có dấu chân. Nhỏ lắm. Nhỏ như chân một đứa trẻ bảy tuổi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhìn kìa, trên sàn có dấu chân. Nhỏ lắm. Nhỏ như chân một đứa trẻ bảy tuổi."
+  },
+  {
+   "k": "Dấu chân dẫn xuống bếp. Mình bật đèn pin lên soi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dấu chân dẫn xuống bếp. Mình bật đèn pin lên soi."
+  },
+  {
+   "k": "Sàn bếp tối quá. Mình bật đèn pin lên xem thử.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sàn bếp tối quá. Mình bật đèn pin lên xem thử."
+  },
+  {
+   "k": "Có rồi. Dấu chân bé tí, in bằng tro bếp. Chúng đi vòng qua bếp rồi dừng lại ở cánh cửa nhỏ sau tủ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Có rồi. Dấu chân bé tí, in bằng tro bếp. Chúng đi vòng qua bếp rồi dừng lại ở cánh cửa nhỏ sau tủ."
+  },
+  {
+   "k": "Cửa gác. Cửa nhỏ như vậy, người lớn phải cúi mới qua được.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa gác. Cửa nhỏ như vậy, người lớn phải cúi mới qua được."
+  },
+  {
+   "k": "Nhài đã đi lối này mỗi đêm. Mình đi theo em.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhài đã đi lối này mỗi đêm. Mình đi theo em."
+  },
+  {
+   "k": "Ba trang nhật ký của cô Quyên đã được sắp lại. Mình sẽ giữ nó cẩn thận.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ba trang nhật ký của cô Quyên đã được sắp lại. Mình sẽ giữ nó cẩn thận."
+  },
+  {
+   "k": "Ba trang nhật ký của cô Quyên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ba trang nhật ký của cô Quyên"
+  },
+  {
+   "k": "CÂU ĐỐ · NHẬT KÝ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · NHẬT KÝ"
+  },
+  {
+   "k": "Ba trang rời, nét chữ ngày một run hơn. Bấm hai trang để đổi chỗ, sắp theo thứ tự thời gian.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ba trang rời, nét chữ ngày một run hơn. Bấm hai trang để đổi chỗ, sắp theo thứ tự thời gian."
+  },
+  {
+   "k": "Mỗi trang có một dòng ngày tháng ở đầu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mỗi trang có một dòng ngày tháng ở đầu."
+  },
+  {
+   "k": "MÙA XUÂN 1984. Nhài tập gọi tên đồ vật. Em cười khi tôi đưa con búp bê đến bên nôi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "MÙA XUÂN 1984. Nhài tập gọi tên đồ vật. Em cười khi tôi đưa con búp bê đến bên nôi."
+  },
+  {
+   "k": "MÙA ĐÔNG 1987. Em ho suốt đêm. Tôi ngồi bên giường, đợi đến sáng mới dám đi xuống bếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "MÙA ĐÔNG 1987. Em ho suốt đêm. Tôi ngồi bên giường, đợi đến sáng mới dám đi xuống bếp."
+  },
+  {
+   "k": "ĐÊM 16/3/1988. Ông Hưng bảo tôi ở lại giúp một đêm lễ. Nếu có chuyện gì, mong em đừng ra sân giếng một mình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐÊM 16/3/1988. Ông Hưng bảo tôi ở lại giúp một đêm lễ. Nếu có chuyện gì, mong em đừng ra sân giếng một mình."
+  },
+  {
+   "k": "Mỗi trang có một mốc thời gian ở dòng đầu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mỗi trang có một mốc thời gian ở dòng đầu."
+  },
+  {
+   "k": "Trang viết từ lúc còn vui đứng trước, trang viết đêm trước buổi lễ đứng sau cùng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trang viết từ lúc còn vui đứng trước, trang viết đêm trước buổi lễ đứng sau cùng."
+  },
+  {
+   "k": "Thứ tự đúng: Mùa xuân 1984, Mùa đông 1987, Đêm 16/3/1988.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thứ tự đúng: Mùa xuân 1984, Mùa đông 1987, Đêm 16/3/1988."
+  },
+  {
+   "k": "Nhật ký cô Quyên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhật ký cô Quyên"
+  },
+  {
+   "k": "Những trang còn lại ghi việc chăm sóc Nhài và đêm lễ. Những trang cuối đã bị xé.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những trang còn lại ghi việc chăm sóc Nhài và đêm lễ. Những trang cuối đã bị xé."
+  },
+  {
+   "k": "Cô Quyên chăm em rất lâu. Nhưng những trang cuối đã biến mất.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cô Quyên chăm em rất lâu. Nhưng những trang cuối đã biến mất."
+  },
+  {
+   "k": "Cô vẫn hay ngồi bên giường em. Em muốn cho các chị xem một chuyện.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cô vẫn hay ngồi bên giường em. Em muốn cho các chị xem một chuyện."
+  },
+  {
+   "k": "Những mảnh ký ức",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những mảnh ký ức"
+  },
+  {
+   "k": "Nhài nắm tay Vy. Những ký ức gắn với các di vật vẫn chưa được nhìn lại đầy đủ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhài nắm tay Vy. Những ký ức gắn với các di vật vẫn chưa được nhìn lại đầy đủ."
+  },
+  {
+   "k": "Xem ký ức di vật",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xem ký ức di vật"
+  },
+  {
+   "k": "Để sau",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Để sau"
+  },
+  {
+   "k": "Đêm 17/3/1988",
+   "files": [
+    "game.js",
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đêm 17/3/1988"
+  },
+  {
+   "k": "Nhài nắm lấy tay Vy. Cả căn gác tối dần, và tiếng hộp nhạc vang lên rất nhỏ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhài nắm lấy tay Vy. Cả căn gác tối dần, và tiếng hộp nhạc vang lên rất nhỏ."
+  },
+  {
+   "k": "Theo Nhài về đêm ấy",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Theo Nhài về đêm ấy"
+  },
+  {
+   "k": "Chưa sẵn sàng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chưa sẵn sàng"
+  },
+  {
+   "k": "Bà Tám lặng im bên bếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà Tám lặng im bên bếp."
+  },
+  {
+   "k": "Bà Tám vẫn ngủ gật bên bếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà Tám vẫn ngủ gật bên bếp."
+  },
+  {
+   "k": "Bà Tám ngủ gật bên bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà Tám ngủ gật bên bếp"
+  },
+  {
+   "k": "Bà ngồi bên bếp than, đầu gục xuống, hai tay còn nắm chiếc muôi. Nhài định bước qua thật khẽ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà ngồi bên bếp than, đầu gục xuống, hai tay còn nắm chiếc muôi. Nhài định bước qua thật khẽ."
+  },
+  {
+   "k": "Đánh thức bà",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đánh thức bà"
+  },
+  {
+   "k": "Bà ơi, ai đang làm gì ngoài sân vậy?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà ơi, ai đang làm gì ngoài sân vậy?"
+  },
+  {
+   "k": "...Con. Nhài, không được ra sân. Cha con dặn rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "...Con. Nhài, không được ra sân. Cha con dặn rồi."
+  },
+  {
+   "k": "Bà không giúp được con đâu. Bà sợ... Thôi, con về buồng đi, đừng nghe gì cả.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà không giúp được con đâu. Bà sợ... Thôi, con về buồng đi, đừng nghe gì cả."
+  },
+  {
+   "k": "Con thấy bà khóc. Bà ơi, con chỉ đi xem một chút thôi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con thấy bà khóc. Bà ơi, con chỉ đi xem một chút thôi."
+  },
+  {
+   "k": "Để bà ngủ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Để bà ngủ"
+  },
+  {
+   "k": "Con đi nhẹ lắm đấy, bà Tám ơi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con đi nhẹ lắm đấy, bà Tám ơi."
+  },
+  {
+   "k": "Mỗi đêm bà đều giả vờ ngủ. Con biết bà biết hết. Bà vẫn để cho con đi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mỗi đêm bà đều giả vờ ngủ. Con biết bà biết hết. Bà vẫn để cho con đi."
+  },
+  {
+   "k": "Chiếc bát bé xíu vẫn nằm đó, trống không.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc bát bé xíu vẫn nằm đó, trống không."
+  },
+  {
+   "k": "Bát này nhỏ xíu, vừa tay con. Sao lại để riêng, không ai ăn?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bát này nhỏ xíu, vừa tay con. Sao lại để riêng, không ai ăn?"
+  },
+  {
+   "k": "Con nghe tiếng người lớn nói chuyện trên gác. Con lên xem.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con nghe tiếng người lớn nói chuyện trên gác. Con lên xem."
+  },
+  {
+   "k": "Con nhớ mãi: “Nó sẽ đứng dậy.” Con không hiểu thầy ấy nói về ai.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con nhớ mãi: “Nó sẽ đứng dậy.” Con không hiểu thầy ấy nói về ai."
+  },
+  {
+   "k": "Cha đang nói chuyện với một người lạ. Phải thật nhẹ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cha đang nói chuyện với một người lạ. Phải thật nhẹ."
+  },
+  {
+   "k": "Sau cánh cửa phòng cha",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sau cánh cửa phòng cha"
+  },
+  {
+   "k": "Giọng cha: “Làm xong, con bé sẽ khỏi?” Một giọng khác, lạnh và đều: “Nó sẽ đứng dậy.” Rồi tiếng ghế kêu, bước chân tới gần cánh cửa. Nhài siết chặt vạt áo.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giọng cha: “Làm xong, con bé sẽ khỏi?” Một giọng khác, lạnh và đều: “Nó sẽ đứng dậy.” Rồi tiếng ghế kêu, bước chân tới gần cánh cửa. Nhài siết chặt vạt áo."
+  },
+  {
+   "k": "“Con nghe tiếng mưa, cha ạ.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "“Con nghe tiếng mưa, cha ạ.”"
+  },
+  {
+   "k": "Nín thở, đứng yên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nín thở, đứng yên"
+  },
+  {
+   "k": "Con nghe tiếng mưa thôi, cha ạ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con nghe tiếng mưa thôi, cha ạ."
+  },
+  {
+   "k": "Con nín thở, nép sát vào cánh cửa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con nín thở, nép sát vào cánh cửa."
+  },
+  {
+   "k": "Con vẫn nghe tiếng cô Quyên gọi, mơ hồ, như qua nước.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con vẫn nghe tiếng cô Quyên gọi, mơ hồ, như qua nước."
+  },
+  {
+   "k": "Cha chạm vào then cửa, rồi buông tay xuống. Ông kéo Nhài ra khỏi bếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cha chạm vào then cửa, rồi buông tay xuống. Ông kéo Nhài ra khỏi bếp."
+  }
+ ]
+}

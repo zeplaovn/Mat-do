@@ -1,0 +1,566 @@
+{
+ "batch": 24,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Quyên. Cảm ơn cô đã không bỏ em.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quyên. Cảm ơn cô đã không bỏ em."
+  },
+  {
+   "k": "thủ kho giữ sổ vật tư",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "thủ kho giữ sổ vật tư"
+  },
+  {
+   "k": "cuốn sổ kho vật tư",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "cuốn sổ kho vật tư"
+  },
+  {
+   "k": "Cuốn sổ mở sẵn, trang cuối viết dở: “Cấp cho thầy Chân: nến, giấy sớ, vải đỏ và tấm vải che ô thông gió gian hầm. Người nhận ký: T. Ký duyệt: Hưng.” Ghi lại: Thành, thủ kho.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cuốn sổ mở sẵn, trang cuối viết dở: “Cấp cho thầy Chân: nến, giấy sớ, vải đỏ và tấm vải che ô thông gió gian hầm. Người nhận ký: T. Ký duyệt: Hưng.” Ghi lại: Thành, thủ kho."
+  },
+  {
+   "k": "Chữ ký của bác Thành. Bác ghi hết, từng món một. Bác biết mình đang giữ bằng chứng chống lại ông chủ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chữ ký của bác Thành. Bác ghi hết, từng món một. Bác biết mình đang giữ bằng chứng chống lại ông chủ."
+  },
+  {
+   "k": "Lề trang có thêm dòng nhỏ: “Nếu tôi không ra khỏi hầm, hãy tìm dưới đống đồ lễ.” Dưới đống đồ lễ?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lề trang có thêm dòng nhỏ: “Nếu tôi không ra khỏi hầm, hãy tìm dưới đống đồ lễ.” Dưới đống đồ lễ?"
+  },
+  {
+   "k": "Cậu thấy không, chỗ đồ lễ đổ trên sàn có vết kéo lê. Dưới đó có nắp gỗ!",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cậu thấy không, chỗ đồ lễ đổ trên sàn có vết kéo lê. Dưới đó có nắp gỗ!"
+  },
+  {
+   "k": "Thành. Bác đã dũng cảm hơn tất cả chúng cháu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thành. Bác đã dũng cảm hơn tất cả chúng cháu."
+  },
+  {
+   "k": "người dạy chữ cho Nhài",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "người dạy chữ cho Nhài"
+  },
+  {
+   "k": "những vạch phấn trên tường",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "những vạch phấn trên tường"
+  },
+  {
+   "k": "Những vạch phấn trên tường được xếp thành từng nhóm. Bên dưới có dòng chữ nắn nót: “Giáp, dạy học. Chúng tôi đã viết thư, xin giữ lại bản sớ để đối chiếu.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những vạch phấn trên tường được xếp thành từng nhóm. Bên dưới có dòng chữ nắn nót: “Giáp, dạy học. Chúng tôi đã viết thư, xin giữ lại bản sớ để đối chiếu.”"
+  },
+  {
+   "k": "Người dạy chữ cho Nhài. Một ghi chú của thầy còn trên tường kho. Chữ viết bị mờ, chỉ tên thầy còn rõ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Người dạy chữ cho Nhài. Một ghi chú của thầy còn trên tường kho. Chữ viết bị mờ, chỉ tên thầy còn rõ."
+  },
+  {
+   "k": "Họ ghi lại để không ai quên mình đã ở đây. Cả đời thầy dạy người ta biết đọc, và chữ cuối cùng thầy viết lại là để cầu cứu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Họ ghi lại để không ai quên mình đã ở đây. Cả đời thầy dạy người ta biết đọc, và chữ cuối cùng thầy viết lại là để cầu cứu."
+  },
+  {
+   "k": "Dưới cùng còn lời nhắn: “Nếu ai đọc được, xin đừng tin bản sớ khi chưa đối chiếu.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dưới cùng còn lời nhắn: “Nếu ai đọc được, xin đừng tin bản sớ khi chưa đối chiếu.”"
+  },
+  {
+   "k": "Giáp. Thầy ơi, lời nhắn của thầy đã tới nơi rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giáp. Thầy ơi, lời nhắn của thầy đã tới nơi rồi."
+  },
+  {
+   "k": "Sân sau... Tớ chưa thấy cái sân nào im lặng như thế này. Kho kia kìa, khóa to thật.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sân sau... Tớ chưa thấy cái sân nào im lặng như thế này. Kho kia kìa, khóa to thật."
+  },
+  {
+   "k": "Đây là kho vật tư của cha em. Hồi nhỏ em hay chui qua khe hàng rào vào chơi. Trong đó thùng nào cũng đóng dấu đỏ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đây là kho vật tư của cha em. Hồi nhỏ em hay chui qua khe hàng rào vào chơi. Trong đó thùng nào cũng đóng dấu đỏ."
+  },
+  {
+   "k": "Dấu đỏ... là dấu cấp phát đồ lễ. Vậy là sổ sách vẫn nằm ở đây, suốt từng ấy năm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dấu đỏ... là dấu cấp phát đồ lễ. Vậy là sổ sách vẫn nằm ở đây, suốt từng ấy năm."
+  },
+  {
+   "k": "Ổ khóa còn nguyên. Mình cần tìm chìa trước. Người cẩn thận như ông Hưng sẽ không để chìa ở xa đâu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ổ khóa còn nguyên. Mình cần tìm chìa trước. Người cẩn thận như ông Hưng sẽ không để chìa ở xa đâu."
+  },
+  {
+   "k": "Mùi giấy ẩm... Thùng nào cũng đóng dấu đỏ. Nến, giấy sớ, vải đỏ, nhiều hơn một đêm cúng cần.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mùi giấy ẩm... Thùng nào cũng đóng dấu đỏ. Nến, giấy sớ, vải đỏ, nhiều hơn một đêm cúng cần."
+  },
+  {
+   "k": "Chuẩn bị cả kho đồ cho một buổi lễ mà cả làng không hề hay biết. Tớ thấy máu dồn lên mặt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chuẩn bị cả kho đồ cho một buổi lễ mà cả làng không hề hay biết. Tớ thấy máu dồn lên mặt."
+  },
+  {
+   "k": "Bình tĩnh, Vũ. Mình tới đây để tìm tên họ, không phải để giận. Cuốn sổ trên bàn kia, xem thử đi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bình tĩnh, Vũ. Mình tới đây để tìm tên họ, không phải để giận. Cuốn sổ trên bàn kia, xem thử đi."
+  },
+  {
+   "k": "Phòng ngủ của ông Hưng. Giường cột chạm, màn rách, bàn thờ nhỏ với cái đèn dầu... Đèn dầu vẫn cháy, các cậu thấy không?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phòng ngủ của ông Hưng. Giường cột chạm, màn rách, bàn thờ nhỏ với cái đèn dầu... Đèn dầu vẫn cháy, các cậu thấy không?"
+  },
+  {
+   "k": "Ai thắp vậy? Ông ấy đi rồi mà. ...Tớ không muốn biết đâu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ai thắp vậy? Ông ấy đi rồi mà. ...Tớ không muốn biết đâu."
+  },
+  {
+   "k": "Cha em ngồi đây mỗi đêm, nhìn ảnh gia đình mà không nói gì. Em từng đứng ngoài cửa nghe cha thở dài.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cha em ngồi đây mỗi đêm, nhìn ảnh gia đình mà không nói gì. Em từng đứng ngoài cửa nghe cha thở dài."
+  },
+  {
+   "k": "Một người thở dài mỗi đêm mà vẫn không chịu mở cửa hầm ra. Tớ không hiểu nổi ông ta.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một người thở dài mỗi đêm mà vẫn không chịu mở cửa hầm ra. Tớ không hiểu nổi ông ta."
+  },
+  {
+   "k": "Căn phòng nhỏ này... bảng đen, bàn học, hạc giấy treo đầy. Tớ nghe như đâu đó có tiếng bút chì viết trên giấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Căn phòng nhỏ này... bảng đen, bàn học, hạc giấy treo đầy. Tớ nghe như đâu đó có tiếng bút chì viết trên giấy."
+  },
+  {
+   "k": "Đây là phòng học của em. Cô Quyên dạy em ở đây. Cha bảo con gái không cần đi học, nhưng cô vẫn lén dạy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đây là phòng học của em. Cô Quyên dạy em ở đây. Cha bảo con gái không cần đi học, nhưng cô vẫn lén dạy."
+  },
+  {
+   "k": "Cô Quyên... Em nhắc đến cô như người thân ruột thịt vậy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cô Quyên... Em nhắc đến cô như người thân ruột thịt vậy."
+  },
+  {
+   "k": "Cô là người duy nhất ôm em mỗi đêm. Chị tìm tên cô giúp em nhé, em sợ mọi người quên mất.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cô là người duy nhất ôm em mỗi đêm. Chị tìm tên cô giúp em nhé, em sợ mọi người quên mất."
+  },
+  {
+   "k": "Vườn sau... những nấm mộ không bia. Chỉ có cọc tre và mấy bát nhang nguội.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vườn sau... những nấm mộ không bia. Chỉ có cọc tre và mấy bát nhang nguội."
+  },
+  {
+   "k": "Ai đó đã dựng những mộ gió ở đây và trồng hoa nhài để tưởng nhớ họ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ai đó đã dựng những mộ gió ở đây và trồng hoa nhài để tưởng nhớ họ."
+  },
+  {
+   "k": "Bà Tám thắp nhang cho họ mỗi đêm, lén thôi, để cha không biết. Bà nhớ họ, nhưng không dám viết tên lên những nấm mộ gió.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà Tám thắp nhang cho họ mỗi đêm, lén thôi, để cha không biết. Bà nhớ họ, nhưng không dám viết tên lên những nấm mộ gió."
+  },
+  {
+   "k": "Vậy hôm nay mình sẽ khấn, bằng đúng tên. Phải tìm đủ tên trước đã.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vậy hôm nay mình sẽ khấn, bằng đúng tên. Phải tìm đủ tên trước đã."
+  },
+  {
+   "k": "Ban công... Trời ơi, nhìn xuống kia. Ánh đèn làng Đồng Chay le lói. Từ đây thấy cả nhà trọ của mình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ban công... Trời ơi, nhìn xuống kia. Ánh đèn làng Đồng Chay le lói. Từ đây thấy cả nhà trọ của mình."
+  },
+  {
+   "k": "Chiếc ghế bập bênh vẫn đung đưa. Dù không có gió.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc ghế bập bênh vẫn đung đưa. Dù không có gió."
+  },
+  {
+   "k": "Ông ấy ngồi đây mỗi tối. Chắc cũng từng nhìn xuống sân giếng, nơi mọi chuyện đã xảy ra.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ông ấy ngồi đây mỗi tối. Chắc cũng từng nhìn xuống sân giếng, nơi mọi chuyện đã xảy ra."
+  },
+  {
+   "k": "Bên trong miếu... Những bát hương xếp ngay ngắn, nến vẫn cháy. Có người vừa thắp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bên trong miếu... Những bát hương xếp ngay ngắn, nến vẫn cháy. Có người vừa thắp."
+  },
+  {
+   "k": "Rễ đa quấn khắp tường, như đang giữ cái miếu khỏi sụp. Còn những dải vải đỏ này...",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Rễ đa quấn khắp tường, như đang giữ cái miếu khỏi sụp. Còn những dải vải đỏ này..."
+  },
+  {
+   "k": "Bà Tám buộc đấy, mỗi năm một dải, mỗi người một dải. Chị lấy nhang ở đây nhé. Nhang này bà để dành cho họ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà Tám buộc đấy, mỗi năm một dải, mỗi người một dải. Chị lấy nhang ở đây nhé. Nhang này bà để dành cho họ."
+  },
+  {
+   "k": "Dưới này... những vị trí vẽ phấn và các bát lễ. Cánh cửa kia hắt ra ánh đỏ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dưới này... những vị trí vẽ phấn và các bát lễ. Cánh cửa kia hắt ra ánh đỏ."
+  },
+  {
+   "k": "Đây là kho đồ lễ. Căn hầm bị khóa ở phía bên kia nhà, mình đừng nhầm hai nơi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đây là kho đồ lễ. Căn hầm bị khóa ở phía bên kia nhà, mình đừng nhầm hai nơi."
+  },
+  {
+   "k": "Tớ không chịu nổi. Không cửa sổ, nước nhỏ giọt, và cái vòng sắt buộc dây đỏ trên tường... Cái này không phải để cứu ai.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ không chịu nổi. Không cửa sổ, nước nhỏ giọt, và cái vòng sắt buộc dây đỏ trên tường... Cái này không phải để cứu ai."
+  },
+  {
+   "k": "Mình ở lại một chút nhé. Họ đã ở một mình quá lâu rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình ở lại một chút nhé. Họ đã ở một mình quá lâu rồi."
+  },
+  {
+   "k": "Chiếc xe cút kít rỉ sét, bánh còn dính vôi trắng. Có người đã chở vật liệu ra khỏi kho vào ban đêm, để bịt hầm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc xe cút kít rỉ sét, bánh còn dính vôi trắng. Có người đã chở vật liệu ra khỏi kho vào ban đêm, để bịt hầm."
+  },
+  {
+   "k": "Bao tải rỗng gấp vuông vắn dưới mái hiên. Nhìn gọn gàng quá, như người ta đang chờ chất đồ lễ vào.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bao tải rỗng gấp vuông vắn dưới mái hiên. Nhìn gọn gàng quá, như người ta đang chờ chất đồ lễ vào."
+  },
+  {
+   "k": "Chiếc chum vỡ một nửa, bên trong đầy nước mưa. Mặt nước phản chiếu trăng... và một cái bóng không phải của tớ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc chum vỡ một nửa, bên trong đầy nước mưa. Mặt nước phản chiếu trăng... và một cái bóng không phải của tớ."
+  },
+  {
+   "k": "Chiếc cân đòn treo trên xà. Hai đĩa lệch hẳn một bên, như phiếu cấp đồ ghi một đằng mà cân ra một nẻo.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc cân đòn treo trên xà. Hai đĩa lệch hẳn một bên, như phiếu cấp đồ ghi một đằng mà cân ra một nẻo."
+  },
+  {
+   "k": "Nến, giấy sớ, vải đỏ, thùng nào cũng đóng dấu đỏ. Nhiều hơn một nhà cần cho một đêm cúng. Họ đã chuẩn bị rất kỹ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nến, giấy sớ, vải đỏ, thùng nào cũng đóng dấu đỏ. Nhiều hơn một nhà cần cho một đêm cúng. Họ đã chuẩn bị rất kỹ."
+  },
+  {
+   "k": "Qua song sắt chỉ thấy bóng tre. Từ trong kho này, người ta nghe được tiếng của làng nhưng không thể ra.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Qua song sắt chỉ thấy bóng tre. Từ trong kho này, người ta nghe được tiếng của làng nhưng không thể ra."
+  },
+  {
+   "k": "Ảnh gia đình ông Hưng: các khuôn mặt đều bị cào đến không nhận ra. Nhài cũng bị xóa khỏi ảnh.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ảnh gia đình ông Hưng: các khuôn mặt đều bị cào đến không nhận ra. Nhài cũng bị xóa khỏi ảnh."
+  },
+  {
+   "k": "Máy đánh chữ còn kẹp một tờ giấy: “Báo cáo: lễ cầu an đã làm đúng nghi thức, không ai bị hại.” Đánh máy ngay ngắn, mà không một chữ nào là thật.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Máy đánh chữ còn kẹp một tờ giấy: “Báo cáo: lễ cầu an đã làm đúng nghi thức, không ai bị hại.” Đánh máy ngay ngắn, mà không một chữ nào là thật."
+  },
+  {
+   "k": "Bàn thờ nhỏ thờ ai thì không đề. Chỉ có đèn dầu và một chiếc bát cơm đầy, còn nóng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bàn thờ nhỏ thờ ai thì không đề. Chỉ có đèn dầu và một chiếc bát cơm đầy, còn nóng."
+  },
+  {
+   "k": "Tủ gương mờ, trong có áo dài của bà Hạnh và một chiếc váy trẻ con may dở. Mảnh giấy kẹp trong áo nhắc bà rời nhà trước đêm lễ, sau cuộc cãi vã với ông Hưng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tủ gương mờ, trong có áo dài của bà Hạnh và một chiếc váy trẻ con may dở. Mảnh giấy kẹp trong áo nhắc bà rời nhà trước đêm lễ, sau cuộc cãi vã với ông Hưng."
+  },
+  {
+   "k": "Bảng viết đầy chữ cái, nét phấn nắn nót. Góc dưới có dòng viết vội: “Nhài giỏi lắm.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bảng viết đầy chữ cái, nét phấn nắn nót. Góc dưới có dòng viết vội: “Nhài giỏi lắm.”"
+  },
+  {
+   "k": "Hạc giấy mỗi con một màu, gấp từ trang sách cũ. Đếm được đúng một trăm con. Em gấp để cầu điều ước nào vậy?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hạc giấy mỗi con một màu, gấp từ trang sách cũ. Đếm được đúng một trăm con. Em gấp để cầu điều ước nào vậy?"
+  },
+  {
+   "k": "Giá sách toàn truyện cổ tích và vài cuốn sách học vần. Cuốn nào cũng cũ mòn gáy vì được giở đi giở lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giá sách toàn truyện cổ tích và vài cuốn sách học vần. Cuốn nào cũng cũ mòn gáy vì được giở đi giở lại."
+  },
+  {
+   "k": "Chiếc xe gỗ đồ chơi, bánh nhỏ xíu. Em từng kéo nó khắp phòng. ...Tớ không nên nhìn lâu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc xe gỗ đồ chơi, bánh nhỏ xíu. Em từng kéo nó khắp phòng. ...Tớ không nên nhìn lâu."
+  },
+  {
+   "k": "Cây đu đủ trĩu quả, rễ lan tới những nấm mộ gió. Hoa nhài được ai đó chăm sóc quanh đây.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cây đu đủ trĩu quả, rễ lan tới những nấm mộ gió. Hoa nhài được ai đó chăm sóc quanh đây."
+  },
+  {
+   "k": "Dải vải đỏ mới buộc, chưa bạc màu. Người thân của họ chưa quên, hoặc có người vẫn thay vải mỗi năm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dải vải đỏ mới buộc, chưa bạc màu. Người thân của họ chưa quên, hoặc có người vẫn thay vải mỗi năm."
+  },
+  {
+   "k": "Hoa nhài trắng muốt giữa đất ẩm. Mùi thơm dịu, buồn buồn. Có ai chăm chúng, không thể tự mọc đẹp thế này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hoa nhài trắng muốt giữa đất ẩm. Mùi thơm dịu, buồn buồn. Có ai chăm chúng, không thể tự mọc đẹp thế này."
+  },
+  {
+   "k": "Bộ ấm trà nguội trên bàn tròn, một chén đã cạn. Người ngồi đây uống đến giọt cuối rồi mới đứng dậy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bộ ấm trà nguội trên bàn tròn, một chén đã cạn. Người ngồi đây uống đến giọt cuối rồi mới đứng dậy."
+  },
+  {
+   "k": "Bó thuốc nam treo khô: ngải cứu, lá lốt. Của bà Tám, tớ chắc vậy. Bà từng chữa bệnh cho cả nhà.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bó thuốc nam treo khô: ngải cứu, lá lốt. Của bà Tám, tớ chắc vậy. Bà từng chữa bệnh cho cả nhà."
+  },
+  {
+   "k": "Những đốm đèn xa kia là Đồng Chay. Gần như vậy mà tiếng kêu cứu trong đêm ấy vẫn không đưa được ai tới mở cửa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những đốm đèn xa kia là Đồng Chay. Gần như vậy mà tiếng kêu cứu trong đêm ấy vẫn không đưa được ai tới mở cửa."
+  },
+  {
+   "k": "Mấy pho tượng gỗ nhỏ sứt mẻ, mặt mờ đi vì khói hương. Người ta cầu nguyện lâu đến mức tượng cũng nhòe cả mặt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mấy pho tượng gỗ nhỏ sứt mẻ, mặt mờ đi vì khói hương. Người ta cầu nguyện lâu đến mức tượng cũng nhòe cả mặt."
+  },
+  {
+   "k": "Chiếc chum đựng gạo thờ, gần như trống. Chỉ còn mấy hạt lép dưới đáy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc chum đựng gạo thờ, gần như trống. Chỉ còn mấy hạt lép dưới đáy."
+  },
+  {
+   "k": "Vòng sắt bắt chặt vào tường, xích còn mẩu ngắn. Vết mòn trên vòng... Tớ thấy ghê tay.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vòng sắt bắt chặt vào tường, xích còn mẩu ngắn. Vết mòn trên vòng... Tớ thấy ghê tay."
+  },
+  {
+   "k": "Các vị trí vẽ phấn và bát lễ được xếp ngay ngắn. Họ đã đứng đúng chỗ được chỉ định, cho đến khi cánh cửa đóng lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Các vị trí vẽ phấn và bát lễ được xếp ngay ngắn. Họ đã đứng đúng chỗ được chỉ định, cho đến khi cánh cửa đóng lại."
+  },
+  {
+   "k": "Chiếc vò nứt, đáy còn chút nước đục. Những người bị nhốt, một vò nước, và một cánh cửa khóa từ bên ngoài.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc vò nứt, đáy còn chút nước đục. Những người bị nhốt, một vò nước, và một cánh cửa khóa từ bên ngoài."
+  },
+  {
+   "k": "Mình ghi lại. Đây là chứng cứ cho thấy vật liệu bịt hầm được chở từ kho này ra.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình ghi lại. Đây là chứng cứ cho thấy vật liệu bịt hầm được chở từ kho này ra."
+  },
+  {
+   "k": "Ông ta gian ngay từ lúc cân. Tớ ghét cái chiếc cân này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ông ta gian ngay từ lúc cân. Tớ ghét cái chiếc cân này."
+  },
+  {
+   "k": "Ảnh chụp lúc em mới sinh. Cha bảo chờ em lớn rồi chụp lại. Nhưng em không có lần sau.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ảnh chụp lúc em mới sinh. Cha bảo chờ em lớn rồi chụp lại. Nhưng em không có lần sau."
+  },
+  {
+   "k": "Cô Quyên viết đấy. Cô hay khen em như vậy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cô Quyên viết đấy. Cô hay khen em như vậy."
+  },
+  {
+   "k": "Em ước cha mở cửa kho cho dân. Em chưa kể với ai.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Em ước cha mở cửa kho cho dân. Em chưa kể với ai."
+  },
+  {
+   "k": "Mình sẽ cho họ nghe thấy lần này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình sẽ cho họ nghe thấy lần này."
+  },
+  {
+   "k": "Bếp vẫn còn than hồng. Bà Tám ngủ gật bên bếp rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bếp vẫn còn than hồng. Bà Tám ngủ gật bên bếp rồi."
+  },
+  {
+   "k": "Trên mâm có mấy cái bát úp nắp, và một cái bé xíu không có nắp, vừa tay con. Bát bé ấy để riêng, không ai nói là của ai.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trên mâm có mấy cái bát úp nắp, và một cái bé xíu không có nắp, vừa tay con. Bát bé ấy để riêng, không ai nói là của ai."
+  },
+  {
+   "k": "Cha còn thức. Đèn dầu vẫn sáng dưới khe cửa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cha còn thức. Đèn dầu vẫn sáng dưới khe cửa."
+  },
+  {
+   "k": "Cha đang nói chuyện với một người lạ. Con phải thật nhẹ, nhẹ như con mèo.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cha đang nói chuyện với một người lạ. Con phải thật nhẹ, nhẹ như con mèo."
+  },
+  {
+   "k": "Cánh cửa dưới bếp... Sao có tiếng người ở bên dưới?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cánh cửa dưới bếp... Sao có tiếng người ở bên dưới?"
+  }
+ ]
+}

@@ -1,0 +1,566 @@
+{
+ "batch": 33,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Hỏi đi đâu thì hỏi, trời sắp mưa rồi, về đi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Hỏi đi đâu thì hỏi, trời sắp mưa rồi, về đi."
+  },
+  {
+   "k": "Nhà nào có trẻ con nhớ gọi về sớm.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nhà nào có trẻ con nhớ gọi về sớm."
+  },
+  {
+   "k": "Tiếng rao xa dần. Từ bờ ruộng, tiếng dế bắt đầu nổi lên.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tiếng rao xa dần. Từ bờ ruộng, tiếng dế bắt đầu nổi lên."
+  },
+  {
+   "k": "Sân nhà lát gạch cũ, rêu phủ dày ở các kẽ. Bên phải là giếng đá đã được trám một phần miệng bằng xi măng, bên dưới tối om.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Sân nhà lát gạch cũ, rêu phủ dày ở các kẽ. Bên phải là giếng đá đã được trám một phần miệng bằng xi măng, bên dưới tối om."
+  },
+  {
+   "k": "Có ai vừa kéo cổng không? Tớ nghe tiếng xích rõ lắm.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Có ai vừa kéo cổng không? Tớ nghe tiếng xích rõ lắm."
+  },
+  {
+   "k": "Không thấy ai. Chắc cái móc xích tuột... Nhưng lúc nãy tớ có cài lại mà.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Không thấy ai. Chắc cái móc xích tuột... Nhưng lúc nãy tớ có cài lại mà."
+  },
+  {
+   "k": "Trong ảnh cũ miệng giếng không trám. Để tớ chụp từ góc này xem.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Trong ảnh cũ miệng giếng không trám. Để tớ chụp từ góc này xem."
+  },
+  {
+   "k": "Chắc người ta trám sau khi nhà bỏ không.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Chắc người ta trám sau khi nhà bỏ không."
+  },
+  {
+   "k": "Bó nhài này còn tươi. Ai vừa mang đến nhỉ?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bó nhài này còn tươi. Ai vừa mang đến nhỉ?"
+  },
+  {
+   "k": "Khăn mắc ở trục kéo gầu này. Cũ mà chưa rách hết, lạ nhỉ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Khăn mắc ở trục kéo gầu này. Cũ mà chưa rách hết, lạ nhỉ."
+  },
+  {
+   "k": "Anh Vũ ơi... đừng lại gần quá.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Anh Vũ ơi... đừng lại gần quá."
+  },
+  {
+   "k": "Ơ? Ai gọi anh đấy?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ơ? Ai gọi anh đấy?"
+  },
+  {
+   "k": "Trong khe nứt của lớp trám, có thể thấy mặt nước đen ở rất sâu. Không một gợn sóng.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Trong khe nứt của lớp trám, có thể thấy mặt nước đen ở rất sâu. Không một gợn sóng."
+  },
+  {
+   "k": "Tấm biển đồng ghi Vân Hòa. Nhưng cái đinh giữ biển bị cạy cong rồi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tấm biển đồng ghi Vân Hòa. Nhưng cái đinh giữ biển bị cạy cong rồi."
+  },
+  {
+   "k": "Có người từng định gỡ tấm biển xuống.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Có người từng định gỡ tấm biển xuống."
+  },
+  {
+   "k": "Cửa kẹt rồi. Vũ, phụ tớ một tay.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cửa kẹt rồi. Vũ, phụ tớ một tay."
+  },
+  {
+   "k": "Đại sảnh tối và ẩm. Chiếc đồng hồ quả lắc đứng im ở 3 giờ 17; trên tường, vài chiếc đồng hồ nhỏ cũng dừng đúng giờ ấy.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Đại sảnh tối và ẩm. Chiếc đồng hồ quả lắc đứng im ở 3 giờ 17; trên tường, vài chiếc đồng hồ nhỏ cũng dừng đúng giờ ấy."
+  },
+  {
+   "k": "Ảnh này bị úp vào tường. Mặt sau lại chẳng có bụi mấy.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ảnh này bị úp vào tường. Mặt sau lại chẳng có bụi mấy."
+  },
+  {
+   "k": "Tấm ảnh này chụp hồi sân giếng còn sáng đèn. Có cả đường xe vào nhà nữa.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tấm ảnh này chụp hồi sân giếng còn sáng đèn. Có cả đường xe vào nhà nữa."
+  },
+  {
+   "k": "Cả mấy cái đồng hồ nhỏ đều chỉ ba giờ mười bảy? Đùa à?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cả mấy cái đồng hồ nhỏ đều chỉ ba giờ mười bảy? Đùa à?"
+  },
+  {
+   "k": "Mấy cái hỏng cùng một giờ à? Hay có ai chỉnh lại?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Mấy cái hỏng cùng một giờ à? Hay có ai chỉnh lại?"
+  },
+  {
+   "k": "Mùi nhang vẫn còn. Nhưng lọ hoa khô quắt từ đời nào rồi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Mùi nhang vẫn còn. Nhưng lọ hoa khô quắt từ đời nào rồi."
+  },
+  {
+   "k": "Hồi trước em hay núp sau cái tủ kia.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Hồi trước em hay núp sau cái tủ kia."
+  },
+  {
+   "k": "Ơ... vừa có tiếng trẻ con nói phải không?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ơ... vừa có tiếng trẻ con nói phải không?"
+  },
+  {
+   "k": "Tớ cũng nghe. Từ phía cái tủ thì phải.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ cũng nghe. Từ phía cái tủ thì phải."
+  },
+  {
+   "k": "Ảnh em bé đặt thấp hơn mấy ảnh kia. Lạ nhỉ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ảnh em bé đặt thấp hơn mấy ảnh kia. Lạ nhỉ."
+  },
+  {
+   "k": "Em từng tập khấn ở đây. Cứ đến câu cuối là quên.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Em từng tập khấn ở đây. Cứ đến câu cuối là quên."
+  },
+  {
+   "k": "Lại cái giọng lúc nãy...",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Lại cái giọng lúc nãy..."
+  },
+  {
+   "k": "Có ai trong phòng không? Bọn anh không làm gì đâu.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Có ai trong phòng không? Bọn anh không làm gì đâu."
+  },
+  {
+   "k": "Anh nói bé thôi. Cha em không thích ồn đâu.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Anh nói bé thôi. Cha em không thích ồn đâu."
+  },
+  {
+   "k": "Bếp lạnh ngắt. Trên mâm còn một chiếc muôi đặt nghiêng, bên cạnh là mảnh giấy ghi số bát đũa.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bếp lạnh ngắt. Trên mâm còn một chiếc muôi đặt nghiêng, bên cạnh là mảnh giấy ghi số bát đũa."
+  },
+  {
+   "k": "Bát úp ngay ngắn thật. Người đứng bếp chắc cẩn thận lắm.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bát úp ngay ngắn thật. Người đứng bếp chắc cẩn thận lắm."
+  },
+  {
+   "k": "Cửa xuống hầm ngay sau chạn. Có vẻ bản lề được thay không lâu trước lúc nhà bỏ hoang.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cửa xuống hầm ngay sau chạn. Có vẻ bản lề được thay không lâu trước lúc nhà bỏ hoang."
+  },
+  {
+   "k": "Danh sách chỉ ghi phần cho người làm. Sao mâm lại có thêm một bát lễ?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Danh sách chỉ ghi phần cho người làm. Sao mâm lại có thêm một bát lễ?"
+  },
+  {
+   "k": "Đứng đây mà có người kêu dưới hầm thì phải nghe được chứ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Đứng đây mà có người kêu dưới hầm thì phải nghe được chứ."
+  },
+  {
+   "k": "Ủa, tớ nhớ lúc nãy cái muôi còn nằm trong ngăn chạn mà.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ủa, tớ nhớ lúc nãy cái muôi còn nằm trong ngăn chạn mà."
+  },
+  {
+   "k": "Cho tớ cầm cái muôi thử nhé. Không hiểu sao nhìn nó quen lắm.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cho tớ cầm cái muôi thử nhé. Không hiểu sao nhìn nó quen lắm."
+  },
+  {
+   "k": "Bậc thứ tư lún sâu, gỗ xước thành một vệt dài như từng bị kéo vật nặng qua.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bậc thứ tư lún sâu, gỗ xước thành một vệt dài như từng bị kéo vật nặng qua."
+  },
+  {
+   "k": "Bậc này lún quá. Vũ, cậu đặt chân thử xem có chắc không.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bậc này lún quá. Vũ, cậu đặt chân thử xem có chắc không."
+  },
+  {
+   "k": "Muốn thử thì Khôi thử trước đi. Tớ còn muốn sống.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Muốn thử thì Khôi thử trước đi. Tớ còn muốn sống."
+  },
+  {
+   "k": "Hai người tránh ra, để tớ soi chỗ gỗ nứt đã.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Hai người tránh ra, để tớ soi chỗ gỗ nứt đã."
+  },
+  {
+   "k": "Ảnh cuối cầu thang có Nhài đứng bên một người phụ nữ. Mặt người ấy khuất sau mép khung.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ảnh cuối cầu thang có Nhài đứng bên một người phụ nữ. Mặt người ấy khuất sau mép khung."
+  },
+  {
+   "k": "Nắng chiều xuyên qua hàng cửa chớp. Trên tường có một vệt phấn thấp ngang đầu gối người lớn.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nắng chiều xuyên qua hàng cửa chớp. Trên tường có một vệt phấn thấp ngang đầu gối người lớn."
+  },
+  {
+   "k": "Vết phấn thấp thế này chắc trẻ con quẹt tay vào.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Vết phấn thấp thế này chắc trẻ con quẹt tay vào."
+  },
+  {
+   "k": "Trái là phòng trẻ, phải là phòng làm việc. Có hai lối thôi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Trái là phòng trẻ, phải là phòng làm việc. Có hai lối thôi."
+  },
+  {
+   "k": "Thế tiếng chân trên trần là ai đi?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Thế tiếng chân trên trần là ai đi?"
+  },
+  {
+   "k": "Mái ngói có khi đang lún... nhưng sao nghe rõ như bước chân thế nhỉ?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Mái ngói có khi đang lún... nhưng sao nghe rõ như bước chân thế nhỉ?"
+  },
+  {
+   "k": "Có tiếng ai hát khe khẽ. Các cậu có nghe không?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Có tiếng ai hát khe khẽ. Các cậu có nghe không?"
+  },
+  {
+   "k": "Sách học vần, hộp nhạc... Phòng này vẫn giữ nguyên đồ của em.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Sách học vần, hộp nhạc... Phòng này vẫn giữ nguyên đồ của em."
+  },
+  {
+   "k": "Cái áo trên ghế được vá cẩn thận. Nhìn đường kim này.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cái áo trên ghế được vá cẩn thận. Nhìn đường kim này."
+  },
+  {
+   "k": "Sổ học này toàn lời phê của cô Quyên.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Sổ học này toàn lời phê của cô Quyên."
+  },
+  {
+   "k": "Chị ơi, búp bê của em. Chị cầm nhẹ thôi nhé.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Chị ơi, búp bê của em. Chị cầm nhẹ thôi nhé."
+  },
+  {
+   "k": "Ơ, em đang ở đâu thế?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ơ, em đang ở đâu thế?"
+  },
+  {
+   "k": "Em ngủ ở đây... mà nhiều khi mở mắt ra lại ở ngoài sân.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Em ngủ ở đây... mà nhiều khi mở mắt ra lại ở ngoài sân."
+  },
+  {
+   "k": "Tớ đứng ngoài cửa nhé. Có gì gọi tớ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ đứng ngoài cửa nhé. Có gì gọi tớ."
+  },
+  {
+   "k": "Khoan. Trong ảnh tớ vừa chụp, cái trâm lại cài trên tóc người phụ nữ kia.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Khoan. Trong ảnh tớ vừa chụp, cái trâm lại cài trên tóc người phụ nữ kia."
+  },
+  {
+   "k": "Cô Quyên hay chải tóc cho em. Cô cài trâm xong cứ hỏi có đau không.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cô Quyên hay chải tóc cho em. Cô cài trâm xong cứ hỏi có đau không."
+  },
+  {
+   "k": "Sổ ghi chép kỹ thật. Riêng trang ngày mười sáu tháng Ba thì bị xé.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Sổ ghi chép kỹ thật. Riêng trang ngày mười sáu tháng Ba thì bị xé."
+  },
+  {
+   "k": "Ngăn kéo dưới cùng có khóa. Chìa chắc ở đâu đây.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ngăn kéo dưới cùng có khóa. Chìa chắc ở đâu đây."
+  },
+  {
+   "k": "Có người muốn giấu mấy trang ấy cho bằng được.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Có người muốn giấu mấy trang ấy cho bằng được."
+  },
+  {
+   "k": "Mực của tờ này đậm hơn bản ở kho. Có thể bị viết thêm.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Mực của tờ này đậm hơn bản ở kho. Có thể bị viết thêm."
+  },
+  {
+   "k": "Giấy này xin vải, than, đèn... cả thanh chắn cửa nữa. Đâu phải đồ dùng bình thường.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Giấy này xin vải, than, đèn... cả thanh chắn cửa nữa. Đâu phải đồ dùng bình thường."
+  },
+  {
+   "k": "Mang than xuống một căn hầm kín để làm gì chứ?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Mang than xuống một căn hầm kín để làm gì chứ?"
+  },
+  {
+   "k": "Chữ ký ông Hưng đây rồi. Nhưng hàng dưới ai nhận đồ thì bị gạch mất.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Chữ ký ông Hưng đây rồi. Nhưng hàng dưới ai nhận đồ thì bị gạch mất."
+  },
+  {
+   "k": "Tớ từng thấy chữ ký này trong thư bà để lại. Đúng của ông Hưng.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ từng thấy chữ ký này trong thư bà để lại. Đúng của ông Hưng."
+  },
+  {
+   "k": "Đến đây tự nhiên lạnh hẳn. Hay tại dưới đất?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Đến đây tự nhiên lạnh hẳn. Hay tại dưới đất?"
+  },
+  {
+   "k": "Mùi tro nồng quá. Mới xuống mấy bậc đã thấy khé cổ rồi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Mùi tro nồng quá. Mới xuống mấy bậc đã thấy khé cổ rồi."
+  },
+  {
+   "k": "Cái chốt cửa bị bẻ một bên. Có ai từng cố mở ra.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cái chốt cửa bị bẻ một bên. Có ai từng cố mở ra."
+  },
+  {
+   "k": "Nếu những người đó xuống bằng lối này, sao lúc quay lên lại bị chặn?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nếu những người đó xuống bằng lối này, sao lúc quay lên lại bị chặn?"
+  },
+  {
+   "k": "Máy ảnh tớ vừa bắt nét vào bậc cuối. Nhưng ngoài đấy chẳng có ai.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Máy ảnh tớ vừa bắt nét vào bậc cuối. Nhưng ngoài đấy chẳng có ai."
+  },
+  {
+   "k": "Đèn pin tớ chớp liên tục. Pin mới thay đấy nhé!",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Đèn pin tớ chớp liên tục. Pin mới thay đấy nhé!"
+  },
+  {
+   "k": "Trên nền có những vệt xước chạy tới một cánh cửa gỗ bọc sắt. Không thấy lối nào khác để đi khỏi hầm.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Trên nền có những vệt xước chạy tới một cánh cửa gỗ bọc sắt. Không thấy lối nào khác để đi khỏi hầm."
+  },
+  {
+   "k": "Vết cạy nằm phía trong. Có người đã tìm cách bật cánh cửa này.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Vết cạy nằm phía trong. Có người đã tìm cách bật cánh cửa này."
+  },
+  {
+   "k": "Nhưng cái then lại cài từ ngoài. Chơi ác thế.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nhưng cái then lại cài từ ngoài. Chơi ác thế."
+  },
+  {
+   "k": "Ô thông gió bị trám kín rồi. Thảo nào ở đây ngột ngạt.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ô thông gió bị trám kín rồi. Thảo nào ở đây ngột ngạt."
+  },
+  {
+   "k": "Vữa này có vẻ mới hơn phần tường xung quanh.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Vữa này có vẻ mới hơn phần tường xung quanh."
+  },
+  {
+   "k": "Vết này giống bị cạy bằng vật cứng hơn là móng tay. Tớ chụp lại.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Vết này giống bị cạy bằng vật cứng hơn là móng tay. Tớ chụp lại."
+  },
+  {
+   "k": "Dưới lớp bụi mỏng là những vòng phấn đã nhòe. Một chiếc dép vải nằm nghiêng sát chân cửa.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Dưới lớp bụi mỏng là những vòng phấn đã nhòe. Một chiếc dép vải nằm nghiêng sát chân cửa."
+  },
+  {
+   "k": "Những vòng trên sàn và hình trong giấy vẽ không giống nhau. Sao thế?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Những vòng trên sàn và hình trong giấy vẽ không giống nhau. Sao thế?"
+  },
+  {
+   "k": "Vòng thứ sáu nằm ngoài sân giếng. Ai đó vẽ bổ sung sau này.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Vòng thứ sáu nằm ngoài sân giếng. Ai đó vẽ bổ sung sau này."
+  }
+ ]
+}

@@ -1,0 +1,571 @@
+{
+ "batch": 14,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Ông Tùng nhớ lại lúc chị Quế giao cho mình mảnh giấy trước khi cậu chạy đi gọi người lớn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ông Tùng nhớ lại lúc chị Quế giao cho mình mảnh giấy trước khi cậu chạy đi gọi người lớn."
+  },
+  {
+   "k": "Xem ký ức",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xem ký ức"
+  },
+  {
+   "k": "Để xem sau",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Để xem sau"
+  },
+  {
+   "k": "HỒI ỨC",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "HỒI ỨC"
+  },
+  {
+   "k": "Năm 1986. Bên con đường rừng, Quế đặt mảnh giấy đã gấp vào tay em trai.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Năm 1986. Bên con đường rừng, Quế đặt mảnh giấy đã gấp vào tay em trai."
+  },
+  {
+   "k": "Tùng, em cầm lấy. Chạy lên xã, nhờ người lớn tới nền tế.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tùng, em cầm lấy. Chạy lên xã, nhờ người lớn tới nền tế."
+  },
+  {
+   "k": "Tùng",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tùng"
+  },
+  {
+   "k": "Còn chị thì sao?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Còn chị thì sao?"
+  },
+  {
+   "k": "Chị sẽ tìm cách giữ họ lại. Đi đi, đừng quay lại một mình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chị sẽ tìm cách giữ họ lại. Đi đi, đừng quay lại một mình."
+  },
+  {
+   "k": "Tùng ôm mảnh giấy, chạy qua con đường đất. Tiếng gọi của chị vẫn ở lại phía sau.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tùng ôm mảnh giấy, chạy qua con đường đất. Tiếng gọi của chị vẫn ở lại phía sau."
+  },
+  {
+   "k": "Ký ức · Quế và Tùng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ký ức · Quế và Tùng"
+  },
+  {
+   "k": "Ông Tùng nhớ lại lần chị Quế giao giấy tờ cho mình và nhờ đi gọi người lớn năm 1986.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ông Tùng nhớ lại lần chị Quế giao giấy tờ cho mình và nhờ đi gọi người lớn năm 1986."
+  },
+  {
+   "k": "Cháu giữ lấy. Chị tôi mà biết có người cầm khăn đi tìm sự thật, chị mừng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cháu giữ lấy. Chị tôi mà biết có người cầm khăn đi tìm sự thật, chị mừng."
+  },
+  {
+   "k": "Khăn chàm với túi lá thuốc là đồ đi rừng của chị. Cháu cầm theo đi, biết đâu có lúc cần.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khăn chàm với túi lá thuốc là đồ đi rừng của chị. Cháu cầm theo đi, biết đâu có lúc cần."
+  },
+  {
+   "k": "Cháu xin giữ cẩn thận ạ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cháu xin giữ cẩn thận ạ."
+  },
+  {
+   "k": "Hết rồi, tôi đưa cháu hết rồi. Giờ cháu cứ lo cho xong chuyện.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hết rồi, tôi đưa cháu hết rồi. Giờ cháu cứ lo cho xong chuyện."
+  },
+  {
+   "k": "Ngồi uống ngụm nước đã, rồi tôi kể. Cái ngăn đó để lát.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngồi uống ngụm nước đã, rồi tôi kể. Cái ngăn đó để lát."
+  },
+  {
+   "k": "“Tùng à. Chị đối chiếu rồi, tờ thầy Chân đang đọc không phải tờ bà để lại. Giấy mới dán vào giấy cũ, mực khác, cái câu “nhận máu người” là họ thêm vào. Chị không sợ, chỉ sợ họ chặn em. Em cầm cái này chạy lên xã, bảo người ta ra nền tế ngay. Đừng quay lại tìm chị. Chị Quế.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "“Tùng à. Chị đối chiếu rồi, tờ thầy Chân đang đọc không phải tờ bà để lại. Giấy mới dán vào giấy cũ, mực khác, cái câu “nhận máu người” là họ thêm vào. Chị không sợ, chỉ sợ họ chặn em. Em cầm cái này chạy lên xã, bảo người ta ra nền tế ngay. Đừng quay lại tìm chị. Chị Quế.”"
+  },
+  {
+   "k": "Danh hiệu ở dòng đầu: Huyền Lâm Thánh Quân. Lời tạ: “Rừng nuôi người sống, người giữ rừng xanh.” Nét chữ đều, triện đỏ đã phai.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Danh hiệu ở dòng đầu: Huyền Lâm Thánh Quân. Lời tạ: “Rừng nuôi người sống, người giữ rừng xanh.” Nét chữ đều, triện đỏ đã phai."
+  },
+  {
+   "k": "Hai thứ này chị đưa tôi đêm ấy. Tôi giữ bốn mươi năm, chưa dám đưa ai.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hai thứ này chị đưa tôi đêm ấy. Tôi giữ bốn mươi năm, chưa dám đưa ai."
+  },
+  {
+   "k": "Một là bản chép lễ tạ rừng của bà ngoại chị. Một là lá thư chị viết vội, buộc bằng dải khăn chàm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một là bản chép lễ tạ rừng của bà ngoại chị. Một là lá thư chị viết vội, buộc bằng dải khăn chàm."
+  },
+  {
+   "k": "Cháu đọc thử được không bác?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cháu đọc thử được không bác?"
+  },
+  {
+   "k": "Đọc đi. Chữ chị tôi, tôi nhìn là nhận ra.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đọc đi. Chữ chị tôi, tôi nhìn là nhận ra."
+  },
+  {
+   "k": "Gấp thư lại",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Gấp thư lại"
+  },
+  {
+   "k": "Tờ của Chân chắc còn nằm đâu đó dưới hầm, chỗ họ làm lễ. Tìm được thì đem lại đây, mình trải ra so với tờ của bà ngoại chị.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tờ của Chân chắc còn nằm đâu đó dưới hầm, chỗ họ làm lễ. Tìm được thì đem lại đây, mình trải ra so với tờ của bà ngoại chị."
+  },
+  {
+   "k": "THƯ CŨ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "THƯ CŨ"
+  },
+  {
+   "k": "Tờ sớ giả mình đã lấy rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tờ sớ giả mình đã lấy rồi."
+  },
+  {
+   "k": "Giấy mới chắp vào giấy cũ, mực đậm hơn, một dòng viết lệch. Danh hiệu ở dòng đầu ghi “Huyền Lâm Tôn Thần”, không giống bài vị ở miếu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giấy mới chắp vào giấy cũ, mực đậm hơn, một dòng viết lệch. Danh hiệu ở dòng đầu ghi “Huyền Lâm Tôn Thần”, không giống bài vị ở miếu."
+  },
+  {
+   "k": "Trong xấp giấy lễ có một tờ sớ kẹp lẫn vào. Giấy mới chắp vào giấy cũ, mực đậm hơn hẳn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong xấp giấy lễ có một tờ sớ kẹp lẫn vào. Giấy mới chắp vào giấy cũ, mực đậm hơn hẳn."
+  },
+  {
+   "k": "Dòng đầu ghi “Huyền Lâm Tôn Thần”. Khoan, tớ nhớ bài vị ở miếu không có chữ “Tôn”.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dòng đầu ghi “Huyền Lâm Tôn Thần”. Khoan, tớ nhớ bài vị ở miếu không có chữ “Tôn”."
+  },
+  {
+   "k": "Cứ giữ lại. Chắc sẽ cần.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cứ giữ lại. Chắc sẽ cần."
+  },
+  {
+   "k": "Hai tờ giấy đã nói hết rồi. Chị tôi không nói dối.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hai tờ giấy đã nói hết rồi. Chị tôi không nói dối."
+  },
+  {
+   "k": "Cháu cứ nghe tôi kể đã. Tôi có thứ muốn đưa cháu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cháu cứ nghe tôi kể đã. Tôi có thứ muốn đưa cháu."
+  },
+  {
+   "k": "Tờ của bà ngoại chị tôi có đây rồi. Muốn so thì phải có tờ của Chân, chắc nó nằm dưới hầm, chỗ làm lễ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tờ của bà ngoại chị tôi có đây rồi. Muốn so thì phải có tờ của Chân, chắc nó nằm dưới hầm, chỗ làm lễ."
+  },
+  {
+   "k": "Đối chiếu hai bản sớ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đối chiếu hai bản sớ"
+  },
+  {
+   "k": "Bản gốc ghi “Huyền Lâm Thánh Quân”. Bản của Chân ghi “Huyền Lâm Tôn Thần”. Bài vị ở miếu cây đa đề tên nào?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bản gốc ghi “Huyền Lâm Thánh Quân”. Bản của Chân ghi “Huyền Lâm Tôn Thần”. Bài vị ở miếu cây đa đề tên nào?"
+  },
+  {
+   "k": "Huyền Lâm Thánh Quân",
+   "files": [
+    "game.js",
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Huyền Lâm Thánh Quân"
+  },
+  {
+   "k": "Bản của Chân có một đoạn giấy mới chắp vào, mực đậm hơn. Đoạn đó viết gì?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bản của Chân có một đoạn giấy mới chắp vào, mực đậm hơn. Đoạn đó viết gì?"
+  },
+  {
+   "k": "“Rừng nuôi người sống, người giữ rừng xanh.”",
+   "files": [
+    "game.js",
+    "assets/research/books-data.js"
+   ],
+   "ctx": "“Rừng nuôi người sống, người giữ rừng xanh.”"
+  },
+  {
+   "k": "Câu đó có trong cả hai bản, nét chữ cũng đều. Nhìn lại chỗ giấy chắp xem.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Câu đó có trong cả hai bản, nét chữ cũng đều. Nhìn lại chỗ giấy chắp xem."
+  },
+  {
+   "k": "“Rừng nhận máu người, người nhận phúc rừng.”",
+   "files": [
+    "game.js",
+    "assets/research/books-data.js"
+   ],
+   "ctx": "“Rừng nhận máu người, người nhận phúc rừng.”"
+  },
+  {
+   "k": "SO CHỮ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "SO CHỮ"
+  },
+  {
+   "k": "Huyền Lâm Tôn Thần",
+   "files": [
+    "game.js",
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Huyền Lâm Tôn Thần"
+  },
+  {
+   "k": "Nhớ lại đi. Tôi với chị hay quét miếu, bài vị không có chữ “Tôn”.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhớ lại đi. Tôi với chị hay quét miếu, bài vị không có chữ “Tôn”."
+  },
+  {
+   "k": "Sớ giả và sớ gốc",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sớ giả và sớ gốc"
+  },
+  {
+   "k": "Danh hiệu bị đổi từ Thánh Quân thành Tôn Thần, giấy mới chắp vào giấy cũ, mực và nét chữ khác, câu “Rừng nhận máu người” là bị thêm vào. Đây là bằng chứng Chân cố ý sửa sớ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Danh hiệu bị đổi từ Thánh Quân thành Tôn Thần, giấy mới chắp vào giấy cũ, mực và nét chữ khác, câu “Rừng nhận máu người” là bị thêm vào. Đây là bằng chứng Chân cố ý sửa sớ."
+  },
+  {
+   "k": "Đó. Chữ lệch, mực khác, tên thần cũng bị đổi. Chân không hiểu sai đâu, ông ta cố ý sửa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đó. Chữ lệch, mực khác, tên thần cũng bị đổi. Chân không hiểu sai đâu, ông ta cố ý sửa."
+  },
+  {
+   "k": "Vậy là Đức Ngài không đòi máu ai hết.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vậy là Đức Ngài không đòi máu ai hết."
+  },
+  {
+   "k": "Giờ mình có thứ để nói với cả làng rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giờ mình có thứ để nói với cả làng rồi."
+  },
+  {
+   "k": "Còn vật dưới giếng thì tôi chỉ nghe người ta đồn. Các cháu đừng vội động vào khi chưa hiểu rõ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Còn vật dưới giếng thì tôi chỉ nghe người ta đồn. Các cháu đừng vội động vào khi chưa hiểu rõ."
+  },
+  {
+   "k": "Dạ. Tụi cháu sẽ làm cho trọn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dạ. Tụi cháu sẽ làm cho trọn."
+  },
+  {
+   "k": "Tớ muốn xem dải vải đỏ và ghé nhà bà ngoại trước.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ muốn xem dải vải đỏ và ghé nhà bà ngoại trước."
+  },
+  {
+   "k": "Rời rừng, trở về làng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Rời rừng, trở về làng"
+  },
+  {
+   "k": "Đem hồ sơ và tên người đã khuất về cho gia đình",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đem hồ sơ và tên người đã khuất về cho gia đình"
+  },
+  {
+   "k": "Mình đã có những giấy tờ về đêm ấy. Những việc chưa hiểu vẫn cần được tìm tiếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình đã có những giấy tờ về đêm ấy. Những việc chưa hiểu vẫn cần được tìm tiếp."
+  },
+  {
+   "k": "Chúng ta cùng quyết định. Không ai phải đi một mình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chúng ta cùng quyết định. Không ai phải đi một mình."
+  },
+  {
+   "k": "Bàn thờ giữa rừng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bàn thờ giữa rừng"
+  },
+  {
+   "k": "Có thể mang sự thật đã tìm được về làng, hoặc tiếp tục lần theo những dấu vết còn lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Có thể mang sự thật đã tìm được về làng, hoặc tiếp tục lần theo những dấu vết còn lại."
+  },
+  {
+   "k": "Bờ đập cũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bờ đập cũ"
+  },
+  {
+   "k": "Trong bùn có lược gỗ gãy và dấu một bờ đập đất cũ. Hình ảnh một người phụ nữ bị nước cuốn chỉ là ký ức rời rạc; chưa thể xác định danh tính hay nơi an táng chỉ bằng bóng ảnh.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong bùn có lược gỗ gãy và dấu một bờ đập đất cũ. Hình ảnh một người phụ nữ bị nước cuốn chỉ là ký ức rời rạc; chưa thể xác định danh tính hay nơi an táng chỉ bằng bóng ảnh."
+  },
+  {
+   "k": "Nước bị chặn ở thượng nguồn. Một người phụ nữ ôm đứa trẻ, gọi: “Con ơi, nhìn mẹ đây!”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nước bị chặn ở thượng nguồn. Một người phụ nữ ôm đứa trẻ, gọi: “Con ơi, nhìn mẹ đây!”"
+  },
+  {
+   "k": "Gốc đa bên suối",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Gốc đa bên suối"
+  },
+  {
+   "k": "Gần gốc đa có gò đất không tên và chiếc khăn cũ thêu vụng “Chị Mai”. Không thể kết luận có hài cốt hoặc xác định danh tính chỉ từ ngôi mộ và bóng ảnh.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Gần gốc đa có gò đất không tên và chiếc khăn cũ thêu vụng “Chị Mai”. Không thể kết luận có hài cốt hoặc xác định danh tính chỉ từ ngôi mộ và bóng ảnh."
+  },
+  {
+   "k": "Có tiếng đứa trẻ gọi chị. Trong đất là chiếc khăn còn dòng thêu “Chị Mai”.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Có tiếng đứa trẻ gọi chị. Trong đất là chiếc khăn còn dòng thêu “Chị Mai”."
+  },
+  {
+   "k": "Bóng trong mặt nước",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bóng trong mặt nước"
+  },
+  {
+   "k": "Mặt nước thoáng hiện một bóng thiếu nữ, một người lớn và một đứa trẻ. Bức ảnh không tự chứng minh họ là ai hay họ đã chết thế nào.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mặt nước thoáng hiện một bóng thiếu nữ, một người lớn và một đứa trẻ. Bức ảnh không tự chứng minh họ là ai hay họ đã chết thế nào."
+  },
+  {
+   "k": "Mặt nước lăn tăn. Bên bóng thiếu nữ thấp thoáng bóng một người lớn và một đứa trẻ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mặt nước lăn tăn. Bên bóng thiếu nữ thấp thoáng bóng một người lớn và một đứa trẻ."
+  },
+  {
+   "k": "Khe đá ở nền tế",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khe đá ở nền tế"
+  },
+  {
+   "k": "Mảnh áo trắng mắc trong khe có nét khâu “Mai”. Một bản ghi cũ của Huyền Tĩnh nói Bách trả tiền để ông dùng ấn giam Mai sau khi cô chết; ký ức cô vỡ vụn. Ghi chú về sau ký Lục Táng nhận đã giữ lại tài liệu. Phần kể về Bách và thầy Cao cần đối chiếu với ký ức cùng chứng cứ khác.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh áo trắng mắc trong khe có nét khâu “Mai”. Một bản ghi cũ của Huyền Tĩnh nói Bách trả tiền để ông dùng ấn giam Mai sau khi cô chết; ký ức cô vỡ vụn. Ghi chú về sau ký Lục Táng nhận đã giữ lại tài liệu. Phần kể về Bách và thầy Cao cần đối chiếu với ký ức cùng chứng cứ khác."
+  },
+  {
+   "k": "Một cô gái bị ép nhận tội, rồi bị đẩy vào khe đá. Tiếng cô gọi mẹ và em trai lịm đi. Cạnh đó là bản ghi về chiếc ấn và một chữ ký Lục Táng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một cô gái bị ép nhận tội, rồi bị đẩy vào khe đá. Tiếng cô gọi mẹ và em trai lịm đi. Cạnh đó là bản ghi về chiếc ấn và một chữ ký Lục Táng."
+  },
+  {
+   "k": "Mình đã ghi lại dấu vết này. Có thể đối chiếu ở nền đá cũ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình đã ghi lại dấu vết này. Có thể đối chiếu ở nền đá cũ."
+  },
+  {
+   "k": "Mình sẽ ghi lại cả điều nhìn thấy lẫn điều chưa biết.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình sẽ ghi lại cả điều nhìn thấy lẫn điều chưa biết."
+  },
+  {
+   "k": "Theo gia phả, người mẹ dùng chiếc lược gỗ gãy tên gì?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Theo gia phả, người mẹ dùng chiếc lược gỗ gãy tên gì?"
+  },
+  {
+   "k": "Lành",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lành"
+  },
+  {
+   "k": "Phúc",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phúc"
+  },
+  {
+   "k": "Theo gia phả, ai đã thêu “Chị Mai” lên khăn?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Theo gia phả, ai đã thêu “Chị Mai” lên khăn?"
+  },
+  {
+   "k": "Mảnh áo ở khe đá có tên ai?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh áo ở khe đá có tên ai?"
+  },
+  {
+   "k": "Ba di vật được đối chiếu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ba di vật được đối chiếu"
+  },
+  {
+   "k": "Lược của Lành, khăn của Phúc, mảnh áo của Mai. Những dấu chữ khớp với ký ức tại từng địa điểm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lược của Lành, khăn của Phúc, mảnh áo của Mai. Những dấu chữ khớp với ký ức tại từng địa điểm."
+  },
+  {
+   "k": "Các tên khớp với vật và những ký ức. Bản ghi của Huyền Tĩnh nói ông nhận tiền của Bách để giam Mai; mình cần đối chiếu thêm chữ ký Lục Táng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Các tên khớp với vật và những ký ức. Bản ghi của Huyền Tĩnh nói ông nhận tiền của Bách để giam Mai; mình cần đối chiếu thêm chữ ký Lục Táng."
+  }
+ ]
+}

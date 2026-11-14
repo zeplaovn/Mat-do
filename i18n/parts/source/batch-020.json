@@ -1,0 +1,566 @@
+{
+ "batch": 20,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Bàn thờ nhỏ có ảnh một cô gái đội khăn, cạnh khăn chàm và túi lá thuốc.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bàn thờ nhỏ có ảnh một cô gái đội khăn, cạnh khăn chàm và túi lá thuốc."
+  },
+  {
+   "k": "Căn nhà gọn gàng, sạch sẽ, thơm mùi nhang và lá thuốc.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Căn nhà gọn gàng, sạch sẽ, thơm mùi nhang và lá thuốc."
+  },
+  {
+   "k": "Ảnh thờ trên tủ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ảnh thờ trên tủ"
+  },
+  {
+   "k": "Ngăn tủ thờ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngăn tủ thờ"
+  },
+  {
+   "k": "Bàn trà, chỗ trải giấy ra xem",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bàn trà, chỗ trải giấy ra xem"
+  },
+  {
+   "k": "Ra hiên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ra hiên"
+  },
+  {
+   "k": "Nhà bà ngoại Vy",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhà bà ngoại Vy"
+  },
+  {
+   "k": "ĐỒNG CHAY · 06:30",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐỒNG CHAY · 06:30"
+  },
+  {
+   "k": "Nắng sớm lên mái ngói. Trên bàn thờ nhỏ có một bức ảnh thờ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nắng sớm lên mái ngói. Trên bàn thờ nhỏ có một bức ảnh thờ."
+  },
+  {
+   "k": "Ngôi nhà nhỏ nơi bà ngoại Vy từng sống.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngôi nhà nhỏ nơi bà ngoại Vy từng sống."
+  },
+  {
+   "k": "Ảnh thờ trên bàn thờ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ảnh thờ trên bàn thờ"
+  },
+  {
+   "k": "Chiếc ghế mây",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc ghế mây"
+  },
+  {
+   "k": "Ấm trà trên bàn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ấm trà trên bàn"
+  },
+  {
+   "k": "Chiếc nong treo tường",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc nong treo tường"
+  },
+  {
+   "k": "Ngăn kéo tủ thờ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngăn kéo tủ thờ"
+  },
+  {
+   "k": "Cửa ra rừng thiêng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa ra rừng thiêng"
+  },
+  {
+   "k": "Miệng giếng bị trám kín",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Miệng giếng bị trám kín"
+  },
+  {
+   "k": "SÂN GIẾNG · 04:10",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "SÂN GIẾNG · 04:10"
+  },
+  {
+   "k": "Vòng hoa nhài khô nằm trên nắp xi măng nứt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vòng hoa nhài khô nằm trên nắp xi măng nứt."
+  },
+  {
+   "k": "Ai đó đã xây bịt miệng giếng gần bốn mươi năm trước, và vẫn có người đặt hoa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ai đó đã xây bịt miệng giếng gần bốn mươi năm trước, và vẫn có người đặt hoa."
+  },
+  {
+   "k": "Vòng hoa nhài trên nắp giếng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vòng hoa nhài trên nắp giếng"
+  },
+  {
+   "k": "Quay ra sân",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quay ra sân"
+  },
+  {
+   "k": "Gác nhỏ của cô Quyên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Gác nhỏ của cô Quyên"
+  },
+  {
+   "k": "GÁC NHỎ · 04:00",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "GÁC NHỎ · 04:00"
+  },
+  {
+   "k": "Hạc giấy khẽ xoay trên xà. Trên bàn, một cuốn sổ nằm mở.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hạc giấy khẽ xoay trên xà. Trên bàn, một cuốn sổ nằm mở."
+  },
+  {
+   "k": "Căn gác sau bếp, nơi cô Quyên ngủ mỗi đêm trước khi bị nhốt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Căn gác sau bếp, nơi cô Quyên ngủ mỗi đêm trước khi bị nhốt."
+  },
+  {
+   "k": "Cuốn nhật ký trên bàn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cuốn nhật ký trên bàn"
+  },
+  {
+   "k": "Con búp bê vải",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con búp bê vải"
+  },
+  {
+   "k": "Mảnh ảnh giấu dưới gối",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh ảnh giấu dưới gối"
+  },
+  {
+   "k": "Chiếc lược gỗ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc lược gỗ"
+  },
+  {
+   "k": "Hạc giấy treo trên xà",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hạc giấy treo trên xà"
+  },
+  {
+   "k": "Cửa sổ nhìn xuống sân",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa sổ nhìn xuống sân"
+  },
+  {
+   "k": "ĐÊM TRẠI",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐÊM TRẠI"
+  },
+  {
+   "k": "HIÊN NHÀ · 03:45",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "HIÊN NHÀ · 03:45"
+  },
+  {
+   "k": "Ngọn lửa nhỏ đủ sưởi ấm cả nhóm, và đủ để họ nói chuyện.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngọn lửa nhỏ đủ sưởi ấm cả nhóm, và đủ để họ nói chuyện."
+  },
+  {
+   "k": "Những túi ngủ quanh đống lửa trước hiên biệt thự.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những túi ngủ quanh đống lửa trước hiên biệt thự."
+  },
+  {
+   "k": "Đống lửa trại",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đống lửa trại"
+  },
+  {
+   "k": "Ấm nước đun trên lửa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ấm nước đun trên lửa"
+  },
+  {
+   "k": "Túi ngủ của cả nhóm",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Túi ngủ của cả nhóm"
+  },
+  {
+   "k": "Đèn pin để dưới đất",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đèn pin để dưới đất"
+  },
+  {
+   "k": "Xuống bậc hiên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xuống bậc hiên"
+  },
+  {
+   "k": "Sân ngoài chùa làng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sân ngoài chùa làng"
+  },
+  {
+   "k": "SÂN CHÙA · 08:30",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "SÂN CHÙA · 08:30"
+  },
+  {
+   "k": "Sân gạch dưới tán cây đại. Một bàn gỗ nhỏ, ba đồng xu trên đĩa sứ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sân gạch dưới tán cây đại. Một bàn gỗ nhỏ, ba đồng xu trên đĩa sứ."
+  },
+  {
+   "k": "Sân chùa yên quá. Ông cụ ngồi bên bàn xem quẻ kia có vẻ biết trước bọn mình sẽ đến.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sân chùa yên quá. Ông cụ ngồi bên bàn xem quẻ kia có vẻ biết trước bọn mình sẽ đến."
+  },
+  {
+   "k": "Hoa đại rụng trắng trên gạch. Ở sâu trong chùa có hai ngọn đèn lồng sáng giữa ban ngày.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hoa đại rụng trắng trên gạch. Ở sâu trong chùa có hai ngọn đèn lồng sáng giữa ban ngày."
+  },
+  {
+   "k": "Thầy Nguyên và bàn xem quẻ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thầy Nguyên và bàn xem quẻ"
+  },
+  {
+   "k": "Chùa làng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chùa làng"
+  },
+  {
+   "k": "Cây đại nở hoa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cây đại nở hoa"
+  },
+  {
+   "k": "Về cổng làng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Về cổng làng"
+  },
+  {
+   "k": "Bàn lễ trước miếu cây đa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bàn lễ trước miếu cây đa"
+  },
+  {
+   "k": "BÀN LỄ · 20:30",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "BÀN LỄ · 20:30"
+  },
+  {
+   "k": "Mâm lễ đặt trên mặt bàn gỗ mục. Hai ngọn đèn đang cháy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mâm lễ đặt trên mặt bàn gỗ mục. Hai ngọn đèn đang cháy."
+  },
+  {
+   "k": "Mâm lễ bày trước miếu. Trông như vừa có người sắp đặt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mâm lễ bày trước miếu. Trông như vừa có người sắp đặt."
+  },
+  {
+   "k": "Cơm, nước, hoa cúc trắng. Một chỗ đèn chưa thắp. Rễ đa ôm kín bức tường miếu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cơm, nước, hoa cúc trắng. Một chỗ đèn chưa thắp. Rễ đa ôm kín bức tường miếu."
+  },
+  {
+   "k": "Ngọn đèn chưa thắp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngọn đèn chưa thắp"
+  },
+  {
+   "k": "Hai ngọn đèn đang cháy",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hai ngọn đèn đang cháy"
+  },
+  {
+   "k": "Mâm lễ có bốn hõm gỗ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mâm lễ có bốn hõm gỗ"
+  },
+  {
+   "k": "Cuộn giấy và tấm vải đỏ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cuộn giấy và tấm vải đỏ"
+  },
+  {
+   "k": "Bài vị trong khám đá",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bài vị trong khám đá"
+  },
+  {
+   "k": "Lùi lại",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lùi lại"
+  },
+  {
+   "k": "Đồng Chay, chân núi Ba Vì. Sương sớm còn vương trên mái ngói. Nhóm sinh viên dừng chân trước cổng làng, ba lô nặng trĩu và đầu óc đầy những truyền thuyết cũ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đồng Chay, chân núi Ba Vì. Sương sớm còn vương trên mái ngói. Nhóm sinh viên dừng chân trước cổng làng, ba lô nặng trĩu và đầu óc đầy những truyền thuyết cũ."
+  },
+  {
+   "k": "Đủ cả rồi chứ? Hôm nay đi khảo sát, tối về nhà trọ. Đứa nào thấy mệt thì nói sớm, đừng cố.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đủ cả rồi chứ? Hôm nay đi khảo sát, tối về nhà trọ. Đứa nào thấy mệt thì nói sớm, đừng cố."
+  },
+  {
+   "k": "Mệt gì mà mệt, mới tám giờ sáng! Tớ mang cả đèn pin lẫn pin dự phòng đây này. Cứ để tớ đi đầu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mệt gì mà mệt, mới tám giờ sáng! Tớ mang cả đèn pin lẫn pin dự phòng đây này. Cứ để tớ đi đầu."
+  },
+  {
+   "k": "Đi đầu cái gì, hôm qua cậu còn sợ con chó nhà trọ cơ mà! ...Mà cái cổng làng này đẹp thật đấy. Đứng yên, để tớ chụp tấm này đã!",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đi đầu cái gì, hôm qua cậu còn sợ con chó nhà trọ cơ mà! ...Mà cái cổng làng này đẹp thật đấy. Đứng yên, để tớ chụp tấm này đã!"
+  },
+  {
+   "k": "Hai người đừng đùa nữa... Bà tớ quê ở vùng này. Bà dặn kỹ lắm: vào rừng thì đừng trả lời nếu có ai gọi tên mình. Tớ nói thật đấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hai người đừng đùa nữa... Bà tớ quê ở vùng này. Bà dặn kỹ lắm: vào rừng thì đừng trả lời nếu có ai gọi tên mình. Tớ nói thật đấy."
+  },
+  {
+   "k": "Tớ ghi lại hết. ...Nhưng cái tên “biệt thự Vân Hòa” nghe quen kinh khủng. Hôm qua tớ hỏi bà ngoại, bà chỉ lặng im rồi quay đi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ ghi lại hết. ...Nhưng cái tên “biệt thự Vân Hòa” nghe quen kinh khủng. Hôm qua tớ hỏi bà ngoại, bà chỉ lặng im rồi quay đi."
+  },
+  {
+   "k": "Thế thì càng phải tìm hiểu cho ra nhẽ. Nhưng đi từng bước một. Trước tiên, mình hỏi người làng đã.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thế thì càng phải tìm hiểu cho ra nhẽ. Nhưng đi từng bước một. Trước tiên, mình hỏi người làng đã."
+  },
+  {
+   "k": "Theo bản đồ thì đi qua ruộng, tới cây đa cạnh miếu là lối vào rừng. Nhưng mình nên hỏi lại cho chắc.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Theo bản đồ thì đi qua ruộng, tới cây đa cạnh miếu là lối vào rừng. Nhưng mình nên hỏi lại cho chắc."
+  },
+  {
+   "k": "Làng yên ắng ghê. Mà nhìn kìa, bọn trẻ chạy tung tăng, bà gánh rau cười tươi thế. Nhìn bình thường mà nhỉ?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Làng yên ắng ghê. Mà nhìn kìa, bọn trẻ chạy tung tăng, bà gánh rau cười tươi thế. Nhìn bình thường mà nhỉ?"
+  },
+  {
+   "k": "Ừ... Nhưng cậu để ý không? Hễ mình nhắc tới khu rừng là ai cũng lảng đi. Cứ như sợ nhắc tên thôi là nó nghe thấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ừ... Nhưng cậu để ý không? Hễ mình nhắc tới khu rừng là ai cũng lảng đi. Cứ như sợ nhắc tên thôi là nó nghe thấy."
+  },
+  {
+   "k": "Ông cụ ngồi ở hiên nhà kia nhìn bọn mình chằm chằm nãy giờ. Tớ vẫy tay mà ông không chào lại. Hơi rợn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ông cụ ngồi ở hiên nhà kia nhìn bọn mình chằm chằm nãy giờ. Tớ vẫy tay mà ông không chào lại. Hơi rợn."
+  },
+  {
+   "k": "Người già hay đề phòng người lạ thôi. Đi tiếp nào, trời còn sáng, mình còn nhiều việc.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Người già hay đề phòng người lạ thôi. Đi tiếp nào, trời còn sáng, mình còn nhiều việc."
+  },
+  {
+   "k": "Qua cây cầu gỗ kia là tới lối vào rừng thiêng rồi. Hồi nhỏ bà tớ cấm tiệt, không cho tớ ra tới đó.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Qua cây cầu gỗ kia là tới lối vào rừng thiêng rồi. Hồi nhỏ bà tớ cấm tiệt, không cho tớ ra tới đó."
+  },
+  {
+   "k": "Cấm vì lý do gì thế? Cậu chưa kể bao giờ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cấm vì lý do gì thế? Cậu chưa kể bao giờ."
+  },
+  {
+   "k": "Ngày xưa làng mang lễ vào rừng cầu mưa. Sau một năm đói kém, họ thôi không vào nữa. Bà chỉ nói đúng một câu: “Rừng nhớ những gì người ta muốn quên.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngày xưa làng mang lễ vào rừng cầu mưa. Sau một năm đói kém, họ thôi không vào nữa. Bà chỉ nói đúng một câu: “Rừng nhớ những gì người ta muốn quên.”"
+  },
+  {
+   "k": "Trời... nghe lạnh sống lưng. Cậu sờ thử đi, tớ nổi hết da gà rồi này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trời... nghe lạnh sống lưng. Cậu sờ thử đi, tớ nổi hết da gà rồi này."
+  },
+  {
+   "k": "Thôi nào, nhìn cánh đồng đẹp thế này cơ mà. Nắng, lúa, cả con trâu kia nữa. Tớ chụp mãi cũng không chán.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thôi nào, nhìn cánh đồng đẹp thế này cơ mà. Nắng, lúa, cả con trâu kia nữa. Tớ chụp mãi cũng không chán."
+  },
+  {
+   "k": "Cứ chụp, nhưng đi nhanh chân lên. Còn phải kịp tới miếu trước khi trời tối.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cứ chụp, nhưng đi nhanh chân lên. Còn phải kịp tới miếu trước khi trời tối."
+  },
+  {
+   "k": "Mải đi, mải chụp, mải hỏi han... Lúc ngoảnh lại thì nắng đã ngả, mặt mương đỏ như pha máu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mải đi, mải chụp, mải hỏi han... Lúc ngoảnh lại thì nắng đã ngả, mặt mương đỏ như pha máu."
+  }
+ ]
+}

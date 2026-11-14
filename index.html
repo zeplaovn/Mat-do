@@ -31,9 +31,13 @@
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="books-type.css">
   <link rel="stylesheet" href="gloom.css">
+  <link rel="stylesheet" href="i18n/i18n.css">
   <link rel="preload" as="image" href="assets/logo.webp">
   <script src="guard.js"></script>
   <script src="perf.js"></script>
+  <script src="i18n/en.js" defer></script>
+  <script src="i18n/zh.js" defer></script>
+  <script src="i18n/i18n.js" defer></script>
   <script src="assets/research/books-data.js" defer></script>
   <script src="assets/dialogue/reviewed.js" defer></script>
   <script src="ending-cinematic.js" defer></script>
@@ -151,6 +155,11 @@
       <p id="legacy-save-notice" class="legacy-save-notice" hidden>Cốt truyện mới bắt đầu một hành trình riêng; bản lưu trước vẫn được giữ trên thiết bị.</p>
     </div>
     <div class="title-bottom">
+      <div class="lang-switch" role="group" aria-label="Ngôn ngữ" data-i18n-skip>
+        <button type="button" data-lang-set="vi" aria-pressed="true">VI</button>
+        <button type="button" data-lang-set="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang-set="zh" aria-pressed="false">中文</button>
+      </div>
       <p class="title-footer">KHÁM PHÁ <span>·</span> GIẢI ĐỐ <span>·</span> TÌM LỐI THOÁT</p>
     </div>
   </div>
@@ -165,6 +174,11 @@
       <p>Nếu bạn nhạy cảm với những nội dung này, hãy cân nhắc trước khi tiếp tục. Người dưới 18 tuổi nên chơi cùng người lớn.</p>
     </div>
     <button id="notice-confirm" class="notice-confirm" type="button">Xác nhận</button>
+    <div class="lang-switch lang-switch--notice" role="group" aria-label="Ngôn ngữ" data-i18n-skip>
+      <button type="button" data-lang-set="vi" aria-pressed="true">VI</button>
+      <button type="button" data-lang-set="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang-set="zh" aria-pressed="false">中文</button>
+    </div>
   </div>
 </section>
 

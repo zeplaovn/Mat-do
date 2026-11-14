@@ -1,0 +1,568 @@
+{
+ "batch": 19,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Ra khỏi miếu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ra khỏi miếu"
+  },
+  {
+   "k": "Kho đồ lễ dưới hầm",
+   "files": [
+    "game.js",
+    "trailer.js"
+   ],
+   "ctx": "Kho đồ lễ dưới hầm"
+  },
+  {
+   "k": "KHO ĐỒ LỄ · 04:45",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "KHO ĐỒ LỄ · 04:45"
+  },
+  {
+   "k": "Những vị trí vẽ phấn và bát lễ. Cánh cửa gỗ hắt ra một vệt sáng đỏ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những vị trí vẽ phấn và bát lễ. Cánh cửa gỗ hắt ra một vệt sáng đỏ."
+  },
+  {
+   "k": "Nước nhỏ giọt từ trần. Trên tường là những vạch phấn trắng, xếp thành từng nhóm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nước nhỏ giọt từ trần. Trên tường là những vạch phấn trắng, xếp thành từng nhóm."
+  },
+  {
+   "k": "Những vạch phấn trên tường",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những vạch phấn trên tường"
+  },
+  {
+   "k": "Vòng sắt buộc dây đỏ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vòng sắt buộc dây đỏ"
+  },
+  {
+   "k": "Những vị trí vẽ phấn và bát lễ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những vị trí vẽ phấn và bát lễ"
+  },
+  {
+   "k": "Chiếc vò nước nứt",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc vò nước nứt"
+  },
+  {
+   "k": "Cánh cửa lên kho vật tư",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cánh cửa lên kho vật tư"
+  },
+  {
+   "k": "Xấp giấy lễ trên bàn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xấp giấy lễ trên bàn"
+  },
+  {
+   "k": "Bếp biệt thự, năm 1988",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bếp biệt thự, năm 1988"
+  },
+  {
+   "k": "ĐÊM 17/3/1988 · NHÀI",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐÊM 17/3/1988 · NHÀI"
+  },
+  {
+   "k": "BẾP · 1988",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "BẾP · 1988"
+  },
+  {
+   "k": "Than hồng còn đỏ. Một chiếc bát nhỏ nằm riêng trên mâm tre.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Than hồng còn đỏ. Một chiếc bát nhỏ nằm riêng trên mâm tre."
+  },
+  {
+   "k": "Bếp nhà ông Hưng còn nguyên vẹn, ấm mùi khói rạ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bếp nhà ông Hưng còn nguyên vẹn, ấm mùi khói rạ."
+  },
+  {
+   "k": "Chiếc bát nhỏ để riêng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc bát nhỏ để riêng"
+  },
+  {
+   "k": "Rổ tre đựng gạo",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Rổ tre đựng gạo"
+  },
+  {
+   "k": "Ngọn đèn dầu trên bàn bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngọn đèn dầu trên bàn bếp"
+  },
+  {
+   "k": "Cánh cửa sang hành lang",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cánh cửa sang hành lang"
+  },
+  {
+   "k": "Hành lang tầng hai, năm 1988",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hành lang tầng hai, năm 1988"
+  },
+  {
+   "k": "HÀNH LANG · 1988",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "HÀNH LANG · 1988"
+  },
+  {
+   "k": "Dưới khe cửa phòng cha có một vệt đèn dầu và tiếng hai người đàn ông nói chuyện.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dưới khe cửa phòng cha có một vệt đèn dầu và tiếng hai người đàn ông nói chuyện."
+  },
+  {
+   "k": "Sàn gỗ bóng, bình hoa mới cắm, đèn dầu chưa tắt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sàn gỗ bóng, bình hoa mới cắm, đèn dầu chưa tắt."
+  },
+  {
+   "k": "Chỗ nghe lén cạnh cánh cửa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chỗ nghe lén cạnh cánh cửa"
+  },
+  {
+   "k": "Cánh cửa phòng cha",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cánh cửa phòng cha"
+  },
+  {
+   "k": "Ngọn đèn dầu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngọn đèn dầu"
+  },
+  {
+   "k": "Xuống bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xuống bếp"
+  },
+  {
+   "k": "Xuống cầu thang bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xuống cầu thang bếp"
+  },
+  {
+   "k": "Cửa hầm sau bếp, năm 1988",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa hầm sau bếp, năm 1988"
+  },
+  {
+   "k": "CỬA HẦM · 1988",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CỬA HẦM · 1988"
+  },
+  {
+   "k": "Tiếng đập cửa và tiếng người gọi vọng lên từ bên dưới. Then gỗ cài từ phía ngoài.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếng đập cửa và tiếng người gọi vọng lên từ bên dưới. Then gỗ cài từ phía ngoài."
+  },
+  {
+   "k": "Hơi nóng và mùi khói đồ lễ lọt qua khe cửa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hơi nóng và mùi khói đồ lễ lọt qua khe cửa."
+  },
+  {
+   "k": "Tiếng gọi sau cánh cửa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếng gọi sau cánh cửa"
+  },
+  {
+   "k": "Then cửa gỗ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Then cửa gỗ"
+  },
+  {
+   "k": "Ngọn đèn bão",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngọn đèn bão"
+  },
+  {
+   "k": "Cha kéo Nhài ra ngoài",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cha kéo Nhài ra ngoài"
+  },
+  {
+   "k": "Hành lang bếp, cửa hầm vẫn đóng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hành lang bếp, cửa hầm vẫn đóng"
+  },
+  {
+   "k": "HÀNH LANG BẾP · 1988",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "HÀNH LANG BẾP · 1988"
+  },
+  {
+   "k": "Tiếng đập cửa nhỏ dần phía sau. Ngoài sân có ánh đèn của bàn tế.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếng đập cửa nhỏ dần phía sau. Ngoài sân có ánh đèn của bàn tế."
+  },
+  {
+   "k": "Nhài ngồi bệt xuống sàn nơi cha vừa gạt em ra.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhài ngồi bệt xuống sàn nơi cha vừa gạt em ra."
+  },
+  {
+   "k": "Tiếng gõ cửa yếu dần",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếng gõ cửa yếu dần"
+  },
+  {
+   "k": "Chạy ra sân giếng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chạy ra sân giếng"
+  },
+  {
+   "k": "Sân giếng, đêm mưa năm 1988",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sân giếng, đêm mưa năm 1988"
+  },
+  {
+   "k": "SÂN GIẾNG · 03:17",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "SÂN GIẾNG · 03:17"
+  },
+  {
+   "k": "Mưa xối xuống sân. Chiếc đèn bão nằm nghiêng bên miệng giếng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mưa xối xuống sân. Chiếc đèn bão nằm nghiêng bên miệng giếng."
+  },
+  {
+   "k": "Mưa tạt rát mặt. Trên miệng giếng, nắp gỗ đã xô lệch.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mưa tạt rát mặt. Trên miệng giếng, nắp gỗ đã xô lệch."
+  },
+  {
+   "k": "Thứ gì đó đặt trên thành giếng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thứ gì đó đặt trên thành giếng"
+  },
+  {
+   "k": "Bám tường chạy vòng bên trái",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bám tường chạy vòng bên trái"
+  },
+  {
+   "k": "Chạy thẳng ngang miệng giếng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chạy thẳng ngang miệng giếng"
+  },
+  {
+   "k": "Chiếc giày vải nhỏ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc giày vải nhỏ"
+  },
+  {
+   "k": "Đường làng trong mưa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đường làng trong mưa"
+  },
+  {
+   "k": "ĐƯỜNG LÀNG · 1988",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐƯỜNG LÀNG · 1988"
+  },
+  {
+   "k": "Một đốm sáng rất xa. Em chưa bao giờ tới được.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một đốm sáng rất xa. Em chưa bao giờ tới được."
+  },
+  {
+   "k": "Con đường bùn kéo dài giữa hai rặng tre.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con đường bùn kéo dài giữa hai rặng tre."
+  },
+  {
+   "k": "Đốm sáng xa xa",
+   "files": [
+    "game.js",
+    "ui-v3.js"
+   ],
+   "ctx": "Đốm sáng xa xa"
+  },
+  {
+   "k": "Cổng biệt thự phía sau",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cổng biệt thự phía sau"
+  },
+  {
+   "k": "Rừng thiêng buổi sớm",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Rừng thiêng buổi sớm"
+  },
+  {
+   "k": "CHƯƠNG 11 · RỪNG THIÊNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CHƯƠNG 11 · RỪNG THIÊNG"
+  },
+  {
+   "k": "RỪNG THIÊNG · 05:40",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "RỪNG THIÊNG · 05:40"
+  },
+  {
+   "k": "Sương loãng dần. Những dải vải đỏ khẽ lay trên cành.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sương loãng dần. Những dải vải đỏ khẽ lay trên cành."
+  },
+  {
+   "k": "Cây đa, cây gạo và một bàn thờ đá phủ rêu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cây đa, cây gạo và một bàn thờ đá phủ rêu."
+  },
+  {
+   "k": "Bàn thờ đá trong rừng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bàn thờ đá trong rừng"
+  },
+  {
+   "k": "Dải vải đỏ có thêu chữ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dải vải đỏ có thêu chữ"
+  },
+  {
+   "k": "Hoa gạo đỏ trên cành",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hoa gạo đỏ trên cành"
+  },
+  {
+   "k": "Lối về nhà bà ngoại Vy",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lối về nhà bà ngoại Vy"
+  },
+  {
+   "k": "Quay về cổng biệt thự",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quay về cổng biệt thự"
+  },
+  {
+   "k": "Đường mòn sang nhà ông Tùng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đường mòn sang nhà ông Tùng"
+  },
+  {
+   "k": "Nhà ông Tùng, xóm Đông",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhà ông Tùng, xóm Đông"
+  },
+  {
+   "k": "CHƯƠNG 12 · NGƯỜI EM TRAI",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CHƯƠNG 12 · NGƯỜI EM TRAI"
+  },
+  {
+   "k": "XÓM ĐÔNG · 07:10",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "XÓM ĐÔNG · 07:10"
+  },
+  {
+   "k": "Mái ngói rêu, giàn phơi lá thuốc và chiếc xe đạp cũ dựa tường.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mái ngói rêu, giàn phơi lá thuốc và chiếc xe đạp cũ dựa tường."
+  },
+  {
+   "k": "Căn nhà cuối xóm, cửa mở hé. Có mùi lá thuốc phơi nắng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Căn nhà cuối xóm, cửa mở hé. Có mùi lá thuốc phơi nắng."
+  },
+  {
+   "k": "Cánh cửa nhà ông Tùng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cánh cửa nhà ông Tùng"
+  },
+  {
+   "k": "Bàn trà ngoài hiên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bàn trà ngoài hiên"
+  },
+  {
+   "k": "Giàn phơi lá thuốc",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giàn phơi lá thuốc"
+  },
+  {
+   "k": "Chiếc xe đạp cũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc xe đạp cũ"
+  },
+  {
+   "k": "Đường mòn về rừng thiêng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đường mòn về rừng thiêng"
+  },
+  {
+   "k": "Trong nhà ông Tùng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong nhà ông Tùng"
+  },
+  {
+   "k": "NHÀ ÔNG TÙNG · 07:30",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "NHÀ ÔNG TÙNG · 07:30"
+  }
+ ]
+}

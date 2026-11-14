@@ -1,0 +1,566 @@
+{
+ "batch": 32,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Có bánh bán không chú?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Có bánh bán không chú?"
+  },
+  {
+   "k": "Có thì còn lâu mới đến lượt cháu. Tôi đi qua lần nào cũng hết sớm.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Có thì còn lâu mới đến lượt cháu. Tôi đi qua lần nào cũng hết sớm."
+  },
+  {
+   "k": "Chú cho bọn cháu xuống ngay cổng làng là được ạ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Chú cho bọn cháu xuống ngay cổng làng là được ạ."
+  },
+  {
+   "k": "Đồng Chay, một buổi sáng ẩm sau mưa. Nhóm bạn đến tìm hiểu những câu chuyện quanh khu rừng.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Đồng Chay, một buổi sáng ẩm sau mưa. Nhóm bạn đến tìm hiểu những câu chuyện quanh khu rừng."
+  },
+  {
+   "k": "Mình hỏi đường trước đã. Đừng tự ý đi sâu vào rừng nhé.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Mình hỏi đường trước đã. Đừng tự ý đi sâu vào rừng nhé."
+  },
+  {
+   "k": "Bà ngoại tớ từng sống ở đây. Trong đồ bà để lại có nhắc đến một ngôi nhà trên đồi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bà ngoại tớ từng sống ở đây. Trong đồ bà để lại có nhắc đến một ngôi nhà trên đồi."
+  },
+  {
+   "k": "Cậu chưa kể chuyện đó bao giờ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cậu chưa kể chuyện đó bao giờ."
+  },
+  {
+   "k": "Bà ơi, cho bọn cháu hỏi đường lên Vân Hòa với ạ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bà ơi, cho bọn cháu hỏi đường lên Vân Hòa với ạ."
+  },
+  {
+   "k": "Lên đâu?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Lên đâu?"
+  },
+  {
+   "k": "Vân Hòa ấy bà, cái biệt thự trên đồi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Vân Hòa ấy bà, cái biệt thự trên đồi."
+  },
+  {
+   "k": "Bà ngừng lau chén. Chén còn chưa khô.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bà ngừng lau chén. Chén còn chưa khô."
+  },
+  {
+   "k": "Ai bảo cháu chỗ ấy?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ai bảo cháu chỗ ấy?"
+  },
+  {
+   "k": "Dạ, báo cũ ạ. Bọn cháu làm đề—",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Dạ, báo cũ ạ. Bọn cháu làm đề—"
+  },
+  {
+   "k": "Uống nước không? Chè xanh, năm nghìn.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Uống nước không? Chè xanh, năm nghìn."
+  },
+  {
+   "k": "Dạ, bọn cháu chỉ hỏi đường thôi bà…",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Dạ, bọn cháu chỉ hỏi đường thôi bà…"
+  },
+  {
+   "k": "Bà bán nước chứ có bán đường đâu.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bà bán nước chứ có bán đường đâu."
+  },
+  {
+   "k": "Bà ơi, bà có biết bà Cúc không ạ? Bà ngoại cháu đấy.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bà ơi, bà có biết bà Cúc không ạ? Bà ngoại cháu đấy."
+  },
+  {
+   "k": "Bà nhìn Vy, lần đầu nhìn kỹ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bà nhìn Vy, lần đầu nhìn kỹ."
+  },
+  {
+   "k": "…Cúc nào?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "…Cúc nào?"
+  },
+  {
+   "k": "Bà Cúc ở xóm trên ngày xưa ạ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bà Cúc ở xóm trên ngày xưa ạ."
+  },
+  {
+   "k": "Lâu lắm rồi không ai gọi cái tên ấy. Muốn hỏi thì lên chùa, tìm thầy Nguyên. Bà không nói gì đâu đấy.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Lâu lắm rồi không ai gọi cái tên ấy. Muốn hỏi thì lên chùa, tìm thầy Nguyên. Bà không nói gì đâu đấy."
+  },
+  {
+   "k": "Dạ, bọn cháu cảm ơn bà.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Dạ, bọn cháu cảm ơn bà."
+  },
+  {
+   "k": "Cảm ơn gì. Uống đi kẻo nguội.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cảm ơn gì. Uống đi kẻo nguội."
+  },
+  {
+   "k": "Ngồi đi các cháu. Xem quẻ không? Không linh thì không lấy tiền.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ngồi đi các cháu. Xem quẻ không? Không linh thì không lấy tiền."
+  },
+  {
+   "k": "Thế linh thì lấy bao nhiêu hả thầy?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Thế linh thì lấy bao nhiêu hả thầy?"
+  },
+  {
+   "k": "Linh thì tùy tâm. Mà chưa ai dám bảo là linh.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Linh thì tùy tâm. Mà chưa ai dám bảo là linh."
+  },
+  {
+   "k": "Dạ, bà bán nước dưới kia bảo bọn cháu lên hỏi thầy ạ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Dạ, bà bán nước dưới kia bảo bọn cháu lên hỏi thầy ạ."
+  },
+  {
+   "k": "Bà ấy bảo thế à. Hỏi chuyện gì?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bà ấy bảo thế à. Hỏi chuyện gì?"
+  },
+  {
+   "k": "Chuyện Vân Hòa ạ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Chuyện Vân Hòa ạ."
+  },
+  {
+   "k": "Tay thầy khựng lại trên đồng xu. Ông xếp lại cho ngay, thở dài.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tay thầy khựng lại trên đồng xu. Ông xếp lại cho ngay, thở dài."
+  },
+  {
+   "k": "Lâu lắm tôi không nghe ai nói cái tên ấy ở sân này. Thôi, gieo một quẻ đã.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Lâu lắm tôi không nghe ai nói cái tên ấy ở sân này. Thôi, gieo một quẻ đã."
+  },
+  {
+   "k": "Quẻ thì liên quan gì ạ?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Quẻ thì liên quan gì ạ?"
+  },
+  {
+   "k": "Chẳng liên quan. Nhưng tôi muốn xem các cháu đến đây với cái bụng thế nào. Gieo đi, nhẹ tay, đồng xu chứ không phải hòn đá.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Chẳng liên quan. Nhưng tôi muốn xem các cháu đến đây với cái bụng thế nào. Gieo đi, nhẹ tay, đồng xu chứ không phải hòn đá."
+  },
+  {
+   "k": "Sân chùa sạch sẽ thật. Sáng nay chắc vừa quét xong.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Sân chùa sạch sẽ thật. Sáng nay chắc vừa quét xong."
+  },
+  {
+   "k": "Miếu dưới rừng với chỗ này khác hẳn nhau nhỉ. Trên này người ra vào suốt.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Miếu dưới rừng với chỗ này khác hẳn nhau nhỉ. Trên này người ra vào suốt."
+  },
+  {
+   "k": "Tấm bia này ghi chuyện bà con sửa đường, khơi mương sau lễ tạ rừng. Hay thật.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tấm bia này ghi chuyện bà con sửa đường, khơi mương sau lễ tạ rừng. Hay thật."
+  },
+  {
+   "k": "Vy chụp tấm bia này giúp tớ. Có cả mốc năm ở góc kia.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Vy chụp tấm bia này giúp tớ. Có cả mốc năm ở góc kia."
+  },
+  {
+   "k": "Bác ơi, làng mình có ai còn nhớ chuyện năm tám sáu không ạ?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bác ơi, làng mình có ai còn nhớ chuyện năm tám sáu không ạ?"
+  },
+  {
+   "k": "Người trông chùa",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Người trông chùa"
+  },
+  {
+   "k": "Năm nào?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Năm nào?"
+  },
+  {
+   "k": "Tám sáu ạ, hồi có lễ cầu mưa.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tám sáu ạ, hồi có lễ cầu mưa."
+  },
+  {
+   "k": "Bác quét vài nhát chổi, nhìn quanh sân.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bác quét vài nhát chổi, nhìn quanh sân."
+  },
+  {
+   "k": "Lâu quá bác nhớ gì. …Muốn nghe thì ra xóm Đông hỏi ông Tùng.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Lâu quá bác nhớ gì. …Muốn nghe thì ra xóm Đông hỏi ông Tùng."
+  },
+  {
+   "k": "Ông Tùng ạ?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ông Tùng ạ?"
+  },
+  {
+   "k": "Ừ. Mà bác không nói đấy nhé. Chuyện ấy ở làng người ta không thích nhắc.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ừ. Mà bác không nói đấy nhé. Chuyện ấy ở làng người ta không thích nhắc."
+  },
+  {
+   "k": "Qua cầu rồi mình tìm người hỏi tiếp.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Qua cầu rồi mình tìm người hỏi tiếp."
+  },
+  {
+   "k": "Này, có ai ở sau cầu vừa gọi tớ không?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Này, có ai ở sau cầu vừa gọi tớ không?"
+  },
+  {
+   "k": "Cậu nghe rõ tên mình à? Giọng ai thế?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cậu nghe rõ tên mình à? Giọng ai thế?"
+  },
+  {
+   "k": "Nghe cứ giống giọng mẹ tớ. Nhưng giờ này mẹ tớ đang ở Hà Nội cơ mà.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nghe cứ giống giọng mẹ tớ. Nhưng giờ này mẹ tớ đang ở Hà Nội cơ mà."
+  },
+  {
+   "k": "Vũ, đừng đùa kiểu ấy. Tớ tưởng cậu nói thật.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Vũ, đừng đùa kiểu ấy. Tớ tưởng cậu nói thật."
+  },
+  {
+   "k": "Tớ tua lại ba lần rồi. Toàn tiếng nước, chẳng thấy hình ai cả.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ tua lại ba lần rồi. Toàn tiếng nước, chẳng thấy hình ai cả."
+  },
+  {
+   "k": "Tớ vừa chụp xong. Trong ảnh có sáu cái bát, các cậu nhìn này.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ vừa chụp xong. Trong ảnh có sáu cái bát, các cậu nhìn này."
+  },
+  {
+   "k": "Nhưng ngoài kia chỉ có bọn mình thôi. Tớ nhìn kỹ rồi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nhưng ngoài kia chỉ có bọn mình thôi. Tớ nhìn kỹ rồi."
+  },
+  {
+   "k": "Để tớ nhìn lại... Chỉ có bọn mình. Vậy chiếc bát kia dành cho ai?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Để tớ nhìn lại... Chỉ có bọn mình. Vậy chiếc bát kia dành cho ai?"
+  },
+  {
+   "k": "Sổ lễ tạ ghi cả mâm cơm mà không thấy nói đến cái bát ấy.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Sổ lễ tạ ghi cả mâm cơm mà không thấy nói đến cái bát ấy."
+  },
+  {
+   "k": "Đưa máy đây tớ xem. Góc trái có bị khuất không?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Đưa máy đây tớ xem. Góc trái có bị khuất không?"
+  },
+  {
+   "k": "Gió thổi tắt ngọn đèn ngoài cùng. Hà vừa gọi người giữ miếu thì trên mặt bàn xuất hiện một khoanh nước ướt giữa hai chiếc bát.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Gió thổi tắt ngọn đèn ngoài cùng. Hà vừa gọi người giữ miếu thì trên mặt bàn xuất hiện một khoanh nước ướt giữa hai chiếc bát."
+  },
+  {
+   "k": "Tớ có lại gần đâu. Vết nước này từ đâu ra?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ có lại gần đâu. Vết nước này từ đâu ra?"
+  },
+  {
+   "k": "Máy tớ cứ lấy nét vào chỗ trống ấy. Lạ thật.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Máy tớ cứ lấy nét vào chỗ trống ấy. Lạ thật."
+  },
+  {
+   "k": "Bát đó... không phải của em đâu.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bát đó... không phải của em đâu."
+  },
+  {
+   "k": "Khoan, ai nói thế?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Khoan, ai nói thế?"
+  },
+  {
+   "k": "Có đứa bé nào đứng sau bàn không? Này, em ơi?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Có đứa bé nào đứng sau bàn không? Này, em ơi?"
+  },
+  {
+   "k": "Dải vải này mới buộc đấy à? Nút thắt còn sạch bụi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Dải vải này mới buộc đấy à? Nút thắt còn sạch bụi."
+  },
+  {
+   "k": "Đất dưới gốc tre còn ướt. Có người mới đi qua.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Đất dưới gốc tre còn ướt. Có người mới đi qua."
+  },
+  {
+   "k": "Bà tớ khoanh đỏ cây gạo ở cuối đường. Tìm thấy nó là gần đến nơi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bà tớ khoanh đỏ cây gạo ở cuối đường. Tìm thấy nó là gần đến nơi."
+  },
+  {
+   "k": "Ơ, vừa rồi ai gọi tớ thế?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ơ, vừa rồi ai gọi tớ thế?"
+  },
+  {
+   "k": "Tớ nghe thấy. Hình như ở phía sau rặng tre.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ nghe thấy. Hình như ở phía sau rặng tre."
+  },
+  {
+   "k": "Tớ có nửa tấm bản đồ. Nửa kia chắc bà để trong sổ tay.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ có nửa tấm bản đồ. Nửa kia chắc bà để trong sổ tay."
+  },
+  {
+   "k": "Đường chính bị cây đổ chắn mất rồi. Kia có lối vòng qua bờ tường kìa.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Đường chính bị cây đổ chắn mất rồi. Kia có lối vòng qua bờ tường kìa."
+  },
+  {
+   "k": "Bên dưới lá vẫn còn đá lát. Hồi trước đúng là ô tô đi qua đây.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bên dưới lá vẫn còn đá lát. Hồi trước đúng là ô tô đi qua đây."
+  },
+  {
+   "k": "Thế mà nghe người ta kể cứ như nhà ấy nằm giữa rừng sâu.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Thế mà nghe người ta kể cứ như nhà ấy nằm giữa rừng sâu."
+  },
+  {
+   "k": "Đường bỏ lâu quá thôi. Người ta nhớ cảnh cây rậm bây giờ hơn cảnh hồi trước.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Đường bỏ lâu quá thôi. Người ta nhớ cảnh cây rậm bây giờ hơn cảnh hồi trước."
+  },
+  {
+   "k": "Rau mới hái sáng nay, mua đi các bác ơi!",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Rau mới hái sáng nay, mua đi các bác ơi!"
+  },
+  {
+   "k": "Mấy giờ rồi mà thằng Tí chưa đi học về nhỉ?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Mấy giờ rồi mà thằng Tí chưa đi học về nhỉ?"
+  },
+  {
+   "k": "Con gà nhà cháu chạy sang sân bà rồi!",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Con gà nhà cháu chạy sang sân bà rồi!"
+  },
+  {
+   "k": "Uống chè thì vào ngồi, đừng đứng chắn đường bà nhé!",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Uống chè thì vào ngồi, đừng đứng chắn đường bà nhé!"
+  },
+  {
+   "k": "Chiều nay có khi mưa đấy. Gió đổi rồi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Chiều nay có khi mưa đấy. Gió đổi rồi."
+  },
+  {
+   "k": "Ai lên miếu chiều nhớ cầm đèn theo, tối đường khó đi lắm.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ai lên miếu chiều nhớ cầm đèn theo, tối đường khó đi lắm."
+  },
+  {
+   "k": "Nghe người ta nói thế thôi, chứ có ai thấy tận mắt đâu.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nghe người ta nói thế thôi, chứ có ai thấy tận mắt đâu."
+  },
+  {
+   "k": "Ơ, mấy đứa lạ kia. Hỏi đường à?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ơ, mấy đứa lạ kia. Hỏi đường à?"
+  }
+ ]
+}

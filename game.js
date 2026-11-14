@@ -1081,17 +1081,21 @@ function nextLine(){if(window.isTyping&&window.isTyping())return;if(dlgQueue.len
 function setDialoguePortrait(who){const pf=PORTRAITS[who],isPerson=!!pf&&(!activeInteractionView||activeInteractionView.subject!==who);
  $('dialogue-portrait-wrap').hidden=!isPerson;$('dialogue').classList.toggle('has-portrait',isPerson);$('dialogue-symbol').hidden=isPerson;
  if(isPerson){$('dialogue-portrait').src=PORTRAIT(pf);$('dialogue-portrait').alt='Chân dung '+who}}
-function showLine(who,text){setDialoguePortrait(who);
-$('dialogue-speaker').textContent=who;$('dialogue-text').textContent=text;
+let lastSpeaker='',lastLineText='';
+const tr=s=>window.I18N?window.I18N.t(s):s;
+function showLine(who,text){setDialoguePortrait(who);lastSpeaker=who;lastLineText=text;
+$('dialogue-speaker').textContent=tr(who);$('dialogue-text').textContent=tr(text);
  $('chatter').classList.remove('on');
  $('dialogue').hidden=false;dialogueOpen=true;setDialogueMode(true)}
+/* Đổi ngôn ngữ khi đang hiện lời thoại: dịch lại câu hiện tại (horror.js sẽ chạy lại hiệu ứng gõ chữ). */
+if(typeof document!=='undefined'&&document.addEventListener)document.addEventListener('lnrt:lang',()=>{if(window.I18N&&dialogueOpen&&lastSpeaker){$('dialogue-speaker').textContent=window.I18N.t(lastSpeaker);$('dialogue-text').textContent=window.I18N.t(lastLineText)}});
 function resetSceneScroll(){for(const id of ['app-shell','scene-stage']){const el=$(id);if(el){el.scrollTop=0;el.scrollLeft=0}}}
 function clearInteractionView(){interactionViewToken++;const prior=activeInteractionView,pan=interactionPan;activeInteractionView=null;interactionPan=null;const view=$('interaction-view'),shell=$('app-shell'),backdrop=$('scene-backdrop'),column=document.querySelector&&document.querySelector('.game-column');if(view){view.hidden=true;view.onload=null;view.onerror=null;view.classList.remove('native-night')}if(shell)shell.classList.remove('interaction-active');if(backdrop&&SCENES[state.scene])backdrop.style.backgroundImage=`url("${sceneBackground(state.scene)}")`;resetSceneScroll();if(column&&prior&&prior.scene===state.scene&&Number.isFinite(pan))column.scrollLeft=pan}
 function showSceneView(shot,scene){
  const view=$('interaction-view'),shell=$('app-shell');
  if(!shot||!view||!shell||!dialogueOpen||modalType||shot.scene!==scene||state.scene!==scene)return;
  const token=++interactionViewToken;
- const reveal=()=>{if(token!==interactionViewToken||!dialogueOpen||state.scene!==scene)return;if(!activeInteractionView){const column=document.querySelector&&document.querySelector('.game-column');interactionPan=column?column.scrollLeft:null}activeInteractionView=shot;view.classList.toggle('native-night',!!shot.nativeNight);view.hidden=false;shell.classList.add('interaction-active');const backdrop=$('scene-backdrop');if(backdrop)backdrop.style.backgroundImage=`url("${ROOT}props/${shot.file}")`;resetSceneScroll();setDialoguePortrait($('dialogue-speaker').textContent)};
+ const reveal=()=>{if(token!==interactionViewToken||!dialogueOpen||state.scene!==scene)return;if(!activeInteractionView){const column=document.querySelector&&document.querySelector('.game-column');interactionPan=column?column.scrollLeft:null}activeInteractionView=shot;view.classList.toggle('native-night',!!shot.nativeNight);view.hidden=false;shell.classList.add('interaction-active');const backdrop=$('scene-backdrop');if(backdrop)backdrop.style.backgroundImage=`url("${ROOT}props/${shot.file}")`;resetSceneScroll();setDialoguePortrait(lastSpeaker)};
  view.onload=reveal;view.onerror=()=>{if(token===interactionViewToken)clearInteractionView()};view.alt=shot.alt;view.src=ROOT+'props/'+shot.file;
  if(view.complete&&view.naturalWidth)reveal();
 }
@@ -1596,7 +1600,8 @@ function showMenu(){const ob=getObjective(),rc=state.relics.length;
  add(state.sound?'Âm thanh: BẬT':'Âm thanh: TẮT',()=>{toggleSound();showMenu()});
  if(window.WeatherFX)add(WeatherFX.enabled?'Đèn và chớp: BẬT':'Đèn và chớp: TẮT',()=>{WeatherFX.setEnabled(!WeatherFX.enabled);showMenu()});
  if(window.Perf){const N={auto:'Tự động',high:'Cao',medium:'Vừa',low:'Thấp'};add('Hiệu ứng hình ảnh: '+N[Perf.pref]+(Perf.pref==='auto'?' ('+N[Perf.level]+')':''),()=>{Perf.cycle();showMenu()})}
- add('Bắt đầu lại từ đầu',()=>{hideModal();if(confirm('Bạn có chắc muốn bắt đầu một lần điều tra mới?'))newGame()},{cls:'is-danger'});
+ if(window.I18N){const NL={vi:'Tiếng Việt',en:'English',zh:'中文'},P={vi:'Ngôn ngữ: ',en:'Language: ',zh:'语言：'};const lb=modalButton(P[I18N.lang]+NL[I18N.lang],()=>{I18N.cycle();showMenu()});lb.setAttribute('data-i18n-skip','');w.appendChild(lb)}
+ add('Bắt đầu lại từ đầu',()=>{hideModal();if(confirm(window.I18N?I18N.t('Bạn có chắc muốn bắt đầu một lần điều tra mới?'):'Bạn có chắc muốn bắt đầu một lần điều tra mới?'))newGame()},{cls:'is-danger'});
  add('Về màn hình chính',()=>{hideModal();stopAmbience();clearDialogue();$('title-screen').hidden=false;updateContinue()})}
 
 /* ================================================================
@@ -1724,11 +1729,18 @@ function openResearchBook(id){
  }
  function leaf(i){
   if(i>=pageCount)return '<div class="bk-blank" aria-hidden="true"><span class="bk-fleuron">◈</span></div>';
-  const page=b.pages[i],locked=sealed(i),heading=locked?'Trang giấy bị dính chặt':page[0];
-  const content=locked?b.protectedFinalText:page[1],marked=bookmarks().includes(i);
-  return `<section class="research-paper${locked?' research-paper-locked':''}" data-page="${i}" aria-label="Trang ${i+1}: ${escapeHTML(heading)}">
-   <div class="bk-no">${escapeHTML(researchBookType(b))}${marked?' · ĐÃ ĐÁNH DẤU':''}</div>
-   <div class="bk-title">${escapeHTML(i===0?b.title:heading)}</div>
+  const page=b.pages[i],locked=sealed(i),rawHeading=locked?'Trang giấy bị dính chặt':page[0];
+  const rawContent=locked?b.protectedFinalText:page[1];
+  const heading=window.I18N?I18N.t(rawHeading):rawHeading;
+  const content=window.I18N?I18N.page(rawContent):rawContent,marked=bookmarks().includes(i);
+  const skip=window.I18N&&I18N.lang!=='vi'?' data-i18n-skip':'';
+  const ariaLabel=window.I18N&&I18N.lang!=='vi'?`${I18N.t('Trang '+(i+1))}${I18N.lang==='zh'?'：':': '}${heading}`:`Trang ${i+1}: ${heading}`;
+  const typeLabel=window.I18N?I18N.t(researchBookType(b)):researchBookType(b);
+  const markLabel=marked?(window.I18N?I18N.t('ĐÃ ĐÁNH DẤU'):'ĐÃ ĐÁNH DẤU'):'';
+  const titleLabel=window.I18N?I18N.t(i===0?b.title:heading):(i===0?b.title:heading);
+  return `<section class="research-paper${locked?' research-paper-locked':''}" data-page="${i}"${skip} aria-label="${escapeHTML(ariaLabel)}">
+   <div class="bk-no">${escapeHTML(typeLabel)}${marked?' · '+escapeHTML(markLabel):''}</div>
+   <div class="bk-title">${escapeHTML(titleLabel)}</div>
    <div class="bk-body research-page-content" data-page-text="${i}">${researchClippedHTML(content,quotes(),i)}</div>
    <div class="bk-folio">${i+1}</div>
   </section>`;
@@ -1795,7 +1807,8 @@ function openResearchBook(id){
   quotebtn.addEventListener('mousedown',e=>e.preventDefault());
   quotebtn.onclick=()=>{
    const selection=String(lastSelection||(window.getSelection?window.getSelection():'')).trim().replace(/\s+/g,' ').slice(0,210);
-   const found=visible().find(i=>!sealed(i)&&b.pages[i][1].replace(/\s+/g,' ').includes(selection));
+   const pageText=src=>window.I18N?I18N.page(src):src;
+   const found=visible().find(i=>!sealed(i)&&pageText(b.pages[i][1]).replace(/\s+/g,' ').includes(selection));
    if(selection.length<7||found===undefined){toast('Bôi đen một đoạn trong trang sách rồi nhấn lưu.');return;}
    const records=quotes();
    if(!records.some(q=>q.page===found&&q.text===selection)){

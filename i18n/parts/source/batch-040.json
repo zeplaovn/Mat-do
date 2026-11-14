@@ -1,0 +1,566 @@
+{
+ "batch": 40,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Một hình con sóng khắc ở hướng mương. Một hình lá cây khắc về phía đường đất. Hai hình chỉ hai nơi khác nhau, không phải lời nguyền.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Một hình con sóng khắc ở hướng mương. Một hình lá cây khắc về phía đường đất. Hai hình chỉ hai nơi khác nhau, không phải lời nguyền."
+  },
+  {
+   "k": "Chữ mờ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chữ mờ"
+  },
+  {
+   "k": "Mặt tây: “Đường nước, tránh khi lũ”. Mặt bắc: “Tới cây đa, theo lối xe”. Chữ bắc bị rêu phủ nhiều hơn.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mặt tây: “Đường nước, tránh khi lũ”. Mặt bắc: “Tới cây đa, theo lối xe”. Chữ bắc bị rêu phủ nhiều hơn."
+  },
+  {
+   "k": "Vết trám cũ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Vết trám cũ"
+  },
+  {
+   "k": "Dưới phiến đá có lỗ nhỏ từng cắm biển đường bằng gỗ. Biển đã bị gỡ, nhưng dấu bắc vẫn cùng hướng với bờ đất cao.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dưới phiến đá có lỗ nhỏ từng cắm biển đường bằng gỗ. Biển đã bị gỡ, nhưng dấu bắc vẫn cùng hướng với bờ đất cao."
+  },
+  {
+   "k": "Lời nhắc",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Lời nhắc"
+  },
+  {
+   "k": "Muốn tới miếu cây đa thì theo dấu lá cây trên mặt bắc. Dấu sóng là đường xuống mương, không phải đường vào rừng.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Muốn tới miếu cây đa thì theo dấu lá cây trên mặt bắc. Dấu sóng là đường xuống mương, không phải đường vào rừng."
+  },
+  {
+   "k": "Thủy Tỉnh Ký – Giếng Đá Năm Xưa",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Thủy Tỉnh Ký – Giếng Đá Năm Xưa"
+  },
+  {
+   "k": "Sổ công việc ghi dây gầu, nắp giếng và vị trí bậc đá.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Sổ công việc ghi dây gầu, nắp giếng và vị trí bậc đá."
+  },
+  {
+   "k": "THỦY TỈNH KÝ – GIẾNG ĐÁ NĂM XƯA",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "THỦY TỈNH KÝ – GIẾNG ĐÁ NĂM XƯA\nBình — trông sân, nước và dụng cụ.\nĐồ hỏng phải sửa ngay, không để đấy dọa người."
+  },
+  {
+   "k": "Bình — trông sân, nước và dụng cụ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "THỦY TỈNH KÝ – GIẾNG ĐÁ NĂM XƯA\nBình — trông sân, nước và dụng cụ.\nĐồ hỏng phải sửa ngay, không để đấy dọa người."
+  },
+  {
+   "k": "Đồ hỏng phải sửa ngay, không để đấy dọa người.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "THỦY TỈNH KÝ – GIẾNG ĐÁ NĂM XƯA\nBình — trông sân, nước và dụng cụ.\nĐồ hỏng phải sửa ngay, không để đấy dọa người."
+  },
+  {
+   "k": "Dây gầu",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dây gầu"
+  },
+  {
+   "k": "Dây từ mép giếng xuống mặt nước được đánh ba nút để người kéo không tuột tay. Nút đầu sát miệng giếng, nút sau cách hai gang, nút cuối gần gầu.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dây từ mép giếng xuống mặt nước được đánh ba nút để người kéo không tuột tay. Nút đầu sát miệng giếng, nút sau cách hai gang, nút cuối gần gầu."
+  },
+  {
+   "k": "Nắp gỗ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nắp gỗ"
+  },
+  {
+   "k": "Nắp giếng bản lề lệch về phía cây gạo. Trời mưa phải gài chốt sắt. Nếu để hở, chạy qua sân ban đêm có thể trượt chân.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nắp giếng bản lề lệch về phía cây gạo. Trời mưa phải gài chốt sắt. Nếu để hở, chạy qua sân ban đêm có thể trượt chân."
+  },
+  {
+   "k": "Chốt đồng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chốt đồng"
+  },
+  {
+   "k": "Tôi tháo chiếc chốt đồng ở ngoài thành giếng để sửa gầu. Bên dưới còn vật khác gắn sâu trong đá; tôi không tháo nó. Sau đó Nhài thường nhìn xuống giếng rồi khóc.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tôi tháo chiếc chốt đồng ở ngoài thành giếng để sửa gầu. Bên dưới còn vật khác gắn sâu trong đá; tôi không tháo nó. Sau đó Nhài thường nhìn xuống giếng rồi khóc."
+  },
+  {
+   "k": "Ghi chú cuối",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ghi chú cuối"
+  },
+  {
+   "k": "Nắp giếng chưa được sửa. Trời mưa, nếu không gài chốt thì người chạy ngang có thể trượt chân.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nắp giếng chưa được sửa. Trời mưa, nếu không gài chốt thì người chạy ngang có thể trượt chân."
+  },
+  {
+   "k": "Bát Cơm Không Tên – Sổ Bếp Của Nụ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bát Cơm Không Tên – Sổ Bếp Của Nụ"
+  },
+  {
+   "k": "Những trang ghi phần cơm, mâm bát và một phần dành riêng cho trẻ nhỏ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Những trang ghi phần cơm, mâm bát và một phần dành riêng cho trẻ nhỏ."
+  },
+  {
+   "k": "BÁT CƠM KHÔNG TÊN – SỔ BẾP CỦA NỤ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "BÁT CƠM KHÔNG TÊN – SỔ BẾP CỦA NỤ\nNgày nào cũng phải đủ phần cho người làm; đừng lấy cơm của người này bù cho người khác."
+  },
+  {
+   "k": "Ngày nào cũng phải đủ phần cho người làm; đừng lấy cơm của người này bù cho người khác.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "BÁT CƠM KHÔNG TÊN – SỔ BẾP CỦA NỤ\nNgày nào cũng phải đủ phần cho người làm; đừng lấy cơm của người này bù cho người khác."
+  },
+  {
+   "k": "Những phần cơm",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Những phần cơm"
+  },
+  {
+   "k": "Ở gian trong có năm người làm công ở lại. Cơm nấu cho họ thường chia thành năm phần, thêm phần trẻ con để riêng trong nhà chính.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ở gian trong có năm người làm công ở lại. Cơm nấu cho họ thường chia thành năm phần, thêm phần trẻ con để riêng trong nhà chính."
+  },
+  {
+   "k": "Bữa cơm đêm",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bữa cơm đêm"
+  },
+  {
+   "k": "Tôi chuẩn bị sáu chiếc bát: năm bát lớn cho chúng tôi, một bát nhỏ cho Nhài. Không ai nói với chúng tôi chuyện sẽ xảy ra dưới hầm.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tôi chuẩn bị sáu chiếc bát: năm bát lớn cho chúng tôi, một bát nhỏ cho Nhài. Không ai nói với chúng tôi chuyện sẽ xảy ra dưới hầm."
+  },
+  {
+   "k": "Dòng nhắc trong sổ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dòng nhắc trong sổ"
+  },
+  {
+   "k": "Bình để khăn gần giếng, tôi cất muôi trong bếp; Quyên đánh rơi trâm ở nôi, Thành giữ thư trong sổ, Giáp để dép ngoài cửa hầm. Tôi nhớ theo thứ tự ấy.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bình để khăn gần giếng, tôi cất muôi trong bếp; Quyên đánh rơi trâm ở nôi, Thành giữ thư trong sổ, Giáp để dép ngoài cửa hầm. Tôi nhớ theo thứ tự ấy."
+  },
+  {
+   "k": "Mảnh giấy",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mảnh giấy"
+  },
+  {
+   "k": "Trước khi xuống hầm, chúng tôi đã chia lá thư tố cáo thành ba mảnh và giấu riêng. Chúng tôi ghi điều mình nghi ngờ, mong có người tìm ra nếu xảy ra chuyện.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Trước khi xuống hầm, chúng tôi đã chia lá thư tố cáo thành ba mảnh và giấu riêng. Chúng tôi ghi điều mình nghi ngờ, mong có người tìm ra nếu xảy ra chuyện."
+  },
+  {
+   "k": "Ảnh Trung Tàng Ảnh – Những Bóng Mờ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ảnh Trung Tàng Ảnh – Những Bóng Mờ"
+  },
+  {
+   "k": "Tập giấy kẹp ảnh Polaroid và hướng dẫn quan sát bóng phản chiếu.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tập giấy kẹp ảnh Polaroid và hướng dẫn quan sát bóng phản chiếu."
+  },
+  {
+   "k": "Trang đầu",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Trang đầu"
+  },
+  {
+   "k": "ẢNH TRUNG TÀNG ẢNH – NHỮNG BÓNG MỜ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "ẢNH TRUNG TÀNG ẢNH – NHỮNG BÓNG MỜ\nẢnh cũ không biết nói, nhưng cũng không tự nhiên đúng hết."
+  },
+  {
+   "k": "Ảnh cũ không biết nói, nhưng cũng không tự nhiên đúng hết.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "ẢNH TRUNG TÀNG ẢNH – NHỮNG BÓNG MỜ\nẢnh cũ không biết nói, nhưng cũng không tự nhiên đúng hết."
+  },
+  {
+   "k": "Cửa sổ và gương",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cửa sổ và gương"
+  },
+  {
+   "k": "Nếu thấy trong kính có thêm người, hãy nhìn xem cửa sổ sau lưng đang mở hay đóng. Một bóng có thể là ánh sáng; một bóng khác chỉ xuất hiện trong ảnh.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nếu thấy trong kính có thêm người, hãy nhìn xem cửa sổ sau lưng đang mở hay đóng. Một bóng có thể là ánh sáng; một bóng khác chỉ xuất hiện trong ảnh."
+  },
+  {
+   "k": "Thứ tự kiểm chứng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Thứ tự kiểm chứng"
+  },
+  {
+   "k": "Một: nhìn trực tiếp. Hai: chụp ảnh tại chỗ. Ba: so với đồ vật cố định. Đừng chỉ tin một tấm ảnh rồi kết luận.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Một: nhìn trực tiếp. Hai: chụp ảnh tại chỗ. Ba: so với đồ vật cố định. Đừng chỉ tin một tấm ảnh rồi kết luận."
+  },
+  {
+   "k": "Mặt sau ảnh",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mặt sau ảnh"
+  },
+  {
+   "k": "Bé gái đứng bên chiếc nôi, tay cầm búp bê vải. Người lớn phía sau bị lóa sáng nên không thấy mặt. Trong gương, trâm gỗ của người ấy lại rất rõ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bé gái đứng bên chiếc nôi, tay cầm búp bê vải. Người lớn phía sau bị lóa sáng nên không thấy mặt. Trong gương, trâm gỗ của người ấy lại rất rõ."
+  },
+  {
+   "k": "Tờ giấy gập",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tờ giấy gập"
+  },
+  {
+   "k": "Nếu ảnh và vật chứng khác nhau, ghi cả hai. Ký ức có thể bị kéo lệch; vết xước trên gỗ thì không biết nói dối.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nếu ảnh và vật chứng khác nhau, ghi cả hai. Ký ức có thể bị kéo lệch; vết xước trên gỗ thì không biết nói dối."
+  },
+  {
+   "k": "Nét Phấn Cuối – Vở Học Của Giáp",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nét Phấn Cuối – Vở Học Của Giáp"
+  },
+  {
+   "k": "Bài học của thầy Giáp và dấu ghi về ngày cuối cùng.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bài học của thầy Giáp và dấu ghi về ngày cuối cùng."
+  },
+  {
+   "k": "NÉT PHẤN CUỐI – VỞ HỌC CỦA GIÁP",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "NÉT PHẤN CUỐI – VỞ HỌC CỦA GIÁP\nThầy Giáp chép cho Nhài.\nHọc xong thì cất bút, không vẽ bậy lên bàn."
+  },
+  {
+   "k": "Thầy Giáp chép cho Nhài.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "NÉT PHẤN CUỐI – VỞ HỌC CỦA GIÁP\nThầy Giáp chép cho Nhài.\nHọc xong thì cất bút, không vẽ bậy lên bàn."
+  },
+  {
+   "k": "Học xong thì cất bút, không vẽ bậy lên bàn.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "NÉT PHẤN CUỐI – VỞ HỌC CỦA GIÁP\nThầy Giáp chép cho Nhài.\nHọc xong thì cất bút, không vẽ bậy lên bàn."
+  },
+  {
+   "k": "Bài một",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bài một"
+  },
+  {
+   "k": "Cửa mở về phía có người đứng.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cửa mở về phía có người đứng.\nThen cài phải nhìn từ phía nào.\nNgười ở trong không thể tự với tới thanh gỗ bên ngoài."
+  },
+  {
+   "k": "Then cài phải nhìn từ phía nào.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cửa mở về phía có người đứng.\nThen cài phải nhìn từ phía nào.\nNgười ở trong không thể tự với tới thanh gỗ bên ngoài."
+  },
+  {
+   "k": "Người ở trong không thể tự với tới thanh gỗ bên ngoài.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cửa mở về phía có người đứng.\nThen cài phải nhìn từ phía nào.\nNgười ở trong không thể tự với tới thanh gỗ bên ngoài."
+  },
+  {
+   "k": "Bài hai",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bài hai"
+  },
+  {
+   "k": "Con nhớ đếm năm ngón tay. Ngón nào cũng có tên, nhưng không ngón nào phải thay tên cho ngón khác.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Con nhớ đếm năm ngón tay. Ngón nào cũng có tên, nhưng không ngón nào phải thay tên cho ngón khác."
+  },
+  {
+   "k": "Bài ba",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bài ba"
+  },
+  {
+   "k": "Một tờ sớ có thể trông rất cũ. Nếu nét mực khác, phải kiểm tra người viết và giấy dán, đừng vội tin vì nó nằm trong hộp kính.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Một tờ sớ có thể trông rất cũ. Nếu nét mực khác, phải kiểm tra người viết và giấy dán, đừng vội tin vì nó nằm trong hộp kính."
+  },
+  {
+   "k": "Trang nhỏ cuối",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Trang nhỏ cuối"
+  },
+  {
+   "k": "Giáp nhắc Nhài: lúc trời mưa, đừng chạy qua sân khi nắp giếng chưa gài chốt.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Giáp nhắc Nhài: lúc trời mưa, đừng chạy qua sân khi nắp giếng chưa gài chốt."
+  },
+  {
+   "k": "Mật Tự Người Cũ – Bảng Ký Hiệu",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mật Tự Người Cũ – Bảng Ký Hiệu"
+  },
+  {
+   "k": "Bảng ký hiệu được dùng để đánh dấu trang đơn chung.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bảng ký hiệu được dùng để đánh dấu trang đơn chung."
+  },
+  {
+   "k": "MẬT TỰ NGƯỜI CŨ – BẢNG KÝ HIỆU",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "MẬT TỰ NGƯỜI CŨ – BẢNG KÝ HIỆU\nĐể người đi vắng vẫn biết ai đã ghi, chúng tôi mỗi người dùng một dấu riêng ở cuối trang."
+  },
+  {
+   "k": "Để người đi vắng vẫn biết ai đã ghi, chúng tôi mỗi người dùng một dấu riêng ở cuối trang.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "MẬT TỰ NGƯỜI CŨ – BẢNG KÝ HIỆU\nĐể người đi vắng vẫn biết ai đã ghi, chúng tôi mỗi người dùng một dấu riêng ở cuối trang."
+  },
+  {
+   "k": "Dấu một",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dấu một"
+  },
+  {
+   "k": "Bình — sóng nước. Anh trông giếng và biết dây gầu.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bình — sóng nước. Anh trông giếng và biết dây gầu.\nNụ — ngọn lửa. Chị trông bếp."
+  },
+  {
+   "k": "Nụ — ngọn lửa. Chị trông bếp.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bình — sóng nước. Anh trông giếng và biết dây gầu.\nNụ — ngọn lửa. Chị trông bếp."
+  },
+  {
+   "k": "Dấu hai",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dấu hai"
+  },
+  {
+   "k": "Quyên — nốt nhạc. Cô dạy Nhài hát khi trời mưa.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Quyên — nốt nhạc. Cô dạy Nhài hát khi trời mưa.\nThành — cái cân. Anh giữ sổ và cân đồ."
+  },
+  {
+   "k": "Thành — cái cân. Anh giữ sổ và cân đồ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Quyên — nốt nhạc. Cô dạy Nhài hát khi trời mưa.\nThành — cái cân. Anh giữ sổ và cân đồ."
+  },
+  {
+   "k": "Dấu ba",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dấu ba"
+  },
+  {
+   "k": "Giáp — cây bút. Thầy dạy chữ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Giáp — cây bút. Thầy dạy chữ.\nỞ sau ảnh tập thể có thứ tự đứng ký. Không phải thứ tự được ép đứng trong nghi lễ."
+  },
+  {
+   "k": "Ở sau ảnh tập thể có thứ tự đứng ký. Không phải thứ tự được ép đứng trong nghi lễ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Giáp — cây bút. Thầy dạy chữ.\nỞ sau ảnh tập thể có thứ tự đứng ký. Không phải thứ tự được ép đứng trong nghi lễ."
+  },
+  {
+   "k": "Nhắc lại",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nhắc lại"
+  },
+  {
+   "k": "Đừng đọc thứ tự trên cửa hầm thành thứ tự đứng tế. Chúng tôi ký đơn vì muốn ra khỏi đây, không phải để xin được nhốt lại.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đừng đọc thứ tự trên cửa hầm thành thứ tự đứng tế. Chúng tôi ký đơn vì muốn ra khỏi đây, không phải để xin được nhốt lại."
+  },
+  {
+   "k": "Mực Đỏ Trên Sổ – Nhật Trình Vật Tư",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mực Đỏ Trên Sổ – Nhật Trình Vật Tư"
+  },
+  {
+   "k": "Bảng xuất kho bị sửa bằng nét bút khác.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bảng xuất kho bị sửa bằng nét bút khác."
+  },
+  {
+   "k": "MỰC ĐỎ TRÊN SỔ – NHẬT TRÌNH VẬT TƯ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "MỰC ĐỎ TRÊN SỔ – NHẬT TRÌNH VẬT TƯ\nThành giữ kho, ai lấy gì phải ghi rõ dùng ở đâu."
+  },
+  {
+   "k": "Thành giữ kho, ai lấy gì phải ghi rõ dùng ở đâu.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "MỰC ĐỎ TRÊN SỔ – NHẬT TRÌNH VẬT TƯ\nThành giữ kho, ai lấy gì phải ghi rõ dùng ở đâu."
+  },
+  {
+   "k": "Ngày 14/3",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ngày 14/3"
+  }
+ ]
+}

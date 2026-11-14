@@ -1,0 +1,566 @@
+{
+ "batch": 43,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Bình đã báo về bộ phận lệch gần cây gạo.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bình đã báo về bộ phận lệch gần cây gạo."
+  },
+  {
+   "k": "Đó là chốt sắt của nắp gỗ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đó là chốt sắt của nắp gỗ."
+  },
+  {
+   "k": "Theo sổ bếp, có bao nhiêu bát lớn dành cho người làm công?",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Theo sổ bếp, có bao nhiêu bát lớn dành cho người làm công?"
+  },
+  {
+   "k": "Năm bát",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Năm bát"
+  },
+  {
+   "k": "Bốn bát",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bốn bát"
+  },
+  {
+   "k": "Sáu bát",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Sáu bát"
+  },
+  {
+   "k": "Không có bát nào",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Không có bát nào"
+  },
+  {
+   "k": "Bát nhỏ được để riêng cho Nhài; không tính vào các bát lớn của người làm công.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bát nhỏ được để riêng cho Nhài; không tính vào các bát lớn của người làm công."
+  },
+  {
+   "k": "Xem “Bữa cơm đêm”.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Xem “Bữa cơm đêm”."
+  },
+  {
+   "k": "Nụ ghi năm bát lớn, một bát nhỏ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nụ ghi năm bát lớn, một bát nhỏ."
+  },
+  {
+   "k": "Có năm bát dành cho năm người làm.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Có năm bát dành cho năm người làm."
+  },
+  {
+   "k": "Ba bước kiểm chứng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ba bước kiểm chứng"
+  },
+  {
+   "k": "Sắp xếp thứ tự kiểm tra một bóng lạ trong ảnh.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Sắp xếp thứ tự kiểm tra một bóng lạ trong ảnh."
+  },
+  {
+   "k": "Nhìn trực tiếp|Chụp ảnh|So với vật chứng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nhìn trực tiếp|Chụp ảnh|So với vật chứng"
+  },
+  {
+   "k": "So với vật chứng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "So với vật chứng"
+  },
+  {
+   "k": "Chụp ảnh",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chụp ảnh"
+  },
+  {
+   "k": "Nhìn trực tiếp",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nhìn trực tiếp"
+  },
+  {
+   "k": "Phản chiếu là một nguồn manh mối, không phải bằng chứng độc lập.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Phản chiếu là một nguồn manh mối, không phải bằng chứng độc lập."
+  },
+  {
+   "k": "Sổ ảnh có đúng ba bước.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Sổ ảnh có đúng ba bước."
+  },
+  {
+   "k": "Đầu tiên kiểm tra bằng mắt.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đầu tiên kiểm tra bằng mắt."
+  },
+  {
+   "k": "Nhìn trực tiếp → Chụp ảnh → So với vật chứng.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nhìn trực tiếp → Chụp ảnh → So với vật chứng."
+  },
+  {
+   "k": "Then cửa nằm phía nào?",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Then cửa nằm phía nào?"
+  },
+  {
+   "k": "Dấu tay và thanh then cho thấy ai có thể mở cửa?",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dấu tay và thanh then cho thấy ai có thể mở cửa?"
+  },
+  {
+   "k": "Người ở hành lang ngoài",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Người ở hành lang ngoài"
+  },
+  {
+   "k": "Người trong hầm",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Người trong hầm"
+  },
+  {
+   "k": "Bất cứ ai kéo dây",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bất cứ ai kéo dây"
+  },
+  {
+   "k": "Người ở giếng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Người ở giếng"
+  },
+  {
+   "k": "Cửa bị cài từ bên ngoài, không phải do nạn nhân tự nhốt.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cửa bị cài từ bên ngoài, không phải do nạn nhân tự nhốt."
+  },
+  {
+   "k": "Xem sơ đồ phía ngoài cửa.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Xem sơ đồ phía ngoài cửa."
+  },
+  {
+   "k": "Vị trí đầu then không nằm trong tầm với người ở trong.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Vị trí đầu then không nằm trong tầm với người ở trong."
+  },
+  {
+   "k": "Người đứng ngoài hành lang mới nhấc then được.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Người đứng ngoài hành lang mới nhấc then được."
+  },
+  {
+   "k": "Vật che ô lấy gió",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Vật che ô lấy gió"
+  },
+  {
+   "k": "Chọn HAI dấu hiệu chứng minh việc cản thông gió có chủ ý.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chọn HAI dấu hiệu chứng minh việc cản thông gió có chủ ý."
+  },
+  {
+   "k": "Phiếu xuất vải bịt ô gió",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Phiếu xuất vải bịt ô gió"
+  },
+  {
+   "k": "Muội than trên mép ô gió",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Muội than trên mép ô gió"
+  },
+  {
+   "k": "Vết rêu trên tường",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Vết rêu trên tường"
+  },
+  {
+   "k": "Tiếng nước nhỏ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tiếng nước nhỏ"
+  },
+  {
+   "k": "Bản lề cửa rỉ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bản lề cửa rỉ"
+  },
+  {
+   "k": "Phiếu xuất kho và dấu vết tại hầm khớp nhau.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Phiếu xuất kho và dấu vết tại hầm khớp nhau."
+  },
+  {
+   "k": "Đối chiếu sổ Thành với tập kiểm tra cửa.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đối chiếu sổ Thành với tập kiểm tra cửa."
+  },
+  {
+   "k": "Tìm một dòng vật tư và một dấu vết vật lý.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tìm một dòng vật tư và một dấu vết vật lý."
+  },
+  {
+   "k": "Phiếu xuất vải bịt ô gió + muội than.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Phiếu xuất vải bịt ô gió + muội than."
+  },
+  {
+   "k": "Những dấu ký tên",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Những dấu ký tên"
+  },
+  {
+   "k": "Sắp các ký hiệu theo thứ tự đứng ký đơn ghi trong tư liệu.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Sắp các ký hiệu theo thứ tự đứng ký đơn ghi trong tư liệu."
+  },
+  {
+   "k": "bút|cân|nhạc|lửa|sóng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "bút|cân|nhạc|lửa|sóng"
+  },
+  {
+   "k": "sóng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "sóng"
+  },
+  {
+   "k": "bút",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "bút"
+  },
+  {
+   "k": "lửa",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "lửa"
+  },
+  {
+   "k": "cân",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "cân"
+  },
+  {
+   "k": "nhạc",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "nhạc"
+  },
+  {
+   "k": "Những người làm công từng ký đơn cùng nhau phản đối nghi thức.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Những người làm công từng ký đơn cùng nhau phản đối nghi thức."
+  },
+  {
+   "k": "Tập ký hiệu liệt kê nghề và dấu.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tập ký hiệu liệt kê nghề và dấu."
+  },
+  {
+   "k": "Đổi tên thành dấu: Giáp→bút, Thành→cân.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đổi tên thành dấu: Giáp→bút, Thành→cân."
+  },
+  {
+   "k": "Bút, cân, nhạc, lửa, sóng.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bút, cân, nhạc, lửa, sóng."
+  },
+  {
+   "k": "Nét mực bị đổi",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nét mực bị đổi"
+  },
+  {
+   "k": "Chọn BA dấu hiệu cho thấy sổ cấp đồ lễ có trang bị sửa.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chọn BA dấu hiệu cho thấy sổ cấp đồ lễ có trang bị sửa."
+  },
+  {
+   "k": "Dòng vải bịt ô gió",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dòng vải bịt ô gió"
+  },
+  {
+   "k": "Chữ nghiêng khác nét",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chữ nghiêng khác nét"
+  },
+  {
+   "k": "Phiếu được thêm sau mục than",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Phiếu được thêm sau mục than"
+  },
+  {
+   "k": "Góc trang có vết ố cũ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Góc trang có vết ố cũ"
+  },
+  {
+   "k": "Giấy dày hơn ở bìa",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Giấy dày hơn ở bìa"
+  },
+  {
+   "k": "Thành đã chép lại một phần sổ vì không tin trang bị sửa.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Thành đã chép lại một phần sổ vì không tin trang bị sửa."
+  },
+  {
+   "k": "Xem ngày 16/3 trong sổ Thành.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Xem ngày 16/3 trong sổ Thành."
+  },
+  {
+   "k": "Cần chọn nội dung, nét chữ, vị trí chèn.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cần chọn nội dung, nét chữ, vị trí chèn."
+  },
+  {
+   "k": "Dòng vải + chữ khác nét + phiếu chèn sau than.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dòng vải + chữ khác nét + phiếu chèn sau than."
+  },
+  {
+   "k": "Mã ngăn kéo ông Hưng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mã ngăn kéo ông Hưng"
+  },
+  {
+   "k": "Ngày nào được ông Hưng ghi đi ghi lại trong nhật ký? Nhập bốn chữ số năm xảy ra bi kịch.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ngày nào được ông Hưng ghi đi ghi lại trong nhật ký? Nhập bốn chữ số năm xảy ra bi kịch."
+  },
+  {
+   "k": "Ông Hưng không dám rời khỏi năm ấy.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ông Hưng không dám rời khỏi năm ấy."
+  },
+  {
+   "k": "Đọc lại trang về đêm lễ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đọc lại trang về đêm lễ."
+  },
+  {
+   "k": "Năm Nhài lên bảy.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Năm Nhài lên bảy."
+  },
+  {
+   "k": "Nhập 1988.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nhập 1988."
+  },
+  {
+   "k": "Chỗ tưởng niệm",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chỗ tưởng niệm"
+  },
+  {
+   "k": "Những nấm mộ sau vườn là gì?",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Những nấm mộ sau vườn là gì?"
+  },
+  {
+   "k": "Mộ gió tưởng niệm",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mộ gió tưởng niệm"
+  },
+  {
+   "k": "Mộ chứa hài cốt của những người mất tích",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mộ chứa hài cốt của những người mất tích"
+  },
+  {
+   "k": "Nơi chôn Quế",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nơi chôn Quế"
+  },
+  {
+   "k": "Cửa vào giếng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cửa vào giếng"
+  },
+  {
+   "k": "Những nấm mộ là nơi tưởng niệm; căn hầm mới chứa dấu tích cần điều tra.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Những nấm mộ là nơi tưởng niệm; căn hầm mới chứa dấu tích cần điều tra."
+  },
+  {
+   "k": "Đọc sổ bà Tám.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đọc sổ bà Tám."
+  },
+  {
+   "k": "Bà ghi rõ chúng không có hài cốt.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bà ghi rõ chúng không có hài cốt."
+  }
+ ]
+}

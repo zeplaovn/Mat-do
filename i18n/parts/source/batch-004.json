@@ -1,0 +1,569 @@
+{
+ "batch": 4,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Quay về lối rừng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quay về lối rừng"
+  },
+  {
+   "k": "Sân biệt thự Vân Hòa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sân biệt thự Vân Hòa"
+  },
+  {
+   "k": "SÂN NHÀ · 21:30",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "SÂN NHÀ · 21:30"
+  },
+  {
+   "k": "Cây gạo ở bên trái. Chiếc giếng đá nằm trong bóng tối bên phải.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cây gạo ở bên trái. Chiếc giếng đá nằm trong bóng tối bên phải."
+  },
+  {
+   "k": "Cổng vừa khép sau lưng. Tớ không thích cái tiếng khóa sắt đó chút nào.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cổng vừa khép sau lưng. Tớ không thích cái tiếng khóa sắt đó chút nào."
+  },
+  {
+   "k": "Nước mưa đọng trong kẽ gạch. Cây gạo già ngả bóng lên tường vữa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nước mưa đọng trong kẽ gạch. Cây gạo già ngả bóng lên tường vữa."
+  },
+  {
+   "k": "Chiếc giếng đá",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc giếng đá"
+  },
+  {
+   "k": "Bước lên hiên nhà",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bước lên hiên nhà"
+  },
+  {
+   "k": "Trở lại cổng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trở lại cổng"
+  },
+  {
+   "k": "Gốc cây gạo",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Gốc cây gạo"
+  },
+  {
+   "k": "Phía sau miệng giếng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phía sau miệng giếng"
+  },
+  {
+   "k": "Hiên nhà và cửa chính",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hiên nhà và cửa chính"
+  },
+  {
+   "k": "HIÊN NHÀ · 21:40",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "HIÊN NHÀ · 21:40"
+  },
+  {
+   "k": "Cửa đôi bằng gỗ cũ. Không có ánh sáng từ phía sau.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa đôi bằng gỗ cũ. Không có ánh sáng từ phía sau."
+  },
+  {
+   "k": "Cánh cửa này chưa khóa hẳn. Đi cùng nhau, đừng ai tự tách nhóm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cánh cửa này chưa khóa hẳn. Đi cùng nhau, đừng ai tự tách nhóm."
+  },
+  {
+   "k": "Ổ khóa đồng mờ xỉn, vữa vàng rơi từng mảng khỏi chân cột.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ổ khóa đồng mờ xỉn, vữa vàng rơi từng mảng khỏi chân cột."
+  },
+  {
+   "k": "Cửa gỗ chính",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa gỗ chính"
+  },
+  {
+   "k": "Ổ khóa đồng",
+   "files": [
+    "game.js",
+    "ui-v3.js"
+   ],
+   "ctx": "Ổ khóa đồng"
+  },
+  {
+   "k": "Lùi ra sân",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lùi ra sân"
+  },
+  {
+   "k": "Chỗ cắm trại trên hiên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chỗ cắm trại trên hiên"
+  },
+  {
+   "k": "Đại sảnh tầng một",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đại sảnh tầng một"
+  },
+  {
+   "k": "CHƯƠNG 3 · CĂN NHÀ IM LẶNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CHƯƠNG 3 · CĂN NHÀ IM LẶNG"
+  },
+  {
+   "k": "ĐẠI SẢNH · 22:00",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐẠI SẢNH · 22:00"
+  },
+  {
+   "k": "Bàn trà phủ bụi. Đồng hồ quả lắc đứng im trên tường.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bàn trà phủ bụi. Đồng hồ quả lắc đứng im trên tường."
+  },
+  {
+   "k": "Đồng hồ dừng ở một giờ rất lạ. Tớ sẽ ghi vào sổ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đồng hồ dừng ở một giờ rất lạ. Tớ sẽ ghi vào sổ."
+  },
+  {
+   "k": "Bụi phủ kín lớp gạch bông. Những khuôn mặt trong ảnh gia đình đã bạc màu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bụi phủ kín lớp gạch bông. Những khuôn mặt trong ảnh gia đình đã bạc màu."
+  },
+  {
+   "k": "Đồng hồ quả lắc",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đồng hồ quả lắc"
+  },
+  {
+   "k": "Ảnh gia đình",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ảnh gia đình"
+  },
+  {
+   "k": "Bàn trà cũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bàn trà cũ"
+  },
+  {
+   "k": "Lối vào phòng thờ",
+   "files": [
+    "game.js",
+    "ui-v3.js"
+   ],
+   "ctx": "Lối vào phòng thờ"
+  },
+  {
+   "k": "Cầu thang gỗ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cầu thang gỗ"
+  },
+  {
+   "k": "Trở ra hiên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trở ra hiên"
+  },
+  {
+   "k": "Phòng thờ gia tiên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phòng thờ gia tiên"
+  },
+  {
+   "k": "PHÒNG THỜ · 22:20",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "PHÒNG THỜ · 22:20"
+  },
+  {
+   "k": "Những bát hương lạnh trên bàn thờ. Có lối thông qua bếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những bát hương lạnh trên bàn thờ. Có lối thông qua bếp."
+  },
+  {
+   "k": "Những bát hương này... Không nên chạm vào trước khi biết chúng tượng trưng cho ai.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những bát hương này... Không nên chạm vào trước khi biết chúng tượng trưng cho ai."
+  },
+  {
+   "k": "Không có khói nhang. Các bát xếp thành một hàng kỳ lạ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Không có khói nhang. Các bát xếp thành một hàng kỳ lạ."
+  },
+  {
+   "k": "Dãy bát hương",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dãy bát hương"
+  },
+  {
+   "k": "Lối sang bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lối sang bếp"
+  },
+  {
+   "k": "Quay lại đại sảnh",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quay lại đại sảnh"
+  },
+  {
+   "k": "Bát cơm còn nóng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bát cơm còn nóng"
+  },
+  {
+   "k": "Gian bếp cũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Gian bếp cũ"
+  },
+  {
+   "k": "GIAN BẾP · 22:35",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "GIAN BẾP · 22:35"
+  },
+  {
+   "k": "Tro lạnh trong bếp. Mùi ẩm mốc bám ở những chiếc chum cũ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tro lạnh trong bếp. Mùi ẩm mốc bám ở những chiếc chum cũ."
+  },
+  {
+   "k": "Phía sau bên phải có một cánh cửa dẫn xuống hầm. Bếp này bị bỏ lại giữa chừng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phía sau bên phải có một cánh cửa dẫn xuống hầm. Bếp này bị bỏ lại giữa chừng."
+  },
+  {
+   "k": "Bếp củi đã tắt từ lâu. Mọi vật dụng vẫn như bị bỏ lại giữa chừng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bếp củi đã tắt từ lâu. Mọi vật dụng vẫn như bị bỏ lại giữa chừng."
+  },
+  {
+   "k": "Kẽ tủ bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Kẽ tủ bếp"
+  },
+  {
+   "k": "Muôi cơm cũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Muôi cơm cũ"
+  },
+  {
+   "k": "Thanh sắt dưới bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thanh sắt dưới bếp"
+  },
+  {
+   "k": "Bếp củi nguội",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bếp củi nguội"
+  },
+  {
+   "k": "Cửa xuống tầng hầm",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa xuống tầng hầm"
+  },
+  {
+   "k": "Trở về phòng thờ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trở về phòng thờ"
+  },
+  {
+   "k": "Cửa sau ra sân sau",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa sau ra sân sau"
+  },
+  {
+   "k": "Dấu chân nhỏ trên sàn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dấu chân nhỏ trên sàn"
+  },
+  {
+   "k": "Cầu thang gỗ lên tầng hai",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cầu thang gỗ lên tầng hai"
+  },
+  {
+   "k": "CẦU THANG · 22:45",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CẦU THANG · 22:45"
+  },
+  {
+   "k": "Ván gỗ rạn nứt. Cửa chớp cao tít ở chiếu nghỉ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ván gỗ rạn nứt. Cửa chớp cao tít ở chiếu nghỉ."
+  },
+  {
+   "k": "Tớ sẽ chụp vài tấm trước khi lên. Đừng đứng quá xa nhau.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ sẽ chụp vài tấm trước khi lên. Đừng đứng quá xa nhau."
+  },
+  {
+   "k": "Bóng tay vịn đổ xiên lên ảnh chân dung cũ treo dọc tường.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bóng tay vịn đổ xiên lên ảnh chân dung cũ treo dọc tường."
+  },
+  {
+   "k": "Đi lên tầng hai",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đi lên tầng hai"
+  },
+  {
+   "k": "Ảnh gia đình trên tường",
+   "files": [
+    "game.js",
+    "ui-v3.js"
+   ],
+   "ctx": "Ảnh gia đình trên tường"
+  },
+  {
+   "k": "Trở về đại sảnh",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trở về đại sảnh"
+  },
+  {
+   "k": "Hành lang tầng hai",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hành lang tầng hai"
+  },
+  {
+   "k": "HÀNH LANG · 23:00",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "HÀNH LANG · 23:00"
+  },
+  {
+   "k": "Một cửa sáng màu bên trái, cửa gỗ sẫm bên phải.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một cửa sáng màu bên trái, cửa gỗ sẫm bên phải."
+  },
+  {
+   "k": "Phòng trẻ bên trái, phòng làm việc bên phải... Tớ thấy chiếc gương ở cuối lối đi này rất kỳ lạ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phòng trẻ bên trái, phòng làm việc bên phải... Tớ thấy chiếc gương ở cuối lối đi này rất kỳ lạ."
+  },
+  {
+   "k": "Ánh trăng lạnh vạch một đường ngang sàn. Bóng cây lọt qua cửa chớp cuối hành lang.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ánh trăng lạnh vạch một đường ngang sàn. Bóng cây lọt qua cửa chớp cuối hành lang."
+  },
+  {
+   "k": "Phòng ngủ trẻ em",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phòng ngủ trẻ em"
+  },
+  {
+   "k": "Phòng làm việc",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phòng làm việc"
+  },
+  {
+   "k": "Cửa sổ cuối hành lang",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa sổ cuối hành lang"
+  },
+  {
+   "k": "Nắp gác mái trên trần",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nắp gác mái trên trần"
+  },
+  {
+   "k": "Trở lại cầu thang",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trở lại cầu thang"
+  },
+  {
+   "k": "Cửa phòng ngủ ông Hưng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa phòng ngủ ông Hưng"
+  },
+  {
+   "k": "CHƯƠNG 4 · DI VẬT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CHƯƠNG 4 · DI VẬT"
+  },
+  {
+   "k": "PHÒNG TRẺ · 23:15",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "PHÒNG TRẺ · 23:15"
+  },
+  {
+   "k": "Một con búp bê vải nằm bên gối, chiếc nôi trống giữa phòng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một con búp bê vải nằm bên gối, chiếc nôi trống giữa phòng."
+  },
+  {
+   "k": "Tớ thấy một bé gái trong ảnh chụp... Nhưng trong phòng chẳng có ai cả.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ thấy một bé gái trong ảnh chụp... Nhưng trong phòng chẳng có ai cả."
+  },
+  {
+   "k": "Muỗi mùng rách thành từng dải. Chiếc gương vẫn phản chiếu căn phòng trống.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Muỗi mùng rách thành từng dải. Chiếc gương vẫn phản chiếu căn phòng trống."
+  },
+  {
+   "k": "Chiếc trâm trong nôi",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc trâm trong nôi"
+  },
+  {
+   "k": "Gương mờ cũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Gương mờ cũ"
+  }
+ ]
+}

@@ -1,0 +1,566 @@
+{
+ "batch": 9,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Cánh cửa vẫn không nhúc nhích. Có lẽ còn thiếu một thứ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cánh cửa vẫn không nhúc nhích. Có lẽ còn thiếu một thứ."
+  },
+  {
+   "k": "Em nhớ tên mình rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Em nhớ tên mình rồi."
+  },
+  {
+   "k": "Chiếc áo lạnh buốt. Nó nằm im, không đáp lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc áo lạnh buốt. Nó nằm im, không đáp lại."
+  },
+  {
+   "k": "Đêm ấy tôi nghe tiếng đập cửa dưới hầm. Tôi sợ quá, không dám lên tiếng. Xin hãy thay tôi nói điều đó.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đêm ấy tôi nghe tiếng đập cửa dưới hầm. Tôi sợ quá, không dám lên tiếng. Xin hãy thay tôi nói điều đó."
+  },
+  {
+   "k": "Chiếc hòm giờ trống. Lời khai đã được đọc lên.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc hòm giờ trống. Lời khai đã được đọc lên."
+  },
+  {
+   "k": "Lời khai đã nằm trong túi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lời khai đã nằm trong túi."
+  },
+  {
+   "k": "Con búp bê vải nằm bên gối, váy hoa đã mục. Tớ mang nó theo, em sẽ muốn có nó.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con búp bê vải nằm bên gối, váy hoa đã mục. Tớ mang nó theo, em sẽ muốn có nó."
+  },
+  {
+   "k": "Đó là búp bê của em. Cô Quyên khâu nó cho em.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đó là búp bê của em. Cô Quyên khâu nó cho em."
+  },
+  {
+   "k": "Mình đã lấy con búp bê rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình đã lấy con búp bê rồi."
+  },
+  {
+   "k": "Một con hạc giấy trên sợi chỉ. Mình lấy một con thôi, để lại phần còn lại cho em.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một con hạc giấy trên sợi chỉ. Mình lấy một con thôi, để lại phần còn lại cho em."
+  },
+  {
+   "k": "Đã lấy một con hạc giấy rồi, mình để lại phần còn lại cho em.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã lấy một con hạc giấy rồi, mình để lại phần còn lại cho em."
+  },
+  {
+   "k": "Chiếc xe gỗ bánh nhỏ xíu. Em từng kéo nó khắp phòng. Tớ giữ nó cẩn thận.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc xe gỗ bánh nhỏ xíu. Em từng kéo nó khắp phòng. Tớ giữ nó cẩn thận."
+  },
+  {
+   "k": "Mình đã lấy chiếc xe gỗ rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình đã lấy chiếc xe gỗ rồi."
+  },
+  {
+   "k": "Kho vật tư mở khóa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Kho vật tư mở khóa"
+  },
+  {
+   "k": "Chiếc chìa đồng giấu dưới đệm ghế bập bênh vừa khít ổ khóa. Cánh cửa kho kêu lên một tiếng dài.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc chìa đồng giấu dưới đệm ghế bập bênh vừa khít ổ khóa. Cánh cửa kho kêu lên một tiếng dài."
+  },
+  {
+   "k": "Chìa đã trong túi. Chọn nó rồi chạm vào ổ khóa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chìa đã trong túi. Chọn nó rồi chạm vào ổ khóa."
+  },
+  {
+   "k": "Khóa đồng to bằng nắm tay, kiểu khóa kho vật tư. Chìa chắc nằm đâu đó trong nhà này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khóa đồng to bằng nắm tay, kiểu khóa kho vật tư. Chìa chắc nằm đâu đó trong nhà này."
+  },
+  {
+   "k": "Chiếc ghế vẫn còn ấm như có người vừa đứng dậy. Mình chưa có lý do để lục nó.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc ghế vẫn còn ấm như có người vừa đứng dậy. Mình chưa có lý do để lục nó."
+  },
+  {
+   "k": "Chìa kho dưới đệm ghế",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chìa kho dưới đệm ghế"
+  },
+  {
+   "k": "Dưới tấm đệm của chiếc ghế bập bênh trên ban công có một chiếc chìa đồng nhỏ, đúng chỗ ông Hưng viết trong nhật ký.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dưới tấm đệm của chiếc ghế bập bênh trên ban công có một chiếc chìa đồng nhỏ, đúng chỗ ông Hưng viết trong nhật ký."
+  },
+  {
+   "k": "Dưới đệm có thứ gì lạnh... Một chiếc chìa đồng!",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dưới đệm có thứ gì lạnh... Một chiếc chìa đồng!"
+  },
+  {
+   "k": "Đúng chỗ ông ấy viết. Nhìn xuống làng, nơi ông ngồi mỗi tối.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đúng chỗ ông ấy viết. Nhìn xuống làng, nơi ông ngồi mỗi tối."
+  },
+  {
+   "k": "Chìa kho vật tư. Mình xuống sân sau thôi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chìa kho vật tư. Mình xuống sân sau thôi."
+  },
+  {
+   "k": "Ghế bập bênh đã im.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ghế bập bênh đã im."
+  },
+  {
+   "k": "Chìa đã nằm trong túi đồ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chìa đã nằm trong túi đồ."
+  },
+  {
+   "k": "Các bát hương trống. Nhang đã được lấy đi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Các bát hương trống. Nhang đã được lấy đi."
+  },
+  {
+   "k": "Nhang bà Tám để dành",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhang bà Tám để dành"
+  },
+  {
+   "k": "Nhang mới nằm ngay ngắn trong các bát hương trên bàn đá trong miếu. Bà Tám để dành cho những người chưa có tên.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhang mới nằm ngay ngắn trong các bát hương trên bàn đá trong miếu. Bà Tám để dành cho những người chưa có tên."
+  },
+  {
+   "k": "Nhang vẫn nằm trong các bát, chưa ai đốt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhang vẫn nằm trong các bát, chưa ai đốt."
+  },
+  {
+   "k": "Của bà Tám đấy. Bà nói: “Có ngày người ta sẽ gọi đúng tên họ.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Của bà Tám đấy. Bà nói: “Có ngày người ta sẽ gọi đúng tên họ.”"
+  },
+  {
+   "k": "Chúng ta mang ra vườn sau. Mình sẽ không để bà chờ vô ích.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chúng ta mang ra vườn sau. Mình sẽ không để bà chờ vô ích."
+  },
+  {
+   "k": "Nhang đã nằm trong túi. Mình ra vườn sau thôi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhang đã nằm trong túi. Mình ra vườn sau thôi."
+  },
+  {
+   "k": "Qua khe cửa, con thấy lưng cha. Cha ngồi rất lâu, không động đậy, tay cầm một tấm ảnh cũ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Qua khe cửa, con thấy lưng cha. Cha ngồi rất lâu, không động đậy, tay cầm một tấm ảnh cũ."
+  },
+  {
+   "k": "Then cửa bằng gỗ, cài từ bên ngoài. Con thử nhấc thì nó nặng quá, nhấc không nổi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Then cửa bằng gỗ, cài từ bên ngoài. Con thử nhấc thì nó nặng quá, nhấc không nổi."
+  },
+  {
+   "k": "Chưa có tương tác ở vị trí này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chưa có tương tác ở vị trí này."
+  },
+  {
+   "k": "Dưới chân người phụ nữ có dòng chữ trẻ con: “cô Quyên”.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dưới chân người phụ nữ có dòng chữ trẻ con: “cô Quyên”."
+  },
+  {
+   "k": "Búp bê vải được khâu và vá bằng tay.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Búp bê vải được khâu và vá bằng tay."
+  },
+  {
+   "k": "Chiếc trâm gỗ gãy nằm trong chiếc nôi cũ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc trâm gỗ gãy nằm trong chiếc nôi cũ."
+  },
+  {
+   "k": "cô Quyên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<span class=\"drawing-label\" aria-hidden=\"true\">cô Quyên</span>"
+  },
+  {
+   "k": "QUAN SÁT GẦN",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "QUAN SÁT GẦN"
+  },
+  {
+   "k": "Chùa làng nhỏ, mái ngói phủ rêu. Hai ngọn đèn lồng soi nhẹ khoảng sân vắng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chùa làng nhỏ, mái ngói phủ rêu. Hai ngọn đèn lồng soi nhẹ khoảng sân vắng."
+  },
+  {
+   "k": "HƯỚNG DẪN",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "HƯỚNG DẪN"
+  },
+  {
+   "k": "Tớ vừa thấy một ký ức gắn với di vật này. Mọi thứ rõ đến mức khó tin, nhưng tớ vẫn muốn tìm giấy tờ và người có thể xác nhận trước khi viết nó thành sự thật.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ vừa thấy một ký ức gắn với di vật này. Mọi thứ rõ đến mức khó tin, nhưng tớ vẫn muốn tìm giấy tờ và người có thể xác nhận trước khi viết nó thành sự thật."
+  },
+  {
+   "k": "Cuối cùng cũng có một cái tên để gọi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cuối cùng cũng có một cái tên để gọi. "
+  },
+  {
+   "k": "Tớ sẽ đối chiếu lại, không muốn một lần nữa ghi sai người.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": " Tớ sẽ đối chiếu lại, không muốn một lần nữa ghi sai người."
+  },
+  {
+   "k": "Tớ nhặt được món đồ chơi này trong nhà:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ nhặt được món đồ chơi này trong nhà: "
+  },
+  {
+   "k": "Tớ sẽ giữ cẩn thận, biết đâu có ngày trả lại được cho đúng người.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": " Tớ sẽ giữ cẩn thận, biết đâu có ngày trả lại được cho đúng người."
+  },
+  {
+   "k": "Ở nơi này, tớ đã nhìn thấy một dấu vết:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ở nơi này, tớ đã nhìn thấy một dấu vết: "
+  },
+  {
+   "k": "Tớ sẽ tìm vật chứng để kiểm tra điều mình vừa thấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": " Tớ sẽ tìm vật chứng để kiểm tra điều mình vừa thấy."
+  },
+  {
+   "k": "Đọc kỹ và so lại các trang, tớ ghi được điều này:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đọc kỹ và so lại các trang, tớ ghi được điều này: "
+  },
+  {
+   "k": "Tớ đã tìm được cuốn sách này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tớ đã tìm được cuốn sách này. "
+  },
+  {
+   "k": "SỔ TAY CỦA VY",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "SỔ TAY CỦA VY"
+  },
+  {
+   "k": "GỢI Ý",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "GỢI Ý"
+  },
+  {
+   "k": "Thành tựu bí ẩn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thành tựu bí ẩn"
+  },
+  {
+   "k": "Tiếp tục hành trình để khám phá.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếp tục hành trình để khám phá."
+  },
+  {
+   "k": "HÀNH TRÌNH ĐỒNG CHAY",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "HÀNH TRÌNH ĐỒNG CHAY"
+  },
+  {
+   "k": "Quay lại menu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quay lại menu"
+  },
+  {
+   "k": "Đã tìm đủ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã tìm đủ"
+  },
+  {
+   "k": "Đang tìm",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đang tìm"
+  },
+  {
+   "k": "Cách chơi",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cách chơi"
+  },
+  {
+   "k": "Sách và câu đố",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sách và câu đố"
+  },
+  {
+   "k": "Tư liệu quanh đây",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tư liệu quanh đây"
+  },
+  {
+   "k": "Ký ức di vật",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ký ức di vật"
+  },
+  {
+   "k": "Thành tựu (",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thành tựu ("
+  },
+  {
+   "k": "Âm thanh: BẬT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Âm thanh: BẬT"
+  },
+  {
+   "k": "Âm thanh: TẮT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Âm thanh: TẮT"
+  },
+  {
+   "k": "Đèn và chớp: BẬT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đèn và chớp: BẬT"
+  },
+  {
+   "k": "Đèn và chớp: TẮT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đèn và chớp: TẮT"
+  },
+  {
+   "k": "Tự động",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tự động"
+  },
+  {
+   "k": "Vừa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vừa"
+  },
+  {
+   "k": "Thấp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thấp"
+  },
+  {
+   "k": "Hiệu ứng hình ảnh:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hiệu ứng hình ảnh: "
+  },
+  {
+   "k": "Tiếng Việt",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếng Việt"
+  },
+  {
+   "k": "Ngôn ngữ:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngôn ngữ: "
+  },
+  {
+   "k": "Bắt đầu lại từ đầu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bắt đầu lại từ đầu"
+  },
+  {
+   "k": "Bạn có chắc muốn bắt đầu một lần điều tra mới?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bạn có chắc muốn bắt đầu một lần điều tra mới?"
+  },
+  {
+   "k": "Về màn hình chính",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Về màn hình chính"
+  },
+  {
+   "k": "Đọc:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đọc: "
+  },
+  {
+   "k": "Nhật ký",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhật ký"
+  },
+  {
+   "k": "Chọn nơi bạn muốn xem trong cảnh hiện tại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Điểm tương tác</h2><p>Chọn nơi bạn muốn xem trong cảnh hiện tại.</p><div id=\"point-actions\" class=\"modal-buttons point-actions\"></div>"
+  }
+ ]
+}

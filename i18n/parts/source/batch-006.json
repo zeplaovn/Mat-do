@@ -1,0 +1,566 @@
+{
+ "batch": 6,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Lối tới nền đá cũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lối tới nền đá cũ"
+  },
+  {
+   "k": "Nền tế cũ trong rừng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nền tế cũ trong rừng"
+  },
+  {
+   "k": "CHƯƠNG 12 · DẤU VẾT CŨ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CHƯƠNG 12 · DẤU VẾT CŨ"
+  },
+  {
+   "k": "RỪNG THIÊNG · SƯƠNG SỚM",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "RỪNG THIÊNG · SƯƠNG SỚM"
+  },
+  {
+   "k": "Nền đá phủ rêu nằm khuất sau rễ cây.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nền đá phủ rêu nằm khuất sau rễ cây."
+  },
+  {
+   "k": "Những phiến đá nứt và một khe hẹp tối om dưới nền.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những phiến đá nứt và một khe hẹp tối om dưới nền."
+  },
+  {
+   "k": "Ở đây từng có người làm lễ. Khe dưới nền đá bị che gần kín.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ở đây từng có người làm lễ. Khe dưới nền đá bị che gần kín."
+  },
+  {
+   "k": "Khe đá dưới nền",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khe đá dưới nền"
+  },
+  {
+   "k": "Vòng đá phủ rêu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vòng đá phủ rêu"
+  },
+  {
+   "k": "Đối chiếu những ghi chép",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đối chiếu những ghi chép"
+  },
+  {
+   "k": "Trở lại lối rừng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trở lại lối rừng"
+  },
+  {
+   "k": ". Tên đã được trả lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": ". Tên đã được trả lại."
+  },
+  {
+   "k": "Bức tranh có hai người nắm tay nhau. Nét bút trẻ con đã nhòe, nhưng có vẻ người phụ nữ rất quan trọng với em.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bức tranh có hai người nắm tay nhau. Nét bút trẻ con đã nhòe, nhưng có vẻ người phụ nữ rất quan trọng với em."
+  },
+  {
+   "k": "Sổ ghi vật tư đưa xuống hầm. Có những dòng đã bị sửa; mình cần đọc kỹ hơn khi biết chuyện gì xảy ra.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sổ ghi vật tư đưa xuống hầm. Có những dòng đã bị sửa; mình cần đọc kỹ hơn khi biết chuyện gì xảy ra."
+  },
+  {
+   "k": "Các vạch phấn được xếp thành nhóm. Dưới đó còn vài nét chữ đã mờ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Các vạch phấn được xếp thành nhóm. Dưới đó còn vài nét chữ đã mờ."
+  },
+  {
+   "k": ". Tên đã được ghi vào sổ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": ". Tên đã được ghi vào sổ."
+  },
+  {
+   "k": "Cái tên:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cái tên: "
+  },
+  {
+   "k": ". Tìm thấy ở",
+   "files": [
+    "game.js"
+   ],
+   "ctx": ". Tìm thấy ở "
+  },
+  {
+   "k": "Mình vẫn cần tìm những cái tên còn lại, chị ạ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình vẫn cần tìm những cái tên còn lại, chị ạ."
+  },
+  {
+   "k": "Đã tìm đủ tên rồi. Chị lấy nhang ở miếu cây đa, rồi ra vườn sau, họ đang đợi chị khấn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã tìm đủ tên rồi. Chị lấy nhang ở miếu cây đa, rồi ra vườn sau, họ đang đợi chị khấn."
+  },
+  {
+   "k": "Nhang đã cháy hết. Những cái tên đã được trả lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhang đã cháy hết. Những cái tên đã được trả lại."
+  },
+  {
+   "k": "Những nấm mộ không bia. Có lẽ ai đó vẫn đến thắp nhang.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những nấm mộ không bia. Có lẽ ai đó vẫn đến thắp nhang."
+  },
+  {
+   "k": "VƯỜN SAU",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "VƯỜN SAU"
+  },
+  {
+   "k": "Đã hiểu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã hiểu"
+  },
+  {
+   "k": "Có đủ tên rồi, nhưng chưa có nhang. Bà Tám để dành nhang trong miếu cây đa, chỗ bát hương ven rừng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Có đủ tên rồi, nhưng chưa có nhang. Bà Tám để dành nhang trong miếu cây đa, chỗ bát hương ven rừng."
+  },
+  {
+   "k": "Mình chọn bó nhang trong túi đồ, rồi chạm vào các nấm mộ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình chọn bó nhang trong túi đồ, rồi chạm vào các nấm mộ."
+  },
+  {
+   "k": "Vườn mộ sau biệt thự",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vườn mộ sau biệt thự"
+  },
+  {
+   "k": "CÂU ĐỐ · NHỮNG CÁI TÊN",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · NHỮNG CÁI TÊN"
+  },
+  {
+   "k": "Nén nhang không bén lửa. Chưa đúng người.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nén nhang không bén lửa. Chưa đúng người."
+  },
+  {
+   "k": "Những cái tên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những cái tên"
+  },
+  {
+   "k": "Bình, Nụ, Quyên, Thành, Giáp. Nhang bén lửa khi tên của từng người được đọc lên. Cổng sắt đã mở.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bình, Nụ, Quyên, Thành, Giáp. Nhang bén lửa khi tên của từng người được đọc lên. Cổng sắt đã mở."
+  },
+  {
+   "k": "Bình. Nụ. Quyên. Thành. Giáp. Tên các bác, cháu đã gọi đủ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bình. Nụ. Quyên. Thành. Giáp. Tên các bác, cháu đã gọi đủ."
+  },
+  {
+   "k": "Họ đang cười kìa chị. Em chưa thấy bác Bình cười bao giờ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Họ đang cười kìa chị. Em chưa thấy bác Bình cười bao giờ."
+  },
+  {
+   "k": "Khói nhang bay lên rồi. Thơm quá. Hình như cả căn nhà nhẹ đi nhiều lắm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khói nhang bay lên rồi. Thơm quá. Hình như cả căn nhà nhẹ đi nhiều lắm."
+  },
+  {
+   "k": "Cổng mở rồi. Chị mang các bác ra ngoài nhé. Và nhớ kể lại chuyện của em bằng cái tên của em.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cổng mở rồi. Chị mang các bác ra ngoài nhé. Và nhớ kể lại chuyện của em bằng cái tên của em."
+  },
+  {
+   "k": "Mình hứa. Đi thôi. Lần này đi hết con đường, không bỏ ai lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình hứa. Đi thôi. Lần này đi hết con đường, không bỏ ai lại."
+  },
+  {
+   "k": "Két đã mở. Nhật ký của ông Hưng đã được ghi lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Két đã mở. Nhật ký của ông Hưng đã được ghi lại."
+  },
+  {
+   "k": "Két sắt sau bức ảnh",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Két sắt sau bức ảnh"
+  },
+  {
+   "k": "CÂU ĐỐ · KÉT SẮT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · KÉT SẮT"
+  },
+  {
+   "k": "Bấm vào từng ô số. Dưới các ô có khắc một năm, năm mà ông Hưng không bao giờ quên.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bấm vào từng ô số. Dưới các ô có khắc một năm, năm mà ông Hưng không bao giờ quên."
+  },
+  {
+   "k": "Nhật ký ông Hưng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhật ký ông Hưng"
+  },
+  {
+   "k": "Trang cuối ông viết: “Ta giấu chìa kho ở chỗ ta hay ngồi hóng gió, nơi nhìn xuống cả làng. Ta biết ta sẽ không bao giờ dám mở nó.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trang cuối ông viết: “Ta giấu chìa kho ở chỗ ta hay ngồi hóng gió, nơi nhìn xuống cả làng. Ta biết ta sẽ không bao giờ dám mở nó.”"
+  },
+  {
+   "k": "Trong két chỉ có một cuốn nhật ký mỏng. Trang cuối...",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong két chỉ có một cuốn nhật ký mỏng. Trang cuối..."
+  },
+  {
+   "k": "“Ta giấu chìa kho ở chỗ ta hay ngồi hóng gió, nơi nhìn xuống cả làng.” Ông ấy biết mình sai, mà vẫn không dám mở.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "“Ta giấu chìa kho ở chỗ ta hay ngồi hóng gió, nơi nhìn xuống cả làng.” Ông ấy biết mình sai, mà vẫn không dám mở."
+  },
+  {
+   "k": "Cha em ngồi ở ban công mỗi tối. Chiếc ghế bập bênh, chị nhớ nhé.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cha em ngồi ở ban công mỗi tối. Chiếc ghế bập bênh, chị nhớ nhé."
+  },
+  {
+   "k": "Nghe cả tiếng gọi mà vẫn không mở cửa. Tớ chẳng thấy thương ông ta chút nào.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nghe cả tiếng gọi mà vẫn không mở cửa. Tớ chẳng thấy thương ông ta chút nào."
+  },
+  {
+   "k": "Chuyến đi năm 2026",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chuyến đi năm 2026"
+  },
+  {
+   "k": "Khôi, Vũ, Hà, Chi và Vy đến Đồng Chay để tìm hiểu chuyện năm xưa của biệt thự Vân Hòa qua các bài báo thời ấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khôi, Vũ, Hà, Chi và Vy đến Đồng Chay để tìm hiểu chuyện năm xưa của biệt thự Vân Hòa qua các bài báo thời ấy."
+  },
+  {
+   "k": "Ba bài báo cũ (1986, 1988, 1989)",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ba bài báo cũ (1986, 1988, 1989)"
+  },
+  {
+   "k": "Tin ngắn về lễ cầu mưa ở Đồng Chay (1986) có nhắc ông Hưng ở biệt thự Vân Hòa. Bài năm 1988 nói gia chủ khóa cổng rồi rời đi. Bài năm 1989 viết về ngôi nhà bỏ hoang trên đồi. Không bài nào nêu rõ chuyện gì đã xảy ra; người viết cũng không ghi nguồn tin.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tin ngắn về lễ cầu mưa ở Đồng Chay (1986) có nhắc ông Hưng ở biệt thự Vân Hòa. Bài năm 1988 nói gia chủ khóa cổng rồi rời đi. Bài năm 1989 viết về ngôi nhà bỏ hoang trên đồi. Không bài nào nêu rõ chuyện gì đã xảy ra; người viết cũng không ghi nguồn tin."
+  },
+  {
+   "k": "Ông Tùng ngồi đối diện trong căn nhà bên bàn thờ chị Quế",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ông Tùng ngồi đối diện trong căn nhà bên bàn thờ chị Quế"
+  },
+  {
+   "k": "Bà bán nước ngồi đối diện bên bàn trà",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà bán nước ngồi đối diện bên bàn trà"
+  },
+  {
+   "k": "Thầy Nguyên ngồi đối diện bên bàn xem quẻ và ba đồng xu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thầy Nguyên ngồi đối diện bên bàn xem quẻ và ba đồng xu"
+  },
+  {
+   "k": "Bát hương trước miếu cây đa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bát hương trước miếu cây đa"
+  },
+  {
+   "k": "Cột mốc đá có bốn vòng khắc",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cột mốc đá có bốn vòng khắc"
+  },
+  {
+   "k": "Nhìn gần miệng giếng đá trong sân",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhìn gần miệng giếng đá trong sân"
+  },
+  {
+   "k": "Ông Tùng đứng ở cánh cửa hé mở",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ông Tùng đứng ở cánh cửa hé mở"
+  },
+  {
+   "k": "Bà Tám ngồi bên bếp than trong đêm năm 1988",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà Tám ngồi bên bếp than trong đêm năm 1988"
+  },
+  {
+   "k": "Bà Tám đã tỉnh và nhìn về phía Nhài",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà Tám đã tỉnh và nhìn về phía Nhài"
+  },
+  {
+   "k": "Chiếc muôi cơm gãy nằm trong tro bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc muôi cơm gãy nằm trong tro bếp"
+  },
+  {
+   "k": "Chiếc gương cũ phản chiếu căn phòng trẻ trống",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc gương cũ phản chiếu căn phòng trẻ trống"
+  },
+  {
+   "k": "Hộp nhạc cũ trên nền phòng trẻ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hộp nhạc cũ trên nền phòng trẻ"
+  },
+  {
+   "k": "Mâm gỗ trước miếu cây đa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mâm gỗ trước miếu cây đa"
+  },
+  {
+   "k": "Vòng hoa nhài trên nắp giếng bị trám",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vòng hoa nhài trên nắp giếng bị trám"
+  },
+  {
+   "k": "Qua gốc đa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Qua gốc đa"
+  },
+  {
+   "k": "Tìm đến miếu ven rừng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tìm đến miếu ven rừng."
+  },
+  {
+   "k": "Dấu miếu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dấu miếu"
+  },
+  {
+   "k": "Mở cơ cấu ở cột mốc bằng manh mối từ miếu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mở cơ cấu ở cột mốc bằng manh mối từ miếu."
+  },
+  {
+   "k": "Cánh cổng Vân Hòa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cánh cổng Vân Hòa"
+  },
+  {
+   "k": "Mở cổng biệt thự.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mở cổng biệt thự."
+  },
+  {
+   "k": "Dấu vết còn lại",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dấu vết còn lại"
+  },
+  {
+   "k": "Tìm được một di vật.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tìm được một di vật."
+  },
+  {
+   "k": "Những dấu vết",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những dấu vết"
+  },
+  {
+   "k": "Tìm đủ các di vật.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tìm đủ các di vật."
+  },
+  {
+   "k": "Lắng nghe ký ức",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lắng nghe ký ức"
+  },
+  {
+   "k": "Chứng kiến một ký ức của di vật.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chứng kiến một ký ức của di vật."
+  },
+  {
+   "k": "Người đọc dấu xưa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Người đọc dấu xưa"
+  },
+  {
+   "k": "Giải các câu đố từ tư liệu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giải các câu đố từ tư liệu."
+  },
+  {
+   "k": "Một cái tên được gọi",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một cái tên được gọi"
+  },
+  {
+   "k": "Tìm lại tên của em bé.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tìm lại tên của em bé."
+  }
+ ]
+}

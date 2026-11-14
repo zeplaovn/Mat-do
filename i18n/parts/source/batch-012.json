@@ -1,0 +1,566 @@
+{
+ "batch": 12,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Cha! Cha ơi!",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cha! Cha ơi!"
+  },
+  {
+   "k": "Ngoài sân có thầy lo rồi. Con ở yên đó.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngoài sân có thầy lo rồi. Con ở yên đó."
+  },
+  {
+   "k": "Không ai mở cánh cửa ấy. Nhài ngồi bệt trên sàn, nghe tiếng gõ nhỏ dần.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Không ai mở cánh cửa ấy. Nhài ngồi bệt trên sàn, nghe tiếng gõ nhỏ dần."
+  },
+  {
+   "k": "Trong Huyền Ấn Bí Lục có điều cần nhìn kỹ. Chớ nóng vội với thứ bị giữ dưới giếng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong Huyền Ấn Bí Lục có điều cần nhìn kỹ. Chớ nóng vội với thứ bị giữ dưới giếng."
+  },
+  {
+   "k": "Các cháu đã đọc được trang ẩn của Huyền Ấn Bí Lục. Hãy xem lại ghi chép trong Nhật ký.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Các cháu đã đọc được trang ẩn của Huyền Ấn Bí Lục. Hãy xem lại ghi chép trong Nhật ký."
+  },
+  {
+   "k": "Thầy Nguyên chìa một cuốn bí lục đã sờn. Một trang gần cuối trắng khác thường.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thầy Nguyên chìa một cuốn bí lục đã sờn. Một trang gần cuối trắng khác thường."
+  },
+  {
+   "k": "Nhận cuốn sách",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhận cuốn sách"
+  },
+  {
+   "k": "Thầy Nguyên đưa một cuốn bí lục cũ. Ông dặn đừng vội tin một câu chuyện chỉ vì nó đã được kể lâu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thầy Nguyên đưa một cuốn bí lục cũ. Ông dặn đừng vội tin một câu chuyện chỉ vì nó đã được kể lâu."
+  },
+  {
+   "k": "Các cháu cứ giữ lấy. Khi cần, hãy nhìn cho kỹ trang giấy trắng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Các cháu cứ giữ lấy. Khi cần, hãy nhìn cho kỹ trang giấy trắng."
+  },
+  {
+   "k": "Chưa nhận sách",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chưa nhận sách"
+  },
+  {
+   "k": "Không sao. Nếu đổi ý, các cháu cứ quay lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Không sao. Nếu đổi ý, các cháu cứ quay lại."
+  },
+  {
+   "k": "LỰA CHỌN · CUỐN SÁCH",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "LỰA CHỌN · CUỐN SÁCH"
+  },
+  {
+   "k": "Quẻ trước đã. Không gấp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quẻ trước đã. Không gấp."
+  },
+  {
+   "k": "Chữ ký Lục Táng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chữ ký Lục Táng"
+  },
+  {
+   "k": "Ghi chép ở nền tế có bút tích Lục Táng giống lời ghi trong cuốn sách thầy Nguyên đưa. Cả nhóm hỏi ông về người viết và chiếc ấn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ghi chép ở nền tế có bút tích Lục Táng giống lời ghi trong cuốn sách thầy Nguyên đưa. Cả nhóm hỏi ông về người viết và chiếc ấn."
+  },
+  {
+   "k": "Đưa ghi chép cho thầy Nguyên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đưa ghi chép cho thầy Nguyên"
+  },
+  {
+   "k": "Lục Táng là ai? Vì sao thầy giữ lại những trang về Mai?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lục Táng là ai? Vì sao thầy giữ lại những trang về Mai?"
+  },
+  {
+   "k": "Là tôi. Tôi giữ tư liệu của thầy Huyền Tĩnh. Tôi biết thầy từng nhận tiền để giam Mai, nhưng đã im lặng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Là tôi. Tôi giữ tư liệu của thầy Huyền Tĩnh. Tôi biết thầy từng nhận tiền để giam Mai, nhưng đã im lặng."
+  },
+  {
+   "k": "Tôi tưởng giữ chiếc ấn là đủ, không dám công bố việc thầy làm. Bây giờ tôi sẽ giao toàn bộ ghi chép để gia đình và người làng biết sự thật.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tôi tưởng giữ chiếc ấn là đủ, không dám công bố việc thầy làm. Bây giờ tôi sẽ giao toàn bộ ghi chép để gia đình và người làng biết sự thật."
+  },
+  {
+   "k": "Ông cần nói rõ điều ông biết và điều ông chỉ nghe kể. Những người đã mất xứng đáng được trả lại sự thật.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ông cần nói rõ điều ông biết và điều ông chỉ nghe kể. Những người đã mất xứng đáng được trả lại sự thật."
+  },
+  {
+   "k": "Lời thầy Nguyên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lời thầy Nguyên"
+  },
+  {
+   "k": "Nguyên xác nhận ông dùng bút danh Lục Táng, giữ ghi chép của Huyền Tĩnh và đã im lặng về việc người thầy nhận tiền trấn Mai. Ông đồng ý công bố tư liệu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nguyên xác nhận ông dùng bút danh Lục Táng, giữ ghi chép của Huyền Tĩnh và đã im lặng về việc người thầy nhận tiền trấn Mai. Ông đồng ý công bố tư liệu."
+  },
+  {
+   "k": "Hỏi sau",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hỏi sau"
+  },
+  {
+   "k": "ĐỐI CHẤT · THẦY NGUYÊN",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐỐI CHẤT · THẦY NGUYÊN"
+  },
+  {
+   "k": "Một đồ hình trấn ấn vẽ cách dùng móc kéo vật khỏi khe giếng, nhưng không giải thích hậu quả. Trang gần cuối trắng tinh, mép giấy nhăn như từng thấm nước.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một đồ hình trấn ấn vẽ cách dùng móc kéo vật khỏi khe giếng, nhưng không giải thích hậu quả. Trang gần cuối trắng tinh, mép giấy nhăn như từng thấm nước."
+  },
+  {
+   "k": "Cầm sách để đối chiếu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cầm sách để đối chiếu"
+  },
+  {
+   "k": "Đang cầm Huyền Ấn Bí Lục.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đang cầm Huyền Ấn Bí Lục."
+  },
+  {
+   "k": "Cất sách",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cất sách"
+  },
+  {
+   "k": "TƯ LIỆU · SÁCH CŨ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "TƯ LIỆU · SÁCH CŨ"
+  },
+  {
+   "k": "Ngọn đèn thứ ba vẫn cháy, dù không ai thắp. Bàn lễ vẫn còn một chỗ trống.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngọn đèn thứ ba vẫn cháy, dù không ai thắp. Bàn lễ vẫn còn một chỗ trống."
+  },
+  {
+   "k": "Trên bàn có cơm, nước, hoa và ba chỗ để đèn. Hai ngọn đang cháy, một ngọn còn tắt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trên bàn có cơm, nước, hoa và ba chỗ để đèn. Hai ngọn đang cháy, một ngọn còn tắt."
+  },
+  {
+   "k": "Miếu không ai trông, vậy ai thắp hai ngọn kia?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Miếu không ai trông, vậy ai thắp hai ngọn kia?"
+  },
+  {
+   "k": "Ngọn đèn thứ ba bật cháy, không ai chạm vào. Không có gió. Tiếng côn trùng im bặt một nhịp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngọn đèn thứ ba bật cháy, không ai chạm vào. Không có gió. Tiếng côn trùng im bặt một nhịp."
+  },
+  {
+   "k": "...Tớ không thích chuyện này chút nào.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "...Tớ không thích chuyện này chút nào."
+  },
+  {
+   "k": "Mình xem quanh miếu thử, nhưng đừng tách nhau.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình xem quanh miếu thử, nhưng đừng tách nhau."
+  },
+  {
+   "k": "Ngọn đèn tự cháy",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngọn đèn tự cháy"
+  },
+  {
+   "k": "Trên bàn lễ trước miếu, ngọn đèn còn tắt bỗng tự cháy khi cả nhóm đứng trước bàn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trên bàn lễ trước miếu, ngọn đèn còn tắt bỗng tự cháy khi cả nhóm đứng trước bàn."
+  },
+  {
+   "k": "Miếng đồng nhỏ lạnh ngắt trong tay con.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Miếng đồng nhỏ lạnh ngắt trong tay con."
+  },
+  {
+   "k": "Những thứ bên miệng giếng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những thứ bên miệng giếng"
+  },
+  {
+   "k": "Thầy Chân để lại một vật đồng nhỏ bên ngoài. Vật này không phải chiếc ấn cổ đang cắm sâu dưới giếng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thầy Chân để lại một vật đồng nhỏ bên ngoài. Vật này không phải chiếc ấn cổ đang cắm sâu dưới giếng."
+  },
+  {
+   "k": "Cầm miếng đồng nhỏ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cầm miếng đồng nhỏ"
+  },
+  {
+   "k": "Con mang thứ này đi tìm người lớn. Con phải giúp các bác mở cửa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con mang thứ này đi tìm người lớn. Con phải giúp các bác mở cửa."
+  },
+  {
+   "k": "Chưa chạm vào",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chưa chạm vào"
+  },
+  {
+   "k": "KÝ ỨC · SÂN GIẾNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "KÝ ỨC · SÂN GIẾNG"
+  },
+  {
+   "k": "Nhài bám tường chạy vòng. Một bóng người hiện ra trước mặt, khiến em giật lùi về phía giếng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhài bám tường chạy vòng. Một bóng người hiện ra trước mặt, khiến em giật lùi về phía giếng."
+  },
+  {
+   "k": "Nhài chạy ngang sân, nơi nắp giếng vẫn còn mở.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhài chạy ngang sân, nơi nắp giếng vẫn còn mở."
+  },
+  {
+   "k": "Gần sáng, ông Hưng mới mở cửa hầm. Những người bên trong đã chết.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Gần sáng, ông Hưng mới mở cửa hầm. Những người bên trong đã chết."
+  },
+  {
+   "k": "Ông tìm thấy Nhài dưới giếng, chôn con gần gốc cây rồi dựng chuyện bệnh tật. Cửa hầm và miệng giếng về sau bị bịt lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ông tìm thấy Nhài dưới giếng, chôn con gần gốc cây rồi dựng chuyện bệnh tật. Cửa hầm và miệng giếng về sau bị bịt lại."
+  },
+  {
+   "k": "Em chạy về phía ánh đèn ấy trong mơ, nhưng không bao giờ tới được.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Em chạy về phía ánh đèn ấy trong mơ, nhưng không bao giờ tới được."
+  },
+  {
+   "k": "Những gì Nhài nhớ đêm ấy",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những gì Nhài nhớ đêm ấy"
+  },
+  {
+   "k": "CÂU ĐỐ · KÝ ỨC",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · KÝ ỨC"
+  },
+  {
+   "k": "Sắp lại những việc Nhài đã trải qua.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sắp lại những việc Nhài đã trải qua."
+  },
+  {
+   "k": "Bấm hai mục để đổi chỗ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bấm hai mục để đổi chỗ."
+  },
+  {
+   "k": "Em nghe tiếng kêu cứu sau cửa hầm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Em nghe tiếng kêu cứu sau cửa hầm."
+  },
+  {
+   "k": "Em cầm vật đồng nhỏ đặt ngoài thành giếng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Em cầm vật đồng nhỏ đặt ngoài thành giếng."
+  },
+  {
+   "k": "Em chạy trong mưa và ngã xuống giếng đang mở.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Em chạy trong mưa và ngã xuống giếng đang mở."
+  },
+  {
+   "k": "Tiếng kêu ở cửa hầm đến trước.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếng kêu ở cửa hầm đến trước."
+  },
+  {
+   "k": "Em cầm vật nhỏ trước khi chạy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Em cầm vật nhỏ trước khi chạy."
+  },
+  {
+   "k": "Nghe tiếng gọi, cầm vật đồng, rồi ngã xuống giếng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nghe tiếng gọi, cầm vật đồng, rồi ngã xuống giếng."
+  },
+  {
+   "k": "Nhài nghe tiếng kêu cứu từ hầm và cố tìm người giúp. Em cầm một vật đồng nhỏ chạy trong mưa rồi rơi xuống giếng đang mở. Ấn cổ vẫn ở sâu dưới giếng. Có một lời cô Quyên gọi theo cần được đối chiếu với giấy tờ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhài nghe tiếng kêu cứu từ hầm và cố tìm người giúp. Em cầm một vật đồng nhỏ chạy trong mưa rồi rơi xuống giếng đang mở. Ấn cổ vẫn ở sâu dưới giếng. Có một lời cô Quyên gọi theo cần được đối chiếu với giấy tờ."
+  },
+  {
+   "k": "Mình cần đối chiếu lời cô Quyên với giấy tờ còn lại. Em không phải tự đoán một mình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình cần đối chiếu lời cô Quyên với giấy tờ còn lại. Em không phải tự đoán một mình."
+  },
+  {
+   "k": "Chi xem lại tấm ảnh vừa chụp ở giếng. Trên mặt ảnh hiện ra hai dáng người đứng cạnh nhau.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chi xem lại tấm ảnh vừa chụp ở giếng. Trên mặt ảnh hiện ra hai dáng người đứng cạnh nhau."
+  },
+  {
+   "k": "Hai bóng bên giếng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hai bóng bên giếng"
+  },
+  {
+   "k": "Trong ảnh của Chi có hai dáng người, một cao và một nhỏ. Chưa rõ người còn lại là ai; cần đối chiếu thêm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong ảnh của Chi có hai dáng người, một cao và một nhỏ. Chưa rõ người còn lại là ai; cần đối chiếu thêm."
+  },
+  {
+   "k": "Ảnh chiếc giếng với hai bóng người",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ảnh chiếc giếng với hai bóng người"
+  },
+  {
+   "k": "Cha em vẫn mang hoa ra giếng. Em không biết ông có nhớ em không.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cha em vẫn mang hoa ra giếng. Em không biết ông có nhớ em không."
+  },
+  {
+   "k": "Nắp giếng đã bịt, nhưng ở khe đá có mặt nước phản chiếu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nắp giếng đã bịt, nhưng ở khe đá có mặt nước phản chiếu."
+  },
+  {
+   "k": "Mình chưa biết bên dưới có gì. Đừng phá bừa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình chưa biết bên dưới có gì. Đừng phá bừa."
+  },
+  {
+   "k": "Chữ hiện trên mặt nước · Huyền Ấn Bí Lục",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chữ hiện trên mặt nước · Huyền Ấn Bí Lục"
+  },
+  {
+   "k": "Trang trắng phản chiếu: “Tìm người mẹ bên dòng nước bị chặn, đứa trẻ dưới gốc đa và người con ở khe đá. Gọi đúng tên trước khi tháo vật giữ.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trang trắng phản chiếu: “Tìm người mẹ bên dòng nước bị chặn, đứa trẻ dưới gốc đa và người con ở khe đá. Gọi đúng tên trước khi tháo vật giữ.”"
+  },
+  {
+   "k": "Trong sách vẫn là trang trắng, nhưng trên mặt nước có chữ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong sách vẫn là trang trắng, nhưng trên mặt nước có chữ."
+  },
+  {
+   "k": "Mẹ bên dòng nước bị chặn, đứa trẻ ở gốc đa, người con ở khe đá... Mình phải tìm bằng chứng, không chỉ đoán.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mẹ bên dòng nước bị chặn, đứa trẻ ở gốc đa, người con ở khe đá... Mình phải tìm bằng chứng, không chỉ đoán."
+  },
+  {
+   "k": "Soi trang trắng của cuốn sách xuống nước",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Soi trang trắng của cuốn sách xuống nước"
+  },
+  {
+   "k": "Quan sát dấu phản chiếu của mặt ấn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quan sát dấu phản chiếu của mặt ấn"
+  },
+  {
+   "k": "Dấu dưới ấn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dấu dưới ấn"
+  },
+  {
+   "k": "Nhìn qua mặt nước, đáy ấn có nét chỉ về nền đá cũ. Ấn vẫn được giữ nguyên trong khe.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhìn qua mặt nước, đáy ấn có nét chỉ về nền đá cũ. Ấn vẫn được giữ nguyên trong khe."
+  },
+  {
+   "k": "Các nét chỉ về nền đá trong rừng. Mình chưa cần nhổ ấn để đọc chúng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Các nét chỉ về nền đá trong rừng. Mình chưa cần nhổ ấn để đọc chúng."
+  },
+  {
+   "k": "Tháo ấn sau khi hoàn tất nghi lễ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tháo ấn sau khi hoàn tất nghi lễ"
+  },
+  {
+   "k": "Ấn đồng được tháo",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ấn đồng được tháo"
+  },
+  {
+   "k": "Sau khi trả tên và đối chiếu chứng cứ, cả nhóm tháo ấn khỏi khe đá.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sau khi trả tên và đối chiếu chứng cứ, cả nhóm tháo ấn khỏi khe đá."
+  }
+ ]
+}

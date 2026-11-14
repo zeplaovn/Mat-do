@@ -1,0 +1,566 @@
+{
+ "batch": 7,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Đêm không bị quên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đêm không bị quên"
+  },
+  {
+   "k": "Đi qua ký ức năm 1988.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đi qua ký ức năm 1988."
+  },
+  {
+   "k": "Gọi lại những cái tên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Gọi lại những cái tên"
+  },
+  {
+   "k": "Trả lại tên cho những người đã khuất.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trả lại tên cho những người đã khuất."
+  },
+  {
+   "k": "Một con đường trở về",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một con đường trở về"
+  },
+  {
+   "k": "Hoàn thành một kết thúc.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hoàn thành một kết thúc."
+  },
+  {
+   "k": "Bốn ngả đường",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bốn ngả đường"
+  },
+  {
+   "k": "Khám phá đủ bốn kết thúc.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khám phá đủ bốn kết thúc."
+  },
+  {
+   "k": "Thành tựu:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thành tựu: "
+  },
+  {
+   "k": "Lưu trữ:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lưu trữ: "
+  },
+  {
+   "k": "sinh năm 1962",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "sinh năm 1962"
+  },
+  {
+   "k": "sinh năm 1971",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "sinh năm 1971"
+  },
+  {
+   "k": "con gái út ông Hưng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "con gái út ông Hưng"
+  },
+  {
+   "k": "được ghi là con của vợ chồng Hưng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "được ghi là con của vợ chồng Hưng"
+  },
+  {
+   "k": "bế cháu Nhài về phía giếng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "bế cháu Nhài về phía giếng"
+  },
+  {
+   "k": "Bà Tám viết: đêm 17/3/1988 bà nghe tiếng cầu cứu từ hầm nhưng sợ hãi, không dám lên tiếng. Bà giữ lại lời khai để sự thật không bị chôn vùi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà Tám viết: đêm 17/3/1988 bà nghe tiếng cầu cứu từ hầm nhưng sợ hãi, không dám lên tiếng. Bà giữ lại lời khai để sự thật không bị chôn vùi."
+  },
+  {
+   "k": "Đã dùng hết:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã dùng hết: "
+  },
+  {
+   "k": "Chiếc khăn bên giếng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc khăn bên giếng"
+  },
+  {
+   "k": "Ký ức năm 1988 bên miệng giếng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ký ức năm 1988 bên miệng giếng"
+  },
+  {
+   "k": "Chiếc muôi trong bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc muôi trong bếp"
+  },
+  {
+   "k": "Ký ức năm 1988 trong gian bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ký ức năm 1988 trong gian bếp"
+  },
+  {
+   "k": "Chiếc trâm và căn phòng trẻ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc trâm và căn phòng trẻ"
+  },
+  {
+   "k": "Ký ức năm 1988 trong căn phòng trẻ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ký ức năm 1988 trong căn phòng trẻ"
+  },
+  {
+   "k": "Những trang sổ bị sửa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những trang sổ bị sửa"
+  },
+  {
+   "k": "Ký ức năm 1988 ở bàn sổ sách",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ký ức năm 1988 ở bàn sổ sách"
+  },
+  {
+   "k": "Những người trong hầm",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những người trong hầm"
+  },
+  {
+   "k": "Ký ức năm 1988 trong gian hầm",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ký ức năm 1988 trong gian hầm"
+  },
+  {
+   "k": "Quế và Tùng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quế và Tùng"
+  },
+  {
+   "k": "Ký ức năm 1986 của hai chị em",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ký ức năm 1986 của hai chị em"
+  },
+  {
+   "k": "Bé gái",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bé gái"
+  },
+  {
+   "k": "Ông chủ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ông chủ"
+  },
+  {
+   "k": "Con à, có chuyện",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con à, có chuyện"
+  },
+  {
+   "k": "Khoan, con bé đâu rồi?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khoan, con bé đâu rồi?"
+  },
+  {
+   "k": "Con bé còn ở ngoài đó",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con bé còn ở ngoài đó"
+  },
+  {
+   "k": "cô bé",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "cô bé"
+  },
+  {
+   "k": "HỒI ỨC ·",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "HỒI ỨC · "
+  },
+  {
+   "k": "Đêm 17 tháng 3 · Theo góc nhìn của Nhài",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đêm 17 tháng 3 · Theo góc nhìn của Nhài"
+  },
+  {
+   "k": "Ký ức ·",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ký ức · "
+  },
+  {
+   "k": "Một ký ức gắn với di vật đã hiện ra. Điều đã thấy cần được đối chiếu với vật chứng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một ký ức gắn với di vật đã hiện ra. Điều đã thấy cần được đối chiếu với vật chứng."
+  },
+  {
+   "k": "Ánh sáng trong sân tắt phụt",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ánh sáng trong sân tắt phụt"
+  },
+  {
+   "k": "Tiếng bếp tắt đi",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếng bếp tắt đi"
+  },
+  {
+   "k": "Ký ức tan dần",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ký ức tan dần"
+  },
+  {
+   "k": "Vy trở lại phòng làm việc",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vy trở lại phòng làm việc"
+  },
+  {
+   "k": "Ký ức qua di vật",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Ký ức qua di vật</h2><p>Chạm vào một di vật để xem lại ký ức gắn với nó.</p><div id=\"memory-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Chạm vào một di vật để xem lại ký ức gắn với nó.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Ký ức qua di vật</h2><p>Chạm vào một di vật để xem lại ký ức gắn với nó.</p><div id=\"memory-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "KÝ ỨC",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "KÝ ỨC"
+  },
+  {
+   "k": "Quế và Tùng · năm 1986",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quế và Tùng · năm 1986"
+  },
+  {
+   "k": "Chưa có ký ức nào để xem.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chưa có ký ức nào để xem."
+  },
+  {
+   "k": "ĐÓNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐÓNG <span>✕</span>"
+  },
+  {
+   "k": "Chân dung",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chân dung "
+  },
+  {
+   "k": "ĐÃ NHẬN DI VẬT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐÃ NHẬN DI VẬT"
+  },
+  {
+   "k": "ĐÃ NHẬN ĐƯỢC VẬT PHẨM",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐÃ NHẬN ĐƯỢC VẬT PHẨM"
+  },
+  {
+   "k": "Vuốt ngang để nhìn quanh cảnh.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vuốt ngang để nhìn quanh cảnh."
+  },
+  {
+   "k": "Cơm, nước, hoa cúc trắng. Cả ba ngọn đèn đều đã cháy. Rễ đa ôm kín bức tường miếu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cơm, nước, hoa cúc trắng. Cả ba ngọn đèn đều đã cháy. Rễ đa ôm kín bức tường miếu."
+  },
+  {
+   "k": "Hoa đại rụng trắng trên gạch. Hai ngọn đèn lồng soi nhẹ khoảng sân chùa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hoa đại rụng trắng trên gạch. Hai ngọn đèn lồng soi nhẹ khoảng sân chùa."
+  },
+  {
+   "k": "Cảnh",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cảnh "
+  },
+  {
+   "k": "CHƯƠNG 9 · ĐÊM 17/3/1988",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CHƯƠNG 9 · ĐÊM 17/3/1988"
+  },
+  {
+   "k": "CHƯƠNG 9 · BÁT CƠM NÓNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CHƯƠNG 9 · BÁT CƠM NÓNG"
+  },
+  {
+   "k": "Ngọn đèn thứ ba đang cháy",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngọn đèn thứ ba đang cháy"
+  },
+  {
+   "k": "Xem gần",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xem gần"
+  },
+  {
+   "k": "Xem gần:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xem gần: "
+  },
+  {
+   "k": "◆ Chạm vào điểm sáng vàng trong cảnh để dùng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "◆ Chạm vào điểm sáng vàng trong cảnh để dùng."
+  },
+  {
+   "k": "◇ Chưa có chỗ dùng ở cảnh này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "◇ Chưa có chỗ dùng ở cảnh này."
+  },
+  {
+   "k": "Ký ức năm 1988",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ký ức năm 1988"
+  },
+  {
+   "k": "Quan sát những gì Nhài nhìn thấy và đi theo diễn biến của đêm ấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quan sát những gì Nhài nhìn thấy và đi theo diễn biến của đêm ấy."
+  },
+  {
+   "k": "Lần theo câu chuyện trong rừng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lần theo câu chuyện trong rừng"
+  },
+  {
+   "k": "Đối chiếu lời kể với những tài liệu đã tìm được.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đối chiếu lời kể với những tài liệu đã tìm được."
+  },
+  {
+   "k": "Những người bị lãng quên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những người bị lãng quên"
+  },
+  {
+   "k": "Tiếp tục tìm tên qua các dấu vết và ghi chép.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếp tục tìm tên qua các dấu vết và ghi chép."
+  },
+  {
+   "k": "Ký ức còn dang dở",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ký ức còn dang dở"
+  },
+  {
+   "k": "Đi theo những dấu vết mới trong biệt thự.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đi theo những dấu vết mới trong biệt thự."
+  },
+  {
+   "k": "Bóng trong đại sảnh",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bóng trong đại sảnh"
+  },
+  {
+   "k": "Tìm bằng chứng trước khi đối mặt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tìm bằng chứng trước khi đối mặt."
+  },
+  {
+   "k": "Tiếng gọi trong nhà",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếng gọi trong nhà"
+  },
+  {
+   "k": "Có một câu chuyện khác chưa được kể.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Có một câu chuyện khác chưa được kể."
+  },
+  {
+   "k": "Tiếp tục điều tra",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếp tục điều tra"
+  },
+  {
+   "k": "Những dấu vết trong nhà có thể chưa nói hết sự thật.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những dấu vết trong nhà có thể chưa nói hết sự thật."
+  },
+  {
+   "k": "Đường đến Vân Hòa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đường đến Vân Hòa"
+  },
+  {
+   "k": "Khám phá Đồng Chay và con đường cũ qua rừng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khám phá Đồng Chay và con đường cũ qua rừng."
+  },
+  {
+   "k": "Điều tra biệt thự",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Điều tra biệt thự"
+  }
+ ]
+}

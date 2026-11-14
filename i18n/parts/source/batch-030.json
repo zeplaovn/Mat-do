@@ -1,0 +1,566 @@
+{
+ "batch": 30,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Một chỗ bị sửa.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"evidence-board\"><small>PHÁT HIỆN / TÀI LIỆU</small><strong>Một chỗ bị sửa.</strong><p>Phải có người đã thay đổi lời khấn. Nhưng vì sao?</p><span class=\"proof-line marked\"><i></i>Vết nối giấy khác màu</span><span class=\"found\">✓ GHI VÀO HỒ SƠ</span></div>"
+  },
+  {
+   "k": "Phải có người đã thay đổi lời khấn. Nhưng vì sao?",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"evidence-board\"><small>PHÁT HIỆN / TÀI LIỆU</small><strong>Một chỗ bị sửa.</strong><p>Phải có người đã thay đổi lời khấn. Nhưng vì sao?</p><span class=\"proof-line marked\"><i></i>Vết nối giấy khác màu</span><span class=\"found\">✓ GHI VÀO HỒ SƠ</span></div>"
+  },
+  {
+   "k": "Vết nối giấy khác màu",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"evidence-board\"><small>PHÁT HIỆN / TÀI LIỆU</small><strong>Một chỗ bị sửa.</strong><p>Phải có người đã thay đổi lời khấn. Nhưng vì sao?</p><span class=\"proof-line marked\"><i></i>Vết nối giấy khác màu</span><span class=\"found\">✓ GHI VÀO HỒ SƠ</span></div>"
+  },
+  {
+   "k": "✓ GHI VÀO HỒ SƠ",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"evidence-board\"><small>PHÁT HIỆN / TÀI LIỆU</small><strong>Một chỗ bị sửa.</strong><p>Phải có người đã thay đổi lời khấn. Nhưng vì sao?</p><span class=\"proof-line marked\"><i></i>Vết nối giấy khác màu</span><span class=\"found\">✓ GHI VÀO HỒ SƠ</span></div>"
+  },
+  {
+   "k": "Một lời cảnh báo",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"timeline-board\"><div class=\"timeline-card\"><b>1986</b><span>Một lời cảnh báo</span></div><div class=\"timeline-card\"><b>1988</b><span>Căn hầm bị khóa</span></div><div class=\"timeline-card\"><b>2026</b><span>Bạn đối chiếu chứng cứ</span></div></div>"
+  },
+  {
+   "k": "Căn hầm bị khóa",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"timeline-board\"><div class=\"timeline-card\"><b>1986</b><span>Một lời cảnh báo</span></div><div class=\"timeline-card\"><b>1988</b><span>Căn hầm bị khóa</span></div><div class=\"timeline-card\"><b>2026</b><span>Bạn đối chiếu chứng cứ</span></div></div>"
+  },
+  {
+   "k": "Bạn đối chiếu chứng cứ",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"timeline-board\"><div class=\"timeline-card\"><b>1986</b><span>Một lời cảnh báo</span></div><div class=\"timeline-card\"><b>1988</b><span>Căn hầm bị khóa</span></div><div class=\"timeline-card\"><b>2026</b><span>Bạn đối chiếu chứng cứ</span></div></div>"
+  },
+  {
+   "k": "QUYẾT ĐỊNH / MIỆNG GIẾNG",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"choice-panel\"><small>QUYẾT ĐỊNH / MIỆNG GIẾNG</small><h3>Nhổ ấn?</h3><p>Bạn vẫn chưa biết thứ gì đang bị giữ bên dưới.</p><div class=\"fake-choice danger\">Vẫn kéo ấn ra</div><div class=\"fake-choice\">Dừng lại và điều tra tiếp</div><div class=\"hover-dot\"></div></div>"
+  },
+  {
+   "k": "Bạn vẫn chưa biết thứ gì đang bị giữ bên dưới.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"choice-panel\"><small>QUYẾT ĐỊNH / MIỆNG GIẾNG</small><h3>Nhổ ấn?</h3><p>Bạn vẫn chưa biết thứ gì đang bị giữ bên dưới.</p><div class=\"fake-choice danger\">Vẫn kéo ấn ra</div><div class=\"fake-choice\">Dừng lại và điều tra tiếp</div><div class=\"hover-dot\"></div></div>"
+  },
+  {
+   "k": "Tiếp tục phát",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Tiếp tục phát"
+  },
+  {
+   "k": "Âm thanh: Tắt",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Âm thanh: Tắt"
+  },
+  {
+   "k": "Bật tiếng",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Bật tiếng"
+  },
+  {
+   "k": "Đã chép liên kết",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Đã chép liên kết"
+  },
+  {
+   "k": "Chiếc ấn bật khỏi khe giếng trong mưa.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Chiếc ấn bật khỏi khe giếng trong mưa."
+  },
+  {
+   "k": "Họ chỉ muốn kéo nhanh thôi. Chiếc ấn đã nhúc nhích.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Họ chỉ muốn kéo nhanh thôi. Chiếc ấn đã nhúc nhích."
+  },
+  {
+   "k": "Đèn pin, chiếc giày và hoa nhài rơi trên sân ướt.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Đèn pin, chiếc giày và hoa nhài rơi trên sân ướt."
+  },
+  {
+   "k": "Ánh đèn rơi xuống đất. Không ai kịp nhặt.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Ánh đèn rơi xuống đất. Không ai kịp nhặt."
+  },
+  {
+   "k": "Cánh cửa gỗ cài then trong căn hầm tối.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Cánh cửa gỗ cài then trong căn hầm tối."
+  },
+  {
+   "k": "Sau cánh cửa, những tiếng gõ vẫn chưa có người trả lời.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Sau cánh cửa, những tiếng gõ vẫn chưa có người trả lời."
+  },
+  {
+   "k": "Một cô gái chạy dọc hành lang trong đêm mưa.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Một cô gái chạy dọc hành lang trong đêm mưa."
+  },
+  {
+   "k": "Cô chạy, nhưng hành lang cứ dài ra mãi.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Cô chạy, nhưng hành lang cứ dài ra mãi."
+  },
+  {
+   "k": "Những bóng người mờ đứng bên giếng trong sương.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Những bóng người mờ đứng bên giếng trong sương."
+  },
+  {
+   "k": "Họ đứng đó, chờ ai đó gọi đúng tên.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Họ đứng đó, chờ ai đó gọi đúng tên."
+  },
+  {
+   "k": "Bóng người đơn độc trên con đường rừng chìm trong sương.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Bóng người đơn độc trên con đường rừng chìm trong sương."
+  },
+  {
+   "k": "Con đường biến mất trong sương. Không ai được gọi đúng tên.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Con đường biến mất trong sương. Không ai được gọi đúng tên."
+  },
+  {
+   "k": "Cổng sắt bỏ hoang mở ra con đường phủ sương.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Cổng sắt bỏ hoang mở ra con đường phủ sương."
+  },
+  {
+   "k": "Cả nhóm chọn rời khỏi biệt thự Vân Hòa.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Cả nhóm chọn rời khỏi biệt thự Vân Hòa."
+  },
+  {
+   "k": "Những bước chân lặng lẽ đi trên con đường lầy.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Những bước chân lặng lẽ đi trên con đường lầy."
+  },
+  {
+   "k": "Không ai nói gì. Họ chỉ bước.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Không ai nói gì. Họ chỉ bước."
+  },
+  {
+   "k": "Cả nhóm đi qua cầu gỗ về phía làng.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Cả nhóm đi qua cầu gỗ về phía làng."
+  },
+  {
+   "k": "Con đường qua rừng đưa họ trở về làng.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Con đường qua rừng đưa họ trở về làng."
+  },
+  {
+   "k": "Ngõ làng, cánh đồng và ánh đèn nhà trong sương sớm.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Ngõ làng, cánh đồng và ánh đèn nhà trong sương sớm."
+  },
+  {
+   "k": "Làng vẫn dậy sớm như chưa có chuyện gì.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Làng vẫn dậy sớm như chưa có chuyện gì."
+  },
+  {
+   "k": "Một người ngoái nhìn biệt thự phía xa.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Một người ngoái nhìn biệt thự phía xa."
+  },
+  {
+   "k": "Ngoái lại lần cuối, ô cửa sổ ấy vẫn còn sáng.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Ngoái lại lần cuối, ô cửa sổ ấy vẫn còn sáng."
+  },
+  {
+   "k": "Cành hoa nhài nằm trên con đường vắng.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Cành hoa nhài nằm trên con đường vắng."
+  },
+  {
+   "k": "Phía sau hàng cây, những câu hỏi vẫn chưa có lời đáp.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Phía sau hàng cây, những câu hỏi vẫn chưa có lời đáp."
+  },
+  {
+   "k": "Hồ sơ và ảnh gia đình được đặt cạnh bát hương.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Hồ sơ và ảnh gia đình được đặt cạnh bát hương."
+  },
+  {
+   "k": "Những hồ sơ được đưa về cho gia đình người đã khuất.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Những hồ sơ được đưa về cho gia đình người đã khuất."
+  },
+  {
+   "k": "Bàn tay người già chạm vào tấm ảnh cũ.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Bàn tay người già chạm vào tấm ảnh cũ."
+  },
+  {
+   "k": "Bao nhiêu năm, bà mới được cầm lại gương mặt ấy.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Bao nhiêu năm, bà mới được cầm lại gương mặt ấy."
+  },
+  {
+   "k": "Người thân đứng trước bàn tưởng niệm trong sân.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Người thân đứng trước bàn tưởng niệm trong sân."
+  },
+  {
+   "k": "Một cái tên được gọi, sau gần bốn mươi năm.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Một cái tên được gọi, sau gần bốn mươi năm."
+  },
+  {
+   "k": "Một người mẹ ôm con gái trước hiên nhà.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Một người mẹ ôm con gái trước hiên nhà."
+  },
+  {
+   "k": "Nhài được ở bên mẹ.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Nhài được ở bên mẹ."
+  },
+  {
+   "k": "Khói hương bên chiếc giày nhỏ và hoa nhài.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Khói hương bên chiếc giày nhỏ và hoa nhài."
+  },
+  {
+   "k": "Khói hương lên. Có thể họ đã nghe thấy.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Khói hương lên. Có thể họ đã nghe thấy."
+  },
+  {
+   "k": "Hoa nhài đặt trên nắp giếng vẫn còn bịt kín.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Hoa nhài đặt trên nắp giếng vẫn còn bịt kín."
+  },
+  {
+   "k": "Dưới giếng, chiếc ấn vẫn còn đó. Một câu chuyện vẫn chưa khép lại.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Dưới giếng, chiếc ấn vẫn còn đó. Một câu chuyện vẫn chưa khép lại."
+  },
+  {
+   "k": "Lược gãy, khăn thêu và mảnh áo đặt trên nền đá.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Lược gãy, khăn thêu và mảnh áo đặt trên nền đá."
+  },
+  {
+   "k": "Lược gãy. Khăn cũ. Mảnh áo. Những thứ cuối cùng của một gia đình.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Lược gãy. Khăn cũ. Mảnh áo. Những thứ cuối cùng của một gia đình."
+  },
+  {
+   "k": "Cả nhóm tưởng niệm trước nền đá trong rừng.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Cả nhóm tưởng niệm trước nền đá trong rừng."
+  },
+  {
+   "k": "Cả nhóm tưởng niệm; một bát cơm được đặt cạnh nhang.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Cả nhóm tưởng niệm; một bát cơm được đặt cạnh nhang."
+  },
+  {
+   "k": "Lành. Phúc. Mai. Những cái tên được gọi lại giữa rừng.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Lành. Phúc. Mai. Những cái tên được gọi lại giữa rừng."
+  },
+  {
+   "k": "Thầy Nguyên đứng bên hiên chùa khi nhóm đối chiếu lời khai.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Thầy Nguyên đứng bên hiên chùa khi nhóm đối chiếu lời khai."
+  },
+  {
+   "k": "Ông Nguyên nói ra những điều đã giấu suốt bao năm.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Ông Nguyên nói ra những điều đã giấu suốt bao năm."
+  },
+  {
+   "k": "Ấn đồng đã được tháo, đặt cạnh mặt nước yên.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Ấn đồng đã được tháo, đặt cạnh mặt nước yên."
+  },
+  {
+   "k": "Khi sự thật được nhìn nhận, chiếc ấn mới được tháo ra.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Khi sự thật được nhìn nhận, chiếc ấn mới được tháo ra."
+  },
+  {
+   "k": "Mặt nước giếng phản chiếu trời sáng và hoa nhài.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Mặt nước giếng phản chiếu trời sáng và hoa nhài."
+  },
+  {
+   "k": "Mặt nước đã lặng. Những ký ức có đường trở về.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Mặt nước đã lặng. Những ký ức có đường trở về."
+  },
+  {
+   "k": "Người mẹ, con gái và con trai đứng bên nhau trước ngôi nhà cũ.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Người mẹ, con gái và con trai đứng bên nhau trước ngôi nhà cũ."
+  },
+  {
+   "k": "Mai được trở về bên mẹ và em. Không ai buộc cô phải tha thứ hay lãng quên.",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Mai được trở về bên mẹ và em. Không ai buộc cô phải tha thứ hay lãng quên."
+  },
+  {
+   "k": "Phim kết thúc:",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Phim kết thúc: "
+  },
+  {
+   "k": "Ấn vỡ",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Ấn vỡ"
+  },
+  {
+   "k": "Ra khỏi rừng",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Ra khỏi rừng"
+  },
+  {
+   "k": "Đưa những cái tên về",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Đưa những cái tên về"
+  },
+  {
+   "k": "Xem kết thúc",
+   "files": [
+    "ending-cinematic.js"
+   ],
+   "ctx": "Xem kết thúc"
+  },
+  {
+   "k": "Chạm vào cảnh để đọc toạ độ %",
+   "files": [
+    "ui-v3.js"
+   ],
+   "ctx": "Chạm vào cảnh để đọc toạ độ %"
+  },
+  {
+   "k": "Đồng Chay, một buổi sáng ẩm sau mưa. Nhóm sinh viên xuống xe ở đầu làng, ba lô trên vai và một xấp giấy photo kẹp trong cặp hồ sơ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Đồng Chay, một buổi sáng ẩm sau mưa. Nhóm sinh viên xuống xe ở đầu làng, ba lô trên vai và một xấp giấy photo kẹp trong cặp hồ sơ."
+  },
+  {
+   "k": "Mình điểm lại lần cuối nhé. Đề tài của nhóm là chuyện năm xưa của biệt thự Vân Hòa, và thứ duy nhất mình có là những gì báo chí thời ấy để lại.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Mình điểm lại lần cuối nhé. Đề tài của nhóm là chuyện năm xưa của biệt thự Vân Hòa, và thứ duy nhất mình có là những gì báo chí thời ấy để lại."
+  },
+  {
+   "k": "Ba bài thôi. Tớ ngồi ở thư viện tỉnh cả tuần mới tìm đủ. Giấy giòn, chữ nhòe, có chỗ rách mất cả dòng.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ba bài thôi. Tớ ngồi ở thư viện tỉnh cả tuần mới tìm đủ. Giấy giòn, chữ nhòe, có chỗ rách mất cả dòng."
+  },
+  {
+   "k": "Tớ chụp lại từng trang rồi. Nhưng tờ nào cũng viết một kiểu khác nhau, đọc xong tớ còn rối hơn lúc chưa đọc.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ chụp lại từng trang rồi. Nhưng tờ nào cũng viết một kiểu khác nhau, đọc xong tớ còn rối hơn lúc chưa đọc."
+  },
+  {
+   "k": "Báo hồi đó viết cẩn thận lắm. Cẩn thận đến mức việc chính thì không chịu nói thẳng ra.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Báo hồi đó viết cẩn thận lắm. Cẩn thận đến mức việc chính thì không chịu nói thẳng ra."
+  },
+  {
+   "k": "Bài đầu là năm 1986, một mẩu tin ngắn về lễ cầu mưa. Bài năm 1988 còn ngắn hơn. Bài thứ ba là năm 1989, viết về một ngôi nhà bỏ hoang trên đồi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bài đầu là năm 1986, một mẩu tin ngắn về lễ cầu mưa. Bài năm 1988 còn ngắn hơn. Bài thứ ba là năm 1989, viết về một ngôi nhà bỏ hoang trên đồi."
+  },
+  {
+   "k": "Cả ba bài đều nhắc ông Hưng ở biệt thự Vân Hòa. Nhưng không bài nào nói trong nhà đã xảy ra chuyện gì.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cả ba bài đều nhắc ông Hưng ở biệt thự Vân Hòa. Nhưng không bài nào nói trong nhà đã xảy ra chuyện gì."
+  },
+  {
+   "k": "Vì thế mình mới phải đến tận nơi. Bài báo cho mình ngày tháng và tên người; còn sự thật thì phải hỏi người làng, rồi đối chiếu. Hỏi đường trước đã, đừng ai tự ý đi sâu vào rừng.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Vì thế mình mới phải đến tận nơi. Bài báo cho mình ngày tháng và tên người; còn sự thật thì phải hỏi người làng, rồi đối chiếu. Hỏi đường trước đã, đừng ai tự ý đi sâu vào rừng."
+  },
+  {
+   "k": "Máy ảnh của tớ sẵn sàng rồi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Máy ảnh của tớ sẵn sàng rồi."
+  },
+  {
+   "k": "Bà ngoại tớ từng sống ở vùng này. Đó là lý do tớ rủ các cậu chọn đề tài này.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bà ngoại tớ từng sống ở vùng này. Đó là lý do tớ rủ các cậu chọn đề tài này."
+  },
+  {
+   "k": "Cậu chưa kể kỹ chuyện đó bao giờ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cậu chưa kể kỹ chuyện đó bao giờ."
+  },
+  {
+   "k": "Ừ... tới nơi rồi mình nói tiếp nhé.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ừ... tới nơi rồi mình nói tiếp nhé."
+  }
+ ]
+}

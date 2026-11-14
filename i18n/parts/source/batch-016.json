@@ -1,0 +1,566 @@
+{
+ "batch": 16,
+ "count": 80,
+ "strings": [
+  {
+   "k": "TÀI LIỆU",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "TÀI LIỆU"
+  },
+  {
+   "k": "Cất tờ giấy",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cất tờ giấy"
+  },
+  {
+   "k": "Cầm giấy để đối chiếu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cầm giấy để đối chiếu"
+  },
+  {
+   "k": "Bát cơm",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bát cơm"
+  },
+  {
+   "k": "Dòng nước",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dòng nước"
+  },
+  {
+   "k": "Cành hoa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cành hoa"
+  },
+  {
+   "k": "Đèn dầu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đèn dầu"
+  },
+  {
+   "k": "Lá cây",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lá cây"
+  },
+  {
+   "k": "Bông lúa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bông lúa"
+  },
+  {
+   "k": "Ngọn lửa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngọn lửa"
+  },
+  {
+   "k": "Các dấu trên giấy, từ trái sang phải",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"folk-print\" aria-label=\"Các dấu trên giấy, từ trái sang phải\">"
+  },
+  {
+   "k": "CÂU ĐỐ · DẤU MIẾU",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · DẤU MIẾU"
+  },
+  {
+   "k": "Vị trí",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vị trí "
+  },
+  {
+   "k": "chưa chọn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "chưa chọn"
+  },
+  {
+   "k": "Chọn hình",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chọn hình"
+  },
+  {
+   "k": "Kiểm tra",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Kiểm tra"
+  },
+  {
+   "k": "Hãy chọn hình cho cả bốn vị trí.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hãy chọn hình cho cả bốn vị trí."
+  },
+  {
+   "k": "Cơ cấu vẫn im. Hãy đối chiếu lại các dấu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cơ cấu vẫn im. Hãy đối chiếu lại các dấu."
+  },
+  {
+   "k": "Đặt lại",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đặt lại"
+  },
+  {
+   "k": "Đã xóa các hình vừa chọn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã xóa các hình vừa chọn."
+  },
+  {
+   "k": "Mâm gỗ đã mở. Dấu in còn được ghi trong nhật ký.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mâm gỗ đã mở. Dấu in còn được ghi trong nhật ký."
+  },
+  {
+   "k": "Mâm gỗ ở miếu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mâm gỗ ở miếu"
+  },
+  {
+   "k": "Bốn hõm trên mâm có thể xoay hình. Những món lễ đã được bày lệch khỏi vị trí cũ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bốn hõm trên mâm có thể xoay hình. Những món lễ đã được bày lệch khỏi vị trí cũ."
+  },
+  {
+   "k": "Nhìn từ lối vào: mép trái khắc bông lúa, mép phải ám đen như từng đặt đèn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhìn từ lối vào: mép trái khắc bông lúa, mép phải ám đen như từng đặt đèn."
+  },
+  {
+   "k": "Sổ miếu ghi vị trí của nước so với cơm và hoa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sổ miếu ghi vị trí của nước so với cơm và hoa."
+  },
+  {
+   "k": "Một hàng dấu được in trên giấy dó. Góc giấy có hình cột mốc giữa rừng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một hàng dấu được in trên giấy dó. Góc giấy có hình cột mốc giữa rừng.\nDòng chữ nhỏ: “Tìm đường về từ hơi ấm đến bóng cây.”"
+  },
+  {
+   "k": "Dòng chữ nhỏ: “Tìm đường về từ hơi ấm đến bóng cây.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một hàng dấu được in trên giấy dó. Góc giấy có hình cột mốc giữa rừng.\nDòng chữ nhỏ: “Tìm đường về từ hơi ấm đến bóng cây.”"
+  },
+  {
+   "k": "Mâm khẽ bật lên. Có một mảnh giấy dó nằm dưới đáy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mâm khẽ bật lên. Có một mảnh giấy dó nằm dưới đáy."
+  },
+  {
+   "k": "Bốn hình này giống nét khắc trên cột đá trong rừng. Giữ lại, biết đâu còn dùng được.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bốn hình này giống nét khắc trên cột đá trong rừng. Giữ lại, biết đâu còn dùng được."
+  },
+  {
+   "k": "Những vòng đá đã dừng. Khe cất chìa giờ trống rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những vòng đá đã dừng. Khe cất chìa giờ trống rồi."
+  },
+  {
+   "k": "Bốn vòng trên cột đá",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bốn vòng trên cột đá"
+  },
+  {
+   "k": "Mảnh giấy dó vừa khít khe đá. Bốn vòng khắc có thể xoay độc lập.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh giấy dó vừa khít khe đá. Bốn vòng khắc có thể xoay độc lập."
+  },
+  {
+   "k": "Một đường rãnh chạy từ vòng thứ nhất đến vòng thứ tư.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một đường rãnh chạy từ vòng thứ nhất đến vòng thứ tư."
+  },
+  {
+   "k": "Xem hàng dấu và dòng chữ trên mảnh giấy dó.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xem hàng dấu và dòng chữ trên mảnh giấy dó."
+  },
+  {
+   "k": "Những dấu trên cột đá",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những dấu trên cột đá"
+  },
+  {
+   "k": "Bốn dấu ở cột mốc khớp với mảnh giấy dập dưới mâm gỗ của miếu. Một khe bí mật mở ra.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bốn dấu ở cột mốc khớp với mảnh giấy dập dưới mâm gỗ của miếu. Một khe bí mật mở ra."
+  },
+  {
+   "k": "Chìa ở cột mốc đá",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chìa ở cột mốc đá"
+  },
+  {
+   "k": "Một chìa khóa sắt rỉ được giấu trong khe đá, hướng về cổng biệt thự.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một chìa khóa sắt rỉ được giấu trong khe đá, hướng về cổng biệt thự."
+  },
+  {
+   "k": "Bài đồng dao cô Quyên dạy",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bài đồng dao cô Quyên dạy"
+  },
+  {
+   "k": "Búp bê ngồi dậy trước tiên.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Búp bê ngồi dậy trước tiên.\nHạc giấy bay lên giữa trời.\nXe gỗ lăn qua cửa nhỏ.\nPhấn trắng viết tên sau cùng."
+  },
+  {
+   "k": "Hạc giấy bay lên giữa trời.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Búp bê ngồi dậy trước tiên.\nHạc giấy bay lên giữa trời.\nXe gỗ lăn qua cửa nhỏ.\nPhấn trắng viết tên sau cùng."
+  },
+  {
+   "k": "Xe gỗ lăn qua cửa nhỏ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Búp bê ngồi dậy trước tiên.\nHạc giấy bay lên giữa trời.\nXe gỗ lăn qua cửa nhỏ.\nPhấn trắng viết tên sau cùng."
+  },
+  {
+   "k": "Phấn trắng viết tên sau cùng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Búp bê ngồi dậy trước tiên.\nHạc giấy bay lên giữa trời.\nXe gỗ lăn qua cửa nhỏ.\nPhấn trắng viết tên sau cùng."
+  },
+  {
+   "k": "Bảng đen còn nguyên nét phấn. Góc dưới có dòng viết vội: “Nhài giỏi lắm.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bảng đen còn nguyên nét phấn. Góc dưới có dòng viết vội: “Nhài giỏi lắm.”"
+  },
+  {
+   "k": "Phía trên là bốn câu đồng dao, như bài tập đọc: “Búp bê ngồi dậy trước tiên. Hạc giấy bay lên giữa trời. Xe gỗ lăn qua cửa nhỏ. Phấn trắng viết tên sau cùng.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phía trên là bốn câu đồng dao, như bài tập đọc: “Búp bê ngồi dậy trước tiên. Hạc giấy bay lên giữa trời. Xe gỗ lăn qua cửa nhỏ. Phấn trắng viết tên sau cùng.”"
+  },
+  {
+   "k": "Còn một mẩu phấn trên gờ bảng. Tớ giữ lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Còn một mẩu phấn trên gờ bảng. Tớ giữ lại."
+  },
+  {
+   "k": "Cô Quyên dạy em đọc bài này mỗi sáng. Em thuộc lòng rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cô Quyên dạy em đọc bài này mỗi sáng. Em thuộc lòng rồi."
+  },
+  {
+   "k": "Ngăn kéo đã mở. Bảng ký hiệu đã nằm trong sổ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngăn kéo đã mở. Bảng ký hiệu đã nằm trong sổ."
+  },
+  {
+   "k": "Ngăn kéo của giá sách có bốn hõm nhỏ như để đặt đồ chơi. Mình còn thiếu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngăn kéo của giá sách có bốn hõm nhỏ như để đặt đồ chơi. Mình còn thiếu "
+  },
+  {
+   "k": "món. Thử tìm quanh phòng học và gác nhỏ sau bếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": " món. Thử tìm quanh phòng học và gác nhỏ sau bếp."
+  },
+  {
+   "k": "CÂU ĐỐ · SẮP ĐỒ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · SẮP ĐỒ"
+  },
+  {
+   "k": "Hõm",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hõm "
+  },
+  {
+   "k": ": trống",
+   "files": [
+    "game.js"
+   ],
+   "ctx": ": trống"
+  },
+  {
+   "k": "Trong ngăn kéo có một tờ giấy vẽ năm ký hiệu nhỏ, mỗi ký hiệu kèm một cái tên và nghề: Giáp (cây bút), Thành (cái cân), Quyên (nốt nhạc), Nụ (ngọn lửa), Bình (con sóng). Cô Quyên vẽ để dạy Nhài nhận mặt chữ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong ngăn kéo có một tờ giấy vẽ năm ký hiệu nhỏ, mỗi ký hiệu kèm một cái tên và nghề: Giáp (cây bút), Thành (cái cân), Quyên (nốt nhạc), Nụ (ngọn lửa), Bình (con sóng). Cô Quyên vẽ để dạy Nhài nhận mặt chữ."
+  },
+  {
+   "k": "Cạch. Ngăn kéo bật ra. Bên trong là một tờ giấy vẽ những hình nhỏ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cạch. Ngăn kéo bật ra. Bên trong là một tờ giấy vẽ những hình nhỏ."
+  },
+  {
+   "k": "Một cây bút, cái cân, nốt nhạc, ngọn lửa, con sóng. Ký hiệu của từng người?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một cây bút, cái cân, nốt nhạc, ngọn lửa, con sóng. Ký hiệu của từng người?"
+  },
+  {
+   "k": "Cô Quyên vẽ để dạy em. Mỗi người trong nhà có một hình. Em nhớ hình nào của ai.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cô Quyên vẽ để dạy em. Mỗi người trong nhà có một hình. Em nhớ hình nào của ai."
+  },
+  {
+   "k": "Chạm vào tờ giấy trong túi đồ để đọc lại bất cứ lúc nào.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chạm vào tờ giấy trong túi đồ để đọc lại bất cứ lúc nào."
+  },
+  {
+   "k": "Ngăn kéo không nhúc nhích. Có lẽ thứ tự chưa đúng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngăn kéo không nhúc nhích. Có lẽ thứ tự chưa đúng."
+  },
+  {
+   "k": "Bảng đen trong phòng này có một bài đồng dao.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bảng đen trong phòng này có một bài đồng dao."
+  },
+  {
+   "k": "Đọc từng câu đồng dao: mỗi câu nhắc tới một món đồ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đọc từng câu đồng dao: mỗi câu nhắc tới một món đồ."
+  },
+  {
+   "k": "Thứ tự: búp bê, hạc giấy, xe gỗ, viên phấn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thứ tự: búp bê, hạc giấy, xe gỗ, viên phấn."
+  },
+  {
+   "k": "Mảnh ảnh đã ghép xong. Mặt sau ghi thứ tự đứng ký đơn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh ảnh đã ghép xong. Mặt sau ghi thứ tự đứng ký đơn."
+  },
+  {
+   "k": "CÂU ĐỐ · GHÉP HÌNH",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · GHÉP HÌNH"
+  },
+  {
+   "k": "Mảnh",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh "
+  },
+  {
+   "k": "mảnh đúng chỗ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": " mảnh đúng chỗ."
+  },
+  {
+   "k": "Mặt sau tấm ảnh có dòng chữ viết tay của cô Quyên: “Thứ tự chúng tôi đứng ký đơn: thầy Giáp, bác Thành, tôi, chị Nụ, bác Bình. Năm người như năm ngón tay.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mặt sau tấm ảnh có dòng chữ viết tay của cô Quyên: “Thứ tự chúng tôi đứng ký đơn: thầy Giáp, bác Thành, tôi, chị Nụ, bác Bình. Năm người như năm ngón tay.”"
+  },
+  {
+   "k": "Ghép xong. Một tấm ảnh cũ nhăn nhúm, mặt người bị cào xước.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ghép xong. Một tấm ảnh cũ nhăn nhúm, mặt người bị cào xước."
+  },
+  {
+   "k": "Lật mặt sau đi. Có chữ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lật mặt sau đi. Có chữ."
+  },
+  {
+   "k": "“Thứ tự chúng tôi đứng ký đơn: thầy Giáp, bác Thành, tôi, chị Nụ, bác Bình.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "“Thứ tự chúng tôi đứng ký đơn: thầy Giáp, bác Thành, tôi, chị Nụ, bác Bình.”"
+  },
+  {
+   "k": "Thứ tự này chắc sẽ dùng được ở đâu đó. Mình ghi nhớ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thứ tự này chắc sẽ dùng được ở đâu đó. Mình ghi nhớ."
+  },
+  {
+   "k": "Xem ảnh mẫu (giữ)",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xem ảnh mẫu (giữ)"
+  },
+  {
+   "k": "Tìm các mảnh có góc ảnh trước. Giữ nút “Xem ảnh mẫu” để nhìn bức ảnh hoàn chỉnh.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tìm các mảnh có góc ảnh trước. Giữ nút “Xem ảnh mẫu” để nhìn bức ảnh hoàn chỉnh."
+  },
+  {
+   "k": "Các mảnh mặt người nằm ở giữa, cạnh trên là tường và cây.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Các mảnh mặt người nằm ở giữa, cạnh trên là tường và cây."
+  },
+  {
+   "k": "Mảnh sáng viền xanh đã đúng chỗ, đừng đổi nữa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh sáng viền xanh đã đúng chỗ, đừng đổi nữa."
+  },
+  {
+   "k": "Bảng ký hiệu trong túi đồ giúp bạn nhận ra ký hiệu của từng người.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bảng ký hiệu trong túi đồ giúp bạn nhận ra ký hiệu của từng người."
+  },
+  {
+   "k": "Chưa biết ký hiệu nào của ai. Có lẽ ở đâu đó trong nhà có một bảng chỉ dẫn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chưa biết ký hiệu nào của ai. Có lẽ ở đâu đó trong nhà có một bảng chỉ dẫn."
+  },
+  {
+   "k": "CÂU ĐỐ · KÝ HIỆU",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · KÝ HIỆU"
+  },
+  {
+   "k": "Vòng ký hiệu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vòng ký hiệu "
+  },
+  {
+   "k": "Cạch. Cả nắp hầm bật lên, hơi lạnh phả ra.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cạch. Cả nắp hầm bật lên, hơi lạnh phả ra."
+  }
+ ]
+}

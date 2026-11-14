@@ -1,0 +1,566 @@
+{
+ "batch": 42,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Dòng gần như bị cạo",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dòng gần như bị cạo"
+  },
+  {
+   "k": "Có người quệt than lên dòng cũ. Chỉ còn vài chữ: “...chớ lấy người sống...”",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Có người quệt than lên dòng cũ. Chỉ còn vài chữ: “...chớ lấy người sống...”"
+  },
+  {
+   "k": "Sơn Lâm Tạ Lễ – Bản Chép Nguyên Văn",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Sơn Lâm Tạ Lễ – Bản Chép Nguyên Văn"
+  },
+  {
+   "k": "Bản chép cũ do gia đình Quế giữ lại, ghi rõ danh xưng vị thần.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bản chép cũ do gia đình Quế giữ lại, ghi rõ danh xưng vị thần."
+  },
+  {
+   "k": "Trang một",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Trang một"
+  },
+  {
+   "k": "SƠN LÂM TẠ LỄ – BẢN CHÉP NGUYÊN VĂN",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "SƠN LÂM TẠ LỄ – BẢN CHÉP NGUYÊN VĂN\nKính Huyền Lâm Thánh Quân, đức bảo hộ cây rừng và nguồn nước."
+  },
+  {
+   "k": "Kính Huyền Lâm Thánh Quân, đức bảo hộ cây rừng và nguồn nước.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "SƠN LÂM TẠ LỄ – BẢN CHÉP NGUYÊN VĂN\nKính Huyền Lâm Thánh Quân, đức bảo hộ cây rừng và nguồn nước."
+  },
+  {
+   "k": "Đồ lễ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đồ lễ"
+  },
+  {
+   "k": "Cơm, nước và hoa được đem lên bằng lòng biết ơn. Không ai được lấy thân người đổi sự yên lành của làng.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cơm, nước và hoa được đem lên bằng lòng biết ơn. Không ai được lấy thân người đổi sự yên lành của làng."
+  },
+  {
+   "k": "Lời khấn nguyên bản",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Lời khấn nguyên bản"
+  },
+  {
+   "k": "Chữ “sống” và chữ “xanh” được viết liền trên cùng hàng, không có mảnh giấy nối.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "“Rừng nuôi người sống, người giữ rừng xanh.”\nChữ “sống” và chữ “xanh” được viết liền trên cùng hàng, không có mảnh giấy nối."
+  },
+  {
+   "k": "Dấu triện",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dấu triện"
+  },
+  {
+   "k": "Dấu triện trên bản này nằm lệch trái, không có vòng đồng khắc năm móc như bản thầy Chân.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dấu triện trên bản này nằm lệch trái, không có vòng đồng khắc năm móc như bản thầy Chân."
+  },
+  {
+   "k": "Lời dặn",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Lời dặn"
+  },
+  {
+   "k": "Người xin bình an phải tự giữ rừng; nếu lấy nỗi sợ của dân làm lời xin lễ, chẳng còn gọi là tạ rừng.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Người xin bình an phải tự giữ rừng; nếu lấy nỗi sợ của dân làm lời xin lễ, chẳng còn gọi là tạ rừng."
+  },
+  {
+   "k": "Thư Trong Đêm Gió – Lời Quế Gửi Tùng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Thư Trong Đêm Gió – Lời Quế Gửi Tùng"
+  },
+  {
+   "k": "Lá thư gấp tư, buộc bằng dải khăn chàm.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Lá thư gấp tư, buộc bằng dải khăn chàm."
+  },
+  {
+   "k": "Gửi Tùng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Gửi Tùng"
+  },
+  {
+   "k": "THƯ TRONG ĐÊM GIÓ – LỜI QUẾ GỬI TÙNG",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "THƯ TRONG ĐÊM GIÓ – LỜI QUẾ GỬI TÙNG\nTùng à, chị viết vội. Nếu không về kịp, em nhớ đưa những tờ này lên xã. Đừng chỉ nghe lời người ta kể về chị."
+  },
+  {
+   "k": "Tùng à, chị viết vội. Nếu không về kịp, em nhớ đưa những tờ này lên xã. Đừng chỉ nghe lời người ta kể về chị.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "THƯ TRONG ĐÊM GIÓ – LỜI QUẾ GỬI TÙNG\nTùng à, chị viết vội. Nếu không về kịp, em nhớ đưa những tờ này lên xã. Đừng chỉ nghe lời người ta kể về chị."
+  },
+  {
+   "k": "Điều chị nhìn thấy",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Điều chị nhìn thấy"
+  },
+  {
+   "k": "Tờ thầy Chân cầm không phải tờ bà ngoại dạy. Có đoạn giấy mới dán lên giấy cũ. Danh xưng Đức Ngài cũng bị đổi.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tờ thầy Chân cầm không phải tờ bà ngoại dạy. Có đoạn giấy mới dán lên giấy cũ. Danh xưng Đức Ngài cũng bị đổi."
+  },
+  {
+   "k": "Điều chị sợ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Điều chị sợ"
+  },
+  {
+   "k": "Chị không sợ đi rừng. Chị sợ có người vì tin lời ông ấy mà bỏ mặc người gặp nạn. Họ bảo phải có máu mới giữ được làng, chị không tin.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chị không sợ đi rừng. Chị sợ có người vì tin lời ông ấy mà bỏ mặc người gặp nạn. Họ bảo phải có máu mới giữ được làng, chị không tin."
+  },
+  {
+   "k": "Việc phải làm",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Việc phải làm"
+  },
+  {
+   "k": "Em đem sớ gốc và lá thư lên xã. Báo họ tới nền đá trước khi lễ bắt đầu. Chị sẽ ở lại cản họ đến lúc có người giúp.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Em đem sớ gốc và lá thư lên xã. Báo họ tới nền đá trước khi lễ bắt đầu. Chị sẽ ở lại cản họ đến lúc có người giúp."
+  },
+  {
+   "k": "Tùng, có chuyện gì thì sống cho tử tế. Đừng để người ta lấy tên chị ra mà dọa trẻ con. Chị Quế.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tùng, có chuyện gì thì sống cho tử tế. Đừng để người ta lấy tên chị ra mà dọa trẻ con. Chị Quế."
+  },
+  {
+   "k": "Tên ghi trên bài vị",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tên ghi trên bài vị"
+  },
+  {
+   "k": "Sổ miếu ghi đúng danh xưng nào của vị thần bảo hộ rừng?",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Sổ miếu ghi đúng danh xưng nào của vị thần bảo hộ rừng?"
+  },
+  {
+   "k": "Ngũ Trấn Đại Vương",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ngũ Trấn Đại Vương"
+  },
+  {
+   "k": "Danh xưng gốc khác với danh xưng trong sớ của Chân.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Danh xưng gốc khác với danh xưng trong sớ của Chân."
+  },
+  {
+   "k": "Đọc trang mở đầu sổ miếu.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đọc trang mở đầu sổ miếu."
+  },
+  {
+   "k": "Tên của Đức Ngài có bốn tiếng.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tên của Đức Ngài có bốn tiếng."
+  },
+  {
+   "k": "Chọn Huyền Lâm Thánh Quân.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chọn Huyền Lâm Thánh Quân."
+  },
+  {
+   "k": "Thầy Nguyên ghi thứ tự đặt ba đồng xu trên đĩa.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Thầy Nguyên ghi thứ tự đặt ba đồng xu trên đĩa."
+  },
+  {
+   "k": "trái|giữa|phải",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "trái|giữa|phải"
+  },
+  {
+   "k": "phải",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "phải"
+  },
+  {
+   "k": "trái",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "trái"
+  },
+  {
+   "k": "giữa",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "giữa"
+  },
+  {
+   "k": "Gieo quẻ ở đây là việc quan sát, không phải phép đoán số phận.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Gieo quẻ ở đây là việc quan sát, không phải phép đoán số phận."
+  },
+  {
+   "k": "Thầy Nguyên ghi thứ tự đặt từ trái sang phải.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Thầy Nguyên ghi thứ tự đặt từ trái sang phải."
+  },
+  {
+   "k": "Đồng đầu ở mép trái; đồng giữa đứng thứ hai.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đồng đầu ở mép trái; đồng giữa đứng thứ hai."
+  },
+  {
+   "k": "Trái, giữa, phải.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Trái, giữa, phải."
+  },
+  {
+   "k": "Bốn mốc của đường làng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bốn mốc của đường làng"
+  },
+  {
+   "k": "Sắp bốn mốc theo đường xe cũ từ làng về phía miếu.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Sắp bốn mốc theo đường xe cũ từ làng về phía miếu."
+  },
+  {
+   "k": "Cổng làng|Đường ruộng|Cầu gỗ|Miếu cây đa",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cổng làng|Đường ruộng|Cầu gỗ|Miếu cây đa"
+  },
+  {
+   "k": "Cầu gỗ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cầu gỗ"
+  },
+  {
+   "k": "Cổng làng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cổng làng"
+  },
+  {
+   "k": "Đường ruộng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đường ruộng"
+  },
+  {
+   "k": "Lối đi về phía biệt thự ngày xưa bắt đầu từ ngõ làng, không phải từ rừng sâu.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Lối đi về phía biệt thự ngày xưa bắt đầu từ ngõ làng, không phải từ rừng sâu."
+  },
+  {
+   "k": "Xem trang “Ghi mép giấy” của Cổ Lộ Đồ – Đường Về Đồng Chay.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Xem trang “Ghi mép giấy” của Cổ Lộ Đồ – Đường Về Đồng Chay."
+  },
+  {
+   "k": "Thứ tự đi từ cổng, qua ruộng và cầu.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Thứ tự đi từ cổng, qua ruộng và cầu."
+  },
+  {
+   "k": "Cổng làng → Đường ruộng → Cầu gỗ → Miếu cây đa.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cổng làng → Đường ruộng → Cầu gỗ → Miếu cây đa."
+  },
+  {
+   "k": "Hai dấu khắc ở cầu",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Hai dấu khắc ở cầu"
+  },
+  {
+   "k": "Dựa vào giấy dập chữ và bản đồ, dấu nào chỉ đường tới miếu cây đa?",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dựa vào giấy dập chữ và bản đồ, dấu nào chỉ đường tới miếu cây đa?"
+  },
+  {
+   "k": "Dấu lá cây trên mặt bắc",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dấu lá cây trên mặt bắc"
+  },
+  {
+   "k": "Dấu sóng hướng mương",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dấu sóng hướng mương"
+  },
+  {
+   "k": "Vạch phấn dưới chân cầu",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Vạch phấn dưới chân cầu"
+  },
+  {
+   "k": "Mũi tên trên lan can mới",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mũi tên trên lan can mới"
+  },
+  {
+   "k": "Dấu khắc trên bia là biển chỉ đường cũ; không có thần chú bí mật nào cần đọc.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dấu khắc trên bia là biển chỉ đường cũ; không có thần chú bí mật nào cần đọc."
+  },
+  {
+   "k": "Đọc trang “Chữ mờ”.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đọc trang “Chữ mờ”."
+  },
+  {
+   "k": "Đường lên miếu nằm ở phía bờ cao, không đi xuống mương.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đường lên miếu nằm ở phía bờ cao, không đi xuống mương."
+  },
+  {
+   "k": "Dấu lá cây trên mặt bắc.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dấu lá cây trên mặt bắc."
+  },
+  {
+   "k": "Ba món lễ tạ rừng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ba món lễ tạ rừng"
+  },
+  {
+   "k": "Đối chiếu với sổ miếu và chọn BA món thuộc mâm lễ tạ rừng nguyên bản.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đối chiếu với sổ miếu và chọn BA món thuộc mâm lễ tạ rừng nguyên bản."
+  },
+  {
+   "k": "Cơm",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cơm"
+  },
+  {
+   "k": "Nước sạch",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nước sạch"
+  },
+  {
+   "k": "Bát máu",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bát máu"
+  },
+  {
+   "k": "Mâm tạ rừng nguyên bản là lễ vật thường ngày; những đồ trấn về sau được thêm vào.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mâm tạ rừng nguyên bản là lễ vật thường ngày; những đồ trấn về sau được thêm vào."
+  },
+  {
+   "k": "Mở trang “Ba phần lễ” trong Miếu Lục Đồng Chay – Lễ Tạ Sơn Lâm.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mở trang “Ba phần lễ” trong Miếu Lục Đồng Chay – Lễ Tạ Sơn Lâm."
+  },
+  {
+   "k": "Ba thứ dùng để dâng lời tạ và chăm giữ rừng.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ba thứ dùng để dâng lời tạ và chăm giữ rừng."
+  },
+  {
+   "k": "Chọn Cơm, Nước sạch và Hoa.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chọn Cơm, Nước sạch và Hoa."
+  },
+  {
+   "k": "Kiểm tra nắp giếng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Kiểm tra nắp giếng"
+  },
+  {
+   "k": "Bộ phận nào phải được gài khi mưa lớn để tránh tai nạn?",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bộ phận nào phải được gài khi mưa lớn để tránh tai nạn?"
+  },
+  {
+   "k": "Chốt sắt của nắp gỗ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chốt sắt của nắp gỗ"
+  },
+  {
+   "k": "Dây đỏ ở gầu",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Dây đỏ ở gầu"
+  },
+  {
+   "k": "Nút thắt thứ ba",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nút thắt thứ ba"
+  },
+  {
+   "k": "Chiếc đèn bão",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chiếc đèn bão"
+  },
+  {
+   "k": "Nắp giếng hỏng từ trước đêm 17/3/1988.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nắp giếng hỏng từ trước đêm 17/3/1988."
+  },
+  {
+   "k": "Mở phần “Nắp gỗ”.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mở phần “Nắp gỗ”."
+  }
+ ]
+}

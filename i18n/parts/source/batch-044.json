@@ -1,0 +1,566 @@
+{
+ "batch": 44,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Chọn mộ gió tưởng niệm.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chọn mộ gió tưởng niệm."
+  },
+  {
+   "k": "Lời khai bỏ lửng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Lời khai bỏ lửng"
+  },
+  {
+   "k": "Điều nào bà Tám tự nhận đã làm đêm đó?",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Điều nào bà Tám tự nhận đã làm đêm đó?"
+  },
+  {
+   "k": "Đã đứng im khi nghe tiếng đập",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đã đứng im khi nghe tiếng đập"
+  },
+  {
+   "k": "Đã đẩy Nhài xuống giếng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đã đẩy Nhài xuống giếng"
+  },
+  {
+   "k": "Đã giết Quế",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đã giết Quế"
+  },
+  {
+   "k": "Đã giấu ấn đồng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đã giấu ấn đồng"
+  },
+  {
+   "k": "Bà Tám có phần trách nhiệm vì sự im lặng, nhưng không phải thủ phạm tất cả biến cố.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bà Tám có phần trách nhiệm vì sự im lặng, nhưng không phải thủ phạm tất cả biến cố."
+  },
+  {
+   "k": "Đọc trang “Đêm 17/3”.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đọc trang “Đêm 17/3”."
+  },
+  {
+   "k": "Đây là một quyết định bên cửa hầm.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đây là một quyết định bên cửa hầm."
+  },
+  {
+   "k": "Bà nghe tiếng đập nhưng đứng im vì sợ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bà nghe tiếng đập nhưng đứng im vì sợ."
+  },
+  {
+   "k": "Một quyết định",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Một quyết định"
+  },
+  {
+   "k": "Khi nghe tiếng kêu trong hầm, Hưng đã làm gì?",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Khi nghe tiếng kêu trong hầm, Hưng đã làm gì?"
+  },
+  {
+   "k": "Đặt tay lên then rồi bỏ xuống",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đặt tay lên then rồi bỏ xuống"
+  },
+  {
+   "k": "Tự chui xuống giếng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tự chui xuống giếng"
+  },
+  {
+   "k": "Chạy lên xã báo",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chạy lên xã báo"
+  },
+  {
+   "k": "Hưng có cơ hội mở cửa và đã lựa chọn không mở.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Hưng có cơ hội mở cửa và đã lựa chọn không mở."
+  },
+  {
+   "k": "Nhật ký ông Hưng ghi rất rõ một cử chỉ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nhật ký ông Hưng ghi rất rõ một cử chỉ."
+  },
+  {
+   "k": "Một bàn tay đã chạm vào thanh then.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Một bàn tay đã chạm vào thanh then."
+  },
+  {
+   "k": "Ông đặt tay lên then rồi bỏ xuống.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ông đặt tay lên then rồi bỏ xuống."
+  },
+  {
+   "k": "Cô Quyên có quan hệ gì với Nhài?",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cô Quyên có quan hệ gì với Nhài?"
+  },
+  {
+   "k": "Mẹ ruột",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mẹ ruột"
+  },
+  {
+   "k": "Cô giáo dạy chữ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cô giáo dạy chữ"
+  },
+  {
+   "k": "Người hàng xóm",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Người hàng xóm"
+  },
+  {
+   "k": "Chị họ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chị họ"
+  },
+  {
+   "k": "Bí mật về mẹ ruột của Nhài được xác nhận sau hồi tưởng đêm 1988.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bí mật về mẹ ruột của Nhài được xác nhận sau hồi tưởng đêm 1988."
+  },
+  {
+   "k": "Chỉ đọc được trang cuối sau hồi tưởng.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chỉ đọc được trang cuối sau hồi tưởng."
+  },
+  {
+   "k": "Cô Quyên đã gọi em là con trong trang gấp.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Cô Quyên đã gọi em là con trong trang gấp."
+  },
+  {
+   "k": "Quyên là mẹ ruột của Nhài.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Quyên là mẹ ruột của Nhài."
+  },
+  {
+   "k": "Ba vết sửa trên sớ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ba vết sửa trên sớ"
+  },
+  {
+   "k": "Chọn BA điểm đáng ngờ trong Ngũ Vị Trấn Đàn – Bản Chép Khả Nghi.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chọn BA điểm đáng ngờ trong Ngũ Vị Trấn Đàn – Bản Chép Khả Nghi."
+  },
+  {
+   "k": "Giấy chắp mới",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Giấy chắp mới"
+  },
+  {
+   "k": "Lời khấn nhận máu",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Lời khấn nhận máu"
+  },
+  {
+   "k": "Triện khác bản sổ miếu",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Triện khác bản sổ miếu"
+  },
+  {
+   "k": "Tên Đức Ngài được viết ở bìa",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tên Đức Ngài được viết ở bìa"
+  },
+  {
+   "k": "Mực trên bìa đã cũ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mực trên bìa đã cũ"
+  },
+  {
+   "k": "Tà sớ có những đoạn bị sửa để biến việc tưởng niệm thành nghi thức thế mạng.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tà sớ có những đoạn bị sửa để biến việc tưởng niệm thành nghi thức thế mạng."
+  },
+  {
+   "k": "Đọc phần ba, phần cuối và sổ miếu.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đọc phần ba, phần cuối và sổ miếu."
+  },
+  {
+   "k": "Tìm dấu giấy chắp, nội dung lời khấn và triện.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tìm dấu giấy chắp, nội dung lời khấn và triện."
+  },
+  {
+   "k": "Chọn ba dấu sửa ấy.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chọn ba dấu sửa ấy."
+  },
+  {
+   "k": "Ý nghĩa những vòng phấn",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ý nghĩa những vòng phấn"
+  },
+  {
+   "k": "Đâu là nguy cơ lớn nhất ở bước cuối của Ngũ Vị Trấn Đàn – Bản Chép Khả Nghi?",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đâu là nguy cơ lớn nhất ở bước cuối của Ngũ Vị Trấn Đàn – Bản Chép Khả Nghi?"
+  },
+  {
+   "k": "Đưa người sống vào vòng thay cho các nạn nhân",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đưa người sống vào vòng thay cho các nạn nhân"
+  },
+  {
+   "k": "Thắp hương để tưởng niệm",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Thắp hương để tưởng niệm"
+  },
+  {
+   "k": "Ghi đủ tên những người đã khuất",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ghi đủ tên những người đã khuất"
+  },
+  {
+   "k": "Mang chứng cứ ra làng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mang chứng cứ ra làng"
+  },
+  {
+   "k": "Điều mà tập chép gọi là “hoàn tất” có thể chính là một lần trấn mới.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Điều mà tập chép gọi là “hoàn tất” có thể chính là một lần trấn mới."
+  },
+  {
+   "k": "So phần ba tập chép với lời Giáp.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "So phần ba tập chép với lời Giáp."
+  },
+  {
+   "k": "Người sống được yêu cầu đứng đúng vị trí từng giam nạn nhân.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Người sống được yêu cầu đứng đúng vị trí từng giam nạn nhân."
+  },
+  {
+   "k": "Đáp án là đưa người sống đứng vào vòng.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đáp án là đưa người sống đứng vào vòng."
+  },
+  {
+   "k": "Ghép lời khấn gốc thành ba vế đúng thứ tự.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ghép lời khấn gốc thành ba vế đúng thứ tự."
+  },
+  {
+   "k": "Rừng nuôi|người sống|người giữ rừng xanh",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Rừng nuôi|người sống|người giữ rừng xanh"
+  },
+  {
+   "k": "người giữ rừng xanh",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "người giữ rừng xanh"
+  },
+  {
+   "k": "Rừng nuôi",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Rừng nuôi"
+  },
+  {
+   "k": "người sống",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "người sống"
+  },
+  {
+   "k": "Lời tạ rừng không có nghi thức hiến tế.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Lời tạ rừng không có nghi thức hiến tế."
+  },
+  {
+   "k": "Lời gốc xuất hiện trong hai tài liệu độc lập.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Lời gốc xuất hiện trong hai tài liệu độc lập."
+  },
+  {
+   "k": "Vế đầu nói rừng nuôi ai, vế cuối nói người làm gì.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Vế đầu nói rừng nuôi ai, vế cuối nói người làm gì."
+  },
+  {
+   "k": "Rừng nuôi → người sống → người giữ rừng xanh.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Rừng nuôi → người sống → người giữ rừng xanh."
+  },
+  {
+   "k": "Việc Quế giao cho Tùng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Việc Quế giao cho Tùng"
+  },
+  {
+   "k": "Quế nhờ Tùng làm gì trước khi lễ ở nền đá bắt đầu?",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Quế nhờ Tùng làm gì trước khi lễ ở nền đá bắt đầu?"
+  },
+  {
+   "k": "Đem thư và sớ gốc lên xã",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đem thư và sớ gốc lên xã"
+  },
+  {
+   "k": "Giấu thư xuống giếng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Giấu thư xuống giếng"
+  },
+  {
+   "k": "Tìm thầy Nguyên xem quẻ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tìm thầy Nguyên xem quẻ"
+  },
+  {
+   "k": "Về nhà chờ tới sáng",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Về nhà chờ tới sáng"
+  },
+  {
+   "k": "Quế đã cố báo cho người có trách nhiệm ngăn vụ tế người năm 1986.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Quế đã cố báo cho người có trách nhiệm ngăn vụ tế người năm 1986."
+  },
+  {
+   "k": "Đọc trang “Việc phải làm”.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đọc trang “Việc phải làm”."
+  },
+  {
+   "k": "Quế cần người ngoài tới nền tế.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Quế cần người ngoài tới nền tế."
+  },
+  {
+   "k": "Tùng phải đem thư và sớ gốc lên xã.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Tùng phải đem thư và sớ gốc lên xã."
+  },
+  {
+   "k": "Đối chiếu dấu dưới ấn",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đối chiếu dấu dưới ấn"
+  },
+  {
+   "k": "Đã thấy dấu dưới ấn qua mặt nước. Có thể kết luận gì khi so với các bản sớ?",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Đã thấy dấu dưới ấn qua mặt nước. Có thể kết luận gì khi so với các bản sớ?"
+  },
+  {
+   "k": "Chưa đủ cơ sở đồng nhất ấn cổ với triện của Chân",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Chưa đủ cơ sở đồng nhất ấn cổ với triện của Chân"
+  },
+  {
+   "k": "Ấn cổ chắc chắn do Chân đúc",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ấn cổ chắc chắn do Chân đúc"
+  },
+  {
+   "k": "Ấn là bằng chứng thần rừng đòi mạng người",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ấn là bằng chứng thần rừng đòi mạng người"
+  },
+  {
+   "k": "Phải nhổ ấn trước khi đọc được dấu",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Phải nhổ ấn trước khi đọc được dấu"
+  },
+  {
+   "k": "Ấn cổ có trước bản sớ giả. Các tài liệu về nghi lễ không đủ để coi chúng là cùng một vật.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ấn cổ có trước bản sớ giả. Các tài liệu về nghi lễ không đủ để coi chúng là cùng một vật."
+  },
+  {
+   "k": "So thời điểm và xuất xứ của vật chứng.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "So thời điểm và xuất xứ của vật chứng."
+  },
+  {
+   "k": "Bản sớ của Chân không chứng minh ông ta tạo ra chiếc ấn cổ.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bản sớ của Chân không chứng minh ông ta tạo ra chiếc ấn cổ."
+  },
+  {
+   "k": "Không đủ cơ sở đồng nhất ấn cổ với triện của Chân.",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Không đủ cơ sở đồng nhất ấn cổ với triện của Chân."
+  },
+  {
+   "k": "Hồ sơ đêm lễ",
+   "files": [
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Hồ sơ đêm lễ"
+  }
+ ]
+}

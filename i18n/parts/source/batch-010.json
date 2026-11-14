@@ -1,0 +1,569 @@
+{
+ "batch": 10,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Chọn một dấu vết để quan sát.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Tư liệu quanh đây</h2><p>Chọn một dấu vết để quan sát.</p><div id=\"nearby-research\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Không còn tư liệu mới trong cảnh này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Không còn tư liệu mới trong cảnh này."
+  },
+  {
+   "k": "Mở cuốn sách trong túi đồ để xem từng trang.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": " Mở cuốn sách trong túi đồ để xem từng trang."
+  },
+  {
+   "k": "BẢN CHÉP NGHI LỄ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "BẢN CHÉP NGHI LỄ"
+  },
+  {
+   "k": "BẢN LỄ TẠ RỪNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "BẢN LỄ TẠ RỪNG"
+  },
+  {
+   "k": "THƯ TAY",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "THƯ TAY"
+  },
+  {
+   "k": "NHẬT KÝ RIÊNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "NHẬT KÝ RIÊNG"
+  },
+  {
+   "k": "TƯ LIỆU ĐỊA PHƯƠNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "TƯ LIỆU ĐỊA PHƯƠNG"
+  },
+  {
+   "k": "TƯ LIỆU ĐỒNG CHAY",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "TƯ LIỆU ĐỒNG CHAY"
+  },
+  {
+   "k": "Đã đọc hết:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã đọc hết: "
+  },
+  {
+   "k": "Trang giấy bị dính chặt",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trang giấy bị dính chặt"
+  },
+  {
+   "k": "· ĐÃ ĐÁNH DẤU",
+   "files": [
+    "game.js"
+   ],
+   "ctx": " · ĐÃ ĐÁNH DẤU"
+  },
+  {
+   "k": "◆ Bỏ dấu trang",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "◆ Bỏ dấu trang"
+  },
+  {
+   "k": "◇ Đánh dấu trang",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "◇ Đánh dấu trang"
+  },
+  {
+   "k": "Bỏ dấu trang",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bỏ dấu trang "
+  },
+  {
+   "k": "Đánh dấu trang",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đánh dấu trang "
+  },
+  {
+   "k": "SÁCH · TÀI LIỆU",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "SÁCH · TÀI LIỆU"
+  },
+  {
+   "k": "Trang này chưa thể đánh dấu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trang này chưa thể đánh dấu."
+  },
+  {
+   "k": "Đã bỏ dấu trang.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã bỏ dấu trang."
+  },
+  {
+   "k": "Đã đánh dấu trang",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã đánh dấu trang "
+  },
+  {
+   "k": "Bôi đen một đoạn trong trang sách rồi nhấn lưu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bôi đen một đoạn trong trang sách rồi nhấn lưu."
+  },
+  {
+   "k": "Đã lưu đoạn văn vào ghi chú.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã lưu đoạn văn vào ghi chú."
+  },
+  {
+   "k": "Bạn chưa đánh dấu trang hoặc lưu đoạn nào.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bạn chưa đánh dấu trang hoặc lưu đoạn nào."
+  },
+  {
+   "k": "GHI CHÚ /",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"research-clip-list\"><span class=\"research-section-label\">GHI CHÚ / "
+  },
+  {
+   "k": "Những trang đã đánh dấu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "</span><h2>Những trang đã đánh dấu</h2><div>"
+  },
+  {
+   "k": "Trở lại sách",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "</div><button class=\"modal-option\" id=\"research-clip-close\" type=\"button\">Trở lại sách</button></div>"
+  },
+  {
+   "k": "GHI CHÚ TƯ LIỆU",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "GHI CHÚ TƯ LIỆU"
+  },
+  {
+   "k": "ĐÃ ĐỌC HẾT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐÃ ĐỌC HẾT"
+  },
+  {
+   "k": "ĐÃ LƯU",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐÃ LƯU "
+  },
+  {
+   "k": "GHI CHÚ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": " GHI CHÚ"
+  },
+  {
+   "k": "CHƯA ĐỌC HẾT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CHƯA ĐỌC HẾT"
+  },
+  {
+   "k": "Sách đã dùng xong được lưu vào Nhật ký (J).",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<p class=\"research-archive-empty\">Sách đã dùng xong được lưu vào Nhật ký (J).</p>"
+  },
+  {
+   "k": "Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<p class=\"research-archive-empty\">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>"
+  },
+  {
+   "k": "THƯ VIỆN · ĐỒNG CHAY",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "THƯ VIỆN · ĐỒNG CHAY"
+  },
+  {
+   "k": "Mình cần tìm hiểu thêm chuyện đêm ấy rồi mới xem được chi tiết này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mình cần tìm hiểu thêm chuyện đêm ấy rồi mới xem được chi tiết này."
+  },
+  {
+   "k": "MANH MỐI ĐÃ GIẢI",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "MANH MỐI ĐÃ GIẢI"
+  },
+  {
+   "k": "Trang cuối nhật ký",
+   "files": [
+    "game.js",
+    "assets/research/books-data.js"
+   ],
+   "ctx": "<h2>Trang cuối nhật ký</h2><p>Hãy mở lại trang cuối của nhật ký sau khi trở về từ ký ức.</p>"
+  },
+  {
+   "k": "Hãy mở lại trang cuối của nhật ký sau khi trở về từ ký ức.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Trang cuối nhật ký</h2><p>Hãy mở lại trang cuối của nhật ký sau khi trở về từ ký ức.</p>"
+  },
+  {
+   "k": "TƯ LIỆU",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "TƯ LIỆU"
+  },
+  {
+   "k": "Các ký hiệu ở đây chưa đủ rõ để kết luận. Có thể có sách hoặc ghi chép trong những phòng khác giúp đối chiếu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "</p><p class=\"modal-note\">Các ký hiệu ở đây chưa đủ rõ để kết luận. Có thể có sách hoặc ghi chép trong những phòng khác giúp đối chiếu.</p>"
+  },
+  {
+   "k": "CÂU ĐỐ · CHƯA ĐỦ DỮ KIỆN",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · CHƯA ĐỦ DỮ KIỆN"
+  },
+  {
+   "k": "Chiếc bát không người nhận",
+   "files": [
+    "game.js",
+    "assets/research/books-data.js"
+   ],
+   "ctx": "<h2>Chiếc bát không người nhận</h2><p>Hãy đọc trang “Bữa cơm đêm” trong sổ bếp trước khi đối chiếu.</p>"
+  },
+  {
+   "k": "Hãy đọc trang “Bữa cơm đêm” trong sổ bếp trước khi đối chiếu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Chiếc bát không người nhận</h2><p>Hãy đọc trang “Bữa cơm đêm” trong sổ bếp trước khi đối chiếu.</p>"
+  },
+  {
+   "k": "Chưa khớp với các tài liệu. Thử xem lại từng chi tiết.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chưa khớp với các tài liệu. Thử xem lại từng chi tiết."
+  },
+  {
+   "k": "ĐÃ GIẢI ·",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐÃ GIẢI · "
+  },
+  {
+   "k": "Khoan, chỗ này khớp rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khoan, chỗ này khớp rồi."
+  },
+  {
+   "k": "HỒ SƠ / ĐỐI CHIẾU",
+   "files": [
+    "game.js",
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"research-puzzle-ui\"><div class=\"research-puzzle-top\"><span>HỒ SƠ / ĐỐI CHIẾU</span><span>✥</span></div>"
+  },
+  {
+   "k": "Chọn từng mục theo thứ tự đúng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chọn từng mục theo thứ tự đúng."
+  },
+  {
+   "k": "Chọn đúng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chọn đúng "
+  },
+  {
+   "k": "mục rồi kiểm tra.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": " mục rồi kiểm tra."
+  },
+  {
+   "k": "Hãy đọc các trang đã tìm được trước khi chọn.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hãy đọc các trang đã tìm được trước khi chọn."
+  },
+  {
+   "k": "CÂU ĐỐ · TÀI LIỆU",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · TÀI LIỆU"
+  },
+  {
+   "k": "Mã bốn chữ số",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mã bốn chữ số"
+  },
+  {
+   "k": "Đã chọn:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã chọn: "
+  },
+  {
+   "k": "chưa có",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "chưa có"
+  },
+  {
+   "k": "Kiểm tra đáp án",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Kiểm tra đáp án"
+  },
+  {
+   "k": "Chọn lại",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chọn lại"
+  },
+  {
+   "k": "Gợi ý nhẹ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Gợi ý nhẹ"
+  },
+  {
+   "k": "Đối chiếu các tài liệu liên quan.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đối chiếu các tài liệu liên quan."
+  },
+  {
+   "k": "Ô số",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ô số "
+  },
+  {
+   "k": "Hãy xem lại những gì đã quan sát.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hãy xem lại những gì đã quan sát."
+  },
+  {
+   "k": "Đã đủ ba mảnh đơn. Ghép chúng trên bàn ông Hưng ở BG17.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã đủ ba mảnh đơn. Ghép chúng trên bàn ông Hưng ở BG17."
+  },
+  {
+   "k": "Mặt sau khung ảnh viết: “",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mặt sau khung ảnh viết: “"
+  },
+  {
+   "k": "”. Mình đã lấy mảnh giấy rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "”. Mình đã lấy mảnh giấy rồi."
+  },
+  {
+   "k": "CÂU ĐỐ · MẬT MÃ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · MẬT MÃ"
+  },
+  {
+   "k": "Dịch:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dịch: "
+  },
+  {
+   "k": "XÁC NHẬN",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "XÁC NHẬN"
+  },
+  {
+   "k": "Chữ vẫn chưa thành câu có nghĩa. Thử tiếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chữ vẫn chưa thành câu có nghĩa. Thử tiếp."
+  },
+  {
+   "k": "Mảnh đơn thứ hai",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh đơn thứ hai"
+  },
+  {
+   "k": "Sau khung ảnh gia đình có dòng chữ mã hóa: “",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sau khung ảnh gia đình có dòng chữ mã hóa: “"
+  },
+  {
+   "k": "”, và một mảnh giấy rách dán kín. Hãy nhớ giờ này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "”, và một mảnh giấy rách dán kín. Hãy nhớ giờ này."
+  },
+  {
+   "k": "”. Một giờ giấc. Mười một giờ bốn mươi lăm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "”. Một giờ giấc. Mười một giờ bốn mươi lăm."
+  },
+  {
+   "k": "Dòng chữ nhắc tới đồng hồ. Chiếc đồng hồ quả lắc ngay đại sảnh này?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dòng chữ nhắc tới đồng hồ. Chiếc đồng hồ quả lắc ngay đại sảnh này?"
+  },
+  {
+   "k": "Còn mảnh giấy rách dán sau khung. Cũng như tờ đơn bị xé, tớ có cảm giác còn hai mảnh nữa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Còn mảnh giấy rách dán sau khung. Cũng như tờ đơn bị xé, tớ có cảm giác còn hai mảnh nữa."
+  },
+  {
+   "k": "Mỗi chữ cái bị đẩy lùi cùng một số bước.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mỗi chữ cái bị đẩy lùi cùng một số bước."
+  },
+  {
+   "k": "Thử dịch vài bước, nhìn xem chữ đầu tiên có thành chữ quen thuộc không.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thử dịch vài bước, nhìn xem chữ đầu tiên có thành chữ quen thuộc không."
+  },
+  {
+   "k": "Chữ đầu tiên của câu là chữ D. Thử dịch tới khi đọc được “DONG HO”.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chữ đầu tiên của câu là chữ D. Thử dịch tới khi đọc được “DONG HO”."
+  },
+  {
+   "k": "Ngăn dưới đồng hồ đã mở, mảnh giấy đã lấy ra rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngăn dưới đồng hồ đã mở, mảnh giấy đã lấy ra rồi."
+  },
+  {
+   "k": "CÂU ĐỐ · ĐỒNG HỒ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · ĐỒNG HỒ"
+  },
+  {
+   "k": "Dòng chữ trong đồng hồ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dòng chữ trong đồng hồ"
+  }
+ ]
+}

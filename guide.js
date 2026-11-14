@@ -11,20 +11,22 @@ const RM = () => !!(window.matchMedia && matchMedia('(prefers-reduced-motion: re
 /* ---------- 2. Tiêu đề chương ---------- */
 const chapterEl = $('chapter-label'), card = $('chapter-card');
 let lastChapter = null, cardTimer = 0;
+const src = s => (window.I18N ? window.I18N.source(s) : s);
 function chapterParts(txt) {
   const m = /^(CHƯƠNG\s*\d+)\s*·\s*(.+)$/i.exec((txt || '').trim());
   return m ? { no: m[1].toUpperCase(), name: m[2] } : null;
 }
 function showChapter(p) {
   if (!card) return;
-  $('chapter-card-no').textContent = p.no;
-  $('chapter-card-name').textContent = p.name.toLowerCase().replace(/(^|\s)\S/g, c => c.toUpperCase());
+  const localized = window.I18N && window.I18N.lang !== 'vi';
+  $('chapter-card-no').textContent = localized ? window.I18N.t(p.no) : p.no;
+  $('chapter-card-name').textContent = localized ? window.I18N.t(p.name) : p.name.toLowerCase().replace(/(^|\s)\S/g, c => c.toUpperCase());
   card.classList.remove('on'); void card.offsetWidth; card.classList.add('on');
   clearTimeout(cardTimer); cardTimer = setTimeout(() => card.classList.remove('on'), RM() ? 2600 : 3600);
 }
 if (chapterEl && card && typeof MutationObserver === 'function') {
   new MutationObserver(() => {
-    const t = chapterEl.textContent;
+    const t = src(chapterEl.textContent);
     if (t === lastChapter) return;
     const first = lastChapter === null; lastChapter = t;
     const title = $('title-screen');
@@ -32,7 +34,7 @@ if (chapterEl && card && typeof MutationObserver === 'function') {
     const p = chapterParts(t);
     if (p) showChapter(p);
   }).observe(chapterEl, { childList: true, characterData: true, subtree: true });
-  lastChapter = chapterEl.textContent;
+  lastChapter = src(chapterEl.textContent);
 }
 
 /* ---------- 3. Chữ gợi ý + bàn tay chỉ ---------- */

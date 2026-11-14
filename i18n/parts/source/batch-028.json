@@ -1,0 +1,566 @@
+{
+ "batch": 28,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Khấn tên người đã khuất",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(BG('BG29'),'Vườn mộ sau biệt thự')}<h2>Khấn tên người đã khuất</h2><p><strong>Chọn tên cho người được tưởng nhớ</strong></p><p>Nấm mộ này là của <strong>${escapeHTML(cur.role)}</strong>. Hãy đọc đúng tên người ấy.</p><div id=\"name-options\" class=\"ritual-list\"></div><p class=\"modal-note\">Hãy đọc lại nhật ký nếu chưa nhớ.</p>"
+  },
+  {
+   "k": "Chọn tên cho người được tưởng nhớ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(BG('BG29'),'Vườn mộ sau biệt thự')}<h2>Khấn tên người đã khuất</h2><p><strong>Chọn tên cho người được tưởng nhớ</strong></p><p>Nấm mộ này là của <strong>${escapeHTML(cur.role)}</strong>. Hãy đọc đúng tên người ấy.</p><div id=\"name-options\" class=\"ritual-list\"></div><p class=\"modal-note\">Hãy đọc lại nhật ký nếu chưa nhớ.</p>"
+  },
+  {
+   "k": "Nấm mộ này là của",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(BG('BG29'),'Vườn mộ sau biệt thự')}<h2>Khấn tên người đã khuất</h2><p><strong>Chọn tên cho người được tưởng nhớ</strong></p><p>Nấm mộ này là của <strong>${escapeHTML(cur.role)}</strong>. Hãy đọc đúng tên người ấy.</p><div id=\"name-options\" class=\"ritual-list\"></div><p class=\"modal-note\">Hãy đọc lại nhật ký nếu chưa nhớ.</p>"
+  },
+  {
+   "k": ". Hãy đọc đúng tên người ấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(BG('BG29'),'Vườn mộ sau biệt thự')}<h2>Khấn tên người đã khuất</h2><p><strong>Chọn tên cho người được tưởng nhớ</strong></p><p>Nấm mộ này là của <strong>${escapeHTML(cur.role)}</strong>. Hãy đọc đúng tên người ấy.</p><div id=\"name-options\" class=\"ritual-list\"></div><p class=\"modal-note\">Hãy đọc lại nhật ký nếu chưa nhớ.</p>"
+  },
+  {
+   "k": "Hãy đọc lại nhật ký nếu chưa nhớ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(BG('BG29'),'Vườn mộ sau biệt thự')}<h2>Khấn tên người đã khuất</h2><p><strong>Chọn tên cho người được tưởng nhớ</strong></p><p>Nấm mộ này là của <strong>${escapeHTML(cur.role)}</strong>. Hãy đọc đúng tên người ấy.</p><div id=\"name-options\" class=\"ritual-list\"></div><p class=\"modal-note\">Hãy đọc lại nhật ký nếu chưa nhớ.</p>"
+  },
+  {
+   "k": "Chạm hoặc nhấp các dấu trên cảnh để quan sát, trò chuyện và di chuyển. Chọn vật phẩm trong thanh bên dưới rồi chạm nơi muốn sử dụng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Cách chơi</h2><p>Chạm hoặc nhấp các dấu trên cảnh để quan sát, trò chuyện và di chuyển. Chọn vật phẩm trong thanh bên dưới rồi chạm nơi muốn sử dụng.</p><p>Nhật ký giữ lại những gì đã tìm thấy. Hãy đọc và đối chiếu tài liệu; một số chi tiết có thể không đáng tin.</p><p><strong>Phím tắt:</strong> J mở nhật ký · H xem gợi ý nhẹ · F bật đèn pin · Esc đóng bảng · Enter hoặc Space tiếp lời thoại.</p><div class=\"modal-buttons\" id=\"guide-actions\"></div>"
+  },
+  {
+   "k": "Nhật ký giữ lại những gì đã tìm thấy. Hãy đọc và đối chiếu tài liệu; một số chi tiết có thể không đáng tin.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Cách chơi</h2><p>Chạm hoặc nhấp các dấu trên cảnh để quan sát, trò chuyện và di chuyển. Chọn vật phẩm trong thanh bên dưới rồi chạm nơi muốn sử dụng.</p><p>Nhật ký giữ lại những gì đã tìm thấy. Hãy đọc và đối chiếu tài liệu; một số chi tiết có thể không đáng tin.</p><p><strong>Phím tắt:</strong> J mở nhật ký · H xem gợi ý nhẹ · F bật đèn pin · Esc đóng bảng · Enter hoặc Space tiếp lời thoại.</p><div class=\"modal-buttons\" id=\"guide-actions\"></div>"
+  },
+  {
+   "k": "Phím tắt:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Cách chơi</h2><p>Chạm hoặc nhấp các dấu trên cảnh để quan sát, trò chuyện và di chuyển. Chọn vật phẩm trong thanh bên dưới rồi chạm nơi muốn sử dụng.</p><p>Nhật ký giữ lại những gì đã tìm thấy. Hãy đọc và đối chiếu tài liệu; một số chi tiết có thể không đáng tin.</p><p><strong>Phím tắt:</strong> J mở nhật ký · H xem gợi ý nhẹ · F bật đèn pin · Esc đóng bảng · Enter hoặc Space tiếp lời thoại.</p><div class=\"modal-buttons\" id=\"guide-actions\"></div>"
+  },
+  {
+   "k": "J mở nhật ký · H xem gợi ý nhẹ · F bật đèn pin · Esc đóng bảng · Enter hoặc Space tiếp lời thoại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Cách chơi</h2><p>Chạm hoặc nhấp các dấu trên cảnh để quan sát, trò chuyện và di chuyển. Chọn vật phẩm trong thanh bên dưới rồi chạm nơi muốn sử dụng.</p><p>Nhật ký giữ lại những gì đã tìm thấy. Hãy đọc và đối chiếu tài liệu; một số chi tiết có thể không đáng tin.</p><p><strong>Phím tắt:</strong> J mở nhật ký · H xem gợi ý nhẹ · F bật đèn pin · Esc đóng bảng · Enter hoặc Space tiếp lời thoại.</p><div class=\"modal-buttons\" id=\"guide-actions\"></div>"
+  },
+  {
+   "k": "Chưa có ghi chép",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"bk-empty\"><div class=\"bk-title\">Chưa có ghi chép</div><div class=\"bk-body\">Trang giấy vẫn còn trắng. Khi tìm thấy manh mối, Vy sẽ ghi lại ở đây…</div></div><div class=\"bk-folio\">${i+1}</div>"
+  },
+  {
+   "k": "Trang giấy vẫn còn trắng. Khi tìm thấy manh mối, Vy sẽ ghi lại ở đây…",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"bk-empty\"><div class=\"bk-title\">Chưa có ghi chép</div><div class=\"bk-body\">Trang giấy vẫn còn trắng. Khi tìm thấy manh mối, Vy sẽ ghi lại ở đây…</div></div><div class=\"bk-folio\">${i+1}</div>"
+  },
+  {
+   "k": "Ghi chép ${String(e.no).padStart(2,'0')}",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"bk-entry\"><div class=\"bk-no\">Ghi chép ${String(e.no).padStart(2,'0')}</div><div class=\"bk-title\">${escapeHTML(e.title)}</div><div class=\"bk-body\">${escapeHTML(e.body)}</div></div>"
+  },
+  {
+   "k": "Đồng Chay · những điều chưa thể quên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"bk-scene\">\n  <button class=\"bk-close\" id=\"bk-close\" type=\"button\" aria-label=\"Đóng nhật ký\">×</button>\n  <div class=\"bk ${per===1?'single':''} closed\" id=\"bk\">\n   <div class=\"bk-base\"></div>\n   <div class=\"bk-pages\"><div class=\"bk-page left\" id=\"bk-left\"></div><div class=\"bk-page right\" id=\"bk-right\"></div></div>\n   <div class=\"bk-ribbon\" aria-hidden=\"true\"></div>\n   <div class=\"bk-cover\" id=\"bk-cover\" aria-hidden=\"true\"><div class=\"bk-cover-frame\"><span class=\"bk-cover-sigil\">◈</span><div class=\"bk-cover-title\">SỔ TAY CỦA VY</div><div class=\"bk-cover-sub\">Đồng Chay · những điều chưa thể quên</div></div></div>\n  </div>\n  <div class=\"bk-nav\"><button class=\"bk-btn\" id=\"bk-prev\" type=\"button\">‹ Trang trước</button><span class=\"bk-count\" id=\"bk-count\"></span><button class=\"bk-btn\" id=\"bk-next\" type=\"button\">Trang sau ›</button></div>\n </div>"
+  },
+  {
+   "k": "‹ Trang trước",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"bk-scene\">\n  <button class=\"bk-close\" id=\"bk-close\" type=\"button\" aria-label=\"Đóng nhật ký\">×</button>\n  <div class=\"bk ${per===1?'single':''} closed\" id=\"bk\">\n   <div class=\"bk-base\"></div>\n   <div class=\"bk-pages\"><div class=\"bk-page left\" id=\"bk-left\"></div><div class=\"bk-page right\" id=\"bk-right\"></div></div>\n   <div class=\"bk-ribbon\" aria-hidden=\"true\"></div>\n   <div class=\"bk-cover\" id=\"bk-cover\" aria-hidden=\"true\"><div class=\"bk-cover-frame\"><span class=\"bk-cover-sigil\">◈</span><div class=\"bk-cover-title\">SỔ TAY CỦA VY</div><div class=\"bk-cover-sub\">Đồng Chay · những điều chưa thể quên</div></div></div>\n  </div>\n  <div class=\"bk-nav\"><button class=\"bk-btn\" id=\"bk-prev\" type=\"button\">‹ Trang trước</button><span class=\"bk-count\" id=\"bk-count\"></span><button class=\"bk-btn\" id=\"bk-next\" type=\"button\">Trang sau ›</button></div>\n </div>"
+  },
+  {
+   "k": "Hãy đọc lại nhật ký và các tư liệu đã thu thập.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Gợi ý</h2><p>${escapeHTML(ob[1])}</p><p class=\"modal-note\">Hãy đọc lại nhật ký và các tư liệu đã thu thập.</p><div id=\"hint-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "${unlocked?escapeHTML(a.title):'Thành tựu bí ẩn'}",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<article class=\"achievement-card${unlocked?'':' is-locked'}\"><strong><span class=\"achievement-mark\" aria-hidden=\"true\">${unlocked?'✦':'◇'}</span>${unlocked?escapeHTML(a.title):'Thành tựu bí ẩn'}</strong><p>${unlocked?escapeHTML(a.detail):'Tiếp tục hành trình để khám phá.'}</p></article>"
+  },
+  {
+   "k": "${unlocked?escapeHTML(a.detail):'Tiếp tục hành trình để khám phá.'}",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<article class=\"achievement-card${unlocked?'':' is-locked'}\"><strong><span class=\"achievement-mark\" aria-hidden=\"true\">${unlocked?'✦':'◇'}</span>${unlocked?escapeHTML(a.title):'Thành tựu bí ẩn'}</strong><p>${unlocked?escapeHTML(a.detail):'Tiếp tục hành trình để khám phá.'}</p></article>"
+  },
+  {
+   "k": "Thành tựu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Thành tựu</h2><p>Đã mở <strong>${count} / ${ACHIEVEMENTS.length}</strong> thành tựu.</p><p class=\"modal-note\">Thành tựu được lưu trên thiết bị này và giữ lại khi bắt đầu lượt chơi mới.</p><div class=\"achievement-list\">${cards}</div><div id=\"achievement-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "thành tựu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Thành tựu</h2><p>Đã mở <strong>${count} / ${ACHIEVEMENTS.length}</strong> thành tựu.</p><p class=\"modal-note\">Thành tựu được lưu trên thiết bị này và giữ lại khi bắt đầu lượt chơi mới.</p><div class=\"achievement-list\">${cards}</div><div id=\"achievement-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Thành tựu được lưu trên thiết bị này và giữ lại khi bắt đầu lượt chơi mới.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Thành tựu</h2><p>Đã mở <strong>${count} / ${ACHIEVEMENTS.length}</strong> thành tựu.</p><p class=\"modal-note\">Thành tựu được lưu trên thiết bị này và giữ lại khi bắt đầu lượt chơi mới.</p><div class=\"achievement-list\">${cards}</div><div id=\"achievement-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "NHIỆM VỤ HIỆN TẠI",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Tạm dừng</h2>\n <div class=\"menu-status\"><div class=\"menu-kick\">NHIỆM VỤ HIỆN TẠI</div><div class=\"menu-ob-title\">${escapeHTML(ob[0])}</div><div class=\"menu-ob-text\">${escapeHTML(ob[1])}</div><div class=\"menu-relics\"><span>DI VẬT</span><div class=\"menu-track\"><i style=\"width:${rc/5*100}%\"></i></div><b>${rc===RELIC_ORDER.length?'Đã tìm đủ':'Đang tìm'}</b></div></div>\n <div class=\"menu-grid\" id=\"menu-actions\"></div>\n <p class=\"modal-note\">Tiến trình được tự động lưu. Đặt lại sẽ xóa tiến trình hiện tại. Nếu máy giật, hãy hạ Hiệu ứng hình ảnh xuống Vừa hoặc Thấp.</p>"
+  },
+  {
+   "k": "DI VẬT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Tạm dừng</h2>\n <div class=\"menu-status\"><div class=\"menu-kick\">NHIỆM VỤ HIỆN TẠI</div><div class=\"menu-ob-title\">${escapeHTML(ob[0])}</div><div class=\"menu-ob-text\">${escapeHTML(ob[1])}</div><div class=\"menu-relics\"><span>DI VẬT</span><div class=\"menu-track\"><i style=\"width:${rc/5*100}%\"></i></div><b>${rc===RELIC_ORDER.length?'Đã tìm đủ':'Đang tìm'}</b></div></div>\n <div class=\"menu-grid\" id=\"menu-actions\"></div>\n <p class=\"modal-note\">Tiến trình được tự động lưu. Đặt lại sẽ xóa tiến trình hiện tại. Nếu máy giật, hãy hạ Hiệu ứng hình ảnh xuống Vừa hoặc Thấp.</p>"
+  },
+  {
+   "k": "${rc===RELIC_ORDER.length?'Đã tìm đủ':'Đang tìm'}",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Tạm dừng</h2>\n <div class=\"menu-status\"><div class=\"menu-kick\">NHIỆM VỤ HIỆN TẠI</div><div class=\"menu-ob-title\">${escapeHTML(ob[0])}</div><div class=\"menu-ob-text\">${escapeHTML(ob[1])}</div><div class=\"menu-relics\"><span>DI VẬT</span><div class=\"menu-track\"><i style=\"width:${rc/5*100}%\"></i></div><b>${rc===RELIC_ORDER.length?'Đã tìm đủ':'Đang tìm'}</b></div></div>\n <div class=\"menu-grid\" id=\"menu-actions\"></div>\n <p class=\"modal-note\">Tiến trình được tự động lưu. Đặt lại sẽ xóa tiến trình hiện tại. Nếu máy giật, hãy hạ Hiệu ứng hình ảnh xuống Vừa hoặc Thấp.</p>"
+  },
+  {
+   "k": "Tiến trình được tự động lưu. Đặt lại sẽ xóa tiến trình hiện tại. Nếu máy giật, hãy hạ Hiệu ứng hình ảnh xuống Vừa hoặc Thấp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Tạm dừng</h2>\n <div class=\"menu-status\"><div class=\"menu-kick\">NHIỆM VỤ HIỆN TẠI</div><div class=\"menu-ob-title\">${escapeHTML(ob[0])}</div><div class=\"menu-ob-text\">${escapeHTML(ob[1])}</div><div class=\"menu-relics\"><span>DI VẬT</span><div class=\"menu-track\"><i style=\"width:${rc/5*100}%\"></i></div><b>${rc===RELIC_ORDER.length?'Đã tìm đủ':'Đang tìm'}</b></div></div>\n <div class=\"menu-grid\" id=\"menu-actions\"></div>\n <p class=\"modal-note\">Tiến trình được tự động lưu. Đặt lại sẽ xóa tiến trình hiện tại. Nếu máy giật, hãy hạ Hiệu ứng hình ảnh xuống Vừa hoặc Thấp.</p>"
+  },
+  {
+   "k": "VIỆC CẦN LÀM",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Gợi ý</h2><div class=\"menu-status\"><div class=\"menu-kick\">VIỆC CẦN LÀM</div><div class=\"menu-ob-title\">${escapeHTML(ob[0])}</div><div class=\"menu-ob-text\">${escapeHTML(ob[1])}</div></div><p class=\"modal-note\">Vẫn bí? Mở \"Điểm tương tác\" để xem mọi chỗ chạm được trong cảnh này, hoặc đọc lại Nhật ký.</p><div id=\"hint-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Vẫn bí? Mở \"Điểm tương tác\" để xem mọi chỗ chạm được trong cảnh này, hoặc đọc lại Nhật ký.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Gợi ý</h2><div class=\"menu-status\"><div class=\"menu-kick\">VIỆC CẦN LÀM</div><div class=\"menu-ob-title\">${escapeHTML(ob[0])}</div><div class=\"menu-ob-text\">${escapeHTML(ob[1])}</div></div><p class=\"modal-note\">Vẫn bí? Mở \"Điểm tương tác\" để xem mọi chỗ chạm được trong cảnh này, hoặc đọc lại Nhật ký.</p><div id=\"hint-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "${escapeHTML(researchBookType(b))}${marked?' · ĐÃ ĐÁNH DẤU':''}",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<section class=\"research-paper${locked?' research-paper-locked':''}\" data-page=\"${i}\" aria-label=\"Trang ${i+1}: ${escapeHTML(heading)}\">\n   <div class=\"bk-no\">${escapeHTML(researchBookType(b))}${marked?' · ĐÃ ĐÁNH DẤU':''}</div>\n   <div class=\"bk-title\">${escapeHTML(i===0?b.title:heading)}</div>\n   <div class=\"bk-body research-page-content\" data-page-text=\"${i}\">${researchClippedHTML(content,quotes(),i)}</div>\n   <div class=\"bk-folio\">${i+1}</div>\n  </section>"
+  },
+  {
+   "k": "Tư liệu · Đồng Chay",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"bk-scene research-journal\">\n   <button class=\"bk-close\" id=\"research-reader-close\" type=\"button\" aria-label=\"Đóng sách\">×</button>\n   <div class=\"bk ${mobile?'single ':''}${coverClass}\" id=\"research-book\" aria-label=\"${escapeHTML(b.title)}\">\n    <div class=\"bk-base\"></div>\n    <div class=\"bk-pages\">\n     <div class=\"bk-page left\" id=\"research-left\">${mobile?'':leaf(current)}</div>\n     <div class=\"bk-page right\" id=\"research-right\">${leaf(mobile?current:current+1)}</div>\n    </div>\n    <div class=\"bk-ribbon\" aria-hidden=\"true\"></div>\n    <div class=\"bk-cover\" aria-hidden=\"true\"><div class=\"bk-cover-frame\"><span class=\"bk-cover-sigil\">◈</span><div class=\"bk-cover-title\">${escapeHTML(b.title)}</div><div class=\"bk-cover-sub\">Tư liệu · Đồng Chay</div></div></div>\n   </div>\n   <div class=\"bk-nav research-journal-nav\">\n    <button class=\"bk-btn\" id=\"research-prev\" type=\"button\" ${current<=0?'disabled':''} aria-label=\"Trang trước\">‹ Trang trước</button>\n    <span class=\"bk-count\">${mobile?'Trang '+(current+1):'Trang '+(current+1)+(current+1<pageCount?'–'+(current+2):'')} / ${pageCount}</span>\n    <button class=\"bk-btn\" id=\"research-next\" type=\"button\" ${current+step>=pageCount?'disabled':''} aria-label=\"Trang sau\">Trang sau ›</button>\n   </div>\n   <div class=\"bk-nav research-journal-tools\">\n    <button class=\"bk-btn\" id=\"research-add-bookmark\" type=\"button\"></button>\n    <button class=\"bk-btn\" id=\"research-add-quote\" type=\"button\">✎ Lưu đoạn đang chọn</button>\n    <button class=\"bk-btn\" id=\"research-view-clips\" type=\"button\">Ghi chú đã lưu (${remembered})</button>\n    <button class=\"bk-btn\" id=\"research-to-archive\" type=\"button\">Thư viện tư liệu</button>\n   </div>\n  </div>"
+  },
+  {
+   "k": "✎ Lưu đoạn đang chọn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"bk-scene research-journal\">\n   <button class=\"bk-close\" id=\"research-reader-close\" type=\"button\" aria-label=\"Đóng sách\">×</button>\n   <div class=\"bk ${mobile?'single ':''}${coverClass}\" id=\"research-book\" aria-label=\"${escapeHTML(b.title)}\">\n    <div class=\"bk-base\"></div>\n    <div class=\"bk-pages\">\n     <div class=\"bk-page left\" id=\"research-left\">${mobile?'':leaf(current)}</div>\n     <div class=\"bk-page right\" id=\"research-right\">${leaf(mobile?current:current+1)}</div>\n    </div>\n    <div class=\"bk-ribbon\" aria-hidden=\"true\"></div>\n    <div class=\"bk-cover\" aria-hidden=\"true\"><div class=\"bk-cover-frame\"><span class=\"bk-cover-sigil\">◈</span><div class=\"bk-cover-title\">${escapeHTML(b.title)}</div><div class=\"bk-cover-sub\">Tư liệu · Đồng Chay</div></div></div>\n   </div>\n   <div class=\"bk-nav research-journal-nav\">\n    <button class=\"bk-btn\" id=\"research-prev\" type=\"button\" ${current<=0?'disabled':''} aria-label=\"Trang trước\">‹ Trang trước</button>\n    <span class=\"bk-count\">${mobile?'Trang '+(current+1):'Trang '+(current+1)+(current+1<pageCount?'–'+(current+2):'')} / ${pageCount}</span>\n    <button class=\"bk-btn\" id=\"research-next\" type=\"button\" ${current+step>=pageCount?'disabled':''} aria-label=\"Trang sau\">Trang sau ›</button>\n   </div>\n   <div class=\"bk-nav research-journal-tools\">\n    <button class=\"bk-btn\" id=\"research-add-bookmark\" type=\"button\"></button>\n    <button class=\"bk-btn\" id=\"research-add-quote\" type=\"button\">✎ Lưu đoạn đang chọn</button>\n    <button class=\"bk-btn\" id=\"research-view-clips\" type=\"button\">Ghi chú đã lưu (${remembered})</button>\n    <button class=\"bk-btn\" id=\"research-to-archive\" type=\"button\">Thư viện tư liệu</button>\n   </div>\n  </div>"
+  },
+  {
+   "k": "Ghi chú đã lưu (${remembered})",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"bk-scene research-journal\">\n   <button class=\"bk-close\" id=\"research-reader-close\" type=\"button\" aria-label=\"Đóng sách\">×</button>\n   <div class=\"bk ${mobile?'single ':''}${coverClass}\" id=\"research-book\" aria-label=\"${escapeHTML(b.title)}\">\n    <div class=\"bk-base\"></div>\n    <div class=\"bk-pages\">\n     <div class=\"bk-page left\" id=\"research-left\">${mobile?'':leaf(current)}</div>\n     <div class=\"bk-page right\" id=\"research-right\">${leaf(mobile?current:current+1)}</div>\n    </div>\n    <div class=\"bk-ribbon\" aria-hidden=\"true\"></div>\n    <div class=\"bk-cover\" aria-hidden=\"true\"><div class=\"bk-cover-frame\"><span class=\"bk-cover-sigil\">◈</span><div class=\"bk-cover-title\">${escapeHTML(b.title)}</div><div class=\"bk-cover-sub\">Tư liệu · Đồng Chay</div></div></div>\n   </div>\n   <div class=\"bk-nav research-journal-nav\">\n    <button class=\"bk-btn\" id=\"research-prev\" type=\"button\" ${current<=0?'disabled':''} aria-label=\"Trang trước\">‹ Trang trước</button>\n    <span class=\"bk-count\">${mobile?'Trang '+(current+1):'Trang '+(current+1)+(current+1<pageCount?'–'+(current+2):'')} / ${pageCount}</span>\n    <button class=\"bk-btn\" id=\"research-next\" type=\"button\" ${current+step>=pageCount?'disabled':''} aria-label=\"Trang sau\">Trang sau ›</button>\n   </div>\n   <div class=\"bk-nav research-journal-tools\">\n    <button class=\"bk-btn\" id=\"research-add-bookmark\" type=\"button\"></button>\n    <button class=\"bk-btn\" id=\"research-add-quote\" type=\"button\">✎ Lưu đoạn đang chọn</button>\n    <button class=\"bk-btn\" id=\"research-view-clips\" type=\"button\">Ghi chú đã lưu (${remembered})</button>\n    <button class=\"bk-btn\" id=\"research-to-archive\" type=\"button\">Thư viện tư liệu</button>\n   </div>\n  </div>"
+  },
+  {
+   "k": "Thư viện tư liệu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"bk-scene research-journal\">\n   <button class=\"bk-close\" id=\"research-reader-close\" type=\"button\" aria-label=\"Đóng sách\">×</button>\n   <div class=\"bk ${mobile?'single ':''}${coverClass}\" id=\"research-book\" aria-label=\"${escapeHTML(b.title)}\">\n    <div class=\"bk-base\"></div>\n    <div class=\"bk-pages\">\n     <div class=\"bk-page left\" id=\"research-left\">${mobile?'':leaf(current)}</div>\n     <div class=\"bk-page right\" id=\"research-right\">${leaf(mobile?current:current+1)}</div>\n    </div>\n    <div class=\"bk-ribbon\" aria-hidden=\"true\"></div>\n    <div class=\"bk-cover\" aria-hidden=\"true\"><div class=\"bk-cover-frame\"><span class=\"bk-cover-sigil\">◈</span><div class=\"bk-cover-title\">${escapeHTML(b.title)}</div><div class=\"bk-cover-sub\">Tư liệu · Đồng Chay</div></div></div>\n   </div>\n   <div class=\"bk-nav research-journal-nav\">\n    <button class=\"bk-btn\" id=\"research-prev\" type=\"button\" ${current<=0?'disabled':''} aria-label=\"Trang trước\">‹ Trang trước</button>\n    <span class=\"bk-count\">${mobile?'Trang '+(current+1):'Trang '+(current+1)+(current+1<pageCount?'–'+(current+2):'')} / ${pageCount}</span>\n    <button class=\"bk-btn\" id=\"research-next\" type=\"button\" ${current+step>=pageCount?'disabled':''} aria-label=\"Trang sau\">Trang sau ›</button>\n   </div>\n   <div class=\"bk-nav research-journal-tools\">\n    <button class=\"bk-btn\" id=\"research-add-bookmark\" type=\"button\"></button>\n    <button class=\"bk-btn\" id=\"research-add-quote\" type=\"button\">✎ Lưu đoạn đang chọn</button>\n    <button class=\"bk-btn\" id=\"research-view-clips\" type=\"button\">Ghi chú đã lưu (${remembered})</button>\n    <button class=\"bk-btn\" id=\"research-to-archive\" type=\"button\">Thư viện tư liệu</button>\n   </div>\n  </div>"
+  },
+  {
+   "k": "${complete?'ĐÃ ĐỌC HẾT':marks?'ĐÃ LƯU '+marks+' GHI CHÚ':'CHƯA ĐỌC HẾT'}",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<button type=\"button\" class=\"research-archive-card theme-${researchBookTheme(b)}\" data-book=\"${escapeHTML(b.id)}\">\n    <span class=\"research-archive-cover\" aria-hidden=\"true\"></span><span class=\"research-archive-detail\"><small>${escapeHTML(researchBookType(b))} · ${seen}/${b.pages.length} TRANG</small><strong>${escapeHTML(b.title)}</strong><em>${complete?'ĐÃ ĐỌC HẾT':marks?'ĐÃ LƯU '+marks+' GHI CHÚ':'CHƯA ĐỌC HẾT'}</em></span><span class=\"research-archive-arrow\">›</span></button>"
+  },
+  {
+   "k": "TỦ SÁCH ĐỒNG CHAY · SƯU TẦM",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"research-archive-ui\"><div class=\"research-archive-heading\"><span class=\"research-section-label\">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class=\"research-archive-stats\"><span><strong>${found.length}</strong> đang giữ · <strong>${retired}</strong> đã lưu / ${all}</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class=\"research-archive-grid\">${cards||(retired?'<p class=\"research-archive-empty\">Sách đã dùng xong được lưu vào Nhật ký (J).</p>':'<p class=\"research-archive-empty\">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>')}</div><div class=\"research-archive-bottom\"><span>Sách dùng xong chuyển sang Nhật ký (J); sách còn giữ có thể đọc lại.</span><button id=\"research-archive-close\" class=\"modal-option\">Đóng thư viện</button></div></div>"
+  },
+  {
+   "k": "Hồ sơ đang được mở",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"research-archive-ui\"><div class=\"research-archive-heading\"><span class=\"research-section-label\">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class=\"research-archive-stats\"><span><strong>${found.length}</strong> đang giữ · <strong>${retired}</strong> đã lưu / ${all}</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class=\"research-archive-grid\">${cards||(retired?'<p class=\"research-archive-empty\">Sách đã dùng xong được lưu vào Nhật ký (J).</p>':'<p class=\"research-archive-empty\">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>')}</div><div class=\"research-archive-bottom\"><span>Sách dùng xong chuyển sang Nhật ký (J); sách còn giữ có thể đọc lại.</span><button id=\"research-archive-close\" class=\"modal-option\">Đóng thư viện</button></div></div>"
+  },
+  {
+   "k": "Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"research-archive-ui\"><div class=\"research-archive-heading\"><span class=\"research-section-label\">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class=\"research-archive-stats\"><span><strong>${found.length}</strong> đang giữ · <strong>${retired}</strong> đã lưu / ${all}</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class=\"research-archive-grid\">${cards||(retired?'<p class=\"research-archive-empty\">Sách đã dùng xong được lưu vào Nhật ký (J).</p>':'<p class=\"research-archive-empty\">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>')}</div><div class=\"research-archive-bottom\"><span>Sách dùng xong chuyển sang Nhật ký (J); sách còn giữ có thể đọc lại.</span><button id=\"research-archive-close\" class=\"modal-option\">Đóng thư viện</button></div></div>"
+  },
+  {
+   "k": "đang giữ ·",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"research-archive-ui\"><div class=\"research-archive-heading\"><span class=\"research-section-label\">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class=\"research-archive-stats\"><span><strong>${found.length}</strong> đang giữ · <strong>${retired}</strong> đã lưu / ${all}</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class=\"research-archive-grid\">${cards||(retired?'<p class=\"research-archive-empty\">Sách đã dùng xong được lưu vào Nhật ký (J).</p>':'<p class=\"research-archive-empty\">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>')}</div><div class=\"research-archive-bottom\"><span>Sách dùng xong chuyển sang Nhật ký (J); sách còn giữ có thể đọc lại.</span><button id=\"research-archive-close\" class=\"modal-option\">Đóng thư viện</button></div></div>"
+  },
+  {
+   "k": "đã lưu / ${all}",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"research-archive-ui\"><div class=\"research-archive-heading\"><span class=\"research-section-label\">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class=\"research-archive-stats\"><span><strong>${found.length}</strong> đang giữ · <strong>${retired}</strong> đã lưu / ${all}</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class=\"research-archive-grid\">${cards||(retired?'<p class=\"research-archive-empty\">Sách đã dùng xong được lưu vào Nhật ký (J).</p>':'<p class=\"research-archive-empty\">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>')}</div><div class=\"research-archive-bottom\"><span>Sách dùng xong chuyển sang Nhật ký (J); sách còn giữ có thể đọc lại.</span><button id=\"research-archive-close\" class=\"modal-option\">Đóng thư viện</button></div></div>"
+  },
+  {
+   "k": "/ ${Object.keys(RESEARCH_PUZZLES).length} câu đố",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"research-archive-ui\"><div class=\"research-archive-heading\"><span class=\"research-section-label\">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class=\"research-archive-stats\"><span><strong>${found.length}</strong> đang giữ · <strong>${retired}</strong> đã lưu / ${all}</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class=\"research-archive-grid\">${cards||(retired?'<p class=\"research-archive-empty\">Sách đã dùng xong được lưu vào Nhật ký (J).</p>':'<p class=\"research-archive-empty\">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>')}</div><div class=\"research-archive-bottom\"><span>Sách dùng xong chuyển sang Nhật ký (J); sách còn giữ có thể đọc lại.</span><button id=\"research-archive-close\" class=\"modal-option\">Đóng thư viện</button></div></div>"
+  },
+  {
+   "k": "Sách dùng xong chuyển sang Nhật ký (J); sách còn giữ có thể đọc lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"research-archive-ui\"><div class=\"research-archive-heading\"><span class=\"research-section-label\">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class=\"research-archive-stats\"><span><strong>${found.length}</strong> đang giữ · <strong>${retired}</strong> đã lưu / ${all}</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class=\"research-archive-grid\">${cards||(retired?'<p class=\"research-archive-empty\">Sách đã dùng xong được lưu vào Nhật ký (J).</p>':'<p class=\"research-archive-empty\">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>')}</div><div class=\"research-archive-bottom\"><span>Sách dùng xong chuyển sang Nhật ký (J); sách còn giữ có thể đọc lại.</span><button id=\"research-archive-close\" class=\"modal-option\">Đóng thư viện</button></div></div>"
+  },
+  {
+   "k": "Đóng thư viện",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<div class=\"research-archive-ui\"><div class=\"research-archive-heading\"><span class=\"research-section-label\">TỦ SÁCH ĐỒNG CHAY · SƯU TẦM</span><h2>Hồ sơ đang được mở</h2><p>Không phải tài liệu nào cũng đáng tin. Hãy so các ghi chép ở làng với giấy tờ tìm thấy trong biệt thự.</p><div class=\"research-archive-stats\"><span><strong>${found.length}</strong> đang giữ · <strong>${retired}</strong> đã lưu / ${all}</span><span><strong>${solved.length}</strong> / ${Object.keys(RESEARCH_PUZZLES).length} câu đố</span></div></div><div class=\"research-archive-grid\">${cards||(retired?'<p class=\"research-archive-empty\">Sách đã dùng xong được lưu vào Nhật ký (J).</p>':'<p class=\"research-archive-empty\">Bạn chưa nhặt được cuốn sách nào. Hãy tìm tại miếu và các căn phòng.</p>')}</div><div class=\"research-archive-bottom\"><span>Sách dùng xong chuyển sang Nhật ký (J); sách còn giữ có thể đọc lại.</span><button id=\"research-archive-close\" class=\"modal-option\">Đóng thư viện</button></div></div>"
+  },
+  {
+   "k": "Mặt sau khung ảnh",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Mặt sau khung ảnh</h2><p>Có dòng chữ viết bằng mực phai, mỗi chữ cái bị dịch đi một số bước trong bảng chữ cái. Hãy xoay bánh giải mã cho tới khi đọc được.</p><div class=\"puzzle-cipher-art\" role=\"group\" aria-label=\"Mặt sau khung ảnh và bánh giải mã\"><div class=\"cipher-line\" id=\"cipher-line\" aria-live=\"polite\"></div></div><div class=\"cipher-ctl\"><button type=\"button\" class=\"modal-option\" id=\"cp-prev\" aria-label=\"Xoay bánh giải mã sang trái\">◀</button><span id=\"cp-shift\">Dịch: 0</span><button type=\"button\" class=\"modal-option\" id=\"cp-next\" aria-label=\"Xoay bánh giải mã sang phải\">▶</button></div><p class=\"modal-note\" id=\"cp-msg\">Đọc ra một câu có nghĩa, rồi bấm “XÁC NHẬN”.</p><div id=\"cp-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Có dòng chữ viết bằng mực phai, mỗi chữ cái bị dịch đi một số bước trong bảng chữ cái. Hãy xoay bánh giải mã cho tới khi đọc được.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Mặt sau khung ảnh</h2><p>Có dòng chữ viết bằng mực phai, mỗi chữ cái bị dịch đi một số bước trong bảng chữ cái. Hãy xoay bánh giải mã cho tới khi đọc được.</p><div class=\"puzzle-cipher-art\" role=\"group\" aria-label=\"Mặt sau khung ảnh và bánh giải mã\"><div class=\"cipher-line\" id=\"cipher-line\" aria-live=\"polite\"></div></div><div class=\"cipher-ctl\"><button type=\"button\" class=\"modal-option\" id=\"cp-prev\" aria-label=\"Xoay bánh giải mã sang trái\">◀</button><span id=\"cp-shift\">Dịch: 0</span><button type=\"button\" class=\"modal-option\" id=\"cp-next\" aria-label=\"Xoay bánh giải mã sang phải\">▶</button></div><p class=\"modal-note\" id=\"cp-msg\">Đọc ra một câu có nghĩa, rồi bấm “XÁC NHẬN”.</p><div id=\"cp-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Dịch: 0",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Mặt sau khung ảnh</h2><p>Có dòng chữ viết bằng mực phai, mỗi chữ cái bị dịch đi một số bước trong bảng chữ cái. Hãy xoay bánh giải mã cho tới khi đọc được.</p><div class=\"puzzle-cipher-art\" role=\"group\" aria-label=\"Mặt sau khung ảnh và bánh giải mã\"><div class=\"cipher-line\" id=\"cipher-line\" aria-live=\"polite\"></div></div><div class=\"cipher-ctl\"><button type=\"button\" class=\"modal-option\" id=\"cp-prev\" aria-label=\"Xoay bánh giải mã sang trái\">◀</button><span id=\"cp-shift\">Dịch: 0</span><button type=\"button\" class=\"modal-option\" id=\"cp-next\" aria-label=\"Xoay bánh giải mã sang phải\">▶</button></div><p class=\"modal-note\" id=\"cp-msg\">Đọc ra một câu có nghĩa, rồi bấm “XÁC NHẬN”.</p><div id=\"cp-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Đọc ra một câu có nghĩa, rồi bấm “XÁC NHẬN”.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Mặt sau khung ảnh</h2><p>Có dòng chữ viết bằng mực phai, mỗi chữ cái bị dịch đi một số bước trong bảng chữ cái. Hãy xoay bánh giải mã cho tới khi đọc được.</p><div class=\"puzzle-cipher-art\" role=\"group\" aria-label=\"Mặt sau khung ảnh và bánh giải mã\"><div class=\"cipher-line\" id=\"cipher-line\" aria-live=\"polite\"></div></div><div class=\"cipher-ctl\"><button type=\"button\" class=\"modal-option\" id=\"cp-prev\" aria-label=\"Xoay bánh giải mã sang trái\">◀</button><span id=\"cp-shift\">Dịch: 0</span><button type=\"button\" class=\"modal-option\" id=\"cp-next\" aria-label=\"Xoay bánh giải mã sang phải\">▶</button></div><p class=\"modal-note\" id=\"cp-msg\">Đọc ra một câu có nghĩa, rồi bấm “XÁC NHẬN”.</p><div id=\"cp-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Ngăn kín dưới đồng hồ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Ngăn kín dưới đồng hồ</h2><p>Mặt sau đồng hồ có một cơ cấu khóa: ngăn dưới chỉ bật ra khi kim chỉ đúng giờ. Chỉnh kim giờ và kim phút.</p><div class=\"puzzle-clock-art\" role=\"img\" aria-label=\"Bộ máy đồng hồ cũ với mặt đồng hồ điều chỉnh được\"><div class=\"clock-wrap\" id=\"clk\"></div></div><div class=\"cipher-ctl\"><span>Giờ</span><button type=\"button\" class=\"modal-option\" id=\"h-\" aria-label=\"Giảm giờ\"> − </button><b id=\"hv\"></b><button type=\"button\" class=\"modal-option\" id=\"h+\" aria-label=\"Tăng giờ\"> + </button><span>Phút</span><button type=\"button\" class=\"modal-option\" id=\"m-\" aria-label=\"Giảm phút\"> − </button><b id=\"mv\"></b><button type=\"button\" class=\"modal-option\" id=\"m+\" aria-label=\"Tăng phút\"> + </button></div><p class=\"modal-note\" id=\"ck-msg\">Chỉnh kim rồi bấm “XÁC NHẬN”.</p><div id=\"ck-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Mặt sau đồng hồ có một cơ cấu khóa: ngăn dưới chỉ bật ra khi kim chỉ đúng giờ. Chỉnh kim giờ và kim phút.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Ngăn kín dưới đồng hồ</h2><p>Mặt sau đồng hồ có một cơ cấu khóa: ngăn dưới chỉ bật ra khi kim chỉ đúng giờ. Chỉnh kim giờ và kim phút.</p><div class=\"puzzle-clock-art\" role=\"img\" aria-label=\"Bộ máy đồng hồ cũ với mặt đồng hồ điều chỉnh được\"><div class=\"clock-wrap\" id=\"clk\"></div></div><div class=\"cipher-ctl\"><span>Giờ</span><button type=\"button\" class=\"modal-option\" id=\"h-\" aria-label=\"Giảm giờ\"> − </button><b id=\"hv\"></b><button type=\"button\" class=\"modal-option\" id=\"h+\" aria-label=\"Tăng giờ\"> + </button><span>Phút</span><button type=\"button\" class=\"modal-option\" id=\"m-\" aria-label=\"Giảm phút\"> − </button><b id=\"mv\"></b><button type=\"button\" class=\"modal-option\" id=\"m+\" aria-label=\"Tăng phút\"> + </button></div><p class=\"modal-note\" id=\"ck-msg\">Chỉnh kim rồi bấm “XÁC NHẬN”.</p><div id=\"ck-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Giờ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Ngăn kín dưới đồng hồ</h2><p>Mặt sau đồng hồ có một cơ cấu khóa: ngăn dưới chỉ bật ra khi kim chỉ đúng giờ. Chỉnh kim giờ và kim phút.</p><div class=\"puzzle-clock-art\" role=\"img\" aria-label=\"Bộ máy đồng hồ cũ với mặt đồng hồ điều chỉnh được\"><div class=\"clock-wrap\" id=\"clk\"></div></div><div class=\"cipher-ctl\"><span>Giờ</span><button type=\"button\" class=\"modal-option\" id=\"h-\" aria-label=\"Giảm giờ\"> − </button><b id=\"hv\"></b><button type=\"button\" class=\"modal-option\" id=\"h+\" aria-label=\"Tăng giờ\"> + </button><span>Phút</span><button type=\"button\" class=\"modal-option\" id=\"m-\" aria-label=\"Giảm phút\"> − </button><b id=\"mv\"></b><button type=\"button\" class=\"modal-option\" id=\"m+\" aria-label=\"Tăng phút\"> + </button></div><p class=\"modal-note\" id=\"ck-msg\">Chỉnh kim rồi bấm “XÁC NHẬN”.</p><div id=\"ck-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Phút",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Ngăn kín dưới đồng hồ</h2><p>Mặt sau đồng hồ có một cơ cấu khóa: ngăn dưới chỉ bật ra khi kim chỉ đúng giờ. Chỉnh kim giờ và kim phút.</p><div class=\"puzzle-clock-art\" role=\"img\" aria-label=\"Bộ máy đồng hồ cũ với mặt đồng hồ điều chỉnh được\"><div class=\"clock-wrap\" id=\"clk\"></div></div><div class=\"cipher-ctl\"><span>Giờ</span><button type=\"button\" class=\"modal-option\" id=\"h-\" aria-label=\"Giảm giờ\"> − </button><b id=\"hv\"></b><button type=\"button\" class=\"modal-option\" id=\"h+\" aria-label=\"Tăng giờ\"> + </button><span>Phút</span><button type=\"button\" class=\"modal-option\" id=\"m-\" aria-label=\"Giảm phút\"> − </button><b id=\"mv\"></b><button type=\"button\" class=\"modal-option\" id=\"m+\" aria-label=\"Tăng phút\"> + </button></div><p class=\"modal-note\" id=\"ck-msg\">Chỉnh kim rồi bấm “XÁC NHẬN”.</p><div id=\"ck-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Chỉnh kim rồi bấm “XÁC NHẬN”.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Ngăn kín dưới đồng hồ</h2><p>Mặt sau đồng hồ có một cơ cấu khóa: ngăn dưới chỉ bật ra khi kim chỉ đúng giờ. Chỉnh kim giờ và kim phút.</p><div class=\"puzzle-clock-art\" role=\"img\" aria-label=\"Bộ máy đồng hồ cũ với mặt đồng hồ điều chỉnh được\"><div class=\"clock-wrap\" id=\"clk\"></div></div><div class=\"cipher-ctl\"><span>Giờ</span><button type=\"button\" class=\"modal-option\" id=\"h-\" aria-label=\"Giảm giờ\"> − </button><b id=\"hv\"></b><button type=\"button\" class=\"modal-option\" id=\"h+\" aria-label=\"Tăng giờ\"> + </button><span>Phút</span><button type=\"button\" class=\"modal-option\" id=\"m-\" aria-label=\"Giảm phút\"> − </button><b id=\"mv\"></b><button type=\"button\" class=\"modal-option\" id=\"m+\" aria-label=\"Tăng phút\"> + </button></div><p class=\"modal-note\" id=\"ck-msg\">Chỉnh kim rồi bấm “XÁC NHẬN”.</p><div id=\"ck-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Ghép lá đơn tố cáo",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Ghép lá đơn tố cáo</h2><p>Ba mảnh giấy rách đã đủ. Bấm hai mảnh để đổi chỗ, sắp lại cho đoạn văn xuôi chữ.</p><div class=\"puzzle-paper-art\"><div id=\"asm-strips\" class=\"asm-strips\"></div></div><p class=\"modal-note\">Đọc từ trên xuống dưới: lời mở đầu, nội dung, lời nhắn cuối.</p><div id=\"asm-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Ba mảnh giấy rách đã đủ. Bấm hai mảnh để đổi chỗ, sắp lại cho đoạn văn xuôi chữ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Ghép lá đơn tố cáo</h2><p>Ba mảnh giấy rách đã đủ. Bấm hai mảnh để đổi chỗ, sắp lại cho đoạn văn xuôi chữ.</p><div class=\"puzzle-paper-art\"><div id=\"asm-strips\" class=\"asm-strips\"></div></div><p class=\"modal-note\">Đọc từ trên xuống dưới: lời mở đầu, nội dung, lời nhắn cuối.</p><div id=\"asm-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Đọc từ trên xuống dưới: lời mở đầu, nội dung, lời nhắn cuối.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Ghép lá đơn tố cáo</h2><p>Ba mảnh giấy rách đã đủ. Bấm hai mảnh để đổi chỗ, sắp lại cho đoạn văn xuôi chữ.</p><div class=\"puzzle-paper-art\"><div id=\"asm-strips\" class=\"asm-strips\"></div></div><p class=\"modal-note\">Đọc từ trên xuống dưới: lời mở đầu, nội dung, lời nhắn cuối.</p><div id=\"asm-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "${puzzleContextArt(BG(state.scene),'Khung cảnh trong ký ức')}",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(BG(state.scene),'Khung cảnh trong ký ức')}<h2>Giữ nhịp thở</h2><p>Cha và một người lạ đang ở ngay sau cánh cửa. Hãy bấm <strong>THỞ</strong> khi kim đi vào vùng sáng, ba lần liền.</p><div class=\"breath-bar\" id=\"br-bar\"><div class=\"breath-zone\" id=\"br-zone\"></div><div class=\"breath-needle\" id=\"br-needle\"></div></div><p class=\"modal-note\" id=\"br-msg\">0 / 3</p><div id=\"br-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Giữ nhịp thở",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(BG(state.scene),'Khung cảnh trong ký ức')}<h2>Giữ nhịp thở</h2><p>Cha và một người lạ đang ở ngay sau cánh cửa. Hãy bấm <strong>THỞ</strong> khi kim đi vào vùng sáng, ba lần liền.</p><div class=\"breath-bar\" id=\"br-bar\"><div class=\"breath-zone\" id=\"br-zone\"></div><div class=\"breath-needle\" id=\"br-needle\"></div></div><p class=\"modal-note\" id=\"br-msg\">0 / 3</p><div id=\"br-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Cha và một người lạ đang ở ngay sau cánh cửa. Hãy bấm",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(BG(state.scene),'Khung cảnh trong ký ức')}<h2>Giữ nhịp thở</h2><p>Cha và một người lạ đang ở ngay sau cánh cửa. Hãy bấm <strong>THỞ</strong> khi kim đi vào vùng sáng, ba lần liền.</p><div class=\"breath-bar\" id=\"br-bar\"><div class=\"breath-zone\" id=\"br-zone\"></div><div class=\"breath-needle\" id=\"br-needle\"></div></div><p class=\"modal-note\" id=\"br-msg\">0 / 3</p><div id=\"br-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "khi kim đi vào vùng sáng, ba lần liền.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(BG(state.scene),'Khung cảnh trong ký ức')}<h2>Giữ nhịp thở</h2><p>Cha và một người lạ đang ở ngay sau cánh cửa. Hãy bấm <strong>THỞ</strong> khi kim đi vào vùng sáng, ba lần liền.</p><div class=\"breath-bar\" id=\"br-bar\"><div class=\"breath-zone\" id=\"br-zone\"></div><div class=\"breath-needle\" id=\"br-needle\"></div></div><p class=\"modal-note\" id=\"br-msg\">0 / 3</p><div id=\"br-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Xem mảnh giấy dó",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<details class=\"folk-reference\"><summary>Xem mảnh giấy dó</summary><div class=\"doc-paper\">${escapeHTML(paper.body).replace(/\n/g,'<br>')}</div>${folkPrintChart()}</details>"
+  },
+  {
+   "k": "Chạm từng ô để đổi hình, rồi kiểm tra.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": ":''}<p>${intro}</p><p class=\"folk-inscription\">${inscription}</p><div class=\"folk-slots\" id=\"folk-slots\"></div><p class=\"modal-note\" id=\"folk-status\" aria-live=\"polite\">Chạm từng ô để đổi hình, rồi kiểm tra.</p>${referenceHTML}<div class=\"modal-buttons\" id=\"folk-actions\"></div></div>"
+  },
+  {
+   "k": "${id?FOLK_MARKS[id].label:'Chọn hình'}",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<span class=\"folk-number\">${i+1}</span>${id?folkGlyph(id):'<span class=\"folk-empty\">?</span>'}<small>${id?FOLK_MARKS[id].label:'Chọn hình'}</small>"
+  },
+  {
+   "k": "Ngăn kéo bốn hõm",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Ngăn kéo bốn hõm</h2><p>Trên nắp có bốn hõm xếp thành hàng ngang. Hãy đặt bốn món đồ chơi vào đúng thứ tự, từ trái sang phải.</p><div class=\"puzzle-drawer-art\"><div class=\"slot-row\" id=\"sl-row\"></div></div><div class=\"toy-tray\" id=\"sl-tray\"></div><p class=\"modal-note\" id=\"sl-msg\">Bấm một món rồi bấm hõm muốn đặt vào. Bấm món đã đặt để lấy ra.</p><div id=\"sl-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Trên nắp có bốn hõm xếp thành hàng ngang. Hãy đặt bốn món đồ chơi vào đúng thứ tự, từ trái sang phải.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Ngăn kéo bốn hõm</h2><p>Trên nắp có bốn hõm xếp thành hàng ngang. Hãy đặt bốn món đồ chơi vào đúng thứ tự, từ trái sang phải.</p><div class=\"puzzle-drawer-art\"><div class=\"slot-row\" id=\"sl-row\"></div></div><div class=\"toy-tray\" id=\"sl-tray\"></div><p class=\"modal-note\" id=\"sl-msg\">Bấm một món rồi bấm hõm muốn đặt vào. Bấm món đã đặt để lấy ra.</p><div id=\"sl-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Bấm một món rồi bấm hõm muốn đặt vào. Bấm món đã đặt để lấy ra.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Ngăn kéo bốn hõm</h2><p>Trên nắp có bốn hõm xếp thành hàng ngang. Hãy đặt bốn món đồ chơi vào đúng thứ tự, từ trái sang phải.</p><div class=\"puzzle-drawer-art\"><div class=\"slot-row\" id=\"sl-row\"></div></div><div class=\"toy-tray\" id=\"sl-tray\"></div><p class=\"modal-note\" id=\"sl-msg\">Bấm một món rồi bấm hõm muốn đặt vào. Bấm món đã đặt để lấy ra.</p><div id=\"sl-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Tấm ảnh bị xé nhỏ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Tấm ảnh bị xé nhỏ</h2><p>Dưới gối có mười hai mảnh ảnh cũ. Bấm hai mảnh để đổi chỗ, ghép lại thành bức ảnh hoàn chỉnh.</p><div class=\"jig\" id=\"jig\"></div><p class=\"modal-note\" id=\"jg-msg\">0 / ${N} mảnh đúng chỗ.</p><div id=\"jg-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Dưới gối có mười hai mảnh ảnh cũ. Bấm hai mảnh để đổi chỗ, ghép lại thành bức ảnh hoàn chỉnh.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Tấm ảnh bị xé nhỏ</h2><p>Dưới gối có mười hai mảnh ảnh cũ. Bấm hai mảnh để đổi chỗ, ghép lại thành bức ảnh hoàn chỉnh.</p><div class=\"jig\" id=\"jig\"></div><p class=\"modal-note\" id=\"jg-msg\">0 / ${N} mảnh đúng chỗ.</p><div id=\"jg-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "0 / ${N} mảnh đúng chỗ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Tấm ảnh bị xé nhỏ</h2><p>Dưới gối có mười hai mảnh ảnh cũ. Bấm hai mảnh để đổi chỗ, ghép lại thành bức ảnh hoàn chỉnh.</p><div class=\"jig\" id=\"jig\"></div><p class=\"modal-note\" id=\"jg-msg\">0 / ${N} mảnh đúng chỗ.</p><div id=\"jg-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Nắp hầm khóa bằng ký hiệu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Nắp hầm khóa bằng ký hiệu</h2><p>Những vòng khắc ký hiệu lạ. Bấm từng vòng để đổi ký hiệu. Nắp chỉ bật ra khi các ký hiệu đúng thứ tự.</p><div class=\"glyph-lock puzzle-hatch-art\" id=\"gl\"></div><p class=\"modal-note\" id=\"gl-msg\">${has('legendDoc')?'Bảng ký hiệu trong túi đồ giúp bạn nhận ra ký hiệu của từng người.':'Chưa biết ký hiệu nào của ai. Có lẽ ở đâu đó trong nhà có một bảng chỉ dẫn.'}</p><div id=\"gl-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Những vòng khắc ký hiệu lạ. Bấm từng vòng để đổi ký hiệu. Nắp chỉ bật ra khi các ký hiệu đúng thứ tự.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Nắp hầm khóa bằng ký hiệu</h2><p>Những vòng khắc ký hiệu lạ. Bấm từng vòng để đổi ký hiệu. Nắp chỉ bật ra khi các ký hiệu đúng thứ tự.</p><div class=\"glyph-lock puzzle-hatch-art\" id=\"gl\"></div><p class=\"modal-note\" id=\"gl-msg\">${has('legendDoc')?'Bảng ký hiệu trong túi đồ giúp bạn nhận ra ký hiệu của từng người.':'Chưa biết ký hiệu nào của ai. Có lẽ ở đâu đó trong nhà có một bảng chỉ dẫn.'}</p><div id=\"gl-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "${has('legendDoc')?'Bảng ký hiệu trong túi đồ giúp bạn nhận ra ký hiệu của từng người.':'Chưa biết ký hiệu nào của ai. Có lẽ ở đâu đó trong nhà có một bảng chỉ dẫn.'}",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Nắp hầm khóa bằng ký hiệu</h2><p>Những vòng khắc ký hiệu lạ. Bấm từng vòng để đổi ký hiệu. Nắp chỉ bật ra khi các ký hiệu đúng thứ tự.</p><div class=\"glyph-lock puzzle-hatch-art\" id=\"gl\"></div><p class=\"modal-note\" id=\"gl-msg\">${has('legendDoc')?'Bảng ký hiệu trong túi đồ giúp bạn nhận ra ký hiệu của từng người.':'Chưa biết ký hiệu nào của ai. Có lẽ ở đâu đó trong nhà có một bảng chỉ dẫn.'}</p><div id=\"gl-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Những bát hương lạnh",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Những bát hương lạnh</h2><p>Mỗi bát hương tượng trưng cho một người bị quên tên. Bạn cần tìm đủ <strong>các di vật</strong> rồi mới tiến hành nghi lễ.</p><p class=\"modal-note\">Các bát hương đang chờ. Hãy tìm kỹ trong căn nhà này.</p>"
+  },
+  {
+   "k": "Mỗi bát hương tượng trưng cho một người bị quên tên. Bạn cần tìm đủ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Những bát hương lạnh</h2><p>Mỗi bát hương tượng trưng cho một người bị quên tên. Bạn cần tìm đủ <strong>các di vật</strong> rồi mới tiến hành nghi lễ.</p><p class=\"modal-note\">Các bát hương đang chờ. Hãy tìm kỹ trong căn nhà này.</p>"
+  },
+  {
+   "k": "các di vật",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Những bát hương lạnh</h2><p>Mỗi bát hương tượng trưng cho một người bị quên tên. Bạn cần tìm đủ <strong>các di vật</strong> rồi mới tiến hành nghi lễ.</p><p class=\"modal-note\">Các bát hương đang chờ. Hãy tìm kỹ trong căn nhà này.</p>"
+  },
+  {
+   "k": "rồi mới tiến hành nghi lễ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Những bát hương lạnh</h2><p>Mỗi bát hương tượng trưng cho một người bị quên tên. Bạn cần tìm đủ <strong>các di vật</strong> rồi mới tiến hành nghi lễ.</p><p class=\"modal-note\">Các bát hương đang chờ. Hãy tìm kỹ trong căn nhà này.</p>"
+  },
+  {
+   "k": "Các bát hương đang chờ. Hãy tìm kỹ trong căn nhà này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Những bát hương lạnh</h2><p>Mỗi bát hương tượng trưng cho một người bị quên tên. Bạn cần tìm đủ <strong>các di vật</strong> rồi mới tiến hành nghi lễ.</p><p class=\"modal-note\">Các bát hương đang chờ. Hãy tìm kỹ trong căn nhà này.</p>"
+  },
+  {
+   "k": "${puzzleContextArt(ROOT+'props/POV_Bat_Huong.webp','Bàn thờ và bát hương')}",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(ROOT+'props/POV_Bat_Huong.webp','Bàn thờ và bát hương')}<h2>Trả lại tên cho người đã khuất</h2><p>Đặt các di vật lên bát hương <strong>theo đúng thứ tự mà nhật ký đã ghi lại</strong>.</p><p><strong>Bát hương tiếp theo</strong></p><div id=\"ritual-options\" class=\"ritual-list\"></div><p class=\"ritual-history\" id=\"ritual-progress\">${progress?'Đã đặt một phần di vật.':'Chưa đặt di vật nào.'}</p><p class=\"modal-note\">Chọn sai thứ tự sẽ phải bắt đầu lại.</p>"
+  },
+  {
+   "k": "Trả lại tên cho người đã khuất",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(ROOT+'props/POV_Bat_Huong.webp','Bàn thờ và bát hương')}<h2>Trả lại tên cho người đã khuất</h2><p>Đặt các di vật lên bát hương <strong>theo đúng thứ tự mà nhật ký đã ghi lại</strong>.</p><p><strong>Bát hương tiếp theo</strong></p><div id=\"ritual-options\" class=\"ritual-list\"></div><p class=\"ritual-history\" id=\"ritual-progress\">${progress?'Đã đặt một phần di vật.':'Chưa đặt di vật nào.'}</p><p class=\"modal-note\">Chọn sai thứ tự sẽ phải bắt đầu lại.</p>"
+  },
+  {
+   "k": "Đặt các di vật lên bát hương",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(ROOT+'props/POV_Bat_Huong.webp','Bàn thờ và bát hương')}<h2>Trả lại tên cho người đã khuất</h2><p>Đặt các di vật lên bát hương <strong>theo đúng thứ tự mà nhật ký đã ghi lại</strong>.</p><p><strong>Bát hương tiếp theo</strong></p><div id=\"ritual-options\" class=\"ritual-list\"></div><p class=\"ritual-history\" id=\"ritual-progress\">${progress?'Đã đặt một phần di vật.':'Chưa đặt di vật nào.'}</p><p class=\"modal-note\">Chọn sai thứ tự sẽ phải bắt đầu lại.</p>"
+  },
+  {
+   "k": "theo đúng thứ tự mà nhật ký đã ghi lại",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(ROOT+'props/POV_Bat_Huong.webp','Bàn thờ và bát hương')}<h2>Trả lại tên cho người đã khuất</h2><p>Đặt các di vật lên bát hương <strong>theo đúng thứ tự mà nhật ký đã ghi lại</strong>.</p><p><strong>Bát hương tiếp theo</strong></p><div id=\"ritual-options\" class=\"ritual-list\"></div><p class=\"ritual-history\" id=\"ritual-progress\">${progress?'Đã đặt một phần di vật.':'Chưa đặt di vật nào.'}</p><p class=\"modal-note\">Chọn sai thứ tự sẽ phải bắt đầu lại.</p>"
+  },
+  {
+   "k": "Bát hương tiếp theo",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(ROOT+'props/POV_Bat_Huong.webp','Bàn thờ và bát hương')}<h2>Trả lại tên cho người đã khuất</h2><p>Đặt các di vật lên bát hương <strong>theo đúng thứ tự mà nhật ký đã ghi lại</strong>.</p><p><strong>Bát hương tiếp theo</strong></p><div id=\"ritual-options\" class=\"ritual-list\"></div><p class=\"ritual-history\" id=\"ritual-progress\">${progress?'Đã đặt một phần di vật.':'Chưa đặt di vật nào.'}</p><p class=\"modal-note\">Chọn sai thứ tự sẽ phải bắt đầu lại.</p>"
+  },
+  {
+   "k": "${progress?'Đã đặt một phần di vật.':'Chưa đặt di vật nào.'}",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(ROOT+'props/POV_Bat_Huong.webp','Bàn thờ và bát hương')}<h2>Trả lại tên cho người đã khuất</h2><p>Đặt các di vật lên bát hương <strong>theo đúng thứ tự mà nhật ký đã ghi lại</strong>.</p><p><strong>Bát hương tiếp theo</strong></p><div id=\"ritual-options\" class=\"ritual-list\"></div><p class=\"ritual-history\" id=\"ritual-progress\">${progress?'Đã đặt một phần di vật.':'Chưa đặt di vật nào.'}</p><p class=\"modal-note\">Chọn sai thứ tự sẽ phải bắt đầu lại.</p>"
+  },
+  {
+   "k": "Chọn sai thứ tự sẽ phải bắt đầu lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(ROOT+'props/POV_Bat_Huong.webp','Bàn thờ và bát hương')}<h2>Trả lại tên cho người đã khuất</h2><p>Đặt các di vật lên bát hương <strong>theo đúng thứ tự mà nhật ký đã ghi lại</strong>.</p><p><strong>Bát hương tiếp theo</strong></p><div id=\"ritual-options\" class=\"ritual-list\"></div><p class=\"ritual-history\" id=\"ritual-progress\">${progress?'Đã đặt một phần di vật.':'Chưa đặt di vật nào.'}</p><p class=\"modal-note\">Chọn sai thứ tự sẽ phải bắt đầu lại.</p>"
+  }
+ ]
+}

@@ -1,0 +1,566 @@
+{
+ "batch": 18,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Đưa Những Cái Tên Về",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đưa Những Cái Tên Về"
+  },
+  {
+   "k": "KẾT THÚC · GOOD",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "KẾT THÚC · GOOD"
+  },
+  {
+   "k": "Những hồ sơ về căn hầm được đưa tới gia đình người đã khuất. Cả nhóm gọi đúng tên Bình, Nụ, Quyên, Thành, Giáp và Nhài.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những hồ sơ về căn hầm được đưa tới gia đình người đã khuất. Cả nhóm gọi đúng tên Bình, Nụ, Quyên, Thành, Giáp và Nhài.\n\nNhài được ở bên mẹ. Những người còn sống có bằng chứng để đòi lại sự thật. Nhưng chiếc ấn dưới giếng vẫn ở nguyên; nỗi đau của Mai chưa được giải thoát."
+  },
+  {
+   "k": "Nhài được ở bên mẹ. Những người còn sống có bằng chứng để đòi lại sự thật. Nhưng chiếc ấn dưới giếng vẫn ở nguyên; nỗi đau của Mai chưa được giải thoát.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những hồ sơ về căn hầm được đưa tới gia đình người đã khuất. Cả nhóm gọi đúng tên Bình, Nụ, Quyên, Thành, Giáp và Nhài.\n\nNhài được ở bên mẹ. Những người còn sống có bằng chứng để đòi lại sự thật. Nhưng chiếc ấn dưới giếng vẫn ở nguyên; nỗi đau của Mai chưa được giải thoát."
+  },
+  {
+   "k": "Trả Lại Tên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trả Lại Tên"
+  },
+  {
+   "k": "KẾT THÚC · TRUE",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "KẾT THÚC · TRUE"
+  },
+  {
+   "k": "Tại nền tế, những cái tên Lành, Phúc và Mai được gọi lên cùng những di vật còn lại. Ký ức của Mai trở về: cô bị Bách và thầy Cao vu oan, gia đình bị sát hại, còn cô chết trong khe đá.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tại nền tế, những cái tên Lành, Phúc và Mai được gọi lên cùng những di vật còn lại. Ký ức của Mai trở về: cô bị Bách và thầy Cao vu oan, gia đình bị sát hại, còn cô chết trong khe đá.\n\nVề sau, Huyền Tĩnh nhận tiền dùng ấn cổ giam Mai dưới giếng, khiến ký ức cô vỡ vụn. Số phận của Cao vẫn chưa được chứng minh. Thầy Chân đã sửa sớ; ông Hưng đồng ý giam người và nghe tiếng kêu mà không mở cửa. Không có chứng cứ thần rừng đòi hiến mạng.\n\nSau lễ trả danh và khi hồ sơ được đối chiếu, cả nhóm tháo ấn. Mai không bị buộc phải tha thứ. Nhài được ở bên mẹ; sự thật và tên tuổi những người từng bị xóa bỏ được đưa về cho các gia đình."
+  },
+  {
+   "k": "Về sau, Huyền Tĩnh nhận tiền dùng ấn cổ giam Mai dưới giếng, khiến ký ức cô vỡ vụn. Số phận của Cao vẫn chưa được chứng minh. Thầy Chân đã sửa sớ; ông Hưng đồng ý giam người và nghe tiếng kêu mà không mở cửa. Không có chứng cứ thần rừng đòi hiến mạng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tại nền tế, những cái tên Lành, Phúc và Mai được gọi lên cùng những di vật còn lại. Ký ức của Mai trở về: cô bị Bách và thầy Cao vu oan, gia đình bị sát hại, còn cô chết trong khe đá.\n\nVề sau, Huyền Tĩnh nhận tiền dùng ấn cổ giam Mai dưới giếng, khiến ký ức cô vỡ vụn. Số phận của Cao vẫn chưa được chứng minh. Thầy Chân đã sửa sớ; ông Hưng đồng ý giam người và nghe tiếng kêu mà không mở cửa. Không có chứng cứ thần rừng đòi hiến mạng.\n\nSau lễ trả danh và khi hồ sơ được đối chiếu, cả nhóm tháo ấn. Mai không bị buộc phải tha thứ. Nhài được ở bên mẹ; sự thật và tên tuổi những người từng bị xóa bỏ được đưa về cho các gia đình."
+  },
+  {
+   "k": "Sau lễ trả danh và khi hồ sơ được đối chiếu, cả nhóm tháo ấn. Mai không bị buộc phải tha thứ. Nhài được ở bên mẹ; sự thật và tên tuổi những người từng bị xóa bỏ được đưa về cho các gia đình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tại nền tế, những cái tên Lành, Phúc và Mai được gọi lên cùng những di vật còn lại. Ký ức của Mai trở về: cô bị Bách và thầy Cao vu oan, gia đình bị sát hại, còn cô chết trong khe đá.\n\nVề sau, Huyền Tĩnh nhận tiền dùng ấn cổ giam Mai dưới giếng, khiến ký ức cô vỡ vụn. Số phận của Cao vẫn chưa được chứng minh. Thầy Chân đã sửa sớ; ông Hưng đồng ý giam người và nghe tiếng kêu mà không mở cửa. Không có chứng cứ thần rừng đòi hiến mạng.\n\nSau lễ trả danh và khi hồ sơ được đối chiếu, cả nhóm tháo ấn. Mai không bị buộc phải tha thứ. Nhài được ở bên mẹ; sự thật và tên tuổi những người từng bị xóa bỏ được đưa về cho các gia đình."
+  },
+  {
+   "k": "Bên nền đá, bát cơm trắng còn ấm. Trong làn sương, Mai ngồi cạnh mẹ và em trai; không ai phải ăn một mình nữa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "\n\nBên nền đá, bát cơm trắng còn ấm. Trong làn sương, Mai ngồi cạnh mẹ và em trai; không ai phải ăn một mình nữa."
+  },
+  {
+   "k": "Đã mở",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "</p><p class=\"modal-note\">Đã mở "
+  },
+  {
+   "k": "/4 kết thúc.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "/4 kết thúc.</p>"
+  },
+  {
+   "k": "Bạn đã từng mở kết thúc Tha thứ trong phiên bản trước.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<p class=\"modal-note\">Bạn đã từng mở kết thúc Tha thứ trong phiên bản trước.</p>"
+  },
+  {
+   "k": "HỒI KẾT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "HỒI KẾT"
+  },
+  {
+   "k": "Xem lại đoạn phim",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xem lại đoạn phim"
+  },
+  {
+   "k": "Quay lại trước quyết định cuối",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quay lại trước quyết định cuối"
+  },
+  {
+   "k": "Chơi lại từ đầu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chơi lại từ đầu"
+  },
+  {
+   "k": "Sân sau và kho vật tư",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sân sau và kho vật tư"
+  },
+  {
+   "k": "SÂN SAU · 04:20",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "SÂN SAU · 04:20"
+  },
+  {
+   "k": "Mưa đọng trong những kẽ gạch. Cánh cửa kho đóng im lìm dưới ánh trăng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mưa đọng trong những kẽ gạch. Cánh cửa kho đóng im lìm dưới ánh trăng."
+  },
+  {
+   "k": "Sân sau tối và ẩm. Một chiếc xe cút kít gỉ nằm cạnh cửa kho, mái hiên che những bao tải rỗng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sân sau tối và ẩm. Một chiếc xe cút kít gỉ nằm cạnh cửa kho, mái hiên che những bao tải rỗng."
+  },
+  {
+   "k": "Cửa kho vật tư có ổ khóa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa kho vật tư có ổ khóa"
+  },
+  {
+   "k": "Chiếc xe cút kít gỉ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc xe cút kít gỉ"
+  },
+  {
+   "k": "Bao tải rỗng dưới mái hiên",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bao tải rỗng dưới mái hiên"
+  },
+  {
+   "k": "Chum vỡ ven tường",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chum vỡ ven tường"
+  },
+  {
+   "k": "Cổng vườn sau",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cổng vườn sau"
+  },
+  {
+   "k": "Quay vào gian bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quay vào gian bếp"
+  },
+  {
+   "k": "Kho vật tư",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Kho vật tư"
+  },
+  {
+   "k": "KHO VẬT TƯ · 04:35",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "KHO VẬT TƯ · 04:35"
+  },
+  {
+   "k": "Thùng gỗ và bao tải đóng dấu đỏ chất tới mái. Nến, giấy sớ, vải đỏ, nhiều hơn một đêm cúng cần.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thùng gỗ và bao tải đóng dấu đỏ chất tới mái. Nến, giấy sớ, vải đỏ, nhiều hơn một đêm cúng cần."
+  },
+  {
+   "k": "Mùi giấy ẩm và dầu đèn. Bụi lơ lửng trong vệt trăng lọt qua ô cửa có song sắt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mùi giấy ẩm và dầu đèn. Bụi lơ lửng trong vệt trăng lọt qua ô cửa có song sắt."
+  },
+  {
+   "k": "Cuốn sổ mở trên bàn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cuốn sổ mở trên bàn"
+  },
+  {
+   "k": "Chiếc cân treo",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc cân treo"
+  },
+  {
+   "k": "Đống thùng đồ lễ đóng dấu đỏ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đống thùng đồ lễ đóng dấu đỏ"
+  },
+  {
+   "k": "Ô cửa sổ có song sắt",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ô cửa sổ có song sắt"
+  },
+  {
+   "k": "Nắp hầm có khóa ký hiệu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nắp hầm có khóa ký hiệu"
+  },
+  {
+   "k": "Ra sân sau",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ra sân sau"
+  },
+  {
+   "k": "Phòng ngủ ông Hưng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phòng ngủ ông Hưng"
+  },
+  {
+   "k": "PHÒNG NGỦ · 04:25",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "PHÒNG NGỦ · 04:25"
+  },
+  {
+   "k": "Ngọn đèn dầu trên bàn thờ nhỏ vẫn cháy dù chủ nhân đã đi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngọn đèn dầu trên bàn thờ nhỏ vẫn cháy dù chủ nhân đã đi."
+  },
+  {
+   "k": "Giường cột chạm với màn rách, bức ảnh gia đình trên tường, và một ngọn đèn dầu không ai thắp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giường cột chạm với màn rách, bức ảnh gia đình trên tường, và một ngọn đèn dầu không ai thắp."
+  },
+  {
+   "k": "Máy đánh chữ trên bàn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Máy đánh chữ trên bàn"
+  },
+  {
+   "k": "Bàn thờ nhỏ có đèn dầu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bàn thờ nhỏ có đèn dầu"
+  },
+  {
+   "k": "Tủ gương",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tủ gương"
+  },
+  {
+   "k": "Cửa ra ban công",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa ra ban công"
+  },
+  {
+   "k": "Trở ra hành lang",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trở ra hành lang"
+  },
+  {
+   "k": "Phòng học của bé Nhài",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phòng học của bé Nhài"
+  },
+  {
+   "k": "PHÒNG HỌC · 04:30",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "PHÒNG HỌC · 04:30"
+  },
+  {
+   "k": "Bảng đen còn nguyên chữ cái. Hạc giấy treo kín, quay chậm dù không có gió.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bảng đen còn nguyên chữ cái. Hạc giấy treo kín, quay chậm dù không có gió."
+  },
+  {
+   "k": "Một chiếc bàn học nhỏ, bảng đen, giá sách và những con hạc giấy treo trên sợi chỉ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một chiếc bàn học nhỏ, bảng đen, giá sách và những con hạc giấy treo trên sợi chỉ."
+  },
+  {
+   "k": "Bức tranh vẽ gia đình",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bức tranh vẽ gia đình"
+  },
+  {
+   "k": "Bảng đen viết chữ phấn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bảng đen viết chữ phấn"
+  },
+  {
+   "k": "Những con hạc giấy",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những con hạc giấy"
+  },
+  {
+   "k": "Giá sách nhỏ có ngăn kéo",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giá sách nhỏ có ngăn kéo"
+  },
+  {
+   "k": "Chiếc xe đồ chơi",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc xe đồ chơi"
+  },
+  {
+   "k": "Qua cánh cửa nhỏ về phòng trẻ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Qua cánh cửa nhỏ về phòng trẻ"
+  },
+  {
+   "k": "Vườn sau và những nấm mộ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vườn sau và những nấm mộ"
+  },
+  {
+   "k": "VƯỜN SAU · 04:55",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "VƯỜN SAU · 04:55"
+  },
+  {
+   "k": "Những nấm mộ không bia, cọc tre và bát nhang đã nguội từ lâu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những nấm mộ không bia, cọc tre và bát nhang đã nguội từ lâu."
+  },
+  {
+   "k": "Mây lướt qua ánh trăng. Hoa nhài dại mọc kín chân tường, che những nấm đất thấp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mây lướt qua ánh trăng. Hoa nhài dại mọc kín chân tường, che những nấm đất thấp."
+  },
+  {
+   "k": "Những nấm mộ không bia",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những nấm mộ không bia"
+  },
+  {
+   "k": "Cây đu đủ già",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cây đu đủ già"
+  },
+  {
+   "k": "Dải vải đỏ trên cọc tre",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dải vải đỏ trên cọc tre"
+  },
+  {
+   "k": "Hoa nhài dại",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hoa nhài dại"
+  },
+  {
+   "k": "Ban công tầng hai",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ban công tầng hai"
+  },
+  {
+   "k": "BAN CÔNG · 04:30",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "BAN CÔNG · 04:30"
+  },
+  {
+   "k": "Từ đây nhìn xuống cả khu rừng, và xa xa là vài đốm đèn của thôn Đồng Chay.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Từ đây nhìn xuống cả khu rừng, và xa xa là vài đốm đèn của thôn Đồng Chay."
+  },
+  {
+   "k": "Gió thổi qua lan can mục. Chiếc ghế bập bênh vẫn khẽ đung đưa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Gió thổi qua lan can mục. Chiếc ghế bập bênh vẫn khẽ đung đưa."
+  },
+  {
+   "k": "Ghế bập bênh",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ghế bập bênh"
+  },
+  {
+   "k": "Bộ ấm trà nguội trên bàn tròn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bộ ấm trà nguội trên bàn tròn"
+  },
+  {
+   "k": "Bó thuốc nam treo",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bó thuốc nam treo"
+  },
+  {
+   "k": "Ánh đèn thôn xa xa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ánh đèn thôn xa xa"
+  },
+  {
+   "k": "Cửa vào phòng ngủ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa vào phòng ngủ"
+  },
+  {
+   "k": "Bên trong miếu cây đa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bên trong miếu cây đa"
+  },
+  {
+   "k": "TRONG MIẾU · 04:50",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "TRONG MIẾU · 04:50"
+  },
+  {
+   "k": "Rễ đa quấn kín tường. Những bát hương xếp hàng, một ngọn nến vẫn cháy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Rễ đa quấn kín tường. Những bát hương xếp hàng, một ngọn nến vẫn cháy."
+  },
+  {
+   "k": "Dải vải đỏ buộc trên những chiếc rễ, mỗi năm một dải. Nến chảy xuống mặt bàn đá.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dải vải đỏ buộc trên những chiếc rễ, mỗi năm một dải. Nến chảy xuống mặt bàn đá."
+  },
+  {
+   "k": "Dãy bát hương trên bàn đá",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dãy bát hương trên bàn đá"
+  },
+  {
+   "k": "Những pho tượng gỗ nhỏ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những pho tượng gỗ nhỏ"
+  },
+  {
+   "k": "Chiếc chum lớn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc chum lớn"
+  }
+ ]
+}

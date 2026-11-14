@@ -1,0 +1,567 @@
+{
+ "batch": 8,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Tìm di vật, quan sát và đối chiếu với những ghi chép.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tìm di vật, quan sát và đối chiếu với những ghi chép."
+  },
+  {
+   "k": "Đèn pin: BẬT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đèn pin: BẬT"
+  },
+  {
+   "k": "Đèn pin: TẮT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đèn pin: TẮT"
+  },
+  {
+   "k": "Chiếc bật lửa cũ vẫn còn gas.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc bật lửa cũ vẫn còn gas."
+  },
+  {
+   "k": "Máy ảnh:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Máy ảnh: "
+  },
+  {
+   "k": "· nhấn V để đổi chế độ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": " · nhấn V để đổi chế độ"
+  },
+  {
+   "k": "Khoan đã... tớ thấy bất an lắm. Mình xem kỹ chỗ này trước khi vào rừng đã.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khoan đã... tớ thấy bất an lắm. Mình xem kỹ chỗ này trước khi vào rừng đã."
+  },
+  {
+   "k": "Các cháu cứ ghé nếu cần hỏi thêm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Các cháu cứ ghé nếu cần hỏi thêm."
+  },
+  {
+   "k": "Quán nước đầu làng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quán nước đầu làng"
+  },
+  {
+   "k": "Bà bán nước kể về đường cũ, ngôi miếu và căn nhà trên đồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà bán nước kể về đường cũ, ngôi miếu và căn nhà trên đồi."
+  },
+  {
+   "k": "Bát hương chỉ còn lớp tàn lạnh.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bát hương chỉ còn lớp tàn lạnh."
+  },
+  {
+   "k": "Bát hương ven rừng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bát hương ven rừng"
+  },
+  {
+   "k": "Nhang cũ chưa đốt. Trên mảnh giấy mờ chỉ đọc được: “Năm hồn giữ cửa, một bóng giữ nhà.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhang cũ chưa đốt. Trên mảnh giấy mờ chỉ đọc được: “Năm hồn giữ cửa, một bóng giữ nhà.”"
+  },
+  {
+   "k": "Khe đá giờ trống rỗng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khe đá giờ trống rỗng."
+  },
+  {
+   "k": "Cột đá có bốn vòng khắc và một khe hẹp. Những nét này giống vết trên mâm gỗ ở miếu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cột đá có bốn vòng khắc và một khe hẹp. Những nét này giống vết trên mâm gỗ ở miếu."
+  },
+  {
+   "k": "Cổng bị xích, ổ khóa còn nguyên. Chắc phải có chìa ở đâu đó.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cổng bị xích, ổ khóa còn nguyên. Chắc phải có chìa ở đâu đó."
+  },
+  {
+   "k": "Cổng sắt mở khóa",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cổng sắt mở khóa"
+  },
+  {
+   "k": "Chiếc chìa rỉ vừa khít với ổ khóa cổng. Cánh cổng khép lại rất mạnh sau khi cả nhóm đi qua.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc chìa rỉ vừa khít với ổ khóa cổng. Cánh cổng khép lại rất mạnh sau khi cả nhóm đi qua."
+  },
+  {
+   "k": "Mới tới cổng mà. Mình ít nhất cũng nên xem qua căn nhà rồi tính chuyện quay về.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mới tới cổng mà. Mình ít nhất cũng nên xem qua căn nhà rồi tính chuyện quay về."
+  },
+  {
+   "k": "Chuông đồng dưới đáy xô",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chuông đồng dưới đáy xô"
+  },
+  {
+   "k": "Chiếc xô giếng vừa kéo lên có một chuông đồng nhỏ buộc dây đỏ, loại chuông người ta buộc cho trẻ con khỏi lạc.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc xô giếng vừa kéo lên có một chuông đồng nhỏ buộc dây đỏ, loại chuông người ta buộc cho trẻ con khỏi lạc."
+  },
+  {
+   "k": "Chuông trẻ con ở dưới giếng... Ai đã thả nó xuống?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chuông trẻ con ở dưới giếng... Ai đã thả nó xuống?"
+  },
+  {
+   "k": "Di vật — giếng đá",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Di vật — giếng đá"
+  },
+  {
+   "k": "Một chiếc khăn vải cũ mắc dưới nắp gỗ bên giếng. Đây có thể là di vật của người mất tích.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một chiếc khăn vải cũ mắc dưới nắp gỗ bên giếng. Đây có thể là di vật của người mất tích."
+  },
+  {
+   "k": "Dưới giếng tối om. Chúng ta đã lấy chiếc khăn mắc ở nắp gỗ rồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dưới giếng tối om. Chúng ta đã lấy chiếc khăn mắc ở nắp gỗ rồi."
+  },
+  {
+   "k": "Dưới đó tối và sâu lắm. Mình xem hết các phòng trên lầu trước đã, phòng trẻ và phòng làm việc, rồi hẵng xuống.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dưới đó tối và sâu lắm. Mình xem hết các phòng trên lầu trước đã, phòng trẻ và phòng làm việc, rồi hẵng xuống."
+  },
+  {
+   "k": "Cửa vào biệt thự",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa vào biệt thự"
+  },
+  {
+   "k": "Cánh cửa gỗ không khóa, nhưng kêu kéo dài như tiếng thở.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cánh cửa gỗ không khóa, nhưng kêu kéo dài như tiếng thở."
+  },
+  {
+   "k": "Đồng hồ dừng ở 03:17",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đồng hồ dừng ở 03:17"
+  },
+  {
+   "k": "Chiếc đồng hồ quả lắc ở đại sảnh đã dừng hẳn, kim chỉ đúng 03 giờ 17 phút.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc đồng hồ quả lắc ở đại sảnh đã dừng hẳn, kim chỉ đúng 03 giờ 17 phút."
+  },
+  {
+   "k": "Hai kim dừng cứng ở 03 giờ 17 phút. Con lắc đồng nằm im.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hai kim dừng cứng ở 03 giờ 17 phút. Con lắc đồng nằm im."
+  },
+  {
+   "k": "QUAN SÁT",
+   "files": [
+    "game.js",
+    "trailer.js"
+   ],
+   "ctx": "QUAN SÁT"
+  },
+  {
+   "k": "Mở ngăn dưới đồng hồ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mở ngăn dưới đồng hồ"
+  },
+  {
+   "k": "Bức ảnh gia đình",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bức ảnh gia đình"
+  },
+  {
+   "k": "Trong ảnh gia đình ông Hưng, vài khuôn mặt bị cào xước. Sự kiện 1988 có thể đã bị che giấu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong ảnh gia đình ông Hưng, vài khuôn mặt bị cào xước. Sự kiện 1988 có thể đã bị che giấu."
+  },
+  {
+   "k": "Ảnh gia đình ông Hưng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ảnh gia đình ông Hưng"
+  },
+  {
+   "k": "Các khuôn mặt đều bị cào xước đến không còn nhận ra.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Các khuôn mặt đều bị cào xước đến không còn nhận ra."
+  },
+  {
+   "k": "Lật mặt sau khung ảnh",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lật mặt sau khung ảnh"
+  },
+  {
+   "k": "Mảnh thư trong bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh thư trong bếp"
+  },
+  {
+   "k": "Trong kẽ tủ bếp là một mảnh thư viết trước đêm xuống hầm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong kẽ tủ bếp là một mảnh thư viết trước đêm xuống hầm."
+  },
+  {
+   "k": "Một mảnh giấy bị giấu kỹ. Chữ viết tay giống mảnh kẹp trong sổ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một mảnh giấy bị giấu kỹ. Chữ viết tay giống mảnh kẹp trong sổ."
+  },
+  {
+   "k": "Kẽ tủ bếp đã được xem kỹ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Kẽ tủ bếp đã được xem kỹ."
+  },
+  {
+   "k": "Di vật — gian bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Di vật — gian bếp"
+  },
+  {
+   "k": "Chiếc muôi cơm rỉ nằm trong tro bếp nguội, dấu tích của một người đã từng làm việc ở đây.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc muôi cơm rỉ nằm trong tro bếp nguội, dấu tích của một người đã từng làm việc ở đây."
+  },
+  {
+   "k": "Đã thu thập chiếc muôi cơm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã thu thập chiếc muôi cơm."
+  },
+  {
+   "k": "Thanh sắt trong bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thanh sắt trong bếp"
+  },
+  {
+   "k": "Một thanh sắt cong, còn khá chắc, nhặt dưới gầm bếp củi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một thanh sắt cong, còn khá chắc, nhặt dưới gầm bếp củi."
+  },
+  {
+   "k": "Dưới gầm bếp chẳng còn gì.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dưới gầm bếp chẳng còn gì."
+  },
+  {
+   "k": "Thanh sắt đã nằm trong túi đồ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thanh sắt đã nằm trong túi đồ."
+  },
+  {
+   "k": "Di vật — phòng trẻ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Di vật — phòng trẻ"
+  },
+  {
+   "k": "Một chiếc trâm gỗ bị gãy nằm trong nôi cũ, bên cạnh con búp bê vải.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một chiếc trâm gỗ bị gãy nằm trong nôi cũ, bên cạnh con búp bê vải."
+  },
+  {
+   "k": "Đã thu thập chiếc trâm gỗ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã thu thập chiếc trâm gỗ."
+  },
+  {
+   "k": "Bóng người trong ảnh",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bóng người trong ảnh"
+  },
+  {
+   "k": "Máy ảnh của Chi ghi lại một bóng trắng gần giường, dù căn phòng và gương hoàn toàn trống.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Máy ảnh của Chi ghi lại một bóng trắng gần giường, dù căn phòng và gương hoàn toàn trống."
+  },
+  {
+   "k": "Gương chỉ phản chiếu căn phòng trống. Nhưng tớ cứ thấy nó đang nhìn mình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Gương chỉ phản chiếu căn phòng trống. Nhưng tớ cứ thấy nó đang nhìn mình."
+  },
+  {
+   "k": "Trang sổ đã được chụp lại. Mảnh đơn đã ghép xong, cần tìm thêm tài liệu gốc để đối chiếu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trang sổ đã được chụp lại. Mảnh đơn đã ghép xong, cần tìm thêm tài liệu gốc để đối chiếu."
+  },
+  {
+   "k": "Sổ vật tư năm 1988",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sổ vật tư năm 1988"
+  },
+  {
+   "k": "Sổ cấp phát cho thấy nến, giấy sớ và vải che ô gió được cấp cho thầy Chân theo chữ ký ông Hưng. Một mảnh đơn tố cáo bị xé làm ba, mảnh thứ ba kẹp giữa các trang.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sổ cấp phát cho thấy nến, giấy sớ và vải che ô gió được cấp cho thầy Chân theo chữ ký ông Hưng. Một mảnh đơn tố cáo bị xé làm ba, mảnh thứ ba kẹp giữa các trang."
+  },
+  {
+   "k": "Lớp vữa đã mục, nhưng tay không thì không thể phá được.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lớp vữa đã mục, nhưng tay không thì không thể phá được."
+  },
+  {
+   "k": "Di vật — căn phòng kín",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Di vật — căn phòng kín"
+  },
+  {
+   "k": "Đôi dép vải cũ nằm cạnh đồ dùng của những người mất tích năm 1988.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đôi dép vải cũ nằm cạnh đồ dùng của những người mất tích năm 1988."
+  },
+  {
+   "k": "Đã thu thập đôi dép vải.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã thu thập đôi dép vải."
+  },
+  {
+   "k": "Hộp chứng cứ dưới hầm",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hộp chứng cứ dưới hầm"
+  },
+  {
+   "k": "Trong hộp sắt có sổ cấp đồ lễ và giấy tờ chứng minh ông Hưng ký cấp vật tư cho buổi lễ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong hộp sắt có sổ cấp đồ lễ và giấy tờ chứng minh ông Hưng ký cấp vật tư cho buổi lễ."
+  },
+  {
+   "k": "Tài liệu trong hộp đã được lưu lại. Hãy mang bằng chứng ra ngoài.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tài liệu trong hộp đã được lưu lại. Hãy mang bằng chứng ra ngoài."
+  },
+  {
+   "k": "Mảnh vải thêu trong nôi",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh vải thêu trong nôi"
+  },
+  {
+   "k": "Mảnh vải thêu dở trong nôi: “Nh…”. Chiếc nôi tự đung đưa dù không có gió.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh vải thêu dở trong nôi: “Nh…”. Chiếc nôi tự đung đưa dù không có gió."
+  },
+  {
+   "k": "Nôi đã lặng. Em không còn khóc nữa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nôi đã lặng. Em không còn khóc nữa."
+  },
+  {
+   "k": "Chiếc nôi vẫn khẽ đung đưa, như đang chờ một điều gì đó.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc nôi vẫn khẽ đung đưa, như đang chờ một điều gì đó."
+  },
+  {
+   "k": "Chiếc nôi lại rung khi tớ đứng gần. Trong túi mình có thứ gì khiến nó phản ứng không?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc nôi lại rung khi tớ đứng gần. Trong túi mình có thứ gì khiến nó phản ứng không?"
+  },
+  {
+   "k": "Chuông chỉ rung yếu ớt rồi lặng đi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chuông chỉ rung yếu ớt rồi lặng đi."
+  },
+  {
+   "k": "Giấy khai sinh bị xé",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giấy khai sinh bị xé"
+  },
+  {
+   "k": "Nhài, sinh 1981, được ghi là con của vợ chồng Hưng. Dòng cuối: “mất tích đêm 17/3/1988”, bị gạch khỏi sổ hộ khẩu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhài, sinh 1981, được ghi là con của vợ chồng Hưng. Dòng cuối: “mất tích đêm 17/3/1988”, bị gạch khỏi sổ hộ khẩu."
+  },
+  {
+   "k": "Tờ khai sinh đã được ghi vào nhật ký.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tờ khai sinh đã được ghi vào nhật ký."
+  },
+  {
+   "k": "Giọng trẻ con",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giọng trẻ con"
+  },
+  {
+   "k": "Chị ơi... đừng gọi em bằng tên của cha. Em ngủ ở dưới kia, một mình, cùng giai điệu ấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chị ơi... đừng gọi em bằng tên của cha. Em ngủ ở dưới kia, một mình, cùng giai điệu ấy."
+  },
+  {
+   "k": "Hộp nhạc đã lặng im.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hộp nhạc đã lặng im."
+  },
+  {
+   "k": "Hộp nhạc đã nằm trong túi đồ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hộp nhạc đã nằm trong túi đồ."
+  },
+  {
+   "k": "Cánh cửa nhỏ đã lặng im. Dưới đó không còn ai khóc nữa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cánh cửa nhỏ đã lặng im. Dưới đó không còn ai khóc nữa."
+  },
+  {
+   "k": "Cánh cửa nhỏ không nhúc nhích, như có ai giữ nó từ phía bên kia.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cánh cửa nhỏ không nhúc nhích, như có ai giữ nó từ phía bên kia."
+  }
+ ]
+}

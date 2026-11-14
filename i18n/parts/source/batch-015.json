@@ -1,0 +1,575 @@
+{
+ "batch": 15,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Đối chiếu di vật",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đối chiếu di vật"
+  },
+  {
+   "k": "Chi tiết này chưa khớp với vật chứng. Mình xem lại rồi chọn tiếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chi tiết này chưa khớp với vật chứng. Mình xem lại rồi chọn tiếp."
+  },
+  {
+   "k": "ĐIỀU TRA · DI VẬT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐIỀU TRA · DI VẬT"
+  },
+  {
+   "k": "Bát cơm trắng được đặt cạnh di vật. Mình không ép ai phải tha thứ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bát cơm trắng được đặt cạnh di vật. Mình không ép ai phải tha thứ."
+  },
+  {
+   "k": "Bữa cơm gia đình",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bữa cơm gia đình"
+  },
+  {
+   "k": "Ký ức về bữa cơm vừa hiện lên. Trong đồ mang theo còn ít cơm trắng; có thể để một bát ở nền đá.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ký ức về bữa cơm vừa hiện lên. Trong đồ mang theo còn ít cơm trắng; có thể để một bát ở nền đá."
+  },
+  {
+   "k": "Đặt bát cơm trắng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đặt bát cơm trắng"
+  },
+  {
+   "k": "Bát cơm ở nền đá",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bát cơm ở nền đá"
+  },
+  {
+   "k": "Một bát cơm trắng được đặt cạnh các di vật như lời mời gia đình Mai trở về bên nhau.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một bát cơm trắng được đặt cạnh các di vật như lời mời gia đình Mai trở về bên nhau."
+  },
+  {
+   "k": "Bát cơm này dành cho gia đình. Không ai cần ở lại một mình nữa.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bát cơm này dành cho gia đình. Không ai cần ở lại một mình nữa."
+  },
+  {
+   "k": "NỀN TẾ CŨ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "NỀN TẾ CŨ"
+  },
+  {
+   "k": "Nền đá có những dấu lạ. Mình cần đối chiếu những bóng ảnh và di vật với ghi chép người sống để lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nền đá có những dấu lạ. Mình cần đối chiếu những bóng ảnh và di vật với ghi chép người sống để lại."
+  },
+  {
+   "k": "Trả lại tên",
+   "files": [
+    "game.js",
+    "ending-cinematic.js"
+   ],
+   "ctx": "Trả lại tên"
+  },
+  {
+   "k": "Đặt các di vật ở nền đá và gọi đúng tên những người đã bị xóa khỏi câu chuyện?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đặt các di vật ở nền đá và gọi đúng tên những người đã bị xóa khỏi câu chuyện?"
+  },
+  {
+   "k": "Thực hiện lễ trả danh",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thực hiện lễ trả danh"
+  },
+  {
+   "k": "Lễ trả danh",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lễ trả danh"
+  },
+  {
+   "k": "Cả nhóm gọi Lành, Phúc và Mai ở nền đá. Một ký ức hiện lên: Mai bị vu oan, mất gia đình rồi chết trong khe đá. Ấn vẫn được giữ dưới giếng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cả nhóm gọi Lành, Phúc và Mai ở nền đá. Một ký ức hiện lên: Mai bị vu oan, mất gia đình rồi chết trong khe đá. Ấn vẫn được giữ dưới giếng."
+  },
+  {
+   "k": "Bà Lành. Phúc. Mai. Chúng cháu gọi tên mọi người, không phải tên tội lỗi người ta gán cho.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bà Lành. Phúc. Mai. Chúng cháu gọi tên mọi người, không phải tên tội lỗi người ta gán cho."
+  },
+  {
+   "k": "Tiếng nước chảy vọng về. Trong thoáng chốc, bóng một gia đình ngồi quanh bữa cơm hiện lên rồi tan vào sương.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếng nước chảy vọng về. Trong thoáng chốc, bóng một gia đình ngồi quanh bữa cơm hiện lên rồi tan vào sương."
+  },
+  {
+   "k": "Chị ấy... không phải người đã nhốt các bác dưới hầm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chị ấy... không phải người đã nhốt các bác dưới hầm."
+  },
+  {
+   "k": "Những lời kể và giấy tờ đã được đối chiếu. Mình mang chúng ra ánh sáng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những lời kể và giấy tờ đã được đối chiếu. Mình mang chúng ra ánh sáng."
+  },
+  {
+   "k": "Còn thiếu chuyện ở nền đá hoặc những giấy tờ của Quế. Mình chưa thể kết luận.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Còn thiếu chuyện ở nền đá hoặc những giấy tờ của Quế. Mình chưa thể kết luận."
+  },
+  {
+   "k": "Ai đã sửa bản sớ mà Quế phát hiện?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ai đã sửa bản sớ mà Quế phát hiện?"
+  },
+  {
+   "k": "Khi nghe tiếng kêu từ hầm, ông Hưng đã làm gì?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khi nghe tiếng kêu từ hầm, ông Hưng đã làm gì?"
+  },
+  {
+   "k": "Không mở then",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Không mở then"
+  },
+  {
+   "k": "Mở cửa ngay",
+   "files": [
+    "game.js",
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Mở cửa ngay"
+  },
+  {
+   "k": "Không có mặt ở nhà",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Không có mặt ở nhà"
+  },
+  {
+   "k": "Theo ghi chép của Hưng, ai cài then cửa hầm?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Theo ghi chép của Hưng, ai cài then cửa hầm?"
+  },
+  {
+   "k": "Huyền Tĩnh đã làm gì sau cái chết của Mai?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Huyền Tĩnh đã làm gì sau cái chết của Mai?"
+  },
+  {
+   "k": "Nhận tiền và dùng ấn giam Mai",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhận tiền và dùng ấn giam Mai"
+  },
+  {
+   "k": "Cứu cả gia đình Mai",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cứu cả gia đình Mai"
+  },
+  {
+   "k": "Viết bản sớ giả của Chân năm 1986",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Viết bản sớ giả của Chân năm 1986"
+  },
+  {
+   "k": "Quế là ai trong sự việc năm 1986?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quế là ai trong sự việc năm 1986?"
+  },
+  {
+   "k": "Người phát hiện bản sớ giả",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Người phát hiện bản sớ giả"
+  },
+  {
+   "k": "Lệ quỷ dưới giếng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lệ quỷ dưới giếng"
+  },
+  {
+   "k": "Người tạo chiếc ấn cổ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Người tạo chiếc ấn cổ"
+  },
+  {
+   "k": "Ai phải chịu trách nhiệm về việc giam người dưới hầm?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ai phải chịu trách nhiệm về việc giam người dưới hầm?"
+  },
+  {
+   "k": "Những người quyết định và thực hiện việc giam",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những người quyết định và thực hiện việc giam"
+  },
+  {
+   "k": "Mai và các nạn nhân",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mai và các nạn nhân"
+  },
+  {
+   "k": "Với chiếc ấn và những lời kể chưa đủ chứng cứ, nên kết luận thế nào?",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Với chiếc ấn và những lời kể chưa đủ chứng cứ, nên kết luận thế nào?"
+  },
+  {
+   "k": "Phân biệt điều biết được với điều còn phải điều tra",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phân biệt điều biết được với điều còn phải điều tra"
+  },
+  {
+   "k": "Đổ mọi tội cho thần rừng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đổ mọi tội cho thần rừng"
+  },
+  {
+   "k": "Xem lời đồn là bằng chứng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xem lời đồn là bằng chứng"
+  },
+  {
+   "k": "Vụ Quế năm 1986",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vụ Quế năm 1986"
+  },
+  {
+   "k": "ĐỐI CHIẾU · THỜI GIAN",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐỐI CHIẾU · THỜI GIAN"
+  },
+  {
+   "k": "Dựa vào thư Quế, lời Tùng và ghi chép của Hưng, sắp lại sự việc.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dựa vào thư Quế, lời Tùng và ghi chép của Hưng, sắp lại sự việc."
+  },
+  {
+   "k": "Quế phát hiện sớ giả và báo ông Hưng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quế phát hiện sớ giả và báo ông Hưng."
+  },
+  {
+   "k": "Hưng báo Chân; Quế bị bắt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hưng báo Chân; Quế bị bắt."
+  },
+  {
+   "k": "Tùng chạy lên xã gọi người giúp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tùng chạy lên xã gọi người giúp."
+  },
+  {
+   "k": "Quế mất vì vết thương.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quế mất vì vết thương."
+  },
+  {
+   "k": "Quế phát hiện sớ giả trước khi nhờ Tùng đi gọi người.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quế phát hiện sớ giả trước khi nhờ Tùng đi gọi người."
+  },
+  {
+   "k": "Hưng báo Chân trước khi Quế bị bắt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hưng báo Chân trước khi Quế bị bắt."
+  },
+  {
+   "k": "Sắp lại các mốc từ ghi chép của Hưng và ký ức Nhài.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sắp lại các mốc từ ghi chép của Hưng và ký ức Nhài."
+  },
+  {
+   "k": "02:45 — Chân cài then cửa hầm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "02:45 — Chân cài then cửa hầm."
+  },
+  {
+   "k": "03:05 — Hưng nghe tiếng kêu nhưng không mở.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "03:05 — Hưng nghe tiếng kêu nhưng không mở."
+  },
+  {
+   "k": "03:17 — Nhài ngã xuống giếng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "03:17 — Nhài ngã xuống giếng."
+  },
+  {
+   "k": "05:10 — Hưng mở cửa hầm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "05:10 — Hưng mở cửa hầm."
+  },
+  {
+   "k": "Then được cài trước tiếng kêu.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Then được cài trước tiếng kêu."
+  },
+  {
+   "k": "Hưng mở cửa sau khi Nhài ngã xuống giếng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hưng mở cửa sau khi Nhài ngã xuống giếng."
+  },
+  {
+   "k": "Hai dòng thời gian",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hai dòng thời gian"
+  },
+  {
+   "k": "Hồ sơ cho thấy vụ Quế năm 1986 và vụ giam người năm 1988 là hai sự việc khác nhau.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hồ sơ cho thấy vụ Quế năm 1986 và vụ giam người năm 1988 là hai sự việc khác nhau."
+  },
+  {
+   "k": "Hồ sơ được đối chiếu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hồ sơ được đối chiếu"
+  },
+  {
+   "k": "Sớ giả, thư Quế, lời Tùng, sổ vật tư, lời thú nhận và ký ức Nhài phân biệt vụ Quế năm 1986 với vụ giam người năm 1988. Tội ác do con người gây ra.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sớ giả, thư Quế, lời Tùng, sổ vật tư, lời thú nhận và ký ức Nhài phân biệt vụ Quế năm 1986 với vụ giam người năm 1988. Tội ác do con người gây ra."
+  },
+  {
+   "k": "Thầy Chân và ông Hưng phải chịu trách nhiệm cho việc họ làm. Mai và Quế không gây ra vụ giam người.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thầy Chân và ông Hưng phải chịu trách nhiệm cho việc họ làm. Mai và Quế không gây ra vụ giam người."
+  },
+  {
+   "k": "Phần còn chưa rõ, mình sẽ nói là chưa rõ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Phần còn chưa rõ, mình sẽ nói là chưa rõ."
+  },
+  {
+   "k": "Chữ ký Lục Táng trong bản ghi giống nét viết ở sách thầy Nguyên đưa. Mình cần hỏi thầy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chữ ký Lục Táng trong bản ghi giống nét viết ở sách thầy Nguyên đưa. Mình cần hỏi thầy."
+  },
+  {
+   "k": "Đối chiếu hồ sơ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đối chiếu hồ sơ"
+  },
+  {
+   "k": "Câu trả lời ấy chưa khớp với hồ sơ. Mình kiểm tra lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Câu trả lời ấy chưa khớp với hồ sơ. Mình kiểm tra lại."
+  },
+  {
+   "k": "ĐIỀU TRA · HỒ SƠ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐIỀU TRA · HỒ SƠ"
+  },
+  {
+   "k": "Giáp",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Giáp"
+  },
+  {
+   "k": "thầy giáo",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "thầy giáo"
+  },
+  {
+   "k": "Thành",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Thành"
+  },
+  {
+   "k": "thủ kho",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "thủ kho"
+  },
+  {
+   "k": "Quyên",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Quyên"
+  },
+  {
+   "k": "vú nuôi",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "vú nuôi"
+  },
+  {
+   "k": "Nụ",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js",
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Nụ"
+  },
+  {
+   "k": "nấu bếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "nấu bếp"
+  },
+  {
+   "k": "Bình",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js",
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Bình"
+  },
+  {
+   "k": "trông giếng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "trông giếng"
+  },
+  {
+   "k": "Chưa có gì để đọc.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chưa có gì để đọc."
+  }
+ ]
+}

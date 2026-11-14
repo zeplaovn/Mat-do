@@ -2,7 +2,7 @@
 (function(){
   var sp=document.getElementById('dialogue-speaker'),d=document.getElementById('dialogue');
   if(!sp||!d)return;
-  function sync(){d.classList.toggle('is-narrator',(sp.textContent||'').trim()==='Người kể chuyện')}
+  function sync(){d.classList.toggle('is-narrator',(window.I18N?window.I18N.source(sp.textContent||''):(sp.textContent||'')).trim()==='Người kể chuyện')}
   new MutationObserver(sync).observe(sp,{childList:true,characterData:true,subtree:true});
   sync();
 })();
@@ -29,7 +29,8 @@
     var m=/BG\d+b?/.exec(img.alt||''),fx=m&&FIX[m[0]];
     if(!fx)return;
     Array.prototype.forEach.call(layer.children,function(b){
-      var r=fx[b.getAttribute('aria-label')];
+      var lab=b.getAttribute('aria-label');
+      var r=fx[lab]||(window.I18N?fx[window.I18N.source(lab)]:null);
       if(r){b.style.left=r[0]+'%';b.style.top=r[1]+'%';b.style.width=r[2]+'%';b.style.height=r[3]+'%'}
     });
   }

@@ -1,0 +1,566 @@
+{
+ "batch": 38,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Có khi bà Tám không dám ghi tên lên bia. Người khác nhìn thấy lại hỏi chuyện.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Có khi bà Tám không dám ghi tên lên bia. Người khác nhìn thấy lại hỏi chuyện."
+  },
+  {
+   "k": "Mình đặt hoa xuống nhé. Ngồi đây với họ một lát thôi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Mình đặt hoa xuống nhé. Ngồi đây với họ một lát thôi."
+  },
+  {
+   "k": "Vậy người nhà họ vẫn không biết đến đây thắp hương. Bực thật.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Vậy người nhà họ vẫn không biết đến đây thắp hương. Bực thật."
+  },
+  {
+   "k": "Nếu ra về bây giờ, mình đem theo hết ảnh với giấy đã tìm được nhé.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nếu ra về bây giờ, mình đem theo hết ảnh với giấy đã tìm được nhé."
+  },
+  {
+   "k": "Ừ. Về rồi nhờ người có trách nhiệm kiểm tra. Đừng quay lại một mình.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ừ. Về rồi nhờ người có trách nhiệm kiểm tra. Đừng quay lại một mình."
+  },
+  {
+   "k": "Tớ muốn ở lại tìm tiếp, nhưng nếu các cậu muốn về thì mình về.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ muốn ở lại tìm tiếp, nhưng nếu các cậu muốn về thì mình về."
+  },
+  {
+   "k": "Các di vật được trải trên tấm vải sạch. Trước mặt nhóm là cửa ra, bản sớ do Chân để lại và những dấu trói chưa được tháo ở nền hầm.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Các di vật được trải trên tấm vải sạch. Trước mặt nhóm là cửa ra, bản sớ do Chân để lại và những dấu trói chưa được tháo ở nền hầm."
+  },
+  {
+   "k": "Có một chuyện phải rõ: bọn mình không nợ ai mạng sống chỉ vì có họ hàng với người chết ở đây.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Có một chuyện phải rõ: bọn mình không nợ ai mạng sống chỉ vì có họ hàng với người chết ở đây."
+  },
+  {
+   "k": "Bản sớ của Chân bắt người sống đứng lại đúng chỗ những người đã chết. Tớ không tin nó là cách cứu Nhài.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bản sớ của Chân bắt người sống đứng lại đúng chỗ những người đã chết. Tớ không tin nó là cách cứu Nhài."
+  },
+  {
+   "k": "Nhưng nếu mình cứ bỏ đi thì sao? Nhài với những người kia vẫn ở đây mà.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nhưng nếu mình cứ bỏ đi thì sao? Nhài với những người kia vẫn ở đây mà."
+  },
+  {
+   "k": "Nhài, em nhìn chị này. Chị không muốn em phải sợ thêm lần nữa.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nhài, em nhìn chị này. Chị không muốn em phải sợ thêm lần nữa."
+  },
+  {
+   "k": "Em không muốn anh chị ở lại vì em. Em chỉ muốn mọi người về nhà thôi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Em không muốn anh chị ở lại vì em. Em chỉ muốn mọi người về nhà thôi."
+  },
+  {
+   "k": "Còn mấy tấm ảnh với sớ gốc nữa. Tớ nghĩ mình chưa thử hết cách đâu.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Còn mấy tấm ảnh với sớ gốc nữa. Tớ nghĩ mình chưa thử hết cách đâu."
+  },
+  {
+   "k": "Giờ phải chọn rồi. Tớ muốn nghe từng người, đừng ai gật đầu vì sợ làm người khác buồn.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Giờ phải chọn rồi. Tớ muốn nghe từng người, đừng ai gật đầu vì sợ làm người khác buồn."
+  },
+  {
+   "k": "Khoan. Các cậu đọc kỹ chưa? Tờ này bắt bọn mình đứng đúng những chỗ cũ đấy.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Khoan. Các cậu đọc kỹ chưa? Tờ này bắt bọn mình đứng đúng những chỗ cũ đấy."
+  },
+  {
+   "k": "Tớ bảo rồi, đoạn này là Chân viết thêm. Làm theo nó không chắc cứu được ai đâu.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ bảo rồi, đoạn này là Chân viết thêm. Làm theo nó không chắc cứu được ai đâu."
+  },
+  {
+   "k": "Nếu mọi người vẫn quyết làm... tớ sẽ đứng cùng. Nhưng tớ sợ chúng ta đang mắc bẫy.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nếu mọi người vẫn quyết làm... tớ sẽ đứng cùng. Nhưng tớ sợ chúng ta đang mắc bẫy."
+  },
+  {
+   "k": "Tay tớ... sao không nhấc lên được? Vũ, kéo tớ với!",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tay tớ... sao không nhấc lên được? Vũ, kéo tớ với!"
+  },
+  {
+   "k": "Máy vẫn đang quay. Nhưng trên màn hình cả nhóm đứng im, không thấy ai cử động.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Máy vẫn đang quay. Nhưng trên màn hình cả nhóm đứng im, không thấy ai cử động."
+  },
+  {
+   "k": "Những vòng phấn sáng rồi tắt. Cả nhóm vẫn sống, nhưng không ai bước được ra khỏi gian hầm, như có thứ gì níu chặt dưới chân.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Những vòng phấn sáng rồi tắt. Cả nhóm vẫn sống, nhưng không ai bước được ra khỏi gian hầm, như có thứ gì níu chặt dưới chân."
+  },
+  {
+   "k": "Anh Khôi? Chị Hà? Mình về thôi mà...",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Anh Khôi? Chị Hà? Mình về thôi mà..."
+  },
+  {
+   "k": "Anh không... bước được, Nhài ạ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Anh không... bước được, Nhài ạ."
+  },
+  {
+   "k": "Nhài, em đừng lại gần. Đứng chỗ cửa thôi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nhài, em đừng lại gần. Đứng chỗ cửa thôi."
+  },
+  {
+   "k": "Chúng mình vừa làm đúng điều Chân muốn. Trời ơi...",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Chúng mình vừa làm đúng điều Chân muốn. Trời ơi..."
+  },
+  {
+   "k": "Lệ quỷ Quế",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Lệ quỷ Quế"
+  },
+  {
+   "k": "Không... đừng bắt tôi nghe lại nữa...",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Không... đừng bắt tôi nghe lại nữa..."
+  },
+  {
+   "k": "Trong tấm ảnh mới chụp, cả nhóm đứng vào đúng chỗ những người cũ. Tiếng giếng sâu vẫn đều đều vọng lên, như một nhịp gọi chưa bao giờ dứt.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Trong tấm ảnh mới chụp, cả nhóm đứng vào đúng chỗ những người cũ. Tiếng giếng sâu vẫn đều đều vọng lên, như một nhịp gọi chưa bao giờ dứt."
+  },
+  {
+   "k": "Sao... các anh chị cũng không về được nữa?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Sao... các anh chị cũng không về được nữa?"
+  },
+  {
+   "k": "Đi thôi. Đừng ai đi lạc nhé, ra khỏi đây đã.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Đi thôi. Đừng ai đi lạc nhé, ra khỏi đây đã."
+  },
+  {
+   "k": "Nhưng còn Nhài thì sao...?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nhưng còn Nhài thì sao...?"
+  },
+  {
+   "k": "Em biết mà. Anh chị phải về chứ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Em biết mà. Anh chị phải về chứ."
+  },
+  {
+   "k": "Chị giữ hết ảnh rồi, Nhài. Chị không xóa tấm nào đâu.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Chị giữ hết ảnh rồi, Nhài. Chị không xóa tấm nào đâu."
+  },
+  {
+   "k": "Về làng, tớ sẽ đưa giấy này cho người có thể giúp. Chứ để chỗ này thế mãi sao được.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Về làng, tớ sẽ đưa giấy này cho người có thể giúp. Chứ để chỗ này thế mãi sao được."
+  },
+  {
+   "k": "Lần sau có đến cũng phải có người hỗ trợ. Hôm nay cả nhóm về cùng nhau đã.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Lần sau có đến cũng phải có người hỗ trợ. Hôm nay cả nhóm về cùng nhau đã."
+  },
+  {
+   "k": "Chị Chi nhớ giữ ảnh em nhé.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Chị Chi nhớ giữ ảnh em nhé."
+  },
+  {
+   "k": "Ừ, chị nhớ. Chị hứa.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ừ, chị nhớ. Chị hứa."
+  },
+  {
+   "k": "Cổng sắt mở ra con đường cũ. Cả nhóm trở về cùng những tấm ảnh và giấy tờ mang theo; sau lưng họ, tiếng nước dưới giếng vẫn chưa dứt.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cổng sắt mở ra con đường cũ. Cả nhóm trở về cùng những tấm ảnh và giấy tờ mang theo; sau lưng họ, tiếng nước dưới giếng vẫn chưa dứt."
+  },
+  {
+   "k": "Bản sớ gốc không hề bắt ai đứng vào mấy vòng phấn ấy. Tớ muốn thử cách khác.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bản sớ gốc không hề bắt ai đứng vào mấy vòng phấn ấy. Tớ muốn thử cách khác."
+  },
+  {
+   "k": "Mỗi món đồ gắn với một người. Nếu trả lại đúng tên họ, có lẽ mấy dấu trói này sẽ mất tác dụng.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Mỗi món đồ gắn với một người. Nếu trả lại đúng tên họ, có lẽ mấy dấu trói này sẽ mất tác dụng."
+  },
+  {
+   "k": "Dưới hầm vẫn còn mùi khói. Đừng đốt gì thêm, nhé.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Dưới hầm vẫn còn mùi khói. Đừng đốt gì thêm, nhé."
+  },
+  {
+   "k": "Tớ đứng gần cửa. Có chuyện gì, mọi người cứ gọi tớ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ đứng gần cửa. Có chuyện gì, mọi người cứ gọi tớ."
+  },
+  {
+   "k": "Tớ chụp lại mấy dấu này trước nhé. Nếu có gì đổi thì còn ảnh để so.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ chụp lại mấy dấu này trước nhé. Nếu có gì đổi thì còn ảnh để so."
+  },
+  {
+   "k": "Em sợ tiếng nước ở đây.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Em sợ tiếng nước ở đây."
+  },
+  {
+   "k": "Lại đây chị nắm tay. Mình không đứng một mình đâu.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Lại đây chị nắm tay. Mình không đứng một mình đâu."
+  },
+  {
+   "k": "Trong màn hình máy ảnh, những dấu tay trên cửa mờ dần. Tiếng đập cửa đứt quãng rồi thay bằng tiếng bước chân đi ra hành lang.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Trong màn hình máy ảnh, những dấu tay trên cửa mờ dần. Tiếng đập cửa đứt quãng rồi thay bằng tiếng bước chân đi ra hành lang."
+  },
+  {
+   "k": "Cửa mở rồi. Mọi người ra đi!",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cửa mở rồi. Mọi người ra đi!"
+  },
+  {
+   "k": "Giáp, anh đứng vững không? Đi nào, đừng ở lại đây nữa.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Giáp, anh đứng vững không? Đi nào, đừng ở lại đây nữa."
+  },
+  {
+   "k": "Cầm lấy mảnh giấy này. Đừng để thất lạc.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Cầm lấy mảnh giấy này. Đừng để thất lạc."
+  },
+  {
+   "k": "Mọi người đi trước đi. Tôi theo sau.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Mọi người đi trước đi. Tôi theo sau."
+  },
+  {
+   "k": "Nhài... con có nghe mẹ gọi không?",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nhài... con có nghe mẹ gọi không?"
+  },
+  {
+   "k": "Mẹ ơi! Con đây!",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Mẹ ơi! Con đây!"
+  },
+  {
+   "k": "Ừ. Mẹ ở đây rồi. Con đừng sợ nữa.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ừ. Mẹ ở đây rồi. Con đừng sợ nữa."
+  },
+  {
+   "k": "Nhài nhìn thấy Quyên hiện lên cạnh bậc cửa, chỉ trong chớp mắt. Nhưng lần này, em có thể bước qua ngưỡng cửa mà không bị kéo trở lại.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nhài nhìn thấy Quyên hiện lên cạnh bậc cửa, chỉ trong chớp mắt. Nhưng lần này, em có thể bước qua ngưỡng cửa mà không bị kéo trở lại."
+  },
+  {
+   "k": "Sân giếng sáng lên khi trời hửng. Những tiếng gọi trong biệt thự im bặt, nhưng ngoài rừng vẫn còn một mối buộc chưa được gỡ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Sân giếng sáng lên khi trời hửng. Những tiếng gọi trong biệt thự im bặt, nhưng ngoài rừng vẫn còn một mối buộc chưa được gỡ."
+  },
+  {
+   "k": "Anh Khôi ơi... em ra khỏi cổng được rồi!",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Anh Khôi ơi... em ra khỏi cổng được rồi!"
+  },
+  {
+   "k": "Ừ, anh thấy rồi. Đi chậm kẻo vấp.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ừ, anh thấy rồi. Đi chậm kẻo vấp."
+  },
+  {
+   "k": "Em tưởng cứ đến đây là cửa lại đóng.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Em tưởng cứ đến đây là cửa lại đóng."
+  },
+  {
+   "k": "Có bọn anh ở đây, cửa đóng thì anh lại mở.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Có bọn anh ở đây, cửa đóng thì anh lại mở."
+  },
+  {
+   "k": "Tớ không muốn quay đoạn này. Cứ để vậy thôi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ không muốn quay đoạn này. Cứ để vậy thôi."
+  },
+  {
+   "k": "Nhài thích hoa nhài nhỉ? Chị để một bó cạnh mấy nấm mộ nhé.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nhài thích hoa nhài nhỉ? Chị để một bó cạnh mấy nấm mộ nhé."
+  },
+  {
+   "k": "Tên của họ đã có rồi. Về làng, tớ muốn đưa cho gia đình họ xem trước.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tên của họ đã có rồi. Về làng, tớ muốn đưa cho gia đình họ xem trước."
+  },
+  {
+   "k": "Em cảm ơn anh chị. Em đi với mẹ đây ạ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Em cảm ơn anh chị. Em đi với mẹ đây ạ."
+  },
+  {
+   "k": "Nhài bước theo những bóng người đã được gọi đúng tên. Phía rừng xa, một giọng khóc nữ vẫn còn lẫn trong gió sớm.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nhài bước theo những bóng người đã được gọi đúng tên. Phía rừng xa, một giọng khóc nữ vẫn còn lẫn trong gió sớm."
+  },
+  {
+   "k": "Các dấu vết ở đập, gốc đa và giếng cần được đối chiếu với gia phả và những ghi chép còn lại.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Các dấu vết ở đập, gốc đa và giếng cần được đối chiếu với gia phả và những ghi chép còn lại."
+  },
+  {
+   "k": "Mình chưa nhổ ấn. Trước hết phải gọi đúng tên họ và làm rõ những việc con người đã gây ra.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Mình chưa nhổ ấn. Trước hết phải gọi đúng tên họ và làm rõ những việc con người đã gây ra."
+  },
+  {
+   "k": "Trên nền đá, các di vật được đặt xuống.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Trên nền đá, các di vật được đặt xuống."
+  },
+  {
+   "k": "Bà Lành, Phúc, Mai. Những cái tên này không phải tội lỗi.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bà Lành, Phúc, Mai. Những cái tên này không phải tội lỗi."
+  },
+  {
+   "k": "Một bữa cơm gia đình thoáng hiện. Mai nhận ra mẹ và em trai; chiếc ấn vẫn còn dưới giếng.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Một bữa cơm gia đình thoáng hiện. Mai nhận ra mẹ và em trai; chiếc ấn vẫn còn dưới giếng."
+  },
+  {
+   "k": "Còn hồ sơ và lời người biết chuyện. Mình phải đưa sự thật ra ánh sáng trước khi tháo ấn.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Còn hồ sơ và lời người biết chuyện. Mình phải đưa sự thật ra ánh sáng trước khi tháo ấn."
+  },
+  {
+   "k": "Tôi đã sống từng này tuổi chỉ mong có ngày nghe người ta gọi tên chị tôi mà không thêm hai chữ “phá lễ”.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tôi đã sống từng này tuổi chỉ mong có ngày nghe người ta gọi tên chị tôi mà không thêm hai chữ “phá lễ”."
+  },
+  {
+   "k": "Đây là bản chép và những thứ bọn cháu tìm được. Bác xem giúp cháu lần cuối trước khi chúng cháu mang nộp nhé.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Đây là bản chép và những thứ bọn cháu tìm được. Bác xem giúp cháu lần cuối trước khi chúng cháu mang nộp nhé."
+  },
+  {
+   "k": "Còn những người mất năm tám tám nữa. Bọn cháu sẽ trình cả chuyện ấy, không thể để qua được.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Còn những người mất năm tám tám nữa. Bọn cháu sẽ trình cả chuyện ấy, không thể để qua được."
+  },
+  {
+   "k": "Ai không tin chuyện ma cũng được. Cứ nhìn giấy với những vết khóa ở đây là biết có người đã hại họ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ai không tin chuyện ma cũng được. Cứ nhìn giấy với những vết khóa ở đây là biết có người đã hại họ."
+  },
+  {
+   "k": "Nhưng nhắc tới họ thì cũng nên nhớ họ đã sống thế nào nữa, chứ không chỉ nhớ đêm ấy.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nhưng nhắc tới họ thì cũng nên nhớ họ đã sống thế nào nữa, chứ không chỉ nhớ đêm ấy."
+  },
+  {
+   "k": "Nào, cả nhóm lại đây. Chụp tấm cuối trước khi về nào!",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nào, cả nhóm lại đây. Chụp tấm cuối trước khi về nào!"
+  },
+  {
+   "k": "Chị Chi ơi, chị chừa chỗ cho em với!",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Chị Chi ơi, chị chừa chỗ cho em với!"
+  },
+  {
+   "k": "Có, cạnh chị này. Em đứng vào đây nhé.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Có, cạnh chị này. Em đứng vào đây nhé."
+  },
+  {
+   "k": "Bức ảnh cuối chỉ có cả nhóm đứng trước bậc đá. Bên cạnh Chi là một khoảng trống vừa đủ cho một đứa bé, nơi đặt chiếc trâm gỗ cũ.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bức ảnh cuối chỉ có cả nhóm đứng trước bậc đá. Bên cạnh Chi là một khoảng trống vừa đủ cho một đứa bé, nơi đặt chiếc trâm gỗ cũ."
+  },
+  {
+   "k": "Tớ cứ tưởng biết hết chuyện là sẽ thấy nhẹ người. Hóa ra vẫn còn bao nhiêu việc phải làm.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Tớ cứ tưởng biết hết chuyện là sẽ thấy nhẹ người. Hóa ra vẫn còn bao nhiêu việc phải làm."
+  },
+  {
+   "k": "Ừ. Nhưng lần này mình làm cùng nhau, không ai phải giấu nữa.",
+   "files": [
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ừ. Nhưng lần này mình làm cùng nhau, không ai phải giấu nữa."
+  }
+ ]
+}

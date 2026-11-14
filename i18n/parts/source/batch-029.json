@@ -1,0 +1,566 @@
+{
+ "batch": 29,
+ "count": 80,
+ "strings": [
+  {
+   "k": "${puzzleContextArt(ROOT+'props/POV_Hop_Nhac.webp','Hộp nhạc cũ')}",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(ROOT+'props/POV_Hop_Nhac.webp','Hộp nhạc cũ')}<h2>Gọi tên em</h2><p>Hộp nhạc ngân lên. Từ chiếc áo trắng nhỏ vang tiếng thì thầm: <strong>“Chị ơi, em tên là gì?”</strong></p><label class=\"label-caps\" for=\"six-input\">TÊN CỦA BÉ GÁI</label><div class=\"input-row\"><input id=\"six-input\" class=\"code-input\" type=\"text\" maxlength=\"30\" autocomplete=\"off\" autocapitalize=\"off\" autocorrect=\"off\" spellcheck=\"false\" placeholder=\"Tên em\" style=\"font-size:17px;letter-spacing:.04em;width:240px;max-width:60%\"><button class=\"modal-option\" id=\"six-submit\" type=\"button\">GỌI TÊN →</button></div><p id=\"six-error\" class=\"modal-note\">Gợi ý: hãy đọc lại những gì đã ghi trong nhật ký.</p>"
+  },
+  {
+   "k": "Gọi tên em",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(ROOT+'props/POV_Hop_Nhac.webp','Hộp nhạc cũ')}<h2>Gọi tên em</h2><p>Hộp nhạc ngân lên. Từ chiếc áo trắng nhỏ vang tiếng thì thầm: <strong>“Chị ơi, em tên là gì?”</strong></p><label class=\"label-caps\" for=\"six-input\">TÊN CỦA BÉ GÁI</label><div class=\"input-row\"><input id=\"six-input\" class=\"code-input\" type=\"text\" maxlength=\"30\" autocomplete=\"off\" autocapitalize=\"off\" autocorrect=\"off\" spellcheck=\"false\" placeholder=\"Tên em\" style=\"font-size:17px;letter-spacing:.04em;width:240px;max-width:60%\"><button class=\"modal-option\" id=\"six-submit\" type=\"button\">GỌI TÊN →</button></div><p id=\"six-error\" class=\"modal-note\">Gợi ý: hãy đọc lại những gì đã ghi trong nhật ký.</p>"
+  },
+  {
+   "k": "Hộp nhạc ngân lên. Từ chiếc áo trắng nhỏ vang tiếng thì thầm:",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(ROOT+'props/POV_Hop_Nhac.webp','Hộp nhạc cũ')}<h2>Gọi tên em</h2><p>Hộp nhạc ngân lên. Từ chiếc áo trắng nhỏ vang tiếng thì thầm: <strong>“Chị ơi, em tên là gì?”</strong></p><label class=\"label-caps\" for=\"six-input\">TÊN CỦA BÉ GÁI</label><div class=\"input-row\"><input id=\"six-input\" class=\"code-input\" type=\"text\" maxlength=\"30\" autocomplete=\"off\" autocapitalize=\"off\" autocorrect=\"off\" spellcheck=\"false\" placeholder=\"Tên em\" style=\"font-size:17px;letter-spacing:.04em;width:240px;max-width:60%\"><button class=\"modal-option\" id=\"six-submit\" type=\"button\">GỌI TÊN →</button></div><p id=\"six-error\" class=\"modal-note\">Gợi ý: hãy đọc lại những gì đã ghi trong nhật ký.</p>"
+  },
+  {
+   "k": "“Chị ơi, em tên là gì?”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(ROOT+'props/POV_Hop_Nhac.webp','Hộp nhạc cũ')}<h2>Gọi tên em</h2><p>Hộp nhạc ngân lên. Từ chiếc áo trắng nhỏ vang tiếng thì thầm: <strong>“Chị ơi, em tên là gì?”</strong></p><label class=\"label-caps\" for=\"six-input\">TÊN CỦA BÉ GÁI</label><div class=\"input-row\"><input id=\"six-input\" class=\"code-input\" type=\"text\" maxlength=\"30\" autocomplete=\"off\" autocapitalize=\"off\" autocorrect=\"off\" spellcheck=\"false\" placeholder=\"Tên em\" style=\"font-size:17px;letter-spacing:.04em;width:240px;max-width:60%\"><button class=\"modal-option\" id=\"six-submit\" type=\"button\">GỌI TÊN →</button></div><p id=\"six-error\" class=\"modal-note\">Gợi ý: hãy đọc lại những gì đã ghi trong nhật ký.</p>"
+  },
+  {
+   "k": "TÊN CỦA BÉ GÁI",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(ROOT+'props/POV_Hop_Nhac.webp','Hộp nhạc cũ')}<h2>Gọi tên em</h2><p>Hộp nhạc ngân lên. Từ chiếc áo trắng nhỏ vang tiếng thì thầm: <strong>“Chị ơi, em tên là gì?”</strong></p><label class=\"label-caps\" for=\"six-input\">TÊN CỦA BÉ GÁI</label><div class=\"input-row\"><input id=\"six-input\" class=\"code-input\" type=\"text\" maxlength=\"30\" autocomplete=\"off\" autocapitalize=\"off\" autocorrect=\"off\" spellcheck=\"false\" placeholder=\"Tên em\" style=\"font-size:17px;letter-spacing:.04em;width:240px;max-width:60%\"><button class=\"modal-option\" id=\"six-submit\" type=\"button\">GỌI TÊN →</button></div><p id=\"six-error\" class=\"modal-note\">Gợi ý: hãy đọc lại những gì đã ghi trong nhật ký.</p>"
+  },
+  {
+   "k": "GỌI TÊN →",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(ROOT+'props/POV_Hop_Nhac.webp','Hộp nhạc cũ')}<h2>Gọi tên em</h2><p>Hộp nhạc ngân lên. Từ chiếc áo trắng nhỏ vang tiếng thì thầm: <strong>“Chị ơi, em tên là gì?”</strong></p><label class=\"label-caps\" for=\"six-input\">TÊN CỦA BÉ GÁI</label><div class=\"input-row\"><input id=\"six-input\" class=\"code-input\" type=\"text\" maxlength=\"30\" autocomplete=\"off\" autocapitalize=\"off\" autocorrect=\"off\" spellcheck=\"false\" placeholder=\"Tên em\" style=\"font-size:17px;letter-spacing:.04em;width:240px;max-width:60%\"><button class=\"modal-option\" id=\"six-submit\" type=\"button\">GỌI TÊN →</button></div><p id=\"six-error\" class=\"modal-note\">Gợi ý: hãy đọc lại những gì đã ghi trong nhật ký.</p>"
+  },
+  {
+   "k": "Gợi ý: hãy đọc lại những gì đã ghi trong nhật ký.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "${puzzleContextArt(ROOT+'props/POV_Hop_Nhac.webp','Hộp nhạc cũ')}<h2>Gọi tên em</h2><p>Hộp nhạc ngân lên. Từ chiếc áo trắng nhỏ vang tiếng thì thầm: <strong>“Chị ơi, em tên là gì?”</strong></p><label class=\"label-caps\" for=\"six-input\">TÊN CỦA BÉ GÁI</label><div class=\"input-row\"><input id=\"six-input\" class=\"code-input\" type=\"text\" maxlength=\"30\" autocomplete=\"off\" autocapitalize=\"off\" autocorrect=\"off\" spellcheck=\"false\" placeholder=\"Tên em\" style=\"font-size:17px;letter-spacing:.04em;width:240px;max-width:60%\"><button class=\"modal-option\" id=\"six-submit\" type=\"button\">GỌI TÊN →</button></div><p id=\"six-error\" class=\"modal-note\">Gợi ý: hãy đọc lại những gì đã ghi trong nhật ký.</p>"
+  },
+  {
+   "k": "Đeo tai nghe. Có những thứ chỉ nghe được khi xung quanh im lặng.",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Đeo tai nghe. Có những thứ chỉ nghe được khi xung quanh im lặng."
+  },
+  {
+   "k": "Phím F bật tắt đèn pin · J nhật ký · H gợi ý.",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Phím F bật tắt đèn pin · J nhật ký · H gợi ý."
+  },
+  {
+   "k": "Ghi chép mọi thứ. Có những cái tên chỉ xuất hiện một lần.",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Ghi chép mọi thứ. Có những cái tên chỉ xuất hiện một lần."
+  },
+  {
+   "k": "Đang gọi những cái tên…",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Đang gọi những cái tên…"
+  },
+  {
+   "k": "Đang mở cổng làng…",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Đang mở cổng làng…"
+  },
+  {
+   "k": "Sẵn sàng.",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Sẵn sàng."
+  },
+  {
+   "k": "Bật/tắt nhạc nền",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Bật/tắt nhạc nền"
+  },
+  {
+   "k": "Bật hoặc tắt nhạc nền",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Bật hoặc tắt nhạc nền"
+  },
+  {
+   "k": "♪ Bật nhạc",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "♪ Bật nhạc"
+  },
+  {
+   "k": "Chạm để bật nhạc nền",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Chạm để bật nhạc nền"
+  },
+  {
+   "k": "Bật nhạc nền",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Bật nhạc nền"
+  },
+  {
+   "k": "Năm 1988...",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Năm 1988..."
+  },
+  {
+   "k": "Biệt thự Vân Hòa, chân núi Ba Vì, đóng cửa sau một đêm không ai kể lại.",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Biệt thự Vân Hòa, chân núi Ba Vì, đóng cửa sau một đêm không ai kể lại."
+  },
+  {
+   "k": "Báo chí chỉ để lại vài dòng.",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Báo chí chỉ để lại vài dòng."
+  },
+  {
+   "k": "Một mẩu tin ngắn. Một ngôi nhà bỏ hoang. Không một lời giải thích.",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Một mẩu tin ngắn. Một ngôi nhà bỏ hoang. Không một lời giải thích."
+  },
+  {
+   "k": "Một nhóm sinh viên tìm lại ba bài báo cũ, rồi lần theo chúng về thôn Đồng Chay.",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Một nhóm sinh viên tìm lại ba bài báo cũ, rồi lần theo chúng về thôn Đồng Chay."
+  },
+  {
+   "k": "Dân làng dặn: đừng vào rừng khi trời về tối.",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Dân làng dặn: đừng vào rừng khi trời về tối."
+  },
+  {
+   "k": "Nhưng ... Họ vẫn đi.",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Nhưng ... Họ vẫn đi."
+  },
+  {
+   "k": "Nếu \"ai đó\" gọi tên bạn…",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Nếu \"ai đó\" gọi tên bạn…"
+  },
+  {
+   "k": "Tốt nhất đừng trả lời.",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "Tốt nhất đừng trả lời."
+  },
+  {
+   "k": "thấy",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "thấy"
+  },
+  {
+   "k": "ai đó",
+   "files": [
+    "intro.js"
+   ],
+   "ctx": "ai đó"
+  },
+  {
+   "k": "Chạm vào biểu tượng sáng để xem gần",
+   "files": [
+    "guide.js"
+   ],
+   "ctx": "Chạm vào biểu tượng sáng để xem gần"
+  },
+  {
+   "k": "Chạm vào vật phẩm để chọn, rồi chạm vào cảnh để dùng",
+   "files": [
+    "guide.js"
+   ],
+   "ctx": "Chạm vào vật phẩm để chọn, rồi chạm vào cảnh để dùng"
+  },
+  {
+   "k": "Không ai đứng bên giếng.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Không ai đứng bên giếng."
+  },
+  {
+   "k": "Nhưng tấm ảnh lại có hai bóng người.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Nhưng tấm ảnh lại có hai bóng người."
+  },
+  {
+   "k": "ẢNH CHỤP CỦA CHI",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "ẢNH CHỤP CỦA CHI"
+  },
+  {
+   "k": "Họ là ai?",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Họ là ai?"
+  },
+  {
+   "k": "Bà ngoại tớ từng sống ở vùng này.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Bà ngoại tớ từng sống ở vùng này."
+  },
+  {
+   "k": "Bà ơi, bà có biết bà Cúc không ạ?",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Bà ơi, bà có biết bà Cúc không ạ?"
+  },
+  {
+   "k": "Lâu lắm rồi không ai gọi cái tên ấy.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Lâu lắm rồi không ai gọi cái tên ấy."
+  },
+  {
+   "k": "Một chuyến đi tìm lời giải.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Một chuyến đi tìm lời giải."
+  },
+  {
+   "k": "Một ngôi nhà không ai muốn nhắc tới.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Một ngôi nhà không ai muốn nhắc tới."
+  },
+  {
+   "k": "Có ai vừa kéo cổng không?",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Có ai vừa kéo cổng không?"
+  },
+  {
+   "k": "Bạn sẽ tự bước vào.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Bạn sẽ tự bước vào."
+  },
+  {
+   "k": "TRẢI NGHIỆM TRONG GAME",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "TRẢI NGHIỆM TRONG GAME"
+  },
+  {
+   "k": "03:17. Vì sao đồng hồ dừng ở đó?",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "03:17. Vì sao đồng hồ dừng ở đó?"
+  },
+  {
+   "k": "Tìm thứ người khác bỏ sót.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Tìm thứ người khác bỏ sót."
+  },
+  {
+   "k": "TƯƠNG TÁC",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "TƯƠNG TÁC"
+  },
+  {
+   "k": "Một bức ảnh chưa nói được toàn bộ sự thật.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Một bức ảnh chưa nói được toàn bộ sự thật."
+  },
+  {
+   "k": "Manh mối nằm trong cả bóng tối.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Manh mối nằm trong cả bóng tối."
+  },
+  {
+   "k": "DÙNG VẬT PHẨM",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "DÙNG VẬT PHẨM"
+  },
+  {
+   "k": "Hai bản sớ. Hai cách kể.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Hai bản sớ. Hai cách kể."
+  },
+  {
+   "k": "ĐỐI CHIẾU",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "ĐỐI CHIẾU"
+  },
+  {
+   "k": "Một nét mực khác. Vì sao?",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Một nét mực khác. Vì sao?"
+  },
+  {
+   "k": "PHÁT HIỆN MANH MỐI",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "PHÁT HIỆN MANH MỐI"
+  },
+  {
+   "k": "Năm 1986, có người đã lên tiếng.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Năm 1986, có người đã lên tiếng."
+  },
+  {
+   "k": "Nhưng bí mật không dừng lại ở đó.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Nhưng bí mật không dừng lại ở đó."
+  },
+  {
+   "k": "Năm 1988, tiếng kêu cứu vang lên từ hầm.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Năm 1988, tiếng kêu cứu vang lên từ hầm."
+  },
+  {
+   "k": "Ai đã biết? Ai đã im lặng?",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Ai đã biết? Ai đã im lặng?"
+  },
+  {
+   "k": "Có một đứa trẻ chỉ muốn giúp mọi người.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Có một đứa trẻ chỉ muốn giúp mọi người."
+  },
+  {
+   "k": "Đêm đó, em đã không trở về.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Đêm đó, em đã không trở về."
+  },
+  {
+   "k": "Những cái tên còn bị giữ lại.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Những cái tên còn bị giữ lại."
+  },
+  {
+   "k": "Không thể giải lời nguyền chỉ bằng tin đồn.",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Không thể giải lời nguyền chỉ bằng tin đồn."
+  },
+  {
+   "k": "Chiếc ấn này đang giữ điều gì?",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Chiếc ấn này đang giữ điều gì?"
+  },
+  {
+   "k": "Bạn dám lựa chọn khi chưa chắc mình đúng?",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Bạn dám lựa chọn khi chưa chắc mình đúng?"
+  },
+  {
+   "k": "QUYẾT ĐỊNH",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "QUYẾT ĐỊNH"
+  },
+  {
+   "k": "Nếu sai thì sao?",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Nếu sai thì sao?"
+  },
+  {
+   "k": "Chuyển động: Giảm",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Chuyển động: Giảm"
+  },
+  {
+   "k": "Bật chuyển động",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Bật chuyển động"
+  },
+  {
+   "k": "Sẵn sàng phát",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Sẵn sàng phát"
+  },
+  {
+   "k": "Đang chuẩn bị cảnh phim",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "Đang chuẩn bị cảnh phim "
+  },
+  {
+   "k": "CHI / ẢNH CHỤP",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"photo-stamp\"><strong>CHI / ẢNH CHỤP</strong><span>THỨ MẮT THƯỜNG KHÔNG THẤY</span></div>"
+  },
+  {
+   "k": "THỨ MẮT THƯỜNG KHÔNG THẤY",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"photo-stamp\"><strong>CHI / ẢNH CHỤP</strong><span>THỨ MẮT THƯỜNG KHÔNG THẤY</span></div>"
+  },
+  {
+   "k": "MÁY ẢNH / CHẾ ĐỘ NGẮM",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"photo-frame\"></div><div class=\"photo-rec\"><b></b> MÁY ẢNH / CHẾ ĐỘ NGẮM</div><div class=\"cursor-dot\" style=\"--x:51%;--y:48%\"></div>"
+  },
+  {
+   "k": "ĐIỂM TƯƠNG TÁC",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"cursor-dot\" style=\"--x:89%;--y:35%\"></div><div class=\"inspect-label\"><span>ĐIỂM TƯƠNG TÁC</span>Gương trong phòng trẻ</div><div class=\"game-hud\">"
+  },
+  {
+   "k": "Gương trong phòng trẻ",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"cursor-dot\" style=\"--x:89%;--y:35%\"></div><div class=\"inspect-label\"><span>ĐIỂM TƯƠNG TÁC</span>Gương trong phòng trẻ</div><div class=\"game-hud\">"
+  },
+  {
+   "k": "TÌM DẤU VẾT",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"cursor-dot\" style=\"--x:70%;--y:47%\"></div><div class=\"inspect-label\"><span>TÌM DẤU VẾT</span>Kho đồ lễ dưới hầm</div><div class=\"game-hud\">"
+  },
+  {
+   "k": "Cùng một lời khấn?",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"evidence-board\"><small>HỒ SƠ / ĐỐI CHIẾU</small><strong>Cùng một lời khấn?</strong><p>Hai nguồn ghi chép không hoàn toàn giống nhau. Bạn sẽ tin nguồn nào?</p><span class=\"proof-line\"><i></i>Danh hiệu trên bài vị</span><span class=\"proof-line\"><i></i>Nét chữ và mực</span></div>"
+  },
+  {
+   "k": "Hai nguồn ghi chép không hoàn toàn giống nhau. Bạn sẽ tin nguồn nào?",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"evidence-board\"><small>HỒ SƠ / ĐỐI CHIẾU</small><strong>Cùng một lời khấn?</strong><p>Hai nguồn ghi chép không hoàn toàn giống nhau. Bạn sẽ tin nguồn nào?</p><span class=\"proof-line\"><i></i>Danh hiệu trên bài vị</span><span class=\"proof-line\"><i></i>Nét chữ và mực</span></div>"
+  },
+  {
+   "k": "Danh hiệu trên bài vị",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"evidence-board\"><small>HỒ SƠ / ĐỐI CHIẾU</small><strong>Cùng một lời khấn?</strong><p>Hai nguồn ghi chép không hoàn toàn giống nhau. Bạn sẽ tin nguồn nào?</p><span class=\"proof-line\"><i></i>Danh hiệu trên bài vị</span><span class=\"proof-line\"><i></i>Nét chữ và mực</span></div>"
+  },
+  {
+   "k": "Nét chữ và mực",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"evidence-board\"><small>HỒ SƠ / ĐỐI CHIẾU</small><strong>Cùng một lời khấn?</strong><p>Hai nguồn ghi chép không hoàn toàn giống nhau. Bạn sẽ tin nguồn nào?</p><span class=\"proof-line\"><i></i>Danh hiệu trên bài vị</span><span class=\"proof-line\"><i></i>Nét chữ và mực</span></div>"
+  },
+  {
+   "k": "PHÁT HIỆN / TÀI LIỆU",
+   "files": [
+    "trailer.js"
+   ],
+   "ctx": "<div class=\"evidence-board\"><small>PHÁT HIỆN / TÀI LIỆU</small><strong>Một chỗ bị sửa.</strong><p>Phải có người đã thay đổi lời khấn. Nhưng vì sao?</p><span class=\"proof-line marked\"><i></i>Vết nối giấy khác màu</span><span class=\"found\">✓ GHI VÀO HỒ SƠ</span></div>"
+  }
+ ]
+}

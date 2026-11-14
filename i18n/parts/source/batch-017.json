@@ -1,0 +1,567 @@
+{
+ "batch": 17,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Thứ tự ký hiệu khớp với bảng trong phòng học.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thứ tự ký hiệu khớp với bảng trong phòng học."
+  },
+  {
+   "k": "Xuống thôi. Cẩn thận.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xuống thôi. Cẩn thận."
+  },
+  {
+   "k": "Cần hai thứ: bảng ký hiệu và thứ tự đứng ký đơn. Bảng ký hiệu nằm trong ngăn kéo giá sách phòng học của Nhài, thứ tự ghi ở mặt sau một tấm ảnh dưới gối ở gác nhỏ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cần hai thứ: bảng ký hiệu và thứ tự đứng ký đơn. Bảng ký hiệu nằm trong ngăn kéo giá sách phòng học của Nhài, thứ tự ghi ở mặt sau một tấm ảnh dưới gối ở gác nhỏ."
+  },
+  {
+   "k": "Thứ tự đứng ký: thầy Giáp, bác Thành, cô Quyên, chị Nụ, bác Bình.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thứ tự đứng ký: thầy Giáp, bác Thành, cô Quyên, chị Nụ, bác Bình."
+  },
+  {
+   "k": "Từ trái sang phải: cây bút, cái cân, nốt nhạc, ngọn lửa, con sóng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Từ trái sang phải: cây bút, cái cân, nốt nhạc, ngọn lửa, con sóng."
+  },
+  {
+   "k": "Trong hộp đã tìm được bản thú tội của người tham gia nghi lễ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trong hộp đã tìm được bản thú tội của người tham gia nghi lễ."
+  },
+  {
+   "k": "Hộp tài liệu của ông Hưng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hộp tài liệu của ông Hưng"
+  },
+  {
+   "k": "CÂU ĐỐ · HỘP SẮT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · HỘP SẮT"
+  },
+  {
+   "k": "KIM ĐỒNG HỒ KHÔNG BAO GIỜ ĐI TIẾP",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "KIM ĐỒNG HỒ KHÔNG BAO GIỜ ĐI TIẾP"
+  },
+  {
+   "k": "Bấm vào từng ô số để đổi chữ số. Khóa đã rỉ sét.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bấm vào từng ô số để đổi chữ số. Khóa đã rỉ sét."
+  },
+  {
+   "k": "Bản thú tội trong hộp sắt",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bản thú tội trong hộp sắt"
+  },
+  {
+   "k": "Hưng viết rằng đã báo cho Chân việc Quế phát hiện sớ giả. Đêm 17/3/1988, Chân cài then lúc 02:45 theo thỏa thuận giữ người đến sáng. Khoảng 03:05 Hưng nghe tiếng kêu nhưng không mở; 05:10 ông mới mở và sau đó che giấu cái chết của họ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hưng viết rằng đã báo cho Chân việc Quế phát hiện sớ giả. Đêm 17/3/1988, Chân cài then lúc 02:45 theo thỏa thuận giữ người đến sáng. Khoảng 03:05 Hưng nghe tiếng kêu nhưng không mở; 05:10 ông mới mở và sau đó che giấu cái chết của họ."
+  },
+  {
+   "k": "Bản thú tội... Chúng ta đã có thêm chứng cứ về vụ án năm 1988.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bản thú tội... Chúng ta đã có thêm chứng cứ về vụ án năm 1988."
+  },
+  {
+   "k": "Mép gạch mới",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mép gạch mới"
+  },
+  {
+   "k": "Vệt vữa ở chân tường",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Vệt vữa ở chân tường"
+  },
+  {
+   "k": "Khe gió cạnh tường",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khe gió cạnh tường"
+  },
+  {
+   "k": "Mảng tường bị bịt",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Mảng tường bị bịt</h2><p>Gạch và vữa ở đây mới hơn hành lang. Hãy xem các dấu vết trước khi dùng thanh sắt.</p><div id=\"wall-points\" class=\"modal-buttons\"></div><div id=\"wall-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Gạch và vữa ở đây mới hơn hành lang. Hãy xem các dấu vết trước khi dùng thanh sắt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Mảng tường bị bịt</h2><p>Gạch và vữa ở đây mới hơn hành lang. Hãy xem các dấu vết trước khi dùng thanh sắt.</p><div id=\"wall-points\" class=\"modal-buttons\"></div><div id=\"wall-actions\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "ĐIỀU TRA · BỨC TƯỜNG",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐIỀU TRA · BỨC TƯỜNG"
+  },
+  {
+   "k": "Dùng thanh sắt cạy lớp gạch",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Dùng thanh sắt cạy lớp gạch"
+  },
+  {
+   "k": "Cửa hầm sau bức tường",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cửa hầm sau bức tường"
+  },
+  {
+   "k": "Sau lớp gạch là cửa gỗ cũ. Then nằm phía ngoài, mặt trong cửa có nhiều vết cào. Không thể xác định chính xác thời gian chỉ từ những dấu này.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sau lớp gạch là cửa gỗ cũ. Then nằm phía ngoài, mặt trong cửa có nhiều vết cào. Không thể xác định chính xác thời gian chỉ từ những dấu này."
+  },
+  {
+   "k": "Ngoài vườn có những nấm mộ gió để nhớ các bác. Chị giúp em tìm tên từng người nhé.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ngoài vườn có những nấm mộ gió để nhớ các bác. Chị giúp em tìm tên từng người nhé."
+  },
+  {
+   "k": "Các di vật đã được đặt đủ. Tiếng gõ đã lặng, nhưng tớ không chắc mọi chuyện đã xong.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Các di vật đã được đặt đủ. Tiếng gõ đã lặng, nhưng tớ không chắc mọi chuyện đã xong."
+  },
+  {
+   "k": "Không thể làm nghi thức khi thiếu nhang. Hãy quay về miếu ở BG05.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Không thể làm nghi thức khi thiếu nhang. Hãy quay về miếu ở BG05."
+  },
+  {
+   "k": "BÀN THỜ GIA TIÊN",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "BÀN THỜ GIA TIÊN"
+  },
+  {
+   "k": "Bàn thờ và bát hương",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bàn thờ và bát hương"
+  },
+  {
+   "k": "Đã đặt một phần di vật.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đã đặt một phần di vật."
+  },
+  {
+   "k": "Chưa đặt di vật nào.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chưa đặt di vật nào."
+  },
+  {
+   "k": "CÂU ĐỐ · NGHI LỄ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · NGHI LỄ"
+  },
+  {
+   "k": "Sai thứ tự. Hãy đọc lại nhật ký.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sai thứ tự. Hãy đọc lại nhật ký."
+  },
+  {
+   "k": "Nhang đã cháy hết, bật lửa cạn gas.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhang đã cháy hết, bật lửa cạn gas."
+  },
+  {
+   "k": "Di vật khơi ký ức",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Di vật khơi ký ức"
+  },
+  {
+   "k": "Các di vật được đặt đúng chỗ. Tiếng gõ dưới hầm tạm lặng, nhưng chưa có bằng chứng rằng người chết đã được giải thoát.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Các di vật được đặt đúng chỗ. Tiếng gõ dưới hầm tạm lặng, nhưng chưa có bằng chứng rằng người chết đã được giải thoát."
+  },
+  {
+   "k": "Tiếng khóc trẻ con",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tiếng khóc trẻ con"
+  },
+  {
+   "k": "Nghi lễ xong, tiếng gõ đã lặng. Nhưng một tiếng khóc trẻ con vọng xuống từ phòng trẻ. Còn một cái tên chưa được trả lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nghi lễ xong, tiếng gõ đã lặng. Nhưng một tiếng khóc trẻ con vọng xuống từ phòng trẻ. Còn một cái tên chưa được trả lại."
+  },
+  {
+   "k": "Hộp nhạc cũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hộp nhạc cũ"
+  },
+  {
+   "k": "CÂU ĐỐ · CÁI TÊN CÒN THIẾU",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "CÂU ĐỐ · CÁI TÊN CÒN THIẾU"
+  },
+  {
+   "k": "Cái tên còn thiếu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cái tên còn thiếu"
+  },
+  {
+   "k": "Nhài, bảy tuổi, con nuôi của vợ chồng ông Hưng. Em từng sống ở biệt thự và biến mất trong đêm năm 1988. Tên em cuối cùng đã được gọi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhài, bảy tuổi, con nuôi của vợ chồng ông Hưng. Em từng sống ở biệt thự và biến mất trong đêm năm 1988. Tên em cuối cùng đã được gọi."
+  },
+  {
+   "k": "Giọng thì thầm lặng đi. Đó chưa phải tên em.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giọng thì thầm lặng đi. Đó chưa phải tên em."
+  },
+  {
+   "k": "“Tôi chẳng cấp đồ lễ hay vải che ô gió cho Chân.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "“Tôi chẳng cấp đồ lễ hay vải che ô gió cho Chân.”"
+  },
+  {
+   "k": "“Tôi chưa từng nói với Chân chuyện Quế phát hiện bản sớ.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "“Tôi chưa từng nói với Chân chuyện Quế phát hiện bản sớ.”"
+  },
+  {
+   "k": "“Tôi không nghe tiếng ai kêu dưới hầm.”",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "“Tôi không nghe tiếng ai kêu dưới hầm.”"
+  },
+  {
+   "k": "Sổ vật tư",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sổ vật tư"
+  },
+  {
+   "k": "Hồ sơ trong hầm",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hồ sơ trong hầm"
+  },
+  {
+   "k": "Ghi chép của Hưng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ghi chép của Hưng"
+  },
+  {
+   "k": "Đối chiếu lời ông Hưng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Đối chiếu lời ông Hưng</h2><p>"
+  },
+  {
+   "k": "Chọn chứng cứ để đáp lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "</p><p>Chọn chứng cứ để đáp lại.</p><div id=\"lam-options\" class=\"ritual-list\"></div>"
+  },
+  {
+   "k": "ĐỐI CHẤT",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐỐI CHẤT"
+  },
+  {
+   "k": "— chưa có",
+   "files": [
+    "game.js"
+   ],
+   "ctx": " — chưa có"
+  },
+  {
+   "k": "Chứng cứ này chưa trả lời lời chối. Hãy thử lại.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chứng cứ này chưa trả lời lời chối. Hãy thử lại."
+  },
+  {
+   "k": "Lời chối của Hưng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lời chối của Hưng"
+  },
+  {
+   "k": "Hồ sơ cấp vật tư, ghi chép của Hưng và lời bà Tám cho thấy ông đã tham gia che giấu sự thật.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hồ sơ cấp vật tư, ghi chép của Hưng và lời bà Tám cho thấy ông đã tham gia che giấu sự thật."
+  },
+  {
+   "k": "Tôi đã nghe họ gọi. Tôi sợ mở cửa, rồi chờ đến sáng...",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tôi đã nghe họ gọi. Tôi sợ mở cửa, rồi chờ đến sáng..."
+  },
+  {
+   "k": "Sợ hãi không xóa được việc ông đã chọn. Gia đình họ cần được biết.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sợ hãi không xóa được việc ông đã chọn. Gia đình họ cần được biết."
+  },
+  {
+   "k": "Chị nhìn giúp em bát cơm trên bàn thờ. Em không còn nhớ vì sao em đặt nó ở đó.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chị nhìn giúp em bát cơm trên bàn thờ. Em không còn nhớ vì sao em đặt nó ở đó."
+  },
+  {
+   "k": "Những vòng phấn và xấp giấy ở kho này cần được xem kỹ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những vòng phấn và xấp giấy ở kho này cần được xem kỹ."
+  },
+  {
+   "k": "Những vị trí vẽ phấn",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Những vị trí vẽ phấn"
+  },
+  {
+   "k": "Một đoạn giấy chắp bảo người sống đứng vào vòng. Không có căn cứ rằng đây là cách cứu những người đã chết.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Một đoạn giấy chắp bảo người sống đứng vào vòng. Không có căn cứ rằng đây là cách cứu những người đã chết."
+  },
+  {
+   "k": "Giữ giấy để đối chiếu",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giữ giấy để đối chiếu"
+  },
+  {
+   "k": "Những vòng phấn",
+   "files": [
+    "game.js",
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Những vòng phấn"
+  },
+  {
+   "k": "Cả nhóm giữ bản sớ đáng ngờ để so với bản gốc, không làm theo chỉ dẫn chưa được kiểm chứng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cả nhóm giữ bản sớ đáng ngờ để so với bản gốc, không làm theo chỉ dẫn chưa được kiểm chứng."
+  },
+  {
+   "k": "Đem tờ giấy đi so với bản gốc đã.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đem tờ giấy đi so với bản gốc đã."
+  },
+  {
+   "k": "Để đó và quay lại sau",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Để đó và quay lại sau"
+  },
+  {
+   "k": "ĐIỀU TRA · KHO ĐỒ LỄ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "ĐIỀU TRA · KHO ĐỒ LỄ"
+  },
+  {
+   "k": "Trước cánh cổng sắt",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Trước cánh cổng sắt</h2><p>Qua rừng là đường về làng. Cả nhóm vẫn có thể rời khỏi đây, nhưng những chuyện trong biệt thự chưa được giải thích hết.</p><div id=\"escape-options\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "Qua rừng là đường về làng. Cả nhóm vẫn có thể rời khỏi đây, nhưng những chuyện trong biệt thự chưa được giải thích hết.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "<h2>Trước cánh cổng sắt</h2><p>Qua rừng là đường về làng. Cả nhóm vẫn có thể rời khỏi đây, nhưng những chuyện trong biệt thự chưa được giải thích hết.</p><div id=\"escape-options\" class=\"modal-buttons\"></div>"
+  },
+  {
+   "k": "LỰA CHỌN · RỜI BIỆT THỰ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "LỰA CHỌN · RỜI BIỆT THỰ"
+  },
+  {
+   "k": "Rời khỏi rừng cùng mọi người",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Rời khỏi rừng cùng mọi người"
+  },
+  {
+   "k": "Đi theo lối mòn tới bàn thờ đá trong rừng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đi theo lối mòn tới bàn thờ đá trong rừng"
+  },
+  {
+   "k": "Quay lại biệt thự để điều tra tiếp",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Quay lại biệt thự để điều tra tiếp"
+  },
+  {
+   "k": "Ấn Vỡ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ấn Vỡ"
+  },
+  {
+   "k": "KẾT THÚC · BAD",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "KẾT THÚC · BAD"
+  },
+  {
+   "k": "Chiếc ấn bật khỏi khe đá trước khi cả nhóm hiểu ai đang bị giữ lại. Tiếng nước dội lên, ký ức đứt thành những mảnh rời.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc ấn bật khỏi khe đá trước khi cả nhóm hiểu ai đang bị giữ lại. Tiếng nước dội lên, ký ức đứt thành những mảnh rời.\n\nBóng người dưới giếng chỉ còn thấy đau đớn. Những bóng người dưới hầm không được đưa về, còn con đường ra rừng chìm trong sương. Không ai được gọi đúng tên."
+  },
+  {
+   "k": "Bóng người dưới giếng chỉ còn thấy đau đớn. Những bóng người dưới hầm không được đưa về, còn con đường ra rừng chìm trong sương. Không ai được gọi đúng tên.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc ấn bật khỏi khe đá trước khi cả nhóm hiểu ai đang bị giữ lại. Tiếng nước dội lên, ký ức đứt thành những mảnh rời.\n\nBóng người dưới giếng chỉ còn thấy đau đớn. Những bóng người dưới hầm không được đưa về, còn con đường ra rừng chìm trong sương. Không ai được gọi đúng tên."
+  },
+  {
+   "k": "Ra Khỏi Rừng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ra Khỏi Rừng"
+  },
+  {
+   "k": "KẾT THÚC · NORMAL",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "KẾT THÚC · NORMAL"
+  },
+  {
+   "k": "Cả nhóm tự chọn rời khỏi rừng và trở về làng. Vy giữ những ghi chép còn dang dở.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cả nhóm tự chọn rời khỏi rừng và trở về làng. Vy giữ những ghi chép còn dang dở.\n\nBên kia hàng cây, chiếc giếng và căn hầm vẫn giấu những câu hỏi chưa có lời đáp."
+  },
+  {
+   "k": "Bên kia hàng cây, chiếc giếng và căn hầm vẫn giấu những câu hỏi chưa có lời đáp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Cả nhóm tự chọn rời khỏi rừng và trở về làng. Vy giữ những ghi chép còn dang dở.\n\nBên kia hàng cây, chiếc giếng và căn hầm vẫn giấu những câu hỏi chưa có lời đáp."
+  }
+ ]
+}

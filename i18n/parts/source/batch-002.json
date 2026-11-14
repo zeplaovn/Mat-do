@@ -1,0 +1,580 @@
+{
+ "batch": 2,
+ "count": 80,
+ "strings": [
+  {
+   "k": "Bắt đầu điều tra",
+   "files": [
+    "trailer.html"
+   ],
+   "ctx": ""
+  },
+  {
+   "k": "Xem lại",
+   "files": [
+    "trailer.html"
+   ],
+   "ctx": ""
+  },
+  {
+   "k": "Chia sẻ",
+   "files": [
+    "trailer.html"
+   ],
+   "ctx": ""
+  },
+  {
+   "k": "Âm thanh: Bật",
+   "files": [
+    "trailer.html",
+    "trailer.js"
+   ],
+   "ctx": "Âm thanh: Bật"
+  },
+  {
+   "k": "lnrt·vân-hòa·2026",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "lnrt·vân-hòa·2026"
+  },
+  {
+   "k": "Khôi",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Khôi"
+  },
+  {
+   "k": "Vũ",
+   "files": [
+    "game.js",
+    "trailer.js",
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Vũ"
+  },
+  {
+   "k": "Hà",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Hà"
+  },
+  {
+   "k": "Nhài",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Nhài"
+  },
+  {
+   "k": "Ông Hưng",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ông Hưng"
+  },
+  {
+   "k": "Bà Tám",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Bà Tám"
+  },
+  {
+   "k": "Thầy Nguyên",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Thầy Nguyên"
+  },
+  {
+   "k": "Ông Tùng",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Ông Tùng"
+  },
+  {
+   "k": "Quế",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js"
+   ],
+   "ctx": "Quế"
+  },
+  {
+   "k": "Thầy Chân",
+   "files": [
+    "game.js",
+    "assets/dialogue/reviewed.js",
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Thầy Chân"
+  },
+  {
+   "k": "Bản sao gia phả cũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bản sao gia phả cũ"
+  },
+  {
+   "k": "Ghi chép bà Cúc chép lại từ sổ hộ cũ và lời kể của người trong làng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ghi chép bà Cúc chép lại từ sổ hộ cũ và lời kể của người trong làng."
+  },
+  {
+   "k": "Huyền Ấn Bí Lục – Trấn Âm Đồ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Huyền Ấn Bí Lục – Trấn Âm Đồ"
+  },
+  {
+   "k": "Bí lục cũ thầy Nguyên trao, lưu đồ trấn ấn và một trang trắng chỉ hiện chữ qua mặt nước.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bí lục cũ thầy Nguyên trao, lưu đồ trấn ấn và một trang trắng chỉ hiện chữ qua mặt nước."
+  },
+  {
+   "k": "Lược gỗ cũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Lược gỗ cũ"
+  },
+  {
+   "k": "Chiếc lược tìm gần bờ đập, gói trong vải có nét chữ đã phai.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc lược tìm gần bờ đập, gói trong vải có nét chữ đã phai."
+  },
+  {
+   "k": "Khăn thêu cũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khăn thêu cũ"
+  },
+  {
+   "k": "Mảnh khăn tìm gần gốc đa, còn nét chỉ vụng về.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh khăn tìm gần gốc đa, còn nét chỉ vụng về."
+  },
+  {
+   "k": "Mảnh áo trắng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh áo trắng"
+  },
+  {
+   "k": "Mảnh vải mắc trong khe đá ở nền tế cũ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh vải mắc trong khe đá ở nền tế cũ."
+  },
+  {
+   "k": "Máy ảnh của Chi",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Máy ảnh của Chi"
+  },
+  {
+   "k": "Chiếc máy ảnh cũ của Chi. Nó hay chụp được những thứ mắt thường không thấy.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc máy ảnh cũ của Chi. Nó hay chụp được những thứ mắt thường không thấy."
+  },
+  {
+   "k": "Đèn pin của Vũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đèn pin của Vũ"
+  },
+  {
+   "k": "Đèn pin của Vũ. Chạm vào để bật/tắt, hoặc nhấn phím F.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đèn pin của Vũ. Chạm vào để bật/tắt, hoặc nhấn phím F."
+  },
+  {
+   "k": "Sổ tay của Vy",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Sổ tay của Vy"
+  },
+  {
+   "k": "Ghi lại bí mật của biệt thự. Nhấp “Nhật ký” để đọc những gì đã biết.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Ghi lại bí mật của biệt thự. Nhấp “Nhật ký” để đọc những gì đã biết."
+  },
+  {
+   "k": "Bật lửa cũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bật lửa cũ"
+  },
+  {
+   "k": "Chiếc bật lửa mạ đồng, còn gas.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc bật lửa mạ đồng, còn gas."
+  },
+  {
+   "k": "Nhang chưa đốt",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhang chưa đốt"
+  },
+  {
+   "k": "Nhang nhặt ở miếu cây đa, chưa đốt.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Nhang nhặt ở miếu cây đa, chưa đốt."
+  },
+  {
+   "k": "Chìa khóa sắt rỉ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chìa khóa sắt rỉ"
+  },
+  {
+   "k": "Chìa khóa sắt rỉ tìm thấy ở cột mốc đá.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chìa khóa sắt rỉ tìm thấy ở cột mốc đá."
+  },
+  {
+   "k": "Thanh sắt cạy gạch",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thanh sắt cạy gạch"
+  },
+  {
+   "k": "Thanh sắt cong nhặt trong gian bếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thanh sắt cong nhặt trong gian bếp."
+  },
+  {
+   "k": "Khăn vải cũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khăn vải cũ"
+  },
+  {
+   "k": "Di vật. Nhặt được ở chiếc giếng trong sân.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Di vật. Nhặt được ở chiếc giếng trong sân."
+  },
+  {
+   "k": "Muôi cơm rỉ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Muôi cơm rỉ"
+  },
+  {
+   "k": "Di vật. Dấu vết một người làm công trong gian bếp.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Di vật. Dấu vết một người làm công trong gian bếp."
+  },
+  {
+   "k": "Trâm gỗ gãy",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Trâm gỗ gãy"
+  },
+  {
+   "k": "Di vật. Tìm thấy gần chiếc nôi trẻ.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Di vật. Tìm thấy gần chiếc nôi trẻ."
+  },
+  {
+   "k": "Mảnh đơn tố cáo",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mảnh đơn tố cáo"
+  },
+  {
+   "k": "Di vật. Mảnh giấy giấu trong sổ của ông Hưng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Di vật. Mảnh giấy giấu trong sổ của ông Hưng."
+  },
+  {
+   "k": "Đôi dép vải cũ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Đôi dép vải cũ"
+  },
+  {
+   "k": "Di vật. Vật dụng bị bỏ lại trong căn hầm kín.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Di vật. Vật dụng bị bỏ lại trong căn hầm kín."
+  },
+  {
+   "k": "Chuông đồng nhỏ",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chuông đồng nhỏ"
+  },
+  {
+   "k": "Chuông đồng nhỏ buộc dây đỏ, vớt từ xô giếng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chuông đồng nhỏ buộc dây đỏ, vớt từ xô giếng."
+  },
+  {
+   "k": "Ấn đồng",
+   "files": [
+    "game.js",
+    "assets/research/books-data.js"
+   ],
+   "ctx": "Ấn đồng"
+  },
+  {
+   "k": "Chiếc ấn đồng hình vuông, tay cầm ngắn, đáy khắc một dấu lạ. Rỉ xanh phủ kín.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc ấn đồng hình vuông, tay cầm ngắn, đáy khắc một dấu lạ. Rỉ xanh phủ kín."
+  },
+  {
+   "k": "Bản đồ Đồng Chay 1988",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bản đồ Đồng Chay 1988"
+  },
+  {
+   "k": "Bản đồ vẽ tay: biệt thự nằm ở cuối đường làng, sát rìa vùng đồi.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bản đồ vẽ tay: biệt thự nằm ở cuối đường làng, sát rìa vùng đồi."
+  },
+  {
+   "k": "Khăn chàm và túi lá thuốc",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khăn chàm và túi lá thuốc"
+  },
+  {
+   "k": "Khăn chàm cũ và túi vải đựng lá thuốc, đồ đi rừng của Quế.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Khăn chàm cũ và túi vải đựng lá thuốc, đồ đi rừng của Quế."
+  },
+  {
+   "k": "Bản sớ giả",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bản sớ giả"
+  },
+  {
+   "k": "Giấy mới chắp vào giấy cũ, mực đậm hơn, một dòng viết lệch.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Giấy mới chắp vào giấy cũ, mực đậm hơn, một dòng viết lệch."
+  },
+  {
+   "k": "Bản sớ tạ rừng nguyên bản",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bản sớ tạ rừng nguyên bản"
+  },
+  {
+   "k": "Bản lễ tạ rừng cũ của bà ngoại Quế, nét chữ đều, triện đỏ đã phai.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bản lễ tạ rừng cũ của bà ngoại Quế, nét chữ đều, triện đỏ đã phai."
+  },
+  {
+   "k": "Thư Quế gửi Tùng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thư Quế gửi Tùng"
+  },
+  {
+   "k": "Thư gấp tư, buộc bằng một dải vải chàm.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Thư gấp tư, buộc bằng một dải vải chàm."
+  },
+  {
+   "k": "Hộp nhạc gãy",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hộp nhạc gãy"
+  },
+  {
+   "k": "Hộp nhạc cũ của một bé gái. Giai điệu vẫn còn ngân.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hộp nhạc cũ của một bé gái. Giai điệu vẫn còn ngân."
+  },
+  {
+   "k": "Chìa khóa kho vật tư",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chìa khóa kho vật tư"
+  },
+  {
+   "k": "Chiếc chìa đồng nhỏ giấu dưới đệm ghế bập bênh ở ban công phòng ông Hưng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc chìa đồng nhỏ giấu dưới đệm ghế bập bênh ở ban công phòng ông Hưng."
+  },
+  {
+   "k": "Bó nhang mới",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bó nhang mới"
+  },
+  {
+   "k": "Bó nhang lấy từ bàn đá trong miếu cây đa. Bà Tám để dành cho những người chưa được gọi tên.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bó nhang lấy từ bàn đá trong miếu cây đa. Bà Tám để dành cho những người chưa được gọi tên."
+  },
+  {
+   "k": "Búp bê vải của Nhài",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Búp bê vải của Nhài"
+  },
+  {
+   "k": "Con búp bê khâu tay, mắt thêu chỉ đen, nhặt ở gác nhỏ của cô Quyên.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con búp bê khâu tay, mắt thêu chỉ đen, nhặt ở gác nhỏ của cô Quyên."
+  },
+  {
+   "k": "Xe gỗ đồ chơi",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Xe gỗ đồ chơi"
+  },
+  {
+   "k": "Chiếc xe gỗ bánh nhỏ xíu của Nhài.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Chiếc xe gỗ bánh nhỏ xíu của Nhài."
+  },
+  {
+   "k": "Hạc giấy",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Hạc giấy"
+  },
+  {
+   "k": "Con hạc gấp từ trang sách cũ, lấy từ sợi chỉ treo ở phòng học.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Con hạc gấp từ trang sách cũ, lấy từ sợi chỉ treo ở phòng học."
+  },
+  {
+   "k": "Viên phấn trắng",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Viên phấn trắng"
+  },
+  {
+   "k": "Mẩu phấn còn lại trên bảng đen của phòng học.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mẩu phấn còn lại trên bảng đen của phòng học."
+  },
+  {
+   "k": "Bảng ký hiệu người làm công",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Bảng ký hiệu người làm công"
+  },
+  {
+   "k": "Tài liệu. Chạm để đọc. Mỗi người có một ký hiệu riêng.",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Tài liệu. Chạm để đọc. Mỗi người có một ký hiệu riêng."
+  },
+  {
+   "k": "Mặt sau tấm ảnh",
+   "files": [
+    "game.js"
+   ],
+   "ctx": "Mặt sau tấm ảnh"
+  }
+ ]
+}
