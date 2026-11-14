@@ -20,7 +20,7 @@ const context={window,document,localStorage:{getItem:()=>null,setItem(){}},setTi
 vm.createContext(context);
 vm.runInContext(fs.readFileSync(path.join(root,'assets/research/books-data.js'),'utf8'),context);
 vm.runInContext(fs.readFileSync(path.join(root,'assets/dialogue/reviewed.js'),'utf8'),context);
-let game=fs.readFileSync(path.join(root,'game.js'),'utf8');
+let game=fs.readFileSync(path.join(root,'js/game.js'),'utf8');
 game=game.replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
 showModal=window.showModalStub;hideModal=()=>{};render=()=>{};talk=()=>{};say=()=>{};toast=()=>{};playSound=()=>{};save=()=>{};
 window.qa={BOOKS,RESEARCH_PUZZLES,initialState,openResearchPuzzle,researchCandidates,retireCompletedResearchBooks,setState:s=>{state=s},getState:()=>state};

@@ -99,7 +99,7 @@ html[data-fx=low] .fx-scan{display:none}
 .toast{background:#150a0cf2;border-color:#8a1c1c;box-shadow:0 8px 30px #000,0 0 20px #5a0e0e66}
 
 /* ---------- Màn hình tiêu đề ---------- */
-.title-bg{background:linear-gradient(90deg,#030304d8 0%,#060405b0 45%,#080506a0 100%),linear-gradient(0deg,#1a0000 0%,transparent 60%),url('assets/title_bg.webp') center/cover;will-change:transform;animation:creep 38s ease-in-out infinite alternate}
+.title-bg{background:linear-gradient(90deg,#030304d8 0%,#060405b0 45%,#080506a0 100%),linear-gradient(0deg,#1a0000 0%,transparent 60%),url('../assets/title_bg.webp') center/cover;will-change:transform;animation:creep 38s ease-in-out infinite alternate}
 .title-sigil{color:#8a1414;text-shadow:0 0 40px #ff1a1a88;animation:sigil 3.2s ease-in-out infinite}
 .title-content h1{color:#d8ccb6;text-shadow:0 0 30px #00000,0 4px 24px #000;animation:tglitch 7s infinite}
 .title-content h1 em{color:#b01f1f;text-shadow:0 0 22px #ff1a1a77,0 0 2px #ff6a5a;animation:flick 6s infinite}

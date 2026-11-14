@@ -17,7 +17,7 @@ const context={window,document,localStorage:{getItem:k=>storage.get(k)??null,set
  setTimeout:()=>0,clearTimeout(){},setInterval(){},clearInterval(){},requestAnimationFrame(){},matchMedia:()=>({matches:false}),console};
 vm.createContext(context);
 for(const file of ['assets/research/books-data.js','assets/dialogue/reviewed.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context);
-let source=fs.readFileSync(path.join(root,'game.js'),'utf8').replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
+let source=fs.readFileSync(path.join(root,'js/game.js'),'utf8').replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
 showModal=window.testModal;hideModal=()=>{};modalButton=(label,action)=>({label,action});
 render=()=>{};renderSidebar=()=>{};clearDialogue=()=>{};talk=()=>{};say=()=>{};toast=()=>{};playSound=()=>{};itemPop=()=>{};queueMemory=()=>{};
 window.testGame={initialState,setState:s=>{state=s},getState:()=>state,SCENES,ACHIEVEMENTS,ACHIEVEMENT_KEY,SAVE_KEY,

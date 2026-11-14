@@ -13,7 +13,7 @@
   background-size:100% 100%;
   box-shadow:0 12px 30px #0008;
 }
-.puzzle-cipher-art{background-image:url('assets/puzzles/cipher-frame.webp')}
+.puzzle-cipher-art{background-image:url('../assets/puzzles/cipher-frame.webp')}
 .puzzle-cipher-art .cipher-line{
   position:absolute;
   left:16%;top:28%;width:35%;
@@ -26,18 +26,18 @@
   overflow-wrap:anywhere;
   text-shadow:none;
 }
-.puzzle-clock-art{background-image:url('assets/puzzles/clock-mechanism.webp')}
+.puzzle-clock-art{background-image:url('../assets/puzzles/clock-mechanism.webp')}
 .puzzle-clock-art .clock-wrap{position:absolute;left:50%;top:44.8%;width:31%;margin:0;transform:translate(-50%,-50%)}
 .puzzle-clock-art .mini-clock{display:block;width:100%;max-width:none;height:auto}
 .puzzle-paper-art{
   margin:.8rem 0;padding:clamp(16px,4vw,34px);
   border:1px solid #765539;border-radius:5px;
-  background:linear-gradient(#120b0670,#120b0670),url('assets/puzzles/torn-papers.webp') center/cover;
+  background:linear-gradient(#120b0670,#120b0670),url('../assets/puzzles/torn-papers.webp') center/cover;
   box-shadow:0 12px 30px #0008;
 }
 .puzzle-paper-art .asm-strips{margin:0}
 .puzzle-paper-art .asm-strip{background:linear-gradient(#dfcba0,#bfaa80);color:#281b10;box-shadow:0 4px 12px #0008}
-.puzzle-drawer-art{display:grid;place-items:center;background-image:url('assets/puzzles/toy-drawer.webp')}
+.puzzle-drawer-art{display:grid;place-items:center;background-image:url('../assets/puzzles/toy-drawer.webp')}
 .puzzle-drawer-art .slot-row{display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-around;width:82%;gap:clamp(4px,1.3vw,9px);margin:0}
 .puzzle-drawer-art .slot{
   flex:0 1 96px;min-width:0;min-height:0;width:auto;aspect-ratio:1;
@@ -45,7 +45,7 @@
   box-shadow:inset 0 3px 12px #000c;
 }
 .puzzle-drawer-art .slot.full{background:rgba(37,23,12,.8)}
-.puzzle-hatch-art{display:flex;align-items:center;justify-content:center;gap:clamp(3px,1.3vw,9px);padding:0 10%;background-image:url('assets/puzzles/hatch-plate.webp')}
+.puzzle-hatch-art{display:flex;align-items:center;justify-content:center;gap:clamp(3px,1.3vw,9px);padding:0 10%;background-image:url('../assets/puzzles/hatch-plate.webp')}
 .puzzle-hatch-art .gl-dial{
   flex:0 1 64px;min-width:0;width:12%;aspect-ratio:1;
   border:2px solid #a28258;border-radius:50%;

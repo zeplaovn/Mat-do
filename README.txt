@@ -78,7 +78,7 @@ CẬP NHẬT TRẢI NGHIỆM 04/11/2026
 - Giải nén toàn bộ tệp ZIP.
 - Mở thư mục Loi_Nguyen_Rung_Thieng_Web_Game.
 - Nhấp đúp index.html để chơi bằng Chrome, Edge hoặc Firefox.
-- Giữ nguyên cấu trúc thư mục assets/ bên cạnh index.html.
+- Giữ nguyên các thư mục css/, js/, assets/ và i18n/ bên cạnh index.html.
 - Không cần cài Node.js hay tải thêm thư viện từ Internet.
 
 Nếu trình duyệt hạn chế phát âm thanh hoặc lưu tiến trình khi mở
@@ -152,18 +152,19 @@ GitHub Pages hoặc Netlify, chỉ cần giữ nguyên các tệp/thư mục.
 5. CẤU TRÚC THƯ MỤC
 ------------------
 index.html                 — trang game, khởi chạy ở đây
-style.css                  — giao diện responsive
-horror.css / horror.js     — hiệu ứng kinh dị (đã tối ưu theo 3 mức)
-perf.js                    — chọn mức hiệu ứng, tự hạ mức khi giật
-intro.css / intro.js       — màn loading và intro
-ui.css                     — nút bo tròn, thẻ kính, cửa sổ, màn hình tiêu đề
-layout.css                 — BỐ CỤC MỚI: màn chơi fullscreen, HUD, hội thoại, thanh vật phẩm, nhật ký
+css/style.css              — giao diện responsive
+css/horror.css / js/horror.js — hiệu ứng kinh dị (đã tối ưu theo 3 mức)
+js/perf.js                 — chọn mức hiệu ứng, tự hạ mức khi giật
+css/intro.css / js/intro.js — màn loading và intro
+css/ui.css                 — nút bo tròn, thẻ kính, cửa sổ, màn hình tiêu đề
+css/layout.css             — bố cục màn chơi, HUD, hội thoại, thanh vật phẩm, nhật ký
 assets/title_bg.webp       — nền màn hình tiêu đề (đã khử màu sẵn để bỏ filter lúc chạy)
- game.js                   — toàn bộ logic điều khiển/gameplay
+js/game.js                 — toàn bộ logic điều khiển/gameplay
 assets/background/         — BG01.webp đến BG20.webp
 assets/portraits/          — chân dung 5 nhân vật
 assets/items/              — hình vật phẩm và đạo cụ
 assets/sound/              — hiệu ứng âm thanh do người dùng cung cấp
+i18n/                      — từ điển tiếng Việt, Anh, Trung
 README.txt                 — hướng dẫn này
 THONG_TIN_TAI_NGUYEN.txt   — lưu ý về tư liệu và quyền sử dụng
 

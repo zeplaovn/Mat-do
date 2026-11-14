@@ -19,7 +19,7 @@ const document={getElementById:id=>nodes[id]||null,createElement:()=>new Element
 const window={};const context={window,document,localStorage:{getItem:()=>null,setItem(){}},setTimeout:()=>0,clearTimeout(){},setInterval(){},clearInterval(){},requestAnimationFrame(){},matchMedia:()=>({matches:false}),console};
 vm.createContext(context);
 for(const file of ['assets/research/books-data.js','assets/dialogue/reviewed.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context);
-const script=fs.readFileSync(path.join(root,'game.js'),'utf8').replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
+const script=fs.readFileSync(path.join(root,'js/game.js'),'utf8').replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
 render=()=>{};renderSidebar=()=>{};hideModal=()=>{};playSound=()=>{};save=()=>{};itemPop=()=>{};queueMemory=()=>{};toast=()=>{};
 chooseModal=(title,body,choices)=>{window.lastChoices=choices};go=id=>{state.scene=id};
 window.testGame={initialState,setState:s=>{state=s},act,nextLine,clearDialogue,showLine,showInteractionView,datTrustNo,datTrustYes,INTERACTION_VIEWS};})();`);

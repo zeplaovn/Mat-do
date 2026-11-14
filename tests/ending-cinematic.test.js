@@ -20,7 +20,7 @@ let timers=new Map(),nextTimer=0,audios=[],preloads=[],nowMs=0;
 class Image{set src(value){this._src=value;preloads.push(value)}get src(){return this._src}}
 class Audio{constructor(src){this.src=src;this.paused=true;this.currentTime=12;audios.push(this)}play(){this.paused=false;return Promise.resolve()}pause(){this.paused=true}}
 const window={},context={window,document,Audio,Image,performance:{now:()=>nowMs},console,setTimeout:(fn,delay)=>{const id=++nextTimer;timers.set(id,{fn,delay});return id},clearTimeout:id=>timers.delete(id)};
-vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(root,'ending-cinematic.js'),'utf8'),context);
+vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(root,'js/ending-cinematic.js'),'utf8'),context);
 const play=window.EndingCinematic.play;
 const runTimer=()=>{const entry=[...timers.entries()].sort((a,b)=>a[1].delay-b[1].delay)[0];assert.ok(entry,'a frame timer is required');timers.delete(entry[0]);nowMs+=entry[1].delay;entry[1].fn();return entry[1].delay};
 const key=(name,shiftKey=false)=>{let prevented=false,stopped=false;for(const fn of [...(listeners.keydown||[])])fn({key:name,shiftKey,preventDefault(){prevented=true},stopImmediatePropagation(){stopped=true}});return {prevented,stopped}};
@@ -29,7 +29,7 @@ assert.equal(play('good'),false,'a second film cannot overlap');assert.equal(win
 assert.equal(document.activeElement,nodes['ending-cinematic-skip']);assert.deepEqual(key('Tab'),{prevented:true,stopped:true});assert.equal(document.activeElement,nodes['ending-cinematic-pause']);assert.deepEqual(key('Tab'),{prevented:true,stopped:true});assert.equal(document.activeElement,nodes['ending-cinematic-next']);key('Tab',true);assert.equal(document.activeElement,nodes['ending-cinematic-pause']);
 assert.equal(timers.size,1);nowMs+=3000;nodes['ending-cinematic-pause'].onclick();assert.equal(timers.size,0);assert.equal(nodes['ending-cinematic-pause'].textContent,'Tiếp tục');assert.ok(nodes['ending-cinematic'].classList.contains('is-paused'));nodes['ending-cinematic-pause'].onclick();assert.equal(timers.size,1);assert.equal([...timers.values()][0].delay,5200,'resuming must preserve time already watched');
 runTimer();assert.match(nodes['ending-cinematic-image'].src,/bad_02\.webp$/);assert.equal(nodes['ending-cinematic-back'].disabled,false);nodes['ending-cinematic-back'].onclick();assert.match(nodes['ending-cinematic-image'].src,/bad_01\.webp$/);
-assert.deepEqual(key('h'),{prevented:false,stopped:false},'normal keys must still reach focused controls');assert.match(fs.readFileSync(path.join(root,'game.js'),'utf8'),/EndingCinematic\.isActive\(\)/,'game shortcuts must be disabled during the film');assert.deepEqual(key('ArrowRight'),{prevented:true,stopped:true});assert.match(nodes['ending-cinematic-image'].src,/bad_02\.webp$/);assert.deepEqual(key('Escape'),{prevented:true,stopped:true});assert.equal(done,1);assert.equal(nodes['ending-cinematic'].hidden,true);assert.equal(nodes['app-shell'].inert,false);assert.equal(timers.size,0);assert.equal((listeners.keydown||[]).length,0);assert.equal(window.EndingCinematic.isActive(),false);
+assert.deepEqual(key('h'),{prevented:false,stopped:false},'normal keys must still reach focused controls');assert.match(fs.readFileSync(path.join(root,'js/game.js'),'utf8'),/EndingCinematic\.isActive\(\)/,'game shortcuts must be disabled during the film');assert.deepEqual(key('ArrowRight'),{prevented:true,stopped:true});assert.match(nodes['ending-cinematic-image'].src,/bad_02\.webp$/);assert.deepEqual(key('Escape'),{prevented:true,stopped:true});assert.equal(done,1);assert.equal(nodes['ending-cinematic'].hidden,true);assert.equal(nodes['app-shell'].inert,false);assert.equal(timers.size,0);assert.equal((listeners.keydown||[]).length,0);assert.equal(window.EndingCinematic.isActive(),false);
 for(const name of ['normal','good','true']){
  let calls=0;assert.equal(play(name,{soundOn:true,onFinish:()=>calls++}),true);const audio=audios.at(-1);assert.equal(audio.paused,false);assert.match(nodes['ending-cinematic-image'].src,new RegExp(name+'_01\\.webp$'));
  nowMs+=1000;document.hidden=true;for(const fn of listeners.visibilitychange)fn();assert.equal(timers.size,0);assert.equal(audio.paused,true);assert.ok(nodes['ending-cinematic'].classList.contains('is-paused'));document.hidden=false;for(const fn of listeners.visibilitychange)fn();assert.equal(audio.paused,false);assert.equal(timers.size,1);assert.ok(!nodes['ending-cinematic'].classList.contains('is-paused'));
@@ -43,7 +43,7 @@ play('true',{riceGift:true,onFinish:()=>complete++});assert.match(preloads.at(-1
 play('bad',{soundOn:true});const badSound=audios.slice(-1);assert.match(badSound[0].src,/bad_ending/);assert.ok(badSound.every(a=>!a.paused));nodes['ending-cinematic-pause'].onclick();assert.ok(badSound.every(a=>a.paused));nodes['ending-cinematic-skip'].onclick();
 let fallback=0;play('true',{onFinish:()=>fallback++});nodes['ending-cinematic-image'].onerror();assert.match(nodes['ending-cinematic-image'].src,/BG40\.webp$/);nodes['ending-cinematic-skip'].onclick();assert.equal(fallback,1);
 for(const ending of ['bad','normal','good','true'])for(let i=1;i<=6;i++)assert.ok(fs.existsSync(path.join(root,'assets/background/endings-v2',ending+'_0'+i+'.webp')));
-assert.match(fs.readFileSync(path.join(root,'ending-cinematic.css'),'utf8'),/prefers-reduced-motion:reduce/);
+assert.match(fs.readFileSync(path.join(root,'css/ending-cinematic.css'),'utf8'),/prefers-reduced-motion:reduce/);
 assert.match(fs.readFileSync(path.join(root,'index.html'),'utf8'),/ending-cinematic\.js/);
 
 // The actual ending logic must save immediately, show the card only after the film,
@@ -52,7 +52,7 @@ const extra=['scene-image','scene-backdrop','ending-actions','title-screen'];for
 const gameWindow={};const gameContext={window:gameWindow,document,localStorage:{getItem:()=>null,setItem(){}},setTimeout(){},clearTimeout(){},setInterval(){},clearInterval(){},requestAnimationFrame(){},matchMedia:()=>({matches:false}),console};
 vm.createContext(gameContext);
 for(const file of ['assets/research/books-data.js','assets/dialogue/reviewed.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),gameContext);
-let game=fs.readFileSync(path.join(root,'game.js'),'utf8').replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
+let game=fs.readFileSync(path.join(root,'js/game.js'),'utf8').replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
 showModal=(html,kicker,type)=>{window.card={html,kicker,type};document.getElementById('ending-actions').children=[]};hideModal=()=>{};
 modalButton=(label,action)=>({label,action});save=()=>{};stopAmbience=()=>{};render=()=>{};renderSidebar=()=>{};clearDialogue=()=>{};syncAchievements=()=>{};load=()=>window.loaded;
 window.game={initialState,setState:s=>{state=s},getState:()=>state,showEnding,continueGame};})();`);

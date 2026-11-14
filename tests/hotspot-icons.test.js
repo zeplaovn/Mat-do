@@ -14,7 +14,7 @@ const context={window:{actions:[]},document:{getElementById:()=>null,createEleme
  localStorage:{getItem:()=>null,setItem:()=>{}},setTimeout,clearTimeout,setInterval,clearInterval,
  matchMedia:()=>({matches:false}),console};
 vm.createContext(context);
-let script=fs.readFileSync(path.join(root,'game.js'),'utf8');
+let script=fs.readFileSync(path.join(root,'js/game.js'),'utf8');
 const end=/\nmount\(\);\s*\}\)\(\);\s*$/;
 assert.match(script,end);
 script=script.replace(end,`

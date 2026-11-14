@@ -12,7 +12,7 @@ const column=new Element();column.scrollLeft=112;
 const store=new Map(),context={window:{},document:{getElementById:id=>nodes[id]||null,createElement:()=>new Element(),querySelector:s=>s==='.game-column'?column:null},localStorage:{getItem:k=>store.get(k)||null,setItem:(k,v)=>store.set(k,v)},setTimeout:()=>0,clearTimeout(){},setInterval(){},clearInterval(){},requestAnimationFrame(){},matchMedia:()=>({matches:false}),console};
 vm.createContext(context);
 for(const file of ['assets/research/books-data.js','assets/dialogue/reviewed.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context);
-const game=fs.readFileSync(path.join(root,'game.js'),'utf8').replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
+const game=fs.readFileSync(path.join(root,'js/game.js'),'utf8').replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
 render=()=>{};renderSidebar=()=>{};hideModal=()=>{modalType=null};playSound=()=>{};save=()=>{};itemPop=()=>{};toast=()=>{};
 chooseModal=(title,body,choices)=>{window.choices=choices;window.choiceTitle=title};
 window.game={initialState,setState:s=>{state=s},getState:()=>state,playMemory,playSimMemory,memoryLines,refreshMemoryUI,displayStoryTime,sceneBackground,sceneTimeGrade,sceneAmbience,quietVillageAtNight,startFlashbackPrompt,forestAltar,clearDialogue,nextLine,act,showWellPhoto,endingEligibility,MEMORY_ITEMS,MEMORY_VIEWS,ENDINGS,load,sig,SAVE_KEY};})();`);

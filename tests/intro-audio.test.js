@@ -3,7 +3,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
 const vm=require('node:vm');
-const source=fs.readFileSync(path.join(__dirname,'..','intro.js'),'utf8').replace(/\}\)\(\);\s*$/,`window.audioQA={finish,musicStart,musicStop,getMusic:()=>music,getWanted:()=>musicWanted};})();`);
+const source=fs.readFileSync(path.join(__dirname,'..','js/intro.js'),'utf8').replace(/\}\)\(\);\s*$/,`window.audioQA={finish,musicStart,musicStop,getMusic:()=>music,getWanted:()=>musicWanted};})();`);
 assert.ok(source.includes('window.audioQA='));
 function setup({muted=false,deferAutoplay=false,storageBlocked=false}={}){
  let now=0,next=1,gesture=false;const tasks=new Map(),audio=[],storage=new Map(),observers=new Map(),globalEvents={};
@@ -39,7 +39,7 @@ const flush=()=>new Promise(resolve=>setImmediate(resolve));
 function verifyLoaderFallback(waiting,choiceVisible=waiting){
  const classes=new Set(['is-loading','is-busy']),loader={hidden:false,dataset:waiting?{awaitingMusic:'1'}:{}},choice={hidden:!choiceVisible},html={dataset:{},classList:{contains:x=>classes.has(x),remove:(...xs)=>xs.forEach(x=>classes.delete(x))}};let fallback;
  const sandbox={document:{documentElement:html,getElementById:id=>id==='loader'?loader:id==='loader-sound-choice'?choice:null,hidden:false},window:{devicePixelRatio:1},navigator:{},screen:{width:390,height:800},localStorage:{getItem:()=>null},matchMedia:()=>({matches:false}),setTimeout:fn=>{fallback=fn},requestAnimationFrame(){},performance:{now:()=>0},console};
- vm.createContext(sandbox);vm.runInContext(fs.readFileSync(path.join(__dirname,'..','perf.js'),'utf8'),sandbox);fallback();
+ vm.createContext(sandbox);vm.runInContext(fs.readFileSync(path.join(__dirname,'..','js/perf.js'),'utf8'),sandbox);fallback();
  assert.equal(loader.hidden,!(waiting&&choiceVisible),waiting&&choiceVisible?'the music choice must remain visible':'a broken loader must still be released');
 }
 (async()=>{

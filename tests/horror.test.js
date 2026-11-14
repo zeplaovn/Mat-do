@@ -27,7 +27,7 @@ const context={document:{documentElement:root,hidden:false,body:{insertAdjacentH
  matchMedia:()=>({matches:false,addEventListener(){}}),localStorage:{getItem:()=>null},ResizeObserver:undefined,
  MutationObserver:class{constructor(fn){this.fn=fn}observe(el){if(!observers.has(el))observers.set(el,[]);observers.get(el).push(this.fn)}},
  requestAnimationFrame:fn=>{callbacks.push(fn);return ++rafId},setTimeout:()=>1,clearTimeout(){},setInterval:(fn,ms)=>{if(ms===4000)intervals.push(fn);return 1},clearInterval(){},console};
-vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(__dirname,'..','horror.js'),'utf8'),context);
+vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(__dirname,'..','js/horror.js'),'utf8'),context);
 assert.equal(typeof windowEvents.resize,'function','missing ResizeObserver must not stop horror effects');
 assert.equal(typeof context.window.HorrorFX.scare,'function');
 for(const cls of ['fx-dust','fx-vignette','fx-flash'])assert.ok(stage.children.some(e=>e.className.includes(cls)),`${cls} should exist`);

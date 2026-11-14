@@ -5,9 +5,9 @@ const fs=require('node:fs');
 const path=require('node:path');
 const vm=require('node:vm');
 const root=path.join(__dirname,'..');
-const js=fs.readFileSync(path.join(root,'trailer.js'),'utf8');
+const js=fs.readFileSync(path.join(root,'js/trailer.js'),'utf8');
 const html=fs.readFileSync(path.join(root,'trailer.html'),'utf8');
-const css=fs.readFileSync(path.join(root,'trailer.css'),'utf8');
+const css=fs.readFileSync(path.join(root,'css/trailer.css'),'utf8');
 class Element{
  constructor(){
   this.children=[];this.className='';this.hidden=false;this.textContent='';this.value='';

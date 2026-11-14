@@ -36,7 +36,7 @@ const context={document:{documentElement:root,hidden:false,getElementById:id=>by
  ResizeObserver:noObserver?undefined:class{constructor(fn){this.fn=fn}observe(){}},
  MutationObserver:class{constructor(fn){this.fn=fn}observe(el){if(!observers.has(el))observers.set(el,[]);observers.get(el).push(this.fn)}},
  setTimeout:schedule,clearTimeout:id=>tasks.delete(id),requestAnimationFrame:fn=>schedule(fn,16),cancelAnimationFrame:id=>tasks.delete(id),console};
-vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(__dirname,'..','weather.js'),'utf8'),context);
+vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(__dirname,'..','js/weather.js'),'utf8'),context);
 assert.ok(!stage.children.some(e=>e.className.includes('wx-fog')),'weather should not create a fog layer');
 const scene=n=>{idx.textContent=`BG${String(n).padStart(2,'0')} / 47`;trigger(idx)};
 const count=cls=>events.filter(e=>e.cls.includes(cls));

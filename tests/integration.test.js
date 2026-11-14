@@ -14,7 +14,7 @@ const context = {
 vm.createContext(context);
 vm.runInContext(fs.readFileSync(path.join(root,'assets/research/books-data.js'),'utf8'),context);
 vm.runInContext(fs.readFileSync(path.join(root,'assets/dialogue/reviewed.js'),'utf8'),context);
-let script = fs.readFileSync(path.join(root,'game.js'),'utf8');
+let script = fs.readFileSync(path.join(root,'js/game.js'),'utf8');
 const end = /\nmount\(\);\s*\}\)\(\);\s*$/;
 assert.match(script,end,'Could not find the game entry point');
 script = script.replace(end, `

@@ -21,7 +21,7 @@ const context={window:{},document,performance:{now:()=>current},
  setTimeout:(fn,delay)=>{const id=++nextId;timers.set(id,{fn,delay});return id},
  clearTimeout:id=>timers.delete(id)};
 vm.createContext(context);
-vm.runInContext(fs.readFileSync(path.join(root,'ending-credits.js'),'utf8'),context);
+vm.runInContext(fs.readFileSync(path.join(root,'js/ending-credits.js'),'utf8'),context);
 const api=context.window.EndingCredits;
 function press(key){
  let prevented=false,stopped=false;
@@ -69,7 +69,7 @@ for(const fn of [...(listeners.visibilitychange||[])])fn();
 assert.equal([...timers.values()][0].delay,14000);
 nodes['ending-credits-continue'].onclick();
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-const game=fs.readFileSync(path.join(root,'game.js'),'utf8');
+const game=fs.readFileSync(path.join(root,'js/game.js'),'utf8');
 assert.match(html,/id="ending-credits"/);
 assert.match(html,/MẮT ĐỎ STUDIO/);
 assert.match(html,/ending-credits\.js/);
@@ -77,5 +77,5 @@ assert.match(html,/ending-credits\.css/);
 assert.match(game,/function playEndingCredits\(which,checkpoint\)/);
 assert.match(game,/const finish=\(\)=>playEndingCredits\(which,checkpoint\)/);
 assert.match(game,/window\.EndingCredits\.isActive/);
-assert.match(fs.readFileSync(path.join(root,'ending-credits.css'),'utf8'),/prefers-reduced-motion:reduce/);
+assert.match(fs.readFileSync(path.join(root,'css/ending-credits.css'),'utf8'),/prefers-reduced-motion:reduce/);
 console.log('OK: credits follow endings, studio branding, skip controls, timing and keyboard focus.');

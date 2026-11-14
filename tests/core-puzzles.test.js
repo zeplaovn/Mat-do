@@ -22,7 +22,7 @@ const math=Object.create(Math);math.random=()=>.5;
 const context={window,document,localStorage:{getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,v)},Math:math,
  setTimeout:fn=>{timers.push(fn);return timers.length},clearTimeout(){},setInterval(){},clearInterval(){},requestAnimationFrame:fn=>{raf.push(fn);return raf.length},matchMedia:()=>({matches:false}),console};
 vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(root,'assets/research/books-data.js'),'utf8'),context);vm.runInContext(fs.readFileSync(path.join(root,'assets/dialogue/reviewed.js'),'utf8'),context);
-let game=fs.readFileSync(path.join(root,'game.js'),'utf8').replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
+let game=fs.readFileSync(path.join(root,'js/game.js'),'utf8').replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
 showModal=window.showModalStub;hideModal=()=>{};render=()=>{};renderSidebar=()=>{};clearDialogue=()=>{};talk=()=>{};say=()=>{};toast=()=>{};playSound=()=>{};save=()=>{};itemPop=()=>{};queueMemory=()=>{};go=x=>{state.scene=x};
 window.qa={initialState,setState:s=>{state=s},act,selectItem,load,sig,SAVE_KEY,USE_ON,showLock,showCipher,showClockPuzzle,showAssemble,showOrder,showBreath,toyShelf,tornPhoto,hatchLock,showWall,showAltar,showSixth,placeRelic,showGraves,showLam,GLYPH_ORDER,RELIC_ORDER};})();`);
 assert.ok(game.includes('window.qa='));vm.runInContext(game,context);const q=window.qa;

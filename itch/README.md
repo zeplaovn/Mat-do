@@ -23,8 +23,7 @@ rm -rf itch/build
 mkdir -p itch/build/Loi_Nguyen_Rung_Thieng_Web_Game
 cd itch/build/Loi_Nguyen_Rung_Thieng_Web_Game
 cp ../../../index.html ../../../trailer.html .
-cp ../../../*.css ../../../*.js .
-cp -r ../../../assets ../../../i18n .
+cp -r ../../../css ../../../js ../../../assets ../../../i18n .
 cp ../../../README.txt ../../../THONG_TIN_TAI_NGUYEN.txt .
 cd ..
 zip -qr ../loi-nguyen-rung-thieng-web.zip Loi_Nguyen_Rung_Thieng_Web_Game

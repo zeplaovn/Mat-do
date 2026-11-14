@@ -9,7 +9,7 @@ const context={window:{},document:{getElementById:()=>null},localStorage:{getIte
 vm.createContext(context);
 for(const file of ['assets/research/books-data.js','assets/dialogue/reviewed.js'])
  vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context);
-let game=fs.readFileSync(path.join(root,'game.js'),'utf8');
+let game=fs.readFileSync(path.join(root,'js/game.js'),'utf8');
 game=game.replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
 window.mystery={SCENES,CONVO,MORE,INSPECT2,OVERHEARD,ITEMS,ACHIEVEMENTS,MEMORY_VIEWS,ENDINGS,
  QNAMES,PETITION,BOOKS,RESEARCH_PUZZLES,initialState,getObjective,setState:value=>{state=value}};
@@ -61,5 +61,5 @@ assert.match(g.PETITION[0],/năm người/,'the victims’ written testimony sho
 assert.ok(context.window.LNRT_DIALOGUE.F02.some(([who,text])=>who==='Nụ'&&/Bình, Nụ, Quyên, Thành, Giáp/.test(text)),
  'a victim’s own memory may reveal the count');
 assert.doesNotMatch(game,/Năm khuôn mặt đều bị cào xước/i,'photo captions must not give away a count');
-for(const file of ['intro.js','trailer.js','trailer.html'])check(file,fs.readFileSync(path.join(root,file),'utf8'));
+for(const file of ['js/intro.js','js/trailer.js','trailer.html'])check(file,fs.readFileSync(path.join(root,file),'utf8'));
 console.log('OK: dialogue, scene labels, objectives and introductions hide the count while victim evidence retains it.');

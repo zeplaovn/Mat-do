@@ -39,7 +39,7 @@
   inset: 0;
   background: linear-gradient(180deg, rgba(3, 10, 12, .45), rgba(3, 9, 11, .16) 36%, rgba(3, 8, 9, .38) 66%, rgba(0, 4, 6, .9)),
     linear-gradient(90deg, rgba(2, 12, 13, .35), transparent 45%, rgba(2, 9, 11, .3)),
-    url('assets/title_bg.webp') center center / cover no-repeat;
+    url('../assets/title_bg.webp') center center / cover no-repeat;
   filter: saturate(.76) contrast(1.04);
   animation: none;
 }

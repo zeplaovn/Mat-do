@@ -8,7 +8,7 @@ const node={classList:{add(){},remove(){},toggle(){}},style:{},hidden:false};
 const context={window:{},document:{getElementById:()=>node},localStorage:{getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,v)},setTimeout(){},clearTimeout(){},setInterval(){},clearInterval(){},requestAnimationFrame(){},matchMedia:()=>({matches:false}),console};
 vm.createContext(context);
 for(const file of ['assets/research/books-data.js','assets/dialogue/reviewed.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context);
-let source=fs.readFileSync(path.join(root,'game.js'),'utf8').replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
+let source=fs.readFileSync(path.join(root,'js/game.js'),'utf8').replace(/\nmount\(\);\s*\}\)\(\);\s*$/,`
 render=()=>{};renderSidebar=()=>{};hideModal=()=>{};save=()=>{};playSound=()=>{};itemPop=()=>{};queueMemory=()=>{};toast=()=>{};
 talk=(lines,done)=>{window.lastLines=lines;if(done)done()};say=(who,line)=>{window.lastLines=[[who,line]]};
 chooseModal=(title,text,choices)=>{window.modal={title,text,choices}};
