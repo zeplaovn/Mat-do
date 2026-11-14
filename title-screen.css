@@ -141,3 +141,8 @@
 .title-screen .title-matrix{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:1;
   -webkit-mask-image:radial-gradient(ellipse 46% 52% at 50% 50%,rgba(0,0,0,.18) 0,#000 100%);mask-image:radial-gradient(ellipse 46% 52% at 50% 50%,rgba(0,0,0,.18) 0,#000 100%)}
 .title-screen .title-content{position:relative;z-index:1}
+
+/* Gợi nhắc vị trí lần chơi trước, hiện dưới nút Tiếp tục */
+.continue-meta{margin:14px auto 0;max-width:36rem;color:#b9a890;font:500 10px/1.6 var(--sans,system-ui,sans-serif);letter-spacing:.12em;text-transform:uppercase;text-shadow:0 2px 6px #000}
+.continue-meta span+span:before{content:" · ";color:#8d574f}
+@media (max-width:700px){.continue-meta{font-size:9px;letter-spacing:.08em;margin-top:8px}}
