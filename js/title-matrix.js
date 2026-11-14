@@ -1,5 +1,7 @@
 /* Mưa chữ kiểu "matrix" trên màn hình chính: chữ Phạn (Devanagari) và chữ Nôm cổ, màu vàng kim.
-   Chỉ chạy khi màn hình chính đang hiện; tắt khi hiệu ứng thấp, giảm chuyển động hoặc tab ẩn. */
+   Chỉ chạy khi màn hình chính đang hiện; tắt khi hiệu ứng thấp hoặc tab ẩn.
+   Cố ý không tắt theo prefers-reduced-motion: hiệu ứng chậm, không nhấp nháy, là nền trang trí;
+   các hiệu ứng chớp/rung vẫn tôn trọng cài đặt giảm chuyển động. */
 (() => {
   'use strict';
   const title = document.getElementById('title-screen');
@@ -18,9 +20,8 @@
   const FONT = '"Noto Serif Devanagari","Noto Sans Devanagari","Nirmala UI","Mangal","Noto Serif CJK SC","Noto Sans CJK SC","SimSun","PingFang SC","Hiragino Sans GB",serif';
 
   let cols = [], W = 0, H = 0, size = 18, raf = 0, last = 0, on = false;
-  const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
   const lowFx = () => document.documentElement.getAttribute('data-fx') === 'low';
-  const allowed = () => !document.hidden && !title.hidden && !reduced() && !lowFx();
+  const allowed = () => !document.hidden && !title.hidden && !lowFx();
 
   const cell = () => size * 1.35;
   function resize() {

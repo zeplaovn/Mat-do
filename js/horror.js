@@ -105,7 +105,8 @@ function scare(big) {
   lastScare = Date.now();
   shadow.style.left = Math.random() < .5 ? '5%' : '72%';
   pulse(shadow, 'show', 750); if(lighting())pulse(flash, 'on', 560); pulse(stage, 'shake', 520);
-  playAsset('jumpscare_sound.mp3', big ? .8 : .55); // tiếng hét mạnh hơn khi kết thúc xấu
+  /* door-slam.mp3 có ~3,3 s dạo đầu im lặng; phát từ 3,3 s để cú đập vang ngay (xem SLAM_LEAD trong game.js). */
+  playAsset('door-slam.mp3', big ? .8 : .55, 3.3); // tiếng đập mạnh hơn khi kết thúc xấu
 }
 function onScene() {
   const n = sceneNo(); dread = FLICKER_SCENES.has(n) ? Math.min(1, .1 + (n - 1) * .0475) : .1;
@@ -124,7 +125,7 @@ setInterval(() => {
     // Không phát chồng với jumpscare, không lặp liên tục hoặc phát khi tắt âm thanh.
     else if (Date.now() - lastDistantScream > 75000 && Math.random() < .045) {
       lastDistantScream = Date.now();
-      playAsset('far_scream_sound.mp3', .75);
+      playAsset('tieng_hu.mp3', .75);
     }
   }
 }, 4000);
